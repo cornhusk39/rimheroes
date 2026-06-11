@@ -10,6 +10,7 @@ namespace RimHeroes
         public static HediffDef RH_HeroLevels;
         public static HediffDef RH_DeathsDoor;
         public static HediffDef RH_Stabilized;
+        public static HediffDef RH_GestralDevotion;
 
         static RH_DefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(RH_DefOf));
     }

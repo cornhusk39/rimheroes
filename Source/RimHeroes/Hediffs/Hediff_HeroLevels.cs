@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -43,6 +45,93 @@ namespace RimHeroes
             if (pawn.IsHashIntervalTick(60, delta))
             {
                 CheckDeathsDoor();
+            }
+            if (pawn.IsHashIntervalTick(250, delta))
+            {
+                SyncGestrals();
+            }
+        }
+
+        // ===== Gestral retinue =====
+
+        private List<GestralBond> gestralBonds = new List<GestralBond>();
+
+        public List<GestralBond> GestralBonds => gestralBonds;
+
+        private const int InitialSpawnDelayTicks = 600;
+
+        /// <summary>
+        /// Keeps the retinue in sync with unlocks: creates bonds as levels unlock them, schedules
+        /// walk-in replacements (1-3 days) when a gestral dies or departs, and spawns arrivals.
+        /// Stops automatically while the master is dead (hediffs don't tick on corpses) and
+        /// resumes on resurrection.
+        /// </summary>
+        private void SyncGestrals()
+        {
+            if (classDef?.gestralUnlocks == null || pawn.Dead)
+            {
+                return;
+            }
+            int now = Find.TickManager.TicksGame;
+            foreach (var unlock in classDef.gestralUnlocks)
+            {
+                if (unlock.level > level || unlock.job?.pawnKind == null)
+                {
+                    continue;
+                }
+                var bond = gestralBonds.FirstOrDefault(b => b.job == unlock.job);
+                if (bond == null)
+                {
+                    bond = new GestralBond { job = unlock.job, respawnAtTick = now + InitialSpawnDelayTicks };
+                    gestralBonds.Add(bond);
+                    continue;
+                }
+                if (bond.gestral != null && (bond.gestral.Dead || bond.gestral.Destroyed || !bond.gestral.SpawnedOrAnyParentSpawned))
+                {
+                    bool died = bond.gestral.Dead || bond.gestral.Destroyed;
+                    bond.gestral = null;
+                    bond.respawnAtTick = now + Rand.Range(60000, 180000); // 1-3 days
+                    if (died && PawnUtility.ShouldSendNotificationAbout(pawn))
+                    {
+                        Messages.Message("RH_GestralLost".Translate(unlock.job.LabelCap, pawn.LabelShortCap), pawn, MessageTypeDefOf.NegativeEvent);
+                    }
+                }
+                if (bond.gestral == null && now >= bond.respawnAtTick && pawn.Spawned && pawn.Map != null)
+                {
+                    SpawnGestral(bond);
+                }
+            }
+        }
+
+        private void SpawnGestral(GestralBond bond)
+        {
+            var map = pawn.Map;
+            if (!RCellFinder.TryFindRandomPawnEntryCell(out var cell, map, CellFinder.EdgeRoadChance_Animal))
+            {
+                return;
+            }
+            var gestral = PawnGenerator.GeneratePawn(new PawnGenerationRequest(bond.job.pawnKind, pawn.Faction));
+            GenSpawn.Spawn(gestral, cell, map);
+            if (gestral.connections == null)
+            {
+                gestral.connections = new Pawn_ConnectionsTracker(gestral);
+            }
+            gestral.connections.ConnectTo(pawn);
+            var devotion = (Hediff_GestralDevotion)gestral.health.AddHediff(RH_DefOf.RH_GestralDevotion);
+            devotion.master = pawn;
+            bond.gestral = gestral;
+            bond.respawnAtTick = -1;
+            Messages.Message("RH_GestralArrived".Translate(bond.job.LabelCap, pawn.LabelShortCap), gestral, MessageTypeDefOf.PositiveEvent);
+        }
+
+        public void DebugForceGestralRespawn()
+        {
+            foreach (var bond in gestralBonds)
+            {
+                if (bond.gestral == null)
+                {
+                    bond.respawnAtTick = 0;
+                }
             }
         }
 
@@ -165,6 +254,25 @@ namespace RimHeroes
             Scribe_Defs.Look(ref classDef, "classDef");
             Scribe_Values.Look(ref level, "level", 1);
             Scribe_Values.Look(ref xp, "xp");
+            Scribe_Collections.Look(ref gestralBonds, "gestralBonds", LookMode.Deep);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit && gestralBonds == null)
+            {
+                gestralBonds = new List<GestralBond>();
+            }
+        }
+    }
+
+    public class GestralBond : IExposable
+    {
+        public GestralJobDef job;
+        public Pawn gestral;
+        public int respawnAtTick = -1;
+
+        public void ExposeData()
+        {
+            Scribe_Defs.Look(ref job, "job");
+            Scribe_References.Look(ref gestral, "gestral");
+            Scribe_Values.Look(ref respawnAtTick, "respawnAtTick", -1);
         }
     }
 }

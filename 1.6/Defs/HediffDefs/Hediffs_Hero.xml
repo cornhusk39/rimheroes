@@ -32,6 +32,43 @@
     </stages>
   </HediffDef>
 
+  <!-- The gestral side of the bond: severity mirrors the master's condition. -->
+  <HediffDef>
+    <defName>RH_GestralDevotion</defName>
+    <label>devotion</label>
+    <description>This gestral is bound to a hero. Its spirits - and its diligence - rise and fall with its master's condition.</description>
+    <hediffClass>RimHeroes.Hediff_GestralDevotion</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>0.1</initialSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.85, 0.7, 0.3)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>content</label>
+        <statFactors>
+          <WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>0.3</minSeverity>
+        <label>worried</label>
+        <statFactors>
+          <WorkSpeedGlobal>0.7</WorkSpeedGlobal>
+          <MoveSpeed>0.9</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <label>bereft</label>
+        <statFactors>
+          <WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
   <HediffDef>
     <defName>RH_Stabilized</defName>
     <label>stabilized by destiny</label>

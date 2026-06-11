@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- SPIKE TEST RACE: green rat placeholder art. Proves non-mech, non-humanlike pawns can run
-       real WorkGivers via CompGestralWorker + the JobGiver_Work patch. Becomes the real gestral
-       race once art and the full caste set exist. -->
+  <!-- Gestral race (placeholder rat art, tinted per job). One ThingDef per job caste so each
+       carries its own CompGestralWorker work-type allowlist (dryad pattern). -->
 
-  <ThingDef ParentName="AnimalThingBase">
-    <defName>RH_GestralTest</defName>
-    <label>gestral (test)</label>
-    <description>A small, devoted helper creature. Test placeholder.</description>
+  <ThingDef Name="RH_GestralBase" ParentName="AnimalThingBase" Abstract="True">
     <statBases>
       <MoveSpeed>4.2</MoveSpeed>
       <MarketValue>300</MarketValue>
@@ -60,6 +56,51 @@
       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
     </race>
+  </ThingDef>
+
+  <PawnKindDef Name="RH_GestralKindBase" ParentName="AnimalKindBase" Abstract="True">
+    <combatPower>30</combatPower>
+  </PawnKindDef>
+
+  <!-- Porter: hauler -->
+  <ThingDef ParentName="RH_GestralBase">
+    <defName>RH_GestralPorter</defName>
+    <label>porter gestral</label>
+    <description>A small, devoted helper creature that carries burdens so its master never has to.</description>
+    <comps>
+      <li Class="RimHeroes.CompProperties_GestralWorker">
+        <workTypes>
+          <li>Hauling</li>
+        </workTypes>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="RH_GestralKindBase">
+    <defName>RH_GestralPorterKind</defName>
+    <label>porter gestral</label>
+    <race>RH_GestralPorter</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
+          <color>(170,140,95)</color>
+          <drawSize>1.0</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- Sweeper: cleaner -->
+  <ThingDef ParentName="RH_GestralBase">
+    <defName>RH_GestralSweeper</defName>
+    <label>sweeper gestral</label>
+    <description>A small, devoted helper creature that tidies relentlessly.</description>
     <comps>
       <li Class="RimHeroes.CompProperties_GestralWorker">
         <workTypes>
@@ -69,11 +110,10 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="AnimalKindBase">
-    <defName>RH_GestralSweeperTest</defName>
-    <label>sweeper gestral (test)</label>
-    <race>RH_GestralTest</race>
-    <combatPower>30</combatPower>
+  <PawnKindDef ParentName="RH_GestralKindBase">
+    <defName>RH_GestralSweeperKind</defName>
+    <label>sweeper gestral</label>
+    <race>RH_GestralSweeper</race>
     <lifeStages>
       <li>
         <bodyGraphicData>

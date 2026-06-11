@@ -85,7 +85,7 @@ namespace RimHeroes
             }
             startFilth = CountFilth(map);
 
-            var kind = PawnKindDef.Named("RH_GestralSweeperTest");
+            var kind = PawnKindDef.Named("RH_GestralSweeperKind");
             sweeper = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, Faction.OfPlayer));
             GenSpawn.Spawn(sweeper, center, map);
             if (sweeper.needs?.food != null) sweeper.needs.food.CurLevelPercentage = 1f;

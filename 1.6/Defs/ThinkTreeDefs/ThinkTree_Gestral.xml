@@ -32,6 +32,29 @@
         <li Class="JobGiver_ReactToCloseMeleeThreat" />
         <li Class="ThinkNode_QueuedJob" />
 
+        <!-- Master dead: frantic directionless panic for ~6h, then leave the map -->
+        <li Class="RimHeroes.ThinkNode_ConditionalDevotionState">
+          <state>Bereft</state>
+          <subNodes>
+            <li Class="RimHeroes.ThinkNode_ConditionalPanicLeaving">
+              <subNodes>
+                <li Class="ThinkNode_ConditionalCanReachMapEdge">
+                  <subNodes>
+                    <li Class="JobGiver_ExitMapRandom">
+                      <defaultLocomotion>Jog</defaultLocomotion>
+                    </li>
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+            <li Class="JobGiver_WanderAnywhere">
+              <maxDanger>Deadly</maxDanger>
+              <ticksBetweenWandersRange>30~80</ticksBetweenWandersRange>
+              <locomotionUrgency>Sprint</locomotionUrgency>
+            </li>
+          </subNodes>
+        </li>
+
         <li Class="ThinkNode_Subtree">
           <treeDef>LordDuty</treeDef>
         </li>
@@ -47,6 +70,14 @@
               <tagToGive>RestingForMedicalReasons</tagToGive>
               <subNodes>
                 <li Class="JobGiver_PatientGoToBed" />
+              </subNodes>
+            </li>
+
+            <!-- Master ailing: keep vigil at their side instead of working -->
+            <li Class="RimHeroes.ThinkNode_ConditionalDevotionState">
+              <state>Worried</state>
+              <subNodes>
+                <li Class="RimHeroes.JobGiver_VigilNearMaster" />
               </subNodes>
             </li>
 

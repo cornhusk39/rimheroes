@@ -8,12 +8,14 @@
     <defName>RH_Gestral_Porter</defName>
     <label>porter</label>
     <description>A gestral hauler. Carries burdens so its master never has to.</description>
+    <pawnKind>RH_GestralPorterKind</pawnKind>
   </RimHeroes.GestralJobDef>
 
   <RimHeroes.GestralJobDef>
     <defName>RH_Gestral_Sweeper</defName>
     <label>sweeper</label>
     <description>A gestral cleaner. Tidies relentlessly.</description>
+    <pawnKind>RH_GestralSweeperKind</pawnKind>
   </RimHeroes.GestralJobDef>
 
   <RimHeroes.GestralJobDef>
