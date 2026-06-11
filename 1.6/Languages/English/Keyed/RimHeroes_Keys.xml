@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <RH_Settings_TechLeakStopper>Block high-tech leaks</RH_Settings_TechLeakStopper>
+  <RH_Settings_TechLeakStopper_Desc>Filters spacer-tech content that slips past tech-restriction mods (Odyssey Starjack raiders, certain quest rewards). Recommended alongside World Tech Level.</RH_Settings_TechLeakStopper_Desc>
+  <RH_Settings_EnemyHeroRaids>Enemy heroes in raids</RH_Settings_EnemyHeroRaids>
+  <RH_Settings_EnemyHeroRaids_Desc>Large raids rarely include an enemy Hero escorted by combat gestrals. They drop vestment enhancements and, rarely, class tomes.</RH_Settings_EnemyHeroRaids_Desc>
+  <RH_Settings_AllowHeroCorpseDestruction>Allow destroying hero corpses</RH_Settings_AllowHeroCorpseDestruction>
+  <RH_Settings_AllowHeroCorpseDestruction_Desc>By default, hero corpses cannot be cremated or butchered, so revival remains possible. Enable to remove this protection.</RH_Settings_AllowHeroCorpseDestruction_Desc>
+</LanguageData>

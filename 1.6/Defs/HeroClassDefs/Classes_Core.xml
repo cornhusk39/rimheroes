@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- v1 class roster. Gestral trios per DESIGN.md (L3/L8/L12 + L20 free choice handled in code).
+       levelGrants filled in as the spell/feature content is authored. -->
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Fighter</defName>
+    <label>fighter</label>
+    <description>A master of martial combat. Holds the line while others break.</description>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Porter</job></li>
+      <li><level>8</level><job>RH_Gestral_Bulwark</job></li>
+      <li><level>12</level><job>RH_Gestral_Scrapper</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Wizard</defName>
+    <label>wizard</label>
+    <description>A scholar of the arcane. Fragile, studious, and capable of erasing a raid before it closes the distance.</description>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
+      <li><level>8</level><job>RH_Gestral_Bulwark</job></li>
+      <li><level>12</level><job>RH_Gestral_Wisp</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Cleric</defName>
+    <label>cleric</label>
+    <description>A conduit of the divine. Mends the broken - and, when the need is great, calls the dead back.</description>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
+      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
+      <li><level>12</level><job>RH_Gestral_Salve</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Druid</defName>
+    <label>druid</label>
+    <description>A voice of the wild. Wears the shapes of beasts and commands the green.</description>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Porter</job></li>
+      <li><level>8</level><job>RH_Gestral_Sprout</job></li>
+      <li><level>12</level><job>RH_Gestral_Salve</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+</Defs>

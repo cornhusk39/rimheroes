@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- The progression engine. One per Hero pawn; stores class/level/XP and (later) slots, vestment, gestral roster. -->
+  <HediffDef>
+    <defName>RH_HeroLevels</defName>
+    <label>heroic destiny</label>
+    <description>This pawn bears a class and a heroic destiny. Their experience, level, and class powers flow from this bond.</description>
+    <hediffClass>RimHeroes.Hediff_HeroLevels</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.85, 0.7, 0.3)</defaultLabelColor>
+  </HediffDef>
+
+</Defs>

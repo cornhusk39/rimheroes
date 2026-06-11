@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>RimHeroes</RootNamespace>
+    <AssemblyName>RimHeroes</AssemblyName>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugType>none</DebugType>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Game reference assemblies; version-matched to RimWorld 1.6.4850. Never ship game DLLs. -->
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4850" />
+    <!-- Compile-time access to private/internal game members without reflection. -->
+    <PackageReference Include="Krafs.Publicizer" Version="2.*" PrivateAssets="all" />
+    <!-- Reference only: 1.6 forbids bundling 0Harmony.dll. The standalone Harmony mod (brrainz.harmony) provides it at runtime. -->
+    <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
+    <!-- Lets dotnet build target net472 without Visual Studio targeting packs installed. -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.*" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- TODO: VEF reference for VEF.Abilities once we wire the spell engine.
+       VEF ships no NuGet; reference the DLL from the local workshop install, e.g.:
+  <ItemGroup>
+    <Reference Include="VEF">
+      <HintPath>$(RimWorldWorkshop)\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  -->
+
+  <ItemGroup>
+    <Publicize Include="Assembly-CSharp" />
+  </ItemGroup>
+
+</Project>

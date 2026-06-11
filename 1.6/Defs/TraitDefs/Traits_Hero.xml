@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- The Hero marker trait. Never rolled naturally (commonality 0) - granted by Class Tomes/rituals/scenarios. -->
+  <TraitDef>
+    <defName>RH_Hero</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>hero</label>
+        <degree>0</degree>
+        <description>{PAWN_nameDef} is bound to a heroic destiny. Death itself hesitates to claim {PAWN_objective}.</description>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>RH_Hero</li>
+    </exclusionTags>
+  </TraitDef>
+
+</Defs>
