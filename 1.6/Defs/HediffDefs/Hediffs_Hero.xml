@@ -5,12 +5,48 @@
   <HediffDef>
     <defName>RH_HeroLevels</defName>
     <label>heroic destiny</label>
-    <description>This pawn bears a class and a heroic destiny. Their experience, level, and class powers flow from this bond.</description>
+    <description>This pawn bears a class and a heroic destiny. Their experience, level, and class powers flow from this bond. Death itself hesitates: when mortally wounded, a hero fights for their life rather than dying outright.</description>
     <hediffClass>RimHeroes.Hediff_HeroLevels</hediffClass>
     <isBad>false</isBad>
+    <preventsDeath>true</preventsDeath>
     <everCurableByItem>false</everCurableByItem>
     <scenarioCanAdd>false</scenarioCanAdd>
     <defaultLabelColor>(0.85, 0.7, 0.3)</defaultLabelColor>
+  </HediffDef>
+
+  <!-- Death saving throws: added automatically when a hero would otherwise be dead. -->
+  <HediffDef>
+    <defName>RH_DeathsDoor</defName>
+    <label>at death's door</label>
+    <description>This hero should be dead - only destiny holds the line. Each hour they make a death saving throw. Three successes and they stabilize; three failures and even destiny lets go. Tended wounds improve the odds, and taking damage in this state counts as a failure.</description>
+    <hediffClass>RimHeroes.Hediff_DeathsDoor</hediffClass>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.9, 0.25, 0.25)</defaultLabelColor>
+    <stages>
+      <li>
+        <label>fighting for life</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>RH_Stabilized</defName>
+    <label>stabilized by destiny</label>
+    <description>This hero clawed their way back from death's door. They are out of immediate danger, though their wounds remain.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.85, 0.7, 0.3)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000</disappearsAfterTicks>
+      </li>
+    </comps>
   </HediffDef>
 
 </Defs>

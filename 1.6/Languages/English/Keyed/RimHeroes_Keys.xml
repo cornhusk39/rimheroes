@@ -18,4 +18,15 @@
   <RH_TabUpcoming>Upcoming</RH_TabUpcoming>
   <RH_TabGestral>Gestral: {0}</RH_TabGestral>
   <RH_TabGestralsUnlocked>Gestrals unlocked</RH_TabGestralsUnlocked>
+  <RH_DeathsDoorLabel>{0}: at death's door</RH_DeathsDoorLabel>
+  <RH_DeathsDoorText>{0} has suffered wounds that would kill any ordinary person. Only their heroic destiny holds death at bay.\n\nEach hour they will make a death saving throw. Three successes and they stabilize. Three failures and they die. Tending their wounds improves the odds - and any further harm counts as a failure.</RH_DeathsDoorText>
+  <RH_DeathsDoorSave>{0} makes a death saving throw ({1}/{2} successes).</RH_DeathsDoorSave>
+  <RH_DeathsDoorFail>{0} fails a death saving throw ({1}/{2} failures).</RH_DeathsDoorFail>
+  <RH_DeathsDoorCritFail>{0} rolls a 1 on their death saving throw - two failures!</RH_DeathsDoorCritFail>
+  <RH_DeathsDoorDamageFail>{0} was harmed while dying - automatic failure!</RH_DeathsDoorDamageFail>
+  <RH_DeathsDoorDeath>{0} has failed their last death saving throw.</RH_DeathsDoorDeath>
+  <RH_StabilizedLabel>{0}: stabilized</RH_StabilizedLabel>
+  <RH_StabilizedText>{0} has won their fight at death's door and stabilized. They are out of immediate danger, though their wounds remain.</RH_StabilizedText>
+  <RH_NatTwentyLabel>{0}: natural 20!</RH_NatTwentyLabel>
+  <RH_NatTwentyText>Against all odds, {0} rolled a natural 20 on their death saving throw. Their wounds close before the eyes of onlookers - destiny is not finished with them yet.</RH_NatTwentyText>
 </LanguageData>

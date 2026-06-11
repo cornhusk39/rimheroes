@@ -8,6 +8,8 @@ namespace RimHeroes
     {
         public static TraitDef RH_Hero;
         public static HediffDef RH_HeroLevels;
+        public static HediffDef RH_DeathsDoor;
+        public static HediffDef RH_Stabilized;
 
         static RH_DefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(RH_DefOf));
     }

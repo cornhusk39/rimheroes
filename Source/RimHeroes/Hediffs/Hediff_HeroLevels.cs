@@ -40,6 +40,61 @@ namespace RimHeroes
             {
                 GainXP(RH_Tuning.PassiveXPPerHour);
             }
+            if (pawn.IsHashIntervalTick(60, delta))
+            {
+                CheckDeathsDoor();
+            }
+        }
+
+        /// <summary>
+        /// Heroes carry preventsDeath (destiny), so health-driven death never fires. Instead, when
+        /// they WOULD be dead, they fight for their life: death saving throws via Hediff_DeathsDoor.
+        /// </summary>
+        private void CheckDeathsDoor()
+        {
+            if (pawn.Dead || !pawn.Downed || !pawn.Spawned)
+            {
+                return;
+            }
+            var hediffSet = pawn.health.hediffSet;
+            if (hediffSet.HasHediff(RH_DefOf.RH_DeathsDoor) || hediffSet.HasHediff(RH_DefOf.RH_Stabilized))
+            {
+                return;
+            }
+            if (!WouldBeDeadWithoutDestiny())
+            {
+                return;
+            }
+            pawn.health.AddHediff(RH_DefOf.RH_DeathsDoor);
+            Find.LetterStack.ReceiveLetter("RH_DeathsDoorLabel".Translate(pawn.LabelShortCap),
+                "RH_DeathsDoorText".Translate(pawn.LabelShortCap), LetterDefOf.NegativeEvent, pawn);
+        }
+
+        /// <summary>Replicates Pawn_HealthTracker.ShouldBeDead minus the preventsDeath early-out.</summary>
+        public bool WouldBeDeadWithoutDestiny()
+        {
+            var health = pawn.health;
+            foreach (var hediff in health.hediffSet.hediffs)
+            {
+                if (hediff.CauseDeathNow())
+                {
+                    return true;
+                }
+            }
+            if (health.ShouldBeDeadFromRequiredCapacity() != null)
+            {
+                return true;
+            }
+            if (PawnCapacityUtility.CalculatePartEfficiency(health.hediffSet, pawn.RaceProps.body.corePart) <= 0.0001f)
+            {
+                return true;
+            }
+            return health.ShouldBeDeadFromLethalDamageThreshold();
+        }
+
+        public void Notify_FailedDeathSaves()
+        {
+            // Hook for future bookkeeping (gestral panic event, revival quest seeding).
         }
 
         public void GainXP(float amount)
