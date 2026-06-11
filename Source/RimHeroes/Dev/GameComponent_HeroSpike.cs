@@ -7,8 +7,9 @@ namespace RimHeroes
 {
     /// <summary>
     /// Automated test: launch with -quicktest -rhherospike. Opens the class picker on the first
-    /// colonist, screenshots it (visual check), programmatically confirms Fighter, verifies the
-    /// trait + hediff landed, then shuts down. Realtime-driven because the dialog pauses the game.
+    /// colonist, screenshots it, programmatically confirms Fighter, verifies trait + hediff +
+    /// level-1 grant, pumps XP to verify level-ups apply later grants, screenshots the selected
+    /// hero (ITab visible), then shuts down. Realtime-driven because the dialog pauses the game.
     /// </summary>
     public class GameComponent_HeroSpike : GameComponent
     {
@@ -23,7 +24,7 @@ namespace RimHeroes
 
         public override void GameComponentUpdate()
         {
-            if (!Active || state > 3)
+            if (!Active || state > 5)
             {
                 return;
             }
@@ -68,14 +69,38 @@ namespace RimHeroes
                     dialog.Confirm(cls);
                     var hediff = HeroUtility.GetHeroHediff(pawn);
                     bool hasTrait = pawn.story?.traits?.HasTrait(RH_DefOf.RH_Hero) ?? false;
+                    bool hasVigor = pawn.health.hediffSet.HasHediff(HediffDef.Named("RH_Feature_HeroicVigor"));
                     bool dialogClosed = !Find.WindowStack.IsOpen<Dialog_ChooseHeroClass>();
-                    string verdict = hediff != null && hediff.classDef == cls && hediff.level == 1 && hasTrait && dialogClosed ? "PASS" : "FAIL";
-                    Log.Message($"[RimHeroes.HeroSpike] RESULT: class={hediff?.classDef?.defName ?? "null"} level={hediff?.level ?? -1} trait={hasTrait} dialogClosed={dialogClosed} verdict={verdict}");
+                    Log.Message($"[RimHeroes.HeroSpike] confirm: class={hediff?.classDef?.defName ?? "null"} level={hediff?.level ?? -1} trait={hasTrait} L1grant(vigor)={hasVigor} dialogClosed={dialogClosed}");
                     state = 3;
                     break;
                 }
                 case 3:
+                {
+                    var hediff = HeroUtility.GetHeroHediff(pawn);
+                    hediff.GainXP(600f); // 100+115+132+152=499 to reach L5
+                    bool hasHardened = pawn.health.hediffSet.HasHediff(HediffDef.Named("RH_Feature_BattleHardened"));
+                    Log.Message($"[RimHeroes.HeroSpike] xp pump: level={hediff.level} xp={hediff.xp:F0} L5grant(hardened)={hasHardened}");
+                    Find.Selector.ClearSelection();
+                    Find.Selector.Select(pawn);
                     state = 4;
+                    break;
+                }
+                case 4:
+                {
+                    ScreenshotTaker.TakeNonSteamShot("rhherospike2");
+                    var hediff = HeroUtility.GetHeroHediff(pawn);
+                    bool hasTrait = pawn.story?.traits?.HasTrait(RH_DefOf.RH_Hero) ?? false;
+                    bool hasVigor = pawn.health.hediffSet.HasHediff(HediffDef.Named("RH_Feature_HeroicVigor"));
+                    bool hasHardened = pawn.health.hediffSet.HasHediff(HediffDef.Named("RH_Feature_BattleHardened"));
+                    string verdict = hediff != null && hediff.classDef?.defName == "RH_Fighter" && hediff.level == 5
+                                     && hasTrait && hasVigor && hasHardened ? "PASS" : "FAIL";
+                    Log.Message($"[RimHeroes.HeroSpike] RESULT: class={hediff?.classDef?.defName} level={hediff?.level} trait={hasTrait} vigor={hasVigor} hardened={hasHardened} verdict={verdict}");
+                    state = 5;
+                    break;
+                }
+                case 5:
+                    state = 6;
                     Root.Shutdown();
                     break;
             }

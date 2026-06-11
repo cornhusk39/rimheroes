@@ -8,6 +8,20 @@
     <defName>RH_Fighter</defName>
     <label>fighter</label>
     <description>A master of martial combat. Holds the line while others break.</description>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <features>
+          <li>RH_Feature_HeroicVigor</li>
+        </features>
+      </li>
+      <li>
+        <level>5</level>
+        <features>
+          <li>RH_Feature_BattleHardened</li>
+        </features>
+      </li>
+    </levelGrants>
     <gestralUnlocks>
       <li><level>3</level><job>RH_Gestral_Porter</job></li>
       <li><level>8</level><job>RH_Gestral_Bulwark</job></li>

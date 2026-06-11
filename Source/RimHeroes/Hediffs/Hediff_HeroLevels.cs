@@ -6,7 +6,8 @@ namespace RimHeroes
 {
     /// <summary>
     /// The Hero progression engine, one per Hero pawn (VPE Hediff_PsycastAbilities pattern).
-    /// Stores class, level, XP. Will grow: points, known spells, slot state, vestment state, gestral roster.
+    /// Stores class, level, XP; applies per-level grants. Will grow: points, known spells,
+    /// slot state, vestment state, gestral roster.
     /// </summary>
     public class Hediff_HeroLevels : HediffWithComps
     {
@@ -21,25 +22,85 @@ namespace RimHeroes
         // Placeholder curve (VPE-style: 100 XP at L1, x1.15 per level). Tune in playtest.
         public static float XPRequiredForLevel(int lvl) => 100f * Mathf.Pow(1.15f, lvl - 1);
 
-        public void GainXP(float amount)
+        public float XPForNextLevel => XPRequiredForLevel(level);
+
+        public bool AtMaxLevel => classDef == null || level >= classDef.maxLevel;
+
+        public override void PostAdd(DamageInfo? dinfo)
         {
-            if (classDef == null || amount <= 0f || level >= classDef.maxLevel) return;
-            xp += amount;
-            while (level < classDef.maxLevel && xp >= XPRequiredForLevel(level))
+            base.PostAdd(dinfo);
+            ApplyGrants();
+        }
+
+        public override void TickInterval(int delta)
+        {
+            base.TickInterval(delta);
+            // Passive "surviving the rim" trickle; VTR-safe via delta-aware hash interval.
+            if (pawn.IsHashIntervalTick(RH_Tuning.PassiveXPIntervalTicks, delta))
             {
-                xp -= XPRequiredForLevel(level);
-                level++;
-                Notify_LevelUp();
+                GainXP(RH_Tuning.PassiveXPPerHour);
             }
         }
 
-        private void Notify_LevelUp()
+        public void GainXP(float amount)
         {
-            // TODO: apply HeroLevelGrant for the new level (abilities, feature hediffs, gestral unlocks, vestment tier).
-            if (PawnUtility.ShouldSendNotificationAbout(pawn))
+            if (classDef == null || amount <= 0f || AtMaxLevel)
             {
-                Messages.Message($"{pawn.LabelShortCap} reached {classDef.label} level {level}!",
-                    pawn, MessageTypeDefOf.PositiveEvent);
+                return;
+            }
+            xp += amount;
+            bool leveled = false;
+            while (!AtMaxLevel && xp >= XPRequiredForLevel(level))
+            {
+                xp -= XPRequiredForLevel(level);
+                level++;
+                leveled = true;
+            }
+            if (leveled)
+            {
+                ApplyGrants();
+                if (PawnUtility.ShouldSendNotificationAbout(pawn))
+                {
+                    Messages.Message("RH_LeveledUp".Translate(pawn.LabelShortCap, classDef.label, level),
+                        pawn, MessageTypeDefOf.PositiveEvent);
+                }
+            }
+            if (AtMaxLevel)
+            {
+                xp = 0f;
+            }
+        }
+
+        /// <summary>Idempotent: applies every grant at or below the current level.</summary>
+        private void ApplyGrants()
+        {
+            if (classDef?.levelGrants == null)
+            {
+                return;
+            }
+            foreach (var grant in classDef.levelGrants)
+            {
+                if (grant.level > level)
+                {
+                    continue;
+                }
+                if (grant.abilities != null)
+                {
+                    foreach (var abilityDef in grant.abilities)
+                    {
+                        pawn.abilities?.GainAbility(abilityDef); // dup-safe in vanilla
+                    }
+                }
+                if (grant.features != null)
+                {
+                    foreach (var featureDef in grant.features)
+                    {
+                        if (!pawn.health.hediffSet.HasHediff(featureDef))
+                        {
+                            pawn.health.AddHediff(featureDef);
+                        }
+                    }
+                }
             }
         }
 

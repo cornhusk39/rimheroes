@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Fighter class features (passive hediffs granted by level). Placeholder numbers. -->
+
+  <HediffDef Name="RH_FeatureBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.85, 0.7, 0.3)</defaultLabelColor>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatureBase">
+    <defName>RH_Feature_HeroicVigor</defName>
+    <label>heroic vigor</label>
+    <description>This hero's body answers a higher calling. They move faster and strike truer than ordinary folk.</description>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>0.3</MoveSpeed>
+          <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatureBase">
+    <defName>RH_Feature_BattleHardened</defName>
+    <label>battle-hardened</label>
+    <description>Pain is an old companion. This hero shrugs off wounds that would drop a lesser fighter.</description>
+    <stages>
+      <li>
+        <statOffsets>
+          <PainShockThreshold>0.15</PainShockThreshold>
+          <MeleeDodgeChance>3</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

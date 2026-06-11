@@ -10,4 +10,12 @@
   <RH_ConfirmClass>Embrace destiny</RH_ConfirmClass>
   <RH_BecameHero>{0} has become a {1}!</RH_BecameHero>
   <RH_ScenPart_StartingHeroSummary>Your starting colonist is a Hero. You will choose their class when the game begins.</RH_ScenPart_StartingHeroSummary>
+  <RH_LeveledUp>{0} reached {1} level {2}!</RH_LeveledUp>
+  <RH_TabHero>Hero</RH_TabHero>
+  <RH_TabHeader>{0} — Level {1}</RH_TabHeader>
+  <RH_MaxLevel>Maximum level</RH_MaxLevel>
+  <RH_TabFeatures>Class features</RH_TabFeatures>
+  <RH_TabUpcoming>Upcoming</RH_TabUpcoming>
+  <RH_TabGestral>Gestral: {0}</RH_TabGestral>
+  <RH_TabGestralsUnlocked>Gestrals unlocked</RH_TabGestralsUnlocked>
 </LanguageData>
