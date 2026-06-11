@@ -14,8 +14,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Game reference assemblies; version-matched to RimWorld 1.6.4850. Never ship game DLLs. -->
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4850" />
+    <!-- Game reference assemblies; version-matched to the installed game (1.6.4633). Never ship game DLLs. -->
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" />
     <!-- Compile-time access to private/internal game members without reflection. -->
     <PackageReference Include="Krafs.Publicizer" Version="2.*" PrivateAssets="all" />
     <!-- Reference only: 1.6 forbids bundling 0Harmony.dll. The standalone Harmony mod (brrainz.harmony) provides it at runtime. -->
@@ -24,15 +24,17 @@
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.*" PrivateAssets="all" />
   </ItemGroup>
 
-  <!-- TODO: VEF reference for VEF.Abilities once we wire the spell engine.
-       VEF ships no NuGet; reference the DLL from the local workshop install, e.g.:
-  <ItemGroup>
+  <!-- VEF from the local Steam Workshop install (no NuGet exists). Reference-only, and conditional
+       so the project still compiles on machines without the workshop files. -->
+  <PropertyGroup>
+    <VEFAssembly>E:\SteamLibrary\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</VEFAssembly>
+  </PropertyGroup>
+  <ItemGroup Condition="Exists('$(VEFAssembly)')">
     <Reference Include="VEF">
-      <HintPath>$(RimWorldWorkshop)\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+      <HintPath>$(VEFAssembly)</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
-  -->
 
   <ItemGroup>
     <Publicize Include="Assembly-CSharp" />
