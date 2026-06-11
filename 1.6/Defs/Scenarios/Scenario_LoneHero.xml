@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ScenPartDef>
+    <defName>RH_StartingHero</defName>
+    <label>starting hero class choice</label>
+    <scenPartClass>RimHeroes.ScenPart_StartingHero</scenPartClass>
+    <category>PlayerPawnModifier</category>
+    <selectionWeight>0</selectionWeight>
+    <summaryPriority>500</summaryPriority>
+  </ScenPartDef>
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>RH_LoneHero</defName>
+    <label>The Lone Hero</label>
+    <description>One wanderer, marked by destiny, arrives in a forgotten land with little more than the clothes on their back.\n\nChoose their class when the game begins, and carve a legend out of the wilderness.</description>
+    <scenario>
+      <summary>Begin with a single Hero whose class you choose at the start.</summary>
+      <parts>
+
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>1</pawnCount>
+          <pawnChoiceCount>6</pawnChoiceCount>
+        </li>
+
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+          <visible>false</visible>
+        </li>
+
+        <li Class="RimHeroes.ScenPart_StartingHero">
+          <def>RH_StartingHero</def>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Silver</thingDef>
+          <count>400</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MealSurvivalPack</thingDef>
+          <count>30</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>MedicineHerbal</thingDef>
+          <count>12</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>WoodLog</thingDef>
+          <count>200</count>
+        </li>
+
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+</Defs>

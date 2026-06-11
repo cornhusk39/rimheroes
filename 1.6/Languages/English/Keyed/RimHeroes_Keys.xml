@@ -6,4 +6,8 @@
   <RH_Settings_EnemyHeroRaids_Desc>Large raids rarely include an enemy Hero escorted by combat gestrals. They drop vestment enhancements and, rarely, class tomes.</RH_Settings_EnemyHeroRaids_Desc>
   <RH_Settings_AllowHeroCorpseDestruction>Allow destroying hero corpses</RH_Settings_AllowHeroCorpseDestruction>
   <RH_Settings_AllowHeroCorpseDestruction_Desc>By default, hero corpses cannot be cremated or butchered, so revival remains possible. Enable to remove this protection.</RH_Settings_AllowHeroCorpseDestruction_Desc>
+  <RH_ChooseClassTitle>Choose a class for {0}</RH_ChooseClassTitle>
+  <RH_ConfirmClass>Embrace destiny</RH_ConfirmClass>
+  <RH_BecameHero>{0} has become a {1}!</RH_BecameHero>
+  <RH_ScenPart_StartingHeroSummary>Your starting colonist is a Hero. You will choose their class when the game begins.</RH_ScenPart_StartingHeroSummary>
 </LanguageData>
