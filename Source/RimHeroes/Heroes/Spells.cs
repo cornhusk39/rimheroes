@@ -1,3 +1,4 @@
+using System.Linq;
 using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
@@ -8,8 +9,9 @@ namespace RimHeroes
     public enum CasterProgression
     {
         None,
-        Full
-        // Half (paladin/ranger), Pact (warlock) later
+        Full,
+        Half // paladin/ranger
+        // Pact (warlock) later; warlock uses Full for now
     }
 
     public static class SpellUtility
@@ -39,13 +41,47 @@ namespace RimHeroes
             new[] {4,3,3,3,3,2,2,1,1}, // 20
         };
 
+        // 5e half-caster table (paladin/ranger), spell levels 1..5.
+        private static readonly int[][] HalfCaster =
+        {
+            new[] {0,0,0,0,0}, // 1
+            new[] {2,0,0,0,0},
+            new[] {3,0,0,0,0},
+            new[] {3,0,0,0,0},
+            new[] {4,2,0,0,0}, // 5
+            new[] {4,2,0,0,0},
+            new[] {4,3,0,0,0},
+            new[] {4,3,0,0,0},
+            new[] {4,3,2,0,0},
+            new[] {4,3,2,0,0}, // 10
+            new[] {4,3,3,0,0},
+            new[] {4,3,3,0,0},
+            new[] {4,3,3,1,0},
+            new[] {4,3,3,1,0},
+            new[] {4,3,3,2,0}, // 15
+            new[] {4,3,3,2,0},
+            new[] {4,3,3,3,1},
+            new[] {4,3,3,3,1},
+            new[] {4,3,3,3,2},
+            new[] {4,3,3,3,2}, // 20
+        };
+
         public static int MaxSlots(CasterProgression progression, int classLevel, int spellLevel)
         {
-            if (progression != CasterProgression.Full || spellLevel < 1 || spellLevel > 9)
+            if (spellLevel < 1)
             {
                 return 0;
             }
-            return FullCaster[Mathf.Clamp(classLevel, 1, 20) - 1][spellLevel - 1];
+            classLevel = Mathf.Clamp(classLevel, 1, 20);
+            switch (progression)
+            {
+                case CasterProgression.Full when spellLevel <= 9:
+                    return FullCaster[classLevel - 1][spellLevel - 1];
+                case CasterProgression.Half when spellLevel <= 5:
+                    return HalfCaster[classLevel - 1][spellLevel - 1];
+                default:
+                    return 0;
+            }
         }
 
         public static bool IsSpell(AbilityDef def) => typeof(Ability_Spell).IsAssignableFrom(def.abilityClass);
@@ -146,6 +182,94 @@ namespace RimHeroes
             {
                 thing.TakeDamage(new DamageInfo(Props.damageDef ?? DamageDefOf.Blunt, Props.amount, 1f, -1f, parent.pawn));
             }
+        }
+    }
+
+    /// <summary>Heals injuries on the target, worst-first (Cure Wounds family).</summary>
+    public class CompProperties_AbilityHeal : CompProperties_AbilityEffect
+    {
+        public float amount = 15f;
+
+        public CompProperties_AbilityHeal() => compClass = typeof(CompAbilityEffect_Heal);
+    }
+
+    public class CompAbilityEffect_Heal : CompAbilityEffect
+    {
+        public new CompProperties_AbilityHeal Props => (CompProperties_AbilityHeal)props;
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            base.Apply(target, dest);
+            if (!(target.Thing is Pawn targetPawn))
+            {
+                return;
+            }
+            float remaining = Props.amount;
+            var injuries = targetPawn.health.hediffSet.hediffs
+                .OfType<Hediff_Injury>()
+                .Where(i => !i.IsPermanent())
+                .OrderByDescending(i => i.Severity)
+                .ToList();
+            foreach (var injury in injuries)
+            {
+                if (remaining <= 0f)
+                {
+                    break;
+                }
+                float heal = Mathf.Min(remaining, injury.Severity);
+                injury.Heal(heal);
+                remaining -= heal;
+            }
+        }
+
+        public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
+        {
+            return target.Thing is Pawn p && !p.Dead && base.Valid(target, throwMessages);
+        }
+    }
+
+    /// <summary>Revivify: resurrect a fresh corpse, no side effects (5e: get them up quick).</summary>
+    public class CompProperties_AbilityRevivify : CompProperties_AbilityEffect
+    {
+        public int maxDeathTicks = 60000; // one in-game day
+
+        public CompProperties_AbilityRevivify() => compClass = typeof(CompAbilityEffect_Revivify);
+    }
+
+    public class CompAbilityEffect_Revivify : CompAbilityEffect
+    {
+        public new CompProperties_AbilityRevivify Props => (CompProperties_AbilityRevivify)props;
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            base.Apply(target, dest);
+            if (!(target.Thing is Corpse corpse))
+            {
+                return;
+            }
+            var innerPawn = corpse.InnerPawn; // resurrection destroys the corpse - capture first
+            if (innerPawn != null && ResurrectionUtility.TryResurrect(innerPawn))
+            {
+                Messages.Message("RH_Revivified".Translate(innerPawn.LabelShortCap, parent.pawn.LabelShortCap),
+                    innerPawn, MessageTypeDefOf.PositiveEvent);
+            }
+        }
+
+        public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
+        {
+            if (!(target.Thing is Corpse corpse))
+            {
+                return false;
+            }
+            if (corpse.Age > Props.maxDeathTicks || corpse.GetRotStage() != RotStage.Fresh)
+            {
+                if (throwMessages)
+                {
+                    Messages.Message("RH_TooLongDead".Translate(), corpse, MessageTypeDefOf.RejectInput, historical: false);
+                }
+                return false;
+            }
+            return base.Valid(target, throwMessages);
         }
     }
 

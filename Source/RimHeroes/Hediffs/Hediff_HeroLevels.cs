@@ -78,7 +78,9 @@ namespace RimHeroes
         /// </summary>
         private void SyncGestrals()
         {
-            if (classDef?.gestralUnlocks == null || pawn.Dead)
+            // Player heroes only: enemy heroes don't trail walk-in retinues (their combat
+            // gestrals will come with raid composition work later).
+            if (classDef?.gestralUnlocks == null || pawn.Dead || pawn.Faction != Faction.OfPlayer)
             {
                 return;
             }
@@ -409,6 +411,15 @@ namespace RimHeroes
         public void Notify_FailedDeathSaves()
         {
             // Hook for future bookkeeping (gestral panic event, revival quest seeding).
+        }
+
+        /// <summary>Set level directly (enemy hero generation, debug): applies grants + vestment tier.</summary>
+        public void SetLevelDirect(int newLevel)
+        {
+            level = Mathf.Clamp(newLevel, 1, classDef?.maxLevel ?? 20);
+            xp = 0f;
+            ApplyGrants();
+            Vestment?.SetTierForLevel(level);
         }
 
         public void GainXP(float amount)

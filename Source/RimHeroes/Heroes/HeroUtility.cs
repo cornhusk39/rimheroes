@@ -5,6 +5,19 @@ namespace RimHeroes
 {
     public static class HeroUtility
     {
+        private static readonly string[] CorpseDestroyingRecipes = { "CremateCorpse", "ButcherCorpseFlesh" };
+
+        public static bool CorpseBillBlocked(RecipeDef recipe, Thing thing)
+        {
+            if (RimHeroesMod.Settings.allowHeroCorpseDestruction || recipe == null)
+            {
+                return false;
+            }
+            return thing is Corpse corpse
+                   && IsHero(corpse.InnerPawn)
+                   && System.Array.IndexOf(CorpseDestroyingRecipes, recipe.defName) >= 0;
+        }
+
         public static Hediff_HeroLevels GetHeroHediff(Pawn pawn) =>
             pawn?.health?.hediffSet?.GetFirstHediffOfDef(RH_DefOf.RH_HeroLevels) as Hediff_HeroLevels;
 

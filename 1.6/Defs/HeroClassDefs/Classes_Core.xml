@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- v1 class roster. Gestral trios per DESIGN.md (L3/L8/L12 + L20 free choice handled in code).
-       levelGrants filled in as the spell/feature content is authored. -->
+  <!-- The full class roster. Gestral trios per DESIGN.md (L3/L8/L12; L20 free choice in code
+       later). Slinger and Wisp castes exist as jobs but have no race yet - those slots simply
+       don't spawn until their castes ship. -->
 
   <RimHeroes.HeroClassDef>
     <defName>RH_Fighter</defName>
@@ -31,9 +32,213 @@
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
+    <defName>RH_Barbarian</defName>
+    <label>barbarian</label>
+    <description>Fury given a body. Hits like a falling tree and barely notices being hit back.</description>
+    <vestmentHediff>RH_Vestment_Barbarian</vestmentHediff>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <features>
+          <li>RH_Feature_Rage</li>
+        </features>
+      </li>
+      <li>
+        <level>5</level>
+        <features>
+          <li>RH_Feature_BattleHardened</li>
+        </features>
+      </li>
+    </levelGrants>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Porter</job></li>
+      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
+      <li><level>12</level><job>RH_Gestral_Scrapper</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Monk</defName>
+    <label>monk</label>
+    <description>A weapon that walks. Speed and discipline in place of steel.</description>
+    <vestmentHediff>RH_Vestment_Monk</vestmentHediff>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <features>
+          <li>RH_Feature_UnarmoredSwiftness</li>
+        </features>
+      </li>
+      <li>
+        <level>5</level>
+        <features>
+          <li>RH_Feature_FlurryOfBlows</li>
+        </features>
+      </li>
+    </levelGrants>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
+      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
+      <li><level>12</level><job>RH_Gestral_Scrapper</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Rogue</defName>
+    <label>rogue</label>
+    <description>Where the armor isn't. Quick hands, quicker exits.</description>
+    <vestmentHediff>RH_Vestment_Rogue</vestmentHediff>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <features>
+          <li>RH_Feature_CunningEdge</li>
+        </features>
+      </li>
+      <li>
+        <level>5</level>
+        <features>
+          <li>RH_Feature_Evasion</li>
+        </features>
+      </li>
+    </levelGrants>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
+      <li><level>8</level><job>RH_Gestral_Digger</job></li>
+      <li><level>12</level><job>RH_Gestral_Scrapper</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Ranger</defName>
+    <label>ranger</label>
+    <description>The wild's warden. Tracks anything, drops it from a treeline away.</description>
+    <vestmentHediff>RH_Vestment_Ranger</vestmentHediff>
+    <casterProgression>Half</casterProgression>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <features>
+          <li>RH_Feature_Survivalist</li>
+        </features>
+      </li>
+      <li>
+        <level>2</level>
+        <abilities>
+          <li>RH_Spell_HuntersMark</li>
+          <li>RH_Spell_CureWounds</li>
+        </abilities>
+      </li>
+    </levelGrants>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Porter</job></li>
+      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
+      <li><level>12</level><job>RH_Gestral_Slinger</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Paladin</defName>
+    <label>paladin</label>
+    <description>An oath wearing armor. Stands between the helpless and the dark.</description>
+    <vestmentHediff>RH_Vestment_Paladin</vestmentHediff>
+    <casterProgression>Half</casterProgression>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <features>
+          <li>RH_Feature_DivineGrit</li>
+        </features>
+      </li>
+      <li>
+        <level>2</level>
+        <abilities>
+          <li>RH_Spell_LayOnHands</li>
+          <li>RH_Spell_Bless</li>
+        </abilities>
+      </li>
+    </levelGrants>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Porter</job></li>
+      <li><level>8</level><job>RH_Gestral_Salve</job></li>
+      <li><level>12</level><job>RH_Gestral_Bulwark</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Cleric</defName>
+    <label>cleric</label>
+    <description>A conduit of the divine. Mends the broken - and, when the need is great, calls the dead back.</description>
+    <vestmentHediff>RH_Vestment_Cleric</vestmentHediff>
+    <casterProgression>Full</casterProgression>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <abilities>
+          <li>RH_Spell_SacredFlame</li>
+          <li>RH_Spell_CureWounds</li>
+          <li>RH_Spell_Bless</li>
+        </abilities>
+      </li>
+      <li>
+        <level>5</level>
+        <abilities>
+          <li>RH_Spell_Revivify</li>
+        </abilities>
+      </li>
+    </levelGrants>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
+      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
+      <li><level>12</level><job>RH_Gestral_Salve</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Druid</defName>
+    <label>druid</label>
+    <description>A voice of the wild. Wears the shapes of beasts and commands the green.</description>
+    <vestmentHediff>RH_Vestment_Druid</vestmentHediff>
+    <casterProgression>Full</casterProgression>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <abilities>
+          <li>RH_Spell_Thornlash</li>
+          <li>RH_Spell_CureWounds</li>
+        </abilities>
+      </li>
+      <li>
+        <level>2</level>
+        <abilities>
+          <li>RH_Ability_WildshapeDireWolf</li>
+        </abilities>
+      </li>
+      <li>
+        <level>5</level>
+        <abilities>
+          <li>RH_Ability_WildshapeOwlbear</li>
+        </abilities>
+      </li>
+      <li>
+        <level>8</level>
+        <abilities>
+          <li>RH_Ability_WildshapeGiantElk</li>
+        </abilities>
+      </li>
+    </levelGrants>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Porter</job></li>
+      <li><level>8</level><job>RH_Gestral_Sprout</job></li>
+      <li><level>12</level><job>RH_Gestral_Salve</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
     <defName>RH_Wizard</defName>
     <label>wizard</label>
     <description>A scholar of the arcane. Fragile, studious, and capable of erasing a raid before it closes the distance.</description>
+    <vestmentHediff>RH_Vestment_Wizard</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <levelGrants>
       <li>
@@ -59,45 +264,75 @@
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
-    <defName>RH_Cleric</defName>
-    <label>cleric</label>
-    <description>A conduit of the divine. Mends the broken - and, when the need is great, calls the dead back.</description>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
-      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
-      <li><level>12</level><job>RH_Gestral_Salve</job></li>
-    </gestralUnlocks>
-  </RimHeroes.HeroClassDef>
-
-  <RimHeroes.HeroClassDef>
-    <defName>RH_Druid</defName>
-    <label>druid</label>
-    <description>A voice of the wild. Wears the shapes of beasts and commands the green.</description>
+    <defName>RH_Sorcerer</defName>
+    <label>sorcerer</label>
+    <description>Magic in the blood, begging to get out. Less study than the wizard; more lightning.</description>
+    <vestmentHediff>RH_Vestment_Sorcerer</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <levelGrants>
       <li>
-        <level>2</level>
+        <level>1</level>
         <abilities>
-          <li>RH_Ability_WildshapeDireWolf</li>
+          <li>RH_Spell_FireBolt</li>
+          <li>RH_Spell_MagicMissile</li>
         </abilities>
       </li>
       <li>
         <level>5</level>
         <abilities>
-          <li>RH_Ability_WildshapeOwlbear</li>
-        </abilities>
-      </li>
-      <li>
-        <level>8</level>
-        <abilities>
-          <li>RH_Ability_WildshapeGiantElk</li>
+          <li>RH_Spell_Fireball</li>
         </abilities>
       </li>
     </levelGrants>
     <gestralUnlocks>
       <li><level>3</level><job>RH_Gestral_Porter</job></li>
-      <li><level>8</level><job>RH_Gestral_Sprout</job></li>
-      <li><level>12</level><job>RH_Gestral_Salve</job></li>
+      <li><level>8</level><job>RH_Gestral_Bulwark</job></li>
+      <li><level>12</level><job>RH_Gestral_Wisp</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Bard</defName>
+    <label>bard</label>
+    <description>Wit sharp enough to wound and songs that close wounds. Better with friends.</description>
+    <vestmentHediff>RH_Vestment_Bard</vestmentHediff>
+    <casterProgression>Full</casterProgression>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <abilities>
+          <li>RH_Spell_ViciousMockery</li>
+          <li>RH_Spell_HealingWord</li>
+          <li>RH_Spell_Bless</li>
+        </abilities>
+      </li>
+    </levelGrants>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
+      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
+      <li><level>12</level><job>RH_Gestral_Wisp</job></li>
+    </gestralUnlocks>
+  </RimHeroes.HeroClassDef>
+
+  <RimHeroes.HeroClassDef>
+    <defName>RH_Warlock</defName>
+    <label>warlock</label>
+    <description>Power on loan from something that doesn't explain itself. The blast always works; that's the deal.</description>
+    <vestmentHediff>RH_Vestment_Warlock</vestmentHediff>
+    <casterProgression>Full</casterProgression>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <abilities>
+          <li>RH_Spell_EldritchBlast</li>
+          <li>RH_Spell_Hex</li>
+        </abilities>
+      </li>
+    </levelGrants>
+    <gestralUnlocks>
+      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
+      <li><level>8</level><job>RH_Gestral_Digger</job></li>
+      <li><level>12</level><job>RH_Gestral_Wisp</job></li>
     </gestralUnlocks>
   </RimHeroes.HeroClassDef>
 

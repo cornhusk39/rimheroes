@@ -130,4 +130,248 @@
     </lifeStages>
   </PawnKindDef>
 
+
+  <ThingDef ParentName="RH_GestralBase">
+    <defName>RH_GestralDigger</defName>
+    <label>digger gestral</label>
+    <description>A small, devoted helper creature that tunnels with unsettling enthusiasm.</description>
+    <statBases Inherit="False">
+      <MoveSpeed>4.2</MoveSpeed>
+      <MarketValue>300</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <Wildness>0</Wildness>
+    </statBases>
+    <comps>
+      <li Class="RimHeroes.CompProperties_GestralWorker">
+        <workTypes>
+          <li>Mining</li>
+        </workTypes>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="RH_GestralKindBase">
+    <defName>RH_GestralDiggerKind</defName>
+    <label>digger gestral</label>
+    <race>RH_GestralDigger</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
+          <color>(150,130,100)</color>
+          <drawSize>1.0</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="RH_GestralBase">
+    <defName>RH_GestralHearth</defName>
+    <label>hearth gestral</label>
+    <description>A small, devoted helper creature that keeps the pot full and the fire lit.</description>
+    <statBases Inherit="False">
+      <MoveSpeed>4.2</MoveSpeed>
+      <MarketValue>300</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <Wildness>0</Wildness>
+    </statBases>
+    <comps>
+      <li Class="RimHeroes.CompProperties_GestralWorker">
+        <workTypes>
+          <li>Cooking</li>
+        </workTypes>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="RH_GestralKindBase">
+    <defName>RH_GestralHearthKind</defName>
+    <label>hearth gestral</label>
+    <race>RH_GestralHearth</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
+          <color>(235,155,65)</color>
+          <drawSize>1.0</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="RH_GestralBase">
+    <defName>RH_GestralSprout</defName>
+    <label>sprout gestral</label>
+    <description>A small, devoted helper creature that tends growing things.</description>
+    <statBases Inherit="False">
+      <MoveSpeed>4.2</MoveSpeed>
+      <MarketValue>300</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <Wildness>0</Wildness>
+    </statBases>
+    <comps>
+      <li Class="RimHeroes.CompProperties_GestralWorker">
+        <workTypes>
+          <li>Growing</li>
+        </workTypes>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="RH_GestralKindBase">
+    <defName>RH_GestralSproutKind</defName>
+    <label>sprout gestral</label>
+    <race>RH_GestralSprout</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
+          <color>(150,220,120)</color>
+          <drawSize>1.0</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="RH_GestralBase">
+    <defName>RH_GestralSalve</defName>
+    <label>salve gestral</label>
+    <description>A small, devoted helper creature that fusses over wounds and the wounded.</description>
+    <statBases Inherit="False">
+      <MoveSpeed>4.2</MoveSpeed>
+      <MarketValue>300</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <Wildness>0</Wildness>
+    </statBases>
+    <comps>
+      <li Class="RimHeroes.CompProperties_GestralWorker">
+        <workTypes>
+          <li>Doctor</li>
+        </workTypes>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="RH_GestralKindBase">
+    <defName>RH_GestralSalveKind</defName>
+    <label>salve gestral</label>
+    <race>RH_GestralSalve</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
+          <color>(240,240,240)</color>
+          <drawSize>1.0</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="RH_GestralBase">
+    <defName>RH_GestralScrapper</defName>
+    <label>scrapper gestral</label>
+    <description>A small, fierce, devoted fighter. Entirely too brave.</description>
+    <race>
+      <baseHealthScale>0.9</baseHealthScale>
+    </race>
+    <statBases Inherit="False">
+      <MoveSpeed>4.6</MoveSpeed>
+      <MarketValue>300</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <Wildness>0</Wildness>
+    </statBases>
+    <comps>
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable" />
+      <!-- Empty worker comp: initializes workSettings (JobGiver_Work needs it) with no work enabled. -->
+      <li Class="RimHeroes.CompProperties_GestralWorker" />
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="RH_GestralKindBase">
+    <defName>RH_GestralScrapperKind</defName>
+    <label>scrapper gestral</label>
+    <race>RH_GestralScrapper</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
+          <color>(195,85,60)</color>
+          <drawSize>1.0</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="RH_GestralBase">
+    <defName>RH_GestralBulwark</defName>
+    <label>bulwark gestral</label>
+    <description>A walking shield with opinions. Slow, devoted, very hard to put down.</description>
+    <race>
+      <baseHealthScale>1.5</baseHealthScale>
+      <baseBodySize>0.8</baseBodySize>
+    </race>
+    <statBases Inherit="False">
+      <MoveSpeed>3.8</MoveSpeed><ArmorRating_Sharp>0.30</ArmorRating_Sharp><ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+      <MarketValue>300</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <Wildness>0</Wildness>
+    </statBases>
+    <comps>
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable" />
+      <!-- Empty worker comp: initializes workSettings (JobGiver_Work needs it) with no work enabled. -->
+      <li Class="RimHeroes.CompProperties_GestralWorker" />
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="RH_GestralKindBase">
+    <defName>RH_GestralBulwarkKind</defName>
+    <label>bulwark gestral</label>
+    <race>RH_GestralBulwark</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
+          <color>(115,135,175)</color>
+          <drawSize>1.0</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
 </Defs>

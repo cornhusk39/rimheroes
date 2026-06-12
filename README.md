@@ -1,20 +1,57 @@
-# RimHeroes — D&D Classes for RimWorld (WIP)
+# RimHeroes — D&D Classes for RimWorld (playtest alpha)
 
 Rare **Hero** pawns bear a D&D class central to their identity: levels 1–20, Vancian spell slots,
-death saving throws, an unremovable class vestment that evolves with level, and a retinue of
-job-specialized **gestral** followers.
+death saving throws, an unremovable class vestment with inlay slots, and a retinue of
+job-specialized **gestral** followers. Plus a growing D&D bestiary — some of it wildshape-able.
 
-**Status: pre-alpha scaffolding. Not playable.**
+**Status: playtest alpha.** All systems verified by automated in-game tests. Placeholder art
+everywhere (tinted vanilla textures).
 
-- Design doc: [docs/DESIGN.md](docs/DESIGN.md)
-- Research dossier (RimWorld 1.6 modding state, June 2026): [docs/RESEARCH.md](docs/RESEARCH.md)
+- Design doc: [docs/DESIGN.md](docs/DESIGN.md) · Research dossier: [docs/RESEARCH.md](docs/RESEARCH.md)
 
-## Targets
+## How to playtest
 
-- RimWorld **1.6** (1.6.4850), no DLC required (DLC-enhanced where present)
-- Hard dependencies: [Harmony](https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077),
-  [Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)
-- Recommended companions: Medieval Overhaul + World Tech Level
+1. Build (or use the committed DLL), make sure the repo is junctioned into `RimWorld/Mods/`.
+2. Enable: **Harmony → (DLCs) → Vanilla Expanded Framework → RimHeroes**.
+3. New game → scenario **"The Lone Hero"** → pick your pawn → choose a class at landing.
+4. Or in any colony: spawn/buy a **class tome** (12 kinds, exotic goods) and have a pawn study it.
+
+### What to try
+- **Hero tab** on your hero: level, XP bar, spell slots, features, vestment + inlay slots, gestral roster.
+- **Casters**: cast from slots, run dry, sleep (short rest = 1 slot back), use the **Long rest**
+  toggle gizmo (~12h sleep = all slots). Autocast toggles per spell; hostile cantrips default on.
+- **Druid**: wildshape ladder — dire wolf (L2), owlbear (L5), giant elk (L8). One form at a time.
+- **Cleric**: Revivify (L5) raises corpses dead less than a day.
+- **Death saves**: heroes collapse at death's door instead of dying — tend them to boost saves.
+- **Gestrals**: walk in at hero levels 3/8/12; die → replaced in 1–3 days; master dies → panic, leave.
+- **Inlays**: 3 vestment slots (defense/offense/utility) × lesser/regular/greater, installed by surgery.
+- **Enemy heroes**: raids over 2000 points may include one — they drop inlays and (rarely) tomes.
+- **Bestiary**: owlbear, dire wolf packs, giant elk, ankheg, basilisk spawn wild by biome.
+
+## The 12 classes
+
+| Class | Casting | Signature |
+|---|---|---|
+| Fighter | — | Heroic Vigor, Battle-Hardened |
+| Barbarian | — | Battle Fury (more damage out, less in) |
+| Monk | — | Unarmored Swiftness, Flurry of Blows |
+| Rogue | — | Cunning Edge, Evasion |
+| Ranger | Half | Survivalist, Hunter's Mark, Cure Wounds |
+| Paladin | Half | Divine Grit, Lay on Hands, Bless |
+| Cleric | Full | Sacred Flame, Cure Wounds, Bless, **Revivify** |
+| Druid | Full | Thornlash, Cure Wounds, **Wildshape ×3** |
+| Wizard | Full | Fire Bolt, Magic Missile, Mage Armor, Fireball |
+| Sorcerer | Full | Fire Bolt, Magic Missile, Fireball |
+| Bard | Full | Vicious Mockery, Healing Word, Bless |
+| Warlock | Full | Eldritch Blast, Hex |
+
+## Known gaps (deliberate, post-playtest)
+
+- All art is tinted placeholder (gestrals are rats, owlbears are bears, vestments are flak vests).
+- Slinger/Wisp gestral castes have no race yet — those unlock slots stay empty.
+- L20 capstone gestral choice, gestral beds/housing rules, hero housing thoughts: not yet.
+- Tech leak-stopper setting is a stub; upcasting, spell-choice UI, subclasses: not yet.
+- Warlock uses full-caster slots (pact magic later). Inlay/tome crafting recipes: trade/loot only.
 
 ## Build
 
@@ -22,21 +59,6 @@ job-specialized **gestral** followers.
 dotnet build Source/RimHeroes/RimHeroes.csproj -c Release
 ```
 
-Outputs `1.6/Assemblies/RimHeroes.dll`. Uses `Krafs.Rimworld.Ref` — no local RimWorld install needed to compile.
-To test in-game, clone/junction this folder into `RimWorld/Mods/`.
-
-## Layout
-
-```
-About/            mod metadata
-1.6/Defs/         XML defs (classes, gestral jobs, traits, hediffs)
-1.6/Assemblies/   build output (committed)
-Source/RimHeroes/ C# (net472)
-docs/             design + research
-```
-
-## Next up
-
-1. **Gestral work-AI spike** — mech-work-fields vs custom ThinkTree (gates Sweeper/Hearth/Digger/Sprout/Salve)
-2. Fighter vertical slice: vestment, death saves, Porter/Bulwark/Scrapper, devotion/housing
-3. Spell engine: slots/rests/autocast via the Wizard
+Targets RimWorld 1.6 (net472, Krafs.Rimworld.Ref). Automated test harnesses: launch with
+`-quicktest -rh<name>spike` (spike, herospike, deathspike, bondspike, vestspike, shapespike,
+spellspike, fullspike) — each logs `RESULT ... verdict=PASS/FAIL` to Player.log and exits.

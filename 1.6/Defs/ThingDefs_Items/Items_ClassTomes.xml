@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Class Tomes: reading one makes a non-hero pawn a Hero of that class (HeroUtility.MakeHero).
+       Acquisition: rare enemy-hero drops, exotic traders; quest rewards later. -->
+
+  <ThingDef Name="RH_TomeBase" ParentName="ResourceBase" Abstract="True">
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MarketValue>1200</MarketValue>
+      <Mass>1.5</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Fighter</defName>
+    <label>tome of the fighter</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the fighter's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.78, 0.22, 0.18)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Fighter</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Barbarian</defName>
+    <label>tome of the barbarian</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the barbarian's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.72, 0.38, 0.16)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Barbarian</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Monk</defName>
+    <label>tome of the monk</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the monk's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.9, 0.66, 0.2)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Monk</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Rogue</defName>
+    <label>tome of the rogue</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the rogue's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.3, 0.3, 0.36)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Rogue</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Ranger</defName>
+    <label>tome of the ranger</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the ranger's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.26, 0.5, 0.26)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Ranger</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Paladin</defName>
+    <label>tome of the paladin</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the paladin's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.9, 0.85, 0.6)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Paladin</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Cleric</defName>
+    <label>tome of the cleric</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the cleric's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.92, 0.88, 0.7)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Cleric</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Druid</defName>
+    <label>tome of the druid</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the druid's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.3, 0.58, 0.3)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Druid</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Wizard</defName>
+    <label>tome of the wizard</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the wizard's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.27, 0.37, 0.8)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Wizard</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Sorcerer</defName>
+    <label>tome of the sorcerer</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the sorcerer's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.75, 0.26, 0.6)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Sorcerer</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Bard</defName>
+    <label>tome of the bard</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the bard's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.56, 0.32, 0.72)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Bard</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TomeBase">
+    <defName>RH_Tome_Warlock</defName>
+    <label>tome of the warlock</label>
+    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the warlock's path - a destiny that cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Textbook/Textbook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.42, 0.16, 0.52)</color>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Study {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectMakeHero">
+        <heroClass>RH_Warlock</heroClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+</Defs>

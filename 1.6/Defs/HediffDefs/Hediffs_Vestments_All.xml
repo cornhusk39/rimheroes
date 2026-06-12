@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Vestments for the remaining 11 classes. Martial template = Fighter's curve; caster
+       template is lighter. All share the flak-vest placeholder visual, tinted per class. -->
+
+  <HediffDef Name="RH_VestmentMartialBase" ParentName="RH_VestmentBase" Abstract="True">
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>battered harness</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.5</minSeverity>
+        <label>proven mail</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.5</minSeverity>
+        <label>champion's plate</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.15</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.5</minSeverity>
+        <label>legend-forged plate</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.30</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_Vestment</nodeClass>
+        <texPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</texPath>
+        <parentTagDef>Body</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>40</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <HediffDef Name="RH_VestmentCasterBase" ParentName="RH_VestmentBase" Abstract="True">
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>initiate's weave</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.06</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.5</minSeverity>
+        <label>adept's weave</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.22</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.5</minSeverity>
+        <label>magister's weave</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.10</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.5</minSeverity>
+        <label>legend-woven raiment</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.28</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.25</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_Vestment</nodeClass>
+        <texPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</texPath>
+        <parentTagDef>Body</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>40</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentMartialBase">
+    <defName>RH_Vestment_Barbarian</defName>
+    <label>barbarian's vestment</label>
+    <description>A hero's war-harness, bound to their destiny. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.72, 0.38, 0.16)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentMartialBase">
+    <defName>RH_Vestment_Monk</defName>
+    <label>monk's vestment</label>
+    <description>A hero's wrappings, bound to their destiny. They grow with their bearer and cannot be removed; mundane torso armor cannot be worn over them.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.9, 0.66, 0.2)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentMartialBase">
+    <defName>RH_Vestment_Rogue</defName>
+    <label>rogue's vestment</label>
+    <description>A hero's shadowed leathers, bound to their destiny. They grow with their bearer and cannot be removed; mundane torso armor cannot be worn over them.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.3, 0.3, 0.36)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentMartialBase">
+    <defName>RH_Vestment_Ranger</defName>
+    <label>ranger's vestment</label>
+    <description>A hero's trailworn mantle, bound to their destiny. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.26, 0.5, 0.26)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentMartialBase">
+    <defName>RH_Vestment_Paladin</defName>
+    <label>paladin's vestment</label>
+    <description>A hero's consecrated plate, bound to their oath. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.9, 0.85, 0.6)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentCasterBase">
+    <defName>RH_Vestment_Cleric</defName>
+    <label>cleric's vestment</label>
+    <description>A hero's holy raiment, bound to their faith. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.92, 0.88, 0.7)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentCasterBase">
+    <defName>RH_Vestment_Druid</defName>
+    <label>druid's vestment</label>
+    <description>A hero's living mantle of bark and leaf, bound to the green. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.3, 0.58, 0.3)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentCasterBase">
+    <defName>RH_Vestment_Wizard</defName>
+    <label>wizard's vestment</label>
+    <description>A hero's inscribed robes, bound to their study. They grow with their bearer and cannot be removed; mundane torso armor cannot be worn over them.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.27, 0.37, 0.8)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentCasterBase">
+    <defName>RH_Vestment_Sorcerer</defName>
+    <label>sorcerer's vestment</label>
+    <description>A hero's storm-touched raiment, bound to the blood. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.75, 0.26, 0.6)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentCasterBase">
+    <defName>RH_Vestment_Bard</defName>
+    <label>bard's vestment</label>
+    <description>A hero's flamboyant attire, bound to the song. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.56, 0.32, 0.72)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentCasterBase">
+    <defName>RH_Vestment_Warlock</defName>
+    <label>warlock's vestment</label>
+    <description>A hero's pact-sealed shroud, bound to the bargain. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.42, 0.16, 0.52)</baseColor></li>
+    </modExtensions>
+  </HediffDef>
+
+  <!-- Martial class features -->
+
+  <HediffDef ParentName="RH_FeatureBase">
+    <defName>RH_Feature_Rage</defName>
+    <label>battle fury</label>
+    <description>This hero fights wrapped in a controlled fury: blows land harder, and pain is a distant rumor.</description>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+          <IncomingDamageFactor>0.9</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatureBase">
+    <defName>RH_Feature_UnarmoredSwiftness</defName>
+    <label>unarmored swiftness</label>
+    <description>Trained motion as defense: this hero flows around blows that should have landed.</description>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>0.6</MoveSpeed>
+          <MeleeDodgeChance>6</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatureBase">
+    <defName>RH_Feature_FlurryOfBlows</defName>
+    <label>flurry of blows</label>
+    <description>Strikes flow into strikes. This hero attacks notably faster than seems fair.</description>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeCooldownFactor>0.85</MeleeCooldownFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatureBase">
+    <defName>RH_Feature_CunningEdge</defName>
+    <label>cunning edge</label>
+    <description>This hero strikes where the armor isn't and is somewhere else by the time you swing back.</description>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>3</MeleeHitChance>
+          <MoveSpeed>0.3</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatureBase">
+    <defName>RH_Feature_Evasion</defName>
+    <label>evasion</label>
+    <description>What should hit this hero, mostly doesn't.</description>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeDodgeChance>8</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatureBase">
+    <defName>RH_Feature_Survivalist</defName>
+    <label>survivalist</label>
+    <description>At home in the wild: this hero moves lightly and shoots true.</description>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>0.2</MoveSpeed>
+          <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatureBase">
+    <defName>RH_Feature_DivineGrit</defName>
+    <label>divine grit</label>
+    <description>An oath holds this hero upright when flesh alone would fail.</description>
+    <stages>
+      <li>
+        <statOffsets>
+          <PainShockThreshold>0.2</PainShockThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

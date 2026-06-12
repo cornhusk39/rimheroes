@@ -22,24 +22,28 @@
     <defName>RH_Gestral_Digger</defName>
     <label>digger</label>
     <description>A gestral miner. Tunnels with unsettling enthusiasm.</description>
+    <pawnKind>RH_GestralDiggerKind</pawnKind>
   </RimHeroes.GestralJobDef>
 
   <RimHeroes.GestralJobDef>
     <defName>RH_Gestral_Hearth</defName>
     <label>hearth</label>
     <description>A gestral cook. Keeps the pot full and the fire lit.</description>
+    <pawnKind>RH_GestralHearthKind</pawnKind>
   </RimHeroes.GestralJobDef>
 
   <RimHeroes.GestralJobDef>
     <defName>RH_Gestral_Sprout</defName>
     <label>sprout</label>
     <description>A gestral planter. Tends growing things.</description>
+    <pawnKind>RH_GestralSproutKind</pawnKind>
   </RimHeroes.GestralJobDef>
 
   <RimHeroes.GestralJobDef>
     <defName>RH_Gestral_Salve</defName>
     <label>salve</label>
     <description>A gestral tender. Fusses over wounds and the wounded.</description>
+    <pawnKind>RH_GestralSalveKind</pawnKind>
   </RimHeroes.GestralJobDef>
 
   <RimHeroes.GestralJobDef>
@@ -47,6 +51,7 @@
     <label>scrapper</label>
     <description>A gestral melee fighter. Small, fierce, and entirely too brave.</description>
     <isCombat>true</isCombat>
+    <pawnKind>RH_GestralScrapperKind</pawnKind>
   </RimHeroes.GestralJobDef>
 
   <RimHeroes.GestralJobDef>
@@ -54,6 +59,7 @@
     <label>bulwark</label>
     <description>A gestral tank. A walking shield with opinions.</description>
     <isCombat>true</isCombat>
+    <pawnKind>RH_GestralBulwarkKind</pawnKind>
   </RimHeroes.GestralJobDef>
 
   <RimHeroes.GestralJobDef>

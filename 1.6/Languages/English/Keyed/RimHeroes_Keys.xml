@@ -51,4 +51,11 @@
   <RH_RevertForm>Revert form</RH_RevertForm>
   <RH_RevertFormDesc>Return to your natural shape.</RH_RevertFormDesc>
   <RH_WildshapeReverted>{0} returns to their natural shape.</RH_WildshapeReverted>
+  <RH_AlreadyHero>{0} is already a Hero</RH_AlreadyHero>
+  <RH_TomeUsedLabel>{0}: a hero awakens</RH_TomeUsedLabel>
+  <RH_TomeUsedText>{0} has studied the tome and awakened as a {1}. Their destiny is now bound to that path - it cannot be undone.</RH_TomeUsedText>
+  <RH_Revivified>{0} has been called back from death by {1}!</RH_Revivified>
+  <RH_TooLongDead>Too long dead - revivify needs a fresh body.</RH_TooLongDead>
+  <RH_AlertHeroUnburied>Fallen hero unburied</RH_AlertHeroUnburied>
+  <RH_AlertHeroUnburiedDesc>A hero's corpse lies unburied. Bury them in a grave or sarcophagus - revival magic needs a body, and heroes' bodies cannot be cremated or butchered while corpse protection is enabled.</RH_AlertHeroUnburiedDesc>
 </LanguageData>
