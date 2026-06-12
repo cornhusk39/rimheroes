@@ -1,13 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Sorcerer T4 hood, east: crystal horns, cracked hood profile, dragon-scale, nape coverage. -->
-  <path d="M218 150 L202 98 L222 116 L214 74 L236 104 C232 122 226 140 218 152 Z" fill="#6E1E1E"/>
-  <path d="M226 110 L218 86 L232 102 Z" fill="#F2C84A"/>
+  <!-- Sorcerer T4 hood, east: crystallized hood profile, cracked glow, dragon-scale, nape coverage. -->
   <path d="M148 254 C144 190 196 146 256 146 C312 146 356 184 356 240 C356 252 350 262 340 268 L320 262 C310 256 304 250 302 244 L242 244 C240 290 234 328 220 352 L186 352 C160 326 146 292 148 254 Z" fill="#8E2A2A"/>
   <path d="M148 254 C144 190 196 146 256 146 C284 146 308 158 322 180 L256 244 L242 244 C240 290 234 328 220 352 L186 352 C160 326 146 292 148 254 Z" fill="#6E1E1E"/>
   <path d="M180 170 L208 198 L184 228 L212 256 L190 286" stroke="#F2C84A" stroke-width="3" fill="none"/>
-  <!-- near crystal horn -->
-  <path d="M290 150 L306 98 L286 116 L294 74 L272 104 C276 122 282 140 290 152 Z" fill="#8E2A2A"/>
-  <path d="M298 110 L306 86 L292 102 Z" fill="#F2C84A"/>
   <path d="M300 244 C322 244 340 252 348 264 L340 276 C330 264 316 258 298 258 L242 258 C240 260 238 262 238 264 C234 300 228 330 216 350 L198 350 C212 322 218 286 218 252 L220 244 Z" fill="#8E2A2A"/>
   <path d="M240 250 C250 244 260 246 264 254 M280 250 C290 244 300 246 304 254" stroke="#C9A23F" stroke-width="6" fill="none"/>
 </svg>

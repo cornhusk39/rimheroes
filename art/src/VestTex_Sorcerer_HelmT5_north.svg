@@ -1,9 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Sorcerer T5 hood, north: conduit crown from behind, glowing horns + spine, full coverage. -->
-  <path d="M190 150 L172 90 L194 112 L184 60 L210 98 L208 52 L226 106 C222 126 210 144 196 152 Z" fill="#5A1E1E"/>
-  <path d="M184 100 L176 70 L192 96" stroke="#F2C84A" stroke-width="3" fill="none"/>
-  <path d="M322 150 L340 90 L318 112 L328 60 L302 98 L304 52 L286 106 C290 126 302 144 316 152 Z" fill="#5A1E1E"/>
-  <path d="M328 100 L336 70 L320 96" stroke="#F2C84A" stroke-width="3" fill="none"/>
+  <!-- Sorcerer T5 hood, north: conduit crown from behind, glowing spine, full coverage. -->
   <path d="M150 254 C146 190 196 146 256 146 C316 146 366 190 362 254 C364 300 348 340 318 358 L194 358 C164 340 148 300 150 254 Z" fill="#3A1414"/>
   <path d="M164 244 C166 200 202 166 256 166 C286 166 312 180 328 204 C302 184 216 186 190 216 C178 228 166 234 164 244 Z" fill="#5A1E1E"/>
   <path d="M256 150 L256 352" stroke="#F2C84A" stroke-width="5" fill="none"/>
