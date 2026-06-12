@@ -1,21 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Wizard T5 hat, east: grand profile, curled glowing tip, rear drape over the skull back. -->
+  <!-- Wizard T5 hat, east: grand near-black cone with curled glowing tip, widest brim, runes, nape drape. -->
   <!-- rear drape -->
-  <path d="M156 252 C172 244 208 240 246 242 C250 286 246 324 232 356 L182 356 C160 326 150 292 156 252 Z" fill="#16182A"/>
-  <path d="M168 258 C182 252 208 249 232 250 C234 288 230 320 218 346 L192 346 C174 322 164 292 168 258 Z" fill="#0E101E" opacity="0.55"/>
-  <!-- crown dome under the cone: full skull coverage above the brow -->
-  <path d="M148 254 C144 188 198 144 260 144 C320 144 362 184 362 242 L360 264 C330 248 182 248 154 266 Z" fill="#16182A"/>
-  <path d="M162 244 C166 198 204 162 256 162 C290 162 316 177 332 202 C306 182 216 184 190 214 C176 228 164 236 162 244 Z" fill="#3D4775"/>
-  <!-- grand cone, tip curling back with glow -->
-  <path d="M196 242 C200 182 214 120 248 78 C258 64 272 62 282 72 C294 84 290 102 276 110 C254 146 234 192 230 242 Z" fill="#16182A"/>
-  <path d="M278 108 C292 100 298 84 290 72 C306 80 312 100 302 116 C284 142 270 176 264 212 C260 222 258 232 256 242 L242 242 C248 196 260 148 278 108 Z" fill="#16182A"/>
-  <path d="M204 234 C210 182 224 130 250 90 C238 134 228 188 226 234 Z" fill="#3D4775"/>
-  <circle cx="294" cy="74" r="9" fill="#8F7BFF"/>
-  <circle cx="294" cy="72" r="4" fill="#D6CEFF"/>
-  <path d="M244 196 L254 202 M250 164 L260 170 M256 134 L266 140" stroke="#8F7BFF" stroke-width="5" fill="none"/>
-  <!-- brim -->
-  <path d="M156 250 C190 230 332 230 364 250 L362 280 C330 262 188 262 158 280 Z" fill="#0E101E"/>
-  <path d="M158 252 C192 234 330 234 362 252 L361 268 C330 250 190 250 159 268 Z" fill="#1E2440"/>
-  <path d="M192 242 C218 234 304 234 322 242 L320 256 C302 246 220 246 194 256 Z" fill="#8F7BFF"/>
-  <path d="M328 226 L332 237 L344 237 L334 245 L338 257 L328 249 L318 257 L322 245 L312 237 L324 237 Z" fill="#C7CEDB"/>
+  <path d="M156 264 C172 256 210 252 248 254 C252 294 248 328 234 356 L182 356 C160 330 150 298 156 264 Z" fill="#16182A"/>
+  <path d="M168 270 C182 264 208 261 234 262 C236 298 232 326 220 348 L192 348 C174 326 164 300 168 270 Z" fill="#0E101E" opacity="0.55"/>
+  <!-- crown dome -->
+  <path d="M152 260 C148 196 200 152 258 152 C318 152 362 192 362 248 L360 268 C330 254 182 254 156 270 Z" fill="#16182A"/>
+  <!-- cone: grand, leaning back, tip curling over with glow -->
+  <path d="M190 254 C180 188 188 116 214 72 C220 62 230 58 239 63 C282 88 312 178 330 254 Z" fill="#16182A"/>
+  <path d="M214 72 C224 56 244 54 256 66 C266 76 264 92 252 100 C244 90 234 84 224 84 C220 80 216 76 214 72 Z" fill="#16182A"/>
+  <path d="M200 248 C194 196 198 142 216 94 C208 142 204 200 208 248 Z" fill="#3D4775"/>
+  <path d="M292 182 C308 206 320 232 328 252 L308 252 C302 230 294 206 284 184 Z" fill="#0E101E"/>
+  <circle cx="252" cy="74" r="9" fill="#8F7BFF"/>
+  <circle cx="252" cy="72" r="4" fill="#D6CEFF"/>
+  <!-- runes up the cone -->
+  <path d="M212 210 L222 216 M216 176 L226 182 M222 142 L232 148 M230 112 L240 118" stroke="#8F7BFF" stroke-width="5" fill="none"/>
+  <!-- brim: widest -->
+  <path d="M130 258 C168 242 348 242 386 258 C390 268 386 277 378 281 C338 266 180 266 138 281 C130 277 126 268 130 258 Z" fill="#0E101E"/>
+  <path d="M136 260 C174 247 342 247 380 260 C382 265 380 271 376 274 C338 260 180 260 140 274 C136 271 134 265 136 260 Z" fill="#1E2440"/>
+  <!-- glowing band + star -->
+  <path d="M194 244 C218 236 300 236 326 244 L324 256 C302 248 218 248 196 256 Z" fill="#8F7BFF"/>
+  <path d="M336 234 L340 245 L352 245 L342 253 L346 265 L336 257 L326 265 L330 253 L320 245 L332 245 Z" fill="#C7CEDB"/>
 </svg>

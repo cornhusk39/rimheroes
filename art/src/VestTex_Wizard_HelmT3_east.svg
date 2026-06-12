@@ -1,18 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Wizard T3 hat, east: bent point, brim, drape covering the back of the skull behind the face. -->
-  <!-- rear drape: from under the brim down the back of the head -->
-  <path d="M160 248 C176 240 210 236 244 238 C248 282 244 320 230 352 L186 352 C164 324 154 288 160 248 Z" fill="#2B3357"/>
-  <path d="M172 254 C186 248 208 245 230 246 C232 284 228 316 216 342 L196 342 C178 318 168 288 172 254 Z" fill="#1E2440" opacity="0.45"/>
-  <!-- crown dome: covers the whole skull above the brow, front to back -->
-  <path d="M150 250 C146 188 198 146 260 146 C318 146 360 184 360 238 L358 260 C328 244 184 244 156 262 Z" fill="#2B3357"/>
-  <path d="M164 240 C168 196 204 162 256 162 C288 162 314 176 330 200 C304 180 216 182 190 212 C176 226 166 232 164 240 Z" fill="#3D4775"/>
-  <!-- cone: tip drooping backward -->
-  <path d="M200 240 C200 200 212 162 240 138 C226 130 204 130 188 142 C166 160 156 188 162 216 C170 200 182 190 196 188 C198 206 199 224 200 240 Z" fill="#2B3357"/>
-  <path d="M198 240 C202 198 216 162 244 138 C270 120 298 122 316 138 C298 142 286 152 280 168 C288 192 292 216 292 240 Z" fill="#2B3357"/>
-  <path d="M208 232 C214 198 228 168 252 146 C240 170 228 200 224 232 Z" fill="#3D4775"/>
-  <path d="M166 210 C172 196 182 188 194 186 C184 192 176 200 172 210 Z" fill="#1E2440"/>
-  <!-- brim -->
-  <path d="M160 238 C170 220 200 210 260 210 C320 210 350 220 360 238 L358 268 C326 252 192 252 162 268 Z" fill="#1E2440"/>
-  <path d="M164 240 C176 225 204 216 260 216 C316 216 344 225 356 240 L355 256 C326 242 194 242 165 256 Z" fill="#3D4775"/>
-  <path d="M204 230 C228 222 300 222 316 230 L314 244 C298 234 228 234 206 244 Z" fill="#97A1B5"/>
+  <!-- Wizard T3 hat, east (facing right): proper profile - projecting brim, wide cone leaning back, nape drape. -->
+  <!-- rear drape: covers the back of the skull below the brim -->
+  <path d="M160 260 C176 252 210 248 244 250 C248 290 244 324 230 352 L186 352 C164 326 154 294 160 260 Z" fill="#2B3357"/>
+  <path d="M172 266 C186 260 208 257 230 258 C232 294 228 322 216 344 L196 344 C178 322 168 296 172 266 Z" fill="#1E2440" opacity="0.45"/>
+  <!-- crown dome under the brim -->
+  <path d="M156 256 C152 196 200 156 258 156 C314 156 358 192 358 244 L356 264 C326 250 186 250 160 266 Z" fill="#2B3357"/>
+  <!-- cone: wide base, leaning back, soft bent tip -->
+  <path d="M196 250 C190 204 194 158 212 128 C217 119 226 115 234 118 C270 132 302 184 324 250 Z" fill="#2B3357"/>
+  <path d="M204 244 C200 204 204 166 218 138 C210 168 208 206 212 244 Z" fill="#3D4775"/>
+  <path d="M288 196 C300 212 310 230 318 248 L302 248 C296 230 288 212 280 196 Z" fill="#1E2440"/>
+  <!-- brim: projects past the head front and back -->
+  <path d="M138 254 C172 240 344 240 378 254 C382 264 378 272 370 276 C332 262 184 262 146 276 C138 272 134 264 138 254 Z" fill="#1E2440"/>
+  <path d="M144 256 C178 244 338 244 372 256 C374 261 372 266 368 269 C332 256 184 256 148 269 C144 266 142 261 144 256 Z" fill="#3D4775"/>
+  <!-- silver band at the cone base -->
+  <path d="M198 240 C222 232 296 232 320 240 L318 252 C298 244 222 244 200 252 Z" fill="#97A1B5"/>
 </svg>
