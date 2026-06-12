@@ -28,6 +28,11 @@ namespace RimHeroes
 
         public bool AtMaxLevel => classDef == null || level >= classDef.maxLevel;
 
+        public Hediff_ClassVestment Vestment =>
+            classDef?.vestmentHediff == null
+                ? null
+                : pawn.health.hediffSet.GetFirstHediffOfDef(classDef.vestmentHediff) as Hediff_ClassVestment;
+
         public override void PostAdd(DamageInfo? dinfo)
         {
             base.PostAdd(dinfo);
@@ -203,6 +208,7 @@ namespace RimHeroes
             if (leveled)
             {
                 ApplyGrants();
+                Vestment?.SetTierForLevel(level);
                 if (PawnUtility.ShouldSendNotificationAbout(pawn))
                 {
                     Messages.Message("RH_LeveledUp".Translate(pawn.LabelShortCap, classDef.label, level),

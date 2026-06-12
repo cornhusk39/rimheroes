@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Class vestments: persistent armor-as-hediff. Severity == tier (1-4; tiers advance at hero
+       levels 5/11/17). Placeholder visuals: tinted flak vest worn texture; real art later. -->
+
+  <HediffDef Name="RH_VestmentBase" Abstract="True">
+    <hediffClass>RimHeroes.Hediff_ClassVestment</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>4</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.85, 0.7, 0.3)</defaultLabelColor>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_VestmentBase">
+    <defName>RH_Vestment_Fighter</defName>
+    <label>fighter's vestment</label>
+    <description>A hero's battle harness, bound to their very destiny. It cannot be removed, and it grows with its bearer - plain leathers hardening into legend-forged plate. It IS the fighter's armor; mundane torso armor cannot be worn over it.</description>
+    <modExtensions>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.78, 0.22, 0.18)</baseColor>
+      </li>
+    </modExtensions>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>battered harness</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.5</minSeverity>
+        <label>proven mail</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.5</minSeverity>
+        <label>champion's plate</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.15</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.5</minSeverity>
+        <label>legend-forged plate</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.30</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_Vestment</nodeClass>
+        <texPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</texPath>
+        <parentTagDef>Body</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>40</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <!-- Vestment enhancements: added by surgery-like operations, persist alongside the vestment. -->
+
+  <HediffDef Name="RH_EnhancementBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.6, 0.75, 0.95)</defaultLabelColor>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_EnhancementBase">
+    <defName>RH_Enh_Warding</defName>
+    <label>inlay of warding</label>
+    <description>Warding sigils inlaid into this hero's vestment turn aside crushing blows.</description>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

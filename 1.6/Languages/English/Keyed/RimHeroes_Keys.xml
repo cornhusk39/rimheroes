@@ -32,4 +32,5 @@
   <RH_GestralArrived>A {0} gestral has arrived to serve {1}.</RH_GestralArrived>
   <RH_GestralLost>{1}'s {0} gestral has perished. Another will come in time.</RH_GestralLost>
   <RH_GestralPanic>{0} panics - its master is dead!</RH_GestralPanic>
+  <RH_VestmentUpgraded>{0}'s {1} has grown stronger (tier {2}).</RH_VestmentUpgraded>
 </LanguageData>

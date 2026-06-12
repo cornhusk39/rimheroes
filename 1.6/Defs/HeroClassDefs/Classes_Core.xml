@@ -8,6 +8,7 @@
     <defName>RH_Fighter</defName>
     <label>fighter</label>
     <description>A master of martial combat. Holds the line while others break.</description>
+    <vestmentHediff>RH_Vestment_Fighter</vestmentHediff>
     <levelGrants>
       <li>
         <level>1</level>

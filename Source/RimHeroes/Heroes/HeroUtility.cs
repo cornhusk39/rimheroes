@@ -37,6 +37,11 @@ namespace RimHeroes
             var hediff = (Hediff_HeroLevels)HediffMaker.MakeHediff(RH_DefOf.RH_HeroLevels, pawn);
             hediff.classDef = classDef;
             pawn.health.AddHediff(hediff);
+            if (classDef.vestmentHediff != null && !pawn.health.hediffSet.HasHediff(classDef.vestmentHediff))
+            {
+                var vestment = (Hediff_ClassVestment)pawn.health.AddHediff(classDef.vestmentHediff);
+                vestment.SetTierForLevel(hediff.level);
+            }
             return hediff;
         }
     }

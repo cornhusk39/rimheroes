@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Enhancement items: consumed by vestment-inlay operations. Acquisition: loot from enemy
+       heroes (DESIGN.md), trade; crafting recipes later. -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RH_InlayOfWarding</defName>
+    <label>inlay of warding</label>
+    <description>A set of warded sigil-plates, sized for inlaying into a hero's vestment. Requires a craftsman's hands and a willing hero.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/ComponentIndustrial</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.85, 0.72, 0.35)</color>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>350</MarketValue>
+      <Mass>1</Mass>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>RH_InstallInlayOfWarding</defName>
+    <label>inlay vestment with warding</label>
+    <description>Inlay warded sigil-plates into this hero's vestment, improving its protection against crushing blows.</description>
+    <workerClass>RimHeroes.Recipe_VestmentEnhancement</workerClass>
+    <jobString>Inlaying vestment with warding.</jobString>
+    <workAmount>2500</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <anesthetize>false</anesthetize>
+    <addsHediff>RH_Enh_Warding</addsHediff>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RH_InlayOfWarding</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RH_InlayOfWarding</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>
