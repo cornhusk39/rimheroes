@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Paladin T3 helm, north: sallet from behind, full skull coverage, neck flare. -->
+  <path d="M158 250 C154 190 202 146 256 146 C310 146 358 190 354 250 C356 296 340 336 310 354 L202 354 C172 336 156 296 158 250 Z" fill="#9AA3B0"/>
+  <path d="M172 242 C174 200 210 166 256 166 C284 166 308 178 324 200 C298 182 214 184 190 212 C180 224 174 232 172 242 Z" fill="#C4CBD6"/>
+  <path d="M252 150 L260 150 L259 348 L253 348 Z" fill="#7A828E"/>
+  <path d="M170 312 C198 298 314 298 342 312 L336 332 C310 318 202 318 176 332 Z" fill="#7A828E"/>
+</svg>

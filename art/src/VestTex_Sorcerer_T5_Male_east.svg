@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Sorcerer T5 east: conduit profile, light at the seams, glowing core, crystallized shoulder. -->
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 404 C340 444 312 466 254 466 C200 466 166 444 168 404 Z" fill="#3A1414"/>
+  <path d="M182 240 C192 206 220 186 258 186 C290 186 314 198 328 220 C304 200 216 202 194 232 C188 236 184 238 182 240 Z" fill="#5A1E1E" opacity="0.7"/>
+  <path d="M214 218 C224 258 210 298 222 338 C230 366 224 398 234 438" stroke="#F2C84A" stroke-width="5" fill="none"/>
+  <path d="M296 222 C286 262 300 300 288 338" stroke="#E0A030" stroke-width="4" fill="none"/>
+  <circle cx="262" cy="286" r="16" fill="#F2C84A" opacity="0.5"/>
+  <circle cx="262" cy="286" r="10" fill="#F2C84A"/>
+  <circle cx="262" cy="286" r="5" fill="#FFF6D8"/>
+  <path d="M170 236 C176 206 202 188 234 186 C252 186 266 192 274 202 L268 222 C260 212 246 208 232 210 L222 288 C206 292 190 288 178 278 C170 264 168 250 170 236 Z" fill="#5A1E1E"/>
+  <path d="M192 200 L208 232 L200 256 L216 278" stroke="#F2C84A" stroke-width="3" fill="none"/>
+  <path d="M204 222 C200 202 208 186 226 180 C238 176 250 178 258 186 L254 200 C246 194 236 193 228 197 C218 202 212 211 214 222 Z" fill="#2A0E0E"/>
+  <path d="M194 390 C234 402 296 402 330 392 L330 408 C296 418 234 418 194 406 Z" fill="#2A0E0E"/>
+  <rect x="286" y="392" width="26" height="16" rx="3" fill="#F2C84A"/>
+</svg>

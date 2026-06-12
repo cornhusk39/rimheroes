@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Paladin T1 south: mail hauberk under a plain white surcoat, blue cross hint. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#6E7682"/>
+  <!-- mail ring texture -->
+  <path d="M170 230 C200 222 312 222 342 230 M166 268 C200 260 312 260 346 268 M164 306 C200 298 312 298 348 306 M164 344 C200 336 312 336 348 344 M166 382 C200 374 312 374 346 382 M170 418 C202 410 310 410 342 418" stroke="#565C66" stroke-width="3" fill="none"/>
+  <!-- white surcoat panel -->
+  <path d="M204 188 C220 178 238 174 256 174 C274 174 292 178 308 188 L304 448 C288 454 272 456 256 456 C240 456 224 454 208 448 Z" fill="#E8E4D8"/>
+  <path d="M214 196 C228 188 242 184 256 184 C270 184 284 188 298 196 L296 280 L216 280 Z" fill="#F5F2E8" opacity="0.6"/>
+  <!-- blue cross on the surcoat -->
+  <path d="M250 220 L262 220 L260 440 L252 440 Z" fill="#2E4E9E"/>
+  <path d="M226 270 L286 270 L286 284 L226 284 Z" fill="#2E4E9E"/>
+  <!-- collar -->
+  <path d="M218 176 C230 166 244 162 256 162 C268 162 282 166 294 176 L286 198 C274 186 264 182 256 182 C248 182 238 186 226 198 Z" fill="#565C66"/>
+  <!-- belt -->
+  <path d="M154 384 C214 396 298 396 358 384 L358 402 C298 414 214 414 154 402 Z" fill="#5C3D24"/>
+  <rect x="242" y="386" width="28" height="18" rx="3" fill="#9AA3B0"/>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Sorcerer T4 south: half the robe crystallized/charged, gold dragon-scale accents. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 402 C358 442 326 464 256 464 C186 464 154 442 152 402 Z" fill="#8E2A2A"/>
+  <!-- crystallized half (left side): faceted darker crimson with glow edges -->
+  <path d="M152 240 C160 200 196 176 256 176 L256 464 C186 464 154 442 152 402 Z" fill="#6E1E1E"/>
+  <path d="M180 220 L210 260 L182 300 L214 340 L186 380 L216 420 L190 456 M220 210 L246 250 L222 290 L248 330 L224 370 L250 410" stroke="#A83838" stroke-width="3" fill="none"/>
+  <path d="M196 240 L208 252 M198 320 L210 332 M200 400 L212 412" stroke="#F2C84A" stroke-width="3" fill="none"/>
+  <path d="M251 200 L261 200 L259 458 L253 458 Z" fill="#3A1414"/>
+  <!-- gold dragon-scale accents on the right shoulder -->
+  <path d="M286 230 C296 224 306 226 310 234 C302 240 292 240 286 234 Z" fill="#C9A23F"/>
+  <path d="M300 254 C310 248 320 250 324 258 C316 264 306 264 300 258 Z" fill="#C9A23F"/>
+  <path d="M286 278 C296 272 306 274 310 282 C302 288 292 288 286 282 Z" fill="#C9A23F"/>
+  <path d="M300 302 C310 296 320 298 324 306 C316 312 306 312 300 306 Z" fill="#C9A23F"/>
+  <!-- charged veins on the right -->
+  <path d="M296 450 C292 420 298 392 290 364 C284 340 288 314 296 290" stroke="#F2C84A" stroke-width="4" fill="none"/>
+  <!-- collar -->
+  <path d="M220 198 C232 190 244 188 256 188 C268 188 280 190 292 198 L286 216 C274 208 264 206 256 206 C248 206 238 208 226 216 Z" fill="#6E1E1E"/>
+  <!-- belt -->
+  <path d="M166 388 C220 400 292 400 346 388 L346 404 C292 416 220 416 166 404 Z" fill="#5C3D24"/>
+  <rect x="242" y="390" width="28" height="18" rx="3" fill="#C9A23F"/>
+</svg>

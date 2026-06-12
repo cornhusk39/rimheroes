@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rogue T4 hood, north: masked cowl from behind, full skull coverage. -->
+  <path d="M150 256 C144 186 198 142 256 142 C314 142 368 188 362 256 C364 302 348 342 318 360 L194 360 C164 342 148 302 150 256 Z" fill="#1E1E24"/>
+  <path d="M164 246 C166 200 204 162 256 162 C286 162 312 178 328 202 C302 182 216 184 190 216 C178 230 166 238 164 246 Z" fill="#2E2E36"/>
+  <path d="M256 146 L256 354" stroke="#16161C" stroke-width="4" fill="none"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rogue T5 hood, north: gloaming cowl from behind, shadow wisps, full coverage. -->
+  <path d="M236 142 C228 122 226 100 234 84 C242 96 244 116 240 134 Z" fill="#16161C" opacity="0.7"/>
+  <path d="M276 142 C284 122 286 100 278 84 C270 96 268 116 272 134 Z" fill="#16161C" opacity="0.7"/>
+  <path d="M150 258 C144 184 198 138 256 138 C314 138 368 186 362 258 C364 304 348 344 318 362 L194 362 C164 344 148 304 150 258 Z" fill="#16161C"/>
+  <path d="M164 248 C166 200 204 160 256 160 C286 160 312 176 328 200 C302 180 216 182 190 214 C178 228 166 240 164 248 Z" fill="#26262C"/>
+  <path d="M256 142 L256 356" stroke="#0E0E12" stroke-width="4" fill="none"/>
+</svg>

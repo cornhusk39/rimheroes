@@ -161,8 +161,18 @@
     <label>rogue's vestment</label>
     <description>A hero's shadowed leathers, bound to their destiny. They grow with their bearer and cannot be removed; mundane torso armor cannot be worn over them.</description>
     <modExtensions>
-      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.3, 0.3, 0.36)</baseColor></li>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.3, 0.3, 0.36)</baseColor>
+        <artDir>Rogue</artDir>
+      </li>
     </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData><defaultData><layer>75</layer></defaultData></drawData>
+      </li>
+    </renderNodeProperties>
   </HediffDef>
 
   <HediffDef ParentName="RH_VestmentMartialBase">
@@ -179,8 +189,18 @@
     <label>paladin's vestment</label>
     <description>A hero's consecrated plate, bound to their oath. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
     <modExtensions>
-      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.9, 0.85, 0.6)</baseColor></li>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.9, 0.85, 0.6)</baseColor>
+        <artDir>Paladin</artDir>
+      </li>
     </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData><defaultData><layer>75</layer></defaultData></drawData>
+      </li>
+    </renderNodeProperties>
   </HediffDef>
 
   <HediffDef ParentName="RH_VestmentCasterBase">
@@ -257,8 +277,18 @@
     <label>sorcerer's vestment</label>
     <description>A hero's storm-touched raiment, bound to the blood. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
     <modExtensions>
-      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.75, 0.26, 0.6)</baseColor></li>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.75, 0.26, 0.6)</baseColor>
+        <artDir>Sorcerer</artDir>
+      </li>
     </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData><defaultData><layer>75</layer></defaultData></drawData>
+      </li>
+    </renderNodeProperties>
   </HediffDef>
 
   <HediffDef ParentName="RH_VestmentCasterBase">

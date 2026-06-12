@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Sorcerer T4 hood, north: crystal-horned hood from behind, full skull coverage. -->
+  <path d="M192 150 L176 96 L196 116 L188 70 L210 102 L208 60 L224 110 C220 128 210 144 196 152 Z" fill="#8E2A2A"/>
+  <path d="M320 150 L336 96 L316 116 L324 70 L302 102 L304 60 L288 110 C292 128 302 144 316 152 Z" fill="#8E2A2A"/>
+  <path d="M150 254 C146 190 196 146 256 146 C316 146 366 190 362 254 C364 300 348 340 318 358 L194 358 C164 340 148 300 150 254 Z" fill="#8E2A2A"/>
+  <path d="M150 254 C146 190 196 146 256 146 L256 358 L194 358 C164 340 148 300 150 254 Z" fill="#6E1E1E"/>
+  <path d="M180 170 L208 200 L184 230 L212 258 L188 290 L216 320" stroke="#F2C84A" stroke-width="3" fill="none"/>
+  <path d="M186 314 C196 308 206 310 210 318 M226 314 C236 308 246 310 250 318 M266 314 C276 308 286 310 290 318 M306 314 C316 308 326 310 330 318" stroke="#C9A23F" stroke-width="6" fill="none"/>
+</svg>

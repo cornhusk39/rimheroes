@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Paladin T4 east: cathedral plate profile, gold-edged winged pauldron, blue tabard edge, faulds. -->
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 386 C340 414 312 428 254 428 C200 428 166 414 168 386 Z" fill="#9AA3B0"/>
+  <path d="M200 200 L198 424 M252 188 L252 428 M306 200 L308 420" stroke="#7A828E" stroke-width="4" fill="none"/>
+  <!-- blue tabard at the front edge -->
+  <path d="M312 198 L338 210 L336 444 L314 450 Z" fill="#2E4E9E"/>
+  <path d="M332 208 L338 210 L336 444 L330 446 Z" fill="#C9A23F"/>
+  <!-- gold yoke -->
+  <path d="M180 230 C192 204 218 186 254 184 L270 204 L296 188 C320 196 338 212 348 230 L344 246 C330 224 308 210 282 206 L266 222 L246 222 C220 224 198 238 184 256 Z" fill="#C9A23F"/>
+  <!-- faulds -->
+  <path d="M172 388 C220 400 296 400 338 390 L337 408 C294 418 220 418 173 408 Z" fill="#7A828E"/>
+  <path d="M172 418 C220 430 296 430 338 420 L336 434 C296 444 216 444 174 434 Z" fill="#7A828E"/>
+  <!-- near winged pauldron, gold-edged -->
+  <path d="M168 230 C160 196 172 168 200 152 C198 172 192 190 180 202 C198 196 216 198 228 208 L220 224 L236 220 L224 242 L242 234 L232 258 C212 252 190 254 172 264 C166 252 164 240 168 230 Z" fill="#9AA3B0"/>
+  <path d="M168 230 C160 196 172 168 200 152 L204 162 C180 180 172 204 176 232 Z" fill="#C9A23F"/>
+  <path d="M198 220 C194 200 202 184 220 178 C232 174 244 176 252 184 L248 198 C240 192 230 191 222 195 C212 200 206 209 208 220 Z" fill="#565C66"/>
+  <path d="M172 352 C220 364 296 364 338 354 L338 372 C296 382 220 382 172 370 Z" fill="#565C66"/>
+  <rect x="288" y="354" width="24" height="16" rx="3" fill="#C9A23F"/>
+</svg>

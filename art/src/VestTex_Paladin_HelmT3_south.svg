@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Paladin T3 helm, south: open-faced sallet - rounded steel dome with a cross-slit brow. -->
+  <path d="M158 252 C154 192 202 148 256 148 C310 148 358 192 354 252 L350 268 C322 252 190 252 162 268 Z" fill="#9AA3B0"/>
+  <path d="M172 242 C174 200 210 166 256 166 C284 166 308 178 324 200 C298 182 214 184 190 212 C180 224 174 232 172 242 Z" fill="#C4CBD6"/>
+  <!-- cross-slit on the brow -->
+  <path d="M252 178 L260 178 L259 248 L253 248 Z" fill="#565C66"/>
+  <path d="M230 220 L282 220 L282 230 L230 230 Z" fill="#565C66"/>
+  <!-- steel brow band -->
+  <path d="M160 252 C188 238 324 238 352 252 L350 270 C322 254 190 254 162 270 Z" fill="#7A828E"/>
+  <circle cx="190" cy="256" r="4" fill="#565C66"/>
+  <circle cx="322" cy="256" r="4" fill="#565C66"/>
+</svg>

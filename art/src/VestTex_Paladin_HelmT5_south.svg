@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Paladin T5 helm, south: oathkeeper crown - radiant greathelm, gold crown, floating halo ring, blue plume. -->
+  <!-- floating halo ring above the head -->
+  <ellipse cx="256" cy="92" rx="64" ry="16" fill="none" stroke="#F2E8C0" stroke-width="8" opacity="0.85"/>
+  <ellipse cx="256" cy="92" rx="64" ry="16" fill="none" stroke="#FFF6D8" stroke-width="3"/>
+  <!-- steel wings -->
+  <path d="M168 198 C148 186 134 166 130 142 C144 146 156 158 162 174 C162 156 168 140 180 128 C184 146 182 166 174 182 C172 188 170 194 168 198 Z" fill="#C4CBD6"/>
+  <path d="M344 198 C364 186 378 166 382 142 C368 146 356 158 350 174 C350 156 344 140 332 128 C328 146 330 166 338 182 C340 188 342 194 344 198 Z" fill="#C4CBD6"/>
+  <!-- dome, radiant -->
+  <path d="M158 250 C154 190 202 148 256 148 C310 148 358 190 354 250 L350 266 C322 250 190 250 162 266 Z" fill="#C4CBD6"/>
+  <path d="M158 250 C154 190 202 148 256 148 C310 148 358 190 354 250 L352 258 C346 212 308 184 256 184 C204 184 166 212 160 258 Z" fill="#F2E8C0" opacity="0.8"/>
+  <path d="M172 240 C174 200 210 166 256 166 C284 166 308 178 324 200 C298 182 214 184 190 212 C180 224 174 232 172 240 Z" fill="#E2E7EE"/>
+  <!-- blue plume -->
+  <path d="M248 150 C242 112 246 76 258 50 C272 76 276 112 270 150 C262 156 256 156 248 150 Z" fill="#2E4E9E"/>
+  <path d="M254 142 C250 112 254 84 260 62 C268 86 270 114 264 140 Z" fill="#4A6CC4"/>
+  <!-- gold crown band with points -->
+  <path d="M158 250 C188 236 324 236 354 250 L352 272 C322 254 190 254 160 272 Z" fill="#C9A23F"/>
+  <path d="M158 262 C188 250 324 250 354 262 L352 272 C322 254 190 254 160 272 Z" fill="#8E6E24"/>
+  <path d="M196 244 L202 230 L210 244 Z" fill="#C9A23F"/>
+  <path d="M248 240 L256 224 L264 240 Z" fill="#C9A23F"/>
+  <path d="M302 244 L310 230 L316 244 Z" fill="#C9A23F"/>
+  <!-- glowing brow gem -->
+  <circle cx="256" cy="256" r="9" fill="#F2E8C0" opacity="0.6"/>
+  <circle cx="256" cy="256" r="5" fill="#FFF6D8"/>
+</svg>

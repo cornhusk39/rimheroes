@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rogue T3 hood, south: deeper cowl - peaked, overhanging brow shadow, oxblood inner. -->
+  <path d="M150 258 C144 188 198 142 256 142 C314 142 368 188 362 258 L356 278 C328 258 184 258 156 278 Z" fill="#26262C"/>
+  <path d="M164 248 C166 200 204 162 256 162 C286 162 312 178 328 202 C302 182 216 184 190 216 C178 230 166 240 164 248 Z" fill="#3A3A42"/>
+  <!-- overhang brow shadow over the eyes -->
+  <path d="M178 254 C204 240 308 240 334 254 L330 280 C306 264 206 264 182 280 Z" fill="#16161C"/>
+  <path d="M188 268 C212 258 300 258 324 268 L322 278 C300 270 212 270 190 278 Z" fill="#6E2230" opacity="0.7"/>
+  <!-- deep cheek falls -->
+  <path d="M156 272 C150 302 156 334 172 352 L194 342 C182 322 178 298 180 274 Z" fill="#26262C"/>
+  <path d="M356 272 C362 302 356 334 340 352 L318 342 C330 322 334 298 332 274 Z" fill="#26262C"/>
+</svg>

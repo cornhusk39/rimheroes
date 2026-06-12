@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Sorcerer T2 south: robe with glowing gold vein embroidery creeping up from the hem. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 402 C358 442 326 464 256 464 C186 464 154 442 152 402 Z" fill="#8E2A2A"/>
+  <path d="M162 244 C172 206 208 184 256 184 C292 184 320 196 338 218 C310 198 212 200 184 234 C175 242 166 244 162 244 Z" fill="#A83838" opacity="0.6"/>
+  <path d="M251 200 L261 200 L259 458 L253 458 Z" fill="#6E1E1E"/>
+  <!-- gold vein embroidery creeping up from the hem -->
+  <path d="M210 450 C214 420 208 392 216 364 C222 344 220 326 212 310" stroke="#E0A030" stroke-width="4" fill="none"/>
+  <path d="M216 364 L228 352 M212 408 L224 398 M214 332 L226 322" stroke="#E0A030" stroke-width="3" fill="none"/>
+  <path d="M302 450 C298 420 304 392 296 364 C290 344 292 326 300 310" stroke="#E0A030" stroke-width="4" fill="none"/>
+  <path d="M296 364 L284 352 M300 408 L288 398 M298 332 L286 322" stroke="#E0A030" stroke-width="3" fill="none"/>
+  <!-- collar -->
+  <path d="M220 198 C232 190 244 188 256 188 C268 188 280 190 292 198 L286 216 C274 208 264 206 256 206 C248 206 238 208 226 216 Z" fill="#6E1E1E"/>
+  <!-- scorched hem -->
+  <path d="M152 440 C200 452 312 452 360 440 C340 458 300 466 256 466 C212 466 172 458 152 440 Z" fill="#3A1414"/>
+  <!-- belt -->
+  <path d="M166 388 C220 400 292 400 346 388 L346 404 C292 416 220 416 166 404 Z" fill="#5C3D24"/>
+</svg>

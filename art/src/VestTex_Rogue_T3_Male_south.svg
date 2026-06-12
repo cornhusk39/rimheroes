@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rogue T3 south: layered asymmetric half-cloak (silhouette beat), muffled buckles, oxblood lining hint. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#3A3A42"/>
+  <path d="M204 188 C220 180 238 196 238 230 L236 452 M308 188 C292 180 274 196 274 230 L276 452" stroke="#26262C" stroke-width="4" fill="none"/>
+  <path d="M251 200 L261 200 L259 452 L253 452 Z" fill="#26262C"/>
+  <!-- harness + central buckle -->
+  <path d="M176 232 L330 384 L318 396 L164 244 C166 240 170 236 176 232 Z" fill="#26262C"/>
+  <circle cx="256" cy="314" r="11" fill="#56565E"/>
+  <!-- asymmetric half-cloak sweeping from the left shoulder across -->
+  <path d="M144 232 C150 200 176 180 212 178 C234 178 252 184 262 196 L256 216 C246 204 230 198 214 200 L206 440 C188 448 168 446 154 434 C146 372 142 300 144 232 Z" fill="#26262C"/>
+  <path d="M152 240 C158 212 180 194 210 192 L214 204 C194 208 178 224 174 248 L168 420 C162 408 156 360 154 312 Z" fill="#3A3A42" opacity="0.6"/>
+  <!-- oxblood lining flash at the cloak edge -->
+  <path d="M206 200 L210 440 C202 444 196 440 192 434 L198 210 C200 204 202 200 206 200 Z" fill="#6E2230"/>
+  <!-- cloak clasp -->
+  <circle cx="212" cy="198" r="9" fill="#56565E"/>
+  <!-- collar -->
+  <path d="M218 176 C230 166 244 162 256 162 C268 162 282 166 294 176 L286 198 C274 186 264 182 256 182 C248 182 238 186 226 198 Z" fill="#26262C"/>
+  <!-- belt -->
+  <path d="M154 384 C214 396 298 396 358 384 L358 402 C298 414 214 414 154 402 Z" fill="#26262C"/>
+  <rect x="242" y="386" width="28" height="18" rx="3" fill="#56565E"/>
+</svg>

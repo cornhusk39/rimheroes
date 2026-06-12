@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Sorcerer T4 east: crystallized lower robe, dragon-scale accents, charged veins. -->
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 404 C340 444 312 466 254 466 C200 466 166 444 168 404 Z" fill="#8E2A2A"/>
+  <path d="M168 300 C200 308 296 308 340 300 L342 404 C340 444 312 466 254 466 C200 466 168 444 170 404 Z" fill="#6E1E1E"/>
+  <path d="M196 320 L222 340 L198 370 L224 392 L200 420 M250 320 L276 340 L252 370 L278 392" stroke="#A83838" stroke-width="3" fill="none"/>
+  <path d="M214 340 L226 352 M216 400 L228 412" stroke="#F2C84A" stroke-width="3" fill="none"/>
+  <path d="M286 240 C296 234 306 236 310 244 C302 250 292 250 286 244 Z M296 266 C306 260 316 262 320 270 C312 276 302 276 296 270 Z M286 292 C296 286 306 288 310 296 C302 302 292 302 286 296 Z" fill="#C9A23F"/>
+  <path d="M252 452 C256 422 250 394 258 366 C264 346 262 322 254 302" stroke="#F2C84A" stroke-width="4" fill="none"/>
+  <path d="M198 222 C194 202 202 186 220 180 C232 176 244 178 252 186 L248 200 C240 194 230 193 222 197 C212 202 206 211 208 222 Z" fill="#6E1E1E"/>
+  <path d="M194 390 C234 402 296 402 330 392 L330 408 C296 418 234 418 194 406 Z" fill="#5C3D24"/>
+  <rect x="286" y="392" width="26" height="16" rx="3" fill="#C9A23F"/>
+</svg>

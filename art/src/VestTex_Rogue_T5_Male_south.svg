@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rogue T5 south: gloaming mantle - near-black silk, edges dissolving into shadow wisps, oxblood glow lining. -->
+  <!-- shadow wisps trailing off the cloak hem -->
+  <path d="M150 430 C140 444 134 460 136 474 C146 466 152 454 154 442 Z" fill="#16161C" opacity="0.6"/>
+  <path d="M196 446 C190 460 188 474 192 486 C200 478 204 466 204 454 Z" fill="#16161C" opacity="0.5"/>
+  <path d="M360 432 C370 446 376 462 374 476 C364 468 358 456 356 444 Z" fill="#16161C" opacity="0.6"/>
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#1E1E24"/>
+  <path d="M162 244 C172 206 208 184 256 184 C292 184 320 196 338 218 C310 198 212 200 184 234 C175 242 166 244 162 244 Z" fill="#2E2E36" opacity="0.7"/>
+  <!-- silk sheen + oxblood V -->
+  <path d="M236 196 L256 280 L276 196 L268 196 L256 250 L244 196 Z" fill="#8E2E3E"/>
+  <path d="M236 196 L256 280 L276 196" stroke="#C24A5C" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M251 200 L261 200 L259 452 L253 452 Z" fill="#16161C"/>
+  <!-- gloaming cloak, blurred lower edge -->
+  <path d="M142 232 C148 198 176 178 214 176 C236 176 254 182 264 194 L258 214 C248 202 232 196 216 198 L210 420 C204 432 196 442 186 448 C170 456 154 454 150 440 C144 372 140 300 142 232 Z" fill="#16161C"/>
+  <path d="M206 198 L210 420 C206 430 200 438 192 444 L198 208 C200 202 202 198 206 198 Z" fill="#8E2E3E"/>
+  <circle cx="214" cy="196" r="10" fill="#56565E"/>
+  <circle cx="214" cy="196" r="5" fill="#8E2E3E"/>
+  <!-- collar -->
+  <path d="M218 176 C230 166 244 162 256 162 C268 162 282 166 294 176 L286 198 C274 186 264 182 256 182 C248 182 238 186 226 198 Z" fill="#16161C"/>
+  <!-- belt -->
+  <path d="M154 384 C214 396 298 396 358 384 L358 402 C298 414 214 414 154 402 Z" fill="#16161C"/>
+  <rect x="240" y="386" width="32" height="18" rx="3" fill="#8A8E96"/>
+</svg>

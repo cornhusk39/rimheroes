@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rogue T2 east: fitted leathers profile, harness strap, knife hilt, collar. -->
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 386 C340 414 312 428 254 428 C200 428 166 414 168 386 Z" fill="#3A3A42"/>
+  <path d="M182 240 C192 206 220 186 258 186 C290 186 314 198 328 220 C304 200 216 202 194 232 C188 236 184 238 182 240 Z" fill="#46464E" opacity="0.5"/>
+  <!-- harness strap diagonal -->
+  <path d="M214 240 L318 372 L304 384 L204 256 C206 250 209 244 214 240 Z" fill="#26262C"/>
+  <circle cx="262" cy="312" r="9" fill="#56565E"/>
+  <!-- panel seam -->
+  <path d="M252 168 L252 428" stroke="#26262C" stroke-width="4" fill="none"/>
+  <!-- knife hilt at the hip -->
+  <path d="M326 360 L312 356 L310 384 L324 388 Z" fill="#56565E"/>
+  <path d="M198 222 C194 202 202 186 220 180 C232 176 244 178 252 186 L248 200 C240 194 230 193 222 197 C212 202 206 211 208 222 Z" fill="#26262C"/>
+  <path d="M174 376 C222 388 294 388 336 378 L336 396 C294 406 222 406 174 394 Z" fill="#26262C"/>
+  <rect x="288" y="378" width="24" height="16" rx="3" fill="#56565E"/>
+</svg>

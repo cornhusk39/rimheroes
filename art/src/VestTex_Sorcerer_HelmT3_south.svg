@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Sorcerer T3 hood, south: asymmetric energy-cracked hood, glowing fissures. -->
+  <path d="M150 256 C146 192 196 146 256 146 C316 146 366 192 362 256 L356 274 C328 256 184 256 156 274 Z" fill="#8E2A2A"/>
+  <path d="M164 246 C166 202 202 168 256 168 C286 168 312 182 328 206 C302 186 216 188 190 218 C178 230 166 238 164 246 Z" fill="#A83838"/>
+  <!-- crystallized left side of the hood -->
+  <path d="M150 256 C146 196 192 150 250 148 L256 274 L156 274 Z" fill="#6E1E1E"/>
+  <path d="M180 170 L208 200 L184 230 L212 258 M164 200 L188 226" stroke="#F2C84A" stroke-width="3" fill="none"/>
+  <path d="M156 270 C150 298 154 328 168 346 L190 338 C180 320 176 298 178 272 Z" fill="#6E1E1E"/>
+  <path d="M356 270 C362 298 358 328 344 346 L322 338 C332 320 336 298 334 272 Z" fill="#8E2A2A"/>
+  <circle cx="190" cy="220" r="6" fill="#F2C84A"/>
+</svg>

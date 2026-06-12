@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Sorcerer T3 south: veins spread across the robe, asymmetric energy-cracked shoulder pauldron. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 402 C358 442 326 464 256 464 C186 464 154 442 152 402 Z" fill="#8E2A2A"/>
+  <path d="M162 244 C172 206 208 184 256 184 C292 184 320 196 338 218 C310 198 212 200 184 234 C175 242 166 244 162 244 Z" fill="#A83838" opacity="0.6"/>
+  <path d="M251 200 L261 200 L259 458 L253 458 Z" fill="#6E1E1E"/>
+  <!-- veins spread up the whole robe -->
+  <path d="M210 450 C214 420 208 392 216 364 C222 340 218 314 226 290 C230 274 228 256 220 240" stroke="#E0A030" stroke-width="4" fill="none"/>
+  <path d="M226 290 L240 280 M216 364 L230 354 M222 332 L236 322 M224 256 L238 248" stroke="#E0A030" stroke-width="3" fill="none"/>
+  <path d="M302 450 C298 420 304 392 296 364 C290 340 294 314 286 290 C282 274 284 256 292 240" stroke="#E0A030" stroke-width="4" fill="none"/>
+  <path d="M286 290 L272 280 M296 364 L282 354 M290 332 L276 322" stroke="#E0A030" stroke-width="3" fill="none"/>
+  <path d="M256 408 C260 388 254 368 256 348" stroke="#F2C84A" stroke-width="3" fill="none"/>
+  <!-- asymmetric energy-cracked shoulder pauldron (left), glowing fissures -->
+  <path d="M144 234 C150 204 174 186 206 184 C224 184 238 190 246 200 L240 220 C232 210 218 206 204 208 L194 286 C178 290 162 286 150 276 C144 262 142 248 144 234 Z" fill="#6E1E1E"/>
+  <path d="M152 240 C158 216 178 200 202 198 L206 210 C188 214 174 226 170 246 L164 274 C158 264 154 250 152 240 Z" fill="#A83838" opacity="0.5"/>
+  <path d="M168 200 L182 230 L176 250 L190 270 M198 206 L206 234 L200 256" stroke="#F2C84A" stroke-width="3" fill="none"/>
+  <circle cx="186" cy="240" r="6" fill="#F2C84A"/>
+  <!-- collar -->
+  <path d="M220 198 C232 190 244 188 256 188 C268 188 280 190 292 198 L286 216 C274 208 264 206 256 206 C248 206 238 208 226 216 Z" fill="#6E1E1E"/>
+  <!-- scorched hem + belt -->
+  <path d="M152 440 C200 452 312 452 360 440 C340 458 300 466 256 466 C212 466 172 458 152 440 Z" fill="#3A1414"/>
+  <path d="M166 388 C220 400 292 400 346 388 L346 404 C292 416 220 416 166 404 Z" fill="#5C3D24"/>
+</svg>

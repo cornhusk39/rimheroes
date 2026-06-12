@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Paladin T2 helm, south: mail coif covering the crown, steel brow band. -->
+  <path d="M154 252 C150 192 198 148 256 148 C314 148 362 192 358 252 L354 266 C326 250 186 250 158 266 Z" fill="#6E7682"/>
+  <path d="M168 246 C170 202 206 168 256 168 C286 168 312 182 328 206 C302 186 216 188 190 218 C178 230 170 238 168 246 Z" fill="#565C66"/>
+  <path d="M186 178 C214 196 298 196 326 178 M180 206 C212 224 300 224 332 206 M178 234 C212 250 300 250 334 234" stroke="#565C66" stroke-width="3" fill="none"/>
+  <path d="M156 252 C184 238 328 238 356 252 L354 270 C326 254 186 254 158 270 Z" fill="#9AA3B0"/>
+</svg>
