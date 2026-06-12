@@ -1,9 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Barbarian T2 helm, east: skull cap profile, seam arc, studs. -->
-  <path d="M190 244 C186 196 218 162 262 162 C306 162 336 196 332 244 L328 258 C306 246 214 246 194 258 Z" fill="#6B4426"/>
-  <path d="M200 238 C200 200 226 174 262 174 C284 174 302 184 314 200 C294 188 232 190 212 212 C205 220 201 228 200 238 Z" fill="#8A5A33"/>
-  <path d="M214 178 C236 166 264 162 288 168 L286 180 C264 174 240 177 222 188 Z" fill="#5C3D24"/>
-  <path d="M192 246 C214 236 308 236 330 246 L328 260 C306 250 216 250 196 260 Z" fill="#5C3D24"/>
-  <circle cx="222" cy="250" r="6" fill="#E8E0CC"/>
-  <circle cx="300" cy="250" r="6" fill="#E8E0CC"/>
+  <!-- Barbarian T2 helm, east (facing right): hide cap covering crown + whole back of skull; face open. -->
+  <path d="M148 252 C144 190 194 148 256 148 C312 148 356 186 356 240 C356 252 350 262 340 268 L320 262 C310 256 304 250 302 244 L242 244 C240 290 234 328 220 352 L186 352 C160 326 146 292 148 252 Z" fill="#6B4426"/>
+  <path d="M162 242 C166 198 202 164 254 164 C284 164 310 178 326 202 C300 182 214 184 188 214 C174 228 164 234 162 242 Z" fill="#8A5A33"/>
+  <!-- stitched seam over the crown -->
+  <path d="M216 178 C240 166 268 162 292 168 L290 180 C268 174 244 177 226 188 Z" fill="#5C3D24"/>
+  <!-- edge band: brow at the front, sweeping down the back -->
+  <path d="M300 240 C322 240 340 248 348 260 L340 272 C330 260 316 254 298 254 L242 254 C240 256 238 258 238 260 C234 300 228 330 216 350 L198 350 C212 322 218 286 218 252 L220 240 Z" fill="#5C3D24"/>
+  <!-- bone studs -->
+  <circle cx="322" cy="252" r="6" fill="#E8E0CC"/>
+  <circle cx="228" cy="300" r="6" fill="#E8E0CC"/>
 </svg>

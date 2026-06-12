@@ -2,6 +2,9 @@
   <!-- Barbarian T3 helm, east: dome profile, near horn a smooth forward-up crescent. -->
   <!-- far horn behind the dome -->
   <path d="M222 200 C200 188 186 168 180 144 C176 124 180 106 190 94 C198 108 201 124 200 140 C208 158 216 178 222 200 Z" fill="#B5A88C"/>
+  <!-- nape guard: covers the back of the skull below the dome -->
+  <path d="M178 262 C170 296 176 326 194 350 L228 350 C216 322 210 292 212 262 Z" fill="#2E3138"/>
+  <path d="M186 268 C180 296 186 320 200 340 L218 340 C208 316 203 292 205 268 Z" fill="#454A54" opacity="0.6"/>
   <!-- dome -->
   <path d="M176 252 C172 196 210 156 260 156 C310 156 348 196 346 252 L340 270 L182 270 Z" fill="#2E3138"/>
   <path d="M188 246 C188 202 218 170 260 170 C284 170 304 181 318 200 C296 187 230 189 208 214 C198 224 191 234 188 246 Z" fill="#454A54"/>

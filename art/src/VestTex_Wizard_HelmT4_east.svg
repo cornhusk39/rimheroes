@@ -1,8 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <!-- Wizard T4 hat, east: tall hat, swept tip, rear drape over the back of the skull, star at the band. -->
   <!-- rear drape -->
-  <path d="M164 250 C178 242 208 238 240 240 C244 282 240 320 226 352 L190 352 C168 322 158 288 164 250 Z" fill="#1E2440"/>
-  <path d="M174 256 C186 250 208 247 228 248 C230 284 226 316 214 342 L196 342 C178 318 170 288 174 256 Z" fill="#16182A" opacity="0.5"/>
+  <path d="M158 250 C174 242 208 238 244 240 C248 284 244 322 230 354 L184 354 C162 324 152 290 158 250 Z" fill="#1E2440"/>
+  <path d="M170 256 C184 250 208 247 230 248 C232 286 228 318 216 344 L194 344 C176 320 166 290 170 256 Z" fill="#16182A" opacity="0.5"/>
+  <!-- crown dome under the cone: full skull coverage above the brow -->
+  <path d="M150 252 C146 188 198 146 260 146 C318 146 360 184 360 240 L358 262 C328 246 184 246 156 264 Z" fill="#1E2440"/>
+  <path d="M164 242 C168 198 204 164 256 164 C288 164 314 178 330 202 C304 182 216 184 190 214 C176 228 166 234 164 242 Z" fill="#3D4775"/>
   <!-- tall cone, tip swept back -->
   <path d="M196 242 C200 188 214 132 246 96 C256 84 270 84 278 96 C290 112 280 140 264 158 C284 182 296 212 298 242 Z" fill="#1E2440"/>
   <path d="M196 242 C200 190 214 136 244 100 C232 142 222 192 220 242 Z" fill="#3D4775"/>
