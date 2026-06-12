@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Wizard T5 hat, north: grand hat from behind, curled glowing tip leans left of screen. -->
+  <path d="M326 240 C322 178 306 114 272 70 C262 56 248 52 236 60 C220 72 218 92 230 104 C240 96 248 98 254 108 C230 146 208 192 202 240 Z" fill="#16182A"/>
+  <path d="M314 230 C308 178 294 126 266 84 C280 130 292 184 294 230 Z" fill="#0E101E"/>
+  <circle cx="230" cy="78" r="9" fill="#8F7BFF"/>
+  <circle cx="230" cy="76" r="4" fill="#D6CEFF"/>
+  <path d="M264 196 L274 202 M260 168 L270 174 M254 140 L264 146" stroke="#8F7BFF" stroke-width="5" fill="none"/>
+  <path d="M160 248 C194 232 318 232 352 248 L350 270 C318 254 194 254 162 270 Z" fill="#0E101E"/>
+  <path d="M162 250 C196 236 316 236 350 250 L349 260 C316 246 196 246 163 260 Z" fill="#1E2440"/>
+  <path d="M188 238 C214 230 298 230 314 238 L312 252 C296 242 214 242 190 252 Z" fill="#8F7BFF"/>
+</svg>

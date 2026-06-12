@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Wizard T1 south: plain student robe, rope belt, ink stains. -->
+  <path d="M160 242 C172 212 206 196 256 196 C306 196 340 212 352 242 L348 402 C346 440 318 462 256 462 C194 462 166 440 164 402 Z" fill="#2B3357"/>
+  <path d="M170 246 C182 220 212 206 256 206 C300 206 330 220 342 246 L340 320 L172 320 Z" fill="#3D4775" opacity="0.55"/>
+  <!-- center opening -->
+  <path d="M251 200 L261 200 L259 458 L253 458 Z" fill="#1E2440"/>
+  <!-- collar -->
+  <path d="M222 198 C232 192 244 190 256 190 C268 190 280 192 290 198 L284 214 C274 208 264 206 256 206 C248 206 238 208 228 214 Z" fill="#1E2440"/>
+  <!-- rope belt -->
+  <path d="M166 388 C220 400 292 400 346 388 L346 404 C292 416 220 416 166 404 Z" fill="#5C3D24"/>
+  <path d="M250 396 L244 432 L254 424 L260 436 L266 422 L274 430 L268 396 Z" fill="#5C3D24"/>
+  <!-- ink stains -->
+  <ellipse cx="300" cy="356" rx="14" ry="9" fill="#16182A"/>
+  <ellipse cx="312" cy="368" rx="7" ry="5" fill="#16182A"/>
+  <ellipse cx="206" cy="430" rx="10" ry="7" fill="#16182A"/>
+</svg>

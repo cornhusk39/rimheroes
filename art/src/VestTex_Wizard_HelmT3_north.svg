@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Wizard T3 hat, north: bent point seen from behind (tip leans left of screen = pawn's right). -->
+  <path d="M316 240 C312 196 296 156 262 134 C230 116 200 122 182 140 C202 144 216 156 222 174 C216 196 212 218 212 240 Z" fill="#2B3357"/>
+  <path d="M306 232 C300 196 286 164 260 144 C274 168 286 200 290 232 Z" fill="#1E2440"/>
+  <!-- brim -->
+  <path d="M178 244 C204 232 308 232 334 244 L332 262 C306 250 206 250 180 262 Z" fill="#1E2440"/>
+  <path d="M180 246 C206 235 306 235 332 246 L331 254 C306 243 206 243 181 254 Z" fill="#3D4775"/>
+  <path d="M208 234 C232 226 292 226 316 234 L314 246 C292 238 232 238 210 246 Z" fill="#97A1B5"/>
+</svg>

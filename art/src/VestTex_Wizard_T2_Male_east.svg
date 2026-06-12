@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Wizard T2 east: lined robe profile, silver cuff and hem. -->
+  <path d="M192 244 C202 214 230 198 268 198 C300 198 326 212 336 238 L334 402 C332 440 308 462 258 462 C208 462 186 440 188 402 Z" fill="#2B3357"/>
+  <path d="M200 248 C210 222 234 208 268 208 C296 208 318 220 328 242 L326 310 L200 310 Z" fill="#3D4775" opacity="0.5"/>
+  <path d="M196 226 C192 206 200 190 218 184 C230 180 242 182 250 190 L246 204 C238 198 228 197 220 201 C210 206 204 215 206 226 Z" fill="#1E2440"/>
+  <!-- silver cuff on the near sleeve -->
+  <path d="M296 298 L330 298 L330 314 L296 314 Z" fill="#97A1B5"/>
+  <path d="M304 302 L310 310 M314 302 L320 310" stroke="#2B3357" stroke-width="4" fill="none"/>
+  <path d="M194 390 C234 402 296 402 330 392 L330 410 C296 420 234 420 194 408 Z" fill="#1E2440"/>
+  <path d="M198 436 C236 452 296 452 328 438 L326 452 C296 464 236 464 200 450 Z" fill="#97A1B5"/>
+</svg>

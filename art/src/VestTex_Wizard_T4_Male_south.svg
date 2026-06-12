@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Wizard T4 south: archmage brocade - constellation field, full silver trim, layered mantle. -->
+  <path d="M160 242 C172 212 206 196 256 196 C306 196 340 212 352 242 L348 402 C346 440 318 462 256 462 C194 462 166 440 164 402 Z" fill="#1E2440"/>
+  <!-- constellation field on the skirt -->
+  <circle cx="206" cy="350" r="4" fill="#C7CEDB"/>
+  <circle cx="232" cy="376" r="3" fill="#C7CEDB"/>
+  <circle cx="220" cy="416" r="4" fill="#C7CEDB"/>
+  <circle cx="288" cy="344" r="3" fill="#C7CEDB"/>
+  <circle cx="306" cy="382" r="4" fill="#C7CEDB"/>
+  <circle cx="284" cy="424" r="3" fill="#C7CEDB"/>
+  <path d="M206 350 L232 376 L220 416 M288 344 L306 382 L284 424" stroke="#97A1B5" stroke-width="2.5" fill="none" opacity="0.7"/>
+  <!-- center band: silver, scripted -->
+  <path d="M247 198 L265 198 L263 458 L249 458 Z" fill="#97A1B5"/>
+  <path d="M252 220 L260 226 M252 248 L260 254 M252 276 L260 282 M252 332 L260 338 M252 366 L260 372 M252 400 L260 406 M252 430 L260 436" stroke="#1E2440" stroke-width="4" fill="none"/>
+  <!-- double mantle, silver-edged -->
+  <path d="M154 250 C164 216 202 198 256 198 C310 198 348 216 358 250 L356 300 L332 284 L328 312 L304 294 L296 318 L272 300 L256 322 L240 300 L216 318 L208 294 L184 312 L180 284 L156 300 Z" fill="#2B3357"/>
+  <path d="M156 296 L180 282 L184 308 L208 292 L216 314 L240 298 L256 318 L272 298 L296 314 L304 292 L328 308 L332 282 L356 296 L356 304 L330 290 L326 318 L302 300 L294 324 L270 306 L256 328 L242 306 L218 324 L210 300 L186 318 L182 290 L156 304 Z" fill="#C7CEDB"/>
+  <path d="M168 246 C180 222 214 208 256 208 C298 208 332 222 344 246 L342 270 L324 260 L320 280 L300 268 L294 284 L274 272 L256 288 L238 272 L218 284 L212 268 L192 280 L188 260 L170 270 Z" fill="#3D4775"/>
+  <!-- grand clasp -->
+  <circle cx="256" cy="218" r="14" fill="#C7CEDB"/>
+  <path d="M256 208 L259 215 L266 215 L260 219 L262 226 L256 222 L250 226 L252 219 L246 215 L253 215 Z" fill="#2B3357"/>
+  <!-- silver belt -->
+  <path d="M166 388 C220 400 292 400 346 388 L346 408 C292 420 220 420 166 408 Z" fill="#97A1B5"/>
+  <rect x="240" y="390" width="32" height="20" rx="3" fill="#C7CEDB"/>
+  <!-- hem band -->
+  <path d="M170 432 C214 450 298 450 342 432 L340 452 C298 468 214 468 172 452 Z" fill="#C7CEDB"/>
+</svg>

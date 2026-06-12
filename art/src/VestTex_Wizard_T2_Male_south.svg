@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Wizard T2 south: lined robe, silver sigil cuffs and hem band. -->
+  <path d="M160 242 C172 212 206 196 256 196 C306 196 340 212 352 242 L348 402 C346 440 318 462 256 462 C194 462 166 440 164 402 Z" fill="#2B3357"/>
+  <path d="M170 246 C182 220 212 206 256 206 C300 206 330 220 342 246 L340 320 L172 320 Z" fill="#3D4775" opacity="0.55"/>
+  <path d="M251 200 L261 200 L259 458 L253 458 Z" fill="#1E2440"/>
+  <!-- silver-lined collar -->
+  <path d="M220 198 C232 190 244 188 256 188 C268 188 280 190 292 198 L286 216 C274 208 264 206 256 206 C248 206 238 208 226 216 Z" fill="#97A1B5"/>
+  <!-- silver sigil cuffs at the sleeve line -->
+  <path d="M164 296 L196 296 L196 312 L164 312 Z" fill="#97A1B5"/>
+  <path d="M316 296 L348 296 L348 312 L316 312 Z" fill="#97A1B5"/>
+  <path d="M172 300 L178 308 M182 300 L188 308" stroke="#2B3357" stroke-width="4" fill="none"/>
+  <path d="M324 300 L330 308 M334 300 L340 308" stroke="#2B3357" stroke-width="4" fill="none"/>
+  <!-- cloth belt -->
+  <path d="M166 388 C220 400 292 400 346 388 L346 406 C292 418 220 418 166 406 Z" fill="#1E2440"/>
+  <rect x="242" y="390" width="28" height="18" rx="3" fill="#97A1B5"/>
+  <!-- silver hem band -->
+  <path d="M170 436 C214 452 298 452 342 436 L340 450 C298 464 214 464 172 450 Z" fill="#97A1B5"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Wizard T5 hat, south: grand near-black hat, curled tip, glowing runes, star clasp, widest brim. -->
+  <path d="M186 240 C190 178 206 114 240 70 C250 56 264 52 276 60 C292 72 294 92 282 104 C272 96 264 98 258 108 C282 146 304 192 310 240 Z" fill="#16182A"/>
+  <path d="M198 230 C204 178 218 126 246 84 C232 130 220 184 218 230 Z" fill="#3D4775"/>
+  <path d="M280 130 C292 164 302 202 306 236 C296 200 286 164 274 134 Z" fill="#0E101E"/>
+  <!-- curled tip glow -->
+  <circle cx="282" cy="78" r="9" fill="#8F7BFF"/>
+  <circle cx="282" cy="76" r="4" fill="#D6CEFF"/>
+  <!-- glowing runes up the cone -->
+  <path d="M238 196 L248 202 M242 168 L252 174 M248 140 L258 146 M254 116 L264 122" stroke="#8F7BFF" stroke-width="5" fill="none"/>
+  <!-- widest brim -->
+  <path d="M160 248 C194 232 318 232 352 248 L350 270 C318 254 194 254 162 270 Z" fill="#0E101E"/>
+  <path d="M162 250 C196 236 316 236 350 250 L349 260 C316 246 196 246 163 260 Z" fill="#1E2440"/>
+  <!-- glowing band + star clasp -->
+  <path d="M188 238 C214 230 298 230 314 238 L312 252 C296 242 214 242 190 252 Z" fill="#8F7BFF"/>
+  <path d="M256 220 L260 231 L272 231 L262 239 L266 251 L256 243 L246 251 L250 239 L240 231 L252 231 Z" fill="#C7CEDB"/>
+  <circle cx="256" cy="236" r="3.5" fill="#D6CEFF"/>
+</svg>

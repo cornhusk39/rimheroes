@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Wizard T3 south: layered shoulder mantle, formulae band at the hem, silver clasp. -->
+  <path d="M160 242 C172 212 206 196 256 196 C306 196 340 212 352 242 L348 402 C346 440 318 462 256 462 C194 462 166 440 164 402 Z" fill="#2B3357"/>
+  <path d="M251 200 L261 200 L259 458 L253 458 Z" fill="#1E2440"/>
+  <!-- mantle: layered shoulder cape, pointed scallops -->
+  <path d="M154 250 C164 216 202 198 256 198 C310 198 348 216 358 250 L356 296 L334 282 L330 308 L308 292 L300 314 L278 298 L256 318 L234 298 L212 314 L204 292 L182 308 L178 282 L156 296 Z" fill="#1E2440"/>
+  <path d="M166 248 C178 222 212 208 256 208 C300 208 334 222 346 248 L344 276 L328 266 L324 286 L304 274 L298 290 L278 278 L256 294 L234 278 L214 290 L208 274 L188 286 L184 266 L168 276 Z" fill="#3D4775"/>
+  <!-- silver clasp at the throat -->
+  <circle cx="256" cy="216" r="12" fill="#C7CEDB"/>
+  <circle cx="256" cy="216" r="6" fill="#2B3357"/>
+  <!-- belt -->
+  <path d="M166 388 C220 400 292 400 346 388 L346 406 C292 418 220 418 166 406 Z" fill="#1E2440"/>
+  <rect x="242" y="390" width="28" height="18" rx="3" fill="#97A1B5"/>
+  <!-- formulae band: silver hem with script marks -->
+  <path d="M170 430 C214 448 298 448 342 430 L340 452 C298 468 214 468 172 452 Z" fill="#97A1B5"/>
+  <path d="M186 440 L192 448 M200 442 L198 452 M212 444 L220 450 M230 446 L228 456 M244 447 L252 453 M264 447 L262 457 M278 446 L286 452 M296 444 L294 454 M310 442 L318 448 M326 440 L324 450" stroke="#2B3357" stroke-width="4" fill="none"/>
+</svg>

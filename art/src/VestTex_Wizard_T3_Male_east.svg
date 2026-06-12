@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Wizard T3 east: mantle profile w/ scalloped edge, clasp, formulae hem. -->
+  <path d="M192 244 C202 214 230 198 268 198 C300 198 326 212 336 238 L334 402 C332 440 308 462 258 462 C208 462 186 440 188 402 Z" fill="#2B3357"/>
+  <!-- mantle profile -->
+  <path d="M186 252 C196 220 228 202 270 202 C306 202 332 216 342 242 L340 290 L320 278 L314 300 L292 286 L284 306 L262 292 L240 306 L232 288 L210 300 L204 280 L188 290 Z" fill="#1E2440"/>
+  <path d="M196 250 C206 226 234 212 270 212 C300 212 322 224 332 246 L330 270 L314 262 L308 280 L290 268 L282 284 L262 272 L244 284 L236 270 L216 280 L210 264 L198 272 Z" fill="#3D4775"/>
+  <!-- clasp at the front of the throat -->
+  <circle cx="318" cy="226" r="10" fill="#C7CEDB"/>
+  <!-- belt + hem -->
+  <path d="M194 390 C234 402 296 402 330 392 L330 410 C296 420 234 420 194 408 Z" fill="#1E2440"/>
+  <path d="M198 430 C236 448 296 448 328 432 L326 452 C296 466 236 466 200 450 Z" fill="#97A1B5"/>
+  <path d="M212 440 L218 448 M228 443 L226 453 M242 445 L250 451 M262 446 L260 456 M278 445 L286 451 M298 442 L296 452" stroke="#2B3357" stroke-width="4" fill="none"/>
+</svg>
