@@ -105,6 +105,7 @@
     <defName>RH_Spell_Fireball</defName>
     <label>fireball</label>
     <description>A blossom of flame detonates at the target point. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/Fireball</iconPath>
     <level>3</level>
     <cooldownTicksRange>120</cooldownTicksRange>
     <hostile>true</hostile>

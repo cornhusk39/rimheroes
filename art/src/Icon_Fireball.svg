@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fireball ability icon -->
+  <defs>
+    <radialGradient id="core" cx="0.45" cy="0.4">
+      <stop offset="0%" stop-color="#FFE9A8"/>
+      <stop offset="45%" stop-color="#FFB23D"/>
+      <stop offset="100%" stop-color="#E2581F"/>
+    </radialGradient>
+  </defs>
+  <!-- trailing flames -->
+  <path d="M8 50 C16 46 20 40 24 32 C22 42 18 50 12 56 Z" fill="#E2581F" opacity="0.9"/>
+  <path d="M14 58 C22 54 27 47 30 40 C29 49 25 56 19 61 Z" fill="#FF8A2A" opacity="0.9"/>
+  <!-- ball -->
+  <circle cx="38" cy="28" r="19" fill="url(#core)"/>
+  <!-- licks of flame off the ball -->
+  <path d="M30 12 C33 6 40 4 46 7 C41 9 38 12 36 16 Z" fill="#FFB23D"/>
+  <path d="M52 16 C58 18 60 25 58 31 C55 26 52 23 48 21 Z" fill="#FF8A2A"/>
+  <path d="M22 24 C18 27 17 33 19 38 C21 33 23 30 27 28 Z" fill="#FF8A2A"/>
+  <!-- hot core highlight -->
+  <ellipse cx="33" cy="22" rx="7" ry="5" fill="#FFF3C4" opacity="0.9"/>
+</svg>

@@ -83,10 +83,8 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
-          <color>(170,140,95)</color>
-          <drawSize>1.0</drawSize>
-          <shaderType>CutoutComplex</shaderType>
+          <texPath>Things/RimHeroes/Gestrals/Porter/Porter</texPath>
+          <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
