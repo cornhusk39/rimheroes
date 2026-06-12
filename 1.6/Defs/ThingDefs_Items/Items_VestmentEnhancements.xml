@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Enhancement items: consumed by vestment-inlay operations. Acquisition: loot from enemy
-       heroes (DESIGN.md), trade; crafting recipes later. -->
+  <!-- Inlay items: consumed by vestment-inlay operations. One item + one recipe per inlay hediff.
+       Acquisition: loot from enemy heroes (DESIGN.md), trade; crafting recipes later.
+       Tints: defense blue, offense red, utility green; brighter per tier. -->
 
-  <ThingDef ParentName="ResourceBase">
-    <defName>RH_InlayOfWarding</defName>
-    <label>inlay of warding</label>
-    <description>A set of warded sigil-plates, sized for inlaying into a hero's vestment. Requires a craftsman's hands and a willing hero.</description>
+  <ThingDef Name="RH_InlayItemBase" ParentName="ResourceBase" Abstract="True">
     <graphicData>
       <texPath>Things/Item/Resource/ComponentIndustrial</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <color>(0.85, 0.72, 0.35)</color>
       <drawSize>0.85</drawSize>
     </graphicData>
     <stackLimit>10</stackLimit>
     <statBases>
-      <MarketValue>350</MarketValue>
       <Mass>1</Mass>
       <Flammability>0.4</Flammability>
       <DeteriorationRate>1</DeteriorationRate>
@@ -29,38 +25,186 @@
     </tradeTags>
   </ThingDef>
 
-  <RecipeDef ParentName="SurgeryFlesh">
-    <defName>RH_InstallInlayOfWarding</defName>
-    <label>inlay vestment with warding</label>
-    <description>Inlay warded sigil-plates into this hero's vestment, improving its protection against crushing blows.</description>
+  <RecipeDef Name="RH_InlayInstallBase" ParentName="SurgeryFlesh" Abstract="True">
     <workerClass>RimHeroes.Recipe_VestmentEnhancement</workerClass>
-    <jobString>Inlaying vestment with warding.</jobString>
     <workAmount>2500</workAmount>
     <hideBodyPartNames>true</hideBodyPartNames>
     <isViolation>false</isViolation>
     <anesthetize>false</anesthetize>
-    <addsHediff>RH_Enh_Warding</addsHediff>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>RH_InlayOfWarding</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>RH_InlayOfWarding</li>
-      </thingDefs>
-    </fixedIngredientFilter>
     <skillRequirements>
       <Crafting>4</Crafting>
     </skillRequirements>
     <recipeUsers>
       <li>Human</li>
     </recipeUsers>
+  </RecipeDef>
+
+  <!-- ===== Defense: Warding ===== -->
+
+  <ThingDef ParentName="RH_InlayItemBase">
+    <defName>RH_InlayItem_Warding_Lesser</defName>
+    <label>lesser inlay of warding</label>
+    <description>Faintly warded sigil-plates, sized for inlaying into a hero's vestment (defense slot).</description>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.45, 0.55, 0.8)</color><drawSize>0.85</drawSize></graphicData>
+    <statBases><MarketValue>200</MarketValue><Mass>1</Mass></statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_InlayItemBase">
+    <defName>RH_InlayItem_Warding_Regular</defName>
+    <label>inlay of warding</label>
+    <description>Warded sigil-plates, sized for inlaying into a hero's vestment (defense slot).</description>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.4, 0.6, 0.95)</color><drawSize>0.85</drawSize></graphicData>
+    <statBases><MarketValue>350</MarketValue><Mass>1</Mass></statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_InlayItemBase">
+    <defName>RH_InlayItem_Warding_Greater</defName>
+    <label>greater inlay of warding</label>
+    <description>Blazingly warded sigil-plates, sized for inlaying into a hero's vestment (defense slot).</description>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.55, 0.75, 1.0)</color><drawSize>0.85</drawSize></graphicData>
+    <statBases><MarketValue>600</MarketValue><Mass>1</Mass></statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="RH_InlayInstallBase">
+    <defName>RH_Install_Warding_Lesser</defName>
+    <label>inlay vestment: lesser warding</label>
+    <description>Inlay lesser warding sigils into this hero's vestment (defense slot). Replaces any inlay already in that slot.</description>
+    <jobString>Inlaying vestment with lesser warding.</jobString>
+    <addsHediff>RH_Inlay_Warding_Lesser</addsHediff>
+    <ingredients><li><filter><thingDefs><li>RH_InlayItem_Warding_Lesser</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>RH_InlayItem_Warding_Lesser</li></thingDefs></fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RH_InlayInstallBase">
+    <defName>RH_Install_Warding_Regular</defName>
+    <label>inlay vestment: warding</label>
+    <description>Inlay warding sigils into this hero's vestment (defense slot). Replaces any inlay already in that slot.</description>
+    <jobString>Inlaying vestment with warding.</jobString>
+    <addsHediff>RH_Inlay_Warding_Regular</addsHediff>
+    <ingredients><li><filter><thingDefs><li>RH_InlayItem_Warding_Regular</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>RH_InlayItem_Warding_Regular</li></thingDefs></fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RH_InlayInstallBase">
+    <defName>RH_Install_Warding_Greater</defName>
+    <label>inlay vestment: greater warding</label>
+    <description>Inlay greater warding sigils into this hero's vestment (defense slot). Replaces any inlay already in that slot.</description>
+    <jobString>Inlaying vestment with greater warding.</jobString>
+    <addsHediff>RH_Inlay_Warding_Greater</addsHediff>
+    <ingredients><li><filter><thingDefs><li>RH_InlayItem_Warding_Greater</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>RH_InlayItem_Warding_Greater</li></thingDefs></fixedIngredientFilter>
+  </RecipeDef>
+
+  <!-- ===== Offense: Keenness ===== -->
+
+  <ThingDef ParentName="RH_InlayItemBase">
+    <defName>RH_InlayItem_Keenness_Lesser</defName>
+    <label>lesser inlay of keenness</label>
+    <description>Faint edge-blessing sigil-plates, sized for inlaying into a hero's vestment (offense slot).</description>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.75, 0.35, 0.3)</color><drawSize>0.85</drawSize></graphicData>
+    <statBases><MarketValue>200</MarketValue><Mass>1</Mass></statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_InlayItemBase">
+    <defName>RH_InlayItem_Keenness_Regular</defName>
+    <label>inlay of keenness</label>
+    <description>Edge-blessing sigil-plates, sized for inlaying into a hero's vestment (offense slot).</description>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.9, 0.3, 0.25)</color><drawSize>0.85</drawSize></graphicData>
+    <statBases><MarketValue>350</MarketValue><Mass>1</Mass></statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_InlayItemBase">
+    <defName>RH_InlayItem_Keenness_Greater</defName>
+    <label>greater inlay of keenness</label>
+    <description>Razor-sigil plates, sized for inlaying into a hero's vestment (offense slot).</description>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(1.0, 0.45, 0.4)</color><drawSize>0.85</drawSize></graphicData>
+    <statBases><MarketValue>600</MarketValue><Mass>1</Mass></statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="RH_InlayInstallBase">
+    <defName>RH_Install_Keenness_Lesser</defName>
+    <label>inlay vestment: lesser keenness</label>
+    <description>Inlay lesser edge-blessing sigils into this hero's vestment (offense slot). Replaces any inlay already in that slot.</description>
+    <jobString>Inlaying vestment with lesser keenness.</jobString>
+    <addsHediff>RH_Inlay_Keenness_Lesser</addsHediff>
+    <ingredients><li><filter><thingDefs><li>RH_InlayItem_Keenness_Lesser</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>RH_InlayItem_Keenness_Lesser</li></thingDefs></fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RH_InlayInstallBase">
+    <defName>RH_Install_Keenness_Regular</defName>
+    <label>inlay vestment: keenness</label>
+    <description>Inlay edge-blessing sigils into this hero's vestment (offense slot). Replaces any inlay already in that slot.</description>
+    <jobString>Inlaying vestment with keenness.</jobString>
+    <addsHediff>RH_Inlay_Keenness_Regular</addsHediff>
+    <ingredients><li><filter><thingDefs><li>RH_InlayItem_Keenness_Regular</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>RH_InlayItem_Keenness_Regular</li></thingDefs></fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RH_InlayInstallBase">
+    <defName>RH_Install_Keenness_Greater</defName>
+    <label>inlay vestment: greater keenness</label>
+    <description>Inlay razor-sigils into this hero's vestment (offense slot). Replaces any inlay already in that slot.</description>
+    <jobString>Inlaying vestment with greater keenness.</jobString>
+    <addsHediff>RH_Inlay_Keenness_Greater</addsHediff>
+    <ingredients><li><filter><thingDefs><li>RH_InlayItem_Keenness_Greater</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>RH_InlayItem_Keenness_Greater</li></thingDefs></fixedIngredientFilter>
+  </RecipeDef>
+
+  <!-- ===== Utility: Fleetness ===== -->
+
+  <ThingDef ParentName="RH_InlayItemBase">
+    <defName>RH_InlayItem_Fleetness_Lesser</defName>
+    <label>lesser inlay of fleetness</label>
+    <description>Faint wind-script plates, sized for inlaying into a hero's vestment (utility slot).</description>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.4, 0.7, 0.45)</color><drawSize>0.85</drawSize></graphicData>
+    <statBases><MarketValue>200</MarketValue><Mass>1</Mass></statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_InlayItemBase">
+    <defName>RH_InlayItem_Fleetness_Regular</defName>
+    <label>inlay of fleetness</label>
+    <description>Wind-script plates, sized for inlaying into a hero's vestment (utility slot).</description>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.4, 0.85, 0.45)</color><drawSize>0.85</drawSize></graphicData>
+    <statBases><MarketValue>350</MarketValue><Mass>1</Mass></statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_InlayItemBase">
+    <defName>RH_InlayItem_Fleetness_Greater</defName>
+    <label>greater inlay of fleetness</label>
+    <description>Storm-script plates, sized for inlaying into a hero's vestment (utility slot).</description>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.5, 1.0, 0.55)</color><drawSize>0.85</drawSize></graphicData>
+    <statBases><MarketValue>600</MarketValue><Mass>1</Mass></statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="RH_InlayInstallBase">
+    <defName>RH_Install_Fleetness_Lesser</defName>
+    <label>inlay vestment: lesser fleetness</label>
+    <description>Inlay lesser wind-script into this hero's vestment (utility slot). Replaces any inlay already in that slot.</description>
+    <jobString>Inlaying vestment with lesser fleetness.</jobString>
+    <addsHediff>RH_Inlay_Fleetness_Lesser</addsHediff>
+    <ingredients><li><filter><thingDefs><li>RH_InlayItem_Fleetness_Lesser</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>RH_InlayItem_Fleetness_Lesser</li></thingDefs></fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RH_InlayInstallBase">
+    <defName>RH_Install_Fleetness_Regular</defName>
+    <label>inlay vestment: fleetness</label>
+    <description>Inlay wind-script into this hero's vestment (utility slot). Replaces any inlay already in that slot.</description>
+    <jobString>Inlaying vestment with fleetness.</jobString>
+    <addsHediff>RH_Inlay_Fleetness_Regular</addsHediff>
+    <ingredients><li><filter><thingDefs><li>RH_InlayItem_Fleetness_Regular</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>RH_InlayItem_Fleetness_Regular</li></thingDefs></fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef ParentName="RH_InlayInstallBase">
+    <defName>RH_Install_Fleetness_Greater</defName>
+    <label>inlay vestment: greater fleetness</label>
+    <description>Inlay storm-script into this hero's vestment (utility slot). Replaces any inlay already in that slot.</description>
+    <jobString>Inlaying vestment with greater fleetness.</jobString>
+    <addsHediff>RH_Inlay_Fleetness_Greater</addsHediff>
+    <ingredients><li><filter><thingDefs><li>RH_InlayItem_Fleetness_Greater</li></thingDefs></filter><count>1</count></li></ingredients>
+    <fixedIngredientFilter><thingDefs><li>RH_InlayItem_Fleetness_Greater</li></thingDefs></fixedIngredientFilter>
   </RecipeDef>
 
 </Defs>

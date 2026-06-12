@@ -62,6 +62,19 @@ namespace RimHeroes
             sb.AppendLine(classDef.description);
             sb.AppendLine();
 
+            var vestment = hediff.Vestment;
+            if (vestment != null)
+            {
+                sb.AppendLine("RH_TabVestment".Translate().Resolve() + $": {vestment.def.LabelCap} (tier {vestment.Tier})");
+                foreach (InlaySlot slot in System.Enum.GetValues(typeof(InlaySlot)))
+                {
+                    var inlay = InlayUtility.InlayInSlot(SelPawn, slot);
+                    string slotLabel = ("RH_Slot_" + slot).Translate().Resolve();
+                    sb.AppendLine($"  {slotLabel}: " + (inlay != null ? inlay.def.LabelCap.ToString() : "RH_TabEmptySlot".Translate().Resolve()));
+                }
+                sb.AppendLine();
+            }
+
             var current = classDef.levelGrants?.Where(g => g.level <= hediff.level).ToList();
             if (!current.NullOrEmpty())
             {

@@ -73,9 +73,11 @@
     </renderNodeProperties>
   </HediffDef>
 
-  <!-- Vestment enhancements: added by surgery-like operations, persist alongside the vestment. -->
+  <!-- Vestment inlays: surgery-installed enhancements. Three slots (defense/offense/utility),
+       one inlay per slot, lesser/regular/greater variants. Installing into an occupied slot
+       replaces (destroys) the old inlay. -->
 
-  <HediffDef Name="RH_EnhancementBase" Abstract="True">
+  <HediffDef Name="RH_InlayBase" Abstract="True">
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <everCurableByItem>false</everCurableByItem>
@@ -83,15 +85,163 @@
     <defaultLabelColor>(0.6, 0.75, 0.95)</defaultLabelColor>
   </HediffDef>
 
-  <HediffDef ParentName="RH_EnhancementBase">
-    <defName>RH_Enh_Warding</defName>
-    <label>inlay of warding</label>
-    <description>Warding sigils inlaid into this hero's vestment turn aside crushing blows.</description>
+  <!-- Defense slot: Warding -->
+  <HediffDef ParentName="RH_InlayBase">
+    <defName>RH_Inlay_Warding_Lesser</defName>
+    <label>lesser inlay of warding</label>
+    <description>Faint warding sigils inlaid into this hero's vestment. Occupies the vestment's defense slot.</description>
+    <modExtensions>
+      <li Class="RimHeroes.InlayExtension"><slot>Defense</slot><tier>Lesser</tier></li>
+    </modExtensions>
     <stages>
       <li>
         <statOffsets>
-          <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
         </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_InlayBase">
+    <defName>RH_Inlay_Warding_Regular</defName>
+    <label>inlay of warding</label>
+    <description>Warding sigils inlaid into this hero's vestment. Occupies the vestment's defense slot.</description>
+    <modExtensions>
+      <li Class="RimHeroes.InlayExtension"><slot>Defense</slot><tier>Regular</tier></li>
+    </modExtensions>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_InlayBase">
+    <defName>RH_Inlay_Warding_Greater</defName>
+    <label>greater inlay of warding</label>
+    <description>Blazing warding sigils inlaid into this hero's vestment. Occupies the vestment's defense slot.</description>
+    <modExtensions>
+      <li Class="RimHeroes.InlayExtension"><slot>Defense</slot><tier>Greater</tier></li>
+    </modExtensions>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Offense slot: Keenness -->
+  <HediffDef ParentName="RH_InlayBase">
+    <defName>RH_Inlay_Keenness_Lesser</defName>
+    <label>lesser inlay of keenness</label>
+    <description>Edge-blessing sigils inlaid into this hero's vestment. Occupies the vestment's offense slot.</description>
+    <modExtensions>
+      <li Class="RimHeroes.InlayExtension"><slot>Offense</slot><tier>Lesser</tier></li>
+    </modExtensions>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_InlayBase">
+    <defName>RH_Inlay_Keenness_Regular</defName>
+    <label>inlay of keenness</label>
+    <description>Edge-blessing sigils inlaid into this hero's vestment. Occupies the vestment's offense slot.</description>
+    <modExtensions>
+      <li Class="RimHeroes.InlayExtension"><slot>Offense</slot><tier>Regular</tier></li>
+    </modExtensions>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>3</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.10</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_InlayBase">
+    <defName>RH_Inlay_Keenness_Greater</defName>
+    <label>greater inlay of keenness</label>
+    <description>Razor-sigils inlaid into this hero's vestment. Occupies the vestment's offense slot.</description>
+    <modExtensions>
+      <li Class="RimHeroes.InlayExtension"><slot>Offense</slot><tier>Greater</tier></li>
+    </modExtensions>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>5</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.20</MeleeDamageFactor>
+          <MeleeCooldownFactor>0.92</MeleeCooldownFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Utility slot: Fleetness -->
+  <HediffDef ParentName="RH_InlayBase">
+    <defName>RH_Inlay_Fleetness_Lesser</defName>
+    <label>lesser inlay of fleetness</label>
+    <description>Wind-script inlaid into this hero's vestment. Occupies the vestment's utility slot.</description>
+    <modExtensions>
+      <li Class="RimHeroes.InlayExtension"><slot>Utility</slot><tier>Lesser</tier></li>
+    </modExtensions>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>0.2</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_InlayBase">
+    <defName>RH_Inlay_Fleetness_Regular</defName>
+    <label>inlay of fleetness</label>
+    <description>Wind-script inlaid into this hero's vestment. Occupies the vestment's utility slot.</description>
+    <modExtensions>
+      <li Class="RimHeroes.InlayExtension"><slot>Utility</slot><tier>Regular</tier></li>
+    </modExtensions>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>0.4</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_InlayBase">
+    <defName>RH_Inlay_Fleetness_Greater</defName>
+    <label>greater inlay of fleetness</label>
+    <description>Storm-script inlaid into this hero's vestment. Occupies the vestment's utility slot.</description>
+    <modExtensions>
+      <li Class="RimHeroes.InlayExtension"><slot>Utility</slot><tier>Greater</tier></li>
+    </modExtensions>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>0.6</MoveSpeed>
+          <CarryingCapacity>20</CarryingCapacity>
+        </statOffsets>
+        <statFactors>
+          <WorkSpeedGlobal>1.05</WorkSpeedGlobal>
+        </statFactors>
       </li>
     </stages>
   </HediffDef>

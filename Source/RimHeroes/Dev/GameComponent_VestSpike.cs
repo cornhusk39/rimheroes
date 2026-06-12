@@ -86,15 +86,24 @@ namespace RimHeroes
                 }
                 case 3:
                 {
-                    var recipe = DefDatabase<RecipeDef>.GetNamed("RH_InstallInlayOfWarding");
-                    bool availableOnHero = recipe.Worker.AvailableOnNow(hero);
+                    var lesserRecipe = DefDatabase<RecipeDef>.GetNamed("RH_Install_Warding_Lesser");
+                    bool onHero = lesserRecipe.Worker.AvailableOnNow(hero);
                     var commoner = map.mapPawns.AllPawnsSpawned.FirstOrDefault(p => p.RaceProps.Humanlike && p != hero && !HeroUtility.IsHero(p));
-                    bool availableOnCommoner = commoner != null && recipe.Worker.AvailableOnNow(commoner);
-                    float bluntBefore = hero.GetStatValue(StatDefOf.ArmorRating_Blunt);
-                    hero.health.AddHediff(HediffDef.Named("RH_Enh_Warding"));
-                    float bluntAfter = hero.GetStatValue(StatDefOf.ArmorRating_Blunt);
-                    passEnh = availableOnHero && !availableOnCommoner && bluntAfter > bluntBefore + 0.1f;
-                    Log.Message($"[RimHeroes.VestSpike] enh: onHero={availableOnHero} onCommoner={availableOnCommoner}(commoner={(commoner != null)}) blunt {bluntBefore:F2}->{bluntAfter:F2} pass={passEnh}");
+                    bool onCommoner = commoner != null && lesserRecipe.Worker.AvailableOnNow(commoner);
+
+                    float blunt0 = hero.GetStatValue(StatDefOf.ArmorRating_Blunt);
+                    InlayUtility.Install(hero, HediffDef.Named("RH_Inlay_Warding_Lesser"));
+                    bool dupBlocked = !lesserRecipe.Worker.AvailableOnNow(hero); // identical inlay re-install blocked
+                    InlayUtility.Install(hero, HediffDef.Named("RH_Inlay_Warding_Regular")); // same slot -> replaces
+                    bool lesserGone = !hero.health.hediffSet.HasHediff(HediffDef.Named("RH_Inlay_Warding_Lesser"));
+                    bool regularIn = hero.health.hediffSet.HasHediff(HediffDef.Named("RH_Inlay_Warding_Regular"));
+                    InlayUtility.Install(hero, HediffDef.Named("RH_Inlay_Keenness_Greater"));
+                    InlayUtility.Install(hero, HediffDef.Named("RH_Inlay_Fleetness_Regular"));
+                    int installed = InlayUtility.InstalledInlays(hero).Count();
+                    float blunt1 = hero.GetStatValue(StatDefOf.ArmorRating_Blunt);
+
+                    passEnh = onHero && !onCommoner && dupBlocked && lesserGone && regularIn && installed == 3 && blunt1 > blunt0 + 0.1f;
+                    Log.Message($"[RimHeroes.VestSpike] inlays: onHero={onHero} onCommoner={onCommoner}(commoner={(commoner != null)}) dupBlocked={dupBlocked} replaced={lesserGone && regularIn} slots={installed}/3 blunt {blunt0:F2}->{blunt1:F2} pass={passEnh}");
                     Find.Selector.ClearSelection();
                     Find.Selector.Select(hero);
                     Find.CameraDriver.SetRootPosAndSize(hero.DrawPos, 12f);

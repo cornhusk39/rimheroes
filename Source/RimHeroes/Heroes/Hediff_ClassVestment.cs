@@ -82,7 +82,11 @@ namespace RimHeroes
         }
     }
 
-    /// <summary>Vestment enhancement surgery: only offered on pawns wearing a class vestment.</summary>
+    /// <summary>
+    /// Vestment inlay surgery: only offered on pawns wearing a class vestment. Installing into an
+    /// occupied slot replaces the old inlay (destroyed). Re-installing the identical inlay is
+    /// blocked by vanilla's duplicate check.
+    /// </summary>
     public class Recipe_VestmentEnhancement : Recipe_AddHediff
     {
         public override bool AvailableOnNow(Thing thing, BodyPartRecord part = null)
@@ -90,6 +94,26 @@ namespace RimHeroes
             return thing is Pawn pawn
                    && pawn.health.hediffSet.hediffs.Any(h => h is Hediff_ClassVestment)
                    && base.AvailableOnNow(thing, part);
+        }
+
+        public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, System.Collections.Generic.List<Thing> ingredients, Bill bill)
+        {
+            // Clear the slot first so base's AddHediff lands in a free slot.
+            var ext = InlayUtility.ExtensionOf(recipe.addsHediff);
+            if (ext != null)
+            {
+                var occupant = InlayUtility.InlayInSlot(pawn, ext.slot);
+                if (occupant != null && occupant.def != recipe.addsHediff)
+                {
+                    pawn.health.RemoveHediff(occupant);
+                    if (PawnUtility.ShouldSendNotificationAbout(pawn))
+                    {
+                        Messages.Message("RH_InlayReplaced".Translate(pawn.LabelShortCap, occupant.def.label, recipe.addsHediff.label),
+                            pawn, MessageTypeDefOf.NeutralEvent);
+                    }
+                }
+            }
+            base.ApplyOnPawn(pawn, part, billDoer, ingredients, bill);
         }
     }
 }
