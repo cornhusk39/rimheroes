@@ -188,17 +188,45 @@
     <label>cleric's vestment</label>
     <description>A hero's holy raiment, bound to their faith. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
     <modExtensions>
-      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.92, 0.88, 0.7)</baseColor></li>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.92, 0.88, 0.7)</baseColor>
+        <artDir>Cleric</artDir>
+      </li>
     </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>75</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
   </HediffDef>
 
   <HediffDef ParentName="RH_VestmentCasterBase">
     <defName>RH_Vestment_Druid</defName>
     <label>druid's vestment</label>
-    <description>A hero's living mantle of bark and leaf, bound to the green. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <description>A hero's living mantle of pelt, bone, and antler, bound to the wild. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
     <modExtensions>
-      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.3, 0.58, 0.3)</baseColor></li>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.3, 0.58, 0.3)</baseColor>
+        <artDir>Druid</artDir>
+      </li>
     </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>75</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
   </HediffDef>
 
   <HediffDef ParentName="RH_VestmentCasterBase">
@@ -237,8 +265,22 @@
     <defName>RH_Vestment_Bard</defName>
     <label>bard's vestment</label>
     <description>A hero's flamboyant attire, bound to the song. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>75</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
     <modExtensions>
-      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.56, 0.32, 0.72)</baseColor></li>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.56, 0.32, 0.72)</baseColor>
+        <artDir>Bard</artDir>
+      </li>
     </modExtensions>
   </HediffDef>
 

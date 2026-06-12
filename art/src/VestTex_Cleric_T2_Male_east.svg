@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T2 east: tabard profile w/ gold front edge, sun emblem at the chest. -->
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 386 C340 414 312 428 254 428 C200 428 166 414 168 386 Z" fill="#C9C2B0"/>
+  <path d="M210 184 C226 176 244 172 262 174 L324 200 L322 416 C302 424 280 428 258 428 L214 420 Z" fill="#E8E4D8"/>
+  <path d="M318 198 L324 200 L322 416 L316 419 Z" fill="#C9A23F"/>
+  <circle cx="290" cy="266" r="14" fill="#C9A23F"/>
+  <circle cx="290" cy="266" r="7" fill="#E8E4D8"/>
+  <path d="M290 246 L290 238 M290 286 L290 294 M270 266 L262 266 M310 266 L318 266" stroke="#C9A23F" stroke-width="5" fill="none"/>
+  <path d="M198 222 C194 202 202 186 220 180 C232 176 244 178 252 186 L248 200 C240 194 230 193 222 197 C212 202 206 211 208 222 Z" fill="#C9A23F"/>
+  <path d="M174 376 C222 388 294 388 336 378 L336 396 C294 406 222 406 174 394 Z" fill="#A9744A"/>
+</svg>

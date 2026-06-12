@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Bard T3 south: plum doublet w/ gold frogging, DRAMATIC one-shoulder cape sweeping wide. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 396 C358 430 326 448 256 448 C186 448 154 430 152 396 Z" fill="#8E3A6E"/>
+  <path d="M164 242 C174 204 210 182 256 182 C290 182 318 194 336 216 C308 196 212 198 184 232 C175 240 168 242 164 242 Z" fill="#B5538F" opacity="0.5"/>
+  <!-- gold frogging: horizontal bars with toggles -->
+  <path d="M214 230 L298 230 M214 266 L298 266 M214 302 L298 302 M214 338 L298 338" stroke="#C9A23F" stroke-width="6" fill="none"/>
+  <circle cx="214" cy="230" r="7" fill="#C9A23F"/><circle cx="298" cy="230" r="7" fill="#C9A23F"/>
+  <circle cx="214" cy="266" r="7" fill="#C9A23F"/><circle cx="298" cy="266" r="7" fill="#C9A23F"/>
+  <circle cx="214" cy="302" r="7" fill="#C9A23F"/><circle cx="298" cy="302" r="7" fill="#C9A23F"/>
+  <circle cx="214" cy="338" r="7" fill="#C9A23F"/><circle cx="298" cy="338" r="7" fill="#C9A23F"/>
+  <!-- dramatic cape: sweeps from the right shoulder down past the hip -->
+  <path d="M368 226 C364 194 338 176 300 172 C282 170 268 174 260 184 L264 204 C274 194 290 190 306 194 L298 380 C314 392 336 392 352 380 C366 336 372 280 368 226 Z" fill="#5E2548"/>
+  <path d="M358 230 C354 204 334 188 306 186 L302 198 C324 202 340 218 344 242 L338 360 C346 346 354 318 356 288 Z" fill="#8E3A6E" opacity="0.55"/>
+  <!-- gold cape clasp at the shoulder -->
+  <circle cx="296" cy="196" r="12" fill="#C9A23F"/>
+  <circle cx="296" cy="196" r="6" fill="#8E6E24"/>
+  <!-- collar -->
+  <path d="M218 176 C230 166 244 162 256 162 C268 162 282 166 294 176 L286 196 C274 186 264 182 256 182 C248 182 238 186 226 196 Z" fill="#C9A23F"/>
+  <!-- belt -->
+  <path d="M154 378 C214 390 298 390 358 378 L358 398 C298 410 214 410 154 398 Z" fill="#5C3D24"/>
+  <rect x="242" y="380" width="28" height="20" rx="3" fill="#C9A23F"/>
+</svg>

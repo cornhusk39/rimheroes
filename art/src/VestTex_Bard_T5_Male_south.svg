@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Bard T5 south: the spotlight coat - iridescent plum sheen, gilded everything, one subtle music-note shimmer. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 396 C358 430 326 448 256 448 C186 448 154 430 152 396 Z" fill="#5E2548"/>
+  <!-- iridescent sheen sweep -->
+  <path d="M166 240 C176 202 212 180 258 180 C292 180 320 192 338 214 C310 194 214 196 186 230 C176 238 170 240 166 240 Z" fill="#B5538F"/>
+  <path d="M200 196 C218 186 240 182 260 184 C242 188 224 196 212 208 Z" fill="#D87AB4"/>
+  <!-- full cape, gold-edged -->
+  <path d="M144 232 C148 200 172 182 206 178 L222 188 L240 178 L256 188 L272 178 L290 188 L306 178 C340 182 364 200 368 232 L364 284 L348 272 L350 300 L332 286 L328 312 L312 298 L300 306 L286 294 L286 280 C266 272 246 272 226 280 L226 294 L212 306 L200 298 L184 312 L180 286 L162 300 L164 272 L148 284 Z" fill="#8E3A6E" fill-rule="evenodd"/>
+  <path d="M148 280 L164 268 L162 296 L180 282 L184 308 L200 294 L212 302 L212 308 L198 300 L182 314 L178 288 L160 302 L162 274 L146 286 Z" fill="#C9A23F"/>
+  <path d="M364 280 L348 268 L350 296 L332 282 L328 308 L312 294 L300 302 L300 308 L314 300 L330 314 L334 288 L352 302 L350 274 L366 286 Z" fill="#C9A23F"/>
+  <!-- gilded collar + buttons -->
+  <path d="M214 174 C228 162 242 158 256 158 C270 158 284 162 298 174 L290 200 C276 186 266 182 256 182 C246 182 236 186 222 200 Z" fill="#C9A23F"/>
+  <path d="M251 200 L261 200 L259 444 L253 444 Z" fill="#C9A23F"/>
+  <circle cx="256" cy="228" r="5" fill="#E8E0CC"/><circle cx="256" cy="266" r="5" fill="#E8E0CC"/><circle cx="256" cy="304" r="5" fill="#E8E0CC"/>
+  <!-- THE shimmer: one small glowing music note on the chest -->
+  <path d="M286 246 L286 270 C282 268 278 269 276 272 C274 276 277 280 282 280 C287 280 290 277 290 272 L290 250 L298 252 L298 244 Z" fill="#F2D98A"/>
+  <circle cx="282" cy="276" r="4" fill="#FFF3C4"/>
+  <!-- gold sash -->
+  <path d="M154 372 C214 384 298 384 358 372 L358 394 C298 406 214 406 154 394 Z" fill="#C9A23F"/>
+  <path d="M154 384 C214 396 298 396 358 384 L358 394 C298 406 214 406 154 394 Z" fill="#8E6E24"/>
+</svg>

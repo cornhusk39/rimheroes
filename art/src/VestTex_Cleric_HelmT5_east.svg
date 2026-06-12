@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T5 hat, east: grand mitre profile - tall peak, glowing sun, gold lappet at the nape. -->
+  <path d="M184 256 L226 254 C230 292 226 326 214 354 L188 354 C174 326 172 290 184 256 Z" fill="#F5F2E8"/>
+  <path d="M190 340 L218 340 L214 354 L192 354 Z" fill="#C9A23F"/>
+  <path d="M152 252 C148 196 198 156 258 156 C314 156 356 192 356 244 L354 262 C326 248 184 248 156 264 Z" fill="#C9C2B0"/>
+  <!-- tall mitre profile -->
+  <path d="M180 248 C178 206 190 148 216 104 C230 76 244 62 258 62 C272 62 286 76 300 104 C324 148 336 206 334 248 L330 260 C306 246 204 246 184 260 Z" fill="#F5F2E8"/>
+  <path d="M196 240 C198 200 210 156 232 116 C240 98 250 84 258 84 C266 84 274 92 282 104 C262 110 246 136 232 176 C220 202 212 224 208 244 Z" fill="#FFFDF5"/>
+  <path d="M252 64 L264 64 L262 248 L254 248 Z" fill="#C9A23F"/>
+  <!-- glowing sun on the side face -->
+  <circle cx="282" cy="160" r="18" fill="#F2D98A" opacity="0.6"/>
+  <circle cx="282" cy="160" r="13" fill="#C9A23F"/>
+  <circle cx="282" cy="160" r="6" fill="#FFF3C4"/>
+  <!-- band -->
+  <path d="M182 248 C210 232 312 232 334 248 L332 272 C308 252 204 252 184 272 Z" fill="#C9A23F"/>
+  <path d="M182 260 C210 246 312 246 334 260 L332 272 C308 252 204 252 184 272 Z" fill="#8E6E24"/>
+  <circle cx="214" cy="252" r="6" fill="#F2D98A"/>
+  <circle cx="300" cy="250" r="6" fill="#F2D98A"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Druid T5 hat, south: antlered beast-skull headdress, amber third eye, fur fall. -->
+  <!-- antlers: broad sweeping beams with tines -->
+  <path d="M184 210 C160 196 142 174 134 146 C128 122 132 100 144 86 C152 102 154 122 150 140 L166 128 L166 146 C176 152 184 162 188 174 L198 162 L202 182 C206 192 208 202 208 212 Z" fill="#B5A88C"/>
+  <path d="M142 94 C136 110 136 128 142 144 C146 130 147 112 142 94 Z" fill="#D8CCB4"/>
+  <path d="M328 210 C352 196 370 174 378 146 C384 122 380 100 368 86 C360 102 358 122 362 140 L346 128 L346 146 C336 152 328 162 324 174 L314 162 L310 182 C306 192 304 202 304 212 Z" fill="#B5A88C"/>
+  <path d="M370 94 C376 110 376 128 370 144 C366 130 365 112 370 94 Z" fill="#D8CCB4"/>
+  <!-- skull dome over the crown -->
+  <path d="M156 252 C152 192 202 148 258 148 C314 148 360 192 356 252 L352 266 C324 250 188 250 160 266 Z" fill="#D8CCB4"/>
+  <path d="M170 242 C172 198 208 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C180 226 172 232 170 242 Z" fill="#E8E0CC"/>
+  <!-- skull eye notches at the brow -->
+  <path d="M198 246 C206 238 216 236 226 240 L222 254 C214 250 206 250 200 254 Z" fill="#3A2E20"/>
+  <path d="M314 246 C306 238 296 236 286 240 L290 254 C298 250 306 250 312 254 Z" fill="#3A2E20"/>
+  <!-- amber third eye -->
+  <circle cx="256" cy="232" r="12" fill="#3A2E20"/>
+  <circle cx="256" cy="232" r="9" fill="#C9842A"/>
+  <circle cx="256" cy="230" r="4" fill="#F2B05A"/>
+  <!-- nasal ridge -->
+  <path d="M250 248 L262 248 L260 268 C258 270 254 270 252 268 Z" fill="#B5A88C"/>
+  <!-- fur fall under the skull -->
+  <path d="M158 252 L172 242 L182 256 L198 244 L208 258 L224 246 L234 260 L256 248 L278 260 L288 246 L304 258 L314 244 L330 256 L340 242 L354 252 L352 272 C324 256 188 256 160 272 Z" fill="#5C4E38"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Bard T4 south: brocade coat - gilded collar, swirl embroidery, full cape, gold sash. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 396 C358 430 326 448 256 448 C186 448 154 430 152 396 Z" fill="#5E2548"/>
+  <path d="M162 242 C172 204 208 182 254 182 C290 182 318 194 336 216 C308 196 212 198 184 232 C175 240 166 242 162 242 Z" fill="#8E3A6E" opacity="0.7"/>
+  <!-- brocade swirls -->
+  <path d="M196 250 C206 242 218 242 226 250 C218 258 206 258 196 250 Z" fill="#C9A23F"/>
+  <path d="M286 250 C296 242 308 242 316 250 C308 258 296 258 286 250 Z" fill="#C9A23F"/>
+  <path d="M186 320 C196 312 208 312 216 320 C208 328 196 328 186 320 Z" fill="#C9A23F"/>
+  <path d="M296 320 C306 312 318 312 326 320 C318 328 306 328 296 320 Z" fill="#C9A23F"/>
+  <path d="M216 396 C226 388 238 388 246 396 C238 404 226 404 216 396 Z" fill="#C9A23F"/>
+  <path d="M266 396 C276 388 288 388 296 396 C288 404 276 404 266 396 Z" fill="#C9A23F"/>
+  <!-- gilded standing collar + center buttons -->
+  <path d="M214 174 C228 162 242 158 256 158 C270 158 284 162 298 174 L290 200 C276 186 266 182 256 182 C246 182 236 186 222 200 Z" fill="#C9A23F"/>
+  <path d="M251 200 L261 200 L259 444 L253 444 Z" fill="#C9A23F"/>
+  <circle cx="256" cy="226" r="5" fill="#E8E0CC"/><circle cx="256" cy="262" r="5" fill="#E8E0CC"/>
+  <circle cx="256" cy="298" r="5" fill="#E8E0CC"/><circle cx="256" cy="334" r="5" fill="#E8E0CC"/>
+  <!-- full cape behind both shoulders -->
+  <path d="M144 232 C148 200 172 182 206 178 L222 188 L240 178 L256 188 L272 178 L290 188 L306 178 C340 182 364 200 368 232 L364 280 L348 268 L350 296 L332 282 L328 308 L312 294 L300 302 L286 290 L286 276 C266 268 246 268 226 276 L226 290 L212 302 L200 294 L184 308 L180 282 L162 296 L164 268 L148 280 Z" fill="#8E3A6E" fill-rule="evenodd"/>
+  <!-- gold sash -->
+  <path d="M154 372 C214 384 298 384 358 372 L358 394 C298 406 214 406 154 394 Z" fill="#C9A23F"/>
+  <path d="M154 384 C214 396 298 396 358 384 L358 394 C298 406 214 406 154 394 Z" fill="#8E6E24"/>
+</svg>

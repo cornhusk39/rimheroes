@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T3 hat, south: short white mitre - peaked front face, gold seam. -->
+  <path d="M168 250 C166 220 178 178 200 148 C216 126 236 112 256 112 C276 112 296 126 312 148 C334 178 346 220 344 250 L340 264 C314 248 198 248 172 264 Z" fill="#E8E4D8"/>
+  <path d="M184 240 C186 210 198 178 218 154 C230 138 244 128 256 128 C264 128 272 132 280 140 C260 142 240 158 226 184 C214 206 206 226 202 244 Z" fill="#F5F2E8"/>
+  <!-- gold center seam + base band -->
+  <path d="M250 114 L262 114 L260 248 L252 248 Z" fill="#C9A23F"/>
+  <path d="M170 250 C198 236 314 236 342 250 L340 270 C314 254 198 254 172 270 Z" fill="#C9A23F"/>
+  <path d="M170 262 C198 250 314 250 342 262 L340 270 C314 254 198 254 172 270 Z" fill="#8E6E24"/>
+</svg>

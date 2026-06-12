@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Bard T2 south: embroidered vest over cream shirt, half-cape on the left shoulder. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 396 C358 430 326 448 256 448 C186 448 154 430 152 396 Z" fill="#E8E0CC"/>
+  <path d="M160 244 C170 208 204 186 254 186 C300 186 334 206 348 240 L346 300 L162 300 Z" fill="#C9C2B0" opacity="0.5"/>
+  <!-- plum vest panels -->
+  <path d="M178 210 C196 192 222 182 248 182 L246 442 C220 440 198 434 182 422 Z" fill="#8E3A6E"/>
+  <path d="M334 210 C316 192 290 182 264 182 L266 442 C292 440 314 434 330 422 Z" fill="#8E3A6E"/>
+  <!-- gold embroidery on the vest -->
+  <path d="M198 240 C210 232 224 228 238 228 M198 280 C210 272 224 268 238 268 M198 320 C210 312 224 308 238 308" stroke="#C9A23F" stroke-width="5" fill="none"/>
+  <path d="M314 240 C302 232 288 228 274 228 M314 280 C302 272 288 268 274 268 M314 320 C302 312 288 308 274 308" stroke="#C9A23F" stroke-width="5" fill="none"/>
+  <!-- half-cape over the left (screen) shoulder -->
+  <path d="M146 230 C150 200 174 182 208 178 C224 176 238 180 246 190 L242 210 C232 200 218 196 204 200 L210 330 C194 336 176 334 162 324 C150 296 144 262 146 230 Z" fill="#5E2548"/>
+  <path d="M154 232 C158 208 176 192 202 188 L206 200 C186 204 170 218 166 240 L170 310 C164 300 158 280 156 262 Z" fill="#8E3A6E" opacity="0.6"/>
+  <!-- collar -->
+  <path d="M218 176 C230 166 244 162 256 162 C268 162 282 166 294 176 L286 196 C274 186 264 182 256 182 C248 182 238 186 226 196 Z" fill="#C9A23F"/>
+  <!-- belt -->
+  <path d="M154 378 C214 390 298 390 358 378 L358 398 C298 410 214 410 154 398 Z" fill="#5C3D24"/>
+  <rect x="242" y="380" width="28" height="20" rx="3" fill="#C9A23F"/>
+</svg>

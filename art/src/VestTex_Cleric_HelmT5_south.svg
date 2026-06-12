@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T5 hat, south: grand radiant mitre - tallest peak, glowing sun, jeweled band. -->
+  <path d="M172 250 C170 206 182 146 208 100 C224 70 240 54 256 54 C272 54 288 70 304 100 C330 146 342 206 340 250 L336 264 C310 248 202 248 176 264 Z" fill="#F5F2E8"/>
+  <path d="M188 240 C190 200 202 152 226 110 C236 90 246 74 256 74 C264 74 272 82 280 94 C260 100 242 124 228 162 C216 190 208 218 204 244 Z" fill="#FFFDF5"/>
+  <!-- gold seam -->
+  <path d="M250 56 L262 56 L260 248 L252 248 Z" fill="#C9A23F"/>
+  <!-- glowing sun on the front face -->
+  <circle cx="256" cy="150" r="22" fill="#F2D98A" opacity="0.6"/>
+  <circle cx="256" cy="150" r="16" fill="#C9A23F"/>
+  <circle cx="256" cy="150" r="8" fill="#FFF3C4"/>
+  <path d="M256 122 L256 112 M256 178 L256 188 M228 150 L218 150 M284 150 L294 150" stroke="#C9A23F" stroke-width="6" fill="none"/>
+  <!-- jeweled gold base band -->
+  <path d="M172 250 C200 234 312 234 340 250 L338 274 C312 254 200 254 174 274 Z" fill="#C9A23F"/>
+  <path d="M172 262 C200 250 312 250 340 262 L338 274 C312 254 200 254 174 274 Z" fill="#8E6E24"/>
+  <circle cx="206" cy="252" r="6" fill="#F2D98A"/>
+  <circle cx="256" cy="248" r="6" fill="#F2D98A"/>
+  <circle cx="306" cy="252" r="6" fill="#F2D98A"/>
+</svg>

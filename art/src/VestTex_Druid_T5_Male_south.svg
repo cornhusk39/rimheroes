@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Druid T5 south: wildheart - darkest furs, bone pauldron spikes, ONE small glowing amber totem. -->
+  <path d="M178 250 C186 228 212 216 256 214 C300 216 326 228 334 250 L338 404 C320 418 292 426 256 426 C220 426 192 418 174 404 Z" fill="#5C4E38"/>
+  <path d="M186 256 C194 238 220 228 256 226 C292 228 318 238 326 256 L328 302 L184 302 Z" fill="#6B5C44" opacity="0.7"/>
+  <!-- heaviest mantle -->
+  <path d="M142 254 C138 216 170 192 216 186 L232 196 L248 184 L256 196 L270 184 L284 194 L298 186 C346 192 374 216 370 254 L370 302 L354 288 L356 314 L338 300 L342 324 L324 310 L312 318 L296 304 L296 290 C268 282 244 282 216 290 L216 304 L204 318 L192 310 L174 324 L178 300 L160 314 L162 288 L146 302 Z" fill="#4A3F2E" fill-rule="evenodd"/>
+  <path d="M150 252 C148 222 176 202 214 196 L232 204 L248 194 L256 204 L270 194 L284 202 L298 198 C334 203 354 220 356 246 L348 250 C342 230 324 218 302 214 L286 220 L270 212 L256 220 L242 212 L226 218 C192 216 170 230 164 250 Z" fill="#6B5C44"/>
+  <!-- bone spikes on the shoulders -->
+  <path d="M160 232 L150 200 L174 220 Z" fill="#D8CCB4"/>
+  <path d="M186 216 L182 186 L204 208 Z" fill="#D8CCB4"/>
+  <path d="M352 232 L362 200 L338 220 Z" fill="#D8CCB4"/>
+  <path d="M326 216 L330 186 L308 208 Z" fill="#D8CCB4"/>
+  <!-- fang necklace -->
+  <path d="M206 250 C224 270 240 278 256 278 C272 278 288 270 306 250 L310 258 C292 280 274 288 256 288 C238 288 220 280 202 258 Z" fill="#3A2E20"/>
+  <path d="M226 272 L222 296 L234 278 Z" fill="#D8CCB4"/>
+  <path d="M282 272 L288 294 L294 274 Z" fill="#D8CCB4"/>
+  <!-- THE totem: one small glowing amber carving at the chest -->
+  <circle cx="256" cy="302" r="17" fill="#3A2E20"/>
+  <circle cx="256" cy="302" r="13" fill="#C9842A"/>
+  <circle cx="256" cy="300" r="6" fill="#F2B05A"/>
+  <path d="M250 296 L262 308 M262 296 L250 308" stroke="#7A4E16" stroke-width="3" fill="none"/>
+  <!-- fur kilt, darkest -->
+  <path d="M168 388 C226 400 290 400 346 388 L344 430 L332 420 L326 434 L314 424 L306 436 L294 426 L284 436 L270 426 L258 438 L246 426 L232 436 L222 424 L210 434 L200 422 L188 432 L172 420 Z" fill="#4A3F2E"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Bard T1 south: patched traveler's doublet, cream shirt collar, simple belt. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 396 C358 430 326 448 256 448 C186 448 154 430 152 396 Z" fill="#8E3A6E"/>
+  <path d="M164 242 C174 204 210 182 256 182 C290 182 318 194 336 216 C308 196 212 198 184 232 C175 240 168 242 164 242 Z" fill="#B5538F" opacity="0.5"/>
+  <!-- center lacing -->
+  <path d="M251 198 L261 198 L259 444 L253 444 Z" fill="#5E2548"/>
+  <path d="M240 224 L272 232 M240 260 L272 268 M240 296 L272 304 M240 332 L272 340" stroke="#5E2548" stroke-width="5" fill="none"/>
+  <!-- cream shirt collar -->
+  <path d="M218 176 C230 166 244 162 256 162 C268 162 282 166 294 176 L286 198 C274 186 264 182 256 182 C248 182 238 186 226 198 Z" fill="#E8E0CC"/>
+  <!-- patches -->
+  <rect x="196" y="300" width="30" height="26" rx="4" fill="#5E2548"/>
+  <path d="M198 302 L224 324 M224 302 L198 324" stroke="#8E3A6E" stroke-width="3" fill="none"/>
+  <rect x="296" y="370" width="26" height="22" rx="4" fill="#5E2548"/>
+  <!-- belt -->
+  <path d="M154 378 C214 390 298 390 358 378 L358 398 C298 410 214 410 154 398 Z" fill="#5C3D24"/>
+  <rect x="242" y="380" width="28" height="20" rx="3" fill="#8A8273"/>
+</svg>

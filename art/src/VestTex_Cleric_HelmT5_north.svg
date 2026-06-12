@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T5 hat, north: grand mitre back + gold-tipped lappets, full coverage. -->
+  <path d="M204 254 L242 254 L238 352 L208 352 Z" fill="#F5F2E8"/>
+  <path d="M270 254 L308 254 L304 352 L274 352 Z" fill="#F5F2E8"/>
+  <path d="M208 340 L238 340 L236 356 L210 356 Z" fill="#C9A23F"/>
+  <path d="M274 340 L304 340 L302 356 L276 356 Z" fill="#C9A23F"/>
+  <path d="M174 252 C200 242 312 242 338 252 C342 292 332 324 308 344 L204 344 C180 324 170 292 174 252 Z" fill="#C9C2B0"/>
+  <path d="M172 250 C170 206 182 146 208 100 C224 70 240 54 256 54 C272 54 288 70 304 100 C330 146 342 206 340 250 L336 264 C310 248 202 248 176 264 Z" fill="#F5F2E8"/>
+  <path d="M250 56 L262 56 L260 248 L252 248 Z" fill="#C9A23F"/>
+  <path d="M172 250 C200 234 312 234 340 250 L338 274 C312 254 200 254 174 274 Z" fill="#C9A23F"/>
+  <circle cx="256" cy="248" r="6" fill="#F2D98A"/>
+</svg>

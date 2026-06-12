@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Bard T1 east: doublet profile hugging the body, collar bunch, patch, belt. -->
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 386 C340 414 312 428 254 428 C200 428 166 414 168 386 Z" fill="#8E3A6E"/>
+  <path d="M182 238 C192 204 220 184 258 184 C286 184 310 196 324 216 C300 198 218 200 196 228 C190 232 185 236 182 238 Z" fill="#B5538F" opacity="0.45"/>
+  <!-- cream collar bunch -->
+  <path d="M198 218 C194 198 202 182 220 176 C232 172 244 174 252 182 L248 196 C240 190 230 189 222 193 C212 198 206 207 208 218 Z" fill="#E8E0CC"/>
+  <rect x="210" y="310" width="28" height="24" rx="4" fill="#5E2548"/>
+  <path d="M212 312 L236 332 M236 312 L212 332" stroke="#8E3A6E" stroke-width="3" fill="none"/>
+  <path d="M172 372 C220 384 292 384 336 374 L336 392 C292 402 220 402 172 390 Z" fill="#5C3D24"/>
+  <rect x="288" y="374" width="24" height="18" rx="3" fill="#8A8273"/>
+</svg>

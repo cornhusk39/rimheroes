@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T4 hat, south: tall gold-banded mitre with a cross. -->
+  <path d="M170 250 C168 212 180 158 204 118 C220 92 238 76 256 76 C274 76 292 92 308 118 C332 158 344 212 342 250 L338 264 C312 248 200 248 174 264 Z" fill="#E8E4D8"/>
+  <path d="M186 240 C188 204 200 162 222 126 C232 108 244 94 256 94 C264 94 272 100 280 110 C260 114 242 134 228 166 C216 192 208 218 204 244 Z" fill="#F5F2E8"/>
+  <!-- gold center seam + cross -->
+  <path d="M250 78 L262 78 L260 248 L252 248 Z" fill="#C9A23F"/>
+  <path d="M236 150 L276 150 L276 164 L236 164 Z" fill="#C9A23F"/>
+  <!-- gold base band -->
+  <path d="M170 250 C198 234 314 234 342 250 L340 272 C314 254 198 254 174 272 Z" fill="#C9A23F"/>
+  <path d="M170 262 C198 250 314 250 342 262 L340 272 C314 254 198 254 174 272 Z" fill="#8E6E24"/>
+</svg>

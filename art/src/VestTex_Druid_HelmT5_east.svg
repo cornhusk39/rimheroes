@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Druid T5 hat, east: skull profile w/ antler sweeping back, amber eye, fur nape fall. -->
+  <!-- antler: sweeping up-back from the skull -->
+  <path d="M236 196 C214 180 200 156 196 128 C194 106 200 88 212 76 C218 92 220 110 216 126 L232 116 L230 134 C240 142 246 154 248 168 L260 158 L262 178 C262 188 258 196 252 202 Z" fill="#B5A88C"/>
+  <path d="M210 84 C204 100 204 118 210 134 C214 120 215 100 210 84 Z" fill="#D8CCB4"/>
+  <!-- skull dome + nape -->
+  <path d="M150 254 C146 192 196 148 258 148 C314 148 358 186 358 242 C358 254 352 264 342 270 L322 264 C312 258 306 252 304 246 L244 246 C242 292 236 330 222 354 L188 354 C162 328 148 294 150 254 Z" fill="#D8CCB4"/>
+  <path d="M164 244 C168 200 204 166 256 166 C286 166 312 180 328 204 C302 184 216 186 190 216 C176 230 166 236 164 244 Z" fill="#E8E0CC"/>
+  <!-- amber eye on the skull side -->
+  <circle cx="312" cy="226" r="11" fill="#3A2E20"/>
+  <circle cx="312" cy="226" r="8" fill="#C9842A"/>
+  <circle cx="312" cy="224" r="3.5" fill="#F2B05A"/>
+  <!-- nasal ridge at the front -->
+  <path d="M340 244 C350 246 356 252 358 260 L350 268 C346 260 340 254 332 252 Z" fill="#B5A88C"/>
+  <!-- fur nape fall -->
+  <path d="M302 244 C324 244 342 252 350 264 L342 276 C332 264 318 258 300 258 L244 258 C242 260 240 262 240 264 C236 302 230 332 218 352 L200 352 C214 324 220 290 220 256 L222 244 Z" fill="#5C4E38"/>
+  <path d="M196 348 L208 336 L218 350 L228 338 L236 352 L224 352 L210 352 Z" fill="#6B5C44"/>
+</svg>

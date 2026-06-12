@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Druid T2 east: pelt vest profile, layered jags, strap, claw at the chest. -->
+  <path d="M198 240 C208 220 232 208 262 208 L304 214 L324 252 L322 408 C302 420 276 426 250 424 L202 410 Z" fill="#7A6A50"/>
+  <path d="M206 246 C216 230 238 220 264 220 L298 226 L314 256 L312 304 L204 304 Z" fill="#968360" opacity="0.5"/>
+  <path d="M204 320 L220 332 L212 342 L228 352 L218 362 L232 372 L224 382 L236 390 L228 400 L206 390 L200 350 Z" fill="#5C4E38"/>
+  <path d="M214 238 L318 360 L306 372 L202 256 C204 249 208 243 214 238 Z" fill="#5C3D24"/>
+  <path d="M292 254 C302 262 310 272 314 284 L304 290 C299 279 292 270 282 264 Z" fill="#5C3D24"/>
+  <path d="M304 284 L308 306 L316 286 Z" fill="#D8CCB4"/>
+  <path d="M200 392 C240 404 288 404 320 394 L320 410 C288 420 240 420 200 408 Z" fill="#8A5A33"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T3 north: cope covering the upper back, gold cross seam, stole tails. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#E8E4D8"/>
+  <!-- cope from behind -->
+  <path d="M146 248 C154 210 196 188 256 188 C316 188 358 210 366 248 L362 308 C334 326 178 326 150 308 Z" fill="#C9C2B0"/>
+  <path d="M158 248 C168 218 206 200 256 200 C306 200 344 218 354 248 L352 296 C326 310 186 310 160 296 Z" fill="#E8E4D8"/>
+  <path d="M146 248 C154 210 196 188 256 188 C316 188 358 210 366 248 L365 256 C354 220 314 198 256 198 C198 198 158 220 147 256 Z" fill="#C9A23F"/>
+  <!-- gold cross on the cope -->
+  <path d="M250 214 L262 214 L260 296 L252 296 Z" fill="#C9A23F"/>
+  <path d="M226 240 L286 240 L286 252 L226 252 Z" fill="#C9A23F"/>
+  <path d="M156 384 C216 396 296 396 356 384 L356 402 C296 414 216 414 156 402 Z" fill="#C9A23F"/>
+</svg>

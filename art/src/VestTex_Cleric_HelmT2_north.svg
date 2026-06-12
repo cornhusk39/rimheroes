@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T2 hat, north: skullcap covering the whole skull back. -->
+  <path d="M154 250 C150 190 198 148 256 148 C314 148 362 190 358 250 C360 296 344 336 314 354 L198 354 C168 336 152 296 154 250 Z" fill="#E8E4D8"/>
+  <path d="M168 242 C170 198 206 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 170 232 168 242 Z" fill="#F5F2E8"/>
+  <path d="M252 150 L260 150 L258 346 L254 346 Z" fill="#C9C2B0"/>
+  <path d="M170 314 C198 300 314 300 342 314 L336 334 C310 320 202 320 176 334 Z" fill="#C9A23F"/>
+</svg>

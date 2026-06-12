@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T3 hat, north: mitre back face + lappet tails covering the skull back. -->
+  <!-- lappets: two cloth tails over the back of the skull -->
+  <path d="M210 254 L240 254 L236 348 L212 348 Z" fill="#E8E4D8"/>
+  <path d="M272 254 L302 254 L300 348 L276 348 Z" fill="#E8E4D8"/>
+  <path d="M212 340 L236 340 L234 352 L214 352 Z" fill="#C9A23F"/>
+  <path d="M276 340 L300 340 L298 352 L278 352 Z" fill="#C9A23F"/>
+  <!-- cloth fall between lappets -->
+  <path d="M174 252 C200 242 312 242 338 252 C342 288 332 320 308 340 L204 340 C180 320 170 288 174 252 Z" fill="#C9C2B0"/>
+  <!-- mitre back -->
+  <path d="M168 250 C166 220 178 178 200 148 C216 126 236 112 256 112 C276 112 296 126 312 148 C334 178 346 220 344 250 L340 264 C314 248 198 248 172 264 Z" fill="#E8E4D8"/>
+  <path d="M250 114 L262 114 L260 248 L252 248 Z" fill="#C9A23F"/>
+  <path d="M170 250 C198 236 314 236 342 250 L340 270 C314 254 198 254 172 270 Z" fill="#C9A23F"/>
+</svg>

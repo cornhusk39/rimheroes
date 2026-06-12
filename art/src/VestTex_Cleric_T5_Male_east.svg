@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T5 east: radiant profile - glow rim, gold front band, shining sun at the chest. -->
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 386 C340 414 312 428 254 428 C200 428 166 414 168 386 Z" fill="#F5F2E8"/>
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 240 C330 198 298 176 254 176 C208 176 178 198 166 244 Z" fill="#F2D98A"/>
+  <path d="M178 232 C190 202 216 184 252 180 L268 200 L296 184 C320 192 338 208 348 232 L344 248 C330 226 308 212 282 208 L266 224 L246 224 C220 226 198 238 184 256 Z" fill="#C9A23F"/>
+  <path d="M306 204 L330 212 L328 422 L306 416 Z" fill="#C9A23F"/>
+  <path d="M312 210 L324 215 L322 414 L312 410 Z" fill="#F5F2E8"/>
+  <!-- shining sun -->
+  <circle cx="286" cy="296" r="25" fill="#F2D98A" opacity="0.55"/>
+  <circle cx="286" cy="296" r="18" fill="#C9A23F"/>
+  <circle cx="286" cy="296" r="9" fill="#FFF3C4"/>
+  <path d="M286 270 L286 260 M286 322 L286 332 M260 296 L250 296 M312 296 L322 296" stroke="#C9A23F" stroke-width="6" fill="none"/>
+  <path d="M176 402 C222 418 296 418 334 404 L332 422 C296 434 222 434 178 420 Z" fill="#F2D98A"/>
+  <path d="M198 220 C194 200 202 184 220 178 C232 174 244 176 252 184 L248 198 C240 192 230 191 222 195 C212 200 206 209 208 220 Z" fill="#C9A23F"/>
+</svg>

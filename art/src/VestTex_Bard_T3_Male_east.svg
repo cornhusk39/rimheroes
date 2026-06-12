@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Bard T3 east: frogged doublet profile, cape billowing behind. -->
+  <!-- cape billowing at the back -->
+  <path d="M160 230 C162 200 184 182 216 178 C232 176 244 180 252 190 L248 208 C238 198 224 194 212 198 L208 400 C192 408 176 404 166 392 C156 340 154 284 160 230 Z" fill="#5E2548"/>
+  <path d="M168 234 C172 210 188 194 212 190 L216 202 C198 206 184 220 182 242 L180 370 C172 354 166 320 166 288 Z" fill="#8E3A6E" opacity="0.55"/>
+  <!-- doublet -->
+  <path d="M188 232 C198 192 222 168 264 168 C306 168 336 190 344 230 L342 386 C340 414 314 428 260 428 C216 428 192 416 190 388 Z" fill="#8E3A6E"/>
+  <path d="M204 234 C212 202 234 184 266 184 C292 184 314 196 326 216 C304 198 232 200 212 228 C208 230 206 232 204 234 Z" fill="#B5538F" opacity="0.5"/>
+  <!-- frogging -->
+  <path d="M242 234 L318 234 M242 270 L318 270 M242 306 L318 306 M242 342 L318 342" stroke="#C9A23F" stroke-width="6" fill="none"/>
+  <circle cx="242" cy="234" r="6" fill="#C9A23F"/><circle cx="318" cy="234" r="6" fill="#C9A23F"/>
+  <circle cx="242" cy="270" r="6" fill="#C9A23F"/><circle cx="318" cy="270" r="6" fill="#C9A23F"/>
+  <circle cx="242" cy="306" r="6" fill="#C9A23F"/><circle cx="318" cy="306" r="6" fill="#C9A23F"/>
+  <!-- clasp at the shoulder -->
+  <circle cx="232" cy="200" r="10" fill="#C9A23F"/>
+  <!-- collar bunch -->
+  <path d="M204 216 C200 196 208 180 226 174 C238 170 250 172 258 180 L254 194 C246 188 236 187 228 191 C218 196 212 205 214 216 Z" fill="#C9A23F"/>
+  <path d="M192 372 C236 384 300 384 338 374 L338 392 C300 402 236 402 192 390 Z" fill="#5C3D24"/>
+</svg>

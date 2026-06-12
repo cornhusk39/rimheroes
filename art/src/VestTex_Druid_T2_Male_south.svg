@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Druid T2 south: layered pelt vest, claw necklace, crossed leather straps. -->
+  <path d="M176 244 C182 222 202 210 228 206 L236 212 L240 416 L232 432 C208 430 188 422 176 410 L170 318 Z" fill="#7A6A50"/>
+  <path d="M338 244 C332 222 312 210 286 206 L278 212 L274 416 L282 432 C306 430 326 422 338 410 L344 318 Z" fill="#7A6A50"/>
+  <!-- pelt layering jags -->
+  <path d="M178 290 L194 302 L186 312 L202 322 L192 332 L206 342 L196 352 L210 362 L200 372 L212 380 L204 390 L182 380 L176 330 Z" fill="#5C4E38"/>
+  <path d="M336 290 L320 302 L328 312 L312 322 L322 332 L308 342 L318 352 L304 362 L314 372 L302 380 L310 390 L332 380 L338 330 Z" fill="#5C4E38"/>
+  <!-- crossed straps -->
+  <path d="M184 236 L326 384 L312 396 L172 254 C174 247 178 241 184 236 Z" fill="#5C3D24"/>
+  <path d="M328 236 L186 384 L200 396 L340 254 C338 247 334 241 328 236 Z" fill="#5C3D24"/>
+  <!-- claw necklace -->
+  <path d="M210 248 C226 266 240 274 256 274 C272 274 286 266 302 248 L306 256 C290 276 274 284 256 284 C238 284 222 276 206 256 Z" fill="#5C3D24"/>
+  <path d="M226 270 L222 292 L234 276 Z" fill="#D8CCB4"/>
+  <path d="M246 278 L244 302 L256 282 Z" fill="#D8CCB4"/>
+  <path d="M266 280 L268 304 L278 282 Z" fill="#D8CCB4"/>
+  <path d="M286 272 L292 294 L298 274 Z" fill="#D8CCB4"/>
+  <!-- belt -->
+  <path d="M168 396 C224 408 290 408 346 396 L346 412 C290 424 224 424 168 412 Z" fill="#8A5A33"/>
+</svg>

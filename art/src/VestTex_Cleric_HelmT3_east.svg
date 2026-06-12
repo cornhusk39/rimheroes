@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T3 hat, east: mitre profile - peak above, lappet trailing at the nape. -->
+  <!-- lappet at the nape -->
+  <path d="M188 256 L226 254 C230 290 226 322 214 350 L192 350 C178 322 176 288 188 256 Z" fill="#E8E4D8"/>
+  <path d="M194 336 L216 336 L212 350 L196 350 Z" fill="#C9A23F"/>
+  <!-- crown coverage -->
+  <path d="M152 252 C148 196 198 156 258 156 C314 156 356 192 356 244 L354 262 C326 248 184 248 156 264 Z" fill="#C9C2B0"/>
+  <!-- mitre: peaked profile -->
+  <path d="M176 248 C174 218 186 178 208 150 C222 130 240 118 258 118 C276 118 294 130 308 150 C328 178 340 218 338 248 L334 260 C310 246 200 246 180 260 Z" fill="#E8E4D8"/>
+  <path d="M192 240 C194 212 206 180 224 158 C234 144 246 134 258 134 C266 134 274 138 282 146 C262 148 244 164 230 188 C218 210 210 226 206 244 Z" fill="#F5F2E8"/>
+  <path d="M252 120 L264 120 L262 248 L254 248 Z" fill="#C9A23F"/>
+  <path d="M178 248 C206 234 312 234 336 248 L334 268 C310 252 202 252 180 268 Z" fill="#C9A23F"/>
+  <path d="M178 260 C206 248 312 248 336 260 L334 268 C310 252 202 252 180 268 Z" fill="#8E6E24"/>
+</svg>

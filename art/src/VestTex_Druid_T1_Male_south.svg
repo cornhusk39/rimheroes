@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Druid T1 south: rough hide wrap with a fur-trimmed collar, sinew belt. -->
+  <path d="M170 224 C194 210 224 204 256 206 L354 296 L352 368 L344 372 L328 356 L326 376 L308 360 L304 382 L288 364 L282 384 L268 368 L264 386 L248 370 L242 388 L230 372 L222 386 L208 370 L202 382 L190 366 L184 376 L172 362 L170 296 Z" fill="#6B4426"/>
+  <path d="M176 230 C200 216 228 210 254 214 L346 296 L344 308 L250 222 C224 218 198 224 180 236 Z" fill="#5C3D24"/>
+  <!-- fur collar trim across the wrap edge -->
+  <path d="M168 222 C192 206 224 200 258 202 L266 212 L254 222 L240 212 L230 224 L216 214 L208 226 L194 218 L188 230 L176 222 L172 232 L164 226 Z" fill="#7A6A50"/>
+  <!-- shoulder strap -->
+  <path d="M296 204 C310 208 324 216 334 228 L320 240 C310 228 298 220 286 216 Z" fill="#5C3D24"/>
+  <!-- sinew belt + bone toggle -->
+  <path d="M166 392 C222 404 292 404 348 392 L348 408 C292 420 222 420 166 408 Z" fill="#8A5A33"/>
+  <ellipse cx="256" cy="402" rx="14" ry="7" fill="#D8CCB4"/>
+</svg>

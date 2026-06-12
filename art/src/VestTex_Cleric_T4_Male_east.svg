@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T4 east: chasuble profile - gold orphrey at the front, emblem, hem band. -->
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 386 C340 414 312 428 254 428 C200 428 166 414 168 386 Z" fill="#E8E4D8"/>
+  <path d="M182 240 C192 206 220 186 258 186 C290 186 314 198 328 220 C304 200 216 202 194 232 C188 236 184 238 182 240 Z" fill="#F5F2E8" opacity="0.55"/>
+  <!-- gold shoulder yoke -->
+  <path d="M178 232 C190 202 216 184 252 180 L268 200 L296 184 C320 192 338 208 348 232 L344 248 C330 226 308 212 282 208 L266 224 L246 224 C220 226 198 238 184 256 Z" fill="#C9A23F"/>
+  <!-- gold front band -->
+  <path d="M306 204 L330 212 L328 422 L306 416 Z" fill="#C9A23F"/>
+  <path d="M312 210 L324 215 L322 414 L312 410 Z" fill="#E8E4D8"/>
+  <!-- emblem -->
+  <circle cx="288" cy="296" r="18" fill="#C9A23F"/>
+  <circle cx="288" cy="296" r="9" fill="#E8E4D8"/>
+  <path d="M288 270 L288 260 M288 322 L288 332 M262 296 L252 296 M314 296 L324 296" stroke="#C9A23F" stroke-width="6" fill="none"/>
+  <!-- hem band -->
+  <path d="M176 402 C222 418 296 418 334 404 L332 422 C296 434 222 434 178 420 Z" fill="#C9A23F"/>
+  <!-- collar bunch -->
+  <path d="M198 220 C194 200 202 184 220 178 C232 174 244 176 252 184 L248 198 C240 192 230 191 222 195 C212 200 206 209 208 220 Z" fill="#C9A23F"/>
+</svg>

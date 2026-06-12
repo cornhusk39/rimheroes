@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T3 south: stole bands + shoulder cope (silhouette beat), bigger sun emblem. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#E8E4D8"/>
+  <path d="M162 244 C172 206 208 184 256 184 C292 184 320 196 338 218 C310 198 212 200 184 234 C175 242 166 244 162 244 Z" fill="#F5F2E8" opacity="0.6"/>
+  <!-- stole: two gold-edged bands -->
+  <path d="M210 196 L236 196 L232 450 L208 450 Z" fill="#C9A23F"/>
+  <path d="M216 202 L230 202 L227 444 L214 444 Z" fill="#E8E4D8"/>
+  <path d="M276 196 L302 196 L304 450 L280 450 Z" fill="#C9A23F"/>
+  <path d="M282 202 L296 202 L298 444 L285 444 Z" fill="#E8E4D8"/>
+  <path d="M218 420 L228 420 L223 438 Z" fill="#C9A23F"/>
+  <path d="M284 420 L294 420 L289 438 Z" fill="#C9A23F"/>
+  <!-- shoulder cope: rounded cape over the shoulders -->
+  <path d="M146 248 C154 210 196 188 256 188 C316 188 358 210 366 248 L362 296 C346 282 328 274 308 270 L296 290 L256 276 L216 290 L204 270 C184 274 166 282 150 296 Z" fill="#C9C2B0"/>
+  <path d="M158 248 C168 218 206 200 256 200 C306 200 344 218 354 248 L352 280 C336 268 318 262 300 260 L292 276 L256 264 L220 276 L212 260 C194 262 176 268 160 280 Z" fill="#E8E4D8"/>
+  <path d="M146 248 C154 210 196 188 256 188 C316 188 358 210 366 248 L365 256 C354 220 314 198 256 198 C198 198 158 220 147 256 Z" fill="#C9A23F"/>
+  <!-- sun emblem, grown -->
+  <circle cx="256" cy="316" r="20" fill="#C9A23F"/>
+  <circle cx="256" cy="316" r="10" fill="#E8E4D8"/>
+  <path d="M256 286 L256 274 M256 346 L256 358 M226 316 L214 316 M286 316 L298 316 M235 295 L226 286 M277 295 L286 286 M235 337 L226 346 M277 337 L286 346" stroke="#C9A23F" stroke-width="6" fill="none"/>
+  <!-- belt -->
+  <path d="M156 384 C216 396 296 396 356 384 L356 402 C296 414 216 414 156 402 Z" fill="#C9A23F"/>
+</svg>

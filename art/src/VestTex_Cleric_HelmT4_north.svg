@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Cleric T4 hat, north: tall mitre back + gold lappets covering the skull back. -->
+  <path d="M206 254 L240 254 L236 350 L210 350 Z" fill="#E8E4D8"/>
+  <path d="M272 254 L306 254 L302 350 L276 350 Z" fill="#E8E4D8"/>
+  <path d="M210 340 L236 340 L234 354 L212 354 Z" fill="#C9A23F"/>
+  <path d="M276 340 L302 340 L300 354 L278 354 Z" fill="#C9A23F"/>
+  <path d="M174 252 C200 242 312 242 338 252 C342 290 332 322 308 342 L204 342 C180 322 170 290 174 252 Z" fill="#C9C2B0"/>
+  <path d="M170 250 C168 212 180 158 204 118 C220 92 238 76 256 76 C274 76 292 92 308 118 C332 158 344 212 342 250 L338 264 C312 248 200 248 174 264 Z" fill="#E8E4D8"/>
+  <path d="M250 78 L262 78 L260 248 L252 248 Z" fill="#C9A23F"/>
+  <path d="M170 250 C198 234 314 234 342 250 L340 272 C314 254 198 254 174 272 Z" fill="#C9A23F"/>
+</svg>
