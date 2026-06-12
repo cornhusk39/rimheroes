@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Barbarian T4 helm, east: dome profile w/ cheek guard, thick near horn hooking forward-up. -->
+  <!-- far horn -->
+  <path d="M226 196 C204 188 188 172 180 150 C174 130 176 112 186 98 C192 112 194 128 192 144 C202 160 216 178 226 196 Z" fill="#4F483F"/>
+  <!-- dome -->
+  <path d="M174 252 C170 192 210 150 260 150 C310 150 350 192 348 252 L342 272 L180 272 Z" fill="#2E3138"/>
+  <path d="M186 244 C186 198 218 164 260 164 C284 164 306 176 320 196 C298 182 228 185 206 212 C195 222 188 232 186 244 Z" fill="#454A54"/>
+  <!-- cheek guard at the face side -->
+  <path d="M316 262 L344 262 L340 316 C332 322 322 320 316 312 Z" fill="#2E3138"/>
+  <!-- near horn: thick, sweeping forward then hooking up -->
+  <path d="M286 198 C306 178 334 166 366 166 C394 166 418 176 432 194 C414 200 394 198 376 190 C376 208 368 224 354 234 C346 218 342 202 344 186 C324 184 304 190 286 198 Z" fill="#6B6258"/>
+  <path d="M428 190 C434 178 434 166 428 156 C420 164 416 176 418 188 C422 188 426 189 428 190 Z" fill="#E8E0CC"/>
+  <path d="M358 230 C352 220 349 208 350 196 C356 204 360 214 362 224 Z" fill="#4F483F"/>
+  <!-- red band -->
+  <path d="M176 248 C206 236 320 236 346 248 L346 268 C320 256 208 256 176 268 Z" fill="#A33B2A"/>
+  <path d="M176 260 C206 249 320 249 346 260 L346 268 C320 256 208 256 176 268 Z" fill="#7E2C1F"/>
+  <circle cx="206" cy="252" r="4" fill="#454A54"/>
+</svg>

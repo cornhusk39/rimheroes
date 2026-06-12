@@ -129,18 +129,19 @@ namespace RimHeroes
         public static string HelmPath(Hediff_ClassVestment vestment)
         {
             string dir = vestment.def.GetModExtension<VestmentExtension>()?.artDir;
-            if (dir.NullOrEmpty() || vestment.Tier < 5)
+            if (dir.NullOrEmpty())
             {
                 return null;
             }
-            string root = $"Things/RimHeroes/Vestments/{dir}/Helm";
+            // Per-tier headpieces; tiers without a HelmT<n> texture (e.g. T1) draw nothing.
+            string root = $"Things/RimHeroes/Vestments/{dir}/HelmT{vestment.Tier}";
             return ContentFinder<Texture2D>.Get($"{root}_south", false) != null ? root : null;
         }
     }
 
     /// <summary>
-    /// Tier-5 ceremonial headpiece (e.g. the barbarian's horned helm). Head-attached node;
-    /// renders only at tier 5 and only for classes with helm art.
+    /// Tiered vestment headpiece (e.g. the barbarian's skull cap through horned war-helm).
+    /// Head-attached node; renders whatever HelmT&lt;tier&gt; texture the class provides.
     /// </summary>
     public class PawnRenderNode_VestmentHelm : PawnRenderNode
     {

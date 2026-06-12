@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Barbarian T5 helm, east: dome profile w/ jaw guard, huge near horn sweeping forward then UP. -->
+  <!-- far horn rising behind -->
+  <path d="M224 192 C198 180 180 158 174 130 C170 106 176 84 190 70 C196 88 198 108 194 126 C206 146 216 168 224 192 Z" fill="#2A2622"/>
+  <path d="M188 74 C178 84 172 98 172 114 C180 104 186 90 188 74 Z" fill="#FFC09A" opacity="0.8"/>
+  <!-- dome -->
+  <path d="M172 256 C168 192 210 148 260 148 C312 148 352 192 350 256 L344 278 L178 278 Z" fill="#26292E"/>
+  <path d="M184 248 C184 200 218 162 260 162 C286 162 308 174 322 196 C300 181 228 184 206 212 C195 223 187 234 184 248 Z" fill="#3D424C"/>
+  <!-- jaw guard at the face side -->
+  <path d="M316 266 L348 266 L344 334 C334 340 322 337 316 328 Z" fill="#26292E"/>
+  <path d="M320 270 L342 270 L340 302 L322 302 Z" fill="#3D424C" opacity="0.6"/>
+  <!-- near horn: huge, sweeping forward then hooking high -->
+  <path d="M282 196 C302 170 334 154 372 152 C404 150 432 160 448 180 C430 190 408 192 388 186 C394 208 388 230 372 246 C360 228 354 208 356 188 C330 184 304 188 282 196 Z" fill="#3E3933"/>
+  <path d="M442 176 C450 162 452 146 446 132 C436 142 430 156 430 170 C434 172 438 174 442 176 Z" fill="#FFC09A"/>
+  <path d="M444 134 C432 146 416 154 398 156 C366 158 338 170 318 190 L310 196 C330 172 360 156 396 152 C414 150 430 144 442 132 Z" fill="#8B8174"/>
+  <path d="M376 240 C368 228 364 212 366 196 C374 206 380 220 382 234 Z" fill="#2A2622"/>
+  <path d="M286 192 C306 170 334 158 366 156 C340 158 314 168 294 186 Z" fill="#2A2622"/>
+  <!-- gold band + ember gem at the brow -->
+  <path d="M174 252 C206 240 322 240 348 252 L348 274 C322 260 210 260 174 274 Z" fill="#C9A23F"/>
+  <path d="M174 264 C206 252 322 252 348 264 L348 274 C322 260 210 260 174 274 Z" fill="#8E6E24"/>
+  <circle cx="332" cy="258" r="10" fill="#FF5A2A"/>
+  <circle cx="332" cy="255" r="4.5" fill="#FFC09A"/>
+</svg>

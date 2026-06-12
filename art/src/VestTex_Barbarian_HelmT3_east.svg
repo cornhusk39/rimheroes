@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Barbarian T3 helm, east: dome profile, near horn a smooth forward-up crescent. -->
+  <!-- far horn behind the dome -->
+  <path d="M222 200 C200 188 186 168 180 144 C176 124 180 106 190 94 C198 108 201 124 200 140 C208 158 216 178 222 200 Z" fill="#B5A88C"/>
+  <!-- dome -->
+  <path d="M176 252 C172 196 210 156 260 156 C310 156 348 196 346 252 L340 270 L182 270 Z" fill="#2E3138"/>
+  <path d="M188 246 C188 202 218 170 260 170 C284 170 304 181 318 200 C296 187 230 189 208 214 C198 224 191 234 188 246 Z" fill="#454A54"/>
+  <!-- near horn: smooth crescent sweeping forward-up -->
+  <path d="M292 196 C310 168 336 148 368 140 C394 134 416 138 430 152 C414 162 394 166 374 162 C360 176 344 188 326 196 C314 200 302 199 292 196 Z" fill="#D8CCB4"/>
+  <path d="M372 144 C394 139 412 142 424 152 C412 159 398 162 384 160 C379 154 376 148 372 144 Z" fill="#B5A88C"/>
+  <!-- gold band -->
+  <path d="M178 248 C206 236 320 236 344 248 L344 268 C320 256 208 256 178 268 Z" fill="#C9A23F"/>
+  <path d="M178 260 C206 249 320 249 344 260 L344 268 C320 256 208 256 178 268 Z" fill="#8E6E24"/>
+  <circle cx="330" cy="252" r="7" fill="#C9A23F"/>
+  <circle cx="206" cy="252" r="4" fill="#8E6E24"/>
+</svg>
