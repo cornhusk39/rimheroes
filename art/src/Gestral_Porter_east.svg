@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <!-- Porter gestral, side view (east, facing right). -->
-  <ellipse cx="128" cy="232" rx="66" ry="12" fill="#000000" opacity="0.18"/>
-  <!-- far ear -->
-  <path d="M118 70 C104 32 114 16 128 12 C134 32 132 56 128 74 Z" fill="#8F7348"/>
+  <!-- far ear (rooted at back of head) -->
+  <path d="M160 68 C146 30 154 14 168 10 C174 30 172 54 168 70 Z" fill="#8F7348"/>
   <!-- tail nub -->
   <circle cx="56" cy="196" r="14" fill="#8F7348"/>
   <!-- body (bean, longer than tall) -->
@@ -12,9 +11,9 @@
   <!-- head (right side, slightly raised) -->
   <circle cx="178" cy="100" r="46" fill="#B3956A"/>
   <ellipse cx="170" cy="78" rx="30" ry="17" fill="#D8C194" opacity="0.5"/>
-  <!-- near ear -->
-  <path d="M152 64 C140 26 150 12 164 8 C170 28 168 52 164 68 Z" fill="#A98B5E"/>
-  <path d="M156 60 C148 34 154 22 162 16 C166 32 165 50 162 62 Z" fill="#C9AE82"/>
+  <!-- near ear (rooted at head top) -->
+  <path d="M178 62 C166 24 176 10 190 6 C196 26 194 50 190 66 Z" fill="#A98B5E"/>
+  <path d="M182 58 C174 32 180 20 188 14 C192 30 191 48 188 60 Z" fill="#C9AE82"/>
   <!-- snout -->
   <ellipse cx="216" cy="108" rx="18" ry="13" fill="#C9AE82"/>
   <circle cx="226" cy="104" r="5" fill="#5C4A33"/>
