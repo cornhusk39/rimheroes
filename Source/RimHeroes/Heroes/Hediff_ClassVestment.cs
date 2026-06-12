@@ -28,6 +28,24 @@ namespace RimHeroes
 
         public int Tier => Mathf.Clamp(Mathf.RoundToInt(Severity), 1, 5);
 
+        // Cached "this tier has helm art" answer for the render thread: ContentFinder may only
+        // be touched on the main thread, but AdjustParms runs during parallel pre-draw.
+        private int helmArtTier = -1;
+        private bool helmArtExists;
+
+        public bool HelmArtVisible
+        {
+            get
+            {
+                if (helmArtTier != Tier && UnityData.IsInMainThread)
+                {
+                    helmArtExists = VestmentArt.HelmPath(this) != null;
+                    helmArtTier = Tier;
+                }
+                return helmArtExists;
+            }
+        }
+
         public override string LabelInBrackets => $"tier {Tier}";
 
         public Color TierColor

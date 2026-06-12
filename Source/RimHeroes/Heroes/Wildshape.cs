@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -106,16 +107,25 @@ namespace RimHeroes
 
         public static void Postfix(PawnRenderTree __instance, ref PawnDrawParms parms)
         {
-            if (!Hediff_Wildshape.IsShifted(__instance.pawn))
+            if (Hediff_Wildshape.IsShifted(__instance.pawn))
             {
+                parms.skipFlags |= BodyFlag;
+                parms.skipFlags |= RenderSkipFlagDefOf.Head;
+                parms.skipFlags |= RenderSkipFlagDefOf.Hair;
+                parms.skipFlags |= RenderSkipFlagDefOf.Beard;
+                parms.skipFlags |= RenderSkipFlagDefOf.Eyes;
+                parms.flags &= ~(PawnRenderFlags.Clothes | PawnRenderFlags.Headgear);
                 return;
             }
-            parms.skipFlags |= BodyFlag;
-            parms.skipFlags |= RenderSkipFlagDefOf.Head;
-            parms.skipFlags |= RenderSkipFlagDefOf.Hair;
-            parms.skipFlags |= RenderSkipFlagDefOf.Beard;
-            parms.skipFlags |= RenderSkipFlagDefOf.Eyes;
-            parms.flags &= ~(PawnRenderFlags.Clothes | PawnRenderFlags.Headgear);
+            // Vestment headpieces work like hats: hide hair while a HelmT<tier> texture renders
+            // (beards stay - a skull cap shouldn't swallow the beard). HelmArtVisible is cached
+            // because this runs during parallel pre-draw where ContentFinder is off-limits.
+            var vestment = __instance.pawn?.health?.hediffSet?.hediffs
+                ?.OfType<Hediff_ClassVestment>().FirstOrDefault();
+            if (vestment != null && vestment.HelmArtVisible)
+            {
+                parms.skipFlags |= RenderSkipFlagDefOf.Hair;
+            }
         }
     }
 }
