@@ -208,9 +208,10 @@ namespace RimHeroes
 
         public void Notify_SpellGranted(AbilityDef def)
         {
-            if (SpellUtility.IsCantrip(def))
+            // Hostile cantrips autocast by default; self/utility spells stay manual.
+            if (SpellUtility.IsCantrip(def) && def.hostile)
             {
-                SetAutocast(def, true); // cantrips and free abilities autocast by default
+                SetAutocast(def, true);
             }
         }
 
@@ -268,7 +269,7 @@ namespace RimHeroes
             }
             foreach (var ability in pawn.abilities.abilities)
             {
-                if (!(ability is Ability_Spell spell) || !AutocastEnabled(spell.def))
+                if (!(ability is Ability_Spell spell) || !AutocastEnabled(spell.def) || !spell.def.hostile)
                 {
                     continue;
                 }

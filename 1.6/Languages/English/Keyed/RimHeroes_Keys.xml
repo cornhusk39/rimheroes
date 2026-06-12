@@ -48,4 +48,7 @@
   <RH_LongRestGizmoDesc>Commit to a long rest: roughly twelve hours of sleep, after which all spell slots are restored. Progress accumulates while sleeping; toggle off to cancel.</RH_LongRestGizmoDesc>
   <RH_AutocastGizmo>Auto: {0}</RH_AutocastGizmo>
   <RH_AutocastGizmoDesc>Toggle automatic casting of {0} at hostiles while drafted. Cantrips are enabled by default; leveled spells must be opted in.</RH_AutocastGizmoDesc>
+  <RH_RevertForm>Revert form</RH_RevertForm>
+  <RH_RevertFormDesc>Return to your natural shape.</RH_RevertFormDesc>
+  <RH_WildshapeReverted>{0} returns to their natural shape.</RH_WildshapeReverted>
 </LanguageData>

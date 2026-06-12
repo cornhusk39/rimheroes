@@ -73,6 +73,15 @@
     <defName>RH_Druid</defName>
     <label>druid</label>
     <description>A voice of the wild. Wears the shapes of beasts and commands the green.</description>
+    <casterProgression>Full</casterProgression>
+    <levelGrants>
+      <li>
+        <level>2</level>
+        <abilities>
+          <li>RH_Ability_WildshapeOwlbear</li>
+        </abilities>
+      </li>
+    </levelGrants>
     <gestralUnlocks>
       <li><level>3</level><job>RH_Gestral_Porter</job></li>
       <li><level>8</level><job>RH_Gestral_Sprout</job></li>

@@ -68,6 +68,10 @@ namespace RimHeroes
 
         public override Graphic GraphicFor(Pawn pawn)
         {
+            if (Hediff_Wildshape.IsShifted(pawn))
+            {
+                return null; // the vestment transforms with the druid - hidden while shifted
+            }
             var vestment = pawn.health?.hediffSet?.hediffs?.OfType<Hediff_ClassVestment>().FirstOrDefault();
             if (vestment == null || props.texPath.NullOrEmpty())
             {

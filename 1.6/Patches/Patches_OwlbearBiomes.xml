@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Owlbears stalk the forests, rarely. -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="TemperateForest"]/wildAnimals</xpath>
+    <value>
+      <RH_OwlbearKind>0.02</RH_OwlbearKind>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="BorealForest"]/wildAnimals</xpath>
+    <value>
+      <RH_OwlbearKind>0.03</RH_OwlbearKind>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest"]/wildAnimals</xpath>
+    <value>
+      <RH_OwlbearKind>0.015</RH_OwlbearKind>
+    </value>
+  </Operation>
+
+</Patch>

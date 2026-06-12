@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Wildshape: owlbear form. Free ability (no slot), at-will with a long cooldown;
+       duration via HediffComp_Disappears, manual revert via the hediff's gizmo. -->
+
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Ability_WildshapeOwlbear</defName>
+    <label>wildshape: owlbear</label>
+    <description>Take the shape of an owlbear for a few hours: a feathered engine of claws and beak. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>
+    <level>0</level>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_WildshapeOwlbear</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <HediffDef>
+    <defName>RH_WildshapeOwlbear</defName>
+    <label>owlbear form</label>
+    <description>This druid wears the shape of an owlbear: massive, feathered, and armed with rending claws and a cracking beak. Their gear is subsumed into the form.</description>
+    <hediffClass>RimHeroes.Hediff_Wildshape</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.4, 0.75, 0.4)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>1.0</MoveSpeed>
+          <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+          <PainShockThreshold>0.2</PainShockThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>10000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>owlbear claw</label>
+            <capacities>
+              <li>Scratch</li>
+            </capacities>
+            <power>18</power>
+            <cooldownTime>2</cooldownTime>
+          </li>
+          <li>
+            <label>owlbear beak</label>
+            <capacities>
+              <li>Bite</li>
+            </capacities>
+            <power>25</power>
+            <cooldownTime>2.6</cooldownTime>
+            <chanceFactor>0.7</chanceFactor>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
+        <texPath>Things/Pawn/Animal/Bear/Bear</texPath>
+        <color>(0.77, 0.62, 0.36)</color>
+        <parentTagDef>Body</parentTagDef>
+        <drawSize>(2.4, 2.4)</drawSize>
+        <pawnType>Any</pawnType>
+        <drawData>
+          <defaultData>
+            <layer>40</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+</Defs>
