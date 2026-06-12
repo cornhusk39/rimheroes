@@ -10,7 +10,7 @@
         <minSeverity>0</minSeverity>
         <label>battered harness</label>
         <statOffsets>
-          <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+          <ArmorRating_Sharp>0.18</ArmorRating_Sharp>
           <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
         </statOffsets>
       </li>
@@ -18,25 +18,34 @@
         <minSeverity>1.5</minSeverity>
         <label>proven mail</label>
         <statOffsets>
-          <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
-          <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
         </statOffsets>
       </li>
       <li>
         <minSeverity>2.5</minSeverity>
         <label>champion's plate</label>
         <statOffsets>
-          <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-          <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
-          <ArmorRating_Heat>0.15</ArmorRating_Heat>
+          <ArmorRating_Sharp>0.42</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.26</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.10</ArmorRating_Heat>
         </statOffsets>
       </li>
       <li>
         <minSeverity>3.5</minSeverity>
-        <label>legend-forged plate</label>
+        <label>mythic plate</label>
         <statOffsets>
-          <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
-          <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.34</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.20</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>4.5</minSeverity>
+        <label>legend-forged panoply</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
           <ArmorRating_Heat>0.30</ArmorRating_Heat>
         </statOffsets>
       </li>
@@ -61,7 +70,7 @@
         <minSeverity>0</minSeverity>
         <label>initiate's weave</label>
         <statOffsets>
-          <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+          <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
           <ArmorRating_Blunt>0.06</ArmorRating_Blunt>
         </statOffsets>
       </li>
@@ -69,25 +78,34 @@
         <minSeverity>1.5</minSeverity>
         <label>adept's weave</label>
         <statOffsets>
-          <ArmorRating_Sharp>0.22</ArmorRating_Sharp>
-          <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.18</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
         </statOffsets>
       </li>
       <li>
         <minSeverity>2.5</minSeverity>
         <label>magister's weave</label>
         <statOffsets>
-          <ArmorRating_Sharp>0.32</ArmorRating_Sharp>
-          <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
-          <ArmorRating_Heat>0.10</ArmorRating_Heat>
+          <ArmorRating_Sharp>0.28</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.08</ArmorRating_Heat>
         </statOffsets>
       </li>
       <li>
         <minSeverity>3.5</minSeverity>
-        <label>legend-woven raiment</label>
+        <label>archmage's raiment</label>
         <statOffsets>
-          <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
-          <ArmorRating_Blunt>0.28</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.38</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.15</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>4.5</minSeverity>
+        <label>legend-woven regalia</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
           <ArmorRating_Heat>0.25</ArmorRating_Heat>
         </statOffsets>
       </li>

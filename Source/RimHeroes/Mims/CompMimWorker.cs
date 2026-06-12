@@ -31,6 +31,7 @@ namespace RimHeroes
         {
             base.PostSpawnSetup(respawningAfterLoad);
             InitializeWorkSettings();
+            MimNames.EnsureNamed(Pawn);
         }
 
         private void InitializeWorkSettings()

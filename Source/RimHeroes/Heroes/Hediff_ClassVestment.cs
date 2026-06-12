@@ -23,7 +23,7 @@ namespace RimHeroes
     {
         public override bool ShouldRemove => false;
 
-        public int Tier => Mathf.Clamp(Mathf.RoundToInt(Severity), 1, 4);
+        public int Tier => Mathf.Clamp(Mathf.RoundToInt(Severity), 1, 5);
 
         public override string LabelInBrackets => $"tier {Tier}";
 
@@ -32,12 +32,13 @@ namespace RimHeroes
             get
             {
                 var baseColor = def.GetModExtension<VestmentExtension>()?.baseColor ?? Color.gray;
-                // dull at tier 1, full class color at tier 4
-                return Color.Lerp(new Color(0.45f, 0.45f, 0.45f), baseColor, (Tier - 1) / 3f);
+                // dull at tier 1, full class color at tier 5
+                return Color.Lerp(new Color(0.45f, 0.45f, 0.45f), baseColor, (Tier - 1) / 4f);
             }
         }
 
-        public static int TierForLevel(int level) => level >= 17 ? 4 : level >= 11 ? 3 : level >= 5 ? 2 : 1;
+        // Five tiers: L1-4, 5-9, 10-14, 15-19, 20 - a new vestment style every fifth level.
+        public static int TierForLevel(int level) => level >= 20 ? 5 : level >= 15 ? 4 : level >= 10 ? 3 : level >= 5 ? 2 : 1;
 
         public void SetTierForLevel(int level)
         {
