@@ -78,7 +78,19 @@
       <li>
         <level>2</level>
         <abilities>
+          <li>RH_Ability_WildshapeDireWolf</li>
+        </abilities>
+      </li>
+      <li>
+        <level>5</level>
+        <abilities>
           <li>RH_Ability_WildshapeOwlbear</li>
+        </abilities>
+      </li>
+      <li>
+        <level>8</level>
+        <abilities>
+          <li>RH_Ability_WildshapeGiantElk</li>
         </abilities>
       </li>
     </levelGrants>

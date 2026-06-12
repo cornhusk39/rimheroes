@@ -18,6 +18,15 @@ namespace RimHeroes
         public override void PostAdd(DamageInfo? dinfo)
         {
             base.PostAdd(dinfo);
+            // One form at a time: taking a new shape ends the previous one.
+            var hediffs = pawn.health.hediffSet.hediffs;
+            for (int i = hediffs.Count - 1; i >= 0; i--)
+            {
+                if (hediffs[i] is Hediff_Wildshape other && other != this)
+                {
+                    pawn.health.RemoveHediff(other);
+                }
+            }
             pawn.Drawer?.renderer?.SetAllGraphicsDirty();
         }
 

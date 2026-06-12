@@ -1,10 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Wildshape: owlbear form. Free ability (no slot), at-will with a long cooldown;
-       duration via HediffComp_Disappears, manual revert via the hediff's gizmo. -->
+  <!-- Wildshape forms: free abilities (no slot), at-will with a long cooldown; duration via
+       HediffComp_Disappears, manual revert via the hediff's gizmo, one form at a time.
+       Form ladder: dire wolf L2, owlbear L5, giant elk L8. -->
 
-  <AbilityDef ParentName="RH_SpellBase">
+  <AbilityDef Name="RH_WildshapeBase" ParentName="RH_SpellBase" Abstract="True">
+    <level>0</level>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <!-- Dire wolf: fast skirmisher form -->
+  <AbilityDef ParentName="RH_WildshapeBase">
+    <defName>RH_Ability_WildshapeDireWolf</defName>
+    <label>wildshape: dire wolf</label>
+    <description>Take the shape of a dire wolf for a few hours: swift, tireless, all fangs. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_WildshapeDireWolf</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <HediffDef>
+    <defName>RH_WildshapeDireWolf</defName>
+    <label>dire wolf form</label>
+    <description>This druid wears the shape of a dire wolf: swift, relentless, and armed with rending fangs. Their gear is subsumed into the form.</description>
+    <hediffClass>RimHeroes.Hediff_Wildshape</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.4, 0.75, 0.4)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>1.6</MoveSpeed>
+          <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+          <PainShockThreshold>0.1</PainShockThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>10000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>dire wolf fangs</label>
+            <capacities>
+              <li>Bite</li>
+            </capacities>
+            <power>19</power>
+            <cooldownTime>2</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
+        <texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber</texPath>
+        <color>(0.37, 0.37, 0.43)</color>
+        <parentTagDef>Body</parentTagDef>
+        <drawSize>(1.8, 1.8)</drawSize>
+        <pawnType>Any</pawnType>
+        <drawData>
+          <defaultData>
+            <layer>40</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <!-- Giant elk: travel/carry utility form -->
+  <AbilityDef ParentName="RH_WildshapeBase">
+    <defName>RH_Ability_WildshapeGiantElk</defName>
+    <label>wildshape: giant elk</label>
+    <description>Take the shape of a giant elk for a few hours: towering, fleet, and strong enough to carry a household. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_WildshapeGiantElk</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <HediffDef>
+    <defName>RH_WildshapeGiantElk</defName>
+    <label>giant elk form</label>
+    <description>This druid wears the shape of a giant elk: towering, fleet, and tireless under burden. Their gear is subsumed into the form.</description>
+    <hediffClass>RimHeroes.Hediff_Wildshape</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.4, 0.75, 0.4)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>2.4</MoveSpeed>
+          <CarryingCapacity>40</CarryingCapacity>
+          <PainShockThreshold>0.1</PainShockThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>10000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>giant antlers</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>20</power>
+            <cooldownTime>2.3</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
+        <texPath>Things/Pawn/Animal/Elk/ElkMale</texPath>
+        <color>(0.88, 0.84, 0.76)</color>
+        <parentTagDef>Body</parentTagDef>
+        <drawSize>(2.6, 2.6)</drawSize>
+        <pawnType>Any</pawnType>
+        <drawData>
+          <defaultData>
+            <layer>40</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <!-- Owlbear: heavy combat form -->
+  <AbilityDef ParentName="RH_WildshapeBase">
     <defName>RH_Ability_WildshapeOwlbear</defName>
     <label>wildshape: owlbear</label>
     <description>Take the shape of an owlbear for a few hours: a feathered engine of claws and beak. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>

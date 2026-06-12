@@ -51,15 +51,28 @@ namespace RimHeroes
             {
                 case 0:
                 {
-                    var kind = PawnKindDef.Named("RH_OwlbearKind");
-                    var owlbear = PawnGenerator.GeneratePawn(kind);
-                    CellFinder.TryFindRandomCellNear(map.Center + new IntVec3(15, 0, 15), map, 10, c => c.Standable(map), out var cell);
-                    GenSpawn.Spawn(owlbear, cell, map);
-                    bool inBiome = DefDatabase<BiomeDef>.GetNamed("TemperateForest").AllWildAnimals.Contains(kind)
-                                   && DefDatabase<BiomeDef>.GetNamed("BorealForest").AllWildAnimals.Contains(kind);
-                    bool statsSane = owlbear.RaceProps.baseBodySize > 2f && owlbear.RaceProps.predator && kind.combatPower >= 200;
-                    passA = owlbear.Spawned && inBiome && statsSane;
-                    Log.Message($"[RimHeroes.ShapeSpike] PhaseA: owlbear spawned={owlbear.Spawned} biomes={inBiome} stats(body={owlbear.RaceProps.baseBodySize},pred={owlbear.RaceProps.predator},cp={kind.combatPower}) pass={passA}");
+                    // Spawn the whole bestiary; verify biome lists carry each kind somewhere.
+                    string[] kinds = { "RH_OwlbearKind", "RH_DireWolfKind", "RH_GiantElkKind", "RH_AnkhegKind", "RH_BasiliskKind" };
+                    int spawned = 0;
+                    foreach (var kindName in kinds)
+                    {
+                        var kind = PawnKindDef.Named(kindName);
+                        var beast = PawnGenerator.GeneratePawn(kind);
+                        CellFinder.TryFindRandomCellNear(map.Center + new IntVec3(15, 0, 15), map, 12, c => c.Standable(map), out var cell);
+                        GenSpawn.Spawn(beast, cell, map);
+                        if (beast.Spawned)
+                        {
+                            spawned++;
+                        }
+                    }
+                    bool inBiomes =
+                        DefDatabase<BiomeDef>.GetNamed("TemperateForest").AllWildAnimals.Contains(PawnKindDef.Named("RH_OwlbearKind"))
+                        && DefDatabase<BiomeDef>.GetNamed("BorealForest").AllWildAnimals.Contains(PawnKindDef.Named("RH_DireWolfKind"))
+                        && DefDatabase<BiomeDef>.GetNamed("Tundra").AllWildAnimals.Contains(PawnKindDef.Named("RH_GiantElkKind"))
+                        && DefDatabase<BiomeDef>.GetNamed("AridShrubland").AllWildAnimals.Contains(PawnKindDef.Named("RH_AnkhegKind"))
+                        && DefDatabase<BiomeDef>.GetNamed("Desert").AllWildAnimals.Contains(PawnKindDef.Named("RH_BasiliskKind"));
+                    passA = spawned == kinds.Length && inBiomes;
+                    Log.Message($"[RimHeroes.ShapeSpike] PhaseA: beasts spawned={spawned}/{kinds.Length} biomes={inBiomes} pass={passA}");
                     state = 1;
                     break;
                 }
@@ -72,16 +85,26 @@ namespace RimHeroes
                         GenSpawn.Spawn(hero, map.Center, map);
                     }
                     var levels = HeroUtility.MakeHero(hero, DefDatabase<HeroClassDef>.GetNamed("RH_Druid"));
-                    levels.GainXP(600f); // L5
+                    levels.GainXP(1300f); // L8: dire wolf (2), owlbear (5), giant elk (8)
                     baseMoveSpeed = hero.GetStatValue(StatDefOf.MoveSpeed);
-                    var wildshape = hero.abilities.abilities.OfType<Ability_Spell>()
-                        .FirstOrDefault(a => a.def.defName == "RH_Ability_WildshapeOwlbear");
-                    bool activated = wildshape != null && wildshape.Activate(hero, hero);
+                    int formCount = hero.abilities.abilities.Count(a => a.def.defName.StartsWith("RH_Ability_Wildshape"));
+
+                    // Cast dire wolf, then owlbear: exclusivity must leave exactly one form (owlbear).
+                    var wolf = hero.abilities.abilities.OfType<Ability_Spell>().First(a => a.def.defName == "RH_Ability_WildshapeDireWolf");
+                    wolf.Activate(hero, hero);
+                    bool wolfOn = hero.health.hediffSet.HasHediff(HediffDef.Named("RH_WildshapeDireWolf"));
+                    var owlbearForm = hero.abilities.abilities.OfType<Ability_Spell>().First(a => a.def.defName == "RH_Ability_WildshapeOwlbear");
+                    bool activated = owlbearForm.Activate(hero, hero);
+                    int activeForms = hero.health.hediffSet.hediffs.Count(h => h is Hediff_Wildshape);
+                    bool wolfReplaced = !hero.health.hediffSet.HasHediff(HediffDef.Named("RH_WildshapeDireWolf"))
+                                        && hero.health.hediffSet.HasHediff(HediffDef.Named("RH_WildshapeOwlbear"));
+
                     var form = hero.health.hediffSet.hediffs.OfType<Hediff_Wildshape>().FirstOrDefault();
                     var verbs = (form as HediffWithComps)?.TryGetComp<HediffComp_VerbGiver>()?.VerbTracker?.AllVerbs;
                     float shiftedSpeed = hero.GetStatValue(StatDefOf.MoveSpeed);
-                    passB = activated && form != null && verbs != null && verbs.Count >= 2 && shiftedSpeed > baseMoveSpeed + 0.5f;
-                    Log.Message($"[RimHeroes.ShapeSpike] PhaseB: cast={activated} form={(form != null)} naturalWeapons={verbs?.Count ?? 0} move {baseMoveSpeed:F1}->{shiftedSpeed:F1} pass={passB}");
+                    passB = formCount == 3 && wolfOn && activated && activeForms == 1 && wolfReplaced
+                            && verbs != null && verbs.Count >= 2 && shiftedSpeed > baseMoveSpeed + 0.5f;
+                    Log.Message($"[RimHeroes.ShapeSpike] PhaseB: level={levels.level} forms={formCount}/3 wolfFirst={wolfOn} owlbearCast={activated} activeForms={activeForms} replaced={wolfReplaced} naturalWeapons={verbs?.Count ?? 0} move {baseMoveSpeed:F1}->{shiftedSpeed:F1} pass={passB}");
                     Find.Selector.ClearSelection();
                     Find.Selector.Select(hero);
                     state = 2;
