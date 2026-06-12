@@ -1,25 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Wizard T5 south: living grimoire - near-black robe, flowing glowing script, arcane seams. -->
+  <!-- Wizard T5 south: near-black archmage robe, silver trim, ONE small glowing rune ornament. -->
   <path d="M160 242 C172 212 206 196 256 196 C306 196 340 212 352 242 L348 402 C346 440 318 462 256 462 C194 462 166 440 164 402 Z" fill="#16182A"/>
-  <!-- glowing script lines flowing diagonally across the skirt -->
-  <path d="M184 330 C210 322 232 330 252 344 C272 358 294 364 318 358 L320 368 C294 376 270 370 250 356 C230 342 210 336 186 342 Z" fill="#8F7BFF" opacity="0.85"/>
-  <path d="M194 334 L200 340 M214 332 L212 342 M230 336 L238 342 M252 346 L250 356 M270 356 L278 362 M292 362 L290 372 M306 360 L314 366" stroke="#D6CEFF" stroke-width="4" fill="none"/>
-  <path d="M190 396 C216 388 240 394 260 408 C278 420 298 426 320 420 L322 430 C298 438 276 432 256 418 C238 406 216 400 192 406 Z" fill="#8F7BFF" opacity="0.6"/>
-  <!-- arcane seam: center, glowing -->
-  <path d="M249 198 L263 198 L261 458 L251 458 Z" fill="#8F7BFF"/>
-  <path d="M253 200 L259 200 L258 456 L254 456 Z" fill="#D6CEFF"/>
-  <!-- mantle: near-black, arcane-edged -->
+  <!-- center band: silver, quiet -->
+  <path d="M249 198 L263 198 L261 458 L251 458 Z" fill="#97A1B5"/>
+  <path d="M249 198 L255 198 L254 458 L251 458 Z" fill="#6E7787"/>
+  <!-- mantle: near-black, silver-edged -->
   <path d="M154 250 C164 216 202 198 256 198 C310 198 348 216 358 250 L356 300 L332 284 L328 312 L304 294 L296 318 L272 300 L256 322 L240 300 L216 318 L208 294 L184 312 L180 284 L156 300 Z" fill="#1E2440"/>
-  <path d="M156 296 L180 282 L184 308 L208 292 L216 314 L240 298 L256 318 L272 298 L296 314 L304 292 L328 308 L332 282 L356 296 L356 304 L330 290 L326 318 L302 300 L294 324 L270 306 L256 328 L242 306 L218 324 L210 300 L186 318 L182 290 L156 304 Z" fill="#8F7BFF"/>
+  <path d="M156 296 L180 282 L184 308 L208 292 L216 314 L240 298 L256 318 L272 298 L296 314 L304 292 L328 308 L332 282 L356 296 L356 304 L330 290 L326 318 L302 300 L294 324 L270 306 L256 328 L242 306 L218 324 L210 300 L186 318 L182 290 L156 304 Z" fill="#C7CEDB"/>
   <path d="M168 246 C180 222 214 208 256 208 C298 208 332 222 344 246 L342 268 L324 258 L320 278 L300 266 L294 282 L274 270 L256 286 L238 270 L218 282 L212 266 L192 278 L188 258 L170 268 Z" fill="#2B3357"/>
-  <!-- floating glyph at the shoulder -->
-  <circle cx="334" cy="232" r="13" fill="none" stroke="#8F7BFF" stroke-width="4"/>
-  <path d="M328 232 L340 232 M334 226 L334 238" stroke="#D6CEFF" stroke-width="3.5" fill="none"/>
-  <!-- grand clasp: glowing star -->
-  <circle cx="256" cy="218" r="14" fill="#C7CEDB"/>
-  <path d="M256 207 L259 214 L267 214 L261 219 L263 227 L256 222 L249 227 L251 219 L245 214 L253 214 Z" fill="#8F7BFF"/>
-  <!-- silver belt + glowing hem -->
+  <!-- silver clasp -->
+  <circle cx="256" cy="218" r="13" fill="#C7CEDB"/>
+  <circle cx="256" cy="218" r="6" fill="#1E2440"/>
+  <!-- THE ornament: one small glowing rune medallion on the chest -->
+  <circle cx="256" cy="300" r="13" fill="#1E2440"/>
+  <circle cx="256" cy="300" r="11" fill="none" stroke="#8F7BFF" stroke-width="3"/>
+  <path d="M256 293 L256 307 M250 297 L262 303" stroke="#D6CEFF" stroke-width="3" fill="none"/>
+  <!-- silver belt + hem -->
   <path d="M166 388 C220 400 292 400 346 388 L346 408 C292 420 220 420 166 408 Z" fill="#97A1B5"/>
-  <path d="M170 432 C214 450 298 450 342 432 L340 452 C298 468 214 468 172 452 Z" fill="#8F7BFF"/>
-  <path d="M186 442 L192 448 M204 444 L202 452 M220 446 L228 452 M244 448 L242 456 M262 448 L270 454 M284 446 L282 454 M300 444 L308 450 M320 441 L318 449" stroke="#D6CEFF" stroke-width="4" fill="none"/>
+  <rect x="240" y="390" width="32" height="20" rx="3" fill="#C7CEDB"/>
+  <path d="M170 432 C214 450 298 450 342 432 L340 452 C298 468 214 468 172 452 Z" fill="#C7CEDB"/>
 </svg>

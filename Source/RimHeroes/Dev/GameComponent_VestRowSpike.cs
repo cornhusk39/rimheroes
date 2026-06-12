@@ -113,6 +113,8 @@ namespace RimHeroes
 
         private void Pin(Rot4 rot)
         {
+            // re-assert the camera every shot - quicktest occasionally resets zoom after load
+            Find.CameraDriver.SetRootPosAndSize(anchor.ToVector3(), 9f);
             foreach (var p in pawns)
             {
                 if (p == null) continue;
