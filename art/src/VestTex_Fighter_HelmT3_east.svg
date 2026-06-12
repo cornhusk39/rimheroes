@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T3 helm, east: kettle helm profile - dome, projecting brim, mail drape at the nape. -->
+  <!-- mail drape at the back of the skull -->
+  <path d="M162 258 C178 250 210 246 244 248 C248 288 244 322 230 350 L188 350 C166 324 156 292 162 258 Z" fill="#6E7682"/>
+  <path d="M186 274 L194 286 M216 272 L224 284 M204 304 L212 316 M232 300 L240 312 M216 330 L224 340" stroke="#3D4148" stroke-width="4" fill="none"/>
+  <!-- crown dome -->
+  <path d="M160 250 C160 192 204 154 258 154 C310 154 350 190 350 242 L348 254 L162 254 Z" fill="#565C66"/>
+  <path d="M172 240 C176 200 210 170 256 170 C284 170 308 181 324 202 C298 183 216 185 190 216 C180 226 174 232 172 240 Z" fill="#7A828E"/>
+  <!-- brim projecting front and back -->
+  <path d="M132 252 C170 238 344 238 380 252 C384 262 380 271 372 275 C334 260 180 260 140 275 C132 271 128 262 132 252 Z" fill="#3D4148"/>
+  <path d="M138 254 C174 242 340 242 374 254 C376 259 374 264 370 267 C334 254 180 254 142 267 C138 264 136 259 138 254 Z" fill="#565C66"/>
+  <circle cx="206" cy="246" r="4" fill="#9AA3B0"/>
+  <circle cx="300" cy="246" r="4" fill="#9AA3B0"/>
+</svg>

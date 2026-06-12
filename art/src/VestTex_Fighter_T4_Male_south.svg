@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T4 south: engraved full plate, cobalt tabard strip, gold trim, faulds. -->
+  <!-- plate body -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 396 C358 428 326 444 256 444 C186 444 154 428 152 396 Z" fill="#565C66"/>
+  <path d="M164 240 C174 202 210 180 256 180 C290 180 318 192 336 214 C308 194 212 196 184 230 C175 240 168 240 164 240 Z" fill="#7A828E"/>
+  <!-- faulds: segmented plate skirt -->
+  <path d="M156 350 C214 362 298 362 356 350 L355 368 C298 380 214 380 157 368 Z" fill="#3D4148"/>
+  <path d="M154 384 C214 396 298 396 358 384 L357 402 C298 414 214 414 155 402 Z" fill="#3D4148"/>
+  <path d="M156 418 C214 430 298 430 356 418 L354 434 C300 446 212 446 158 434 Z" fill="#3D4148"/>
+  <!-- cobalt tabard strip down the center -->
+  <path d="M236 176 L276 176 L272 440 L240 440 Z" fill="#2E4E9E"/>
+  <path d="M242 182 L270 182 L267 434 L245 434 Z" fill="#1F3568" opacity="0.45"/>
+  <!-- gold trim on the tabard -->
+  <path d="M236 176 L242 176 L238 440 L233 440 Z" fill="#C9A23F"/>
+  <path d="M270 176 L276 176 L274 440 L268 440 Z" fill="#C9A23F"/>
+  <!-- engraved pectoral arcs -->
+  <path d="M186 252 C206 238 230 232 256 232 C282 232 306 238 326 252 L320 266 C302 252 280 246 256 246 C232 246 210 252 192 266 Z" fill="#3D4148" opacity="0.7"/>
+  <!-- squared pauldrons w/ gold edge -->
+  <path d="M136 220 L198 208 L202 264 L144 276 C136 258 132 238 136 220 Z" fill="#565C66"/>
+  <path d="M136 220 L198 208 L199 218 L139 230 Z" fill="#C9A23F"/>
+  <path d="M142 226 L192 216 L195 252 L148 262 C142 250 139 238 142 226 Z" fill="#7A828E"/>
+  <path d="M376 220 L314 208 L310 264 L368 276 C376 258 380 238 376 220 Z" fill="#565C66"/>
+  <path d="M376 220 L314 208 L313 218 L373 230 Z" fill="#C9A23F"/>
+  <path d="M370 226 L320 216 L317 252 L364 262 C370 250 373 238 370 226 Z" fill="#7A828E"/>
+  <!-- gorget -->
+  <path d="M218 174 C230 166 244 162 256 162 C268 162 282 166 294 174 L288 194 C274 184 264 180 256 180 C248 180 238 184 224 194 Z" fill="#3D4148"/>
+  <!-- belt -->
+  <path d="M154 338 C214 350 298 350 358 338 L358 356 C298 368 214 368 154 356 Z" fill="#3D4148"/>
+  <rect x="240" y="340" width="32" height="20" rx="3" fill="#C9A23F"/>
+</svg>

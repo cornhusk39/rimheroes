@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T4 east: plate profile, gold-edged pauldron, faulds, cobalt tabard edge at the front. -->
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 386 C340 414 312 428 254 428 C200 428 166 414 168 386 Z" fill="#565C66"/>
+  <path d="M182 238 C192 204 220 184 258 184 C286 184 310 196 324 216 C300 198 218 200 196 228 C190 232 185 236 182 238 Z" fill="#7A828E"/>
+  <!-- faulds -->
+  <path d="M172 344 C220 356 294 356 338 346 L337 364 C294 374 220 374 173 362 Z" fill="#3D4148"/>
+  <path d="M170 378 C220 390 294 390 340 380 L339 396 C294 406 220 406 171 396 Z" fill="#3D4148"/>
+  <path d="M172 410 C220 422 294 422 338 412 L336 426 C296 436 216 436 174 426 Z" fill="#3D4148"/>
+  <!-- cobalt tabard edge at the front -->
+  <path d="M316 198 L340 214 L338 420 L318 428 Z" fill="#2E4E9E"/>
+  <path d="M334 210 L340 214 L338 420 L332 423 Z" fill="#C9A23F"/>
+  <!-- gold-edged squared pauldron -->
+  <path d="M184 212 L250 204 L254 266 L190 274 C182 254 180 230 184 212 Z" fill="#565C66"/>
+  <path d="M184 212 L250 204 L251 215 L187 223 Z" fill="#C9A23F"/>
+  <path d="M190 220 L244 213 L247 256 L195 263 C189 248 187 232 190 220 Z" fill="#7A828E"/>
+  <!-- gorget bunch -->
+  <path d="M198 218 C194 198 202 182 220 176 C232 172 244 174 252 182 L248 196 C240 190 230 189 222 193 C212 198 206 207 208 218 Z" fill="#3D4148"/>
+  <path d="M172 334 C220 346 292 346 336 336 L336 352 C292 362 220 362 172 350 Z" fill="#3D4148"/>
+  <rect x="288" y="336" width="26" height="18" rx="3" fill="#C9A23F"/>
+</svg>

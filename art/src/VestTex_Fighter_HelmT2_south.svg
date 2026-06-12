@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T2 helm, south: quilted padded coif covering the whole crown. -->
+  <path d="M154 252 C150 192 198 148 256 148 C314 148 362 192 358 252 L354 266 C326 250 186 250 158 266 Z" fill="#8A8273"/>
+  <path d="M168 242 C170 198 206 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 170 232 168 242 Z" fill="#9C9484"/>
+  <!-- quilt channels -->
+  <path d="M214 158 L210 248 M256 150 L256 250 M298 158 L302 248" stroke="#6E6759" stroke-width="5" fill="none"/>
+  <!-- brow edge -->
+  <path d="M156 252 C184 238 328 238 356 252 L354 270 C326 254 186 254 158 270 Z" fill="#6E6759"/>
+</svg>

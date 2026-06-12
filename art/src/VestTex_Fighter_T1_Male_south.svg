@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T1 south: quilted gambeson, leather belt. A soldier's plain padding. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 396 C358 428 326 444 256 444 C186 444 154 428 152 396 Z" fill="#8A8273"/>
+  <path d="M168 238 C178 204 212 184 256 184 C300 184 334 204 344 238 L342 300 L170 300 Z" fill="#9C9484" opacity="0.5"/>
+  <!-- quilt: vertical channels -->
+  <path d="M196 186 L194 438 M226 176 L225 442 M256 172 L256 444 M286 176 L287 442 M316 186 L318 438" stroke="#6E6759" stroke-width="5" fill="none"/>
+  <!-- quilt: horizontal seams -->
+  <path d="M158 268 C212 256 300 256 354 268 M154 330 C212 318 300 318 358 330" stroke="#6E6759" stroke-width="5" fill="none"/>
+  <!-- collar -->
+  <path d="M220 176 C232 168 244 166 256 166 C268 166 280 168 292 176 L286 192 C274 184 264 182 256 182 C248 182 238 184 226 192 Z" fill="#6E6759"/>
+  <!-- leather belt + buckle -->
+  <path d="M154 376 C214 388 298 388 358 376 L358 396 C298 408 214 408 154 396 Z" fill="#5C3D24"/>
+  <rect x="240" y="378" width="32" height="20" rx="3" fill="#8A8273"/>
+  <rect x="248" y="383" width="16" height="10" rx="2" fill="#5C3D24"/>
+</svg>

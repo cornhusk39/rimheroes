@@ -21,8 +21,20 @@
     <modExtensions>
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.78, 0.22, 0.18)</baseColor>
+        <artDir>Fighter</artDir>
       </li>
     </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>75</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
   </HediffDef>
 
   <!-- Vestment inlays: surgery-installed enhancements. Three slots (defense/offense/utility),

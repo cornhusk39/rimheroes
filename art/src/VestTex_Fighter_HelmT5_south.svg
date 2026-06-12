@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T5 helm, south: polished greathelm - gold crown band, tall cobalt plume, jaw guards. -->
+  <!-- tall plume -->
+  <path d="M240 148 C230 108 234 66 256 36 C278 66 282 108 272 148 C262 154 250 154 240 148 Z" fill="#2E4E9E"/>
+  <path d="M248 138 C242 106 246 74 258 52 C268 76 270 108 264 136 C258 140 252 140 248 138 Z" fill="#4A6CC4"/>
+  <!-- dome: polished -->
+  <path d="M156 252 C152 190 202 146 256 146 C312 146 360 190 356 252 L352 268 C324 252 188 252 160 268 Z" fill="#6E7682"/>
+  <path d="M170 242 C172 198 210 162 256 162 C288 162 314 176 330 202 C304 180 216 182 190 212 C178 226 170 234 170 242 Z" fill="#9AA3B0"/>
+  <path d="M204 172 C222 162 244 158 264 160 C246 164 228 172 216 184 Z" fill="#C4CBD6"/>
+  <!-- jaw guards -->
+  <path d="M160 260 L204 260 L200 334 C190 340 174 338 164 326 Z" fill="#6E7682"/>
+  <path d="M352 260 L308 260 L312 334 C322 340 338 338 348 326 Z" fill="#6E7682"/>
+  <path d="M166 266 L196 266 L194 312 L170 312 Z" fill="#9AA3B0" opacity="0.6"/>
+  <path d="M346 266 L316 266 L318 312 L342 312 Z" fill="#9AA3B0" opacity="0.6"/>
+  <!-- gold crown band -->
+  <path d="M158 252 C186 238 326 238 354 252 L352 274 C324 256 188 256 160 274 Z" fill="#C9A23F"/>
+  <path d="M158 264 C186 252 326 252 354 264 L352 274 C324 256 188 256 160 274 Z" fill="#8E6E24"/>
+  <!-- crown points -->
+  <path d="M196 244 L202 230 L210 244 Z" fill="#C9A23F"/>
+  <path d="M248 240 L256 224 L264 240 Z" fill="#C9A23F"/>
+  <path d="M302 244 L310 230 L316 244 Z" fill="#C9A23F"/>
+  <!-- blue gem at the brow -->
+  <circle cx="256" cy="258" r="9" fill="#2E4E9E"/>
+  <circle cx="256" cy="256" r="4" fill="#4A6CC4"/>
+</svg>

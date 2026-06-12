@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T2 helm, east: padded coif covering crown + skull back; face open at the front. -->
+  <path d="M148 252 C144 190 194 148 256 148 C312 148 356 186 356 240 C356 252 350 262 340 268 L320 262 C310 256 304 250 302 244 L242 244 C240 290 234 328 220 352 L186 352 C160 326 146 292 148 252 Z" fill="#8A8273"/>
+  <path d="M162 242 C166 198 202 164 254 164 C284 164 310 178 326 202 C300 182 214 184 188 214 C174 228 164 234 162 242 Z" fill="#9C9484"/>
+  <path d="M210 160 L204 330 M252 150 L246 344 M294 158 L296 240" stroke="#6E6759" stroke-width="5" fill="none"/>
+  <!-- edge band: brow + down the back -->
+  <path d="M300 240 C322 240 340 248 348 260 L340 272 C330 260 316 254 298 254 L242 254 C240 256 238 258 238 260 C234 300 228 330 216 350 L198 350 C212 322 218 286 218 252 L220 240 Z" fill="#6E6759"/>
+</svg>

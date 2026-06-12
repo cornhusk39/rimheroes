@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T1 east: gambeson profile hugging the body, quilting, belt. -->
+  <path d="M164 236 C172 192 204 166 256 166 C302 166 334 188 344 230 L342 386 C340 414 312 428 254 428 C200 428 166 414 168 386 Z" fill="#8A8273"/>
+  <path d="M182 240 C192 208 220 190 258 190 C294 190 320 206 330 234 L328 296 L182 296 Z" fill="#9C9484" opacity="0.45"/>
+  <path d="M212 178 L210 424 M252 168 L252 428 M292 174 L294 424" stroke="#6E6759" stroke-width="5" fill="none"/>
+  <path d="M172 266 C220 254 296 254 338 266 M170 326 C220 314 296 314 340 326" stroke="#6E6759" stroke-width="5" fill="none"/>
+  <!-- collar bunch at the neck back -->
+  <path d="M198 222 C194 202 202 186 220 180 C232 176 244 178 252 186 L248 200 C240 194 230 193 222 197 C212 202 206 211 208 222 Z" fill="#6E6759"/>
+  <path d="M172 370 C220 382 292 382 336 372 L336 390 C292 400 220 400 172 388 Z" fill="#5C3D24"/>
+  <rect x="288" y="372" width="26" height="18" rx="3" fill="#8A8273"/>
+</svg>

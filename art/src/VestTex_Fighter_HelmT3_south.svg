@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T3 helm, south: steel kettle helm - dome + wide all-around brim, rivets. -->
+  <path d="M166 240 C166 188 206 152 256 152 C306 152 346 188 346 240 L344 250 L168 250 Z" fill="#565C66"/>
+  <path d="M178 234 C182 196 214 168 256 168 C282 168 304 178 320 198 C296 180 218 182 194 212 C186 222 180 228 178 234 Z" fill="#7A828E"/>
+  <path d="M252 154 L260 154 L259 246 L253 246 Z" fill="#3D4148"/>
+  <!-- wide brim past the head -->
+  <path d="M136 250 C172 236 340 236 376 250 C380 260 376 269 368 273 C330 258 182 258 144 273 C136 269 132 260 136 250 Z" fill="#3D4148"/>
+  <path d="M142 252 C176 240 336 240 370 252 C372 257 370 262 366 265 C330 252 182 252 146 265 C142 262 140 257 142 252 Z" fill="#565C66"/>
+  <!-- rivets along the brim base -->
+  <circle cx="196" cy="246" r="4" fill="#9AA3B0"/>
+  <circle cx="256" cy="242" r="4" fill="#9AA3B0"/>
+  <circle cx="316" cy="246" r="4" fill="#9AA3B0"/>
+</svg>

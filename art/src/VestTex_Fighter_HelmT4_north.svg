@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T4 helm, north: war-helm from behind - full skull coverage, plume trailing, neck guard. -->
+  <path d="M244 152 C238 120 242 88 258 66 C272 82 278 110 274 140 C268 146 258 150 244 152 Z" fill="#2E4E9E"/>
+  <path d="M250 144 C246 120 250 96 260 78 C268 94 271 116 268 136 C262 140 256 143 250 144 Z" fill="#1F3568"/>
+  <!-- dome covering the whole skull back -->
+  <path d="M158 250 C154 190 202 148 256 148 C312 148 360 190 356 250 C358 296 342 336 312 354 L200 354 C170 336 156 296 158 250 Z" fill="#565C66"/>
+  <path d="M172 240 C174 198 210 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 172 232 172 240 Z" fill="#7A828E"/>
+  <path d="M250 152 L262 152 L260 348 L252 348 Z" fill="#3D4148"/>
+  <!-- neck guard band -->
+  <path d="M172 316 C200 302 312 302 340 316 L334 336 C308 322 204 322 178 336 Z" fill="#3D4148"/>
+  <circle cx="200" cy="322" r="4" fill="#9AA3B0"/>
+  <circle cx="312" cy="322" r="4" fill="#9AA3B0"/>
+</svg>

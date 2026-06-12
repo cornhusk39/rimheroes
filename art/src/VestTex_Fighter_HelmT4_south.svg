@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T4 helm, south: visored war-helm - dome, raised visor ridge, cheek guards, cobalt plume. -->
+  <!-- plume: cobalt crest over the top -->
+  <path d="M244 150 C238 118 242 86 258 64 C272 80 278 108 274 138 C268 144 258 148 244 150 Z" fill="#2E4E9E"/>
+  <path d="M250 142 C246 118 250 94 260 76 C268 92 271 114 268 134 C262 138 256 141 250 142 Z" fill="#4A6CC4"/>
+  <!-- dome -->
+  <path d="M158 250 C154 190 202 148 256 148 C312 148 360 190 356 250 L352 266 C324 250 188 250 162 266 Z" fill="#565C66"/>
+  <path d="M172 240 C174 198 210 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 172 232 172 240 Z" fill="#7A828E"/>
+  <!-- cheek guards -->
+  <path d="M162 258 L202 258 L198 326 C188 332 174 330 166 320 Z" fill="#565C66"/>
+  <path d="M350 258 L310 258 L314 326 C324 332 338 330 346 320 Z" fill="#565C66"/>
+  <path d="M168 264 L194 264 L192 306 L172 306 Z" fill="#7A828E" opacity="0.6"/>
+  <path d="M344 264 L318 264 L320 306 L340 306 Z" fill="#7A828E" opacity="0.6"/>
+  <!-- raised visor ridge above the brow -->
+  <path d="M160 250 C188 236 324 236 352 250 L350 270 C322 254 190 254 162 270 Z" fill="#3D4148"/>
+  <path d="M204 240 C228 234 284 234 308 240 L306 252 C284 246 228 246 206 252 Z" fill="#9AA3B0"/>
+  <circle cx="184" cy="254" r="4" fill="#9AA3B0"/>
+  <circle cx="328" cy="254" r="4" fill="#9AA3B0"/>
+</svg>

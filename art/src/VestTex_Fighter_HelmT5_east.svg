@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T5 helm, east: greathelm profile - tall plume arcing back, gold band, jaw + nape guards. -->
+  <!-- plume arcing back -->
+  <path d="M238 150 C220 116 216 76 232 42 C254 56 266 88 266 124 C260 136 250 146 238 150 Z" fill="#2E4E9E"/>
+  <path d="M244 140 C232 114 230 86 240 62 C252 76 258 98 256 122 C253 129 249 135 244 140 Z" fill="#4A6CC4"/>
+  <path d="M236 148 C222 168 214 194 212 222 L196 218 C200 190 210 166 226 146 Z" fill="#2E4E9E"/>
+  <!-- nape guard -->
+  <path d="M174 262 C166 298 172 330 190 354 L226 354 C214 326 208 296 210 262 Z" fill="#6E7682"/>
+  <path d="M182 268 C176 298 182 324 196 344 L214 344 C204 320 199 294 201 268 Z" fill="#9AA3B0" opacity="0.55"/>
+  <!-- dome: polished -->
+  <path d="M150 252 C146 190 198 146 258 146 C316 146 358 186 358 242 L356 264 C326 250 184 250 154 266 Z" fill="#6E7682"/>
+  <path d="M164 242 C166 198 206 162 256 162 C288 162 314 176 330 202 C304 180 216 182 190 212 C178 226 166 234 164 242 Z" fill="#9AA3B0"/>
+  <path d="M200 172 C218 162 240 158 260 160 C242 164 224 172 212 184 Z" fill="#C4CBD6"/>
+  <!-- jaw guard at the face side -->
+  <path d="M312 258 L354 258 L350 336 C340 342 324 340 314 328 Z" fill="#6E7682"/>
+  <path d="M318 264 L346 264 L344 312 L320 312 Z" fill="#9AA3B0" opacity="0.55"/>
+  <!-- gold band -->
+  <path d="M154 252 C184 238 328 238 356 252 L354 274 C326 256 186 256 156 274 Z" fill="#C9A23F"/>
+  <path d="M154 264 C184 252 328 252 356 264 L354 274 C326 256 186 256 156 274 Z" fill="#8E6E24"/>
+  <path d="M246 240 L254 224 L262 240 Z" fill="#C9A23F"/>
+  <circle cx="330" cy="258" r="8" fill="#2E4E9E"/>
+  <circle cx="330" cy="256" r="3.5" fill="#4A6CC4"/>
+</svg>

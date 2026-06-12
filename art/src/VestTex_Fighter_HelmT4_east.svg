@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T4 helm, east: war-helm profile - dome, cheek guard, nape guard, plume sweeping back. -->
+  <!-- plume: sweeps back from the crown -->
+  <path d="M242 152 C226 124 222 92 234 64 C252 74 264 98 266 126 C260 138 252 148 242 152 Z" fill="#2E4E9E"/>
+  <path d="M246 142 C236 122 234 100 242 80 C252 90 258 108 258 126 C254 132 250 138 246 142 Z" fill="#4A6CC4"/>
+  <!-- nape guard -->
+  <path d="M176 260 C168 296 174 328 192 352 L228 352 C216 324 210 294 212 260 Z" fill="#565C66"/>
+  <path d="M184 266 C178 296 184 322 198 342 L216 342 C206 318 201 292 203 266 Z" fill="#7A828E" opacity="0.6"/>
+  <!-- dome -->
+  <path d="M152 252 C148 190 198 148 258 148 C316 148 358 188 358 242 L356 262 C326 248 184 248 156 264 Z" fill="#565C66"/>
+  <path d="M166 242 C168 200 206 164 256 164 C288 164 314 178 330 202 C304 182 216 184 190 214 C178 226 168 234 166 242 Z" fill="#7A828E"/>
+  <!-- cheek guard at the face side -->
+  <path d="M314 258 L352 258 L348 330 C338 336 324 334 316 324 Z" fill="#565C66"/>
+  <path d="M320 264 L344 264 L342 308 L322 308 Z" fill="#7A828E" opacity="0.6"/>
+  <!-- visor ridge -->
+  <path d="M156 252 C186 238 326 238 356 252 L354 272 C324 256 188 256 158 272 Z" fill="#3D4148"/>
+  <path d="M286 242 C310 240 330 246 342 256 L334 266 C322 256 304 252 284 254 Z" fill="#9AA3B0"/>
+  <circle cx="206" cy="256" r="4" fill="#9AA3B0"/>
+</svg>

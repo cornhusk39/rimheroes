@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T2 south: brigandine - leather torso with rivet rows, cobalt cloth arms, belt. -->
+  <!-- cobalt cloth base (shows at arms/sides) -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 396 C358 428 326 444 256 444 C186 444 154 428 152 396 Z" fill="#2E4E9E"/>
+  <path d="M160 244 C170 206 206 184 256 184 C306 184 342 206 352 244 L350 300 L162 300 Z" fill="#1F3568" opacity="0.4"/>
+  <!-- brigandine torso panel -->
+  <path d="M186 200 C206 186 230 180 256 180 C282 180 306 186 326 200 L322 420 C302 434 282 440 256 440 C230 440 210 434 190 420 Z" fill="#5C3D24"/>
+  <path d="M198 206 C216 194 236 188 256 188 C276 188 296 194 314 206 L312 280 L200 280 Z" fill="#6E4A2C" opacity="0.7"/>
+  <!-- rivet rows -->
+  <circle cx="216" cy="232" r="5" fill="#9AA3B0"/><circle cx="256" cy="228" r="5" fill="#9AA3B0"/><circle cx="296" cy="232" r="5" fill="#9AA3B0"/>
+  <circle cx="212" cy="284" r="5" fill="#9AA3B0"/><circle cx="256" cy="280" r="5" fill="#9AA3B0"/><circle cx="300" cy="284" r="5" fill="#9AA3B0"/>
+  <circle cx="212" cy="336" r="5" fill="#9AA3B0"/><circle cx="256" cy="332" r="5" fill="#9AA3B0"/><circle cx="300" cy="336" r="5" fill="#9AA3B0"/>
+  <circle cx="216" cy="388" r="5" fill="#9AA3B0"/><circle cx="256" cy="386" r="5" fill="#9AA3B0"/><circle cx="296" cy="388" r="5" fill="#9AA3B0"/>
+  <!-- collar -->
+  <path d="M220 176 C232 168 244 166 256 166 C268 166 280 168 292 176 L286 192 C274 184 264 182 256 182 C248 182 238 184 226 192 Z" fill="#1F3568"/>
+  <!-- belt + steel buckle -->
+  <path d="M154 376 C214 388 298 388 358 376 L358 396 C298 408 214 408 154 396 Z" fill="#3D4148"/>
+  <rect x="240" y="378" width="32" height="20" rx="3" fill="#9AA3B0"/>
+  <rect x="248" y="383" width="16" height="10" rx="2" fill="#3D4148"/>
+</svg>

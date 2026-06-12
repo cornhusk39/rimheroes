@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Fighter T5 helm, north: greathelm from behind - full coverage, plume trailing down, gold band. -->
+  <!-- plume trailing down the back -->
+  <path d="M240 150 C230 110 234 68 256 38 C278 68 282 110 272 150 L276 220 C268 230 244 230 236 220 Z" fill="#2E4E9E"/>
+  <path d="M248 140 C242 108 246 76 258 54 C268 78 270 110 264 138 L267 210 C262 216 250 216 245 210 Z" fill="#1F3568"/>
+  <!-- dome covering the whole skull back -->
+  <path d="M156 252 C152 190 202 146 256 146 C312 146 360 190 356 252 C358 298 342 338 312 356 L200 356 C170 338 154 298 156 252 Z" fill="#6E7682"/>
+  <path d="M170 242 C172 198 210 162 256 162 C288 162 314 176 330 202 C304 180 216 182 190 212 C178 226 170 234 170 242 Z" fill="#9AA3B0"/>
+  <!-- gold band around the back -->
+  <path d="M166 312 C196 298 316 298 346 312 L340 334 C312 318 200 318 172 334 Z" fill="#C9A23F"/>
+  <path d="M196 244 L202 230 L210 244 Z" fill="#C9A23F"/>
+  <path d="M302 244 L310 230 L316 244 Z" fill="#C9A23F"/>
+</svg>
