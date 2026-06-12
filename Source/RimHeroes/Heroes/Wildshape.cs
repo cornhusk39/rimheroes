@@ -52,7 +52,7 @@ namespace RimHeroes
                 {
                     defaultLabel = "RH_RevertForm".Translate(),
                     defaultDesc = "RH_RevertFormDesc".Translate(),
-                    icon = TexCommand.ClearPrioritizedWork,
+                    icon = RH_Tex.RevertForm,
                     action = () => pawn.health.RemoveHediff(this)
                 };
             }

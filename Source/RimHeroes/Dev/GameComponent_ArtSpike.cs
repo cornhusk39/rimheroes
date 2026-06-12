@@ -55,6 +55,14 @@ namespace RimHeroes
                         GenSpawn.Spawn(hero, map.Center, map);
                     }
                     HeroUtility.MakeHero(hero, DefDatabase<HeroClassDef>.GetNamed("RH_Wizard")).SetLevelDirect(5);
+                    foreach (var psycast in new[] { "Painblock", "Skip", "Wallraise", "Burden" })
+                    {
+                        var def = DefDatabase<AbilityDef>.GetNamedSilentFail(psycast);
+                        if (def != null)
+                        {
+                            hero.abilities.GainAbility(def);
+                        }
+                    }
                     hero.drafter.Drafted = true;
                     var kind = PawnKindDef.Named("RH_MimPorterKind");
                     var rots = new[] { Rot4.South, Rot4.East, Rot4.North };

@@ -20,6 +20,7 @@
     <defName>RH_Spell_FireBolt</defName>
     <label>fire bolt</label>
     <description>Hurl a mote of fire at a target. Cantrip - costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/FireBolt</iconPath>
     <level>0</level>
     <cooldownTicksRange>90</cooldownTicksRange>
     <hostile>true</hostile>
@@ -47,6 +48,7 @@
     <defName>RH_Spell_MagicMissile</defName>
     <label>magic missile</label>
     <description>Three darts of arcane force strike the target unerringly. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/MagicMissile</iconPath>
     <level>1</level>
     <cooldownTicksRange>60</cooldownTicksRange>
     <hostile>true</hostile>
@@ -75,6 +77,7 @@
     <defName>RH_Spell_MageArmor</defName>
     <label>mage armor</label>
     <description>Weave protective force around yourself for a day. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/MageArmor</iconPath>
     <level>1</level>
     <cooldownTicksRange>60</cooldownTicksRange>
     <hostile>false</hostile>

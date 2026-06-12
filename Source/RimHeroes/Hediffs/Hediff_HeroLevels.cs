@@ -329,7 +329,7 @@ namespace RimHeroes
                 {
                     defaultLabel = "RH_LongRestGizmo".Translate(),
                     defaultDesc = "RH_LongRestGizmoDesc".Translate(),
-                    icon = TexCommand.HoldOpen,
+                    icon = RH_Tex.LongRest,
                     isActive = () => longResting,
                     toggleAction = () =>
                     {

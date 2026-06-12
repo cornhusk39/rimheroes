@@ -28,6 +28,7 @@
     <defName>RH_Ability_WildshapeDireWolf</defName>
     <label>wildshape: dire wolf</label>
     <description>Take the shape of a dire wolf for a few hours: swift, tireless, all fangs. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/WildshapeDireWolf</iconPath>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -96,6 +97,7 @@
     <defName>RH_Ability_WildshapeGiantElk</defName>
     <label>wildshape: giant elk</label>
     <description>Take the shape of a giant elk for a few hours: towering, fleet, and strong enough to carry a household. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/WildshapeGiantElk</iconPath>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -164,6 +166,7 @@
     <defName>RH_Ability_WildshapeOwlbear</defName>
     <label>wildshape: owlbear</label>
     <description>Take the shape of an owlbear for a few hours: a feathered engine of claws and beak. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/WildshapeOwlbear</iconPath>
     <level>0</level>
     <cooldownTicksRange>30000</cooldownTicksRange>
     <hostile>false</hostile>

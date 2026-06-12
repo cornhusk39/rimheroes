@@ -9,6 +9,7 @@
     <defName>RH_Spell_SacredFlame</defName>
     <label>sacred flame</label>
     <description>Radiant fire descends on a foe. Cantrip - costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/SacredFlame</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>
     <hostile>true</hostile>
@@ -36,6 +37,7 @@
     <defName>RH_Spell_ViciousMockery</defName>
     <label>vicious mockery</label>
     <description>An insult laced with subtle enchantment. It genuinely hurts. Cantrip - costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/ViciousMockery</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>
     <hostile>true</hostile>
@@ -63,6 +65,7 @@
     <defName>RH_Spell_EldritchBlast</defName>
     <label>eldritch blast</label>
     <description>A crackling beam of otherworldly force. The signature of every pact. Cantrip - costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/EldritchBlast</iconPath>
     <level>0</level>
     <cooldownTicksRange>90</cooldownTicksRange>
     <hostile>true</hostile>
@@ -106,6 +109,7 @@
     <defName>RH_Spell_Thornlash</defName>
     <label>thornlash</label>
     <description>A whip of thorned vine lashes out from the druid's hand. Cantrip - costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/Thornlash</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>
     <hostile>true</hostile>
@@ -141,6 +145,7 @@
     <defName>RH_Spell_CureWounds</defName>
     <label>cure wounds</label>
     <description>Close wounds with a touch. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/CureWounds</iconPath>
     <level>1</level>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -164,6 +169,7 @@
     <defName>RH_Spell_HealingWord</defName>
     <label>healing word</label>
     <description>A word of power that knits flesh at a distance. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/HealingWord</iconPath>
     <level>1</level>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -188,6 +194,7 @@
     <defName>RH_Spell_LayOnHands</defName>
     <label>lay on hands</label>
     <description>Channel divine vitality through your palms. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/LayOnHands</iconPath>
     <level>1</level>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -213,6 +220,7 @@
     <defName>RH_Spell_Bless</defName>
     <label>bless</label>
     <description>Bless an ally: their strikes land truer for a time. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/Bless</iconPath>
     <level>1</level>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -262,6 +270,7 @@
     <defName>RH_Spell_HuntersMark</defName>
     <label>hunter's mark</label>
     <description>Mark a quarry: it takes more harm from every blow while marked. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/HuntersMark</iconPath>
     <level>1</level>
     <cooldownTicksRange>60</cooldownTicksRange>
     <hostile>true</hostile>
@@ -290,6 +299,7 @@
     <defName>RH_Spell_Hex</defName>
     <label>hex</label>
     <description>Lay a withering curse on a foe: it takes more harm from every blow while hexed. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/Hex</iconPath>
     <level>1</level>
     <cooldownTicksRange>60</cooldownTicksRange>
     <hostile>true</hostile>
@@ -343,6 +353,7 @@
     <defName>RH_Spell_Revivify</defName>
     <label>revivify</label>
     <description>Call a soul back to a body that died within the last day. The fresher, the better. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/Revivify</iconPath>
     <level>3</level>
     <cooldownTicksRange>2500</cooldownTicksRange>
     <verbProperties>
