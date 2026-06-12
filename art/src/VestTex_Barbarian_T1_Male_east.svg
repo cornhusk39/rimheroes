@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Barbarian T1 east (facing right): hide wrap profile, ragged rear hem, rope belt. -->
+  <path d="M196 222 C220 208 250 204 278 210 L322 252 L324 366 L312 372 L304 356 L296 374 L286 358 L278 376 L268 360 L260 376 L250 360 L242 374 L232 358 L226 370 L214 354 L208 364 L198 350 L194 296 Z" fill="#8A5A33"/>
+  <path d="M202 228 C224 216 250 212 274 218 L314 254 L312 266 L268 228 C246 222 222 226 206 236 Z" fill="#6B4426"/>
+  <path d="M196 300 L322 300 L322 312 L196 312 Z" fill="#6B4426" opacity="0.35"/>
+  <path d="M198 390 C238 402 286 402 320 392 L320 410 C286 420 238 420 198 408 Z" fill="#A9744A"/>
+  <path d="M212 394 L218 412 M240 398 L244 416 M268 399 L272 416 M296 397 L302 414" stroke="#6B4426" stroke-width="7" fill="none"/>
+  <circle cx="306" cy="406" r="12" fill="#A9744A"/>
+  <path d="M300 414 L294 430 L304 424 L308 434 L313 423 L321 429 L313 412 Z" fill="#A9744A"/>
+</svg>

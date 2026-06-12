@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Barbarian T3 south: heavy asymmetric fur mantle (left), X chest harness, warpaint, hide kilt. -->
+  <!-- warpaint stripes on the bare side -->
+  <path d="M300 246 C316 254 330 266 338 282 L326 290 C318 276 306 266 294 260 Z" fill="#A33B2A"/>
+  <path d="M304 296 C318 302 330 312 338 324 L328 332 C320 320 310 312 298 308 Z" fill="#A33B2A"/>
+  <!-- X harness -->
+  <path d="M180 232 L334 384 L318 398 L168 250 C170 243 174 237 180 232 Z" fill="#5C3D24"/>
+  <path d="M334 232 L180 384 L196 398 L346 250 C344 243 340 237 334 232 Z" fill="#5C3D24"/>
+  <circle cx="257" cy="316" r="18" fill="#B07D3C"/>
+  <circle cx="257" cy="316" r="10" fill="#8A5A33"/>
+  <!-- hide kilt -->
+  <path d="M172 386 C226 398 290 398 342 386 L340 446 C338 456 312 462 256 462 C200 462 174 456 172 446 Z" fill="#8A5A33"/>
+  <path d="M174 394 C226 406 290 406 340 394 L340 406 C290 418 226 418 174 406 Z" fill="#6B4426" opacity="0.5"/>
+  <path d="M200 400 L196 458 M232 404 L230 462 M284 404 L286 462 M316 400 L320 458" stroke="#6B4426" stroke-width="6" fill="none"/>
+  <!-- big asymmetric fur mantle: heavy left, collar wrapping the neck -->
+  <path d="M140 258 C136 220 164 196 208 190 C242 186 270 194 282 210 L276 230 C264 216 246 210 226 212 L240 236 L218 228 L228 256 L206 246 L212 276 L192 264 L198 296 L178 282 L182 314 L162 300 L164 330 L142 312 Z" fill="#6E6E78"/>
+  <path d="M152 254 C152 226 174 206 208 200 C232 196 254 202 266 214 L260 226 C248 215 232 210 214 213 C190 217 168 232 164 254 Z" fill="#8B8B96"/>
+  <path d="M144 282 L158 298 L156 268 Z" fill="#55555E"/>
+  <path d="M164 300 L178 316 L176 286 Z" fill="#55555E"/>
+  <path d="M182 318 L194 332 L192 306 Z" fill="#55555E"/>
+  <path d="M210 192 C230 184 254 182 272 188 L268 206 C252 199 232 201 220 207 Z" fill="#55555E"/>
+</svg>

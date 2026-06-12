@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Barbarian T3 east: fur mantle hump over the near shoulder, harness strap, kilt, warpaint. -->
+  <!-- harness strap diagonal across the side -->
+  <path d="M214 240 L316 372 L302 384 L204 256 C206 250 209 244 214 240 Z" fill="#5C3D24"/>
+  <!-- warpaint on the upper arm -->
+  <path d="M290 252 C302 258 312 268 318 280 L308 288 C302 277 294 269 284 264 Z" fill="#A33B2A"/>
+  <!-- hide kilt -->
+  <path d="M200 386 C238 398 288 398 320 388 L318 446 C316 456 294 462 258 462 C222 462 202 456 200 446 Z" fill="#8A5A33"/>
+  <path d="M202 394 C238 406 288 406 318 396 L318 408 C288 418 238 418 202 406 Z" fill="#6B4426" opacity="0.5"/>
+  <path d="M224 400 L222 458 M256 404 L256 462 M292 402 L294 460" stroke="#6B4426" stroke-width="6" fill="none"/>
+  <!-- fur mantle hump: dominant over the shoulder, jagged trailing edge -->
+  <path d="M192 250 C188 218 212 196 250 190 C278 186 300 194 310 208 L306 226 C296 214 280 208 264 210 L274 230 L258 224 L266 248 L248 238 L254 264 L236 252 L240 280 L224 268 L226 296 L210 284 L212 308 L196 296 Z" fill="#6E6E78"/>
+  <path d="M200 248 C198 224 216 206 244 200 C264 196 282 200 292 210 L288 220 C278 212 264 208 250 211 C230 215 214 228 210 248 Z" fill="#8B8B96"/>
+  <path d="M195 272 L207 286 L205 262 Z" fill="#55555E"/>
+  <path d="M212 288 L224 302 L222 278 Z" fill="#55555E"/>
+  <path d="M248 192 C266 184 288 182 304 188 L300 204 C286 198 268 200 256 206 Z" fill="#55555E"/>
+</svg>

@@ -6,11 +6,14 @@ using Verse;
 namespace RimHeroes
 {
     /// <summary>
-    /// Per-class config for the vestment's look (placeholder: tinted vanilla apparel texture).
+    /// Per-class config for the vestment's look. artDir points at per-tier textures under
+    /// Things/RimHeroes/Vestments/&lt;artDir&gt;/ (T1..T5 + Helm); classes without art yet
+    /// fall back to the tinted vanilla apparel placeholder.
     /// </summary>
     public class VestmentExtension : DefModExtension
     {
         public Color baseColor = Color.gray;
+        public string artDir;
     }
 
     /// <summary>
@@ -74,7 +77,16 @@ namespace RimHeroes
                 return null; // the vestment transforms with the druid - hidden while shifted
             }
             var vestment = pawn.health?.hediffSet?.hediffs?.OfType<Hediff_ClassVestment>().FirstOrDefault();
-            if (vestment == null || props.texPath.NullOrEmpty())
+            if (vestment == null)
+            {
+                return null;
+            }
+            string artPath = VestmentArt.TierBodyPath(vestment, pawn);
+            if (artPath != null)
+            {
+                return GraphicDatabase.Get<Graphic_Multi>(artPath, ShaderDatabase.Cutout, Vector2.one, Color.white);
+            }
+            if (props.texPath.NullOrEmpty())
             {
                 return null;
             }
@@ -84,6 +96,71 @@ namespace RimHeroes
                 path += "_" + pawn.story.bodyType.defName;
             }
             return GraphicDatabase.Get<Graphic_Multi>(path, ShaderDatabase.Cutout, Vector2.one, vestment.TierColor);
+        }
+    }
+
+    /// <summary>
+    /// Tier-texture path resolution for vestments with real art. Layout:
+    /// Things/RimHeroes/Vestments/&lt;artDir&gt;/T&lt;tier&gt;_&lt;BodyType&gt;_&lt;rot&gt;.png,
+    /// falling back to the Male set when the pawn's body type has no art yet.
+    /// </summary>
+    public static class VestmentArt
+    {
+        public static string TierBodyPath(Hediff_ClassVestment vestment, Pawn pawn)
+        {
+            string dir = vestment.def.GetModExtension<VestmentExtension>()?.artDir;
+            if (dir.NullOrEmpty())
+            {
+                return null;
+            }
+            string root = $"Things/RimHeroes/Vestments/{dir}/T{vestment.Tier}";
+            string body = pawn.story?.bodyType?.defName ?? "Male";
+            if (ContentFinder<Texture2D>.Get($"{root}_{body}_south", false) != null)
+            {
+                return $"{root}_{body}";
+            }
+            if (ContentFinder<Texture2D>.Get($"{root}_Male_south", false) != null)
+            {
+                return $"{root}_Male";
+            }
+            return null;
+        }
+
+        public static string HelmPath(Hediff_ClassVestment vestment)
+        {
+            string dir = vestment.def.GetModExtension<VestmentExtension>()?.artDir;
+            if (dir.NullOrEmpty() || vestment.Tier < 5)
+            {
+                return null;
+            }
+            string root = $"Things/RimHeroes/Vestments/{dir}/Helm";
+            return ContentFinder<Texture2D>.Get($"{root}_south", false) != null ? root : null;
+        }
+    }
+
+    /// <summary>
+    /// Tier-5 ceremonial headpiece (e.g. the barbarian's horned helm). Head-attached node;
+    /// renders only at tier 5 and only for classes with helm art.
+    /// </summary>
+    public class PawnRenderNode_VestmentHelm : PawnRenderNode
+    {
+        public PawnRenderNode_VestmentHelm(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree)
+            : base(pawn, props, tree) { }
+
+        public override Graphic GraphicFor(Pawn pawn)
+        {
+            if (Hediff_Wildshape.IsShifted(pawn))
+            {
+                return null;
+            }
+            var vestment = pawn.health?.hediffSet?.hediffs?.OfType<Hediff_ClassVestment>().FirstOrDefault();
+            if (vestment == null)
+            {
+                return null;
+            }
+            string path = VestmentArt.HelmPath(vestment);
+            return path == null ? null
+                : GraphicDatabase.Get<Graphic_Multi>(path, ShaderDatabase.Cutout, Vector2.one, Color.white);
         }
     }
 

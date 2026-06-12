@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Barbarian T4 east: breastplate profile w/ gold edge, fur mantle hump, sash, belt + kilt. -->
+  <path d="M204 252 C224 236 252 228 282 230 L320 248 L322 376 C320 392 314 402 302 408 L226 408 C212 402 206 392 204 376 Z" fill="#3D4148"/>
+  <path d="M212 258 C230 244 254 237 280 239 L312 254 L310 348 L214 348 Z" fill="#565C66"/>
+  <path d="M306 246 L320 252 L322 266 L306 258 Z" fill="#C9A23F"/>
+  <path d="M206 374 C232 386 296 386 318 376 L317 390 C294 400 230 400 207 390 Z" fill="#C9A23F"/>
+  <!-- sash diagonal -->
+  <path d="M216 242 L320 356 L312 380 L206 268 C208 259 211 250 216 242 Z" fill="#A33B2A" opacity="0.92"/>
+  <!-- belt + kilt -->
+  <path d="M202 392 C238 404 288 404 320 394 L318 446 C316 456 294 462 258 462 C222 462 204 456 202 446 Z" fill="#8A5A33"/>
+  <path d="M202 386 C238 398 288 398 320 388 L320 404 C288 414 238 414 202 402 Z" fill="#5C3D24"/>
+  <rect x="288" y="388" width="26" height="20" rx="4" fill="#B07D3C"/>
+  <!-- fur mantle hump over the shoulders -->
+  <path d="M192 252 C188 220 212 198 250 192 C278 188 302 196 312 210 L308 228 C298 216 282 210 266 212 L276 232 L260 226 L268 250 L250 240 L256 266 L238 254 L242 282 L226 270 L228 298 L212 286 L214 310 L198 298 Z" fill="#6E6E78"/>
+  <path d="M200 250 C198 226 216 208 246 202 C266 198 284 202 294 212 L290 222 C280 214 266 210 252 213 C232 217 216 230 212 250 Z" fill="#8B8B96"/>
+  <path d="M195 274 L207 288 L205 264 Z" fill="#55555E"/>
+  <path d="M212 290 L224 304 L222 280 Z" fill="#55555E"/>
+  <!-- claw necklace edge visible at the chest -->
+  <path d="M288 250 C298 258 306 268 310 280 L302 286 C298 275 291 266 282 260 Z" fill="#5C3D24"/>
+  <path d="M300 280 L304 300 L312 282 Z" fill="#E8E0CC"/>
+</svg>

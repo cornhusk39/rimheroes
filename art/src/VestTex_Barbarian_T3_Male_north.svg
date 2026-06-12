@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Barbarian T3 north: mantle from behind (heavy on pawn's left = screen right), X straps back, kilt. -->
+  <path d="M186 232 L330 380 L316 394 L174 250 C176 243 180 237 186 232 Z" fill="#5C3D24"/>
+  <path d="M328 232 L186 380 L202 394 L340 250 C338 243 334 237 328 232 Z" fill="#5C3D24"/>
+  <!-- hide kilt -->
+  <path d="M172 386 C226 398 290 398 342 386 L340 446 C338 456 312 462 256 462 C200 462 174 456 172 446 Z" fill="#8A5A33"/>
+  <path d="M174 394 C226 406 290 406 340 394 L340 406 C290 418 226 418 174 406 Z" fill="#6B4426" opacity="0.5"/>
+  <path d="M204 400 L200 458 M240 404 L238 462 M276 404 L278 462 M312 400 L316 458" stroke="#6B4426" stroke-width="6" fill="none"/>
+  <!-- big fur mantle from behind: heavy right-of-screen -->
+  <path d="M354 252 C358 220 334 198 296 192 C266 188 242 196 232 210 L236 228 C246 216 262 210 280 212 L268 232 L286 226 L278 250 L298 240 L292 266 L310 254 L306 282 L324 270 L322 298 L338 286 L336 312 L352 298 Z" fill="#6E6E78"/>
+  <path d="M346 250 C348 226 330 208 302 202 C282 198 264 202 254 212 L258 222 C268 214 282 210 296 213 C316 217 332 230 336 250 Z" fill="#8B8B96"/>
+  <path d="M352 274 L340 288 L342 264 Z" fill="#55555E"/>
+  <path d="M334 290 L322 304 L324 280 Z" fill="#55555E"/>
+  <path d="M298 194 C280 186 258 184 242 190 L246 206 C260 200 278 202 290 208 Z" fill="#55555E"/>
+</svg>

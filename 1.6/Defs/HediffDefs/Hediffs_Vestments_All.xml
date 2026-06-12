@@ -129,8 +129,22 @@
     <label>barbarian's vestment</label>
     <description>A hero's war-harness, bound to their destiny. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
     <modExtensions>
-      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.72, 0.38, 0.16)</baseColor></li>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.72, 0.38, 0.16)</baseColor>
+        <artDir>Barbarian</artDir>
+      </li>
     </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData>
+          <defaultData>
+            <layer>75</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
   </HediffDef>
 
   <HediffDef ParentName="RH_VestmentMartialBase">
