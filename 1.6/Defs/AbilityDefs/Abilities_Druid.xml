@@ -241,8 +241,7 @@
     <renderNodeProperties>
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
-        <texPath>Things/Pawn/Animal/Bear/Bear</texPath>
-        <color>(0.77, 0.62, 0.36)</color>
+        <texPath>Things/RimHeroes/Beasts/Owlbear/Owlbear</texPath>
         <parentTagDef>Body</parentTagDef>
         <drawSize>(2.4, 2.4)</drawSize>
         <pawnType>Any</pawnType>

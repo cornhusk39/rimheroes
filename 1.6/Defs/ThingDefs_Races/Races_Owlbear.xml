@@ -109,8 +109,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Bear/Bear</texPath>
-          <color>(196,158,92)</color>
+          <texPath>Things/RimHeroes/Beasts/Owlbear/Owlbear</texPath>
           <drawSize>1.6</drawSize>
           <shadowData>
             <volume>(0.4, 0.5, 0.4)</volume>
@@ -123,8 +122,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Bear/Bear</texPath>
-          <color>(196,158,92)</color>
+          <texPath>Things/RimHeroes/Beasts/Owlbear/Owlbear</texPath>
           <drawSize>2.1</drawSize>
           <shadowData>
             <volume>(0.6, 0.7, 0.6)</volume>
@@ -137,8 +135,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Bear/Bear</texPath>
-          <color>(196,158,92)</color>
+          <texPath>Things/RimHeroes/Beasts/Owlbear/Owlbear</texPath>
           <drawSize>2.75</drawSize>
           <shadowData>
             <volume>(0.8, 0.9, 0.8)</volume>

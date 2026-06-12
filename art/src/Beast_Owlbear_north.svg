@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Owlbear, back view: feather-coated back in scalloped rows, ear tufts, stub tail. -->
+  <!-- ear tufts -->
+  <path d="M148 120 C128 76 140 46 168 38 C178 70 172 102 162 124 Z" fill="#8A5E36"/>
+  <path d="M364 120 C384 76 372 46 344 38 C334 70 340 102 350 124 Z" fill="#8A5E36"/>
+  <!-- body -->
+  <ellipse cx="256" cy="328" rx="170" ry="150" fill="#A8784A"/>
+  <!-- shoulder humps -->
+  <ellipse cx="140" cy="278" rx="56" ry="48" fill="#9A6C40"/>
+  <ellipse cx="372" cy="278" rx="56" ry="48" fill="#9A6C40"/>
+  <!-- head back -->
+  <circle cx="256" cy="156" r="108" fill="#A8784A"/>
+  <path d="M180 90 Q256 60 332 90 L322 150 Q256 174 190 150 Z" fill="#8A5E36"/>
+  <ellipse cx="256" cy="120" rx="64" ry="34" fill="#9A6C40"/>
+  <!-- feathered back: scalloped rows cascading down -->
+  <path d="M150 250 Q256 218 362 250 L348 296 Q256 268 164 296 Z" fill="#8A5E36"/>
+  <path d="M164 300 Q256 270 348 300 L336 346 Q256 320 176 346 Z" fill="#9A6C40"/>
+  <path d="M176 350 Q256 322 336 350 L324 396 Q256 372 188 396 Z" fill="#8A5E36"/>
+  <path d="M188 400 Q256 376 324 400 L312 440 Q256 420 200 440 Z" fill="#9A6C40"/>
+  <!-- stub tail -->
+  <ellipse cx="256" cy="462" rx="34" ry="22" fill="#8A5E36"/>
+  <!-- hind paws -->
+  <ellipse cx="160" cy="448" rx="50" ry="30" fill="#8A5E36"/>
+  <ellipse cx="352" cy="448" rx="50" ry="30" fill="#8A5E36"/>
+</svg>

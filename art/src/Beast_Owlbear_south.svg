@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Owlbear, front view: bear bulk, owl facial disc, hooked beak, ear tufts, feathered chest. -->
+  <!-- ear tufts -->
+  <path d="M148 122 C128 78 140 48 168 40 C178 72 172 104 162 126 Z" fill="#8A5E36"/>
+  <path d="M364 122 C384 78 372 48 344 40 C334 72 340 104 350 126 Z" fill="#8A5E36"/>
+  <path d="M154 114 C140 80 148 58 166 50 C173 76 169 98 162 114 Z" fill="#A8784A"/>
+  <path d="M358 114 C372 80 364 58 346 50 C339 76 343 98 350 114 Z" fill="#A8784A"/>
+  <!-- massive body -->
+  <ellipse cx="256" cy="330" rx="170" ry="150" fill="#A8784A"/>
+  <!-- shoulder humps -->
+  <ellipse cx="140" cy="280" rx="56" ry="48" fill="#9A6C40"/>
+  <ellipse cx="372" cy="280" rx="56" ry="48" fill="#9A6C40"/>
+  <!-- feathered chest: scalloped rows -->
+  <path d="M178 320 Q256 290 334 320 L322 352 Q256 330 190 352 Z" fill="#C49A66"/>
+  <path d="M190 356 Q256 330 322 356 L312 388 Q256 368 200 388 Z" fill="#BC8E5A"/>
+  <path d="M202 392 Q256 370 310 392 L300 424 Q256 408 212 424 Z" fill="#C49A66"/>
+  <path d="M214 428 Q256 410 298 428 L288 452 Q256 440 224 452 Z" fill="#BC8E5A"/>
+  <!-- head: owl facial disc -->
+  <circle cx="256" cy="158" r="108" fill="#A8784A"/>
+  <ellipse cx="256" cy="170" rx="88" ry="78" fill="#E2CDA4"/>
+  <path d="M256 96 C282 96 306 110 318 132 L256 124 L194 132 C206 110 230 96 256 96 Z" fill="#8A5E36"/>
+  <!-- big round owl eyes -->
+  <circle cx="212" cy="162" r="30" fill="#F6EBD3"/>
+  <circle cx="300" cy="162" r="30" fill="#F6EBD3"/>
+  <circle cx="212" cy="164" r="19" fill="#D9931F"/>
+  <circle cx="300" cy="164" r="19" fill="#D9931F"/>
+  <circle cx="212" cy="164" r="10" fill="#2E2620"/>
+  <circle cx="300" cy="164" r="10" fill="#2E2620"/>
+  <circle cx="216" cy="159" r="3.5" fill="#F6EBD3"/>
+  <circle cx="304" cy="159" r="3.5" fill="#F6EBD3"/>
+  <!-- hooked beak -->
+  <path d="M256 178 C272 178 282 188 282 200 C282 216 268 230 256 238 C244 230 230 216 230 200 C230 188 240 178 256 178 Z" fill="#6E5238"/>
+  <path d="M256 182 C268 182 276 190 276 199 C276 210 266 221 256 228 C246 221 236 210 236 199 C236 190 244 182 256 182 Z" fill="#8A6A43"/>
+  <!-- front limbs with claws -->
+  <ellipse cx="160" cy="436" rx="52" ry="34" fill="#8A5E36"/>
+  <ellipse cx="352" cy="436" rx="52" ry="34" fill="#8A5E36"/>
+  <path d="M122 458 L112 478 M146 464 L142 484 M172 464 L176 484" stroke="#5C4630" stroke-width="11" stroke-linecap="round"/>
+  <path d="M390 458 L400 478 M366 464 L370 484 M340 464 L336 484" stroke="#5C4630" stroke-width="11" stroke-linecap="round"/>
+</svg>

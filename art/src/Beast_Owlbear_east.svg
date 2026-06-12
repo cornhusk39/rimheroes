@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Owlbear, side view facing right: bear profile, owl head, feathered chest bib. -->
+  <!-- ear tuft -->
+  <path d="M330 96 C318 52 330 24 358 18 C366 50 358 80 348 100 Z" fill="#8A5E36"/>
+  <path d="M336 90 C328 58 336 38 352 30 C357 56 353 78 348 92 Z" fill="#A8784A"/>
+  <!-- stub tail -->
+  <ellipse cx="74" cy="380" rx="30" ry="24" fill="#8A5E36"/>
+  <!-- massive body: high shoulder hump sloping back -->
+  <path d="M88 330 C84 240 150 196 250 200 C330 204 396 240 400 320 C404 392 350 452 240 456 C140 458 92 408 88 330 Z" fill="#A8784A"/>
+  <!-- hump shading -->
+  <path d="M150 230 C190 204 260 198 310 210 L300 250 C250 236 190 240 158 262 Z" fill="#9A6C40"/>
+  <!-- head: owl disc in profile -->
+  <circle cx="368" cy="140" r="92" fill="#A8784A"/>
+  <ellipse cx="386" cy="150" rx="68" ry="64" fill="#E2CDA4"/>
+  <path d="M312 86 C336 66 372 60 400 70 L388 108 C364 96 336 96 318 108 Z" fill="#8A5E36"/>
+  <!-- eye -->
+  <circle cx="398" cy="142" r="26" fill="#F6EBD3"/>
+  <circle cx="400" cy="144" r="16" fill="#D9931F"/>
+  <circle cx="400" cy="144" r="8.5" fill="#2E2620"/>
+  <circle cx="403.5" cy="140" r="3" fill="#F6EBD3"/>
+  <!-- hooked beak in profile -->
+  <path d="M442 154 C462 152 474 162 472 176 C470 192 454 204 440 206 C436 192 434 168 442 154 Z" fill="#6E5238"/>
+  <path d="M446 160 C458 159 466 166 464 175 C462 186 452 194 444 196 C441 186 440 170 446 160 Z" fill="#8A6A43"/>
+  <!-- feathered chest bib -->
+  <path d="M330 230 Q374 244 392 280 L360 300 Q340 272 312 262 Z" fill="#C49A66"/>
+  <path d="M312 266 Q352 282 368 312 L338 330 Q322 304 296 296 Z" fill="#BC8E5A"/>
+  <!-- legs: front + hind with claws -->
+  <ellipse cx="330" cy="430" rx="46" ry="40" fill="#9A6C40"/>
+  <path d="M310 462 L304 486 M330 466 L330 490 M352 462 L358 486" stroke="#5C4630" stroke-width="11" stroke-linecap="round"/>
+  <ellipse cx="150" cy="428" rx="52" ry="42" fill="#9A6C40"/>
+  <path d="M128 462 L120 486 M150 466 L150 490 M174 462 L182 486" stroke="#5C4630" stroke-width="11" stroke-linecap="round"/>
+  <!-- belly -->
+  <ellipse cx="240" cy="400" rx="80" ry="40" fill="#BC8E5A"/>
+</svg>
