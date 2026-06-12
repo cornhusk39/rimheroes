@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Gestral main think tree: dryad-pattern survival/needs handling with vanilla
-       JobGiver_Work driving real WorkGivers (gated per-caste by CompGestralWorker). -->
+  <!-- Mim main think tree: dryad-pattern survival/needs handling with vanilla
+       JobGiver_Work driving real WorkGivers (gated per-caste by CompMimWorker). -->
   <ThinkTreeDef>
-    <defName>RH_Gestral</defName>
+    <defName>RH_Mim</defName>
     <thinkRoot Class="ThinkNode_Priority">
       <subNodes>
         <li Class="ThinkNode_ConditionalMustKeepLyingDown">

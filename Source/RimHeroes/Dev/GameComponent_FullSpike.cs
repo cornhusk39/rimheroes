@@ -7,12 +7,12 @@ namespace RimHeroes
 {
     /// <summary>
     /// Full-mod verification: launch with -quicktest -rhfullspike.
-    /// A: 12 classes, all with vestments + 3 gestral unlocks; 8 of 10 gestral castes have races.
+    /// A: 12 classes, all with vestments + 3 mim unlocks; 8 of 10 mim castes have races.
     /// B: class tome turns a commoner into a Bard (gating verified both ways).
     /// C: half-caster slots (Paladin L5 = 4/2); Cleric L5 revivifies a fresh corpse.
     /// D: enemy hero loot - hostile hero death drops an inlay item.
     /// E: hero corpse protection blocks cremation/butchering bills.
-    /// F: every wired gestral caste spawns with its work type prioritized.
+    /// F: every wired mim caste spawns with its work type prioritized.
     /// </summary>
     public class GameComponent_FullSpike : GameComponent
     {
@@ -56,9 +56,9 @@ namespace RimHeroes
                 case 0:
                 {
                     var classes = DefDatabase<HeroClassDef>.AllDefsListForReading;
-                    bool allComplete = classes.All(c => c.vestmentHediff != null && c.gestralUnlocks?.Count == 3);
+                    bool allComplete = classes.All(c => c.vestmentHediff != null && c.mimUnlocks?.Count == 3);
                     int casters = classes.Count(c => c.casterProgression != CasterProgression.None);
-                    int wiredCastes = DefDatabase<GestralJobDef>.AllDefsListForReading.Count(j => j.pawnKind != null);
+                    int wiredCastes = DefDatabase<MimJobDef>.AllDefsListForReading.Count(j => j.pawnKind != null);
                     passA = classes.Count == 12 && allComplete && casters == 8 && wiredCastes == 8;
                     Log.Message($"[RimHeroes.FullSpike] A: classes={classes.Count} complete={allComplete} casters={casters} wiredCastes={wiredCastes} pass={passA}");
                     state = 1;
@@ -143,22 +143,22 @@ namespace RimHeroes
                 case 5:
                 {
                     int ok = 0;
-                    var wired = DefDatabase<GestralJobDef>.AllDefsListForReading.Where(j => j.pawnKind != null).ToList();
+                    var wired = DefDatabase<MimJobDef>.AllDefsListForReading.Where(j => j.pawnKind != null).ToList();
                     foreach (var job in wired)
                     {
-                        var gestral = PawnGenerator.GeneratePawn(new PawnGenerationRequest(job.pawnKind, Faction.OfPlayer));
+                        var mim = PawnGenerator.GeneratePawn(new PawnGenerationRequest(job.pawnKind, Faction.OfPlayer));
                         CellFinder.TryFindRandomCellNear(map.Center, map, 12, c => c.Standable(map), out var cell);
-                        GenSpawn.Spawn(gestral, cell, map);
-                        var comp = gestral.TryGetComp<CompGestralWorker>();
+                        GenSpawn.Spawn(mim, cell, map);
+                        var comp = mim.TryGetComp<CompMimWorker>();
                         bool workOk = comp == null // combat castes have no worker comp
-                                      || comp.Props.workTypes.All(w => gestral.workSettings?.GetPriority(w) == 1);
-                        if (gestral.Spawned && workOk)
+                                      || comp.Props.workTypes.All(w => mim.workSettings?.GetPriority(w) == 1);
+                        if (mim.Spawned && workOk)
                         {
                             ok++;
                         }
                         else
                         {
-                            Log.Message($"[RimHeroes.FullSpike] F: caste {job.defName} failed (spawned={gestral.Spawned} workOk={workOk})");
+                            Log.Message($"[RimHeroes.FullSpike] F: caste {job.defName} failed (spawned={mim.Spawned} workOk={workOk})");
                         }
                     }
                     passF = ok == wired.Count && wired.Count == 8;

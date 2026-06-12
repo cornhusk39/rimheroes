@@ -6,10 +6,10 @@ namespace RimHeroes
 {
     /// <summary>
     /// Automated spike test: launch the game with -quicktest -rhspike and this component
-    /// spawns a Sweeper test gestral amid filth, then logs whether it actually cleans.
+    /// spawns a Sweeper test mim amid filth, then logs whether it actually cleans.
     /// Inert without the -rhspike command-line arg. Shuts the game down when finished.
     /// </summary>
-    public class GameComponent_GestralSpike : GameComponent
+    public class GameComponent_MimSpike : GameComponent
     {
         private const int SettleTicks = 600;
         private const int TestDurationTicks = 7500; // 3 in-game hours
@@ -22,7 +22,7 @@ namespace RimHeroes
         private IntVec3 center;
         private static readonly bool Active = GenCommandLine.CommandLineArgPassed("rhspike");
 
-        public GameComponent_GestralSpike(Game game) { }
+        public GameComponent_MimSpike(Game game) { }
 
         public override void GameComponentTick()
         {
@@ -85,7 +85,7 @@ namespace RimHeroes
             }
             startFilth = CountFilth(map);
 
-            var kind = PawnKindDef.Named("RH_GestralSweeperKind");
+            var kind = PawnKindDef.Named("RH_MimSweeperKind");
             sweeper = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, Faction.OfPlayer));
             GenSpawn.Spawn(sweeper, center, map);
             if (sweeper.needs?.food != null) sweeper.needs.food.CurLevelPercentage = 1f;

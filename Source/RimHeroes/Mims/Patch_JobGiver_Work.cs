@@ -6,8 +6,8 @@ namespace RimHeroes
 {
     /// <summary>
     /// Vanilla blocks JobGiver_Work for anything that isn't a colonist, colony mech, or colony
-    /// subhuman. Gestrals are none of those (IsColonyMech requires Biotech + mechanoid flesh).
-    /// This postfix re-admits gestral pawns for their allowed work types, re-applying the gates
+    /// subhuman. Mims are none of those (IsColonyMech requires Biotech + mechanoid flesh).
+    /// This postfix re-admits mim pawns for their allowed work types, re-applying the gates
     /// the early-out skipped (work tags, ShouldSkip, required capacities).
     /// </summary>
     [HarmonyPatch(typeof(JobGiver_Work), "PawnCanUseWorkGiver")]
@@ -19,7 +19,7 @@ namespace RimHeroes
             {
                 return;
             }
-            var comp = pawn.TryGetComp<CompGestralWorker>();
+            var comp = pawn.TryGetComp<CompMimWorker>();
             if (comp == null)
             {
                 return;

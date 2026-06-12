@@ -109,8 +109,8 @@ namespace RimHeroes
             }
 
             var upcoming = classDef.levelGrants?.Where(g => g.level > hediff.level).OrderBy(g => g.level).ToList();
-            var gestrals = classDef.gestralUnlocks?.Where(g => g.level > hediff.level).OrderBy(g => g.level).ToList();
-            if (!upcoming.NullOrEmpty() || !gestrals.NullOrEmpty())
+            var mims = classDef.mimUnlocks?.Where(g => g.level > hediff.level).OrderBy(g => g.level).ToList();
+            if (!upcoming.NullOrEmpty() || !mims.NullOrEmpty())
             {
                 sb.AppendLine("RH_TabUpcoming".Translate().Resolve() + ":");
                 foreach (var grant in upcoming ?? Enumerable.Empty<HeroLevelGrant>())
@@ -120,19 +120,19 @@ namespace RimHeroes
                     foreach (var a in grant.abilities ?? Enumerable.Empty<AbilityDef>())
                         sb.AppendLine($"  L{grant.level}: {a.LabelCap}");
                 }
-                foreach (var g in gestrals ?? Enumerable.Empty<GestralUnlock>())
+                foreach (var g in mims ?? Enumerable.Empty<MimUnlock>())
                 {
-                    sb.AppendLine($"  L{g.level}: {"RH_TabGestral".Translate(g.job.LabelCap).Resolve()}");
+                    sb.AppendLine($"  L{g.level}: {"RH_TabMim".Translate(g.job.LabelCap).Resolve()}");
                 }
             }
 
-            // Unlocked gestrals
-            var unlockedGestrals = classDef.gestralUnlocks?.Where(g => g.level <= hediff.level).ToList();
-            if (!unlockedGestrals.NullOrEmpty())
+            // Unlocked mims
+            var unlockedMims = classDef.mimUnlocks?.Where(g => g.level <= hediff.level).ToList();
+            if (!unlockedMims.NullOrEmpty())
             {
                 sb.AppendLine();
-                sb.AppendLine("RH_TabGestralsUnlocked".Translate().Resolve() + ":");
-                foreach (var g in unlockedGestrals)
+                sb.AppendLine("RH_TabMimsUnlocked".Translate().Resolve() + ":");
+                foreach (var g in unlockedMims)
                     sb.AppendLine($"  {g.job.LabelCap}");
             }
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Gestral race (placeholder rat art, tinted per job). One ThingDef per job caste so each
-       carries its own CompGestralWorker work-type allowlist (dryad pattern). -->
+  <!-- Mim race (placeholder rat art, tinted per job). One ThingDef per job caste so each
+       carries its own CompMimWorker work-type allowlist (dryad pattern). -->
 
-  <ThingDef Name="RH_GestralBase" ParentName="AnimalThingBase" Abstract="True">
+  <ThingDef Name="RH_MimBase" ParentName="AnimalThingBase" Abstract="True">
     <statBases>
       <MoveSpeed>4.2</MoveSpeed>
       <MarketValue>300</MarketValue>
@@ -37,7 +37,7 @@
     </tools>
     <race>
       <body>QuadrupedAnimalWithPawsAndTail</body>
-      <thinkTreeMain>RH_Gestral</thinkTreeMain>
+      <thinkTreeMain>RH_Mim</thinkTreeMain>
       <baseBodySize>0.55</baseBodySize>
       <baseHealthScale>0.6</baseHealthScale>
       <baseHungerRate>0.12</baseHungerRate>
@@ -58,17 +58,17 @@
     </race>
   </ThingDef>
 
-  <PawnKindDef Name="RH_GestralKindBase" ParentName="AnimalKindBase" Abstract="True">
+  <PawnKindDef Name="RH_MimKindBase" ParentName="AnimalKindBase" Abstract="True">
     <combatPower>30</combatPower>
   </PawnKindDef>
 
   <!-- Porter: hauler -->
-  <ThingDef ParentName="RH_GestralBase">
-    <defName>RH_GestralPorter</defName>
-    <label>porter gestral</label>
+  <ThingDef ParentName="RH_MimBase">
+    <defName>RH_MimPorter</defName>
+    <label>porter mim</label>
     <description>A small, devoted helper creature that carries burdens so its master never has to.</description>
     <comps>
-      <li Class="RimHeroes.CompProperties_GestralWorker">
+      <li Class="RimHeroes.CompProperties_MimWorker">
         <workTypes>
           <li>Hauling</li>
         </workTypes>
@@ -76,14 +76,14 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="RH_GestralKindBase">
-    <defName>RH_GestralPorterKind</defName>
-    <label>porter gestral</label>
-    <race>RH_GestralPorter</race>
+  <PawnKindDef ParentName="RH_MimKindBase">
+    <defName>RH_MimPorterKind</defName>
+    <label>porter mim</label>
+    <race>RH_MimPorter</race>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/RimHeroes/Gestrals/Porter/Porter</texPath>
+          <texPath>Things/RimHeroes/Mims/Porter/Porter</texPath>
           <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -95,12 +95,12 @@
   </PawnKindDef>
 
   <!-- Sweeper: cleaner -->
-  <ThingDef ParentName="RH_GestralBase">
-    <defName>RH_GestralSweeper</defName>
-    <label>sweeper gestral</label>
+  <ThingDef ParentName="RH_MimBase">
+    <defName>RH_MimSweeper</defName>
+    <label>sweeper mim</label>
     <description>A small, devoted helper creature that tidies relentlessly.</description>
     <comps>
-      <li Class="RimHeroes.CompProperties_GestralWorker">
+      <li Class="RimHeroes.CompProperties_MimWorker">
         <workTypes>
           <li>Cleaning</li>
         </workTypes>
@@ -108,10 +108,10 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="RH_GestralKindBase">
-    <defName>RH_GestralSweeperKind</defName>
-    <label>sweeper gestral</label>
-    <race>RH_GestralSweeper</race>
+  <PawnKindDef ParentName="RH_MimKindBase">
+    <defName>RH_MimSweeperKind</defName>
+    <label>sweeper mim</label>
+    <race>RH_MimSweeper</race>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -129,9 +129,9 @@
   </PawnKindDef>
 
 
-  <ThingDef ParentName="RH_GestralBase">
-    <defName>RH_GestralDigger</defName>
-    <label>digger gestral</label>
+  <ThingDef ParentName="RH_MimBase">
+    <defName>RH_MimDigger</defName>
+    <label>digger mim</label>
     <description>A small, devoted helper creature that tunnels with unsettling enthusiasm.</description>
     <statBases Inherit="False">
       <MoveSpeed>4.2</MoveSpeed>
@@ -141,7 +141,7 @@
       <Wildness>0</Wildness>
     </statBases>
     <comps>
-      <li Class="RimHeroes.CompProperties_GestralWorker">
+      <li Class="RimHeroes.CompProperties_MimWorker">
         <workTypes>
           <li>Mining</li>
         </workTypes>
@@ -149,10 +149,10 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="RH_GestralKindBase">
-    <defName>RH_GestralDiggerKind</defName>
-    <label>digger gestral</label>
-    <race>RH_GestralDigger</race>
+  <PawnKindDef ParentName="RH_MimKindBase">
+    <defName>RH_MimDiggerKind</defName>
+    <label>digger mim</label>
+    <race>RH_MimDigger</race>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -169,9 +169,9 @@
     </lifeStages>
   </PawnKindDef>
 
-  <ThingDef ParentName="RH_GestralBase">
-    <defName>RH_GestralHearth</defName>
-    <label>hearth gestral</label>
+  <ThingDef ParentName="RH_MimBase">
+    <defName>RH_MimHearth</defName>
+    <label>hearth mim</label>
     <description>A small, devoted helper creature that keeps the pot full and the fire lit.</description>
     <statBases Inherit="False">
       <MoveSpeed>4.2</MoveSpeed>
@@ -181,7 +181,7 @@
       <Wildness>0</Wildness>
     </statBases>
     <comps>
-      <li Class="RimHeroes.CompProperties_GestralWorker">
+      <li Class="RimHeroes.CompProperties_MimWorker">
         <workTypes>
           <li>Cooking</li>
         </workTypes>
@@ -189,10 +189,10 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="RH_GestralKindBase">
-    <defName>RH_GestralHearthKind</defName>
-    <label>hearth gestral</label>
-    <race>RH_GestralHearth</race>
+  <PawnKindDef ParentName="RH_MimKindBase">
+    <defName>RH_MimHearthKind</defName>
+    <label>hearth mim</label>
+    <race>RH_MimHearth</race>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -209,9 +209,9 @@
     </lifeStages>
   </PawnKindDef>
 
-  <ThingDef ParentName="RH_GestralBase">
-    <defName>RH_GestralSprout</defName>
-    <label>sprout gestral</label>
+  <ThingDef ParentName="RH_MimBase">
+    <defName>RH_MimSprout</defName>
+    <label>sprout mim</label>
     <description>A small, devoted helper creature that tends growing things.</description>
     <statBases Inherit="False">
       <MoveSpeed>4.2</MoveSpeed>
@@ -221,7 +221,7 @@
       <Wildness>0</Wildness>
     </statBases>
     <comps>
-      <li Class="RimHeroes.CompProperties_GestralWorker">
+      <li Class="RimHeroes.CompProperties_MimWorker">
         <workTypes>
           <li>Growing</li>
         </workTypes>
@@ -229,10 +229,10 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="RH_GestralKindBase">
-    <defName>RH_GestralSproutKind</defName>
-    <label>sprout gestral</label>
-    <race>RH_GestralSprout</race>
+  <PawnKindDef ParentName="RH_MimKindBase">
+    <defName>RH_MimSproutKind</defName>
+    <label>sprout mim</label>
+    <race>RH_MimSprout</race>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -249,9 +249,9 @@
     </lifeStages>
   </PawnKindDef>
 
-  <ThingDef ParentName="RH_GestralBase">
-    <defName>RH_GestralSalve</defName>
-    <label>salve gestral</label>
+  <ThingDef ParentName="RH_MimBase">
+    <defName>RH_MimSalve</defName>
+    <label>salve mim</label>
     <description>A small, devoted helper creature that fusses over wounds and the wounded.</description>
     <statBases Inherit="False">
       <MoveSpeed>4.2</MoveSpeed>
@@ -261,7 +261,7 @@
       <Wildness>0</Wildness>
     </statBases>
     <comps>
-      <li Class="RimHeroes.CompProperties_GestralWorker">
+      <li Class="RimHeroes.CompProperties_MimWorker">
         <workTypes>
           <li>Doctor</li>
         </workTypes>
@@ -269,10 +269,10 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="RH_GestralKindBase">
-    <defName>RH_GestralSalveKind</defName>
-    <label>salve gestral</label>
-    <race>RH_GestralSalve</race>
+  <PawnKindDef ParentName="RH_MimKindBase">
+    <defName>RH_MimSalveKind</defName>
+    <label>salve mim</label>
+    <race>RH_MimSalve</race>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -289,9 +289,9 @@
     </lifeStages>
   </PawnKindDef>
 
-  <ThingDef ParentName="RH_GestralBase">
-    <defName>RH_GestralScrapper</defName>
-    <label>scrapper gestral</label>
+  <ThingDef ParentName="RH_MimBase">
+    <defName>RH_MimScrapper</defName>
+    <label>scrapper mim</label>
     <description>A small, fierce, devoted fighter. Entirely too brave.</description>
     <race>
       <baseHealthScale>0.9</baseHealthScale>
@@ -306,14 +306,14 @@
     <comps>
       <li Class="VEF.AnimalBehaviours.CompProperties_Draftable" />
       <!-- Empty worker comp: initializes workSettings (JobGiver_Work needs it) with no work enabled. -->
-      <li Class="RimHeroes.CompProperties_GestralWorker" />
+      <li Class="RimHeroes.CompProperties_MimWorker" />
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="RH_GestralKindBase">
-    <defName>RH_GestralScrapperKind</defName>
-    <label>scrapper gestral</label>
-    <race>RH_GestralScrapper</race>
+  <PawnKindDef ParentName="RH_MimKindBase">
+    <defName>RH_MimScrapperKind</defName>
+    <label>scrapper mim</label>
+    <race>RH_MimScrapper</race>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -330,9 +330,9 @@
     </lifeStages>
   </PawnKindDef>
 
-  <ThingDef ParentName="RH_GestralBase">
-    <defName>RH_GestralBulwark</defName>
-    <label>bulwark gestral</label>
+  <ThingDef ParentName="RH_MimBase">
+    <defName>RH_MimBulwark</defName>
+    <label>bulwark mim</label>
     <description>A walking shield with opinions. Slow, devoted, very hard to put down.</description>
     <race>
       <baseHealthScale>1.5</baseHealthScale>
@@ -348,14 +348,14 @@
     <comps>
       <li Class="VEF.AnimalBehaviours.CompProperties_Draftable" />
       <!-- Empty worker comp: initializes workSettings (JobGiver_Work needs it) with no work enabled. -->
-      <li Class="RimHeroes.CompProperties_GestralWorker" />
+      <li Class="RimHeroes.CompProperties_MimWorker" />
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="RH_GestralKindBase">
-    <defName>RH_GestralBulwarkKind</defName>
-    <label>bulwark gestral</label>
-    <race>RH_GestralBulwark</race>
+  <PawnKindDef ParentName="RH_MimKindBase">
+    <defName>RH_MimBulwarkKind</defName>
+    <label>bulwark mim</label>
+    <race>RH_MimBulwark</race>
     <lifeStages>
       <li>
         <bodyGraphicData>

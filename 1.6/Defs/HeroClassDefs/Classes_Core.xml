@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- The full class roster. Gestral trios per DESIGN.md (L3/L8/L12; L20 free choice in code
+  <!-- The full class roster. Mim trios per DESIGN.md (L3/L8/L12; L20 free choice in code
        later). Slinger and Wisp castes exist as jobs but have no race yet - those slots simply
        don't spawn until their castes ship. -->
 
@@ -24,11 +24,11 @@
         </features>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Porter</job></li>
-      <li><level>8</level><job>RH_Gestral_Bulwark</job></li>
-      <li><level>12</level><job>RH_Gestral_Scrapper</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Porter</job></li>
+      <li><level>8</level><job>RH_Mim_Bulwark</job></li>
+      <li><level>12</level><job>RH_Mim_Scrapper</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -50,11 +50,11 @@
         </features>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Porter</job></li>
-      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
-      <li><level>12</level><job>RH_Gestral_Scrapper</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Porter</job></li>
+      <li><level>8</level><job>RH_Mim_Hearth</job></li>
+      <li><level>12</level><job>RH_Mim_Scrapper</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -76,11 +76,11 @@
         </features>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
-      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
-      <li><level>12</level><job>RH_Gestral_Scrapper</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Sweeper</job></li>
+      <li><level>8</level><job>RH_Mim_Hearth</job></li>
+      <li><level>12</level><job>RH_Mim_Scrapper</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -102,11 +102,11 @@
         </features>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
-      <li><level>8</level><job>RH_Gestral_Digger</job></li>
-      <li><level>12</level><job>RH_Gestral_Scrapper</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Sweeper</job></li>
+      <li><level>8</level><job>RH_Mim_Digger</job></li>
+      <li><level>12</level><job>RH_Mim_Scrapper</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -130,11 +130,11 @@
         </abilities>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Porter</job></li>
-      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
-      <li><level>12</level><job>RH_Gestral_Slinger</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Porter</job></li>
+      <li><level>8</level><job>RH_Mim_Hearth</job></li>
+      <li><level>12</level><job>RH_Mim_Slinger</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -158,11 +158,11 @@
         </abilities>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Porter</job></li>
-      <li><level>8</level><job>RH_Gestral_Salve</job></li>
-      <li><level>12</level><job>RH_Gestral_Bulwark</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Porter</job></li>
+      <li><level>8</level><job>RH_Mim_Salve</job></li>
+      <li><level>12</level><job>RH_Mim_Bulwark</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -187,11 +187,11 @@
         </abilities>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
-      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
-      <li><level>12</level><job>RH_Gestral_Salve</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Sweeper</job></li>
+      <li><level>8</level><job>RH_Mim_Hearth</job></li>
+      <li><level>12</level><job>RH_Mim_Salve</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -227,11 +227,11 @@
         </abilities>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Porter</job></li>
-      <li><level>8</level><job>RH_Gestral_Sprout</job></li>
-      <li><level>12</level><job>RH_Gestral_Salve</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Porter</job></li>
+      <li><level>8</level><job>RH_Mim_Sprout</job></li>
+      <li><level>12</level><job>RH_Mim_Salve</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -256,11 +256,11 @@
         </abilities>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
-      <li><level>8</level><job>RH_Gestral_Bulwark</job></li>
-      <li><level>12</level><job>RH_Gestral_Wisp</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Sweeper</job></li>
+      <li><level>8</level><job>RH_Mim_Bulwark</job></li>
+      <li><level>12</level><job>RH_Mim_Wisp</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -284,11 +284,11 @@
         </abilities>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Porter</job></li>
-      <li><level>8</level><job>RH_Gestral_Bulwark</job></li>
-      <li><level>12</level><job>RH_Gestral_Wisp</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Porter</job></li>
+      <li><level>8</level><job>RH_Mim_Bulwark</job></li>
+      <li><level>12</level><job>RH_Mim_Wisp</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -307,11 +307,11 @@
         </abilities>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
-      <li><level>8</level><job>RH_Gestral_Hearth</job></li>
-      <li><level>12</level><job>RH_Gestral_Wisp</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Sweeper</job></li>
+      <li><level>8</level><job>RH_Mim_Hearth</job></li>
+      <li><level>12</level><job>RH_Mim_Wisp</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
   <RimHeroes.HeroClassDef>
@@ -329,11 +329,11 @@
         </abilities>
       </li>
     </levelGrants>
-    <gestralUnlocks>
-      <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
-      <li><level>8</level><job>RH_Gestral_Digger</job></li>
-      <li><level>12</level><job>RH_Gestral_Wisp</job></li>
-    </gestralUnlocks>
+    <mimUnlocks>
+      <li><level>3</level><job>RH_Mim_Sweeper</job></li>
+      <li><level>8</level><job>RH_Mim_Digger</job></li>
+      <li><level>12</level><job>RH_Mim_Wisp</job></li>
+    </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
 </Defs>

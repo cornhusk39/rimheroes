@@ -9,7 +9,7 @@ namespace RimHeroes
     /// <summary>
     /// The Hero progression engine, one per Hero pawn (VPE Hediff_PsycastAbilities pattern).
     /// Stores class, level, XP; applies per-level grants. Will grow: points, known spells,
-    /// slot state, vestment state, gestral roster.
+    /// slot state, vestment state, mim roster.
     /// </summary>
     public class Hediff_HeroLevels : HediffWithComps
     {
@@ -53,7 +53,7 @@ namespace RimHeroes
             }
             if (pawn.IsHashIntervalTick(250, delta))
             {
-                SyncGestrals();
+                SyncMims();
             }
             TickRests(delta);
             if (pawn.IsHashIntervalTick(30, delta))
@@ -62,85 +62,85 @@ namespace RimHeroes
             }
         }
 
-        // ===== Gestral retinue =====
+        // ===== Mim retinue =====
 
-        private List<GestralBond> gestralBonds = new List<GestralBond>();
+        private List<MimBond> mimBonds = new List<MimBond>();
 
-        public List<GestralBond> GestralBonds => gestralBonds;
+        public List<MimBond> MimBonds => mimBonds;
 
         private const int InitialSpawnDelayTicks = 600;
 
         /// <summary>
         /// Keeps the retinue in sync with unlocks: creates bonds as levels unlock them, schedules
-        /// walk-in replacements (1-3 days) when a gestral dies or departs, and spawns arrivals.
+        /// walk-in replacements (1-3 days) when a mim dies or departs, and spawns arrivals.
         /// Stops automatically while the master is dead (hediffs don't tick on corpses) and
         /// resumes on resurrection.
         /// </summary>
-        private void SyncGestrals()
+        private void SyncMims()
         {
             // Player heroes only: enemy heroes don't trail walk-in retinues (their combat
-            // gestrals will come with raid composition work later).
-            if (classDef?.gestralUnlocks == null || pawn.Dead || pawn.Faction != Faction.OfPlayer)
+            // mims will come with raid composition work later).
+            if (classDef?.mimUnlocks == null || pawn.Dead || pawn.Faction != Faction.OfPlayer)
             {
                 return;
             }
             int now = Find.TickManager.TicksGame;
-            foreach (var unlock in classDef.gestralUnlocks)
+            foreach (var unlock in classDef.mimUnlocks)
             {
                 if (unlock.level > level || unlock.job?.pawnKind == null)
                 {
                     continue;
                 }
-                var bond = gestralBonds.FirstOrDefault(b => b.job == unlock.job);
+                var bond = mimBonds.FirstOrDefault(b => b.job == unlock.job);
                 if (bond == null)
                 {
-                    bond = new GestralBond { job = unlock.job, respawnAtTick = now + InitialSpawnDelayTicks };
-                    gestralBonds.Add(bond);
+                    bond = new MimBond { job = unlock.job, respawnAtTick = now + InitialSpawnDelayTicks };
+                    mimBonds.Add(bond);
                     continue;
                 }
-                if (bond.gestral != null && (bond.gestral.Dead || bond.gestral.Destroyed || !bond.gestral.SpawnedOrAnyParentSpawned))
+                if (bond.mim != null && (bond.mim.Dead || bond.mim.Destroyed || !bond.mim.SpawnedOrAnyParentSpawned))
                 {
-                    bool died = bond.gestral.Dead || bond.gestral.Destroyed;
-                    bond.gestral = null;
+                    bool died = bond.mim.Dead || bond.mim.Destroyed;
+                    bond.mim = null;
                     bond.respawnAtTick = now + Rand.Range(60000, 180000); // 1-3 days
                     if (died && PawnUtility.ShouldSendNotificationAbout(pawn))
                     {
-                        Messages.Message("RH_GestralLost".Translate(unlock.job.LabelCap, pawn.LabelShortCap), pawn, MessageTypeDefOf.NegativeEvent);
+                        Messages.Message("RH_MimLost".Translate(unlock.job.LabelCap, pawn.LabelShortCap), pawn, MessageTypeDefOf.NegativeEvent);
                     }
                 }
-                if (bond.gestral == null && now >= bond.respawnAtTick && pawn.Spawned && pawn.Map != null)
+                if (bond.mim == null && now >= bond.respawnAtTick && pawn.Spawned && pawn.Map != null)
                 {
-                    SpawnGestral(bond);
+                    SpawnMim(bond);
                 }
             }
         }
 
-        private void SpawnGestral(GestralBond bond)
+        private void SpawnMim(MimBond bond)
         {
             var map = pawn.Map;
             if (!RCellFinder.TryFindRandomPawnEntryCell(out var cell, map, CellFinder.EdgeRoadChance_Animal))
             {
                 return;
             }
-            var gestral = PawnGenerator.GeneratePawn(new PawnGenerationRequest(bond.job.pawnKind, pawn.Faction));
-            GenSpawn.Spawn(gestral, cell, map);
-            if (gestral.connections == null)
+            var mim = PawnGenerator.GeneratePawn(new PawnGenerationRequest(bond.job.pawnKind, pawn.Faction));
+            GenSpawn.Spawn(mim, cell, map);
+            if (mim.connections == null)
             {
-                gestral.connections = new Pawn_ConnectionsTracker(gestral);
+                mim.connections = new Pawn_ConnectionsTracker(mim);
             }
-            gestral.connections.ConnectTo(pawn);
-            var devotion = (Hediff_GestralDevotion)gestral.health.AddHediff(RH_DefOf.RH_GestralDevotion);
+            mim.connections.ConnectTo(pawn);
+            var devotion = (Hediff_MimDevotion)mim.health.AddHediff(RH_DefOf.RH_MimDevotion);
             devotion.master = pawn;
-            bond.gestral = gestral;
+            bond.mim = mim;
             bond.respawnAtTick = -1;
-            Messages.Message("RH_GestralArrived".Translate(bond.job.LabelCap, pawn.LabelShortCap), gestral, MessageTypeDefOf.PositiveEvent);
+            Messages.Message("RH_MimArrived".Translate(bond.job.LabelCap, pawn.LabelShortCap), mim, MessageTypeDefOf.PositiveEvent);
         }
 
-        public void DebugForceGestralRespawn()
+        public void DebugForceMimRespawn()
         {
-            foreach (var bond in gestralBonds)
+            foreach (var bond in mimBonds)
             {
-                if (bond.gestral == null)
+                if (bond.mim == null)
                 {
                     bond.respawnAtTick = 0;
                 }
@@ -410,7 +410,7 @@ namespace RimHeroes
 
         public void Notify_FailedDeathSaves()
         {
-            // Hook for future bookkeeping (gestral panic event, revival quest seeding).
+            // Hook for future bookkeeping (mim panic event, revival quest seeding).
         }
 
         /// <summary>Set level directly (enemy hero generation, debug): applies grants + vestment tier.</summary>
@@ -492,7 +492,7 @@ namespace RimHeroes
             Scribe_Defs.Look(ref classDef, "classDef");
             Scribe_Values.Look(ref level, "level", 1);
             Scribe_Values.Look(ref xp, "xp");
-            Scribe_Collections.Look(ref gestralBonds, "gestralBonds", LookMode.Deep);
+            Scribe_Collections.Look(ref mimBonds, "mimBonds", LookMode.Deep);
             Scribe_Collections.Look(ref slotsExpended, "slotsExpended", LookMode.Value);
             Scribe_Collections.Look(ref autocastSpells, "autocastSpells", LookMode.Def);
             Scribe_Values.Look(ref longResting, "longResting");
@@ -500,23 +500,23 @@ namespace RimHeroes
             Scribe_Values.Look(ref shortRestArmed, "shortRestArmed", true);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                if (gestralBonds == null) gestralBonds = new List<GestralBond>();
+                if (mimBonds == null) mimBonds = new List<MimBond>();
                 if (autocastSpells == null) autocastSpells = new List<AbilityDef>();
                 if (slotsExpended == null || slotsExpended.Count != 10) slotsExpended = new List<int>(new int[10]);
             }
         }
     }
 
-    public class GestralBond : IExposable
+    public class MimBond : IExposable
     {
-        public GestralJobDef job;
-        public Pawn gestral;
+        public MimJobDef job;
+        public Pawn mim;
         public int respawnAtTick = -1;
 
         public void ExposeData()
         {
             Scribe_Defs.Look(ref job, "job");
-            Scribe_References.Look(ref gestral, "gestral");
+            Scribe_References.Look(ref mim, "mim");
             Scribe_Values.Look(ref respawnAtTick, "respawnAtTick", -1);
         }
     }

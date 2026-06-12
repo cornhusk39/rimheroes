@@ -18,8 +18,8 @@ namespace RimHeroes
         // What each level grants: abilities (spells/features as AbilityDefs), passive feature hediffs.
         public List<HeroLevelGrant> levelGrants = new List<HeroLevelGrant>();
 
-        // The fixed gestral trio + the L20 free pick is handled in code (level 20 => choice UI).
-        public List<GestralUnlock> gestralUnlocks = new List<GestralUnlock>();
+        // The fixed mim trio + the L20 free pick is handled in code (level 20 => choice UI).
+        public List<MimUnlock> mimUnlocks = new List<MimUnlock>();
 
         public override IEnumerable<string> ConfigErrors()
         {
@@ -35,9 +35,9 @@ namespace RimHeroes
         public List<HediffDef> features;     // passive class features (Extra Attack, Evasion, ...)
     }
 
-    public class GestralUnlock
+    public class MimUnlock
     {
         public int level = 3;
-        public GestralJobDef job;
+        public MimJobDef job;
     }
 }

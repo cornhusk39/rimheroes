@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- The progression engine. One per Hero pawn; stores class/level/XP and (later) slots, vestment, gestral roster. -->
+  <!-- The progression engine. One per Hero pawn; stores class/level/XP and (later) slots, vestment, mim roster. -->
   <HediffDef>
     <defName>RH_HeroLevels</defName>
     <label>heroic destiny</label>
@@ -32,12 +32,12 @@
     </stages>
   </HediffDef>
 
-  <!-- The gestral side of the bond: severity mirrors the master's condition. -->
+  <!-- The mim side of the bond: severity mirrors the master's condition. -->
   <HediffDef>
-    <defName>RH_GestralDevotion</defName>
+    <defName>RH_MimDevotion</defName>
     <label>devotion</label>
-    <description>This gestral is bound to a hero. Its spirits - and its diligence - rise and fall with its master's condition.</description>
-    <hediffClass>RimHeroes.Hediff_GestralDevotion</hediffClass>
+    <description>This mim is bound to a hero. Its spirits - and its diligence - rise and fall with its master's condition.</description>
+    <hediffClass>RimHeroes.Hediff_MimDevotion</hediffClass>
     <isBad>false</isBad>
     <initialSeverity>0.1</initialSeverity>
     <everCurableByItem>false</everCurableByItem>

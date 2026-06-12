@@ -6,11 +6,11 @@ using Verse;
 namespace RimHeroes
 {
     /// <summary>
-    /// Automated gestral-bonding test: launch with -quicktest -rhbondspike.
-    /// Phase A: Fighter L5 hero -> Porter gestral walks in, bonded + devoted.
-    /// Phase B: gestral killed -> replacement scheduled -> forced -> new one walks in.
-    /// Phase C: master killed -> devotion goes bereft, gestral panics; leave phase forced -> exits map.
-    /// Phase D: master resurrected -> respawn forced -> fresh gestral arrives.
+    /// Automated mim-bonding test: launch with -quicktest -rhbondspike.
+    /// Phase A: Fighter L5 hero -> Porter mim walks in, bonded + devoted.
+    /// Phase B: mim killed -> replacement scheduled -> forced -> new one walks in.
+    /// Phase C: master killed -> devotion goes bereft, mim panics; leave phase forced -> exits map.
+    /// Phase D: master resurrected -> respawn forced -> fresh mim arrives.
     /// </summary>
     public class GameComponent_BondSpike : GameComponent
     {
@@ -26,7 +26,7 @@ namespace RimHeroes
 
         private Hediff_HeroLevels Hero => HeroUtility.GetHeroHediff(hero);
 
-        private Pawn Gestral => Hero?.GestralBonds.FirstOrDefault()?.gestral;
+        private Pawn Mim => Hero?.MimBonds.FirstOrDefault()?.mim;
 
         public override void GameComponentUpdate()
         {
@@ -72,12 +72,12 @@ namespace RimHeroes
                     break;
                 case 1: // wait for first arrival
                 {
-                    var g = Gestral;
+                    var g = Mim;
                     if (g != null && g.Spawned)
                     {
                         bool bonded = g.connections?.ConnectedThings.Contains(hero) ?? false;
                         var dev = g.GetDevotion();
-                        passA = bonded && dev?.master == hero && g.Faction == Faction.OfPlayer && g.kindDef.defName == "RH_GestralPorterKind";
+                        passA = bonded && dev?.master == hero && g.Faction == Faction.OfPlayer && g.kindDef.defName == "RH_MimPorterKind";
                         Log.Message($"[RimHeroes.BondSpike] PhaseA: arrived={g.LabelShort} kind={g.kindDef.defName} bonded={bonded} devotionMaster={(dev?.master == hero)} state={dev?.StateNow} pass={passA}");
                         g.Kill(null);
                         state = 2;
@@ -92,11 +92,11 @@ namespace RimHeroes
                 }
                 case 2: // wait for loss detection, then force respawn
                 {
-                    var bond = Hero.GestralBonds.FirstOrDefault();
-                    if (bond != null && bond.gestral == null && bond.respawnAtTick > 0)
+                    var bond = Hero.MimBonds.FirstOrDefault();
+                    if (bond != null && bond.mim == null && bond.respawnAtTick > 0)
                     {
                         Log.Message($"[RimHeroes.BondSpike] PhaseB: loss detected, replacement in {(bond.respawnAtTick - Find.TickManager.TicksGame) / 2500f:F1}h; forcing now");
-                        Hero.DebugForceGestralRespawn();
+                        Hero.DebugForceMimRespawn();
                         state = 3;
                         attempts = 0;
                     }
@@ -109,7 +109,7 @@ namespace RimHeroes
                 }
                 case 3: // wait for replacement
                 {
-                    var g = Gestral;
+                    var g = Mim;
                     if (g != null && g.Spawned && !g.Dead)
                     {
                         passB = true;
@@ -127,7 +127,7 @@ namespace RimHeroes
                 }
                 case 4: // wait for bereft panic
                 {
-                    var g = Gestral;
+                    var g = Mim;
                     var dev = g?.GetDevotion();
                     if (dev?.StateNow == DevotionState.Bereft && dev.masterDeadTick >= 0)
                     {
@@ -145,18 +145,18 @@ namespace RimHeroes
                 }
                 case 5: // wait for map exit
                 {
-                    var g = Hero?.GestralBonds.FirstOrDefault()?.gestral;
+                    var g = Hero?.MimBonds.FirstOrDefault()?.mim;
                     if (g == null || !g.Spawned)
                     {
                         passC = true;
-                        Log.Message("[RimHeroes.BondSpike] PhaseC: gestral left the map. Resurrecting master...");
+                        Log.Message("[RimHeroes.BondSpike] PhaseC: mim left the map. Resurrecting master...");
                         ResurrectionUtility.TryResurrect(hero);
                         state = 6;
                         attempts = 0;
                     }
                     else if (++attempts > 25)
                     {
-                        Log.Message($"[RimHeroes.BondSpike] RESULT: verdict=FAIL (gestral never left; job={g.CurJobDef?.defName})");
+                        Log.Message($"[RimHeroes.BondSpike] RESULT: verdict=FAIL (mim never left; job={g.CurJobDef?.defName})");
                         state = 9;
                     }
                     else
@@ -175,10 +175,10 @@ namespace RimHeroes
                         state = 9;
                         break;
                     }
-                    var bond = Hero.GestralBonds.FirstOrDefault();
-                    if (bond != null && bond.gestral == null)
+                    var bond = Hero.MimBonds.FirstOrDefault();
+                    if (bond != null && bond.mim == null)
                     {
-                        Hero.DebugForceGestralRespawn();
+                        Hero.DebugForceMimRespawn();
                         state = 7;
                         attempts = 0;
                     }
@@ -189,18 +189,18 @@ namespace RimHeroes
                     }
                     break;
                 }
-                case 7: // wait for fresh gestral
+                case 7: // wait for fresh mim
                 {
-                    var g = Gestral;
+                    var g = Mim;
                     if (g != null && g.Spawned && !g.Dead)
                     {
                         passD = g.GetDevotion()?.StateNow == DevotionState.Content;
-                        Log.Message($"[RimHeroes.BondSpike] PhaseD: fresh gestral {g.LabelShort} arrived, devotion={g.GetDevotion()?.StateNow}");
+                        Log.Message($"[RimHeroes.BondSpike] PhaseD: fresh mim {g.LabelShort} arrived, devotion={g.GetDevotion()?.StateNow}");
                         state = 8;
                     }
                     else if (++attempts > 15)
                     {
-                        Log.Message("[RimHeroes.BondSpike] RESULT: verdict=FAIL (no gestral after resurrection)");
+                        Log.Message("[RimHeroes.BondSpike] RESULT: verdict=FAIL (no mim after resurrection)");
                         state = 9;
                     }
                     break;

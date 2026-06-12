@@ -5,8 +5,8 @@ namespace RimHeroes
 {
     public static class DevotionUtility
     {
-        public static Hediff_GestralDevotion GetDevotion(this Pawn pawn) =>
-            pawn?.health?.hediffSet?.GetFirstHediffOfDef(RH_DefOf.RH_GestralDevotion) as Hediff_GestralDevotion;
+        public static Hediff_MimDevotion GetDevotion(this Pawn pawn) =>
+            pawn?.health?.hediffSet?.GetFirstHediffOfDef(RH_DefOf.RH_MimDevotion) as Hediff_MimDevotion;
     }
 
     public class ThinkNode_ConditionalDevotionState : ThinkNode_Conditional

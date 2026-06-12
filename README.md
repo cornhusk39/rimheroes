@@ -2,7 +2,7 @@
 
 Rare **Hero** pawns bear a D&D class central to their identity: levels 1–20, Vancian spell slots,
 death saving throws, an unremovable class vestment with inlay slots, and a retinue of
-job-specialized **gestral** followers. Plus a growing D&D bestiary — some of it wildshape-able.
+job-specialized **mim** followers. Plus a growing D&D bestiary — some of it wildshape-able.
 
 **Status: playtest alpha.** All systems verified by automated in-game tests. Placeholder art
 everywhere (tinted vanilla textures).
@@ -17,13 +17,13 @@ everywhere (tinted vanilla textures).
 4. Or in any colony: spawn/buy a **class tome** (12 kinds, exotic goods) and have a pawn study it.
 
 ### What to try
-- **Hero tab** on your hero: level, XP bar, spell slots, features, vestment + inlay slots, gestral roster.
+- **Hero tab** on your hero: level, XP bar, spell slots, features, vestment + inlay slots, mim roster.
 - **Casters**: cast from slots, run dry, sleep (short rest = 1 slot back), use the **Long rest**
   toggle gizmo (~12h sleep = all slots). Autocast toggles per spell; hostile cantrips default on.
 - **Druid**: wildshape ladder — dire wolf (L2), owlbear (L5), giant elk (L8). One form at a time.
 - **Cleric**: Revivify (L5) raises corpses dead less than a day.
 - **Death saves**: heroes collapse at death's door instead of dying — tend them to boost saves.
-- **Gestrals**: walk in at hero levels 3/8/12; die → replaced in 1–3 days; master dies → panic, leave.
+- **Mims**: walk in at hero levels 3/8/12; die → replaced in 1–3 days; master dies → panic, leave.
 - **Inlays**: 3 vestment slots (defense/offense/utility) × lesser/regular/greater, installed by surgery.
 - **Enemy heroes**: raids over 2000 points may include one — they drop inlays and (rarely) tomes.
 - **Bestiary**: owlbear, dire wolf packs, giant elk, ankheg, basilisk spawn wild by biome.
@@ -47,9 +47,9 @@ everywhere (tinted vanilla textures).
 
 ## Known gaps (deliberate, post-playtest)
 
-- All art is tinted placeholder (gestrals are rats, owlbears are bears, vestments are flak vests).
-- Slinger/Wisp gestral castes have no race yet — those unlock slots stay empty.
-- L20 capstone gestral choice, gestral beds/housing rules, hero housing thoughts: not yet.
+- All art is tinted placeholder (mims are rats, owlbears are bears, vestments are flak vests).
+- Slinger/Wisp mim castes have no race yet — those unlock slots stay empty.
+- L20 capstone mim choice, mim beds/housing rules, hero housing thoughts: not yet.
 - Tech leak-stopper setting is a stub; upcasting, spell-choice UI, subclasses: not yet.
 - Warlock uses full-caster slots (pact magic later). Inlay/tome crafting recipes: trade/loot only.
 

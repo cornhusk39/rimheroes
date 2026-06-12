@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Mim job castes. Visuals follow the JOB, not the master's class.
+       pawnKind wired once the mim race exists (post work-AI spike). -->
+
+  <RimHeroes.MimJobDef>
+    <defName>RH_Mim_Porter</defName>
+    <label>porter</label>
+    <description>A mim hauler. Carries burdens so its master never has to.</description>
+    <pawnKind>RH_MimPorterKind</pawnKind>
+  </RimHeroes.MimJobDef>
+
+  <RimHeroes.MimJobDef>
+    <defName>RH_Mim_Sweeper</defName>
+    <label>sweeper</label>
+    <description>A mim cleaner. Tidies relentlessly.</description>
+    <pawnKind>RH_MimSweeperKind</pawnKind>
+  </RimHeroes.MimJobDef>
+
+  <RimHeroes.MimJobDef>
+    <defName>RH_Mim_Digger</defName>
+    <label>digger</label>
+    <description>A mim miner. Tunnels with unsettling enthusiasm.</description>
+    <pawnKind>RH_MimDiggerKind</pawnKind>
+  </RimHeroes.MimJobDef>
+
+  <RimHeroes.MimJobDef>
+    <defName>RH_Mim_Hearth</defName>
+    <label>hearth</label>
+    <description>A mim cook. Keeps the pot full and the fire lit.</description>
+    <pawnKind>RH_MimHearthKind</pawnKind>
+  </RimHeroes.MimJobDef>
+
+  <RimHeroes.MimJobDef>
+    <defName>RH_Mim_Sprout</defName>
+    <label>sprout</label>
+    <description>A mim planter. Tends growing things.</description>
+    <pawnKind>RH_MimSproutKind</pawnKind>
+  </RimHeroes.MimJobDef>
+
+  <RimHeroes.MimJobDef>
+    <defName>RH_Mim_Salve</defName>
+    <label>salve</label>
+    <description>A mim tender. Fusses over wounds and the wounded.</description>
+    <pawnKind>RH_MimSalveKind</pawnKind>
+  </RimHeroes.MimJobDef>
+
+  <RimHeroes.MimJobDef>
+    <defName>RH_Mim_Scrapper</defName>
+    <label>scrapper</label>
+    <description>A mim melee fighter. Small, fierce, and entirely too brave.</description>
+    <isCombat>true</isCombat>
+    <pawnKind>RH_MimScrapperKind</pawnKind>
+  </RimHeroes.MimJobDef>
+
+  <RimHeroes.MimJobDef>
+    <defName>RH_Mim_Bulwark</defName>
+    <label>bulwark</label>
+    <description>A mim tank. A walking shield with opinions.</description>
+    <isCombat>true</isCombat>
+    <pawnKind>RH_MimBulwarkKind</pawnKind>
+  </RimHeroes.MimJobDef>
+
+  <RimHeroes.MimJobDef>
+    <defName>RH_Mim_Slinger</defName>
+    <label>slinger</label>
+    <description>A mim ranged fighter. Never misses twice.</description>
+    <isCombat>true</isCombat>
+  </RimHeroes.MimJobDef>
+
+  <RimHeroes.MimJobDef>
+    <defName>RH_Mim_Wisp</defName>
+    <label>wisp</label>
+    <description>A mim spellcaster. Crackles faintly when excited.</description>
+    <isCombat>true</isCombat>
+  </RimHeroes.MimJobDef>
+
+</Defs>

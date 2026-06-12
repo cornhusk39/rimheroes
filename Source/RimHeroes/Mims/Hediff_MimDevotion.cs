@@ -6,17 +6,17 @@ namespace RimHeroes
 {
     public enum DevotionState
     {
-        Content,  // master is well: gestral works at its best
+        Content,  // master is well: mim works at its best
         Worried,  // master is sick/injured/downed: vigil instead of work
         Bereft    // master is dead: panic, then leave the map
     }
 
     /// <summary>
-    /// The bond on a gestral's side: tracks its master, mirrors the master's condition as
+    /// The bond on a mim's side: tracks its master, mirrors the master's condition as
     /// severity (stages carry the work/move factors), and drives the panic-then-leave flow
     /// when the master dies.
     /// </summary>
-    public class Hediff_GestralDevotion : HediffWithComps
+    public class Hediff_MimDevotion : HediffWithComps
     {
         public Pawn master;
         public int masterDeadTick = -1;
@@ -64,12 +64,12 @@ namespace RimHeroes
                 leaveAtTick = masterDeadTick + PanicDurationTicks;
                 if (pawn.Spawned && PawnUtility.ShouldSendNotificationAbout(pawn))
                 {
-                    Messages.Message("RH_GestralPanic".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.NegativeEvent);
+                    Messages.Message("RH_MimPanic".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.NegativeEvent);
                 }
             }
             else if (state != DevotionState.Bereft)
             {
-                masterDeadTick = -1; // master came back (resurrection while gestral still on map)
+                masterDeadTick = -1; // master came back (resurrection while mim still on map)
                 leaveAtTick = -1;
             }
             float target = state == DevotionState.Content ? 0.1f : state == DevotionState.Worried ? 0.5f : 0.9f;

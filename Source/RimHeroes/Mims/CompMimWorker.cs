@@ -4,12 +4,12 @@ using Verse;
 
 namespace RimHeroes
 {
-    public class CompProperties_GestralWorker : CompProperties
+    public class CompProperties_MimWorker : CompProperties
     {
-        // Work types this gestral caste performs (e.g. Cleaning for the Sweeper).
+        // Work types this mim caste performs (e.g. Cleaning for the Sweeper).
         public List<WorkTypeDef> workTypes = new List<WorkTypeDef>();
 
-        public CompProperties_GestralWorker() => compClass = typeof(CompGestralWorker);
+        public CompProperties_MimWorker() => compClass = typeof(CompMimWorker);
     }
 
     /// <summary>
@@ -19,9 +19,9 @@ namespace RimHeroes
     /// GetDisabledWorkTypes disables nothing for a story-less non-mech race, and
     /// Pawn_WorkSettings is null-safe on skills.
     /// </summary>
-    public class CompGestralWorker : ThingComp
+    public class CompMimWorker : ThingComp
     {
-        public CompProperties_GestralWorker Props => (CompProperties_GestralWorker)props;
+        public CompProperties_MimWorker Props => (CompProperties_MimWorker)props;
 
         private Pawn Pawn => (Pawn)parent;
 

@@ -32,7 +32,7 @@ namespace RimHeroes
     {
         // Filters Odyssey Starjacks faction, leaking quest scripts, etc. (DESIGN.md: anti-tech layer 1).
         public bool techLeakStopper = true;
-        // Rare Hero pawns in high-point raids, escorted by combat gestrals.
+        // Rare Hero pawns in high-point raids, escorted by combat mims.
         public bool enemyHeroRaids = true;
         // By default Hero corpses are excluded from cremation/butcher bills so revival stays possible.
         public bool allowHeroCorpseDestruction = false;

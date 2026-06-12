@@ -6,7 +6,7 @@ using Verse;
 namespace RimHeroes
 {
     /// <summary>
-    /// Art proofing: launch with -quicktest -rhartspike. Spawns three Porter gestrals locked to
+    /// Art proofing: launch with -quicktest -rhartspike. Spawns three Porter mims locked to
     /// south/east/north rotations beside a drafted L5 Wizard (Fireball gizmo icon visible),
     /// zooms in, screenshots, exits.
     /// </summary>
@@ -56,7 +56,7 @@ namespace RimHeroes
                     }
                     HeroUtility.MakeHero(hero, DefDatabase<HeroClassDef>.GetNamed("RH_Wizard")).SetLevelDirect(5);
                     hero.drafter.Drafted = true;
-                    var kind = PawnKindDef.Named("RH_GestralPorterKind");
+                    var kind = PawnKindDef.Named("RH_MimPorterKind");
                     var rots = new[] { Rot4.South, Rot4.East, Rot4.North };
                     porters = new Pawn[3];
                     for (int i = 0; i < 3; i++)
