@@ -1,24 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Druid T5 south: wildheart - darkest furs, bone pauldron spikes, ONE small glowing amber totem. -->
-  <path d="M178 250 C186 228 212 216 256 214 C300 216 326 228 334 250 L338 404 C320 418 292 426 256 426 C220 426 192 418 174 404 Z" fill="#5C4E38"/>
-  <path d="M186 256 C194 238 220 228 256 226 C292 228 318 238 326 256 L328 302 L184 302 Z" fill="#6B5C44" opacity="0.7"/>
-  <!-- heaviest mantle -->
-  <path d="M142 254 C138 216 170 192 216 186 L232 196 L248 184 L256 196 L270 184 L284 194 L298 186 C346 192 374 216 370 254 L370 302 L354 288 L356 314 L338 300 L342 324 L324 310 L312 318 L296 304 L296 290 C268 282 244 282 216 290 L216 304 L204 318 L192 310 L174 324 L178 300 L160 314 L162 288 L146 302 Z" fill="#4A3F2E" fill-rule="evenodd"/>
-  <path d="M150 252 C148 222 176 202 214 196 L232 204 L248 194 L256 204 L270 194 L284 202 L298 198 C334 203 354 220 356 246 L348 250 C342 230 324 218 302 214 L286 220 L270 212 L256 220 L242 212 L226 218 C192 216 170 230 164 250 Z" fill="#6B5C44"/>
-  <!-- bone spikes on the shoulders -->
-  <path d="M160 232 L150 200 L174 220 Z" fill="#D8CCB4"/>
-  <path d="M186 216 L182 186 L204 208 Z" fill="#D8CCB4"/>
-  <path d="M352 232 L362 200 L338 220 Z" fill="#D8CCB4"/>
-  <path d="M326 216 L330 186 L308 208 Z" fill="#D8CCB4"/>
-  <!-- fang necklace -->
-  <path d="M206 250 C224 270 240 278 256 278 C272 278 288 270 306 250 L310 258 C292 280 274 288 256 288 C238 288 220 280 202 258 Z" fill="#3A2E20"/>
-  <path d="M226 272 L222 296 L234 278 Z" fill="#D8CCB4"/>
-  <path d="M282 272 L288 294 L294 274 Z" fill="#D8CCB4"/>
-  <!-- THE totem: one small glowing amber carving at the chest -->
-  <circle cx="256" cy="302" r="17" fill="#3A2E20"/>
-  <circle cx="256" cy="302" r="13" fill="#C9842A"/>
-  <circle cx="256" cy="300" r="6" fill="#F2B05A"/>
-  <path d="M250 296 L262 308 M262 296 L250 308" stroke="#7A4E16" stroke-width="3" fill="none"/>
-  <!-- fur kilt, darkest -->
-  <path d="M168 388 C226 400 290 400 346 388 L344 430 L332 420 L326 434 L314 424 L306 436 L294 426 L284 436 L270 426 L258 438 L246 426 L232 436 L222 424 L210 434 L200 422 L188 432 L172 420 Z" fill="#4A3F2E"/>
+  <!-- Druid T5 south: wildheart regalia - deep bark-moss robe, fur-lined mantle, glowing amber sap veins. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#46522E"/>
+  <path d="M162 244 C172 206 208 184 256 184 C292 184 320 196 338 218 C310 198 212 200 184 234 C175 242 166 244 162 244 Z" fill="#5E6B43" opacity="0.6"/>
+  <path d="M196 200 L194 452 M226 188 L225 456 M286 188 L287 456 M316 200 L318 452" stroke="#33401F" stroke-width="5" fill="none"/>
+  <path d="M251 196 L261 196 L259 454 L253 454 Z" fill="#33401F"/>
+  <!-- bark panel chest -->
+  <path d="M230 240 L282 240 L278 370 L234 370 Z" fill="#6E5638"/>
+  <path d="M242 250 L246 360 M256 248 L256 364 M270 250 L266 360" stroke="#3E3020" stroke-width="3" fill="none"/>
+  <!-- glowing amber sap veins (the one subtle T5 glow) -->
+  <path d="M256 250 C250 280 252 310 244 340 C238 360 240 382 248 402" stroke="#F2C46A" stroke-width="4" fill="none" opacity="0.9"/>
+  <path d="M256 250 C262 280 260 310 268 340 C274 360 272 382 264 402" stroke="#F2C46A" stroke-width="4" fill="none" opacity="0.9"/>
+  <path d="M256 250 C250 280 252 310 244 340 C238 360 240 382 248 402" stroke="#FFE6A8" stroke-width="1.5" fill="none"/>
+  <circle cx="256" cy="284" r="6" fill="#F2C46A"/>
+  <circle cx="256" cy="284" r="3" fill="#FFE6A8"/>
+  <!-- fur-lined mantle, both shoulders -->
+  <path d="M138 250 C146 208 194 186 256 186 C318 186 366 208 374 250 L370 306 L352 290 L348 318 L328 300 L320 324 L296 306 L286 298 C270 288 242 288 226 298 L216 306 L192 324 L184 300 L164 318 L160 290 L142 306 Z" fill="#9C8E6E"/>
+  <path d="M150 252 C158 220 200 198 256 198 C312 198 354 220 362 252 L360 288 L342 274 L336 298 L318 284 L310 304 L286 290 L278 284 C266 276 246 276 234 284 L226 290 L204 304 L196 284 L178 298 L172 274 L154 288 Z" fill="#C2B591"/>
+  <path d="M194 232 C216 220 238 214 256 214 C274 214 296 220 318 232 L312 246 C294 234 274 230 256 230 C238 230 218 234 200 246 Z" fill="#6E5638"/>
+  <!-- amber glints on the mantle edge -->
+  <circle cx="172" cy="290" r="4" fill="#D89A3A"/>
+  <circle cx="340" cy="290" r="4" fill="#D89A3A"/>
+  <!-- belt + amber clasp -->
+  <path d="M156 384 C216 396 296 396 356 384 L356 402 C296 414 216 414 156 402 Z" fill="#8A6E4A"/>
+  <circle cx="256" cy="393" r="13" fill="#D89A3A"/>
+  <circle cx="256" cy="393" r="6" fill="#F2C46A"/>
 </svg>

@@ -1,12 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Druid T1 south: rough hide wrap with a fur-trimmed collar, sinew belt. -->
-  <path d="M170 224 C194 210 224 204 256 206 L354 296 L352 368 L344 372 L328 356 L326 376 L308 360 L304 382 L288 364 L282 384 L268 368 L264 386 L248 370 L242 388 L230 372 L222 386 L208 370 L202 382 L190 366 L184 376 L172 362 L170 296 Z" fill="#6B4426"/>
-  <path d="M176 230 C200 216 228 210 254 214 L346 296 L344 308 L250 222 C224 218 198 224 180 236 Z" fill="#5C3D24"/>
-  <!-- fur collar trim across the wrap edge -->
-  <path d="M168 222 C192 206 224 200 258 202 L266 212 L254 222 L240 212 L230 224 L216 214 L208 226 L194 218 L188 230 L176 222 L172 232 L164 226 Z" fill="#7A6A50"/>
-  <!-- shoulder strap -->
-  <path d="M296 204 C310 208 324 216 334 228 L320 240 C310 228 298 220 286 216 Z" fill="#5C3D24"/>
-  <!-- sinew belt + bone toggle -->
-  <path d="M166 392 C222 404 292 404 348 392 L348 408 C292 420 222 420 166 408 Z" fill="#8A5A33"/>
-  <ellipse cx="256" cy="402" rx="14" ry="7" fill="#D8CCB4"/>
+  <!-- Druid T1 south: rough barkcloth robe, bark-grain texture, rope belt. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#5E6B43"/>
+  <path d="M162 244 C172 206 208 184 256 184 C292 184 320 196 338 218 C310 198 212 200 184 234 C175 242 166 244 162 244 Z" fill="#74824E" opacity="0.5"/>
+  <path d="M196 200 L194 452 M226 188 L225 456 M286 188 L287 456 M316 200 L318 452" stroke="#4A5634" stroke-width="5" fill="none"/>
+  <path d="M210 210 L209 448 M270 188 L270 456 M300 206 L301 450" stroke="#4A5634" stroke-width="3" opacity="0.6" fill="none"/>
+  <path d="M251 196 L261 196 L259 454 L253 454 Z" fill="#4A5634"/>
+  <path d="M218 176 C230 166 244 162 256 162 C268 162 282 166 294 176 L286 198 C274 186 264 182 256 182 C248 182 238 186 226 198 Z" fill="#6E5638"/>
+  <path d="M156 384 C216 396 296 396 356 384 L356 402 C296 414 216 414 156 402 Z" fill="#8A6E4A"/>
+  <path d="M250 392 L244 428 L254 420 L260 432 L266 418 L274 426 L268 392 Z" fill="#8A6E4A"/>
 </svg>
