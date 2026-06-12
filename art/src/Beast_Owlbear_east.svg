@@ -1,34 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Owlbear, side view facing right: bear profile, owl head, feathered chest bib. -->
-  <!-- ear tuft -->
-  <path d="M330 96 C318 52 330 24 358 18 C366 50 358 80 348 100 Z" fill="#8A5E36"/>
-  <path d="M336 90 C328 58 336 38 352 30 C357 56 353 78 348 92 Z" fill="#A8784A"/>
-  <!-- stub tail -->
-  <ellipse cx="74" cy="380" rx="30" ry="24" fill="#8A5E36"/>
-  <!-- massive body: high shoulder hump sloping back -->
-  <path d="M88 330 C84 240 150 196 250 200 C330 204 396 240 400 320 C404 392 350 452 240 456 C140 458 92 408 88 330 Z" fill="#A8784A"/>
-  <!-- hump shading -->
-  <path d="M150 230 C190 204 260 198 310 210 L300 250 C250 236 190 240 158 262 Z" fill="#9A6C40"/>
-  <!-- head: owl disc in profile -->
-  <circle cx="368" cy="140" r="92" fill="#A8784A"/>
-  <ellipse cx="386" cy="150" rx="68" ry="64" fill="#E2CDA4"/>
-  <path d="M312 86 C336 66 372 60 400 70 L388 108 C364 96 336 96 318 108 Z" fill="#8A5E36"/>
+  <!-- Owlbear, side view facing right: high hump, distinct owl head held forward, hooked beak. -->
+  <!-- ear tufts: feathered, swept back, two-tone -->
+  <path d="M352 78 C338 52 338 24 356 4 C366 4 374 12 374 24 C364 30 360 40 362 52 C370 42 380 38 390 40 C388 58 376 74 364 84 Z" fill="#7C5530"/>
+  <path d="M398 70 C392 48 396 28 410 14 C418 16 423 24 422 34 C414 40 411 49 412 60 C418 53 426 50 434 52 C430 66 420 80 408 86 Z" fill="#7C5530"/>
+  <path d="M358 72 C350 54 351 34 362 20 C368 22 371 28 370 36 C364 42 362 52 364 62 Z" fill="#9C7042"/>
+  <!-- body: continuous profile - rump, high hump, sloping to shoulder -->
+  <path d="M86 376 C58 346 54 296 76 256 C96 220 130 194 172 182 C216 168 262 162 304 168 C330 172 352 182 366 198 C380 216 384 240 378 264 C372 290 366 318 364 346 C362 382 356 414 340 438 C318 466 280 478 236 474 C172 468 112 436 86 376 Z" fill="#9C7042"/>
+  <!-- hump/back shading following the curve -->
+  <path d="M150 204 C196 184 250 174 300 178 C322 180 340 188 352 200 C330 192 304 188 276 190 C232 192 188 200 156 216 C150 212 148 208 150 204 Z" fill="#7C5530"/>
+  <!-- haunch: thigh-shaped, soft -->
+  <path d="M104 358 C92 318 104 276 136 254 C166 234 202 236 228 258 C246 276 252 304 244 332 C234 368 208 392 174 398 C144 402 118 386 104 358 Z" fill="#86603A" opacity="0.75"/>
+  <!-- belly light -->
+  <path d="M184 428 C224 444 268 446 304 434 C288 452 258 462 226 458 C208 456 194 444 184 428 Z" fill="#B08350"/>
+  <!-- neck + head: distinct mass held forward of the hump -->
+  <path d="M322 196 C322 152 350 116 392 104 C428 94 462 110 474 142 C484 170 474 202 448 220 C428 234 404 238 382 232 C360 244 342 240 332 226 C326 216 322 206 322 196 Z" fill="#9C7042"/>
+  <!-- facial disc: front crescent of the head -->
+  <path d="M400 112 C432 108 458 124 466 150 C474 176 464 202 440 214 C424 222 408 222 396 214 C390 188 390 158 396 134 C397 126 398 118 400 112 Z" fill="#E5D2A8"/>
+  <!-- brow over eye -->
+  <path d="M408 138 C424 128 442 128 454 138 L448 150 C438 142 424 142 414 150 Z" fill="#5C4226"/>
   <!-- eye -->
-  <circle cx="398" cy="142" r="26" fill="#F6EBD3"/>
-  <circle cx="400" cy="144" r="16" fill="#D9931F"/>
-  <circle cx="400" cy="144" r="8.5" fill="#2E2620"/>
-  <circle cx="403.5" cy="140" r="3" fill="#F6EBD3"/>
-  <!-- hooked beak in profile -->
-  <path d="M442 154 C462 152 474 162 472 176 C470 192 454 204 440 206 C436 192 434 168 442 154 Z" fill="#6E5238"/>
-  <path d="M446 160 C458 159 466 166 464 175 C462 186 452 194 444 196 C441 186 440 170 446 160 Z" fill="#8A6A43"/>
-  <!-- feathered chest bib -->
-  <path d="M330 230 Q374 244 392 280 L360 300 Q340 272 312 262 Z" fill="#C49A66"/>
-  <path d="M312 266 Q352 282 368 312 L338 330 Q322 304 296 296 Z" fill="#BC8E5A"/>
-  <!-- legs: front + hind with claws -->
-  <ellipse cx="330" cy="430" rx="46" ry="40" fill="#9A6C40"/>
-  <path d="M310 462 L304 486 M330 466 L330 490 M352 462 L358 486" stroke="#5C4630" stroke-width="11" stroke-linecap="round"/>
-  <ellipse cx="150" cy="428" rx="52" ry="42" fill="#9A6C40"/>
-  <path d="M128 462 L120 486 M150 466 L150 490 M174 462 L182 486" stroke="#5C4630" stroke-width="11" stroke-linecap="round"/>
-  <!-- belly -->
-  <ellipse cx="240" cy="400" rx="80" ry="40" fill="#BC8E5A"/>
+  <circle cx="432" cy="160" r="14" fill="#E09A22"/>
+  <circle cx="434" cy="162" r="7" fill="#211B14"/>
+  <circle cx="437" cy="158" r="2.4" fill="#F6EBD3"/>
+  <!-- hooked beak: narrow, curving down to a point -->
+  <path d="M462 158 C480 156 492 164 494 176 C496 190 488 204 474 214 C474 204 470 196 462 192 C468 188 470 180 466 174 C464 168 462 162 462 158 Z" fill="#3F3328"/>
+  <path d="M466 164 C477 163 484 168 485 176 C486 184 482 192 474 198 C473 192 470 187 465 184 C469 180 470 174 468 170 Z" fill="#6B5640"/>
+  <!-- chest feather bib falling from chin -->
+  <path d="M352 238 C368 252 378 272 380 294 L358 302 C352 282 344 264 332 252 Z" fill="#B08350"/>
+  <path d="M332 256 C346 270 354 288 356 308 L336 316 C330 298 322 282 312 272 Z" fill="#B08350"/>
+  <!-- far legs (darker) -->
+  <path d="M150 418 C144 440 146 458 154 468 L182 468 C186 454 186 436 182 418 Z" fill="#6E4C2B"/>
+  <path d="M296 414 C290 436 292 456 300 466 L328 466 C332 452 332 434 328 416 Z" fill="#6E4C2B"/>
+  <!-- near hind leg + paw with toes -->
+  <path d="M118 378 C112 412 116 444 130 464 L178 464 C186 444 186 414 178 386 C160 374 136 370 118 378 Z" fill="#86603A"/>
+  <path d="M116 450 C112 466 122 476 140 477 C156 478 168 471 170 459 C170 453 167 448 162 445 L156 460 L148 444 L140 458 L132 442 L125 456 L120 445 C117 446 116 448 116 450 Z" fill="#7C5530"/>
+  <!-- near front leg + paw -->
+  <path d="M306 344 C294 376 292 416 300 448 C304 458 312 464 322 464 L354 462 C364 440 366 406 360 372 C354 346 332 334 306 344 Z" fill="#86603A"/>
+  <path d="M298 448 C294 464 304 474 322 475 C338 476 350 469 352 457 C352 451 349 446 344 443 L338 458 L330 442 L322 456 L314 440 L307 454 L302 443 C299 444 298 446 298 448 Z" fill="#7C5530"/>
+  <!-- stub tail -->
+  <path d="M78 332 C64 328 54 334 52 344 C58 354 70 358 82 354 C84 346 82 338 78 332 Z" fill="#86603A"/>
 </svg>

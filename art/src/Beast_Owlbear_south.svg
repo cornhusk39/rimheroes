@@ -1,39 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Owlbear, front view: bear bulk, owl facial disc, hooked beak, ear tufts, feathered chest. -->
-  <!-- ear tufts -->
-  <path d="M148 122 C128 78 140 48 168 40 C178 72 172 104 162 126 Z" fill="#8A5E36"/>
-  <path d="M364 122 C384 78 372 48 344 40 C334 72 340 104 350 126 Z" fill="#8A5E36"/>
-  <path d="M154 114 C140 80 148 58 166 50 C173 76 169 98 162 114 Z" fill="#A8784A"/>
-  <path d="M358 114 C372 80 364 58 346 50 C339 76 343 98 350 114 Z" fill="#A8784A"/>
-  <!-- massive body -->
-  <ellipse cx="256" cy="330" rx="170" ry="150" fill="#A8784A"/>
-  <!-- shoulder humps -->
-  <ellipse cx="140" cy="280" rx="56" ry="48" fill="#9A6C40"/>
-  <ellipse cx="372" cy="280" rx="56" ry="48" fill="#9A6C40"/>
-  <!-- feathered chest: scalloped rows -->
-  <path d="M178 320 Q256 290 334 320 L322 352 Q256 330 190 352 Z" fill="#C49A66"/>
-  <path d="M190 356 Q256 330 322 356 L312 388 Q256 368 200 388 Z" fill="#BC8E5A"/>
-  <path d="M202 392 Q256 370 310 392 L300 424 Q256 408 212 424 Z" fill="#C49A66"/>
-  <path d="M214 428 Q256 410 298 428 L288 452 Q256 440 224 452 Z" fill="#BC8E5A"/>
-  <!-- head: owl facial disc -->
-  <circle cx="256" cy="158" r="108" fill="#A8784A"/>
-  <ellipse cx="256" cy="170" rx="88" ry="78" fill="#E2CDA4"/>
-  <path d="M256 96 C282 96 306 110 318 132 L256 124 L194 132 C206 110 230 96 256 96 Z" fill="#8A5E36"/>
-  <!-- big round owl eyes -->
-  <circle cx="212" cy="162" r="30" fill="#F6EBD3"/>
-  <circle cx="300" cy="162" r="30" fill="#F6EBD3"/>
-  <circle cx="212" cy="164" r="19" fill="#D9931F"/>
-  <circle cx="300" cy="164" r="19" fill="#D9931F"/>
-  <circle cx="212" cy="164" r="10" fill="#2E2620"/>
-  <circle cx="300" cy="164" r="10" fill="#2E2620"/>
-  <circle cx="216" cy="159" r="3.5" fill="#F6EBD3"/>
-  <circle cx="304" cy="159" r="3.5" fill="#F6EBD3"/>
-  <!-- hooked beak -->
-  <path d="M256 178 C272 178 282 188 282 200 C282 216 268 230 256 238 C244 230 230 216 230 200 C230 188 240 178 256 178 Z" fill="#6E5238"/>
-  <path d="M256 182 C268 182 276 190 276 199 C276 210 266 221 256 228 C246 221 236 210 236 199 C236 190 244 182 256 182 Z" fill="#8A6A43"/>
-  <!-- front limbs with claws -->
-  <ellipse cx="160" cy="436" rx="52" ry="34" fill="#8A5E36"/>
-  <ellipse cx="352" cy="436" rx="52" ry="34" fill="#8A5E36"/>
-  <path d="M122 458 L112 478 M146 464 L142 484 M172 464 L176 484" stroke="#5C4630" stroke-width="11" stroke-linecap="round"/>
-  <path d="M390 458 L400 478 M366 464 L370 484 M340 464 L336 484" stroke="#5C4630" stroke-width="11" stroke-linecap="round"/>
+  <!-- Owlbear, front. Organic massing: same-fill blobs merge into one silhouette under the outline pass. -->
+  <!-- ear tufts: swept, feathered -->
+  <path d="M158 118 C138 92 132 60 148 34 C158 30 168 34 172 44 C160 54 156 66 158 80 C166 70 176 64 186 64 C186 84 178 106 166 122 Z" fill="#7C5530"/>
+  <path d="M354 118 C374 92 380 60 364 34 C354 30 344 34 340 44 C352 54 356 66 354 80 C346 70 336 64 326 64 C326 84 334 106 346 122 Z" fill="#7C5530"/>
+  <!-- head mass: broad, crown slightly flat, cheeks flare into ruff -->
+  <path d="M256 62 C312 62 354 92 362 142 C368 180 350 216 318 232 C298 241 276 246 256 246 C236 246 214 241 194 232 C162 216 144 180 150 142 C158 92 200 62 256 62 Z" fill="#9C7042"/>
+  <!-- body: heavy pear, wider at haunches, irregular -->
+  <path d="M256 198 C330 198 392 232 412 296 C430 352 416 412 372 444 C338 468 296 478 256 478 C216 478 174 468 140 444 C96 412 82 352 100 296 C120 232 182 198 256 198 Z" fill="#9C7042"/>
+  <!-- shoulder shading band -->
+  <path d="M152 250 C190 226 322 226 360 250 C330 240 182 240 152 250 Z" fill="#7C5530" opacity="0.5"/>
+  <path d="M120 300 C150 258 200 238 256 238 C312 238 362 258 392 300 C354 274 300 262 256 262 C212 262 158 274 120 300 Z" fill="#86603A"/>
+  <!-- chest feather rows: subtle overlapping scallops -->
+  <path d="M188 312 C210 296 232 290 256 290 C280 290 302 296 324 312 C300 304 280 302 256 302 C232 302 212 304 188 312 Z" fill="#B08350"/>
+  <path d="M178 348 C204 330 228 322 256 322 C284 322 308 330 334 348 C306 338 282 334 256 334 C230 334 206 338 178 348 Z" fill="#B08350"/>
+  <path d="M172 386 C200 366 226 358 256 358 C286 358 312 366 340 386 C310 374 284 370 256 370 C228 370 202 374 172 386 Z" fill="#B08350"/>
+  <path d="M174 424 C202 404 228 396 256 396 C284 396 310 404 338 424 C310 412 284 408 256 408 C228 408 202 412 174 424 Z" fill="#B08350"/>
+  <!-- belly soft light, irregular -->
+  <path d="M256 432 C292 432 318 446 322 462 C304 472 280 477 256 477 C232 477 208 472 190 462 C194 446 220 432 256 432 Z" fill="#B08350"/>
+  <!-- forelegs hugging body sides, big paws with integrated toes -->
+  <path d="M122 318 C100 334 88 366 90 400 C92 430 104 452 124 462 L156 462 C168 448 172 424 166 396 C160 364 146 332 122 318 Z" fill="#86603A"/>
+  <path d="M390 318 C412 334 424 366 422 400 C420 430 408 452 388 462 L356 462 C344 448 340 424 346 396 C352 364 366 332 390 318 Z" fill="#86603A"/>
+  <path d="M96 436 C92 460 104 476 126 478 C146 480 160 470 162 452 C162 444 158 438 152 434 L146 452 L138 432 L128 450 L120 430 L110 448 L104 432 C100 432 97 434 96 436 Z" fill="#7C5530"/>
+  <path d="M416 436 C420 460 408 476 386 478 C366 480 352 470 350 452 C350 444 354 438 360 434 L366 452 L374 432 L384 450 L392 430 L402 448 L408 432 C412 432 415 434 416 436 Z" fill="#7C5530"/>
+  <!-- facial disc: heart-shaped, pointed at beak -->
+  <path d="M256 110 C284 104 312 116 322 140 C332 164 326 192 306 208 C290 220 272 226 256 230 C240 226 222 220 206 208 C186 192 180 164 190 140 C200 116 228 104 256 110 Z" fill="#E5D2A8"/>
+  <!-- brow ridge: dark V over the eyes, fierce -->
+  <path d="M192 138 C212 124 238 122 254 132 L250 146 C234 138 214 140 198 150 Z" fill="#5C4226"/>
+  <path d="M320 138 C300 124 274 122 258 132 L262 146 C278 138 298 140 314 150 Z" fill="#5C4226"/>
+  <!-- eyes: amber, moderate, under the brow -->
+  <circle cx="219" cy="158" r="16" fill="#E09A22"/>
+  <circle cx="293" cy="158" r="16" fill="#E09A22"/>
+  <circle cx="219" cy="160" r="8" fill="#211B14"/>
+  <circle cx="293" cy="160" r="8" fill="#211B14"/>
+  <circle cx="222" cy="156" r="2.6" fill="#F6EBD3"/>
+  <circle cx="296" cy="156" r="2.6" fill="#F6EBD3"/>
+  <!-- hooked beak: cere + down-point -->
+  <path d="M256 168 C268 168 277 175 278 186 C279 200 270 216 256 230 C242 216 233 200 234 186 C235 175 244 168 256 168 Z" fill="#3F3328"/>
+  <path d="M256 172 C264 172 270 177 271 185 C271 193 266 202 256 211 C246 202 241 193 241 185 C242 177 248 172 256 172 Z" fill="#6B5640"/>
 </svg>
