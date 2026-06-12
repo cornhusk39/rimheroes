@@ -88,8 +88,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber</texPath>
-          <color>(95,95,110)</color>
+          <texPath>Things/RimHeroes/Beasts/DireWolf/DireWolf</texPath>
           <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -99,8 +98,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber</texPath>
-          <color>(95,95,110)</color>
+          <texPath>Things/RimHeroes/Beasts/DireWolf/DireWolf</texPath>
           <drawSize>1.45</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -110,8 +108,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber</texPath>
-          <color>(95,95,110)</color>
+          <texPath>Things/RimHeroes/Beasts/DireWolf/DireWolf</texPath>
           <drawSize>1.8</drawSize>
           <shadowData>
             <volume>(0.5, 0.5, 0.5)</volume>
@@ -201,8 +198,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Elk/ElkFemale</texPath>
-          <color>(225,215,195)</color>
+          <texPath>Things/RimHeroes/Beasts/GiantElk/GiantElk</texPath>
           <drawSize>1.6</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -212,8 +208,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Elk/ElkMale</texPath>
-          <color>(225,215,195)</color>
+          <texPath>Things/RimHeroes/Beasts/GiantElk/GiantElk</texPath>
           <drawSize>2.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -223,8 +218,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Elk/ElkMale</texPath>
-          <color>(225,215,195)</color>
+          <texPath>Things/RimHeroes/Beasts/GiantElk/GiantElk</texPath>
           <drawSize>2.9</drawSize>
           <shadowData>
             <volume>(0.7, 0.8, 0.7)</volume>
@@ -315,8 +309,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Megaspider/Megaspider</texPath>
-          <color>(140,150,90)</color>
+          <texPath>Things/RimHeroes/Beasts/Ankheg/Ankheg</texPath>
           <drawSize>1.2</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -326,8 +319,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Megaspider/Megaspider</texPath>
-          <color>(140,150,90)</color>
+          <texPath>Things/RimHeroes/Beasts/Ankheg/Ankheg</texPath>
           <drawSize>1.6</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -337,8 +329,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Megaspider/Megaspider</texPath>
-          <color>(140,150,90)</color>
+          <texPath>Things/RimHeroes/Beasts/Ankheg/Ankheg</texPath>
           <drawSize>2.0</drawSize>
           <shadowData>
             <volume>(0.5, 0.6, 0.5)</volume>
@@ -429,8 +420,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Iguana/Iguana</texPath>
-          <color>(110,135,95)</color>
+          <texPath>Things/RimHeroes/Beasts/Basilisk/Basilisk</texPath>
           <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -440,8 +430,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Iguana/Iguana</texPath>
-          <color>(110,135,95)</color>
+          <texPath>Things/RimHeroes/Beasts/Basilisk/Basilisk</texPath>
           <drawSize>1.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -451,8 +440,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Iguana/Iguana</texPath>
-          <color>(110,135,95)</color>
+          <texPath>Things/RimHeroes/Beasts/Basilisk/Basilisk</texPath>
           <drawSize>1.9</drawSize>
           <shadowData>
             <volume>(0.4, 0.5, 0.4)</volume>

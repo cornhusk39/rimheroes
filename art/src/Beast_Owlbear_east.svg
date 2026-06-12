@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <!-- Owlbear, side view facing right: high hump, distinct owl head held forward, hooked beak. -->
   <!-- ear tufts: feathered, swept back, two-tone -->
-  <path d="M352 78 C338 52 338 24 356 4 C366 4 374 12 374 24 C364 30 360 40 362 52 C370 42 380 38 390 40 C388 58 376 74 364 84 Z" fill="#7C5530"/>
-  <path d="M398 70 C392 48 396 28 410 14 C418 16 423 24 422 34 C414 40 411 49 412 60 C418 53 426 50 434 52 C430 66 420 80 408 86 Z" fill="#7C5530"/>
-  <path d="M358 72 C350 54 351 34 362 20 C368 22 371 28 370 36 C364 42 362 52 364 62 Z" fill="#9C7042"/>
+  <path d="M354 106 C340 78 340 50 358 30 C368 30 376 38 376 50 C366 56 362 66 364 78 C372 68 382 64 392 66 C390 84 378 100 366 110 Z" fill="#7C5530"/>
+  <path d="M396 98 C390 76 394 56 408 42 C416 44 421 52 420 62 C412 68 409 77 410 88 C416 81 424 78 432 80 C428 94 418 104 406 110 Z" fill="#7C5530"/>
+  <path d="M360 100 C352 82 353 62 364 48 C370 50 373 56 372 64 C366 70 364 80 366 90 Z" fill="#9C7042"/>
   <!-- body: continuous profile - rump, high hump, sloping to shoulder -->
   <path d="M86 376 C58 346 54 296 76 256 C96 220 130 194 172 182 C216 168 262 162 304 168 C330 172 352 182 366 198 C380 216 384 240 378 264 C372 290 366 318 364 346 C362 382 356 414 340 438 C318 466 280 478 236 474 C172 468 112 436 86 376 Z" fill="#9C7042"/>
   <!-- hump/back shading following the curve -->

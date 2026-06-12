@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Ankheg, front view: broad head shield, spread serrated mandibles, segmented bulk behind. -->
+  <!-- abdomen bulk rising behind the head -->
+  <path d="M256 96 C330 96 388 140 404 208 C418 268 398 330 348 368 L164 368 C114 330 94 268 108 208 C124 140 182 96 256 96 Z" fill="#737842"/>
+  <path d="M154 160 C180 128 216 110 256 110 C296 110 332 128 358 160 C326 146 290 140 256 140 C222 140 186 146 154 160 Z" fill="#62663A"/>
+  <path d="M128 230 C162 212 208 204 256 204 C304 204 350 212 384 230 C352 222 304 218 256 218 C208 218 160 222 128 230 Z" fill="#62663A"/>
+  <!-- head shield: broad armored wedge front and center -->
+  <path d="M256 220 C312 220 356 248 368 294 C378 334 360 374 320 396 C300 407 277 412 256 412 C235 412 212 407 192 396 C152 374 134 334 144 294 C156 248 200 220 256 220 Z" fill="#8A8E54"/>
+  <!-- brow plate: heavy armored V -->
+  <path d="M176 286 C200 266 228 258 254 264 L250 284 C228 278 206 282 188 296 Z" fill="#4A4E2C"/>
+  <path d="M336 286 C312 266 284 258 258 264 L262 284 C284 278 306 282 324 296 Z" fill="#4A4E2C"/>
+  <!-- glossy black eyes under the plate -->
+  <circle cx="208" cy="304" r="14" fill="#211B14"/>
+  <circle cx="304" cy="304" r="14" fill="#211B14"/>
+  <circle cx="212" cy="300" r="4" fill="#C2C28C"/>
+  <circle cx="308" cy="300" r="4" fill="#C2C28C"/>
+  <!-- antennae: rooted at brow corners, arcing up-out -->
+  <path d="M186 274 C168 250 162 222 170 196" stroke="#62663A" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M326 274 C344 250 350 222 342 196" stroke="#62663A" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <!-- face plates -->
+  <path d="M256 300 C272 300 284 310 286 326 C288 344 276 360 256 368 C236 360 224 344 226 326 C228 310 240 300 256 300 Z" fill="#737842"/>
+  <!-- mandibles: huge serrated pincers spread wide -->
+  <path d="M196 352 C162 348 134 358 122 378 C114 394 118 410 134 418 C130 402 136 388 150 380 C140 394 140 408 150 418 C146 404 152 392 164 386 C176 378 188 366 196 352 Z" fill="#4A4A30"/>
+  <path d="M316 352 C350 348 378 358 390 378 C398 394 394 410 378 418 C382 402 376 388 362 380 C372 394 372 408 362 418 C366 404 360 392 348 386 C336 378 324 366 316 352 Z" fill="#4A4A30"/>
+  <path d="M168 372 L156 366 M178 384 L164 382 M344 372 L356 366 M334 384 L348 382" stroke="#8A8E54" stroke-width="4" stroke-linecap="round"/>
+  <!-- inner jaw glow hint (acid) -->
+  <path d="M232 376 C244 384 268 384 280 376 C276 392 266 400 256 400 C246 400 236 392 232 376 Z" fill="#B5C45A"/>
+  <!-- front legs splayed at sides -->
+  <path d="M152 384 L116 416 L124 426 L158 396 Z M118 414 L96 444 L106 450 L126 424 Z" fill="#62663A"/>
+  <path d="M360 384 L396 416 L388 426 L354 396 Z M394 414 L416 444 L406 450 L386 424 Z" fill="#62663A"/>
+  <path d="M196 404 L180 442 L190 447 L206 410 Z" fill="#4A4E2C"/>
+  <path d="M316 404 L332 442 L322 447 L306 410 Z" fill="#4A4E2C"/>
+</svg>

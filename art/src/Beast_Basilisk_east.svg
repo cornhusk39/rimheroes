@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Basilisk, side view facing right: low heavy body, dorsal spine ridge, thick tapering tail, baleful eye. -->
+  <!-- thick tail: tapering back with plate rings -->
+  <path d="M118 332 C82 326 48 338 28 364 C18 378 16 394 24 406 C44 414 72 410 96 396 C114 386 126 368 130 348 C128 340 124 334 118 332 Z" fill="#6E7A58"/>
+  <path d="M96 344 C82 348 68 356 58 368 M76 340 C64 346 52 356 44 370" stroke="#4D5840" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- low, long body -->
+  <path d="M118 312 C124 276 152 250 196 238 C248 224 308 224 354 238 C392 250 416 274 422 304 C428 334 416 364 388 382 C352 404 296 410 240 402 C176 392 130 362 118 312 Z" fill="#6E7A58"/>
+  <!-- dorsal spine ridge: row of plates -->
+  <path d="M168 250 L176 222 L192 246 Z M210 238 L220 208 L236 234 Z M254 230 L264 200 L280 228 Z M298 230 L308 202 L322 230 Z M340 238 L352 212 L362 240 Z" fill="#4D5840"/>
+  <!-- back plate shading -->
+  <path d="M160 256 C212 238 290 236 348 250 C310 244 248 246 196 258 C182 262 168 262 160 256 Z" fill="#586448"/>
+  <!-- armored side plates: overlapping rows -->
+  <path d="M150 290 C190 274 250 270 300 278 C290 290 284 304 282 320 C242 310 198 312 164 326 C156 314 150 302 150 290 Z" fill="#586448" opacity="0.9"/>
+  <path d="M160 340 C196 328 244 326 284 334 C278 346 274 360 274 374 C242 366 208 368 182 378 C172 366 164 354 160 340 Z" fill="#586448" opacity="0.7"/>
+  <!-- belly: pale low band -->
+  <path d="M168 380 C216 396 280 398 330 386 C310 402 272 410 232 406 C206 402 184 394 168 380 Z" fill="#B7BF9A"/>
+  <!-- head: blunt armored wedge, jaw slightly open -->
+  <path d="M398 264 C414 244 442 234 468 240 C490 246 502 262 500 280 C510 284 514 290 512 296 C506 302 498 303 490 300 C484 314 470 324 452 326 C428 328 408 318 398 300 C392 288 392 274 398 264 Z" fill="#6E7A58"/>
+  <!-- heavy brow plate -->
+  <path d="M408 258 C424 246 446 244 462 252 L456 270 C444 262 428 264 416 274 Z" fill="#3E4834"/>
+  <!-- baleful yellow-green eye -->
+  <circle cx="438" cy="276" r="13" fill="#D8E04A"/>
+  <ellipse cx="438" cy="276" rx="4" ry="10" fill="#211B14"/>
+  <circle cx="442" cy="271" r="2.4" fill="#F4F8D0"/>
+  <!-- jaw: open slit with teeth -->
+  <path d="M444 304 C462 310 482 310 496 302 C492 316 478 326 460 326 C450 324 444 316 444 304 Z" fill="#3E4834"/>
+  <path d="M452 306 L455 313 M464 309 L466 316 M477 308 L478 315" stroke="#D9DFC2" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- eight legs: four visible near (splayed, clawed), far hints -->
+  <path d="M168 368 C156 386 150 408 152 428 L176 430 C180 412 182 392 180 374 Z" fill="#586448"/>
+  <path d="M148 424 C144 436 150 444 162 445 C172 446 180 441 181 433 L170 436 L162 426 L154 432 C150 428 148 424 148 424 Z" fill="#3E4834"/>
+  <path d="M232 388 C224 406 220 426 222 444 L246 446 C250 428 250 408 246 392 Z" fill="#586448"/>
+  <path d="M218 440 C214 452 220 460 232 461 C242 462 250 457 251 449 L240 452 L232 442 L224 448 C220 444 218 440 218 440 Z" fill="#3E4834"/>
+  <path d="M298 392 C292 410 290 430 292 446 L316 448 C320 430 320 412 316 396 Z" fill="#586448"/>
+  <path d="M288 442 C284 454 290 462 302 463 C312 464 320 459 321 451 L310 454 L302 444 L294 450 C290 446 288 442 288 442 Z" fill="#3E4834"/>
+  <path d="M362 374 C356 394 354 414 358 432 L382 432 C386 414 384 394 378 378 Z" fill="#586448"/>
+  <path d="M354 426 C350 438 356 446 368 447 C378 448 386 443 387 435 L376 438 L368 428 L360 434 C356 430 354 426 354 426 Z" fill="#3E4834"/>
+  <path d="M200 380 L194 420 L202 422 L210 384 Z M268 390 L264 428 L272 429 L278 392 Z M332 384 L330 420 L338 420 L342 386 Z" fill="#46523C"/>
+</svg>

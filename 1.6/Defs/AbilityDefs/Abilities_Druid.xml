@@ -78,8 +78,7 @@
     <renderNodeProperties>
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
-        <texPath>Things/Pawn/Animal/Wolf_Timber/Wolf_Timber</texPath>
-        <color>(0.37, 0.37, 0.43)</color>
+        <texPath>Things/RimHeroes/Beasts/DireWolf/DireWolf</texPath>
         <parentTagDef>Body</parentTagDef>
         <drawSize>(1.8, 1.8)</drawSize>
         <pawnType>Any</pawnType>
@@ -147,8 +146,7 @@
     <renderNodeProperties>
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
-        <texPath>Things/Pawn/Animal/Elk/ElkMale</texPath>
-        <color>(0.88, 0.84, 0.76)</color>
+        <texPath>Things/RimHeroes/Beasts/GiantElk/GiantElk</texPath>
         <parentTagDef>Body</parentTagDef>
         <drawSize>(2.6, 2.6)</drawSize>
         <pawnType>Any</pawnType>
