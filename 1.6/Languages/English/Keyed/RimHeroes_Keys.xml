@@ -39,4 +39,13 @@
   <RH_Slot_Defense>Defense</RH_Slot_Defense>
   <RH_Slot_Offense>Offense</RH_Slot_Offense>
   <RH_Slot_Utility>Utility</RH_Slot_Utility>
+  <RH_NotAHero>Not a hero</RH_NotAHero>
+  <RH_NoSlots>No level-{0} spell slots remaining (long rest to recover)</RH_NoSlots>
+  <RH_TabSlots>Spell slots</RH_TabSlots>
+  <RH_ShortRest>{0} feels refreshed - a spell slot returns. (short rest)</RH_ShortRest>
+  <RH_LongRestComplete>{0} completes a long rest. All spell slots restored.</RH_LongRestComplete>
+  <RH_LongRestGizmo>Long rest</RH_LongRestGizmo>
+  <RH_LongRestGizmoDesc>Commit to a long rest: roughly twelve hours of sleep, after which all spell slots are restored. Progress accumulates while sleeping; toggle off to cancel.</RH_LongRestGizmoDesc>
+  <RH_AutocastGizmo>Auto: {0}</RH_AutocastGizmo>
+  <RH_AutocastGizmoDesc>Toggle automatic casting of {0} at hostiles while drafted. Cantrips are enabled by default; leveled spells must be opted in.</RH_AutocastGizmoDesc>
 </LanguageData>

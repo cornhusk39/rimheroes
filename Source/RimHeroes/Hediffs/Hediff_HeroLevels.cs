@@ -55,6 +55,11 @@ namespace RimHeroes
             {
                 SyncGestrals();
             }
+            TickRests(delta);
+            if (pawn.IsHashIntervalTick(30, delta))
+            {
+                TickAutocast();
+            }
         }
 
         // ===== Gestral retinue =====
@@ -136,6 +141,220 @@ namespace RimHeroes
                 if (bond.gestral == null)
                 {
                     bond.respawnAtTick = 0;
+                }
+            }
+        }
+
+        // ===== Spellcasting: Vancian slots, rests, autocast =====
+
+        private List<int> slotsExpended = new List<int>(new int[10]); // index = spell level 1..9
+        private List<AbilityDef> autocastSpells = new List<AbilityDef>();
+        public bool longResting;
+        private int longRestProgress;
+        private bool shortRestArmed = true;
+
+        public const int LongRestDurationTicks = 30000; // 12 in-game hours of sleep
+
+        public int MaxSlots(int spellLevel) => SpellUtility.MaxSlots(classDef?.casterProgression ?? CasterProgression.None, level, spellLevel);
+
+        public int RemainingSlots(int spellLevel) =>
+            spellLevel < 1 || spellLevel > 9 ? 0 : Mathf.Max(0, MaxSlots(spellLevel) - slotsExpended[spellLevel]);
+
+        public bool TryExpendSlot(int spellLevel)
+        {
+            if (RemainingSlots(spellLevel) <= 0)
+            {
+                return false;
+            }
+            slotsExpended[spellLevel]++;
+            return true;
+        }
+
+        public void RefreshAllSlots()
+        {
+            for (int i = 0; i < slotsExpended.Count; i++)
+            {
+                slotsExpended[i] = 0;
+            }
+        }
+
+        /// <summary>Short rest benefit: recover one expended slot of the lowest expended level.</summary>
+        public bool RestoreLowestExpendedSlot()
+        {
+            for (int lvl = 1; lvl <= 9; lvl++)
+            {
+                if (slotsExpended[lvl] > 0 && MaxSlots(lvl) > 0)
+                {
+                    slotsExpended[lvl]--;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool AutocastEnabled(AbilityDef def) => autocastSpells.Contains(def);
+
+        public void SetAutocast(AbilityDef def, bool on)
+        {
+            if (on && !autocastSpells.Contains(def))
+            {
+                autocastSpells.Add(def);
+            }
+            else if (!on)
+            {
+                autocastSpells.Remove(def);
+            }
+        }
+
+        public void Notify_SpellGranted(AbilityDef def)
+        {
+            if (SpellUtility.IsCantrip(def))
+            {
+                SetAutocast(def, true); // cantrips and free abilities autocast by default
+            }
+        }
+
+        private void TickRests(int delta)
+        {
+            bool asleep = !pawn.Dead && !pawn.Awake();
+            var rest = pawn.needs?.rest;
+            if (longResting)
+            {
+                if (asleep)
+                {
+                    longRestProgress += delta;
+                    if (longRestProgress >= LongRestDurationTicks)
+                    {
+                        longResting = false;
+                        longRestProgress = 0;
+                        RefreshAllSlots();
+                        // Long rest also completes the short-rest benefit cycle.
+                        shortRestArmed = false;
+                        if (PawnUtility.ShouldSendNotificationAbout(pawn))
+                        {
+                            Messages.Message("RH_LongRestComplete".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.PositiveEvent);
+                        }
+                    }
+                }
+                return;
+            }
+            if (rest == null)
+            {
+                return;
+            }
+            if (shortRestArmed && asleep && rest.CurLevelPercentage >= 0.98f)
+            {
+                shortRestArmed = false;
+                if (RestoreLowestExpendedSlot() && PawnUtility.ShouldSendNotificationAbout(pawn))
+                {
+                    Messages.Message("RH_ShortRest".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.PositiveEvent);
+                }
+            }
+            else if (!shortRestArmed && rest.CurLevelPercentage < 0.7f)
+            {
+                shortRestArmed = true;
+            }
+        }
+
+        private void TickAutocast()
+        {
+            if (!pawn.Spawned || pawn.Downed || pawn.Dead || !pawn.Drafted || pawn.abilities == null)
+            {
+                return;
+            }
+            if (pawn.CurJob?.ability != null)
+            {
+                return; // already casting
+            }
+            foreach (var ability in pawn.abilities.abilities)
+            {
+                if (!(ability is Ability_Spell spell) || !AutocastEnabled(spell.def))
+                {
+                    continue;
+                }
+                if (spell.GizmoDisabled(out _))
+                {
+                    continue;
+                }
+                float range = spell.verb?.verbProps?.range ?? 0f;
+                if (range <= 0f)
+                {
+                    continue;
+                }
+                var target = FindAutocastTarget(range);
+                if (target != null)
+                {
+                    spell.QueueCastingJob(target, target);
+                    return;
+                }
+            }
+        }
+
+        private Pawn FindAutocastTarget(float range)
+        {
+            Pawn best = null;
+            float bestDist = float.MaxValue;
+            foreach (var other in pawn.Map.mapPawns.AllPawnsSpawned)
+            {
+                if (other.Dead || other.Downed || !other.HostileTo(pawn))
+                {
+                    continue;
+                }
+                float dist = pawn.Position.DistanceTo(other.Position);
+                if (dist <= range && dist < bestDist && GenSight.LineOfSight(pawn.Position, other.Position, pawn.Map, skipFirstCell: true))
+                {
+                    best = other;
+                    bestDist = dist;
+                }
+            }
+            return best;
+        }
+
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            foreach (var gizmo in base.GetGizmos())
+            {
+                yield return gizmo;
+            }
+            if (!pawn.IsColonistPlayerControlled)
+            {
+                yield break;
+            }
+            if (classDef != null && classDef.casterProgression != CasterProgression.None)
+            {
+                yield return new Command_Toggle
+                {
+                    defaultLabel = "RH_LongRestGizmo".Translate(),
+                    defaultDesc = "RH_LongRestGizmoDesc".Translate(),
+                    icon = TexCommand.HoldOpen,
+                    isActive = () => longResting,
+                    toggleAction = () =>
+                    {
+                        longResting = !longResting;
+                        if (!longResting)
+                        {
+                            longRestProgress = 0;
+                        }
+                    }
+                };
+            }
+            if (pawn.abilities != null)
+            {
+                foreach (var ability in pawn.abilities.abilities)
+                {
+                    if (!(ability is Ability_Spell spell))
+                    {
+                        continue;
+                    }
+                    var def = spell.def;
+                    yield return new Command_Toggle
+                    {
+                        defaultLabel = "RH_AutocastGizmo".Translate(def.label),
+                        defaultDesc = "RH_AutocastGizmoDesc".Translate(def.label),
+                        icon = def.uiIcon,
+                        isActive = () => AutocastEnabled(def),
+                        toggleAction = () => SetAutocast(def, !AutocastEnabled(def))
+                    };
                 }
             }
         }
@@ -239,6 +458,7 @@ namespace RimHeroes
                     foreach (var abilityDef in grant.abilities)
                     {
                         pawn.abilities?.GainAbility(abilityDef); // dup-safe in vanilla
+                        Notify_SpellGranted(abilityDef);
                     }
                 }
                 if (grant.features != null)
@@ -261,9 +481,16 @@ namespace RimHeroes
             Scribe_Values.Look(ref level, "level", 1);
             Scribe_Values.Look(ref xp, "xp");
             Scribe_Collections.Look(ref gestralBonds, "gestralBonds", LookMode.Deep);
-            if (Scribe.mode == LoadSaveMode.PostLoadInit && gestralBonds == null)
+            Scribe_Collections.Look(ref slotsExpended, "slotsExpended", LookMode.Value);
+            Scribe_Collections.Look(ref autocastSpells, "autocastSpells", LookMode.Def);
+            Scribe_Values.Look(ref longResting, "longResting");
+            Scribe_Values.Look(ref longRestProgress, "longRestProgress");
+            Scribe_Values.Look(ref shortRestArmed, "shortRestArmed", true);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                gestralBonds = new List<GestralBond>();
+                if (gestralBonds == null) gestralBonds = new List<GestralBond>();
+                if (autocastSpells == null) autocastSpells = new List<AbilityDef>();
+                if (slotsExpended == null || slotsExpended.Count != 10) slotsExpended = new List<int>(new int[10]);
             }
         }
     }

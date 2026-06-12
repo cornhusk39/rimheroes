@@ -13,6 +13,7 @@ namespace RimHeroes
         public TraitDef classTrait;          // flavor trait applied alongside RH_Hero
         public HediffDef vestmentHediff;     // the class vestment (persistent armor-as-hediff)
         public int maxLevel = 20;
+        public CasterProgression casterProgression = CasterProgression.None;
 
         // What each level grants: abilities (spells/features as AbilityDefs), passive feature hediffs.
         public List<HeroLevelGrant> levelGrants = new List<HeroLevelGrant>();

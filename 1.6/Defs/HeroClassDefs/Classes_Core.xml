@@ -34,6 +34,23 @@
     <defName>RH_Wizard</defName>
     <label>wizard</label>
     <description>A scholar of the arcane. Fragile, studious, and capable of erasing a raid before it closes the distance.</description>
+    <casterProgression>Full</casterProgression>
+    <levelGrants>
+      <li>
+        <level>1</level>
+        <abilities>
+          <li>RH_Spell_FireBolt</li>
+          <li>RH_Spell_MagicMissile</li>
+          <li>RH_Spell_MageArmor</li>
+        </abilities>
+      </li>
+      <li>
+        <level>5</level>
+        <abilities>
+          <li>RH_Spell_Fireball</li>
+        </abilities>
+      </li>
+    </levelGrants>
     <gestralUnlocks>
       <li><level>3</level><job>RH_Gestral_Sweeper</job></li>
       <li><level>8</level><job>RH_Gestral_Bulwark</job></li>

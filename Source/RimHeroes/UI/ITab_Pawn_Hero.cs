@@ -62,6 +62,25 @@ namespace RimHeroes
             sb.AppendLine(classDef.description);
             sb.AppendLine();
 
+            if (classDef.casterProgression != CasterProgression.None)
+            {
+                var slots = new StringBuilder();
+                for (int lvl = 1; lvl <= 9; lvl++)
+                {
+                    int max = hediff.MaxSlots(lvl);
+                    if (max > 0)
+                    {
+                        if (slots.Length > 0) slots.Append("  ");
+                        slots.Append($"L{lvl}: {hediff.RemainingSlots(lvl)}/{max}");
+                    }
+                }
+                if (slots.Length > 0)
+                {
+                    sb.AppendLine("RH_TabSlots".Translate().Resolve() + ": " + slots);
+                    sb.AppendLine();
+                }
+            }
+
             var vestment = hediff.Vestment;
             if (vestment != null)
             {

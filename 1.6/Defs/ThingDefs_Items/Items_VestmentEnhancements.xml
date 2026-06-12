@@ -8,7 +8,7 @@
   <ThingDef Name="RH_InlayItemBase" ParentName="ResourceBase" Abstract="True">
     <graphicData>
       <texPath>Things/Item/Resource/ComponentIndustrial</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.85</drawSize>
     </graphicData>
     <stackLimit>10</stackLimit>
@@ -45,7 +45,7 @@
     <defName>RH_InlayItem_Warding_Lesser</defName>
     <label>lesser inlay of warding</label>
     <description>Faintly warded sigil-plates, sized for inlaying into a hero's vestment (defense slot).</description>
-    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.45, 0.55, 0.8)</color><drawSize>0.85</drawSize></graphicData>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(0.45, 0.55, 0.8)</color><drawSize>0.85</drawSize></graphicData>
     <statBases><MarketValue>200</MarketValue><Mass>1</Mass></statBases>
   </ThingDef>
 
@@ -53,7 +53,7 @@
     <defName>RH_InlayItem_Warding_Regular</defName>
     <label>inlay of warding</label>
     <description>Warded sigil-plates, sized for inlaying into a hero's vestment (defense slot).</description>
-    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.4, 0.6, 0.95)</color><drawSize>0.85</drawSize></graphicData>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(0.4, 0.6, 0.95)</color><drawSize>0.85</drawSize></graphicData>
     <statBases><MarketValue>350</MarketValue><Mass>1</Mass></statBases>
   </ThingDef>
 
@@ -61,7 +61,7 @@
     <defName>RH_InlayItem_Warding_Greater</defName>
     <label>greater inlay of warding</label>
     <description>Blazingly warded sigil-plates, sized for inlaying into a hero's vestment (defense slot).</description>
-    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.55, 0.75, 1.0)</color><drawSize>0.85</drawSize></graphicData>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(0.55, 0.75, 1.0)</color><drawSize>0.85</drawSize></graphicData>
     <statBases><MarketValue>600</MarketValue><Mass>1</Mass></statBases>
   </ThingDef>
 
@@ -101,7 +101,7 @@
     <defName>RH_InlayItem_Keenness_Lesser</defName>
     <label>lesser inlay of keenness</label>
     <description>Faint edge-blessing sigil-plates, sized for inlaying into a hero's vestment (offense slot).</description>
-    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.75, 0.35, 0.3)</color><drawSize>0.85</drawSize></graphicData>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(0.75, 0.35, 0.3)</color><drawSize>0.85</drawSize></graphicData>
     <statBases><MarketValue>200</MarketValue><Mass>1</Mass></statBases>
   </ThingDef>
 
@@ -109,7 +109,7 @@
     <defName>RH_InlayItem_Keenness_Regular</defName>
     <label>inlay of keenness</label>
     <description>Edge-blessing sigil-plates, sized for inlaying into a hero's vestment (offense slot).</description>
-    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.9, 0.3, 0.25)</color><drawSize>0.85</drawSize></graphicData>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(0.9, 0.3, 0.25)</color><drawSize>0.85</drawSize></graphicData>
     <statBases><MarketValue>350</MarketValue><Mass>1</Mass></statBases>
   </ThingDef>
 
@@ -117,7 +117,7 @@
     <defName>RH_InlayItem_Keenness_Greater</defName>
     <label>greater inlay of keenness</label>
     <description>Razor-sigil plates, sized for inlaying into a hero's vestment (offense slot).</description>
-    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(1.0, 0.45, 0.4)</color><drawSize>0.85</drawSize></graphicData>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(1.0, 0.45, 0.4)</color><drawSize>0.85</drawSize></graphicData>
     <statBases><MarketValue>600</MarketValue><Mass>1</Mass></statBases>
   </ThingDef>
 
@@ -157,7 +157,7 @@
     <defName>RH_InlayItem_Fleetness_Lesser</defName>
     <label>lesser inlay of fleetness</label>
     <description>Faint wind-script plates, sized for inlaying into a hero's vestment (utility slot).</description>
-    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.4, 0.7, 0.45)</color><drawSize>0.85</drawSize></graphicData>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(0.4, 0.7, 0.45)</color><drawSize>0.85</drawSize></graphicData>
     <statBases><MarketValue>200</MarketValue><Mass>1</Mass></statBases>
   </ThingDef>
 
@@ -165,7 +165,7 @@
     <defName>RH_InlayItem_Fleetness_Regular</defName>
     <label>inlay of fleetness</label>
     <description>Wind-script plates, sized for inlaying into a hero's vestment (utility slot).</description>
-    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.4, 0.85, 0.45)</color><drawSize>0.85</drawSize></graphicData>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(0.4, 0.85, 0.45)</color><drawSize>0.85</drawSize></graphicData>
     <statBases><MarketValue>350</MarketValue><Mass>1</Mass></statBases>
   </ThingDef>
 
@@ -173,7 +173,7 @@
     <defName>RH_InlayItem_Fleetness_Greater</defName>
     <label>greater inlay of fleetness</label>
     <description>Storm-script plates, sized for inlaying into a hero's vestment (utility slot).</description>
-    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_Single</graphicClass><color>(0.5, 1.0, 0.55)</color><drawSize>0.85</drawSize></graphicData>
+    <graphicData><texPath>Things/Item/Resource/ComponentIndustrial</texPath><graphicClass>Graphic_StackCount</graphicClass><color>(0.5, 1.0, 0.55)</color><drawSize>0.85</drawSize></graphicData>
     <statBases><MarketValue>600</MarketValue><Mass>1</Mass></statBases>
   </ThingDef>
 

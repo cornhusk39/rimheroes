@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <AbilityCategoryDef>
+    <defName>RH_Spells</defName>
+    <displayOrder>900</displayOrder>
+  </AbilityCategoryDef>
+
+  <AbilityDef Name="RH_SpellBase" Abstract="True">
+    <abilityClass>RimHeroes.Ability_Spell</abilityClass>
+    <category>RH_Spells</category>
+    <iconPath>UI/Commands/Attack</iconPath>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <warmupStartSound>PsycastPsychicEffect</warmupStartSound>
+  </AbilityDef>
+
+  <!-- Cantrip: at-will ranged zap -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_FireBolt</defName>
+    <label>fire bolt</label>
+    <description>Hurl a mote of fire at a target. Cantrip - costs no spell slot.</description>
+    <level>0</level>
+    <cooldownTicksRange>90</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>RH_Projectile_FireBolt</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 1: auto-hit force darts -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_MagicMissile</defName>
+    <label>magic missile</label>
+    <description>Three darts of arcane force strike the target unerringly. Consumes a level-1 spell slot.</description>
+    <level>1</level>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>29.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Blunt</damageDef>
+        <amount>4</amount>
+        <hits>3</hits>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 1: self armor buff -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_MageArmor</defName>
+    <label>mage armor</label>
+    <description>Weave protective force around yourself for a day. Consumes a level-1 spell slot.</description>
+    <level>1</level>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_MageArmor</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 3: the classic -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Fireball</defName>
+    <label>fireball</label>
+    <description>A blossom of flame detonates at the target point. Consumes a level-3 spell slot.</description>
+    <level>3</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>34.9</range>
+      <warmupTime>2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Flame</damageDef>
+        <radius>3.9</radius>
+        <damageAmount>35</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Fire bolt projectile -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>RH_Projectile_FireBolt</defName>
+    <label>fire bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <speed>40</speed>
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <!-- Mage armor buff -->
+  <HediffDef>
+    <defName>RH_MageArmor</defName>
+    <label>mage armor</label>
+    <description>A weave of protective arcane force. Fades after a day.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.5, 0.7, 1.0)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>
