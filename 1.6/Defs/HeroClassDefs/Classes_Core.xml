@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- The full class roster. Mim trios per DESIGN.md (L3/L8/L12; L20 free choice in code
-       later). Slinger and Wisp castes exist as jobs but have no race yet - those slots simply
+       later). Quiller and Wisp castes exist as jobs but have no race yet - those slots simply
        don't spawn until their castes ship. -->
 
   <RimHeroes.HeroClassDef>
@@ -26,7 +26,7 @@
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>
-      <li><level>8</level><job>RH_Mim_Bulwark</job></li>
+      <li><level>8</level><job>RH_Mim_Vanguard</job></li>
       <li><level>12</level><job>RH_Mim_Scrapper</job></li>
     </mimUnlocks>
   </RimHeroes.HeroClassDef>
@@ -133,7 +133,7 @@
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>
       <li><level>8</level><job>RH_Mim_Hearth</job></li>
-      <li><level>12</level><job>RH_Mim_Slinger</job></li>
+      <li><level>12</level><job>RH_Mim_Quiller</job></li>
     </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
@@ -161,7 +161,7 @@
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>
       <li><level>8</level><job>RH_Mim_Salve</job></li>
-      <li><level>12</level><job>RH_Mim_Bulwark</job></li>
+      <li><level>12</level><job>RH_Mim_Vanguard</job></li>
     </mimUnlocks>
   </RimHeroes.HeroClassDef>
 
@@ -258,7 +258,7 @@
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Sweeper</job></li>
-      <li><level>8</level><job>RH_Mim_Bulwark</job></li>
+      <li><level>8</level><job>RH_Mim_Vanguard</job></li>
       <li><level>12</level><job>RH_Mim_Wisp</job></li>
     </mimUnlocks>
   </RimHeroes.HeroClassDef>
@@ -286,7 +286,7 @@
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>
-      <li><level>8</level><job>RH_Mim_Bulwark</job></li>
+      <li><level>8</level><job>RH_Mim_Vanguard</job></li>
       <li><level>12</level><job>RH_Mim_Wisp</job></li>
     </mimUnlocks>
   </RimHeroes.HeroClassDef>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Sweeper mim, back view: dominated by the broom tail. -->
+  <!-- ears -->
+  <path d="M92 70 C84 42 94 28 108 26 C112 44 108 60 102 72 Z" fill="#8E5630"/>
+  <path d="M164 70 C172 42 162 28 148 26 C144 44 148 60 154 72 Z" fill="#8E5630"/>
+  <!-- body -->
+  <ellipse cx="124" cy="166" rx="66" ry="64" fill="#B5713E"/>
+  <ellipse cx="124" cy="156" rx="50" ry="44" fill="#A05F33"/>
+  <!-- head (no face) -->
+  <circle cx="126" cy="92" r="48" fill="#C07C46"/>
+  <ellipse cx="126" cy="70" rx="32" ry="18" fill="#D89A63" opacity="0.55"/>
+  <path d="M112 54 Q126 48 140 54 L136 96 Q126 102 116 96 Z" fill="#A05F33"/>
+  <!-- broom tail front and center, curling over the back -->
+  <path d="M124 196 C100 170 96 122 116 84 C84 116 80 178 112 214 Z" fill="#D9A53C"/>
+  <path d="M124 196 C152 172 158 122 140 84 C174 114 176 180 140 214 Z" fill="#D9A53C"/>
+  <path d="M126 200 C108 176 106 130 120 96 C100 126 100 176 122 206 Z" fill="#C28E2C"/>
+  <path d="M118 92 L112 72 M134 92 L142 72 M110 120 L98 106 M146 120 L158 106 M106 152 L92 144 M150 152 L164 144" stroke="#8F6A1B" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- feet -->
+  <ellipse cx="98" cy="226" rx="19" ry="11" fill="#8E5630"/>
+  <ellipse cx="150" cy="226" rx="19" ry="11" fill="#8E5630"/>
+</svg>

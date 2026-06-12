@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Wisp mim, side view facing right: flame leaning into the wind. -->
+  <path d="M104 38 C136 70 188 100 192 156 C195 202 164 228 128 228 C92 228 64 202 66 156 C70 104 92 74 104 38 Z" fill="#E2581F"/>
+  <path d="M112 70 C136 94 172 116 174 156 C176 192 154 212 128 212 C102 212 82 192 84 156 C86 118 102 96 112 70 Z" fill="#FF8A2A"/>
+  <path d="M120 102 C136 120 156 136 157 162 C158 188 144 200 129 200 C112 200 100 186 101 162 C102 136 112 120 120 102 Z" fill="#FFC23D"/>
+  <!-- trailing lick behind -->
+  <path d="M70 130 C54 122 46 106 52 92 C62 102 68 116 70 128 Z" fill="#FF8A2A"/>
+  <!-- eye + mouth in profile, looking right -->
+  <ellipse cx="152" cy="144" rx="13" ry="17" fill="#FFFDF2"/>
+  <circle cx="156" cy="148" r="7.5" fill="#2E2620"/>
+  <circle cx="158.5" cy="145" r="2.3" fill="#FFFDF2"/>
+  <path d="M134 180 Q150 192 168 178 Q162 198 142 196 Q132 192 134 180 Z" fill="#8F2B0E"/>
+  <!-- core -->
+  <ellipse cx="130" cy="172" rx="14" ry="18" fill="#FFE9A8"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Sprout mim: little wooden fellow with a big leaf sprout on his head. Front view. -->
+  <!-- sprout: two big leaves on a stem -->
+  <path d="M128 56 C128 44 126 36 122 30" stroke="#4E7A38" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M122 32 C96 30 82 14 86 2 C108 2 122 14 124 30 Z" fill="#5FA348"/>
+  <path d="M120 30 C104 28 94 18 94 8 C108 10 118 20 120 28 Z" fill="#7FC465"/>
+  <path d="M124 30 C148 26 158 10 152 0 C132 2 122 16 122 30 Z" fill="#4E8A3C"/>
+  <!-- round wooden head (big for the body) -->
+  <circle cx="128" cy="104" r="50" fill="#96714B"/>
+  <ellipse cx="118" cy="80" rx="30" ry="16" fill="#B5915F" opacity="0.7"/>
+  <!-- wood grain -->
+  <path d="M94 122 Q102 118 108 124 M148 124 Q156 118 164 122" stroke="#7A5A3C" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- face: carved-dot eyes, wide grin -->
+  <circle cx="110" cy="100" r="7" fill="#2E2620"/>
+  <circle cx="146" cy="100" r="7" fill="#2E2620"/>
+  <circle cx="112.5" cy="97.5" r="2.2" fill="#F5EEDD"/>
+  <circle cx="148.5" cy="97.5" r="2.2" fill="#F5EEDD"/>
+  <path d="M112 118 Q128 130 144 118" stroke="#5C4226" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- small barrel body -->
+  <rect x="102" y="148" width="52" height="56" rx="20" fill="#8A6B4A"/>
+  <ellipse cx="128" cy="182" rx="18" ry="14" fill="#A9855C"/>
+  <!-- stick arms -->
+  <path d="M102 162 C84 166 74 176 70 188" stroke="#6E5238" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M154 162 C172 166 182 176 186 188" stroke="#6E5238" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <!-- leaf in hand -->
+  <path d="M186 186 C200 178 212 180 216 188 C208 196 194 196 186 190 Z" fill="#5FA348"/>
+  <!-- stick legs + root feet -->
+  <path d="M116 204 L112 224 M140 204 L144 224" stroke="#6E5238" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="108" cy="230" rx="15" ry="8" fill="#6E5238"/>
+  <ellipse cx="148" cy="230" rx="15" ry="8" fill="#6E5238"/>
+</svg>

@@ -115,10 +115,8 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
-          <color>(110,200,120)</color>
-          <drawSize>1.0</drawSize>
-          <shaderType>CutoutComplex</shaderType>
+          <texPath>Things/RimHeroes/Mims/Sweeper/Sweeper</texPath>
+          <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
@@ -156,10 +154,8 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
-          <color>(150,130,100)</color>
-          <drawSize>1.0</drawSize>
-          <shaderType>CutoutComplex</shaderType>
+          <texPath>Things/RimHeroes/Mims/Digger/Digger</texPath>
+          <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
@@ -196,10 +192,8 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
-          <color>(235,155,65)</color>
-          <drawSize>1.0</drawSize>
-          <shaderType>CutoutComplex</shaderType>
+          <texPath>Things/RimHeroes/Mims/Hearth/Hearth</texPath>
+          <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
@@ -236,10 +230,8 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
-          <color>(150,220,120)</color>
-          <drawSize>1.0</drawSize>
-          <shaderType>CutoutComplex</shaderType>
+          <texPath>Things/RimHeroes/Mims/Sprout/Sprout</texPath>
+          <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
@@ -276,10 +268,8 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
-          <color>(240,240,240)</color>
-          <drawSize>1.0</drawSize>
-          <shaderType>CutoutComplex</shaderType>
+          <texPath>Things/RimHeroes/Mims/Salve/Salve</texPath>
+          <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
@@ -317,10 +307,8 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
-          <color>(195,85,60)</color>
-          <drawSize>1.0</drawSize>
-          <shaderType>CutoutComplex</shaderType>
+          <texPath>Things/RimHeroes/Mims/Scrapper/Scrapper</texPath>
+          <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
@@ -331,8 +319,8 @@
   </PawnKindDef>
 
   <ThingDef ParentName="RH_MimBase">
-    <defName>RH_MimBulwark</defName>
-    <label>bulwark mim</label>
+    <defName>RH_MimVanguard</defName>
+    <label>vanguard mim</label>
     <description>A walking shield with opinions. Slow, devoted, very hard to put down.</description>
     <race>
       <baseHealthScale>1.5</baseHealthScale>
@@ -353,16 +341,14 @@
   </ThingDef>
 
   <PawnKindDef ParentName="RH_MimKindBase">
-    <defName>RH_MimBulwarkKind</defName>
-    <label>bulwark mim</label>
-    <race>RH_MimBulwark</race>
+    <defName>RH_MimVanguardKind</defName>
+    <label>vanguard mim</label>
+    <race>RH_MimVanguard</race>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
-          <color>(115,135,175)</color>
-          <drawSize>1.0</drawSize>
-          <shaderType>CutoutComplex</shaderType>
+          <texPath>Things/RimHeroes/Mims/Vanguard/Vanguard</texPath>
+          <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>

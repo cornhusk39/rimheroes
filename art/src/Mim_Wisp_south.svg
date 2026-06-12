@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Wisp mim: a small living flame with big eyes (Calcifer energy). Front view. -->
+  <!-- outer flame body -->
+  <path d="M128 30 C150 64 196 92 196 152 C196 200 166 228 128 228 C90 228 60 200 60 152 C60 92 106 64 128 30 Z" fill="#E2581F"/>
+  <!-- mid flame -->
+  <path d="M128 62 C144 88 178 108 178 154 C178 192 156 214 128 214 C100 214 78 192 78 154 C78 108 112 88 128 62 Z" fill="#FF8A2A"/>
+  <!-- inner glow -->
+  <path d="M128 96 C138 114 158 128 158 158 C158 186 144 200 128 200 C112 200 98 186 98 158 C98 128 118 114 128 96 Z" fill="#FFC23D"/>
+  <!-- core -->
+  <ellipse cx="128" cy="166" rx="20" ry="24" fill="#FFE9A8"/>
+  <!-- side flame licks (little arms) -->
+  <path d="M62 140 C48 130 42 116 48 104 C58 112 64 124 66 136 Z" fill="#FF8A2A"/>
+  <path d="M194 140 C208 130 214 116 208 104 C198 112 192 124 190 136 Z" fill="#FF8A2A"/>
+  <!-- big expressive eyes -->
+  <ellipse cx="106" cy="142" rx="14" ry="18" fill="#FFFDF2"/>
+  <ellipse cx="150" cy="142" rx="14" ry="18" fill="#FFFDF2"/>
+  <circle cx="108" cy="146" r="8" fill="#2E2620"/>
+  <circle cx="148" cy="146" r="8" fill="#2E2620"/>
+  <circle cx="110.5" cy="143" r="2.5" fill="#FFFDF2"/>
+  <circle cx="150.5" cy="143" r="2.5" fill="#FFFDF2"/>
+  <!-- wide wavy mouth -->
+  <path d="M104 178 Q116 190 128 182 Q140 190 152 178 Q146 198 128 198 Q110 198 104 178 Z" fill="#8F2B0E"/>
+  <path d="M112 184 Q128 192 144 184 L142 190 Q128 196 114 190 Z" fill="#FFC23D"/>
+</svg>

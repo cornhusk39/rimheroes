@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Quiller mim, side view facing right: quills swept back like fletching. -->
+  <!-- swept-back quills -->
+  <path d="M108 96 L62 58 M96 116 L42 92 M88 140 L32 130 M88 164 L34 170 M96 188 L46 206" stroke="#5C4630" stroke-width="9" stroke-linecap="round"/>
+  <path d="M62 58 L50 48 M42 92 L28 86 M32 130 L18 128 M34 170 L20 174 M46 206 L34 214" stroke="#D9C8A0" stroke-width="9" stroke-linecap="round"/>
+  <!-- body -->
+  <ellipse cx="124" cy="174" rx="72" ry="56" fill="#8C6B4F"/>
+  <ellipse cx="136" cy="194" rx="42" ry="26" fill="#C2A380"/>
+  <!-- head -->
+  <circle cx="176" cy="108" r="42" fill="#9A7757"/>
+  <ellipse cx="168" cy="88" rx="25" ry="13" fill="#AA8A68" opacity="0.8"/>
+  <circle cx="152" cy="72" r="10" fill="#7A5A40"/>
+  <!-- snout -->
+  <ellipse cx="212" cy="116" rx="15" ry="11" fill="#AA8A68"/>
+  <ellipse cx="221" cy="111" rx="5" ry="4" fill="#5C4630"/>
+  <rect x="206" y="122" width="9" height="8" rx="2" fill="#F5EEDD"/>
+  <!-- eye -->
+  <circle cx="184" cy="102" r="7" fill="#2E2620"/>
+  <circle cx="186.5" cy="99.5" r="2.2" fill="#F5EEDD"/>
+  <!-- arm with quill-dart at the ready -->
+  <path d="M150 152 L196 152" stroke="#9A7757" stroke-width="10" stroke-linecap="round"/>
+  <path d="M196 152 L232 144" stroke="#5C4630" stroke-width="7" stroke-linecap="round"/>
+  <path d="M232 144 L244 141" stroke="#D9C8A0" stroke-width="7" stroke-linecap="round"/>
+  <!-- feet -->
+  <ellipse cx="98" cy="226" rx="17" ry="10" fill="#6E5238"/>
+  <ellipse cx="162" cy="228" rx="17" ry="10" fill="#6E5238"/>
+</svg>

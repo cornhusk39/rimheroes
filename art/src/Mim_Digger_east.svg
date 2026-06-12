@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Digger mim, side view facing right: nose forward, spade paw mid-dig. -->
+  <!-- candle (tilted slightly forward) -->
+  <ellipse cx="160" cy="34" rx="6" ry="10" fill="#FFC23D"/>
+  <ellipse cx="160" cy="37" rx="3.5" ry="6" fill="#FFE9A8"/>
+  <rect x="150" y="42" width="20" height="24" rx="5" fill="#F2EFE6"/>
+  <!-- body -->
+  <ellipse cx="118" cy="172" rx="76" ry="60" fill="#6B5B53"/>
+  <ellipse cx="128" cy="194" rx="46" ry="28" fill="#8A7A70"/>
+  <!-- head: low, nose-first wedge -->
+  <circle cx="166" cy="108" r="42" fill="#75645B"/>
+  <ellipse cx="158" cy="88" rx="26" ry="14" fill="#8A7A70" opacity="0.6"/>
+  <!-- snout to pink nose -->
+  <path d="M196 100 C216 102 226 110 228 118 C220 126 204 128 192 124 Z" fill="#75645B"/>
+  <ellipse cx="226" cy="116" rx="11" ry="9" fill="#E8918A"/>
+  <!-- squint eye -->
+  <path d="M172 100 Q178 96 184 100" stroke="#2E2620" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- whiskers -->
+  <path d="M204 110 L222 100 M202 120 L222 124" stroke="#D8CFC8" stroke-width="3" stroke-linecap="round"/>
+  <!-- big spade paw raised mid-dig -->
+  <path d="M156 150 C182 144 200 156 202 174 C202 192 182 202 164 196 C148 190 144 162 156 150 Z" fill="#E8A8A0"/>
+  <path d="M192 162 L206 154 M196 176 L212 174 M192 188 L206 194" stroke="#C97F76" stroke-width="5" stroke-linecap="round"/>
+  <!-- far paw hint -->
+  <ellipse cx="88" cy="200" rx="22" ry="16" fill="#D89890"/>
+  <!-- feet -->
+  <ellipse cx="92" cy="226" rx="17" ry="10" fill="#4E423C"/>
+  <ellipse cx="148" cy="228" rx="17" ry="10" fill="#4E423C"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Sprout mim, back view. -->
+  <path d="M128 54 C128 42 130 34 134 28" stroke="#4E7A38" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M134 30 C160 28 174 12 170 0 C148 0 134 12 132 28 Z" fill="#5FA348"/>
+  <path d="M132 28 C108 24 98 8 104 -2 C124 0 134 14 134 28 Z" fill="#4E8A3C"/>
+  <!-- head back -->
+  <circle cx="128" cy="102" r="50" fill="#96714B"/>
+  <ellipse cx="128" cy="80" rx="32" ry="17" fill="#B5915F" opacity="0.6"/>
+  <!-- knot in the wood -->
+  <circle cx="142" cy="108" r="8" fill="#7A5A3C"/>
+  <circle cx="142" cy="108" r="3.5" fill="#5C4226"/>
+  <!-- body -->
+  <rect x="102" y="146" width="52" height="56" rx="20" fill="#8A6B4A"/>
+  <rect x="110" y="150" width="36" height="40" rx="14" fill="#7A5C3E"/>
+  <!-- arms -->
+  <path d="M102 160 C84 164 74 174 70 186" stroke="#6E5238" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M154 160 C172 164 182 174 186 186" stroke="#6E5238" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <!-- legs -->
+  <path d="M116 202 L112 222 M140 202 L144 222" stroke="#6E5238" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="108" cy="228" rx="15" ry="8" fill="#6E5238"/>
+  <ellipse cx="148" cy="228" rx="15" ry="8" fill="#6E5238"/>
+</svg>

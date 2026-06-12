@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Quiller mim, back view: full quiver back, bristling. -->
+  <!-- body -->
+  <ellipse cx="128" cy="168" rx="64" ry="60" fill="#8C6B4F"/>
+  <!-- head back -->
+  <circle cx="128" cy="100" r="44" fill="#9A7757"/>
+  <circle cx="94" cy="72" r="11" fill="#7A5A40"/>
+  <circle cx="162" cy="72" r="11" fill="#7A5A40"/>
+  <!-- dense quill coat over the whole back -->
+  <path d="M128 92 L128 60 M104 100 L88 70 M152 100 L168 70 M86 122 L60 100 M170 122 L196 100 M76 150 L46 138 M180 150 L210 138 M78 178 L48 182 M178 178 L208 182 M92 202 L72 216 M164 202 L184 216 M112 132 L104 104 M144 132 L152 104 M100 160 L82 142 M156 160 L174 142 M118 186 L110 162 M138 186 L146 162 M128 156 L128 128" stroke="#5C4630" stroke-width="8" stroke-linecap="round"/>
+  <path d="M128 60 L128 48 M88 70 L82 60 M168 70 L174 60 M60 100 L50 92 M196 100 L206 92 M46 138 L34 134 M210 138 L222 134 M48 182 L36 184 M208 182 L220 184 M72 216 L62 224 M184 216 L194 224" stroke="#D9C8A0" stroke-width="8" stroke-linecap="round"/>
+  <!-- feet -->
+  <ellipse cx="102" cy="226" rx="19" ry="11" fill="#6E5238"/>
+  <ellipse cx="154" cy="226" rx="19" ry="11" fill="#6E5238"/>
+</svg>

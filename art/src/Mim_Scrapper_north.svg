@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Scrapper mim, back view: helmet back, sword slung across the back, too big. -->
+  <!-- sword diagonally across the back -->
+  <path d="M52 38 L64 30 L196 196 L186 204 Z" fill="#C7CDD2"/>
+  <path d="M56 36 L62 32 L192 198 L189 201 Z" fill="#E2E6EA"/>
+  <path d="M48 30 L70 22 L60 46 Z" fill="#C7CDD2"/>
+  <rect x="172" y="172" width="40" height="11" rx="5" transform="rotate(52 192 178)" fill="#8A6A43"/>
+  <!-- ears -->
+  <path d="M88 64 C80 38 90 24 104 22 C108 40 104 56 98 66 Z" fill="#8F7348"/>
+  <path d="M160 64 C168 38 158 24 144 22 C140 40 144 56 150 66 Z" fill="#8F7348"/>
+  <!-- body -->
+  <ellipse cx="120" cy="168" rx="62" ry="60" fill="#A98B5E"/>
+  <ellipse cx="120" cy="156" rx="46" ry="42" fill="#9B7F54"/>
+  <!-- head + helmet back -->
+  <circle cx="122" cy="100" r="46" fill="#B3956A"/>
+  <path d="M70 98 C70 56 174 56 174 98 L170 116 L74 116 Z" fill="#9AA2AA"/>
+  <path d="M70 98 C70 64 174 64 174 98 L173 102 L71 102 Z" fill="#B4BBC2"/>
+  <circle cx="122" cy="64" r="7" fill="#6E767E"/>
+  <!-- strap across back -->
+  <path d="M76 130 L168 196" stroke="#74522F" stroke-width="10" stroke-linecap="round"/>
+  <!-- tail nub -->
+  <circle cx="120" cy="222" r="12" fill="#8F7348"/>
+  <!-- feet -->
+  <ellipse cx="94" cy="228" rx="19" ry="11" fill="#7A6243"/>
+  <ellipse cx="146" cy="228" rx="19" ry="11" fill="#7A6243"/>
+</svg>

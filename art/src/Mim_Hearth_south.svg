@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Hearth mim: chubby baby brass dragon with a cookpot helmet. Front view. -->
+  <!-- pot on head -->
+  <path d="M84 56 C84 38 172 38 172 56 L168 76 L88 76 Z" fill="#6E7378"/>
+  <path d="M84 56 C84 44 172 44 172 56 L171 62 L85 62 Z" fill="#878D93"/>
+  <rect x="70" y="54" width="16" height="9" rx="4" fill="#51565B"/>
+  <rect x="170" y="54" width="16" height="9" rx="4" fill="#51565B"/>
+  <!-- wings (tiny, out to the sides) -->
+  <path d="M52 140 C30 124 28 102 42 92 C52 106 58 124 60 142 Z" fill="#9C7430"/>
+  <path d="M204 140 C226 124 228 102 214 92 C204 106 198 124 196 142 Z" fill="#9C7430"/>
+  <path d="M50 134 C36 122 34 106 44 98 C51 110 55 122 56 134 Z" fill="#C99A45"/>
+  <path d="M206 134 C220 122 222 106 212 98 C205 110 201 122 200 134 Z" fill="#C99A45"/>
+  <!-- body -->
+  <ellipse cx="128" cy="168" rx="64" ry="62" fill="#C99A45"/>
+  <!-- belly scutes -->
+  <ellipse cx="128" cy="182" rx="40" ry="38" fill="#EAD9AC"/>
+  <path d="M96 166 Q128 158 160 166 M96 182 Q128 174 160 182 M100 198 Q128 191 156 198 M106 213 Q128 207 150 213" stroke="#D2BC83" stroke-width="4" fill="none"/>
+  <!-- head -->
+  <circle cx="128" cy="100" r="46" fill="#D8AC56"/>
+  <ellipse cx="118" cy="80" rx="28" ry="14" fill="#E3BC72" opacity="0.7"/>
+  <!-- snout -->
+  <ellipse cx="128" cy="118" rx="22" ry="14" fill="#E3BC72"/>
+  <ellipse cx="120" cy="114" rx="3.5" ry="5" fill="#9C7430"/>
+  <ellipse cx="136" cy="114" rx="3.5" ry="5" fill="#9C7430"/>
+  <!-- smoke puff from nostril -->
+  <circle cx="104" cy="100" r="5" fill="#D8CFC8" opacity="0.8"/>
+  <circle cx="96" cy="92" r="3.5" fill="#D8CFC8" opacity="0.6"/>
+  <!-- eyes -->
+  <circle cx="106" cy="94" r="7.5" fill="#2E2620"/>
+  <circle cx="150" cy="94" r="7.5" fill="#2E2620"/>
+  <circle cx="108.5" cy="91.5" r="2.3" fill="#F5EEDD"/>
+  <circle cx="152.5" cy="91.5" r="2.3" fill="#F5EEDD"/>
+  <path d="M120 128 Q128 133 136 128" stroke="#9C7430" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- wooden spoon in paw -->
+  <path d="M180 150 L196 198" stroke="#8A6A43" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="199" cy="206" rx="13" ry="16" fill="#A98B5E"/>
+  <ellipse cx="180" cy="150" rx="11" ry="9" fill="#D8AC56"/>
+  <!-- feet -->
+  <ellipse cx="102" cy="228" rx="19" ry="11" fill="#9C7430"/>
+  <ellipse cx="154" cy="228" rx="19" ry="11" fill="#9C7430"/>
+</svg>

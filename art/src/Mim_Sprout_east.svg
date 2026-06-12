@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Sprout mim, side view facing right. -->
+  <path d="M150 58 C150 46 148 38 144 32" stroke="#4E7A38" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M144 34 C120 32 106 16 110 4 C132 4 144 16 146 32 Z" fill="#5FA348"/>
+  <path d="M146 32 C168 28 178 12 172 2 C152 4 144 18 144 32 Z" fill="#4E8A3C"/>
+  <!-- head -->
+  <circle cx="150" cy="106" r="48" fill="#96714B"/>
+  <ellipse cx="142" cy="84" rx="28" ry="15" fill="#B5915F" opacity="0.7"/>
+  <!-- nose bump + face -->
+  <ellipse cx="194" cy="112" rx="10" ry="8" fill="#A9855C"/>
+  <circle cx="166" cy="102" r="7" fill="#2E2620"/>
+  <circle cx="168.5" cy="99.5" r="2.2" fill="#F5EEDD"/>
+  <path d="M168 124 Q180 130 192 124" stroke="#5C4226" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- body -->
+  <rect x="112" y="150" width="50" height="54" rx="20" fill="#8A6B4A"/>
+  <ellipse cx="140" cy="184" rx="16" ry="13" fill="#A9855C"/>
+  <!-- near arm swinging, leaf in hand -->
+  <path d="M138 162 C156 170 166 182 168 194" stroke="#6E5238" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M168 192 C182 184 194 186 198 194 C190 202 176 202 168 196 Z" fill="#5FA348"/>
+  <!-- far arm hint -->
+  <path d="M118 164 C106 170 100 180 98 190" stroke="#5C4530" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <!-- legs mid-stride -->
+  <path d="M126 202 L118 224 M148 202 L156 224" stroke="#6E5238" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="114" cy="230" rx="14" ry="8" fill="#6E5238"/>
+  <ellipse cx="160" cy="230" rx="14" ry="8" fill="#6E5238"/>
+</svg>

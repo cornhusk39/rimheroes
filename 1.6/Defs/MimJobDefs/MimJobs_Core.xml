@@ -55,16 +55,16 @@
   </RimHeroes.MimJobDef>
 
   <RimHeroes.MimJobDef>
-    <defName>RH_Mim_Bulwark</defName>
-    <label>bulwark</label>
+    <defName>RH_Mim_Vanguard</defName>
+    <label>vanguard</label>
     <description>A mim tank. A walking shield with opinions.</description>
     <isCombat>true</isCombat>
-    <pawnKind>RH_MimBulwarkKind</pawnKind>
+    <pawnKind>RH_MimVanguardKind</pawnKind>
   </RimHeroes.MimJobDef>
 
   <RimHeroes.MimJobDef>
-    <defName>RH_Mim_Slinger</defName>
-    <label>slinger</label>
+    <defName>RH_Mim_Quiller</defName>
+    <label>quiller</label>
     <description>A mim ranged fighter. Never misses twice.</description>
     <isCombat>true</isCombat>
   </RimHeroes.MimJobDef>

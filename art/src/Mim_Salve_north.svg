@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Salve mim, back view: ears, cap back, cotton tail, satchel strap. -->
+  <path d="M104 74 C94 34 102 12 116 8 C122 32 118 58 112 76 Z" fill="#DCE5D2"/>
+  <path d="M148 72 C166 56 188 56 196 68 C188 82 166 84 150 78 Z" fill="#DCE5D2"/>
+  <path d="M96 52 C100 36 156 36 160 52 L156 62 L100 62 Z" fill="#F2F2F0"/>
+  <!-- body -->
+  <ellipse cx="128" cy="168" rx="60" ry="58" fill="#EDF2E4"/>
+  <ellipse cx="128" cy="156" rx="46" ry="42" fill="#DCE5D2"/>
+  <!-- head back -->
+  <circle cx="128" cy="100" r="44" fill="#F4F7EE"/>
+  <ellipse cx="128" cy="80" rx="28" ry="14" fill="#FFFFFF" opacity="0.7"/>
+  <!-- satchel strap across back -->
+  <path d="M90 134 L170 204" stroke="#9CB286" stroke-width="11" stroke-linecap="round"/>
+  <!-- cotton tail -->
+  <circle cx="128" cy="216" r="14" fill="#FFFFFF"/>
+  <!-- feet -->
+  <ellipse cx="102" cy="226" rx="20" ry="11" fill="#DCE5D2"/>
+  <ellipse cx="154" cy="226" rx="20" ry="11" fill="#DCE5D2"/>
+</svg>

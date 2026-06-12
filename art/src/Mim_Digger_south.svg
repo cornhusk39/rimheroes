@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Digger mim: velvet mole, huge spade paws, candle on head. Front view. -->
+  <!-- candle -->
+  <ellipse cx="128" cy="36" rx="6" ry="10" fill="#FFC23D"/>
+  <ellipse cx="128" cy="39" rx="3.5" ry="6" fill="#FFE9A8"/>
+  <rect x="118" y="44" width="20" height="26" rx="5" fill="#F2EFE6"/>
+  <path d="M118 52 C116 60 120 64 118 70 L122 70 C124 62 120 58 122 52 Z" fill="#FFFFFF"/>
+  <!-- body (round velvet lump) -->
+  <ellipse cx="128" cy="164" rx="68" ry="66" fill="#6B5B53"/>
+  <ellipse cx="128" cy="182" rx="42" ry="38" fill="#8A7A70"/>
+  <!-- head merges into body -->
+  <circle cx="128" cy="100" r="46" fill="#75645B"/>
+  <ellipse cx="120" cy="78" rx="28" ry="15" fill="#8A7A70" opacity="0.7"/>
+  <!-- tiny squint eyes -->
+  <path d="M106 96 Q112 92 118 96" stroke="#2E2620" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M138 96 Q144 92 150 96" stroke="#2E2620" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- big pink nose -->
+  <ellipse cx="128" cy="112" rx="13" ry="10" fill="#E8918A"/>
+  <ellipse cx="124" cy="109" rx="5" ry="3.5" fill="#F2B3AC"/>
+  <path d="M120 124 Q128 130 136 124" stroke="#4E423C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- whiskers -->
+  <path d="M98 110 L76 104 M98 118 L78 120 M158 110 L180 104 M158 118 L178 120" stroke="#D8CFC8" stroke-width="3" stroke-linecap="round"/>
+  <!-- enormous spade paws -->
+  <path d="M62 150 C36 148 24 168 30 188 C36 206 60 210 74 198 C84 188 82 162 62 150 Z" fill="#E8A8A0"/>
+  <path d="M40 170 L28 164 M38 182 L24 182 M42 194 L30 200" stroke="#C97F76" stroke-width="5" stroke-linecap="round"/>
+  <path d="M194 150 C220 148 232 168 226 188 C220 206 196 210 182 198 C172 188 174 162 194 150 Z" fill="#E8A8A0"/>
+  <path d="M216 170 L228 164 M218 182 L232 182 M214 194 L226 200" stroke="#C97F76" stroke-width="5" stroke-linecap="round"/>
+  <!-- feet -->
+  <ellipse cx="102" cy="226" rx="18" ry="10" fill="#4E423C"/>
+  <ellipse cx="154" cy="226" rx="18" ry="10" fill="#4E423C"/>
+</svg>

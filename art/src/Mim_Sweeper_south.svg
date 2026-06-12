@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Sweeper mim: squirrel with a giant broom-bristle tail. Front view. -->
+  <!-- bristle tail rising behind, splayed like a broom -->
+  <path d="M168 180 C212 170 232 130 226 84 C244 120 240 178 196 206 Z" fill="#D9A53C"/>
+  <path d="M176 186 C214 174 228 138 224 96 C236 128 230 176 194 200 Z" fill="#C28E2C"/>
+  <path d="M222 90 L230 70 M212 108 L226 94 M204 124 L222 114 M198 142 L218 134" stroke="#8F6A1B" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- ears -->
+  <path d="M92 70 C84 42 94 28 108 26 C112 44 108 60 102 72 Z" fill="#8E5630"/>
+  <path d="M164 70 C172 42 162 28 148 26 C144 44 148 60 154 72 Z" fill="#8E5630"/>
+  <path d="M96 66 C92 46 98 36 106 32 C109 46 106 58 102 66 Z" fill="#D89A63"/>
+  <path d="M160 66 C164 46 158 36 150 32 C147 46 150 58 154 66 Z" fill="#D89A63"/>
+  <!-- body -->
+  <ellipse cx="124" cy="166" rx="66" ry="64" fill="#B5713E"/>
+  <!-- belly -->
+  <ellipse cx="124" cy="182" rx="40" ry="36" fill="#E8C9A0"/>
+  <!-- head -->
+  <circle cx="126" cy="92" r="48" fill="#C07C46"/>
+  <ellipse cx="116" cy="68" rx="30" ry="17" fill="#D89A63" opacity="0.65"/>
+  <!-- cheeks -->
+  <circle cx="96" cy="106" r="14" fill="#D89A63"/>
+  <circle cx="156" cy="106" r="14" fill="#D89A63"/>
+  <!-- face -->
+  <circle cx="108" cy="90" r="7" fill="#2E2620"/>
+  <circle cx="144" cy="90" r="7" fill="#2E2620"/>
+  <circle cx="110.5" cy="87.5" r="2.2" fill="#F5EEDD"/>
+  <circle cx="146.5" cy="87.5" r="2.2" fill="#F5EEDD"/>
+  <ellipse cx="126" cy="104" rx="6" ry="4.5" fill="#6E4A2E"/>
+  <path d="M118 114 Q126 120 134 114" stroke="#6E4A2E" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- buck teeth -->
+  <rect x="121" y="116" width="10" height="9" rx="2" fill="#F5EEDD"/>
+  <!-- paws holding twig handle of its own tail-broom -->
+  <path d="M150 150 L186 188" stroke="#8A6A43" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="150" cy="150" rx="12" ry="10" fill="#C07C46"/>
+  <!-- feet -->
+  <ellipse cx="98" cy="226" rx="19" ry="11" fill="#8E5630"/>
+  <ellipse cx="150" cy="226" rx="19" ry="11" fill="#8E5630"/>
+</svg>

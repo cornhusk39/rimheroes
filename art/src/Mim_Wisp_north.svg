@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Wisp mim, back view: just flame, flickering. -->
+  <path d="M128 32 C148 66 194 94 194 152 C194 200 164 228 128 228 C92 228 62 200 62 152 C62 94 108 66 128 32 Z" fill="#D24E1A"/>
+  <path d="M128 64 C144 90 176 110 176 154 C176 192 154 212 128 212 C102 212 80 192 80 154 C80 110 112 90 128 64 Z" fill="#E86F22"/>
+  <path d="M128 100 C138 118 154 132 154 160 C154 186 142 198 128 198 C114 198 102 186 102 160 C102 132 118 118 128 100 Z" fill="#FF9D3B"/>
+  <!-- back flicker streaks -->
+  <path d="M112 88 C108 112 104 140 108 170 M144 88 C148 112 152 140 148 170" stroke="#C24514" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- side licks -->
+  <path d="M64 142 C50 132 44 118 50 106 C60 114 66 126 68 138 Z" fill="#E86F22"/>
+  <path d="M192 142 C206 132 212 118 206 106 C196 114 190 126 188 138 Z" fill="#E86F22"/>
+</svg>

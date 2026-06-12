@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Scrapper mim: tiny warrior, helmet slipping over his eyes, sword far too big. Front view. -->
+  <!-- the comically huge sword, planted point-down beside him -->
+  <path d="M196 18 L210 18 L208 160 L198 160 Z" fill="#C7CDD2"/>
+  <path d="M196 18 L203 18 L202 160 L198 160 Z" fill="#E2E6EA"/>
+  <path d="M203 160 L186 168 L220 168 Z" fill="#C7CDD2"/>
+  <rect x="180" y="158" width="46" height="12" rx="5" fill="#8A6A43"/>
+  <rect x="196" y="168" width="14" height="34" rx="6" fill="#74522F"/>
+  <circle cx="203" cy="208" r="9" fill="#D9A53C"/>
+  <!-- ears poking through helmet -->
+  <path d="M88 66 C80 40 90 26 104 24 C108 42 104 58 98 68 Z" fill="#8F7348"/>
+  <path d="M160 66 C168 40 158 26 144 24 C140 42 144 58 150 68 Z" fill="#8F7348"/>
+  <!-- body -->
+  <ellipse cx="120" cy="170" rx="62" ry="60" fill="#A98B5E"/>
+  <ellipse cx="120" cy="184" rx="38" ry="34" fill="#C9AE82"/>
+  <!-- head -->
+  <circle cx="122" cy="102" r="46" fill="#B3956A"/>
+  <!-- oversized helmet slipping down over the eyes -->
+  <path d="M70 100 C70 58 174 58 174 100 L170 118 L74 118 Z" fill="#9AA2AA"/>
+  <path d="M70 100 C70 66 174 66 174 100 L173 104 L71 104 Z" fill="#B4BBC2"/>
+  <rect x="66" y="96" width="112" height="12" rx="6" fill="#6E767E"/>
+  <circle cx="122" cy="66" r="7" fill="#6E767E"/>
+  <!-- visible bit of face: snout, mouth, determined grit -->
+  <ellipse cx="122" cy="130" rx="14" ry="9" fill="#C9AE82"/>
+  <path d="M114 142 Q122 138 130 142" stroke="#5C4A33" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- paws gripping the grip -->
+  <ellipse cx="178" cy="178" rx="12" ry="10" fill="#B3956A"/>
+  <ellipse cx="186" cy="194" rx="12" ry="10" fill="#B3956A"/>
+  <!-- feet -->
+  <ellipse cx="94" cy="228" rx="19" ry="11" fill="#7A6243"/>
+  <ellipse cx="146" cy="228" rx="19" ry="11" fill="#7A6243"/>
+</svg>

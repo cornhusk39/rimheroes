@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Vanguard mim, side view facing right: shield forward, squat frog stance. -->
+  <!-- eye poking out the helmet top -->
+  <circle cx="158" cy="54" r="17" fill="#6FA054"/>
+  <circle cx="160" cy="52" r="8.5" fill="#2E2620"/>
+  <circle cx="163" cy="49" r="2.6" fill="#F5EEDD"/>
+  <!-- helmet (profile) -->
+  <path d="M108 102 C106 66 202 60 206 96 L202 118 L112 124 Z" fill="#9AA2AA"/>
+  <path d="M108 102 C107 72 201 66 205 96 L204 100 L109 106 Z" fill="#B4BBC2"/>
+  <!-- froggy chin in the opening -->
+  <path d="M170 124 L208 118 L204 140 Q186 148 170 142 Z" fill="#8FBC6F"/>
+  <!-- body in plate, squat -->
+  <path d="M68 160 C66 132 184 126 188 154 L184 208 C160 228 92 232 72 212 Z" fill="#878D93"/>
+  <path d="M76 172 L180 166 M78 190 L178 184" stroke="#6E767E" stroke-width="6"/>
+  <!-- pauldron (near) -->
+  <ellipse cx="150" cy="150" rx="24" ry="18" fill="#9AA2AA"/>
+  <ellipse cx="148" cy="145" rx="16" ry="11" fill="#B4BBC2"/>
+  <!-- tower shield held forward -->
+  <rect x="196" y="128" width="34" height="100" rx="10" fill="#6E767E"/>
+  <rect x="201" y="134" width="24" height="88" rx="8" fill="#9AA2AA"/>
+  <path d="M213 142 L213 214" stroke="#6E767E" stroke-width="5"/>
+  <circle cx="213" cy="176" r="7" fill="#B4BBC2"/>
+  <!-- arm to shield -->
+  <path d="M160 168 L198 172" stroke="#6FA054" stroke-width="10" stroke-linecap="round"/>
+  <!-- webbed feet, wide stance -->
+  <path d="M92 222 C76 222 68 230 68 236 L114 236 C114 228 106 222 92 222 Z" fill="#6FA054"/>
+  <path d="M158 224 C144 224 136 232 136 238 L180 238 C180 230 172 224 158 224 Z" fill="#5E8A46"/>
+</svg>

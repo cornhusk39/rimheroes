@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Hearth mim, back view: pot helmet, wing backs, tail with arrow tip. -->
+  <!-- pot -->
+  <path d="M84 54 C84 36 172 36 172 54 L168 74 L88 74 Z" fill="#5C6166"/>
+  <path d="M84 54 C84 42 172 42 172 54 L171 60 L85 60 Z" fill="#6E7378"/>
+  <rect x="70" y="52" width="16" height="9" rx="4" fill="#454A4F"/>
+  <rect x="170" y="52" width="16" height="9" rx="4" fill="#454A4F"/>
+  <!-- tail curling out -->
+  <path d="M128 220 C168 226 196 210 200 186 C210 208 192 234 152 236 Z" fill="#C99A45"/>
+  <path d="M206 180 L222 168 L216 192 Z" fill="#9C7430"/>
+  <!-- wings folded over back -->
+  <path d="M70 130 C50 112 48 92 62 84 C72 98 76 116 78 134 Z" fill="#9C7430"/>
+  <path d="M186 130 C206 112 208 92 194 84 C184 98 180 116 178 134 Z" fill="#9C7430"/>
+  <!-- body -->
+  <ellipse cx="128" cy="168" rx="64" ry="62" fill="#C99A45"/>
+  <ellipse cx="128" cy="156" rx="48" ry="44" fill="#B5883A"/>
+  <!-- back ridge plates -->
+  <path d="M128 110 L120 130 L136 130 Z M128 136 L119 158 L137 158 Z M128 164 L120 184 L136 184 Z" fill="#9C7430"/>
+  <!-- head back -->
+  <circle cx="128" cy="98" r="46" fill="#D8AC56"/>
+  <ellipse cx="128" cy="78" rx="30" ry="15" fill="#E3BC72" opacity="0.55"/>
+  <!-- feet -->
+  <ellipse cx="102" cy="228" rx="19" ry="11" fill="#9C7430"/>
+  <ellipse cx="154" cy="228" rx="19" ry="11" fill="#9C7430"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Scrapper mim, side view facing right: dragging the huge sword behind him. -->
+  <!-- sword dragging, point in the dirt behind -->
+  <path d="M100 196 L34 230 L28 218 L94 184 Z" fill="#C7CDD2"/>
+  <path d="M98 192 L36 224 L33 219 L96 187 Z" fill="#E2E6EA"/>
+  <path d="M24 232 L18 210 L44 222 Z" fill="#C7CDD2"/>
+  <rect x="92" y="180" width="34" height="11" rx="5" transform="rotate(-26 109 186)" fill="#8A6A43"/>
+  <!-- tail nub -->
+  <circle cx="62" cy="192" r="12" fill="#8F7348"/>
+  <!-- body -->
+  <ellipse cx="118" cy="176" rx="70" ry="56" fill="#A98B5E"/>
+  <ellipse cx="128" cy="196" rx="42" ry="26" fill="#C9AE82"/>
+  <!-- head -->
+  <circle cx="170" cy="108" r="44" fill="#B3956A"/>
+  <!-- ears through helmet -->
+  <path d="M150 58 C142 30 152 16 166 14 C170 32 166 48 160 60 Z" fill="#8F7348"/>
+  <!-- helmet tilted, slipping forward -->
+  <path d="M122 104 C118 62 216 52 222 94 L220 112 L126 122 Z" fill="#9AA2AA"/>
+  <path d="M122 104 C119 70 215 60 221 94 L220 98 L123 108 Z" fill="#B4BBC2"/>
+  <rect x="118" y="100" width="108" height="12" rx="6" transform="rotate(-6 172 106)" fill="#6E767E"/>
+  <circle cx="168" cy="62" r="7" fill="#6E767E"/>
+  <!-- visible snout under the brim -->
+  <ellipse cx="208" cy="124" rx="15" ry="10" fill="#C9AE82"/>
+  <path d="M200 136 Q208 132 216 136" stroke="#5C4A33" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- arm dragging the sword grip -->
+  <path d="M132 158 L112 184" stroke="#8A6A43" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="132" cy="158" rx="11" ry="9" fill="#B3956A"/>
+  <!-- legs -->
+  <ellipse cx="96" cy="226" rx="17" ry="10" fill="#7A6243"/>
+  <ellipse cx="158" cy="228" rx="17" ry="10" fill="#7A6243"/>
+</svg>

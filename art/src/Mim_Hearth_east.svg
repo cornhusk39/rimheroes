@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Hearth mim, side view facing right: snout, pot tilted, tail behind. -->
+  <!-- tail -->
+  <path d="M58 184 C32 178 22 158 30 140 C16 168 24 200 60 206 Z" fill="#C99A45"/>
+  <path d="M26 136 L12 124 L22 148 Z" fill="#9C7430"/>
+  <!-- wing (near side) -->
+  <path d="M104 124 C84 104 82 82 98 74 C108 90 112 108 114 128 Z" fill="#9C7430"/>
+  <path d="M106 118 C92 104 90 88 100 80 C107 92 110 106 111 118 Z" fill="#C99A45"/>
+  <!-- body -->
+  <ellipse cx="116" cy="174" rx="72" ry="58" fill="#C99A45"/>
+  <ellipse cx="128" cy="194" rx="44" ry="28" fill="#EAD9AC"/>
+  <path d="M96 184 Q128 176 160 184 M100 200 Q128 193 156 200 M106 214 Q128 209 150 214" stroke="#D2BC83" stroke-width="4" fill="none"/>
+  <!-- head -->
+  <circle cx="172" cy="106" r="42" fill="#D8AC56"/>
+  <!-- pot tilted on head -->
+  <path d="M134 64 C136 44 208 40 212 60 L206 80 L138 82 Z" fill="#6E7378"/>
+  <path d="M134 64 C136 50 208 46 212 60 L211 66 L135 70 Z" fill="#878D93"/>
+  <rect x="206" y="56" width="16" height="9" rx="4" fill="#51565B"/>
+  <!-- snout -->
+  <path d="M204 100 C222 100 232 108 232 116 C224 124 208 126 198 122 Z" fill="#E3BC72"/>
+  <ellipse cx="224" cy="110" rx="3.5" ry="5" fill="#9C7430"/>
+  <!-- smoke puff -->
+  <circle cx="238" cy="96" r="5" fill="#D8CFC8" opacity="0.8"/>
+  <circle cx="244" cy="86" r="3.5" fill="#D8CFC8" opacity="0.6"/>
+  <!-- eye -->
+  <circle cx="182" cy="100" r="7.5" fill="#2E2620"/>
+  <circle cx="184.5" cy="97.5" r="2.3" fill="#F5EEDD"/>
+  <!-- spoon over shoulder -->
+  <path d="M148 140 L120 96" stroke="#8A6A43" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="115" cy="88" rx="12" ry="15" fill="#A98B5E"/>
+  <ellipse cx="148" cy="142" rx="11" ry="9" fill="#D8AC56"/>
+  <!-- feet -->
+  <ellipse cx="92" cy="226" rx="17" ry="10" fill="#9C7430"/>
+  <ellipse cx="156" cy="228" rx="17" ry="10" fill="#9C7430"/>
+</svg>

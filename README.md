@@ -48,7 +48,7 @@ everywhere (tinted vanilla textures).
 ## Known gaps (deliberate, post-playtest)
 
 - All art is tinted placeholder (mims are rats, owlbears are bears, vestments are flak vests).
-- Slinger/Wisp mim castes have no race yet — those unlock slots stay empty.
+- Quiller/Wisp mim castes have no race yet — those unlock slots stay empty.
 - L20 capstone mim choice, mim beds/housing rules, hero housing thoughts: not yet.
 - Tech leak-stopper setting is a stub; upcasting, spell-choice UI, subclasses: not yet.
 - Warlock uses full-caster slots (pact magic later). Inlay/tome crafting recipes: trade/loot only.

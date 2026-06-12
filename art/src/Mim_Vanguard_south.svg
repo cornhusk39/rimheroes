@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Vanguard mim: frog in heavy plate, eyes poking out the top of the helmet. Front view. -->
+  <!-- frog eyes on top, poking out of the helmet -->
+  <circle cx="100" cy="52" r="18" fill="#6FA054"/>
+  <circle cx="156" cy="52" r="18" fill="#6FA054"/>
+  <circle cx="100" cy="50" r="9" fill="#2E2620"/>
+  <circle cx="156" cy="50" r="9" fill="#2E2620"/>
+  <circle cx="103" cy="47" r="2.8" fill="#F5EEDD"/>
+  <circle cx="159" cy="47" r="2.8" fill="#F5EEDD"/>
+  <!-- helmet dome with face opening -->
+  <path d="M72 100 C72 62 184 62 184 100 L180 124 L76 124 Z" fill="#9AA2AA"/>
+  <path d="M72 100 C72 70 184 70 184 100 L183 106 L73 106 Z" fill="#B4BBC2"/>
+  <rect x="68" y="118" width="120" height="11" rx="5" fill="#6E767E"/>
+  <!-- froggy face in the opening -->
+  <path d="M92 130 L164 130 L160 152 Q128 164 96 152 Z" fill="#8FBC6F"/>
+  <path d="M108 142 Q128 152 148 142" stroke="#3E5E2E" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <!-- pauldrons -->
+  <ellipse cx="66" cy="160" rx="26" ry="20" fill="#9AA2AA"/>
+  <ellipse cx="190" cy="160" rx="26" ry="20" fill="#9AA2AA"/>
+  <ellipse cx="62" cy="154" rx="18" ry="12" fill="#B4BBC2"/>
+  <ellipse cx="194" cy="154" rx="18" ry="12" fill="#B4BBC2"/>
+  <!-- plated body -->
+  <path d="M76 158 C76 132 180 132 180 158 L176 212 C160 230 96 230 80 212 Z" fill="#878D93"/>
+  <path d="M84 168 L172 168 M86 186 L170 186 M90 204 L166 204" stroke="#6E767E" stroke-width="6"/>
+  <!-- chest plate with rivets -->
+  <path d="M96 156 C96 142 160 142 160 156 L156 180 L100 180 Z" fill="#B4BBC2"/>
+  <circle cx="104" cy="160" r="3.5" fill="#6E767E"/>
+  <circle cx="152" cy="160" r="3.5" fill="#6E767E"/>
+  <!-- pale froggy belly peeking below -->
+  <ellipse cx="128" cy="216" rx="30" ry="12" fill="#D5E3B8"/>
+  <!-- big webbed feet -->
+  <path d="M86 224 C72 224 64 232 64 238 L108 238 C108 230 100 224 86 224 Z" fill="#6FA054"/>
+  <path d="M170 224 C184 224 192 232 192 238 L148 238 C148 230 156 224 170 224 Z" fill="#6FA054"/>
+</svg>
