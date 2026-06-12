@@ -1,37 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Basilisk, front view: low and wide, armored brow, paired baleful eyes, splayed clawed legs. -->
-  <!-- dorsal ridge plates visible over the top -->
-  <path d="M216 118 L228 86 L244 114 Z M250 110 L262 78 L276 108 Z M282 112 L294 82 L306 112 Z" fill="#4D5840"/>
-  <!-- body: broad low dome behind the head -->
-  <path d="M256 110 C336 110 396 154 410 222 C422 280 400 338 348 372 L164 372 C112 338 90 280 102 222 C116 154 176 110 256 110 Z" fill="#6E7A58"/>
-  <path d="M150 172 C178 140 214 124 256 124 C298 124 334 140 362 172 C330 156 294 148 256 148 C218 148 182 156 150 172 Z" fill="#586448"/>
-  <path d="M124 244 C160 224 206 214 256 214 C306 214 352 224 388 244 C354 234 306 230 256 230 C206 230 158 234 124 244 Z" fill="#586448"/>
-  <!-- head: blunt wide wedge, low -->
-  <path d="M256 232 C312 232 354 260 366 304 C376 342 358 380 320 400 C300 410 277 416 256 416 C235 416 212 410 192 400 C154 380 136 342 146 304 C158 260 200 232 256 232 Z" fill="#7A8862"/>
-  <!-- heavy armored brow: jutting V over both eyes -->
-  <path d="M170 296 C196 272 228 262 254 268 L250 290 C228 284 204 290 184 308 Z" fill="#3E4834"/>
-  <path d="M342 296 C316 272 284 262 258 268 L262 290 C284 284 308 290 328 308 Z" fill="#3E4834"/>
-  <!-- baleful eyes: yellow-green, slit pupils -->
-  <circle cx="206" cy="314" r="16" fill="#D8E04A"/>
-  <circle cx="306" cy="314" r="16" fill="#D8E04A"/>
-  <ellipse cx="206" cy="314" rx="5" ry="12" fill="#211B14"/>
-  <ellipse cx="306" cy="314" rx="5" ry="12" fill="#211B14"/>
-  <circle cx="210" cy="308" r="2.6" fill="#F4F8D0"/>
-  <circle cx="310" cy="308" r="2.6" fill="#F4F8D0"/>
-  <!-- snout plates + nostrils -->
-  <path d="M256 318 C272 318 284 328 286 344 C288 360 276 374 256 380 C236 374 224 360 226 344 C228 328 240 318 256 318 Z" fill="#586448"/>
-  <ellipse cx="244" cy="342" rx="4" ry="6" fill="#3E4834"/>
-  <ellipse cx="268" cy="342" rx="4" ry="6" fill="#3E4834"/>
-  <!-- wide mouth slit with teeth -->
-  <path d="M204 376 C220 392 244 400 256 400 C268 400 292 392 308 376 C300 394 280 406 256 406 C232 406 212 394 204 376 Z" fill="#3E4834"/>
-  <path d="M222 386 L226 394 M240 393 L242 400 M272 393 L270 400 M290 386 L286 394" stroke="#D9DFC2" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- splayed legs: two pairs visible front, clawed -->
-  <path d="M156 358 L106 394 L116 406 L162 372 Z" fill="#586448"/>
-  <path d="M104 392 C92 398 86 408 90 416 C100 420 112 416 120 408 L112 404 L110 394 Z" fill="#3E4834"/>
-  <path d="M356 358 L406 394 L396 406 L350 372 Z" fill="#586448"/>
-  <path d="M408 392 C420 398 426 408 422 416 C412 420 400 416 392 408 L400 404 L402 394 Z" fill="#3E4834"/>
-  <path d="M188 398 L162 438 L174 446 L198 408 Z" fill="#586448"/>
-  <path d="M160 436 C152 444 150 454 156 460 C166 462 176 456 182 446 L172 444 L172 434 Z" fill="#3E4834"/>
-  <path d="M324 398 L350 438 L338 446 L314 408 Z" fill="#586448"/>
-  <path d="M352 436 C360 444 362 454 356 460 C346 462 336 456 330 446 L340 444 L340 434 Z" fill="#3E4834"/>
+  <!-- Basilisk, front view: WIDE FLAT head wedge in front, ridged body visible behind, sprawled legs. Not a circle. -->
+  <!-- ridge spikes over the body behind -->
+  <path d="M212 172 L200 138 L228 160 Z" fill="#3E4834"/>
+  <path d="M248 164 L246 128 L268 158 Z" fill="#3E4834"/>
+  <path d="M290 168 L300 134 L312 170 Z" fill="#3E4834"/>
+  <!-- body behind: darker, narrower than the head -->
+  <path d="M256 156 C310 156 350 178 362 214 C372 244 364 274 340 292 L172 292 C148 274 140 244 150 214 C162 178 202 156 256 156 Z" fill="#4D5840"/>
+  <path d="M176 208 C224 192 288 192 336 208 L338 220 C290 204 222 204 174 220 Z" fill="#3E4834"/>
+  <!-- tail tip curling out one side -->
+  <path d="M150 270 C120 274 96 288 82 312 C97 307 112 307 124 312 C109 321 98 334 94 352 C116 345 136 330 146 308 C151 295 152 281 150 270 Z" fill="#6E7A58"/>
+  <!-- head: WIDE FLAT wedge, low and angular -->
+  <path d="M256 262 C312 262 356 280 368 310 C376 332 366 354 340 366 C318 376 286 380 256 380 C226 380 194 376 172 366 C146 354 136 332 144 310 C156 280 200 262 256 262 Z" fill="#6E7A58"/>
+  <!-- brow ridge: heavy, hooding the eyes -->
+  <path d="M180 304 C200 288 226 280 256 280 C286 280 312 288 332 304 L326 316 C308 302 284 296 256 296 C228 296 204 302 186 316 Z" fill="#3E4834"/>
+  <!-- baleful eyes: slit pupils -->
+  <circle cx="212" cy="324" r="13" fill="#D8E04A"/>
+  <circle cx="300" cy="324" r="13" fill="#D8E04A"/>
+  <path d="M210 314 C213 320 213 330 210 335 C215 331 216 318 210 314 Z" fill="#211B14"/>
+  <path d="M298 314 C301 320 301 330 298 335 C303 331 304 318 298 314 Z" fill="#211B14"/>
+  <circle cx="216" cy="319" r="2.2" fill="#F4F8D0"/>
+  <circle cx="304" cy="319" r="2.2" fill="#F4F8D0"/>
+  <!-- mouth line: wide, grim, with teeth -->
+  <path d="M210 352 C238 360 274 360 302 352 L300 362 C272 370 240 370 212 362 Z" fill="#3E4834"/>
+  <path d="M226 360 L230 372 L236 360 Z" fill="#F4F8D0"/>
+  <path d="M252 362 L256 374 L261 362 Z" fill="#F4F8D0"/>
+  <path d="M276 360 L280 372 L286 360 Z" fill="#F4F8D0"/>
+  <!-- head spikes: swept back from the skull sides -->
+  <path d="M172 292 L142 268 L168 308 Z" fill="#3E4834"/>
+  <path d="M340 292 L370 268 L344 308 Z" fill="#3E4834"/>
+  <!-- legs: short, splayed wide (sprawl), clawed -->
+  <path d="M168 340 L124 360 L100 392 L110 400 L138 370 L178 352 Z" fill="#586448"/>
+  <path d="M344 340 L388 360 L412 392 L402 400 L374 370 L334 352 Z" fill="#586448"/>
+  <path d="M98 388 L86 400 L100 398 L96 410 L110 402 L120 408 L118 396 Z" fill="#3E4834"/>
+  <path d="M414 388 L426 400 L412 398 L416 410 L402 402 L392 408 L394 396 Z" fill="#3E4834"/>
+  <!-- second pair of legs behind -->
+  <path d="M160 268 L120 278 L96 302 L104 310 L130 290 L166 280 Z" fill="#4D5840"/>
+  <path d="M352 268 L392 278 L416 302 L408 310 L382 290 L346 280 Z" fill="#4D5840"/>
 </svg>

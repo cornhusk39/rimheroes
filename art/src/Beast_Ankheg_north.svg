@@ -1,21 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Ankheg, back view: armored segment plates stacked down the abdomen, rear spike. -->
-  <!-- antennae tips visible over the top -->
-  <path d="M196 96 C182 76 176 52 182 28" stroke="#62663A" stroke-width="9" fill="none" stroke-linecap="round"/>
-  <path d="M316 96 C330 76 336 52 330 28" stroke="#62663A" stroke-width="9" fill="none" stroke-linecap="round"/>
-  <!-- head shield back -->
-  <path d="M256 88 C306 88 344 114 354 156 C362 192 346 228 310 248 L202 248 C166 228 150 192 158 156 C168 114 206 88 256 88 Z" fill="#737842"/>
-  <path d="M186 124 C206 104 230 94 256 94 C282 94 306 104 326 124 C334 134 340 146 342 158 C316 136 196 136 170 158 C172 146 178 134 186 124 Z" fill="#4A4E2C"/>
-  <!-- abdomen: broad segmented dome -->
-  <path d="M256 200 C330 200 388 242 404 308 C418 366 396 424 344 456 C318 472 286 480 256 480 C226 480 194 472 168 456 C116 424 94 366 108 308 C124 242 182 200 256 200 Z" fill="#8A8E54"/>
-  <!-- segment plates: stacked crescents widening down -->
-  <path d="M256 222 C292 222 322 236 340 260 C312 248 284 242 256 242 C228 242 200 248 172 260 C190 236 220 222 256 222 Z" fill="#62663A"/>
-  <path d="M256 270 C298 270 332 286 352 314 C320 298 288 292 256 292 C224 292 192 298 160 314 C180 286 214 270 256 270 Z" fill="#62663A"/>
-  <path d="M256 324 C300 324 336 342 356 372 C322 354 288 348 256 348 C224 348 190 354 156 372 C176 342 212 324 256 324 Z" fill="#62663A"/>
-  <path d="M256 382 C296 382 328 398 346 424 C316 410 286 404 256 404 C226 404 196 410 166 424 C184 398 216 382 256 382 Z" fill="#62663A"/>
+  <!-- Ankheg, back view: low segmented abdomen plates, rear spike, antenna tips over the top. -->
+  <!-- antenna tips peeking over -->
+  <path d="M222 162 C216 146 216 130 224 116 L232 122 C226 134 226 148 230 160 Z" fill="#62663A"/>
+  <path d="M290 162 C296 146 296 130 288 116 L280 122 C286 134 286 148 282 160 Z" fill="#62663A"/>
+  <!-- head shield from behind: low dome -->
+  <path d="M256 150 C296 150 326 170 334 202 C340 228 330 252 306 264 L206 264 C182 252 172 228 178 202 C186 170 216 150 256 150 Z" fill="#737842"/>
+  <path d="M204 180 C218 166 236 158 256 158 C276 158 294 166 308 180 C314 188 318 196 320 206 C298 188 214 188 192 206 C194 196 198 188 204 180 Z" fill="#4A4E2C"/>
+  <!-- abdomen: broad low segmented rear, stacked plates -->
+  <path d="M256 240 C312 240 354 266 366 308 C376 344 364 380 332 400 C310 414 282 420 256 420 C230 420 202 414 180 400 C148 380 136 344 146 308 C158 266 200 240 256 240 Z" fill="#8A8E54"/>
+  <!-- segment plate bands -->
+  <path d="M168 296 C222 280 290 280 344 296 L346 308 C292 292 220 292 166 308 Z" fill="#62663A"/>
+  <path d="M158 336 C218 320 294 320 354 336 L354 348 C296 332 216 332 158 348 Z" fill="#62663A"/>
+  <path d="M170 376 C224 362 288 362 342 376 L338 388 C288 374 224 374 174 388 Z" fill="#62663A"/>
+  <!-- pale plate highlights -->
+  <path d="M200 270 C236 260 276 260 312 270 C278 264 234 264 200 270 Z" fill="#C2C28C"/>
   <!-- rear spike -->
-  <path d="M256 436 C268 436 278 444 280 456 C282 470 272 482 256 488 C240 482 230 470 232 456 C234 444 244 436 256 436 Z" fill="#4A4E2C"/>
-  <!-- hind legs poking out -->
-  <path d="M158 420 L128 452 L138 460 L166 430 Z" fill="#62663A"/>
-  <path d="M354 420 L384 452 L374 460 L346 430 Z" fill="#62663A"/>
+  <path d="M256 404 L242 440 L256 432 L270 440 Z" fill="#4A4E2C"/>
+  <!-- legs: splayed, visible at the sides -->
+  <path d="M170 300 L128 322 L100 356 L108 364 L138 332 L176 312 Z" fill="#62663A"/>
+  <path d="M342 300 L384 322 L412 356 L404 364 L374 332 L336 312 Z" fill="#62663A"/>
+  <path d="M164 348 L126 378 L108 412 L118 418 L136 386 L172 360 Z" fill="#4A4A30"/>
+  <path d="M348 348 L386 378 L404 412 L394 418 L376 386 L340 360 Z" fill="#4A4A30"/>
 </svg>
