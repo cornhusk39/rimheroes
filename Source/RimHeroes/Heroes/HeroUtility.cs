@@ -47,6 +47,7 @@ namespace RimHeroes
             {
                 pawn.story.traits.GainTrait(new Trait(classDef.classTrait));
             }
+            NormalizeHeroBody(pawn);
             var hediff = (Hediff_HeroLevels)HediffMaker.MakeHediff(RH_DefOf.RH_HeroLevels, pawn);
             hediff.classDef = classDef;
             pawn.health.AddHediff(hediff);
@@ -56,6 +57,24 @@ namespace RimHeroes
                 vestment.SetTierForLevel(hediff.level);
             }
             return hediff;
+        }
+
+        /// <summary>
+        /// Becoming a Hero settles the body into one of two heroic frames (standard male/female)
+        /// so the vestment art always fits - no fat, hulk, or thin bodies on heroes.
+        /// </summary>
+        public static void NormalizeHeroBody(Pawn pawn)
+        {
+            if (pawn.story == null)
+            {
+                return;
+            }
+            var target = pawn.gender == Gender.Female ? BodyTypeDefOf.Female : BodyTypeDefOf.Male;
+            if (pawn.story.bodyType != target)
+            {
+                pawn.story.bodyType = target;
+                pawn.Drawer?.renderer?.SetAllGraphicsDirty();
+            }
         }
     }
 }

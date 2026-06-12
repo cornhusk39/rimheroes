@@ -1,9 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Wizard T3 hat, north: bent point seen from behind (tip leans left of screen = pawn's right). -->
+  <!-- Wizard T3 hat, north: bent point + brim + cloth drape covering the whole back of the skull. -->
+  <!-- back drape under the brim: covers nape to y352 -->
+  <path d="M172 250 C196 238 316 238 340 250 C344 290 332 330 306 352 L206 352 C180 330 168 290 172 250 Z" fill="#2B3357"/>
+  <path d="M182 256 C204 246 308 246 330 256 C332 290 322 322 300 342 L212 342 C190 322 180 290 182 256 Z" fill="#1E2440" opacity="0.45"/>
+  <!-- bent cone seen from behind -->
   <path d="M316 240 C312 196 296 156 262 134 C230 116 200 122 182 140 C202 144 216 156 222 174 C216 196 212 218 212 240 Z" fill="#2B3357"/>
   <path d="M306 232 C300 196 286 164 260 144 C274 168 286 200 290 232 Z" fill="#1E2440"/>
-  <!-- brim: wide and low, covers the whole crown -->
-  <path d="M162 242 C172 224 200 214 256 214 C312 214 340 224 350 242 L348 274 C318 258 194 258 164 274 Z" fill="#1E2440"/>
-  <path d="M166 244 C178 229 204 220 256 220 C308 220 334 229 346 244 L345 260 C316 246 196 246 167 260 Z" fill="#3D4775"/>
-  <path d="M208 234 C232 226 292 226 316 234 L314 246 C292 238 232 238 210 246 Z" fill="#97A1B5"/>
+  <!-- brim -->
+  <path d="M156 240 C166 222 196 212 256 212 C316 212 346 222 356 240 L354 268 C324 252 188 252 158 268 Z" fill="#1E2440"/>
+  <path d="M160 242 C172 227 200 218 256 218 C312 218 340 227 352 242 L351 256 C322 242 190 242 161 256 Z" fill="#3D4775"/>
+  <path d="M204 232 C228 224 296 224 318 232 L316 246 C296 236 228 236 206 246 Z" fill="#97A1B5"/>
 </svg>

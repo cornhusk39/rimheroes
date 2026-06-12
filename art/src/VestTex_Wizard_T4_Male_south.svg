@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <!-- Wizard T4 south: archmage brocade - constellation field, full silver trim, layered mantle. -->
-  <path d="M160 242 C172 212 206 196 256 196 C306 196 340 212 352 242 L348 402 C346 440 318 462 256 462 C194 462 166 440 164 402 Z" fill="#1E2440"/>
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 402 C358 442 326 464 256 464 C186 464 154 442 152 402 Z" fill="#1E2440"/>
   <!-- constellation field on the skirt -->
   <circle cx="206" cy="350" r="4" fill="#C7CEDB"/>
   <circle cx="232" cy="376" r="3" fill="#C7CEDB"/>

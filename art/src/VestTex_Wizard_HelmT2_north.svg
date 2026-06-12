@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Wizard T2 hat, north: skullcap from behind, full crown coverage. -->
-  <path d="M168 252 C164 198 202 160 256 160 C310 160 348 198 344 252 L340 276 C314 262 198 262 172 276 Z" fill="#2B3357"/>
-  <path d="M180 244 C180 204 212 174 256 174 C282 174 304 186 318 206 C294 190 222 192 198 218 C188 228 182 236 180 244 Z" fill="#3D4775"/>
-  <path d="M252 162 L260 162 L258 260 L254 260 Z" fill="#1E2440"/>
-  <path d="M170 254 C196 242 316 242 342 254 L340 274 C314 260 198 260 172 274 Z" fill="#97A1B5"/>
+  <!-- Wizard T2 cap, north: covers the ENTIRE back of the skull (crown y156 to nape y352). -->
+  <path d="M154 250 C150 190 198 148 256 148 C314 148 362 190 358 250 C360 296 344 336 314 354 L198 354 C168 336 152 296 154 250 Z" fill="#2B3357"/>
+  <path d="M168 242 C170 198 206 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 170 232 168 242 Z" fill="#3D4775"/>
+  <path d="M252 150 L260 150 L258 346 L254 346 Z" fill="#1E2440"/>
+  <!-- band low across the nape -->
+  <path d="M168 314 C196 300 316 300 344 314 L338 334 C312 320 200 320 174 334 Z" fill="#97A1B5"/>
 </svg>

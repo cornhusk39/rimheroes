@@ -107,6 +107,18 @@ namespace RimHeroes
 
         public static void Postfix(PawnRenderTree __instance, ref PawnDrawParms parms)
         {
+            var vestment = __instance.pawn?.health?.hediffSet?.hediffs
+                ?.OfType<Hediff_ClassVestment>().FirstOrDefault();
+
+            // Heroes loom: draw scale grows with vestment tier (1.05 at T1 up to 1.25 at T5).
+            // Portraits stay unscaled so the bio card doesn't clip.
+            if (vestment != null && !parms.Portrait)
+            {
+                float s = 1f + 0.05f * vestment.Tier;
+                parms.matrix *= Matrix4x4.TRS(
+                    new Vector3(0f, 0f, (s - 1f) * 0.35f), Quaternion.identity, new Vector3(s, 1f, s));
+            }
+
             if (Hediff_Wildshape.IsShifted(__instance.pawn))
             {
                 parms.skipFlags |= BodyFlag;
@@ -120,8 +132,6 @@ namespace RimHeroes
             // Vestment headpieces work like hats: hide hair while a HelmT<tier> texture renders
             // (beards stay - a skull cap shouldn't swallow the beard). HelmArtVisible is cached
             // because this runs during parallel pre-draw where ContentFinder is off-limits.
-            var vestment = __instance.pawn?.health?.hediffSet?.hediffs
-                ?.OfType<Hediff_ClassVestment>().FirstOrDefault();
             if (vestment != null && vestment.HelmArtVisible)
             {
                 parms.skipFlags |= RenderSkipFlagDefOf.Hair;

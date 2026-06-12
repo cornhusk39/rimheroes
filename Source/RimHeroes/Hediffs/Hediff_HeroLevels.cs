@@ -36,6 +36,7 @@ namespace RimHeroes
         public override void PostAdd(DamageInfo? dinfo)
         {
             base.PostAdd(dinfo);
+            HeroUtility.NormalizeHeroBody(pawn);
             ApplyGrants();
         }
 

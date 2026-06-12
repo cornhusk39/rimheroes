@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Barbarian T2 helm, north: skull cap from behind, lace cross at the back. -->
-  <path d="M184 242 C180 194 212 160 256 160 C300 160 332 194 328 242 L324 262 C302 252 210 252 188 262 Z" fill="#6B4426"/>
-  <path d="M194 236 C194 198 220 172 256 172 C278 172 296 182 308 198 C288 186 226 188 206 210 C199 218 195 226 194 236 Z" fill="#8A5A33"/>
-  <path d="M252 162 L260 162 L258 250 L254 250 Z" fill="#5C3D24"/>
-  <!-- lace cross -->
-  <path d="M236 200 L278 236 M278 200 L236 236" stroke="#5C3D24" stroke-width="6" fill="none"/>
-  <path d="M186 244 C208 234 304 234 326 244 L324 258 C302 248 210 248 188 258 Z" fill="#5C3D24"/>
-  <circle cx="216" cy="248" r="6" fill="#E8E0CC"/>
-  <circle cx="296" cy="248" r="6" fill="#E8E0CC"/>
+  <!-- Barbarian T2 helm, north: hide cap covering the entire back of the skull, lace cross. -->
+  <path d="M154 250 C150 190 198 148 256 148 C314 148 362 190 358 250 C360 296 344 336 314 354 L198 354 C168 336 152 296 154 250 Z" fill="#6B4426"/>
+  <path d="M168 242 C170 198 206 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 170 232 168 242 Z" fill="#8A5A33"/>
+  <path d="M252 150 L260 150 L258 346 L254 346 Z" fill="#5C3D24"/>
+  <!-- lace cross at the nape -->
+  <path d="M228 250 L284 306 M284 250 L228 306" stroke="#5C3D24" stroke-width="7" fill="none"/>
+  <path d="M170 314 C198 300 314 300 342 314 L336 334 C310 320 202 320 176 334 Z" fill="#5C3D24"/>
+  <circle cx="206" cy="322" r="6" fill="#E8E0CC"/>
+  <circle cx="306" cy="322" r="6" fill="#E8E0CC"/>
 </svg>

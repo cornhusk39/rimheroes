@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <!-- Wizard T1 east: robe profile, hood bunched at the neck, rope belt, ink-stained sleeve. -->
-  <path d="M174 242 C184 210 216 194 260 194 C300 194 330 209 342 236 L340 404 C338 442 310 464 254 464 C200 464 174 442 176 404 Z" fill="#2B3357"/>
+  <path d="M160 238 C168 194 202 168 256 168 C304 168 336 190 348 232 L346 404 C344 444 314 466 254 466 C198 466 160 444 162 404 Z" fill="#2B3357"/>
   <path d="M184 246 C194 218 222 204 260 204 C296 204 322 217 334 240 L332 310 L184 310 Z" fill="#3D4775" opacity="0.5"/>
   <!-- hood bunch at the back of the neck -->
   <path d="M196 226 C192 206 200 190 218 184 C230 180 242 182 250 190 L246 204 C238 198 228 197 220 201 C210 206 204 215 206 226 Z" fill="#1E2440"/>

@@ -53,7 +53,9 @@ namespace RimHeroes
                     GenCommandLine.TryGetCommandLineArg("rhvestclass", out var cls);
                     if (!cls.NullOrEmpty()) className = cls;
                     var classDef = DefDatabase<HeroClassDef>.GetNamed(className);
-                    CellFinder.TryFindRandomCellNear(map.Center, map, 15, c => c.Standable(map), out anchor);
+                    // anchor away from the quicktest base so loot/walls don't photobomb the row
+                    var searchFrom = map.Center + new IntVec3(0, 0, -35);
+                    CellFinder.TryFindRandomCellNear(searchFrom, map, 10, c => c.Standable(map), out anchor);
                     pawns = new Pawn[Levels.Length];
                     for (int i = 0; i < Levels.Length; i++)
                     {
@@ -87,25 +89,30 @@ namespace RimHeroes
                     state = 1;
                     break;
                 }
+                // pin and shoot in separate states: the rotation set in GameComponentUpdate only
+                // reaches the renderer on the NEXT frame, so a same-frame screenshot captures stale facing
                 case 1:
                     Find.TickManager.Pause();
                     Pin(Rot4.South);
-                    ScreenshotTaker.TakeNonSteamShot("rhvestrow_south");
                     state = 2;
                     break;
                 case 2:
+                    ScreenshotTaker.TakeNonSteamShot("rhvestrow_south");
                     Pin(Rot4.East);
-                    ScreenshotTaker.TakeNonSteamShot("rhvestrow_east");
                     state = 3;
                     break;
                 case 3:
+                    ScreenshotTaker.TakeNonSteamShot("rhvestrow_east");
                     Pin(Rot4.North);
-                    ScreenshotTaker.TakeNonSteamShot("rhvestrow_north");
                     state = 4;
                     break;
                 case 4:
-                    Log.Message("[RimHeroes.VestRowSpike] RESULT: vestment row shots taken verdict=PASS");
+                    ScreenshotTaker.TakeNonSteamShot("rhvestrow_north");
                     state = 5;
+                    break;
+                case 5:
+                    Log.Message("[RimHeroes.VestRowSpike] RESULT: vestment row shots taken verdict=PASS");
+                    state = 6;
                     Root.Shutdown();
                     break;
             }
@@ -120,6 +127,12 @@ namespace RimHeroes
                 if (p == null) continue;
                 p.jobs?.StopAll();
                 p.Rotation = rot;
+            }
+            for (int i = 0; i < pawns.Length; i++)
+            {
+                if (pawns[i] == null) continue;
+                var sp = Find.Camera.WorldToScreenPoint(pawns[i].DrawPos);
+                Log.Message($"[RimHeroes.VestRowSpike] SCREENPOS {rot.ToStringHuman()} {i} {sp.x:F0} {Screen.height - sp.y:F0}");
             }
         }
     }

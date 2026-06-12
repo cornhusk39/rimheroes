@@ -1,15 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Wizard T5 hat, east: grand profile, long tip curling back with glow, runes, star. -->
+  <!-- Wizard T5 hat, east: grand profile, curled glowing tip, rear drape over the skull back. -->
+  <!-- rear drape -->
+  <path d="M162 252 C176 244 208 240 242 242 C246 284 242 322 228 354 L188 354 C166 324 156 290 162 252 Z" fill="#16182A"/>
+  <path d="M172 258 C184 252 208 249 230 250 C232 286 228 318 216 344 L194 344 C176 320 168 290 172 258 Z" fill="#0E101E" opacity="0.55"/>
+  <!-- grand cone, tip curling back with glow -->
   <path d="M196 242 C200 182 214 120 248 78 C258 64 272 62 282 72 C294 84 290 102 276 110 C254 146 234 192 230 242 Z" fill="#16182A"/>
   <path d="M278 108 C292 100 298 84 290 72 C306 80 312 100 302 116 C284 142 270 176 264 212 C260 222 258 232 256 242 L242 242 C248 196 260 148 278 108 Z" fill="#16182A"/>
   <path d="M204 234 C210 182 224 130 250 90 C238 134 228 188 226 234 Z" fill="#3D4775"/>
-  <!-- curled tip glow trailing back -->
   <circle cx="294" cy="74" r="9" fill="#8F7BFF"/>
   <circle cx="294" cy="72" r="4" fill="#D6CEFF"/>
   <path d="M244 196 L254 202 M250 164 L260 170 M256 134 L266 140" stroke="#8F7BFF" stroke-width="5" fill="none"/>
   <!-- brim -->
-  <path d="M162 248 C196 230 326 230 358 248 L356 276 C326 258 196 258 164 276 Z" fill="#0E101E"/>
-  <path d="M164 250 C198 234 324 234 356 250 L355 264 C324 248 198 248 165 264 Z" fill="#1E2440"/>
-  <path d="M194 240 C220 232 302 232 320 240 L318 254 C300 244 220 244 196 254 Z" fill="#8F7BFF"/>
-  <path d="M326 224 L330 235 L342 235 L332 243 L336 255 L326 247 L316 255 L320 243 L310 235 L322 235 Z" fill="#C7CEDB"/>
+  <path d="M156 250 C190 230 332 230 364 250 L362 280 C330 262 188 262 158 280 Z" fill="#0E101E"/>
+  <path d="M158 252 C192 234 330 234 362 252 L361 268 C330 250 190 250 159 268 Z" fill="#1E2440"/>
+  <path d="M192 242 C218 234 304 234 322 242 L320 256 C302 246 220 246 194 256 Z" fill="#8F7BFF"/>
+  <path d="M328 226 L332 237 L344 237 L334 245 L338 257 L328 249 L318 257 L322 245 L312 237 L324 237 Z" fill="#C7CEDB"/>
 </svg>

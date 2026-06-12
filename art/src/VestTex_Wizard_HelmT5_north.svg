@@ -1,11 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Wizard T5 hat, north: grand hat from behind, curled glowing tip leans left of screen. -->
+  <!-- Wizard T5 hat, north: grand curled hat + drape covering the entire back of the skull. -->
+  <!-- back drape -->
+  <path d="M168 254 C194 242 320 242 344 254 C348 296 336 334 310 356 L202 356 C176 334 164 296 168 254 Z" fill="#16182A"/>
+  <path d="M178 260 C202 250 312 250 334 260 C336 296 326 328 304 346 L208 346 C186 328 176 296 178 260 Z" fill="#0E101E" opacity="0.55"/>
+  <!-- grand cone, curled glowing tip -->
   <path d="M326 240 C322 178 306 114 272 70 C262 56 248 52 236 60 C220 72 218 92 230 104 C240 96 248 98 254 108 C230 146 208 192 202 240 Z" fill="#16182A"/>
   <path d="M314 230 C308 178 294 126 266 84 C280 130 292 184 294 230 Z" fill="#0E101E"/>
   <circle cx="230" cy="78" r="9" fill="#8F7BFF"/>
   <circle cx="230" cy="76" r="4" fill="#D6CEFF"/>
   <path d="M264 196 L274 202 M260 168 L270 174 M254 140 L264 146" stroke="#8F7BFF" stroke-width="5" fill="none"/>
-  <path d="M158 248 C192 230 320 230 354 248 L352 280 C320 262 192 262 160 280 Z" fill="#0E101E"/>
-  <path d="M160 250 C194 234 318 234 352 250 L351 266 C318 250 194 250 161 266 Z" fill="#1E2440"/>
-  <path d="M188 238 C214 230 298 230 314 238 L312 252 C296 242 214 242 190 252 Z" fill="#8F7BFF"/>
+  <!-- brim -->
+  <path d="M150 248 C182 230 330 230 362 248 L360 278 C328 260 184 260 152 278 Z" fill="#0E101E"/>
+  <path d="M152 250 C186 234 326 234 360 250 L359 264 C326 248 186 248 153 264 Z" fill="#1E2440"/>
+  <path d="M188 240 C214 232 298 232 314 240 L312 254 C296 244 214 244 190 254 Z" fill="#8F7BFF"/>
 </svg>
