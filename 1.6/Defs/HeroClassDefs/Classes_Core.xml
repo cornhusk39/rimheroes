@@ -10,19 +10,18 @@
     <label>fighter</label>
     <description>A master of martial combat. Holds the line while others break.</description>
     <vestmentHediff>RH_Vestment_Fighter</vestmentHediff>
+    <fightingStyles>true</fightingStyles>
+    <bonusFeatLevels>
+      <li>6</li>
+      <li>14</li>
+    </bonusFeatLevels>
     <levelGrants>
-      <li>
-        <level>1</level>
-        <features>
-          <li>RH_Feature_HeroicVigor</li>
-        </features>
-      </li>
-      <li>
-        <level>5</level>
-        <features>
-          <li>RH_Feature_BattleHardened</li>
-        </features>
-      </li>
+      <li><level>1</level><abilities>
+        <li>RH_Ability_SecondWind</li>
+      </abilities></li>
+      <li><level>2</level><abilities>
+        <li>RH_Ability_ActionSurge</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>

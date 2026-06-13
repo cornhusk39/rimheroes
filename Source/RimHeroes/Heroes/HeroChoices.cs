@@ -33,47 +33,108 @@ namespace RimHeroes
             ("QuickSleeper", 0), ("NightOwl", 0), ("TooSmart", 1), ("GreatMemory", 0), ("Neat", 0),
         };
 
+        private enum ChoiceKind { Style, Trait, Feat, BonusFeat }
+
+        private class PendingChoice
+        {
+            public int level;
+            public ChoiceKind kind;
+        }
+
         public static void CheckLevelChoices(Hediff_HeroLevels hero, bool allowDialog = true)
         {
             if (hero?.pawn == null || hero.classDef == null) return;
             bool player = allowDialog && hero.pawn.IsColonistPlayerControlled;
             while (true)
             {
-                int lvl = NextUnresolved(hero);
-                if (lvl < 0) return;
-                bool isTrait = TraitLevels.Contains(lvl);
-                var options = isTrait ? BuildTraitOptions(hero) : BuildFeatOptions(hero);
+                var next = NextUnresolved(hero);
+                if (next == null) return;
+                var options = BuildOptions(hero, next.kind);
                 if (!player || options.Count == 0)
                 {
                     if (options.Count > 0) options.RandomElement().apply();
-                    hero.MarkChoiceResolved(lvl);
+                    MarkResolved(hero, next);
                     continue;
                 }
-                int captured = lvl;
-                string title = isTrait ? "Choose a trait" : "Choose a feat";
-                string sub = isTrait
-                    ? $"{hero.pawn.LabelShortCap} has grown — pick one trait to keep."
-                    : $"{hero.pawn.LabelShortCap} has earned a feat — pick one.";
-                Find.WindowStack.Add(new Dialog_HeroChoice(title, sub, options, () =>
+                var captured = next;
+                Find.WindowStack.Add(new Dialog_HeroChoice(TitleFor(next.kind), SubtitleFor(hero, next.kind), options, () =>
                 {
-                    hero.MarkChoiceResolved(captured);
+                    MarkResolved(hero, captured);
                     CheckLevelChoices(hero);
                 }));
                 return; // resolve the rest after this dialog closes
             }
         }
 
-        private static int NextUnresolved(Hediff_HeroLevels hero)
+        private static PendingChoice NextUnresolved(Hediff_HeroLevels hero)
         {
-            int best = -1;
-            foreach (int lvl in TraitLevels.Concat(FeatLevels))
+            PendingChoice best = null;
+            void consider(int lvl, ChoiceKind kind, bool resolved)
             {
-                if (lvl <= hero.level && !hero.IsChoiceResolved(lvl) && (best < 0 || lvl < best))
+                if (lvl <= hero.level && !resolved && (best == null || lvl < best.level))
                 {
-                    best = lvl;
+                    best = new PendingChoice { level = lvl, kind = kind };
                 }
             }
+            if (hero.classDef.fightingStyles)
+            {
+                consider(1, ChoiceKind.Style, hero.FightingStyle != FighterStyle.None);
+            }
+            foreach (int lvl in TraitLevels) consider(lvl, ChoiceKind.Trait, hero.IsChoiceResolved(lvl));
+            foreach (int lvl in FeatLevels) consider(lvl, ChoiceKind.Feat, hero.IsChoiceResolved(lvl));
+            if (hero.classDef.bonusFeatLevels != null)
+            {
+                foreach (int lvl in hero.classDef.bonusFeatLevels) consider(lvl, ChoiceKind.BonusFeat, hero.IsBonusFeatResolved(lvl));
+            }
             return best;
+        }
+
+        private static void MarkResolved(Hediff_HeroLevels hero, PendingChoice c)
+        {
+            if (c.kind == ChoiceKind.BonusFeat) hero.MarkBonusFeatResolved(c.level);
+            else if (c.kind == ChoiceKind.Style) hero.SetFightingStyle(hero.FightingStyle); // style set by the option itself
+            else hero.MarkChoiceResolved(c.level);
+        }
+
+        private static List<HeroChoiceOption> BuildOptions(Hediff_HeroLevels hero, ChoiceKind kind)
+        {
+            switch (kind)
+            {
+                case ChoiceKind.Style: return BuildStyleOptions(hero);
+                case ChoiceKind.Trait: return BuildTraitOptions(hero);
+                default: return BuildFeatOptions(hero); // Feat + BonusFeat
+            }
+        }
+
+        private static string TitleFor(ChoiceKind kind) =>
+            kind == ChoiceKind.Style ? "Choose a fighting style" : kind == ChoiceKind.Trait ? "Choose a trait" : "Choose a feat";
+
+        private static string SubtitleFor(Hediff_HeroLevels hero, ChoiceKind kind)
+        {
+            switch (kind)
+            {
+                case ChoiceKind.Style: return $"{hero.pawn.LabelShortCap} settles into a way of fighting.";
+                case ChoiceKind.Trait: return $"{hero.pawn.LabelShortCap} has grown — pick one trait to keep.";
+                default: return $"{hero.pawn.LabelShortCap} has earned a feat — pick one.";
+            }
+        }
+
+        private static readonly (FighterStyle style, string label, string desc)[] StylePool =
+        {
+            (FighterStyle.Quickness, "Quickness", "Light and fast: +20% melee attack speed."),
+            (FighterStyle.Strength, "Strength", "Heavy hits: +15% melee damage."),
+            (FighterStyle.Cunning, "Cunning", "Find the gap: +20% armor penetration on melee hits."),
+        };
+
+        private static List<HeroChoiceOption> BuildStyleOptions(Hediff_HeroLevels hero)
+        {
+            return StylePool.Select(s => new HeroChoiceOption
+            {
+                label = s.label,
+                description = s.desc,
+                icon = null,
+                apply = () => hero.SetFightingStyle(s.style)
+            }).ToList();
         }
 
         private static List<HeroChoiceOption> BuildTraitOptions(Hediff_HeroLevels hero)

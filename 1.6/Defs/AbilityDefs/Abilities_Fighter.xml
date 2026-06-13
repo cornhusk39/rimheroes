@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Martial active abilities: cooldown-based (NOT spells - no slots, not gated by the caster
+       system). Granted to the Fighter via levelGrants. -->
+  <AbilityDef Name="RH_MartialBase" Abstract="True">
+    <abilityClass>RimWorld.Ability</abilityClass>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <warmupStartSound>Interact_BeatFire</warmupStartSound>
+  </AbilityDef>
+
+  <!-- Second Wind (L1): self-heal on a cooldown (~one short rest). -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_SecondWind</defName>
+    <label>second wind</label>
+    <description>Catch your breath and shrug off the worst of your wounds. Recharges with rest.</description>
+    <iconPath>UI/RimHeroes/SecondWind</iconPath>
+    <cooldownTicksRange>20000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0.2</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityHeal">
+        <amount>20</amount>
+        <radius>0</radius>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Action Surge (L2): a few seconds of speed and striking power. -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_ActionSurge</defName>
+    <label>action surge</label>
+    <description>Push past your limits for a few seconds of blinding speed and force.</description>
+    <iconPath>UI/RimHeroes/ActionSurge</iconPath>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_ActionSurge</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -26,6 +26,11 @@ namespace RimHeroes
         public bool spellMastery = false;
         public bool signatureSpells = false;
 
+        // Fighter's L1 Fighting Style pick (Quickness/Strength/Cunning).
+        public bool fightingStyles = false;
+        // Extra ASI levels granted as bonus feat picks beyond the shared 4/8/12/16/19 (Fighter: 6, 14).
+        public List<int> bonusFeatLevels = new List<int>();
+
         // What each level grants: abilities (spells/features as AbilityDefs), passive feature hediffs.
         public List<HeroLevelGrant> levelGrants = new List<HeroLevelGrant>();
 

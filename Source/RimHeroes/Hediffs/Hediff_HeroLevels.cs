@@ -18,12 +18,35 @@ namespace RimHeroes
         public float xp;
         public bool capstoneGranted; // L20 "heroic trial" reward fired once
         private List<int> resolvedChoiceLevels = new List<int>(); // trait/feat level-up picks already made
+        private List<int> resolvedBonusFeatLevels = new List<int>(); // class bonus-feat picks (separate: may share a level with a trait pick)
         private List<FeatDef> takenFeats = new List<FeatDef>();
+
+        public bool IsBonusFeatResolved(int lvl) => resolvedBonusFeatLevels.Contains(lvl);
+        public void MarkBonusFeatResolved(int lvl) { if (!resolvedBonusFeatLevels.Contains(lvl)) resolvedBonusFeatLevels.Add(lvl); }
 
         public List<FeatDef> TakenFeats => takenFeats;
         public bool IsChoiceResolved(int lvl) => resolvedChoiceLevels.Contains(lvl);
         public void MarkChoiceResolved(int lvl) { if (!resolvedChoiceLevels.Contains(lvl)) resolvedChoiceLevels.Add(lvl); }
         public void AddTakenFeat(FeatDef f) { if (f != null && !takenFeats.Contains(f)) takenFeats.Add(f); }
+
+        // ===== Class features (displayed on the single class-named hediff) =====
+
+        public FighterStyle fighterStyle = FighterStyle.None; // Fighter's L1 Fighting Style pick
+        public FighterStyle FightingStyle => fighterStyle;
+        public void SetFightingStyle(FighterStyle s) { fighterStyle = s; }
+
+        /// <summary>Bonus to death saving throws from class features (Fighter's Indomitable).</summary>
+        public int DeathSaveBonus => ClassFeatures.DeathSaveBonus(this);
+
+        /// <summary>Ensures the class-features summary hediff (labeled with the class name) is present.</summary>
+        public void EnsureClassFeaturesHediff()
+        {
+            if (pawn?.health == null || RH_DefOf.RH_ClassFeatures == null) return;
+            if (!pawn.health.hediffSet.HasHediff(RH_DefOf.RH_ClassFeatures))
+            {
+                pawn.health.AddHediff(RH_DefOf.RH_ClassFeatures);
+            }
+        }
 
         public override string LabelInBrackets => classDef != null ? $"{classDef.label} {level}" : base.LabelInBrackets;
 
@@ -45,6 +68,7 @@ namespace RimHeroes
         {
             base.PostAdd(dinfo);
             HeroUtility.NormalizeHeroBody(pawn);
+            EnsureClassFeaturesHediff();
             ApplyGrants();
         }
 
@@ -755,7 +779,9 @@ namespace RimHeroes
             Scribe_Values.Look(ref xp, "xp");
             Scribe_Values.Look(ref capstoneGranted, "capstoneGranted");
             Scribe_Collections.Look(ref resolvedChoiceLevels, "resolvedChoiceLevels", LookMode.Value);
+            Scribe_Collections.Look(ref resolvedBonusFeatLevels, "resolvedBonusFeatLevels", LookMode.Value);
             Scribe_Collections.Look(ref takenFeats, "takenFeats", LookMode.Def);
+            Scribe_Values.Look(ref fighterStyle, "fighterStyle", FighterStyle.None);
             Scribe_Collections.Look(ref mimBonds, "mimBonds", LookMode.Deep);
             Scribe_Collections.Look(ref slotsExpended, "slotsExpended", LookMode.Value);
             Scribe_Collections.Look(ref autocastSpells, "autocastSpells", LookMode.Def);
@@ -777,6 +803,7 @@ namespace RimHeroes
                 if (autocastSpells == null) autocastSpells = new List<AbilityDef>();
                 if (preparedSpells == null) preparedSpells = new List<AbilityDef>();
                 if (resolvedChoiceLevels == null) resolvedChoiceLevels = new List<int>();
+                if (resolvedBonusFeatLevels == null) resolvedBonusFeatLevels = new List<int>();
                 if (takenFeats == null) takenFeats = new List<FeatDef>();
                 if (slotsExpended == null || slotsExpended.Count != 10) slotsExpended = new List<int>(new int[10]);
             }

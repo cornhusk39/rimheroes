@@ -64,7 +64,8 @@ namespace RimHeroes
                 Fail(2);
                 return;
             }
-            int modified = roll + (HasTendedInjury() ? TendBonus : 0);
+            int modified = roll + (HasTendedInjury() ? TendBonus : 0)
+                + (HeroUtility.GetHeroHediff(pawn)?.DeathSaveBonus ?? 0); // Fighter's Indomitable
             if (modified >= SaveDC)
             {
                 successes++;

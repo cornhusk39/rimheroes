@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- second wind: a restorative breath swirl around a vitality cross -->
+  <path d="M14 26 C8 20 14 11 24 13 C34 15 38 9 46 11 C56 13 56 24 48 27"
+        fill="none" stroke="#7FE0A6" stroke-width="5" stroke-linecap="round"/>
+  <path d="M50 38 C56 44 50 53 40 51 C30 49 26 55 18 53 C8 51 8 40 16 37"
+        fill="none" stroke="#A8EFC4" stroke-width="5" stroke-linecap="round"/>
+  <rect x="28" y="22" width="8" height="20" rx="2.5" fill="#3FB871"/>
+  <rect x="22" y="28" width="20" height="8" rx="2.5" fill="#3FB871"/>
+  <rect x="29.5" y="23.5" width="5" height="17" rx="1.5" fill="#7FE0A6"/>
+  <rect x="23.5" y="29.5" width="17" height="5" rx="1.5" fill="#7FE0A6"/>
+</svg>

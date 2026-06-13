@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- action surge: a burst of speed - a forward lightning chevron in a starburst -->
+  <defs>
+    <radialGradient id="asurge" cx="0.5" cy="0.5">
+      <stop offset="0%" stop-color="#FFF3C0"/>
+      <stop offset="60%" stop-color="#FFC840"/>
+      <stop offset="100%" stop-color="#F08A1E"/>
+    </radialGradient>
+  </defs>
+  <path d="M32 4 L37 22 L55 17 L41 30 L58 38 L39 39 L44 58 L31 43 L18 56 L22 38 L5 34 L23 30 L13 14 L30 22 Z"
+        fill="url(#asurge)"/>
+  <path d="M34 14 L24 34 L33 34 L29 50 L42 28 L33 28 Z" fill="#E2641A"/>
+  <path d="M33 16 L25 33 L32 33 L29 46 L40 29 L32 29 Z" fill="#FFE9A8"/>
+</svg>
