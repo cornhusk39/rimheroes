@@ -18,6 +18,14 @@ namespace RimHeroes
         // and can swap them during a window after a long rest. Known casters cast all they know.
         public bool preparesSpells = false;
 
+        // Wizard signature mechanics (gated by level in Hediff_HeroLevels):
+        //   arcaneRecovery  - L1: a short rest also recovers a burst of expended spell slots.
+        //   spellMastery    - L18: one chosen lvl-1 and one lvl-2 spell become at-will (no slot).
+        //   signatureSpells - L20: two chosen lvl-3 spells can each be cast free once per long rest.
+        public bool arcaneRecovery = false;
+        public bool spellMastery = false;
+        public bool signatureSpells = false;
+
         // What each level grants: abilities (spells/features as AbilityDefs), passive feature hediffs.
         public List<HeroLevelGrant> levelGrants = new List<HeroLevelGrant>();
 

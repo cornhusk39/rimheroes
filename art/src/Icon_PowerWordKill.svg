@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="pwk_aura" cx="0.5" cy="0.45">
+      <stop offset="0%" stop-color="#7A2FB0" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#3A0F5E" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#160321" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pwk_skull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAD9F5"/>
+      <stop offset="55%" stop-color="#B98FD6"/>
+      <stop offset="100%" stop-color="#5E3187"/>
+    </linearGradient>
+    <radialGradient id="pwk_eye" cx="0.5" cy="0.5">
+      <stop offset="0%" stop-color="#FFE3D6"/>
+      <stop offset="40%" stop-color="#FF3B2E"/>
+      <stop offset="100%" stop-color="#8A0E08"/>
+    </radialGradient>
+  </defs>
+  <!-- necrotic aura -->
+  <circle cx="32" cy="30" r="30" fill="url(#pwk_aura)"/>
+  <!-- energy wisps -->
+  <path d="M9 18 Q16 10 24 14" fill="none" stroke="#9A4FD6" stroke-width="2.4" stroke-linecap="round" stroke-opacity="0.7"/>
+  <path d="M55 18 Q48 9 40 13" fill="none" stroke="#9A4FD6" stroke-width="2.4" stroke-linecap="round" stroke-opacity="0.7"/>
+  <!-- skull cranium -->
+  <path d="M32 8 C20 8 13 17 13 28 C13 35 17 39 21 41 L21 47 C21 49 23 50 25 50 L39 50 C41 50 43 49 43 47 L43 41 C47 39 51 35 51 28 C51 17 44 8 32 8 Z"
+        fill="url(#pwk_skull)" stroke-linejoin="round"/>
+  <!-- eye sockets -->
+  <ellipse cx="24" cy="29" rx="5.5" ry="6" fill="#2A0E40"/>
+  <ellipse cx="40" cy="29" rx="5.5" ry="6" fill="#2A0E40"/>
+  <!-- crimson eye glow -->
+  <circle cx="24" cy="30" r="2.8" fill="url(#pwk_eye)"/>
+  <circle cx="40" cy="30" r="2.8" fill="url(#pwk_eye)"/>
+  <!-- nasal cavity -->
+  <path d="M32 34 L29 41 L35 41 Z" fill="#2A0E40" stroke-linejoin="round"/>
+  <!-- teeth -->
+  <path d="M25 50 L25 44 L39 44 L39 50 M28.5 44 L28.5 50 M32 44 L32 50 M35.5 44 L35.5 50"
+        fill="none" stroke="#5E3187" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- downward strike -->
+  <path d="M32 51 L29 58 L32 62 L35 58 Z" fill="#FF3B2E" stroke-linejoin="round"/>
+</svg>

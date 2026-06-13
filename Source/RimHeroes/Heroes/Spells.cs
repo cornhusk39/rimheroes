@@ -119,15 +119,20 @@ namespace RimHeroes
                     reason = "RH_NotAHero".Translate();
                     return true;
                 }
-                if (!hero.CanCastSpell(def))
+                // Spell Mastery (at-will) and a ready Signature charge bypass the prepared gate and slots.
+                bool free = hero.IsMastered(def) || hero.SignatureChargeReady(def);
+                if (!free)
                 {
-                    reason = "Not prepared - ready this spell after a long rest";
-                    return true;
-                }
-                if (hero.RemainingSlots(SpellLevel) <= 0)
-                {
-                    reason = "RH_NoSlots".Translate(SpellLevel);
-                    return true;
+                    if (!hero.CanCastSpell(def))
+                    {
+                        reason = "Not prepared - ready this spell after a long rest";
+                        return true;
+                    }
+                    if (hero.RemainingSlots(SpellLevel) <= 0)
+                    {
+                        reason = "RH_NoSlots".Translate(SpellLevel);
+                        return true;
+                    }
                 }
             }
             return false;
@@ -157,7 +162,20 @@ namespace RimHeroes
             {
                 return true;
             }
-            return Hero?.TryExpendSlot(SpellLevel) == true;
+            var hero = Hero;
+            if (hero == null)
+            {
+                return false;
+            }
+            if (hero.IsMastered(def))
+            {
+                return true; // Spell Mastery: at-will, no slot
+            }
+            if (hero.TryConsumeSignatureCharge(def))
+            {
+                return true; // Signature Spell: free once per long rest
+            }
+            return hero.TryExpendSlot(SpellLevel);
         }
     }
 

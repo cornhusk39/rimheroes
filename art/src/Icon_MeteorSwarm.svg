@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="msTrail" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF1A8"/>
+      <stop offset="55%" stop-color="#FF8A2B"/>
+      <stop offset="100%" stop-color="#C9341A"/>
+    </linearGradient>
+    <radialGradient id="msRock" cx="0.4" cy="0.4">
+      <stop offset="0%" stop-color="#FFC65A"/>
+      <stop offset="60%" stop-color="#E2581F"/>
+      <stop offset="100%" stop-color="#8E2A0E"/>
+    </radialGradient>
+    <radialGradient id="msFlash" cx="0.5" cy="0.5">
+      <stop offset="0%" stop-color="#FFF6C8"/>
+      <stop offset="60%" stop-color="#FFB23D"/>
+      <stop offset="100%" stop-color="#E2581F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="32" cy="54" rx="22" ry="8" fill="url(#msFlash)"/>
+  <path d="M50 6 L30 44" stroke="url(#msTrail)" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M34 8 L20 42" stroke="url(#msTrail)" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M60 18 L44 46" stroke="url(#msTrail)" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="30" cy="44" r="5.5" fill="url(#msRock)"/>
+  <circle cx="20" cy="42" r="4.5" fill="url(#msRock)"/>
+  <circle cx="44" cy="46" r="4.5" fill="url(#msRock)"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="mirrorFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#AEC0FF"/>
+      <stop offset="1" stop-color="#5E73C8"/>
+    </linearGradient>
+  </defs>
+  <g fill="#8FA8FF" opacity="0.4">
+    <circle cx="16" cy="20" r="7"/>
+    <path d="M16 28 C9 28 6 35 6 44 L6 56 L26 56 L26 44 C26 35 23 28 16 28 Z"/>
+  </g>
+  <g fill="#8FA8FF" opacity="0.4">
+    <circle cx="48" cy="20" r="7"/>
+    <path d="M48 28 C41 28 38 35 38 44 L38 56 L58 56 L58 44 C58 35 55 28 48 28 Z"/>
+  </g>
+  <g fill="url(#mirrorFront)">
+    <circle cx="32" cy="18" r="8.5"/>
+    <path d="M32 27 C23 27 19 35 19 46 L19 58 L45 58 L45 46 C45 35 41 27 32 27 Z"/>
+  </g>
+</svg>

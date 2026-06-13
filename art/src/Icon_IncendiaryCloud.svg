@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="icCloud" cx="0.45" cy="0.55">
+      <stop offset="0%" stop-color="#FFC65A"/>
+      <stop offset="55%" stop-color="#F07A1E"/>
+      <stop offset="100%" stop-color="#B43A10"/>
+    </radialGradient>
+    <linearGradient id="icFlame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#F0531C"/>
+      <stop offset="60%" stop-color="#FFB23D"/>
+      <stop offset="100%" stop-color="#FFF1A8"/>
+    </linearGradient>
+  </defs>
+  <path d="M14 50 C7 50 7 40 15 39 C13 30 27 26 31 33 C35 25 49 28 47 38 C56 37 57 50 49 50 Z" fill="url(#icCloud)"/>
+  <path d="M22 39 C20 33 26 31 24 25 C30 29 30 35 27 40 Z" fill="url(#icFlame)"/>
+  <path d="M34 38 C31 30 39 27 35 19 C44 24 43 34 39 40 Z" fill="url(#icFlame)"/>
+  <circle cx="16" cy="26" r="2" fill="#FFD86A"/>
+  <circle cx="48" cy="22" r="1.6" fill="#FFD86A"/>
+  <circle cx="42" cy="14" r="1.4" fill="#FFEFA0"/>
+</svg>

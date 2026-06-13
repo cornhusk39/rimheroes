@@ -252,20 +252,87 @@
     <vestmentHediff>RH_Vestment_Wizard</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <preparesSpells>true</preparesSpells>
+    <arcaneRecovery>true</arcaneRecovery>
+    <spellMastery>true</spellMastery>
+    <signatureSpells>true</signatureSpells>
     <levelGrants>
       <li>
         <level>1</level>
         <abilities>
+          <!-- cantrips -->
           <li>RH_Spell_FireBolt</li>
           <li>RH_Spell_RayOfFrost</li>
+          <li>RH_Spell_ShockingGrasp</li>
+          <li>RH_Spell_TollTheDead</li>
+          <!-- level-1 spells -->
           <li>RH_Spell_MagicMissile</li>
           <li>RH_Spell_MageArmor</li>
+          <li>RH_Spell_Thunderwave</li>
+          <li>RH_Spell_ChromaticOrb</li>
+        </abilities>
+      </li>
+      <li>
+        <level>3</level>
+        <abilities>
+          <!-- level-2 spells -->
+          <li>RH_Spell_ScorchingRay</li>
+          <li>RH_Spell_MistyStep</li>
+          <li>RH_Spell_MirrorImage</li>
         </abilities>
       </li>
       <li>
         <level>5</level>
         <abilities>
+          <!-- level-3 spells -->
           <li>RH_Spell_Fireball</li>
+          <li>RH_Spell_LightningBolt</li>
+          <li>RH_Spell_Haste</li>
+        </abilities>
+      </li>
+      <li>
+        <level>7</level>
+        <abilities>
+          <!-- level-4 spells -->
+          <li>RH_Spell_IceStorm</li>
+          <li>RH_Spell_Slow</li>
+        </abilities>
+      </li>
+      <li>
+        <level>9</level>
+        <abilities>
+          <!-- level-5 spells -->
+          <li>RH_Spell_ConeOfCold</li>
+          <li>RH_Spell_HoldMonster</li>
+        </abilities>
+      </li>
+      <li>
+        <level>11</level>
+        <abilities>
+          <!-- level-6 spells -->
+          <li>RH_Spell_Disintegrate</li>
+          <li>RH_Spell_ChainLightning</li>
+        </abilities>
+      </li>
+      <li>
+        <level>13</level>
+        <abilities>
+          <!-- level-7 spell -->
+          <li>RH_Spell_DelayedBlastFireball</li>
+        </abilities>
+      </li>
+      <li>
+        <level>15</level>
+        <abilities>
+          <!-- level-8 spell -->
+          <li>RH_Spell_IncendiaryCloud</li>
+        </abilities>
+      </li>
+      <li>
+        <level>17</level>
+        <abilities>
+          <!-- level-9 spells -->
+          <li>RH_Spell_MeteorSwarm</li>
+          <li>RH_Spell_PowerWordKill</li>
         </abilities>
       </li>
     </levelGrants>

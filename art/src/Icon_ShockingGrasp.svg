@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="sgPalm" cx="50%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#5AB8FF"/>
+      <stop offset="100%" stop-color="#1E5FB8"/>
+    </radialGradient>
+  </defs>
+  <path d="M22 58 L20 34 Q20 30 24 30 Q27 30 27 34 L27 24 Q27 20 31 20 Q34 20 34 24 L34 22 Q34 18 38 18 Q41 18 41 22 L41 26 Q41 22 45 22 Q48 22 48 26 L49 40 Q49 52 40 57 L24 58 Z"
+        fill="url(#sgPalm)" stroke="#9FDcFF" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M38 26 L30 38 L36 38 L28 50" fill="none" stroke="#FFF7B0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 26 L30 38 L36 38 L28 50" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="44" cy="20" r="2.5" fill="#E6F6FF"/>
+  <circle cx="22" cy="40" r="2" fill="#C8ECFF"/>
+</svg>

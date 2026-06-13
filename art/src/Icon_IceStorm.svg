@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="iceStormShard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8F6FF"/>
+      <stop offset="1" stop-color="#6CC2F5"/>
+    </linearGradient>
+  </defs>
+  <path d="M18 8 L26 30 L20 26 L22 44 L14 22 L20 26 Z" fill="url(#iceStormShard)"/>
+  <path d="M40 14 L49 40 L42 35 L45 56 L36 30 L43 35 Z" fill="url(#iceStormShard)"/>
+  <path d="M30 24 L36 42 L31 39 L33 53 L26 36 L31 39 Z" fill="#C8ECFF"/>
+  <g stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round">
+    <path d="M52 12 L52 24 M47 15 L57 21 M57 15 L47 21"/>
+  </g>
+  <g stroke="#C8ECFF" stroke-width="2" stroke-linecap="round">
+    <path d="M11 40 L11 50 M7 42.5 L15 47.5 M15 42.5 L7 47.5"/>
+  </g>
+</svg>

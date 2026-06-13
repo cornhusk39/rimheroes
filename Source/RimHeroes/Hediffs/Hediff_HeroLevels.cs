@@ -169,6 +169,90 @@ namespace RimHeroes
         public const int LongRestDurationTicks = 30000; // 12 in-game hours of sleep
         public const int PrepareWindowTicks = 15000;    // 6 in-game hours to swap spells after a long rest
 
+        // ===== Wizard signature mechanics (Arcane Recovery / Spell Mastery / Signature Spells) =====
+
+        public const int SpellMasteryLevel = 18;
+        public const int SignatureSpellsLevel = 20;
+
+        private bool arcaneRecoveryReady = true;        // recharges on a long rest
+        private AbilityDef masteryLow, masteryMid;      // L18: one lvl-1 + one lvl-2 spell cast at-will
+        private AbilityDef signatureA, signatureB;      // L20: two lvl-3 spells, free once per long rest
+        private bool signatureAReady = true, signatureBReady = true;
+
+        public bool HasArcaneRecovery => classDef?.arcaneRecovery == true;
+        public bool HasSpellMastery => classDef?.spellMastery == true && level >= SpellMasteryLevel;
+        public bool HasSignatureSpells => classDef?.signatureSpells == true && level >= SignatureSpellsLevel;
+
+        public AbilityDef MasteryLow => masteryLow;
+        public AbilityDef MasteryMid => masteryMid;
+        public AbilityDef SignatureA => signatureA;
+        public AbilityDef SignatureB => signatureB;
+
+        /// <summary>A mastered spell is cast at-will (Spell Mastery): no slot, ignores the prepared gate.</summary>
+        public bool IsMastered(AbilityDef def) =>
+            HasSpellMastery && def != null && (def == masteryLow || def == masteryMid);
+
+        public bool IsSignature(AbilityDef def) =>
+            HasSignatureSpells && def != null && (def == signatureA || def == signatureB);
+
+        /// <summary>True if this signature spell still has its free per-long-rest cast available.</summary>
+        public bool SignatureChargeReady(AbilityDef def) =>
+            IsSignature(def) && ((def == signatureA && signatureAReady) || (def == signatureB && signatureBReady));
+
+        /// <summary>Spend a signature free cast if one remains. Returns true if a charge was consumed.</summary>
+        public bool TryConsumeSignatureCharge(AbilityDef def)
+        {
+            if (!SignatureChargeReady(def)) return false;
+            if (def == signatureA) signatureAReady = false;
+            else if (def == signatureB) signatureBReady = false;
+            return true;
+        }
+
+        public void SetMastery(bool mid, AbilityDef def) { if (mid) masteryMid = def; else masteryLow = def; }
+        public void SetSignature(bool second, AbilityDef def) { if (second) signatureB = def; else signatureA = def; }
+
+        /// <summary>Known leveled spells of an exact spell level (for the mastery/signature pickers).</summary>
+        public IEnumerable<AbilityDef> KnownSpellsOfLevel(int spellLevel) =>
+            (pawn.abilities?.abilities ?? Enumerable.Empty<Ability>())
+                .Where(a => a is Ability_Spell && a.def.level == spellLevel)
+                .Select(a => a.def)
+                .Distinct();
+
+        /// <summary>Idempotently assign sensible default mastery/signature picks so the mechanic works
+        /// for every wizard (player customizes via gizmos). Only fills empty slots.</summary>
+        private void EnsureSignaturePicks()
+        {
+            if (HasSpellMastery)
+            {
+                if (masteryLow == null) masteryLow = KnownSpellsOfLevel(1).FirstOrDefault();
+                if (masteryMid == null) masteryMid = KnownSpellsOfLevel(2).FirstOrDefault();
+            }
+            if (HasSignatureSpells)
+            {
+                var l3 = KnownSpellsOfLevel(3).ToList();
+                if (signatureA == null) signatureA = l3.FirstOrDefault();
+                if (signatureB == null) signatureB = l3.FirstOrDefault(d => d != signatureA);
+            }
+        }
+
+        /// <summary>Arcane Recovery: on a short rest, restore expended slots totaling up to ceil(level/2)
+        /// spell-levels (none above 5th), highest first. Once per long rest.</summary>
+        private int DoArcaneRecovery()
+        {
+            int budget = Mathf.CeilToInt(level / 2f);
+            int restored = 0;
+            for (int lvl = 5; lvl >= 1 && budget > 0; lvl--)
+            {
+                while (budget >= lvl && slotsExpended[lvl] > 0 && MaxSlots(lvl) > 0)
+                {
+                    slotsExpended[lvl]--;
+                    budget -= lvl;
+                    restored++;
+                }
+            }
+            return restored;
+        }
+
         // ===== Prepared casting (Wizard/Cleric/Druid/Paladin): ready a subset of known leveled spells =====
 
         public bool PreparesSpells => classDef?.preparesSpells == true;
@@ -242,6 +326,10 @@ namespace RimHeroes
             {
                 slotsExpended[i] = 0;
             }
+            // A long rest also recharges the per-rest wizard mechanics.
+            arcaneRecoveryReady = true;
+            signatureAReady = true;
+            signatureBReady = true;
         }
 
         /// <summary>Short rest benefit: recover one expended slot of the lowest expended level.</summary>
@@ -322,7 +410,23 @@ namespace RimHeroes
             if (shortRestArmed && asleep && rest.CurLevelPercentage >= 0.98f)
             {
                 shortRestArmed = false;
-                if (RestoreLowestExpendedSlot() && PawnUtility.ShouldSendNotificationAbout(pawn))
+                bool any = RestoreLowestExpendedSlot();
+                // Arcane Recovery rides the short rest: a wizard reclaims a burst of slots, once per long rest.
+                if (HasArcaneRecovery && arcaneRecoveryReady)
+                {
+                    arcaneRecoveryReady = false;
+                    int recovered = DoArcaneRecovery();
+                    if (recovered > 0)
+                    {
+                        any = true;
+                        if (PawnUtility.ShouldSendNotificationAbout(pawn))
+                        {
+                            Messages.Message(pawn.LabelShortCap + " reclaims arcane energy on resting (Arcane Recovery: " +
+                                recovered + " slot" + (recovered == 1 ? "" : "s") + ").", pawn, MessageTypeDefOf.PositiveEvent);
+                        }
+                    }
+                }
+                if (any && !HasArcaneRecovery && PawnUtility.ShouldSendNotificationAbout(pawn))
                 {
                     Messages.Message("RH_ShortRest".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.PositiveEvent);
                 }
@@ -424,6 +528,40 @@ namespace RimHeroes
                                       "Swappable for 6 hours after a long rest." + suffix,
                         icon = RH_Tex.LongRest,
                         action = () => Find.WindowStack.Add(new Dialog_PrepareSpells(this))
+                    };
+                }
+                if (HasSpellMastery)
+                {
+                    yield return new Command_Action
+                    {
+                        defaultLabel = "Spell Mastery",
+                        defaultDesc = "Choose one level-1 and one level-2 spell to cast at will, with no spell slot.\n" +
+                                      "Current: " + (masteryLow?.LabelCap ?? "(none)") + " / " + (masteryMid?.LabelCap ?? "(none)"),
+                        icon = (masteryLow ?? masteryMid)?.uiIcon ?? RH_Tex.LongRest,
+                        action = () => Find.WindowStack.Add(new Dialog_PickSpell(this, 1, "Spell Mastery: level-1 spell",
+                            masteryLow, null, picked =>
+                            {
+                                masteryLow = picked;
+                                Find.WindowStack.Add(new Dialog_PickSpell(this, 2, "Spell Mastery: level-2 spell",
+                                    masteryMid, null, second => masteryMid = second));
+                            }))
+                    };
+                }
+                if (HasSignatureSpells)
+                {
+                    yield return new Command_Action
+                    {
+                        defaultLabel = "Signature Spells",
+                        defaultDesc = "Choose two level-3 spells. Each can be cast free once per long rest.\n" +
+                                      "Current: " + (signatureA?.LabelCap ?? "(none)") + " / " + (signatureB?.LabelCap ?? "(none)"),
+                        icon = (signatureA ?? signatureB)?.uiIcon ?? RH_Tex.LongRest,
+                        action = () => Find.WindowStack.Add(new Dialog_PickSpell(this, 3, "Signature spell (1 of 2)",
+                            signatureA, signatureB, picked =>
+                            {
+                                signatureA = picked;
+                                Find.WindowStack.Add(new Dialog_PickSpell(this, 3, "Signature spell (2 of 2)",
+                                    signatureB, signatureA, second => signatureB = second));
+                            }))
                     };
                 }
             }
@@ -606,6 +744,7 @@ namespace RimHeroes
                     }
                 }
             }
+            EnsureSignaturePicks(); // fill default Spell Mastery / Signature Spell picks once unlocked
         }
 
         public override void ExposeData()
@@ -625,6 +764,13 @@ namespace RimHeroes
             Scribe_Values.Look(ref longResting, "longResting");
             Scribe_Values.Look(ref longRestProgress, "longRestProgress");
             Scribe_Values.Look(ref shortRestArmed, "shortRestArmed", true);
+            Scribe_Values.Look(ref arcaneRecoveryReady, "arcaneRecoveryReady", true);
+            Scribe_Defs.Look(ref masteryLow, "masteryLow");
+            Scribe_Defs.Look(ref masteryMid, "masteryMid");
+            Scribe_Defs.Look(ref signatureA, "signatureA");
+            Scribe_Defs.Look(ref signatureB, "signatureB");
+            Scribe_Values.Look(ref signatureAReady, "signatureAReady", true);
+            Scribe_Values.Look(ref signatureBReady, "signatureBReady", true);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 if (mimBonds == null) mimBonds = new List<MimBond>();

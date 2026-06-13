@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="htChev" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A8F0FF"/>
+      <stop offset="100%" stop-color="#18C4F0"/>
+    </linearGradient>
+  </defs>
+  <path d="M8 22 L8 16 M18 32 L8 32 M14 42 L8 42" stroke="#7FE8FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M26 12 L46 32 L26 52" fill="none" stroke="url(#htChev)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 12 L60 32 L40 52" fill="none" stroke="url(#htChev)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M26 12 L46 32 L26 52 M40 12 L60 32 L40 52" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
