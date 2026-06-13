@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Ranger T2 south: hood up, leather bracers, fletching/arrow detail at the belt. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#3E5A34"/>
+  <path d="M190 200 C212 188 232 182 256 182 C280 182 300 188 322 200 L318 420 C300 432 280 438 256 438 C232 438 212 432 194 420 Z" fill="#5C4630"/>
+  <path d="M251 200 L261 200 L259 434 L253 434 Z" fill="#463422"/>
+  <!-- leather bracers -->
+  <path d="M150 318 C158 310 170 310 176 318 L174 380 C168 372 158 372 152 380 Z" fill="#5C4630"/>
+  <path d="M362 318 C354 310 342 310 336 318 L338 380 C344 372 354 372 360 380 Z" fill="#5C4630"/>
+  <path d="M154 332 L172 332 M154 350 L172 350 M340 332 L358 332 M340 350 L358 350" stroke="#8A6E48" stroke-width="3" fill="none"/>
+  <!-- short cloak left shoulder -->
+  <path d="M146 232 C152 204 174 186 206 184 C222 184 234 188 242 196 L236 214 C228 206 216 202 204 204 L196 320 C180 326 164 322 152 312 C146 290 144 262 146 232 Z" fill="#46583A"/>
+  <!-- fletching: arrow nocks peeking over the shoulder -->
+  <path d="M300 188 L308 158 L316 188 M316 192 L324 162 L332 192 M332 196 L340 166 L348 196" stroke="#8A8E74" stroke-width="6" fill="none"/>
+  <path d="M304 178 L312 178 M320 182 L328 182 M336 186 L344 186" stroke="#C9BBA0" stroke-width="3" fill="none"/>
+  <!-- belt -->
+  <path d="M154 384 C214 396 298 396 358 384 L358 402 C298 414 214 414 154 402 Z" fill="#5C4630"/>
+  <rect x="242" y="386" width="28" height="18" rx="3" fill="#8A6E48"/>
+</svg>

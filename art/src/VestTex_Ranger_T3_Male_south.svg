@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Ranger T3 south: layered full scout cloak (silhouette beat), beast-claw clasp, leather. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#3E5A34"/>
+  <path d="M190 200 C212 188 232 182 256 182 C280 182 300 188 322 200 L318 420 C300 432 280 438 256 438 C232 438 212 432 194 420 Z" fill="#5C4630"/>
+  <path d="M251 200 L261 200 L259 434 L253 434 Z" fill="#463422"/>
+  <!-- layered cloak across both shoulders, scalloped lower edge -->
+  <path d="M142 234 C150 202 194 182 256 182 C318 182 362 202 370 234 L366 286 L348 272 L344 298 L324 282 L316 304 L294 288 L284 280 C272 272 240 272 228 280 L218 288 L196 304 L188 282 L168 298 L164 272 L146 286 Z" fill="#46583A"/>
+  <path d="M154 236 C162 210 200 192 256 192 C312 192 350 210 358 236 L356 268 L340 256 L336 280 L316 266 L308 286 L288 272 L280 266 C268 258 244 258 232 266 L224 272 L204 286 L196 266 L176 280 L172 256 L156 268 Z" fill="#5A7048"/>
+  <!-- spine seams -->
+  <path d="M196 222 L194 290 M226 214 L225 296 M286 214 L287 296 M316 222 L318 290" stroke="#3A4E30" stroke-width="3" opacity="0.7" fill="none"/>
+  <!-- beast-claw clasp at the throat -->
+  <path d="M236 196 C244 206 250 210 256 210 C262 210 268 206 276 196 L282 202 C272 214 264 218 256 218 C248 218 240 214 230 202 Z" fill="#5C4630"/>
+  <path d="M242 202 L238 220 L248 208 Z" fill="#C9BBA0"/>
+  <path d="M256 206 L256 226 L264 210 Z" fill="#C9BBA0"/>
+  <path d="M270 202 L274 220 L264 208 Z" fill="#C9BBA0"/>
+  <!-- belt -->
+  <path d="M154 384 C214 396 298 396 358 384 L358 402 C298 414 214 414 154 402 Z" fill="#5C4630"/>
+  <rect x="242" y="386" width="28" height="18" rx="3" fill="#8A6E48"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Monk T3 south: gi unchanged, sash earns embroidery, wooden prayer-bead necklace. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#C9852E"/>
+  <path d="M162 244 C172 206 208 184 256 184 C292 184 320 196 338 218 C310 198 212 200 184 234 C175 242 166 244 162 244 Z" fill="#E0A848" opacity="0.5"/>
+  <path d="M170 224 C196 208 226 200 258 204 L340 290 L336 360 C320 350 200 350 176 360 L168 290 Z" fill="#B06A1A"/>
+  <path d="M178 232 C202 218 230 212 256 216 L330 292 L328 304 L252 226 C226 222 200 228 184 240 Z" fill="#A05E14"/>
+  <!-- cloth wraps -->
+  <path d="M152 320 C160 312 172 312 178 320 L176 380 C170 372 160 372 154 380 Z" fill="#E0D2B0"/>
+  <path d="M360 320 C352 312 340 312 334 320 L336 380 C342 372 352 372 358 380 Z" fill="#E0D2B0"/>
+  <!-- wooden prayer beads around the neck -->
+  <path d="M206 210 C224 230 240 238 256 238 C272 238 288 230 306 210 L310 218 C292 240 274 248 256 248 C238 248 220 240 202 218 Z" fill="#6E4A2C"/>
+  <circle cx="216" cy="226" r="6" fill="#8A6E48"/>
+  <circle cx="236" cy="236" r="6" fill="#8A6E48"/>
+  <circle cx="256" cy="240" r="6" fill="#8A6E48"/>
+  <circle cx="276" cy="236" r="6" fill="#8A6E48"/>
+  <circle cx="296" cy="226" r="6" fill="#8A6E48"/>
+  <!-- embroidered sash -->
+  <path d="M156 384 C216 396 296 396 356 384 L356 404 C296 416 216 416 156 404 Z" fill="#A8431A"/>
+  <path d="M170 390 C180 386 190 390 192 396 M210 392 C220 388 230 392 232 398 M270 392 C280 388 290 392 292 398 M310 390 C320 386 330 390 332 396" stroke="#E0D2B0" stroke-width="3" fill="none"/>
+  <path d="M248 392 L240 444 L254 434 L260 448 L266 432 L278 442 L270 392 Z" fill="#A8431A"/>
+  <path d="M252 396 L248 432 L256 424 L262 432 L268 422 L272 428 L268 396 Z" fill="#8A3414"/>
+</svg>

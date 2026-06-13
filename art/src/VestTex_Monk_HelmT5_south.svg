@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Monk T5 head-wrap, south: the same humble wrap - but the brow band glows with chi. -->
+  <path d="M154 252 C150 192 198 148 256 148 C314 148 362 192 358 252 L354 266 C326 250 186 250 158 266 Z" fill="#C9852E"/>
+  <path d="M168 242 C170 198 206 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 170 232 168 242 Z" fill="#E0A848"/>
+  <path d="M200 158 C228 174 290 174 318 158" stroke="#B06A1A" stroke-width="4" fill="none"/>
+  <!-- chi-glowing brow band -->
+  <path d="M154 250 C184 236 328 236 358 250 L356 272 C326 252 186 252 156 272 Z" fill="#FFE08A" opacity="0.5"/>
+  <path d="M156 252 C184 238 328 238 356 252 L354 270 C326 254 186 254 158 270 Z" fill="#A8431A"/>
+  <path d="M168 256 C198 246 314 246 344 256" stroke="#FFE08A" stroke-width="3" fill="none"/>
+  <!-- glowing brow gem -->
+  <circle cx="256" cy="256" r="9" fill="#FFD06A" opacity="0.6"/>
+  <circle cx="256" cy="256" r="5" fill="#FFE08A"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Ranger T3 east: layered scout cloak profile, beast-claw clasp, fletching. -->
+  <path d="M188 232 C198 192 222 168 264 168 C306 168 336 190 344 230 L342 386 C340 414 312 428 254 428 C200 428 166 414 168 386 Z" fill="#3E5A34"/>
+  <path d="M204 200 C226 188 246 182 264 182 L322 204 L318 414 C300 424 280 428 258 428 C232 428 212 422 200 412 Z" fill="#5C4630"/>
+  <!-- layered cloak profile over the shoulders -->
+  <path d="M156 234 C164 204 206 186 262 186 C306 186 346 204 354 234 L350 284 L332 270 L326 292 L304 278 L296 298 L274 284 L264 276 C252 270 234 272 224 280 L214 290 L196 288 L188 278 Z" fill="#46583A"/>
+  <path d="M168 236 C178 212 214 196 262 196 C302 196 338 212 346 236 L344 264 L328 252 L322 272 L302 258 L294 276 L274 264 L264 258 C252 252 236 254 226 262 L216 270 L200 274 L192 268 Z" fill="#5A7048"/>
+  <path d="M210 218 L208 290 M252 210 L252 296 M290 218 L292 280" stroke="#3A4E30" stroke-width="3" opacity="0.6" fill="none"/>
+  <!-- claw clasp at the throat front -->
+  <path d="M280 196 C288 206 294 210 300 210 L304 218 C294 218 286 214 276 202 Z" fill="#5C4630"/>
+  <path d="M284 202 L288 220 L294 210 Z" fill="#C9BBA0"/>
+  <path d="M192 376 C236 388 300 388 338 378 L338 396 C300 406 236 406 192 394 Z" fill="#5C4630"/>
+  <rect x="288" y="378" width="24" height="16" rx="3" fill="#8A6E48"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Monk T1 south: rough saffron gi, one bare shoulder, rope belt. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#C9852E"/>
+  <path d="M162 244 C172 206 208 184 256 184 C292 184 320 196 338 218 C310 198 212 200 184 234 C175 242 166 244 162 244 Z" fill="#E0A848" opacity="0.5"/>
+  <!-- crossover wrap: diagonal gi front -->
+  <path d="M170 224 C196 208 226 200 258 204 L340 290 L336 360 C320 350 200 350 176 360 L168 290 Z" fill="#B06A1A"/>
+  <path d="M178 232 C202 218 230 212 256 216 L330 292 L328 304 L252 226 C226 222 200 228 184 240 Z" fill="#A05E14"/>
+  <!-- bare right shoulder (skin shows - leave undrawn area, just shade the gi edge) -->
+  <path d="M300 240 C314 248 326 260 334 276 L322 284 C314 270 302 260 290 254 Z" fill="#E0A848" opacity="0.4"/>
+  <!-- rope belt -->
+  <path d="M156 384 C216 396 296 396 356 384 L356 402 C296 414 216 414 156 402 Z" fill="#9C3A1E"/>
+  <path d="M250 392 L244 430 L254 422 L260 434 L266 420 L274 428 L268 392 Z" fill="#9C3A1E"/>
+</svg>

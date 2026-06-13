@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Warlock T1 east: dark violet robe profile, pendant. -->
+  <path d="M180 240 C190 196 222 172 268 172 C312 172 338 198 344 238 L340 416 C338 432 308 442 256 442 C204 442 178 432 180 416 Z" fill="#4A2E6E"/>
+  <path d="M180 240 C190 200 220 178 264 178 L262 442 C212 442 178 432 180 416 Z" fill="#3A2356"/>
+  <path d="M232 190 C250 182 262 180 274 180 C290 180 304 186 312 198 L306 214 C294 202 282 198 270 198 C258 198 246 200 238 208 Z" fill="#5E3C84"/>
+  <path d="M252 214 L256 214 L255 244 L253 244 Z" fill="#7A6A90"/>
+  <circle cx="254" cy="250" r="8" fill="#8EBE4A"/>
+  <circle cx="254" cy="250" r="3.5" fill="#B6E86A"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Warlock HelmT4 east: jagged-collar hood profile + eye motif on the brow. -->
+  <path d="M186 340 C166 326 154 304 154 280 C172 296 186 312 196 330 Z" fill="#3A2356"/>
+  <path fill-rule="evenodd" d="M168 358 C158 274 168 196 206 162 C230 144 252 138 270 138 C306 138 338 162 348 202 L350 358 L318 358 C324 282 314 224 288 200 C274 188 260 184 248 186 C228 190 210 222 204 282 L202 358 Z" fill="#4A2E6E"/>
+  <path d="M168 358 C160 290 168 220 198 182 C188 240 186 300 192 358 Z" fill="#3A2356"/>
+  <path d="M222 200 C212 186 208 172 210 158 C224 172 234 186 240 198 L260 192 C272 186 282 174 296 162 C298 176 292 190 282 202 C266 192 240 190 222 200 Z" fill="#5E3C84"/>
+  <ellipse cx="252" cy="170" rx="10" ry="6.5" fill="#8EBE4A"/>
+  <circle cx="252" cy="170" r="3.2" fill="#1E1230"/>
+</svg>

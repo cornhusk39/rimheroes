@@ -1,3 +1,4 @@
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -120,6 +121,17 @@ namespace RimHeroes
 
         private void Pin(Rot4 rot)
         {
+            // -quicktest forces devMode on, so map-load errors from other mods auto-open the
+            // debug log window and it photobombs the row. Close any log/edit window before each shot.
+            var ws = Find.WindowStack;
+            if (ws != null)
+            {
+                foreach (var w in ws.Windows.ToList())
+                {
+                    var n = w.GetType().Name;
+                    if (n.Contains("Log") || n.Contains("EditWindow")) w.Close(false);
+                }
+            }
             // re-assert the camera every shot - quicktest occasionally resets zoom after load
             Find.CameraDriver.SetRootPosAndSize(anchor.ToVector3(), 9f);
             foreach (var p in pawns)

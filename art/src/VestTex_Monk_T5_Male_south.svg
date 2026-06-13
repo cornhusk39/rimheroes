@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Monk T5 south: the same humble gi - but the wraps, sash, and beads glow with inner chi. -->
+  <path d="M148 240 C158 196 198 170 256 170 C314 170 354 196 364 240 L360 400 C358 436 326 458 256 458 C186 458 154 436 152 400 Z" fill="#C9852E"/>
+  <path d="M162 244 C172 206 208 184 256 184 C292 184 320 196 338 218 C310 198 212 200 184 234 C175 242 166 244 162 244 Z" fill="#E0A848" opacity="0.5"/>
+  <path d="M170 224 C196 208 226 200 258 204 L340 290 L336 360 C320 350 200 350 176 360 L168 290 Z" fill="#B06A1A"/>
+  <path d="M178 232 C202 218 230 212 256 216 L330 292 L328 304 L252 226 C226 222 200 228 184 240 Z" fill="#A05E14"/>
+  <!-- chi-glowing cloth wraps -->
+  <path d="M150 318 C158 308 174 308 180 318 L178 382 C172 372 158 372 152 382 Z" fill="#FFE08A" opacity="0.55"/>
+  <path d="M152 320 C160 312 172 312 178 320 L176 380 C170 372 160 372 154 380 Z" fill="#E8DCC0"/>
+  <path d="M156 332 L174 332 M156 350 L174 350" stroke="#FFD06A" stroke-width="3" fill="none"/>
+  <path d="M362 318 C354 308 338 308 332 318 L334 382 C340 372 354 372 360 382 Z" fill="#FFE08A" opacity="0.55"/>
+  <path d="M360 320 C352 312 340 312 334 320 L336 380 C342 372 352 372 358 380 Z" fill="#E8DCC0"/>
+  <path d="M338 332 L356 332 M338 350 L356 350" stroke="#FFD06A" stroke-width="3" fill="none"/>
+  <!-- glowing bead necklace -->
+  <path d="M206 210 C224 230 240 238 256 238 C272 238 288 230 306 210 L310 218 C292 240 274 248 256 248 C238 248 220 240 202 218 Z" fill="#6E4A2C"/>
+  <circle cx="236" cy="236" r="7" fill="#FFD06A"/>
+  <circle cx="256" cy="240" r="7" fill="#FFE08A"/>
+  <circle cx="276" cy="236" r="7" fill="#FFD06A"/>
+  <!-- chi-glowing sash -->
+  <path d="M154 382 C214 394 298 394 358 382 L358 406 C298 418 214 418 154 406 Z" fill="#FFD06A" opacity="0.45"/>
+  <path d="M156 384 C216 396 296 396 356 384 L356 404 C296 416 216 416 156 404 Z" fill="#A8431A"/>
+  <path d="M170 388 C200 398 312 398 342 388" stroke="#FFE08A" stroke-width="3" fill="none"/>
+  <path d="M248 392 L240 444 L254 434 L260 448 L266 432 L278 442 L270 392 Z" fill="#A8431A"/>
+  <path d="M252 396 L256 438" stroke="#FFE08A" stroke-width="3" fill="none"/>
+</svg>

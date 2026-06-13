@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Ranger HelmT2 east: simple hood profile, face open toward east. -->
+  <path fill-rule="evenodd" d="M168 358 C158 274 168 196 206 162 C230 144 252 138 270 138 C306 138 338 162 348 202 L350 358 L318 358 C324 282 314 224 288 200 C274 188 260 184 248 186 C228 190 210 222 204 282 L202 358 Z" fill="#46583A"/>
+  <path d="M168 358 C160 290 168 220 198 182 C188 240 186 300 192 358 Z" fill="#3E5A34"/>
+  <!-- leather face rim -->
+  <path d="M248 186 C262 184 276 188 290 200 L284 210 C272 198 260 196 250 198 Z" fill="#5C4630"/>
+</svg>

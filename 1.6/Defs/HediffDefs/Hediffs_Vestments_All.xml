@@ -152,8 +152,18 @@
     <label>monk's vestment</label>
     <description>A hero's wrappings, bound to their destiny. They grow with their bearer and cannot be removed; mundane torso armor cannot be worn over them.</description>
     <modExtensions>
-      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.9, 0.66, 0.2)</baseColor></li>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.9, 0.66, 0.2)</baseColor>
+        <artDir>Monk</artDir>
+      </li>
     </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData><defaultData><layer>75</layer></defaultData></drawData>
+      </li>
+    </renderNodeProperties>
   </HediffDef>
 
   <HediffDef ParentName="RH_VestmentMartialBase">
@@ -179,8 +189,18 @@
     <defName>RH_Vestment_Ranger</defName>
     <label>ranger's vestment</label>
     <description>A hero's trailworn mantle, bound to their destiny. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData><defaultData><layer>75</layer></defaultData></drawData>
+      </li>
+    </renderNodeProperties>
     <modExtensions>
-      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.26, 0.5, 0.26)</baseColor></li>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.26, 0.5, 0.26)</baseColor>
+        <artDir>Ranger</artDir>
+      </li>
     </modExtensions>
   </HediffDef>
 
@@ -319,8 +339,18 @@
     <label>warlock's vestment</label>
     <description>A hero's pact-sealed shroud, bound to the bargain. It grows with its bearer and cannot be removed; mundane torso armor cannot be worn over it.</description>
     <modExtensions>
-      <li Class="RimHeroes.VestmentExtension"><baseColor>(0.42, 0.16, 0.52)</baseColor></li>
+      <li Class="RimHeroes.VestmentExtension">
+        <baseColor>(0.42, 0.16, 0.52)</baseColor>
+        <artDir>Warlock</artDir>
+      </li>
     </modExtensions>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_VestmentHelm</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+        <drawData><defaultData><layer>75</layer></defaultData></drawData>
+      </li>
+    </renderNodeProperties>
   </HediffDef>
 
   <!-- Martial class features -->

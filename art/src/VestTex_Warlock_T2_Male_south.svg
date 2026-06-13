@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Warlock T2 south: occult clasps down the robe + an eye-brooch at the throat. -->
+  <path d="M150 240 C160 196 198 172 256 172 C314 172 352 196 362 240 L356 420 C354 436 322 446 256 446 C190 446 158 436 156 420 Z" fill="#4A2E6E"/>
+  <path d="M150 240 C160 200 196 178 256 178 L256 446 C190 446 158 436 156 420 Z" fill="#3A2356"/>
+  <path d="M256 178 C318 178 354 200 362 240 L356 420 C354 434 326 444 256 444 Z" fill="#4A2E6E"/>
+  <path d="M252 184 L260 184 L258 440 L254 440 Z" fill="#2C1A42"/>
+  <path d="M210 196 C228 184 242 180 256 180 C270 180 284 184 302 196 L294 214 C280 202 268 198 256 198 C244 198 232 202 218 214 Z" fill="#5E3C84"/>
+  <!-- eye-brooch at the throat -->
+  <path d="M236 206 C246 198 266 198 276 206 C266 216 246 216 236 206 Z" fill="#2C1A42"/>
+  <ellipse cx="256" cy="206" rx="9" ry="6" fill="#8EBE4A"/>
+  <circle cx="256" cy="206" r="3" fill="#1E1230"/>
+  <!-- occult clasps down the seam -->
+  <g fill="#9A86B4">
+    <path d="M244 250 L268 250 L256 262 Z"/>
+    <path d="M244 296 L268 296 L256 308 Z"/>
+    <path d="M244 342 L268 342 L256 354 Z"/>
+  </g>
+  <g fill="#8EBE4A" opacity="0.85">
+    <circle cx="256" cy="252" r="2.5"/>
+    <circle cx="256" cy="298" r="2.5"/>
+    <circle cx="256" cy="344" r="2.5"/>
+  </g>
+</svg>

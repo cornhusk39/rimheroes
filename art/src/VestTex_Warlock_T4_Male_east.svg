@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Warlock T4 east: ornate robe profile, hem band, floating chain + charm. -->
+  <path d="M214 198 C194 186 178 174 172 156 C190 162 206 168 220 176 L208 152 C224 164 238 178 246 192 Z" fill="#3A2356"/>
+  <path d="M180 240 C190 196 222 172 268 172 C312 172 338 198 344 238 L348 414 C340 430 308 444 256 444 C204 444 176 430 178 414 Z" fill="#4A2E6E"/>
+  <path d="M180 240 C190 200 220 178 264 178 L262 444 C212 444 176 430 178 414 Z" fill="#3A2356"/>
+  <path d="M182 402 C236 416 300 416 342 400 L344 414 C302 430 234 430 180 416 Z" fill="#9A86B4"/>
+  <path d="M226 198 C214 182 210 164 212 148 C230 166 244 184 250 200 L274 194 C284 182 296 168 308 156 C310 170 304 186 294 200 C278 190 244 188 226 198 Z" fill="#5E3C84"/>
+  <path d="M300 214 C328 222 342 246 338 280 C336 304 328 322 320 338" stroke="#9A86B4" stroke-width="3" fill="none" stroke-dasharray="6 5"/>
+  <circle cx="320" cy="346" r="9" fill="#2C1A42"/>
+  <circle cx="320" cy="346" r="5" fill="#8EBE4A"/>
+  <ellipse cx="262" cy="206" rx="8" ry="5.5" fill="#8EBE4A"/>
+  <circle cx="262" cy="206" r="2.6" fill="#1E1230"/>
+</svg>

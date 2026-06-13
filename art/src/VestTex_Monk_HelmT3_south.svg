@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Monk T3 head-wrap, south: saffron wrap + a small wooden bead on the brow band. -->
+  <path d="M154 252 C150 192 198 148 256 148 C314 148 362 192 358 252 L354 266 C326 250 186 250 158 266 Z" fill="#C9852E"/>
+  <path d="M168 242 C170 198 206 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 170 232 168 242 Z" fill="#E0A848"/>
+  <path d="M200 158 C228 174 290 174 318 158" stroke="#B06A1A" stroke-width="4" fill="none"/>
+  <path d="M156 252 C184 238 328 238 356 252 L354 270 C326 254 186 254 158 270 Z" fill="#A8431A"/>
+  <!-- bead centered on the brow band -->
+  <circle cx="256" cy="256" r="8" fill="#6E4A2C"/>
+  <circle cx="256" cy="256" r="4" fill="#8A6E48"/>
+</svg>

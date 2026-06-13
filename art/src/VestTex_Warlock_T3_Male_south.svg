@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Warlock T3 south: patron's jagged-collar mantle rising behind the shoulders + tendril embroidery. -->
+  <!-- jagged collar fins rising behind shoulders (silhouette beat) -->
+  <path d="M196 200 C176 188 158 176 150 156 C168 162 184 168 198 174 L188 152 C204 162 218 174 228 188 Z" fill="#3A2356"/>
+  <path d="M316 200 C336 188 354 176 362 156 C344 162 328 168 314 174 L324 152 C308 162 294 174 284 188 Z" fill="#3A2356"/>
+  <path d="M214 196 C202 178 192 158 192 138 C206 154 218 170 226 186 Z" fill="#2C1A42"/>
+  <path d="M298 196 C310 178 320 158 320 138 C306 154 294 170 286 186 Z" fill="#2C1A42"/>
+  <path d="M150 240 C160 196 198 172 256 172 C314 172 352 196 362 240 L356 420 C354 436 322 446 256 446 C190 446 158 436 156 420 Z" fill="#4A2E6E"/>
+  <path d="M150 240 C160 200 196 178 256 178 L256 446 C190 446 158 436 156 420 Z" fill="#3A2356"/>
+  <path d="M256 178 C318 178 354 200 362 240 L356 420 C354 434 326 444 256 444 Z" fill="#4A2E6E"/>
+  <path d="M252 184 L260 184 L258 440 L254 440 Z" fill="#2C1A42"/>
+  <!-- high jagged collar around the neck -->
+  <path d="M212 200 C200 184 196 168 198 152 C214 168 226 184 232 196 L256 192 L280 196 C286 184 298 168 314 152 C316 168 312 184 300 200 C284 190 268 186 256 186 C244 186 228 190 212 200 Z" fill="#5E3C84"/>
+  <!-- tendril embroidery climbing the robe -->
+  <path d="M220 280 C236 300 236 330 224 356 C232 332 230 306 216 290 M292 280 C276 300 276 330 288 356 C280 332 282 306 296 290" stroke="#8EBE4A" stroke-width="3" fill="none" opacity="0.85"/>
+  <path d="M256 250 C248 280 248 320 256 360 C264 320 264 280 256 250 Z" fill="none" stroke="#8EBE4A" stroke-width="2" opacity="0.7"/>
+  <circle cx="256" cy="206" r="7" fill="#8EBE4A"/>
+  <circle cx="256" cy="206" r="2.6" fill="#1E1230"/>
+</svg>
