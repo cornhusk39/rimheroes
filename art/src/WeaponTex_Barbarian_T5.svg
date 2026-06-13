@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Worldcleaver (capstone): world-ending. Huge jagged bits, molten haft crack, energy aura, blazing edges. -->
+  <path d="M124 40 L14 54 C-6 88 4 124 54 142 L124 116 L132 116 L202 142 C252 124 262 88 242 54 L132 40 Z" fill="#FF6A2A" opacity="0.18"/>
+  <path d="M124 48 L26 60 C8 90 16 122 58 138 L124 112 L132 112 L198 138 C240 122 248 90 230 60 L132 48 Z" fill="#FFB347" opacity="0.18"/>
+  <rect x="117" y="32" width="22" height="204" rx="6" fill="#3A2718"/>
+  <path d="M128 56 C123 100 133 140 125 184 C131 210 124 224 128 236" stroke="#FF6A2A" stroke-width="4" fill="none"/>
+  <path d="M128 56 C123 100 133 140 125 184 C131 210 124 224 128 236" stroke="#FFE08A" stroke-width="1.5" fill="none"/>
+  <rect x="110" y="150" width="36" height="11" rx="2" fill="#C79A3E"/>
+  <ellipse cx="128" cy="238" rx="16" ry="13" fill="#C79A3E"/>
+  <ellipse cx="128" cy="238" rx="7" ry="6" fill="#FFB347"/>
+  <!-- jagged back fangs -->
+  <path d="M30 54 L6 36 L34 46 Z" fill="#C2CAD4"/>
+  <path d="M226 54 L250 36 L222 46 Z" fill="#C2CAD4"/>
+  <!-- huge left bit, jagged cutting edge -->
+  <path d="M124 42 L18 54 C0 84 8 120 40 134 L60 124 L74 136 L124 112 Z" fill="#E6ECF4"/>
+  <path d="M124 52 L42 64 C26 88 32 112 56 124 L124 108 Z" fill="#B6BEC8"/>
+  <path d="M18 54 C0 84 8 120 40 134 L60 124 L74 136 L124 112" stroke="#FF6A2A" stroke-width="6" fill="none"/>
+  <path d="M42 64 C26 88 32 112 56 124" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
+  <!-- huge right bit -->
+  <path d="M132 42 L238 54 C256 84 248 120 216 134 L196 124 L182 136 L132 112 Z" fill="#E6ECF4"/>
+  <path d="M132 52 L214 64 C230 88 224 112 200 124 L132 108 Z" fill="#B6BEC8"/>
+  <path d="M238 54 C256 84 248 120 216 134 L196 124 L182 136 L132 112" stroke="#FF6A2A" stroke-width="6" fill="none"/>
+  <path d="M214 64 C230 88 224 112 200 124" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
+  <rect x="114" y="40" width="28" height="74" rx="4" fill="#C2CAD4"/>
+  <!-- glowing runes + core -->
+  <path d="M66 84 L82 90 L74 100 M190 84 L174 90 L182 100" stroke="#FF8A2A" stroke-width="3" fill="none"/>
+  <circle cx="128" cy="86" r="9" fill="#FF6A2A"/>
+  <circle cx="128" cy="86" r="4" fill="#FFE08A"/>
+  <!-- blazing top spike -->
+  <path d="M128 8 L119 40 L137 40 Z" fill="#E6ECF4"/>
+  <path d="M128 8 L128 40" stroke="#FFE08A" stroke-width="3"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Greataxe: plain iron double-bit, wooden haft. Distinct angular bits. -->
+  <rect x="121" y="40" width="14" height="192" rx="5" fill="#6B4A2A"/>
+  <rect x="121" y="40" width="5" height="192" fill="#7E5A34"/>
+  <ellipse cx="128" cy="234" rx="11" ry="9" fill="#5A3E22"/>
+  <!-- left bit: neck at haft, sharp tip out-left, convex cutting edge below -->
+  <path d="M124 60 L54 72 C40 88 44 108 66 118 L124 100 Z" fill="#8E949B"/>
+  <path d="M124 66 L70 76 C58 90 62 104 78 110 L124 98 Z" fill="#777D84"/>
+  <path d="M54 72 C40 88 44 108 66 118" stroke="#C6CBD0" stroke-width="3" fill="none"/>
+  <!-- right bit -->
+  <path d="M132 60 L202 72 C216 88 212 108 190 118 L132 100 Z" fill="#8E949B"/>
+  <path d="M132 66 L186 76 C198 90 194 104 178 110 L132 98 Z" fill="#777D84"/>
+  <path d="M202 72 C216 88 212 108 190 118" stroke="#C6CBD0" stroke-width="3" fill="none"/>
+  <!-- eye + haft spike -->
+  <rect x="118" y="58" width="20" height="44" rx="3" fill="#8E949B"/>
+  <rect x="123" y="30" width="10" height="30" rx="3" fill="#9AA0A6"/>
+</svg>

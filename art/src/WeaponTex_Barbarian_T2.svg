@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Hero Greataxe (L5): polished steel, brass collar, etched rune, larger bits. -->
+  <rect x="120" y="38" width="16" height="194" rx="5" fill="#6B4A2A"/>
+  <rect x="120" y="38" width="6" height="194" fill="#82612F"/>
+  <rect x="115" y="116" width="26" height="12" rx="3" fill="#C79A3E"/>
+  <ellipse cx="128" cy="234" rx="12" ry="10" fill="#5A3E22"/>
+  <path d="M124 56 L46 68 C30 86 34 110 60 122 L124 102 Z" fill="#BFC5CD"/>
+  <path d="M124 64 L64 74 C52 90 56 106 74 114 L124 100 Z" fill="#979EA8"/>
+  <path d="M46 68 C30 86 34 110 60 122" stroke="#E4E8EC" stroke-width="3" fill="none"/>
+  <path d="M132 56 L210 68 C226 86 222 110 196 122 L132 102 Z" fill="#BFC5CD"/>
+  <path d="M132 64 L192 74 C204 90 200 106 182 114 L132 100 Z" fill="#979EA8"/>
+  <path d="M210 68 C226 86 222 110 196 122" stroke="#E4E8EC" stroke-width="3" fill="none"/>
+  <rect x="117" y="54" width="22" height="48" rx="3" fill="#A7AEB7"/>
+  <path d="M128 64 L128 92 M120 78 L136 78" stroke="#6E747B" stroke-width="3"/>
+  <rect x="122" y="26" width="12" height="30" rx="3" fill="#BFC5CD"/>
+</svg>

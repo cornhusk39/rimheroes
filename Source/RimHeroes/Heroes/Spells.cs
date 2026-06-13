@@ -178,9 +178,10 @@ namespace RimHeroes
             {
                 return;
             }
+            float amount = Props.amount * SpellPower.For(parent.pawn);
             for (int i = 0; i < Props.hits; i++)
             {
-                thing.TakeDamage(new DamageInfo(Props.damageDef ?? DamageDefOf.Blunt, Props.amount, 1f, -1f, parent.pawn));
+                thing.TakeDamage(new DamageInfo(Props.damageDef ?? DamageDefOf.Blunt, amount, 1f, -1f, parent.pawn));
             }
         }
     }
@@ -204,7 +205,7 @@ namespace RimHeroes
             {
                 return;
             }
-            float remaining = Props.amount;
+            float remaining = Props.amount * SpellPower.For(parent.pawn);
             var injuries = targetPawn.health.hediffSet.hediffs
                 .OfType<Hediff_Injury>()
                 .Where(i => !i.IsPermanent())
@@ -290,8 +291,11 @@ namespace RimHeroes
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
+            int dmg = Props.damageAmount >= 0
+                ? Mathf.RoundToInt(Props.damageAmount * SpellPower.For(parent.pawn))
+                : Props.damageAmount; // -1 = use the damage def's default
             GenExplosion.DoExplosion(target.Cell, parent.pawn.MapHeld, Props.radius,
-                Props.damageDef ?? DamageDefOf.Flame, parent.pawn, Props.damageAmount);
+                Props.damageDef ?? DamageDefOf.Flame, parent.pawn, dmg);
         }
     }
 }

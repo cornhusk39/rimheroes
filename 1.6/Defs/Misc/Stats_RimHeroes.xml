@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Spell Power: a flat multiplier on the magnitude of a hero's spells (damage dealt, wounds
+       healed, effect strength). Base 1.0 (100%); a class focus weapon raises it via
+       equippedStatOffsets, so a better weapon = stronger spells, not just a better stick. -->
+  <StatDef>
+    <defName>RH_SpellPower</defName>
+    <label>spell power</label>
+    <description>A multiplier on the strength of this hero's spells — damage dealt, wounds healed, and effect magnitude. A class focus weapon (staff, mace, grimoire, and the like) raises it.</description>
+    <category>PawnCombat</category>
+    <defaultBaseValue>1.0</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <hideAtValue>1.0</hideAtValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showOnHumanlikes>true</showOnHumanlikes>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <showIfUndefined>false</showIfUndefined>
+  </StatDef>
+
+</Defs>

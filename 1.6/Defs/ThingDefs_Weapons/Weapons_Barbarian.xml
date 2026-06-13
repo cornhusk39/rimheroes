@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Shared base for class-locked hero melee weapons: fixed power (no stuff/quality), bound items. -->
+  <ThingDef Name="RH_HeroWeaponMeleeBase" ParentName="BaseWeapon" Abstract="True">
+    <techLevel>Medieval</techLevel>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+    <destroyOnDrop>false</destroyOnDrop>
+    <tradeability>None</tradeability>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <weaponClasses>
+      <li>Melee</li>
+    </weaponClasses>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Mass>3.5</Mass>
+      <Flammability>0.4</Flammability>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Barbarian_T1</defName>
+    <label>lesser hero greataxe</label>
+    <description>A brutal two-handed greataxe, far heavier and keener than any common axe. Bound to the rage of a hero barbarian — none but they can lift it in anger.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Barbarian/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>700</MarketValue></statBases>
+    <tools>
+      <li><label>haft</label><capacities><li>Blunt</li></capacities><power>12</power><cooldownTime>2.4</cooldownTime></li>
+      <li><label>blade</label><capacities><li>Cut</li></capacities><power>27</power><cooldownTime>2.5</cooldownTime><armorPenetrationSharp>0.25</armorPenetrationSharp></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Barbarian</heroClass><minLevel>1</minLevel><tier>1</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Barbarian_T2</defName>
+    <label>hero greataxe</label>
+    <description>A masterwork steel greataxe, etched with a rune of fury. It bites deeper and swings truer than the lesser axe.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Barbarian/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>1400</MarketValue></statBases>
+    <tools>
+      <li><label>haft</label><capacities><li>Blunt</li></capacities><power>15</power><cooldownTime>2.4</cooldownTime></li>
+      <li><label>blade</label><capacities><li>Cut</li></capacities><power>36</power><cooldownTime>2.5</cooldownTime><armorPenetrationSharp>0.34</armorPenetrationSharp></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Barbarian</heroClass><minLevel>5</minLevel><tier>2</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Barbarian_T3</defName>
+    <label>greater hero greataxe</label>
+    <description>A gold-bound greataxe set with a blood-ruby, its edges humming with banked power. Cleaves heavy armour like cloth.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Barbarian/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>2600</MarketValue></statBases>
+    <tools>
+      <li><label>haft</label><capacities><li>Blunt</li></capacities><power>19</power><cooldownTime>2.3</cooldownTime></li>
+      <li><label>blade</label><capacities><li>Cut</li></capacities><power>47</power><cooldownTime>2.5</cooldownTime><armorPenetrationSharp>0.45</armorPenetrationSharp></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Barbarian</heroClass><minLevel>10</minLevel><tier>3</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Barbarian_T4</defName>
+    <label>perfect hero greataxe</label>
+    <description>A greataxe wreathed in molten runelight, its spiked bits singing with bound fire. Few foes survive a single full swing.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Barbarian/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>4200</MarketValue></statBases>
+    <tools>
+      <li><label>haft</label><capacities><li>Blunt</li></capacities><power>24</power><cooldownTime>2.3</cooldownTime></li>
+      <li><label>blade</label><capacities><li>Cut</li></capacities><power>60</power><cooldownTime>2.4</cooldownTime><armorPenetrationSharp>0.58</armorPenetrationSharp></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Barbarian</heroClass><minLevel>15</minLevel><tier>4</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Barbarian_T5</defName>
+    <label>Worldcleaver</label>
+    <description>The capstone greataxe of the barbarian, won only by a hero who has reached the height of their legend. Its molten core never cools; one swing splits earth and army alike.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Barbarian/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>9000</MarketValue><Mass>4.2</Mass></statBases>
+    <tools>
+      <li><label>haft</label><capacities><li>Blunt</li></capacities><power>30</power><cooldownTime>2.2</cooldownTime></li>
+      <li><label>blade</label><capacities><li>Cut</li></capacities><power>78</power><cooldownTime>2.4</cooldownTime><armorPenetrationSharp>0.72</armorPenetrationSharp></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Barbarian</heroClass><minLevel>20</minLevel><tier>5</tier></li></modExtensions>
+  </ThingDef>
+
+</Defs>
