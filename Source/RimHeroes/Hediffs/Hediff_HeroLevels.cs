@@ -16,6 +16,7 @@ namespace RimHeroes
         public HeroClassDef classDef;
         public int level = 1;
         public float xp;
+        public bool capstoneGranted; // L20 "heroic trial" reward fired once
 
         public override string LabelInBrackets => classDef != null ? $"{classDef.label} {level}" : base.LabelInBrackets;
 
@@ -421,6 +422,7 @@ namespace RimHeroes
             xp = 0f;
             ApplyGrants();
             Vestment?.SetTierForLevel(level);
+            TryGrantCapstone();
         }
 
         public void GainXP(float amount)
@@ -446,11 +448,44 @@ namespace RimHeroes
                     Messages.Message("RH_LeveledUp".Translate(pawn.LabelShortCap, classDef.label, level),
                         pawn, MessageTypeDefOf.PositiveEvent);
                 }
+                TryGrantCapstone();
             }
             if (AtMaxLevel)
             {
                 xp = 0f;
             }
+        }
+
+        /// <summary>
+        /// "Heroic trial" capstone reward (dev stub for the real quest): when a player hero hits max
+        /// level, drop their class's legendary capstone weapon at their feet, once.
+        /// </summary>
+        private void TryGrantCapstone()
+        {
+            if (capstoneGranted || classDef == null || level < (classDef.maxLevel))
+            {
+                return;
+            }
+            if (pawn == null || !pawn.Spawned || pawn.Map == null || pawn.Faction != Faction.OfPlayer)
+            {
+                return;
+            }
+            string weaponDefName = "RH_Weapon_" + classDef.defName.Substring("RH_".Length) + "_T5";
+            var def = DefDatabase<ThingDef>.GetNamedSilentFail(weaponDefName);
+            if (def == null)
+            {
+                return;
+            }
+            capstoneGranted = true;
+            var weapon = (ThingWithComps)ThingMaker.MakeThing(def);
+            weapon.TryGetComp<CompQuality>()?.SetQuality(QualityCategory.Legendary, ArtGenerationContext.Colony);
+            GenPlace.TryPlaceThing(weapon, pawn.Position, pawn.Map, ThingPlaceMode.Near);
+            Log.Message($"[RimHeroes] capstone granted to {pawn.LabelShort}: {def.defName} (Legendary)");
+            Find.LetterStack.ReceiveLetter(
+                "Heroic capstone",
+                pawn.LabelShortCap + " has reached the height of their " + classDef.label +
+                " legend. Their capstone weapon — the " + def.label + " — has manifested at their side.",
+                LetterDefOf.PositiveEvent, new TargetInfo(weapon.PositionHeld, pawn.Map));
         }
 
         /// <summary>Idempotent: applies every grant at or below the current level.</summary>
@@ -493,6 +528,7 @@ namespace RimHeroes
             Scribe_Defs.Look(ref classDef, "classDef");
             Scribe_Values.Look(ref level, "level", 1);
             Scribe_Values.Look(ref xp, "xp");
+            Scribe_Values.Look(ref capstoneGranted, "capstoneGranted");
             Scribe_Collections.Look(ref mimBonds, "mimBonds", LookMode.Deep);
             Scribe_Collections.Look(ref slotsExpended, "slotsExpended", LookMode.Value);
             Scribe_Collections.Look(ref autocastSpells, "autocastSpells", LookMode.Def);
