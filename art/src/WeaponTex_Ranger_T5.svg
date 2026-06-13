@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Stormfall (capstone): storm-charged longbow crackling with blue-white energy. Vertical. -->
+  <!-- storm aura -->
+  <path d="M138 18 C166 34 152 56 128 72 C100 96 100 128 100 128 C100 128 100 160 128 184 C152 200 166 222 138 238" stroke="#4FB8FF" stroke-width="26" fill="none" stroke-linecap="round" opacity="0.16"/>
+  <path d="M138 18 C166 34 152 56 128 72 C100 96 100 128 100 128 C100 128 100 160 128 184 C152 200 166 222 138 238" stroke="#A6E6FF" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.16"/>
+  <!-- recurve limbs (storm-dark wood) -->
+  <path d="M138 18 C166 34 152 56 128 72 C100 96 100 128 100 128 C100 128 100 160 128 184 C152 200 166 222 138 238" stroke="#26323E" stroke-width="15" fill="none" stroke-linecap="round"/>
+  <!-- gold horn inlay -->
+  <path d="M138 18 C166 34 152 56 128 72 C100 96 100 128 100 128 C100 128 100 160 128 184 C152 200 166 222 138 238" stroke="#C79A3E" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- crackling energy along the limbs -->
+  <path d="M134 30 L150 44 L132 56 L150 70 L126 86 L120 104" stroke="#6ED0FF" stroke-width="3" fill="none"/>
+  <path d="M134 226 L150 212 L132 200 L150 186 L126 170 L120 152" stroke="#6ED0FF" stroke-width="3" fill="none"/>
+  <path d="M134 30 L150 44 L132 56 L150 70 L126 86 L120 104" stroke="#DFF6FF" stroke-width="1" fill="none"/>
+  <path d="M134 226 L150 212 L132 200 L150 186 L126 170 L120 152" stroke="#DFF6FF" stroke-width="1" fill="none"/>
+  <!-- gold tip caps -->
+  <circle cx="138" cy="18" r="8" fill="#C79A3E"/>
+  <circle cx="138" cy="238" r="8" fill="#C79A3E"/>
+  <!-- lightning bowstring -->
+  <path d="M138 18 L154 70 L142 100 L156 128 L142 156 L154 186 L138 238" stroke="#6ED0FF" stroke-width="4" fill="none"/>
+  <path d="M138 18 L154 70 L142 100 L156 128 L142 156 L154 186 L138 238" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+  <!-- grip -->
+  <rect x="93" y="106" width="18" height="44" rx="3" fill="#C79A3E"/>
+  <rect x="95" y="108" width="14" height="40" rx="2" fill="#26323E"/>
+  <!-- storm core -->
+  <circle cx="102" cy="128" r="9" fill="#6ED0FF"/>
+  <circle cx="102" cy="128" r="4" fill="#FFFFFF"/>
+  <!-- crackle off the core -->
+  <path d="M102 119 L98 110 L104 113 M111 128 L120 124 L116 131" stroke="#A6E6FF" stroke-width="2" fill="none"/>
+</svg>

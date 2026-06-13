@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Perfect Hero Pact-Dagger: green-glowing pact blade, open eye motif, withering aura + glow halo. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- withering aura -->
+  <path d="M128 18 L100 64 L102 162 L154 162 L156 64 Z" fill="#8EBE4A" opacity="0.16"/>
+  <path d="M128 28 L110 66 L112 158 L144 158 L146 66 Z" fill="#B6E86A" opacity="0.18"/>
+  <!-- grip -->
+  <rect x="119" y="164" width="18" height="52" rx="6" fill="#4A2E6E"/>
+  <rect x="119" y="164" width="7" height="52" fill="#3A2356"/>
+  <path d="M121 170 L135 170 M121 192 L135 192 M128 164 L128 216" stroke="#8EBE4A" stroke-width="2"/>
+  <!-- ornate glowing eye pommel -->
+  <path d="M100 226 C114 210 142 210 156 226 C142 242 114 242 100 226 Z" fill="#3A2356"/>
+  <path d="M100 226 C114 210 142 210 156 226 C142 242 114 242 100 226 Z" fill="none" stroke="#8EBE4A" stroke-width="2.5"/>
+  <ellipse cx="128" cy="226" rx="10" ry="8" fill="#B6E86A"/>
+  <ellipse cx="128" cy="226" rx="3.5" ry="7" fill="#2A1840"/>
+  <!-- swept crossguard -->
+  <path d="M92 156 C106 148 150 148 164 156 L164 168 C150 160 106 160 92 168 Z" fill="#3A2356"/>
+  <circle cx="94" cy="161" r="5" fill="#B6E86A"/>
+  <circle cx="162" cy="161" r="5" fill="#B6E86A"/>
+  <!-- blade -->
+  <path d="M128 22 L112 64 L114 154 L142 154 L144 64 Z" fill="#6E7479"/>
+  <path d="M128 22 L118 64 L120 154 L128 154 Z" fill="#9AA0A6"/>
+  <!-- glowing green core channel -->
+  <path d="M128 50 L128 148" stroke="#8EBE4A" stroke-width="4"/>
+  <path d="M128 50 L128 148" stroke="#B6E86A" stroke-width="1.5"/>
+  <!-- open eye motif on blade -->
+  <path d="M112 100 C120 90 136 90 144 100 C136 110 120 110 112 100 Z" fill="#2A1840"/>
+  <circle cx="128" cy="100" r="5" fill="#B6E86A"/>
+  <!-- runes -->
+  <path d="M120 70 L134 74 M120 130 L134 134" stroke="#8EBE4A" stroke-width="2.5" fill="none"/>
+  </g>
+</svg>

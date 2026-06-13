@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Pact-Dagger: plain dark athame, simple violet hilt, small green gem. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- grip -->
+  <rect x="121" y="170" width="14" height="54" rx="5" fill="#4A2E6E"/>
+  <rect x="121" y="170" width="5" height="54" fill="#3A2356"/>
+  <!-- pommel -->
+  <ellipse cx="128" cy="224" rx="11" ry="9" fill="#3A2356"/>
+  <circle cx="128" cy="224" r="4" fill="#8EBE4A"/>
+  <!-- crossguard -->
+  <rect x="104" y="162" width="48" height="10" rx="3" fill="#3A2356"/>
+  <!-- blade -->
+  <path d="M128 28 L118 70 L120 158 L136 158 L138 70 Z" fill="#6E7479"/>
+  <path d="M128 28 L122 70 L124 158 L128 158 Z" fill="#878D93"/>
+  <path d="M128 28 L128 158" stroke="#9AA0A6" stroke-width="1.5"/>
+  </g>
+</svg>

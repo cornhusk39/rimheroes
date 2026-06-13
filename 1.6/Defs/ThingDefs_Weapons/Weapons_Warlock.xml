@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Warlock_T1</defName>
+    <label>lesser hero pact-dagger</label>
+    <description>A plain dark athame, both a stabbing blade and a focus for a warlock's borrowed power. A small green gem set in the pommel drinks the dark and gives nothing back.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Warlock/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>700</MarketValue></statBases>
+    <tools>
+      <li><label>blade</label><capacities><li>Stab</li></capacities><power>12</power><cooldownTime>1.4</cooldownTime><armorPenetration>0.25</armorPenetration></li>
+    </tools>
+    <equippedStatOffsets><RH_SpellPower>0.15</RH_SpellPower></equippedStatOffsets>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Warlock</heroClass><minLevel>1</minLevel><tier>1</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Warlock_T2</defName>
+    <label>hero pact-dagger</label>
+    <description>A keener athame whose pommel has opened into a lidless eye, its hilt etched in sickly green sigils. The patron watches a little closer now.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Warlock/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>1400</MarketValue></statBases>
+    <tools>
+      <li><label>blade</label><capacities><li>Stab</li></capacities><power>16</power><cooldownTime>1.4</cooldownTime><armorPenetration>0.32</armorPenetration></li>
+    </tools>
+    <equippedStatOffsets><RH_SpellPower>0.30</RH_SpellPower></equippedStatOffsets>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Warlock</heroClass><minLevel>5</minLevel><tier>2</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Warlock_T3</defName>
+    <label>greater hero pact-dagger</label>
+    <description>An ornate violet-hilted athame, its dark blade graven with green runes that hold a faint, breathing glow. Spells cast through it bite as deep as the blade itself.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Warlock/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>2600</MarketValue></statBases>
+    <tools>
+      <li><label>blade</label><capacities><li>Stab</li></capacities><power>21</power><cooldownTime>1.4</cooldownTime><armorPenetration>0.40</armorPenetration></li>
+    </tools>
+    <equippedStatOffsets><RH_SpellPower>0.50</RH_SpellPower></equippedStatOffsets>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Warlock</heroClass><minLevel>10</minLevel><tier>3</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Warlock_T4</defName>
+    <label>perfect hero pact-dagger</label>
+    <description>A pact-blade wreathed in a withering green aura, an open eye burning at its heart. The air around it greys and dies, and the patron's voice is never far.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Warlock/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>4200</MarketValue></statBases>
+    <tools>
+      <li><label>blade</label><capacities><li>Stab</li></capacities><power>27</power><cooldownTime>1.4</cooldownTime><armorPenetration>0.50</armorPenetration></li>
+    </tools>
+    <equippedStatOffsets><RH_SpellPower>0.75</RH_SpellPower></equippedStatOffsets>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Warlock</heroClass><minLevel>15</minLevel><tier>4</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Warlock_T5</defName>
+    <label>Maw of the Patron</label>
+    <description>The capstone athame of the warlock, won only by a hero who has paid every clause of the pact in full. Its blade is wreathed in green eldritch fire and a glaring eye stares from the pommel; where it cuts, the world remembers being unmade. Tendrils of cold green flame answer the patron's hunger.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Warlock/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>9000</MarketValue></statBases>
+    <tools>
+      <li><label>blade</label><capacities><li>Stab</li></capacities><power>35</power><cooldownTime>1.4</cooldownTime><armorPenetration>0.62</armorPenetration></li>
+    </tools>
+    <equippedStatOffsets><RH_SpellPower>1.0</RH_SpellPower></equippedStatOffsets>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Warlock</heroClass><minLevel>20</minLevel><tier>5</tier></li></modExtensions>
+  </ThingDef>
+
+</Defs>

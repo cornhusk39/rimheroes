@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Dirge of Kings (capstone): lute radiating golden song, brilliant inlay, motes of music. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- radiant song aura -->
+  <ellipse cx="128" cy="186" rx="80" ry="74" fill="#F2C84A" opacity="0.18"/>
+  <ellipse cx="128" cy="188" rx="64" ry="60" fill="#FFE08A" opacity="0.16"/>
+  <ellipse cx="128" cy="190" rx="50" ry="46" fill="#FFF0B8" opacity="0.14"/>
+  <!-- radiating song rays -->
+  <g stroke="#F2C84A" stroke-width="2" opacity="0.5">
+    <line x1="128" y1="120" x2="128" y2="96"/>
+    <line x1="76" y1="190" x2="50" y2="190"/>
+    <line x1="180" y1="190" x2="206" y2="190"/>
+    <line x1="92" y1="150" x2="74" y2="132"/>
+    <line x1="164" y1="150" x2="182" y2="132"/>
+  </g>
+  <!-- neck -->
+  <rect x="121" y="46" width="14" height="128" rx="5" fill="#8E3A6E"/>
+  <rect x="121" y="46" width="5" height="128" fill="#F2C84A"/>
+  <!-- ornate tuning head -->
+  <path d="M113 22 L143 22 L141 56 L115 56 Z" fill="#5E2548"/>
+  <path d="M113 22 L143 22 L142 42 L114 42 Z" fill="#C9A23F"/>
+  <path d="M128 22 L134 30 L128 38 L122 30 Z" fill="#FFF6D8"/>
+  <circle cx="111" cy="38" r="3.5" fill="#FFE08A"/>
+  <circle cx="145" cy="38" r="3.5" fill="#FFE08A"/>
+  <circle cx="111" cy="50" r="3.5" fill="#FFE08A"/>
+  <circle cx="145" cy="50" r="3.5" fill="#FFE08A"/>
+  <!-- bowl body -->
+  <ellipse cx="128" cy="192" rx="52" ry="48" fill="#5E2548"/>
+  <ellipse cx="128" cy="190" rx="46" ry="42" fill="#8E3A6E"/>
+  <ellipse cx="108" cy="176" rx="16" ry="26" fill="#D070AE" opacity="0.6"/>
+  <!-- brilliant gold binding + sweeping inlay -->
+  <ellipse cx="128" cy="190" rx="46" ry="42" fill="none" stroke="#FFE08A" stroke-width="3.5"/>
+  <ellipse cx="128" cy="190" rx="40" ry="36" fill="none" stroke="#C9A23F" stroke-width="1.5"/>
+  <path d="M98 152 Q128 142 158 152" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
+  <path d="M94 226 Q128 236 162 226" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
+  <path d="M88 190 Q128 198 168 190" stroke="#C9A23F" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <!-- blazing rosette soundhole -->
+  <circle cx="128" cy="182" r="18" fill="#FFE08A" opacity="0.6"/>
+  <circle cx="128" cy="182" r="14" fill="#C9A23F"/>
+  <circle cx="128" cy="182" r="10" fill="#3A1730"/>
+  <circle cx="128" cy="182" r="5" fill="#FFF6D8"/>
+  <path d="M128 164 L131 178 L128 200 L125 178 Z M110 182 L124 179 L146 182 L124 185 Z" fill="#FFE08A" opacity="0.7"/>
+  <!-- crown inlay above soundhole -->
+  <path d="M118 160 L122 154 L128 160 L134 154 L138 160 L136 166 L120 166 Z" fill="#FFE08A"/>
+  <path d="M122 161 L124 158 L128 161 L132 158 L134 161 L133 164 L123 164 Z" fill="#FFF6D8"/>
+  <!-- bridge -->
+  <rect x="112" y="206" width="32" height="7" rx="2" fill="#FFE08A"/>
+  <!-- gold frets -->
+  <rect x="121" y="68" width="14" height="3" fill="#FFE08A"/>
+  <rect x="121" y="88" width="14" height="3" fill="#FFE08A"/>
+  <rect x="121" y="108" width="14" height="3" fill="#FFE08A"/>
+  <rect x="121" y="128" width="14" height="3" fill="#FFE08A"/>
+  <!-- blazing strings -->
+  <rect x="122.5" y="48" width="2" height="160" fill="#FFF6D8"/>
+  <rect x="127" y="48" width="2" height="160" fill="#FFF6D8"/>
+  <rect x="131.5" y="48" width="2" height="160" fill="#FFF6D8"/>
+  <!-- motes of music rising -->
+  <g fill="#FFE08A">
+    <ellipse cx="176" cy="146" rx="6" ry="4.5" transform="rotate(-20 176 146)"/>
+    <rect x="179.5" y="122" width="3" height="26"/>
+    <path d="M179.5 122 Q192 124 192 134 L192 128 Q182 127 179.5 130 Z"/>
+    <ellipse cx="202" cy="112" rx="5" ry="3.5" transform="rotate(-20 202 112)"/>
+    <rect x="205" y="92" width="2.5" height="22"/>
+  </g>
+  <g fill="#FFF6D8">
+    <ellipse cx="190" cy="172" rx="4.5" ry="3.5" transform="rotate(-20 190 172)"/>
+    <rect x="193" y="153" width="2.2" height="20"/>
+  </g>
+  <circle cx="218" cy="96" r="3" fill="#FFF6D8"/>
+  <circle cx="160" cy="118" r="2.5" fill="#FFE08A"/>
+  <circle cx="206" cy="138" r="2.5" fill="#FFF6D8"/>
+  </g>
+</svg>

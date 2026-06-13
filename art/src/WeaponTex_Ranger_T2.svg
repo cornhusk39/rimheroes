@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Hero Longbow: recurve limbs, green grip wrap, fletch motif. Vertical. -->
+  <!-- recurve limbs: arc that flicks back out at the tips -->
+  <path d="M138 22 C160 36 150 54 130 70 C106 92 104 128 104 128 C104 128 106 164 130 186 C150 202 160 220 138 234" stroke="#6B4A2A" stroke-width="13" fill="none" stroke-linecap="round"/>
+  <path d="M138 22 C160 36 150 54 130 70 C106 92 104 128 104 128 C104 128 106 164 130 186 C150 202 160 220 138 234" stroke="#7E5A34" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- nocks -->
+  <circle cx="138" cy="22" r="6" fill="#5A3E22"/>
+  <circle cx="138" cy="234" r="6" fill="#5A3E22"/>
+  <!-- bowstring -->
+  <path d="M138 22 L150 128 L138 234" stroke="#3E5A34" stroke-width="2.5" fill="none"/>
+  <!-- green grip wrap -->
+  <rect x="98" y="110" width="14" height="36" rx="3" fill="#3E5A34"/>
+  <rect x="99" y="116" width="12" height="3" fill="#4E6E42"/>
+  <rect x="99" y="125" width="12" height="3" fill="#4E6E42"/>
+  <rect x="99" y="134" width="12" height="3" fill="#4E6E42"/>
+  <!-- fletch motif: an arrow fletch near the grip -->
+  <path d="M150 128 L172 120 L168 128 L172 136 Z" fill="#3E5A34"/>
+  <path d="M168 128 L186 128" stroke="#7E5A34" stroke-width="3"/>
+</svg>

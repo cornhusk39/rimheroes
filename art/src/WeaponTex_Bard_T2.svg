@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Hero Lute: polished lute, gold frets, carved rosette soundhole. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- neck -->
+  <rect x="122" y="52" width="12" height="122" rx="4" fill="#A8732E"/>
+  <rect x="122" y="52" width="4" height="122" fill="#C08A3C"/>
+  <!-- tuning head -->
+  <path d="M117 30 L139 30 L137 56 L119 56 Z" fill="#8C5E24"/>
+  <path d="M117 30 L139 30 L138 38 L118 38 Z" fill="#C9A23F"/>
+  <circle cx="115" cy="38" r="3" fill="#C9A23F"/>
+  <circle cx="141" cy="38" r="3" fill="#C9A23F"/>
+  <circle cx="115" cy="48" r="3" fill="#C9A23F"/>
+  <circle cx="141" cy="48" r="3" fill="#C9A23F"/>
+  <!-- bowl body -->
+  <ellipse cx="128" cy="192" rx="47" ry="43" fill="#5E2548"/>
+  <ellipse cx="128" cy="190" rx="41" ry="37" fill="#8E3A6E"/>
+  <ellipse cx="110" cy="178" rx="14" ry="22" fill="#A8538A" opacity="0.55"/>
+  <!-- gold edge binding -->
+  <ellipse cx="128" cy="190" rx="41" ry="37" fill="none" stroke="#C9A23F" stroke-width="2"/>
+  <!-- rosette soundhole -->
+  <circle cx="128" cy="182" r="13" fill="#C9A23F"/>
+  <circle cx="128" cy="182" r="10" fill="#3A1730"/>
+  <circle cx="128" cy="182" r="13" fill="none" stroke="#5E2548" stroke-width="1.5"/>
+  <!-- bridge -->
+  <rect x="115" y="206" width="26" height="6" rx="2" fill="#C9A23F"/>
+  <!-- gold frets -->
+  <rect x="122" y="74" width="12" height="2.5" fill="#C9A23F"/>
+  <rect x="122" y="94" width="12" height="2.5" fill="#C9A23F"/>
+  <rect x="122" y="114" width="12" height="2.5" fill="#C9A23F"/>
+  <rect x="122" y="134" width="12" height="2.5" fill="#C9A23F"/>
+  <!-- strings -->
+  <rect x="124" y="54" width="1.5" height="154" fill="#E8D8B0"/>
+  <rect x="127.5" y="54" width="1.5" height="154" fill="#E8D8B0"/>
+  <rect x="131" y="54" width="1.5" height="154" fill="#E8D8B0"/>
+  </g>
+</svg>

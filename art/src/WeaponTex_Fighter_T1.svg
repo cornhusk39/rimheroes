@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Longsword: plain arming sword, straight steel blade, simple crossguard. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- blade -->
+  <path d="M128 22 L118 40 L118 150 L138 150 L138 40 Z" fill="#9AA1AA"/>
+  <path d="M123 38 L123 150 L128 150 L128 30 Z" fill="#B8BEC6"/>
+  <!-- crossguard -->
+  <rect x="92" y="150" width="72" height="14" rx="4" fill="#7E848C"/>
+  <!-- grip -->
+  <rect x="121" y="164" width="14" height="50" rx="4" fill="#5A4632"/>
+  <!-- pommel -->
+  <circle cx="128" cy="222" r="11" fill="#7E848C"/>
+  </g>
+</svg>

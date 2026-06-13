@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Hero Pact-Dagger: eye-shaped pommel, green-etched hilt, keener blade. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- grip -->
+  <rect x="121" y="168" width="14" height="50" rx="5" fill="#4A2E6E"/>
+  <rect x="121" y="168" width="5" height="50" fill="#3A2356"/>
+  <!-- green etching on grip -->
+  <path d="M128 174 L128 212" stroke="#8EBE4A" stroke-width="2"/>
+  <!-- eye-shaped pommel -->
+  <path d="M108 224 C118 212 138 212 148 224 C138 236 118 236 108 224 Z" fill="#3A2356"/>
+  <ellipse cx="128" cy="224" rx="7" ry="6" fill="#8EBE4A"/>
+  <ellipse cx="128" cy="224" rx="2.5" ry="5" fill="#2A1840"/>
+  <!-- crossguard with green tips -->
+  <rect x="100" y="160" width="56" height="10" rx="3" fill="#3A2356"/>
+  <circle cx="102" cy="165" r="3.5" fill="#8EBE4A"/>
+  <circle cx="154" cy="165" r="3.5" fill="#8EBE4A"/>
+  <!-- blade -->
+  <path d="M128 26 L116 68 L118 156 L138 156 L140 68 Z" fill="#6E7479"/>
+  <path d="M128 26 L121 68 L123 156 L128 156 Z" fill="#9AA0A6"/>
+  <path d="M128 26 L128 156" stroke="#C6CBD0" stroke-width="1.5"/>
+  </g>
+</svg>

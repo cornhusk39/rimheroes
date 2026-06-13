@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Greater Hero Lute: ornate inlaid lute, set gem, faint golden shimmer. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- faint glow halo -->
+  <ellipse cx="128" cy="190" rx="56" ry="52" fill="#F2C84A" opacity="0.12"/>
+  <!-- neck -->
+  <rect x="122" y="50" width="12" height="124" rx="4" fill="#A8732E"/>
+  <rect x="122" y="50" width="4" height="124" fill="#C9A23F"/>
+  <!-- tuning head with inlay -->
+  <path d="M116 28 L140 28 L138 56 L118 56 Z" fill="#8C5E24"/>
+  <path d="M116 28 L140 28 L139 40 L117 40 Z" fill="#C9A23F"/>
+  <path d="M128 30 L132 36 L128 42 L124 36 Z" fill="#8E3A6E"/>
+  <circle cx="114" cy="38" r="3" fill="#C9A23F"/>
+  <circle cx="142" cy="38" r="3" fill="#C9A23F"/>
+  <circle cx="114" cy="48" r="3" fill="#C9A23F"/>
+  <circle cx="142" cy="48" r="3" fill="#C9A23F"/>
+  <!-- bowl body -->
+  <ellipse cx="128" cy="192" rx="48" ry="44" fill="#5E2548"/>
+  <ellipse cx="128" cy="190" rx="42" ry="38" fill="#8E3A6E"/>
+  <ellipse cx="110" cy="178" rx="14" ry="22" fill="#B05A92" opacity="0.55"/>
+  <!-- gold edge binding + inlay stripes -->
+  <ellipse cx="128" cy="190" rx="42" ry="38" fill="none" stroke="#C9A23F" stroke-width="2.5"/>
+  <path d="M104 158 Q128 150 152 158" stroke="#C9A23F" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <path d="M100 222 Q128 230 156 222" stroke="#C9A23F" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <!-- ornate rosette soundhole -->
+  <circle cx="128" cy="182" r="14" fill="#C9A23F"/>
+  <circle cx="128" cy="182" r="10.5" fill="#3A1730"/>
+  <path d="M128 168 L130 178 L128 188 L126 178 Z M114 182 L124 180 L134 182 L124 184 Z" fill="#5E2548"/>
+  <!-- inlaid gem above soundhole -->
+  <path d="M128 160 L134 167 L128 175 L122 167 Z" fill="#F2C84A"/>
+  <path d="M128 162 L131 167 L128 172 L125 167 Z" fill="#FFF0B8"/>
+  <!-- bridge -->
+  <rect x="114" y="206" width="28" height="6" rx="2" fill="#C9A23F"/>
+  <!-- gold frets -->
+  <rect x="122" y="72" width="12" height="2.5" fill="#C9A23F"/>
+  <rect x="122" y="92" width="12" height="2.5" fill="#C9A23F"/>
+  <rect x="122" y="112" width="12" height="2.5" fill="#C9A23F"/>
+  <rect x="122" y="132" width="12" height="2.5" fill="#C9A23F"/>
+  <!-- strings -->
+  <rect x="123.5" y="52" width="1.5" height="156" fill="#F0E0B8"/>
+  <rect x="127.5" y="52" width="1.5" height="156" fill="#F0E0B8"/>
+  <rect x="131.5" y="52" width="1.5" height="156" fill="#F0E0B8"/>
+  </g>
+</svg>

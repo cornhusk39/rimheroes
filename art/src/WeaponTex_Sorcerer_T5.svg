@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Bloodfire Scepter (capstone): scepter erupting with molten crimson-gold bloodfire from the gem. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- outer bloodfire aura -->
+  <circle cx="128" cy="54" r="58" fill="#8E2A2A" opacity="0.16"/>
+  <circle cx="128" cy="54" r="42" fill="#FF6A2A" opacity="0.18"/>
+  <circle cx="128" cy="54" r="26" fill="#F2C84A" opacity="0.20"/>
+  <!-- erupting flame tongues -->
+  <path d="M128 4 L116 40 L128 30 L140 40 Z" fill="#FF6A2A"/>
+  <path d="M88 30 L108 50 L96 52 L112 64 Z" fill="#FF6A2A" opacity="0.9"/>
+  <path d="M168 30 L148 50 L160 52 L144 64 Z" fill="#FF6A2A" opacity="0.9"/>
+  <path d="M96 70 L114 70 L106 84 Z" fill="#FFB347" opacity="0.8"/>
+  <path d="M160 70 L142 70 L150 84 Z" fill="#FFB347" opacity="0.8"/>
+  <!-- handle -->
+  <rect x="118" y="80" width="20" height="146" rx="6" fill="#241A16"/>
+  <path d="M128 84 C123 120 133 156 125 196 C131 214 124 222 128 226" stroke="#FF6A2A" stroke-width="3.5" fill="none"/>
+  <path d="M128 84 C123 120 133 156 125 196 C131 214 124 222 128 226" stroke="#FFE08A" stroke-width="1.5" fill="none"/>
+  <!-- molten gold bands -->
+  <rect x="112" y="106" width="32" height="12" rx="2" fill="#C79A3E"/>
+  <rect x="112" y="150" width="32" height="12" rx="2" fill="#C79A3E"/>
+  <rect x="112" y="194" width="32" height="12" rx="2" fill="#C79A3E"/>
+  <rect x="112" y="106" width="32" height="3" fill="#FFE08A"/>
+  <rect x="112" y="150" width="32" height="3" fill="#FFE08A"/>
+  <rect x="112" y="194" width="32" height="3" fill="#FFE08A"/>
+  <!-- blazing pommel -->
+  <ellipse cx="128" cy="228" rx="16" ry="12" fill="#C79A3E"/>
+  <ellipse cx="128" cy="228" rx="8" ry="6" fill="#FF6A2A"/>
+  <ellipse cx="128" cy="228" rx="3" ry="3" fill="#FFE08A"/>
+  <!-- ornate claw setting -->
+  <path d="M106 80 L128 46 L150 80 Z" fill="#C79A3E"/>
+  <path d="M108 82 L98 56 M148 82 L158 56" stroke="#E0A030" stroke-width="7" stroke-linecap="round"/>
+  <!-- molten bloodfire gem -->
+  <path d="M128 20 L158 58 L128 92 L98 58 Z" fill="#8E2A2A"/>
+  <path d="M128 20 L158 58 L128 58 Z" fill="#6E1E1E"/>
+  <path d="M128 20 L128 92 M98 58 L158 58" stroke="#E0A030" stroke-width="2.5"/>
+  <circle cx="128" cy="56" r="13" fill="#FF6A2A"/>
+  <circle cx="128" cy="56" r="7" fill="#F2C84A"/>
+  <circle cx="128" cy="56" r="3" fill="#FFF0C0"/>
+  <!-- runes flanking the gem -->
+  <path d="M84 60 L96 64 L90 72 M172 60 L160 64 L166 72" stroke="#FFE08A" stroke-width="3" fill="none"/>
+  </g>
+</svg>

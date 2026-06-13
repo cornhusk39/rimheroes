@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Perfect Hero Longbow: magical bow, glowing string, runes, glow halo. Vertical. -->
+  <!-- glow halo -->
+  <path d="M138 22 C160 36 150 54 130 70 C106 92 104 128 104 128 C104 128 106 164 130 186 C150 202 160 220 138 234" stroke="#6ED0FF" stroke-width="22" fill="none" stroke-linecap="round" opacity="0.18"/>
+  <!-- recurve limbs (dark enchanted wood) -->
+  <path d="M138 22 C160 36 150 54 130 70 C106 92 104 128 104 128 C104 128 106 164 130 186 C150 202 160 220 138 234" stroke="#3A2718" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <!-- gold horn inlay -->
+  <path d="M138 22 C160 36 150 54 130 70 C106 92 104 128 104 128 C104 128 106 164 130 186 C150 202 160 220 138 234" stroke="#C79A3E" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- gold tip caps -->
+  <circle cx="138" cy="22" r="7" fill="#C79A3E"/>
+  <circle cx="138" cy="234" r="7" fill="#C79A3E"/>
+  <!-- glowing string -->
+  <path d="M138 22 L150 128 L138 234" stroke="#6ED0FF" stroke-width="4" fill="none"/>
+  <path d="M138 22 L150 128 L138 234" stroke="#DFF6FF" stroke-width="1.5" fill="none"/>
+  <!-- runes along limbs -->
+  <path d="M124 78 L132 82 L126 90 M124 174 L132 178 L126 186" stroke="#6ED0FF" stroke-width="2.5" fill="none"/>
+  <!-- grip -->
+  <rect x="97" y="108" width="16" height="40" rx="3" fill="#C79A3E"/>
+  <rect x="99" y="110" width="12" height="36" rx="2" fill="#3A2718"/>
+  <!-- glowing core gem -->
+  <circle cx="105" cy="128" r="7" fill="#6ED0FF"/>
+  <circle cx="105" cy="128" r="3" fill="#DFF6FF"/>
+</svg>

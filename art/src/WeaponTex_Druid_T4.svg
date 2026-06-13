@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Perfect Hero Living Staff: glowing amber-sap veins up the wood, leaves, glow halo. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- glow halo around whole staff -->
+  <path d="M124 40 C104 110 152 170 130 236 L126 236 C148 170 100 110 120 40 Z" fill="#D89A3A" opacity="0.14"/>
+  <circle cx="128" cy="38" r="40" fill="#D89A3A" opacity="0.20"/>
+  <!-- gnarled shaft -->
+  <path d="M120 234 C115 190 132 150 122 110 C116 80 130 60 124 44 L138 44 C132 62 144 82 138 110 C146 150 131 190 136 234 Z" fill="#6E5638"/>
+  <path d="M122 230 C118 190 132 152 124 112 C119 82 130 64 126 48 L131 48 C128 64 137 82 132 112 C140 152 127 190 130 230 Z" fill="#856A48"/>
+  <!-- glowing amber sap veins running up the wood -->
+  <path d="M128 232 C123 196 134 158 126 120 C121 92 132 70 128 48" stroke="#D89A3A" stroke-width="4" fill="none"/>
+  <path d="M128 232 C123 196 134 158 126 120 C121 92 132 70 128 48" stroke="#F2C46A" stroke-width="1.6" fill="none"/>
+  <path d="M126 196 C140 184 132 168 144 160 M132 132 C116 124 124 108 110 104" stroke="#D89A3A" stroke-width="3" fill="none"/>
+  <!-- living vine + leaves -->
+  <path d="M114 224 C150 206 110 184 142 166 C112 148 152 128 120 110" stroke="#5E6B43" stroke-width="5" fill="none"/>
+  <path d="M142 166 C160 158 166 168 156 182 C148 175 144 172 142 166 Z" fill="#7A8B4A"/>
+  <path d="M120 110 C102 104 98 114 108 126 C115 118 118 116 120 110 Z" fill="#7A8B4A"/>
+  <path d="M144 160 C162 154 166 142 156 134 C152 144 150 152 144 160 Z" fill="#5E6B43"/>
+  <!-- knots -->
+  <ellipse cx="128" cy="150" rx="9" ry="7" fill="#5A4630"/>
+  <!-- base nub -->
+  <ellipse cx="128" cy="236" rx="13" ry="10" fill="#5A4630"/>
+  <!-- antler-forked top -->
+  <path d="M126 48 L112 28 L98 12 L104 10 L116 24 L122 40 Z" fill="#D8CCB4"/>
+  <path d="M120 30 L102 20 L108 18 L122 26 Z" fill="#D8CCB4"/>
+  <path d="M132 48 L146 26 L160 10 L154 10 L142 24 L130 40 Z" fill="#D8CCB4"/>
+  <path d="M138 30 L156 20 L150 18 L136 26 Z" fill="#D8CCB4"/>
+  <!-- blazing amber sap core in the fork -->
+  <circle cx="128" cy="42" r="11" fill="#D89A3A"/>
+  <circle cx="128" cy="42" r="5" fill="#F2C46A"/>
+  </g>
+</svg>

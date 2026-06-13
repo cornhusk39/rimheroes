@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Class-locked hero longbows for the Ranger. Ranged (mirrors vanilla Bow_Great / Arrow_Great).
+       Half-caster: equipping grants RH_SpellPower. Bound items: no smelt, no trade. -->
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>RH_Weapon_Ranger_T1</defName>
+    <label>lesser hero longbow</label>
+    <description>A tall hero's selfbow of seasoned heartwood, drawing a heavier pull than any common bow. Bound to a hero ranger — none but they can string and bend it.</description>
+    <techLevel>Medieval</techLevel>
+    <smeltable>false</smeltable>
+    <tradeability>None</tradeability>
+    <graphicData>
+      <texPath>Things/RimHeroes/Weapons/Ranger/T1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <statBases>
+      <MarketValue>700</MarketValue>
+      <Mass>2.0</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.60</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponClasses>
+      <li>Ranged</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <equippedStatOffsets>
+      <RH_SpellPower>0.08</RH_SpellPower>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Great</defaultProjectile>
+        <warmupTime>1.3</warmupTime>
+        <range>30</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <rotateInShelves>false</rotateInShelves>
+    <modExtensions>
+      <li Class="RimHeroes.WeaponLockExtension">
+        <heroClass>RH_Ranger</heroClass>
+        <minLevel>1</minLevel>
+        <tier>1</tier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>RH_Weapon_Ranger_T2</defName>
+    <label>hero longbow</label>
+    <description>A masterwork recurve longbow, its limbs sprung like a tuned spring and wrapped in hunter's green. It looses a faster, surer arrow than the lesser bow.</description>
+    <techLevel>Medieval</techLevel>
+    <smeltable>false</smeltable>
+    <tradeability>None</tradeability>
+    <graphicData>
+      <texPath>Things/RimHeroes/Weapons/Ranger/T2</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>2.0</Mass>
+      <AccuracyTouch>0.68</AccuracyTouch>
+      <AccuracyShort>0.68</AccuracyShort>
+      <AccuracyMedium>0.68</AccuracyMedium>
+      <AccuracyLong>0.68</AccuracyLong>
+      <RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponClasses>
+      <li>Ranged</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <equippedStatOffsets>
+      <RH_SpellPower>0.15</RH_SpellPower>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Great</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>33</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <rotateInShelves>false</rotateInShelves>
+    <modExtensions>
+      <li Class="RimHeroes.WeaponLockExtension">
+        <heroClass>RH_Ranger</heroClass>
+        <minLevel>5</minLevel>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>RH_Weapon_Ranger_T3</defName>
+    <label>greater hero longbow</label>
+    <description>A horn-and-gold composite recurve set with a single blood-ruby, its draw humming with banked power. It sends an arrow flat and far through heavy armour.</description>
+    <techLevel>Medieval</techLevel>
+    <smeltable>false</smeltable>
+    <tradeability>None</tradeability>
+    <graphicData>
+      <texPath>Things/RimHeroes/Weapons/Ranger/T3</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <statBases>
+      <MarketValue>2600</MarketValue>
+      <Mass>2.0</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponClasses>
+      <li>Ranged</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <equippedStatOffsets>
+      <RH_SpellPower>0.22</RH_SpellPower>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Great</defaultProjectile>
+        <warmupTime>1.1</warmupTime>
+        <range>36</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <rotateInShelves>false</rotateInShelves>
+    <modExtensions>
+      <li Class="RimHeroes.WeaponLockExtension">
+        <heroClass>RH_Ranger</heroClass>
+        <minLevel>10</minLevel>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>RH_Weapon_Ranger_T4</defName>
+    <label>perfect hero longbow</label>
+    <description>A bow wrought of enchanted heartwood and gold, its string a thread of cold light and its limbs scribed with running runes. Every arrow flies as if guided.</description>
+    <techLevel>Medieval</techLevel>
+    <smeltable>false</smeltable>
+    <tradeability>None</tradeability>
+    <graphicData>
+      <texPath>Things/RimHeroes/Weapons/Ranger/T4</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <statBases>
+      <MarketValue>4200</MarketValue>
+      <Mass>2.0</Mass>
+      <AccuracyTouch>0.83</AccuracyTouch>
+      <AccuracyShort>0.83</AccuracyShort>
+      <AccuracyMedium>0.83</AccuracyMedium>
+      <AccuracyLong>0.83</AccuracyLong>
+      <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponClasses>
+      <li>Ranged</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <equippedStatOffsets>
+      <RH_SpellPower>0.30</RH_SpellPower>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Great</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>40</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <rotateInShelves>false</rotateInShelves>
+    <modExtensions>
+      <li Class="RimHeroes.WeaponLockExtension">
+        <heroClass>RH_Ranger</heroClass>
+        <minLevel>15</minLevel>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>RH_Weapon_Ranger_T5</defName>
+    <label>Stormfall</label>
+    <description>The capstone longbow of the ranger, won only by a hero at the height of their legend. Its limbs and string crackle with caged storm-light; each loosed arrow leaves on a crack of thunder and strikes like a falling bolt.</description>
+    <techLevel>Medieval</techLevel>
+    <smeltable>false</smeltable>
+    <tradeability>None</tradeability>
+    <graphicData>
+      <texPath>Things/RimHeroes/Weapons/Ranger/T5</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <statBases>
+      <MarketValue>9000</MarketValue>
+      <Mass>2.2</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponClasses>
+      <li>Ranged</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <equippedStatOffsets>
+      <RH_SpellPower>0.40</RH_SpellPower>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Great</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>45</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <rotateInShelves>false</rotateInShelves>
+    <modExtensions>
+      <li Class="RimHeroes.WeaponLockExtension">
+        <heroClass>RH_Ranger</heroClass>
+        <minLevel>20</minLevel>
+        <tier>5</tier>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

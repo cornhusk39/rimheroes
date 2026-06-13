@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Scepter: plain dark rod, small red gem head. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- handle -->
+  <rect x="122" y="86" width="12" height="140" rx="5" fill="#2E2622"/>
+  <rect x="122" y="86" width="4" height="140" fill="#3D332C"/>
+  <ellipse cx="128" cy="228" rx="9" ry="7" fill="#241D1A"/>
+  <!-- collar where head meets rod -->
+  <rect x="118" y="78" width="20" height="12" rx="3" fill="#4A3D34"/>
+  <!-- gem setting -->
+  <path d="M116 78 L128 60 L140 78 Z" fill="#4A3D34"/>
+  <!-- small red gem -->
+  <path d="M128 50 L138 70 L128 82 L118 70 Z" fill="#8E2A2A"/>
+  <path d="M128 50 L138 70 L128 70 Z" fill="#6E1E1E"/>
+  </g>
+</svg>

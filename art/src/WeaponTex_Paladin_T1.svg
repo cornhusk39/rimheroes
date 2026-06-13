@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Warhammer: plain iron head, wooden haft. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- haft -->
+  <rect x="121" y="76" width="14" height="156" rx="5" fill="#6B4A2A"/>
+  <rect x="121" y="76" width="5" height="156" fill="#7E5A34"/>
+  <ellipse cx="128" cy="234" rx="11" ry="9" fill="#5A3E22"/>
+  <!-- hammer head block -->
+  <rect x="92" y="44" width="72" height="40" rx="4" fill="#8E949B"/>
+  <rect x="92" y="44" width="72" height="13" fill="#9AA3B0"/>
+  <rect x="92" y="76" width="72" height="8" fill="#777D84"/>
+  <!-- striking face -->
+  <rect x="88" y="48" width="8" height="32" rx="2" fill="#777D84"/>
+  <!-- back spike -->
+  <path d="M164 52 L196 60 L196 68 L164 76 Z" fill="#8E949B"/>
+  <path d="M164 60 L196 64 L164 68 Z" fill="#777D84"/>
+  <!-- collar where head meets haft -->
+  <rect x="116" y="80" width="24" height="10" rx="2" fill="#6E747B"/>
+  <!-- top of head poking above haft -->
+  <rect x="123" y="36" width="10" height="14" rx="3" fill="#9AA0A6"/>
+  </g>
+</svg>

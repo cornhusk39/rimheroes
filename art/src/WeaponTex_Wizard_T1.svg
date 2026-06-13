@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Staff: plain wooden staff, small bound stone lashed at the top. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <rect x="122" y="46" width="12" height="192" rx="5" fill="#4A3320"/>
+  <rect x="122" y="46" width="4" height="192" fill="#5C4129"/>
+  <ellipse cx="128" cy="236" rx="9" ry="7" fill="#3A2718"/>
+  <!-- lashing that binds the stone -->
+  <rect x="118" y="50" width="20" height="6" rx="2" fill="#3A2718"/>
+  <rect x="118" y="60" width="20" height="6" rx="2" fill="#3A2718"/>
+  <!-- small bound stone at the top -->
+  <path d="M128 28 L112 44 L120 56 L136 56 L144 44 Z" fill="#8A8F98"/>
+  <path d="M128 32 L118 44 L124 52 L132 52 Z" fill="#A4AAB3"/>
+  </g>
+</svg>

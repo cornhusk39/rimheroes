@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Greater Hero Living Staff: antler-forked top, amber sap bead, faint glow. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- faint glow halo around crown -->
+  <circle cx="128" cy="38" r="34" fill="#D89A3A" opacity="0.16"/>
+  <!-- gnarled shaft -->
+  <path d="M120 234 C115 190 132 150 122 110 C116 80 130 60 124 44 L138 44 C132 62 144 82 138 110 C146 150 131 190 136 234 Z" fill="#6E5638"/>
+  <path d="M122 230 C118 190 132 152 124 112 C119 82 130 64 126 48 L131 48 C128 64 137 82 132 112 C140 152 127 190 130 230 Z" fill="#856A48"/>
+  <!-- twining vine -->
+  <path d="M114 224 C148 206 110 184 140 166 C112 148 150 128 120 110 C148 92 116 76 134 60" stroke="#5E6B43" stroke-width="6" fill="none"/>
+  <path d="M114 224 C148 206 110 184 140 166 C112 148 150 128 120 110 C148 92 116 76 134 60" stroke="#7A8B4A" stroke-width="2.5" fill="none"/>
+  <!-- leaves -->
+  <path d="M140 166 C156 158 162 168 154 180 C146 174 142 172 140 166 Z" fill="#7A8B4A"/>
+  <path d="M120 110 C104 104 100 114 110 124 C116 118 118 116 120 110 Z" fill="#7A8B4A"/>
+  <!-- knots -->
+  <ellipse cx="128" cy="150" rx="9" ry="7" fill="#5A4630"/>
+  <!-- base nub -->
+  <ellipse cx="128" cy="236" rx="13" ry="10" fill="#5A4630"/>
+  <!-- antler-forked top -->
+  <path d="M126 48 L112 28 L100 14 L106 12 L116 24 L122 40 Z" fill="#D8CCB4"/>
+  <path d="M120 30 L104 22 L110 20 L122 26 Z" fill="#D8CCB4"/>
+  <path d="M132 48 L146 26 L158 12 L152 12 L142 24 L130 40 Z" fill="#D8CCB4"/>
+  <path d="M138 30 L154 22 L148 20 L136 26 Z" fill="#D8CCB4"/>
+  <!-- amber sap bead cradled in the fork -->
+  <circle cx="128" cy="44" r="8" fill="#D89A3A"/>
+  <circle cx="128" cy="44" r="3.5" fill="#F2C46A"/>
+  </g>
+</svg>

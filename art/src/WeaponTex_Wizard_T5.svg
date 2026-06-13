@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Codex Eterna (capstone): world-ending. Staff crowned with a blazing arcane crystal, orbiting motes/constellations, strong violet-blue glow. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- vast violet-blue aura -->
+  <circle cx="128" cy="50" r="60" fill="#8F7BFF" opacity="0.18"/>
+  <circle cx="128" cy="50" r="42" fill="#B8A6FF" opacity="0.20"/>
+  <circle cx="128" cy="50" r="26" fill="#4A6CC4" opacity="0.30"/>
+  <rect x="120" y="78" width="16" height="160" rx="6" fill="#3A2718"/>
+  <!-- twin runelight channels up the shaft -->
+  <path d="M124 100 C120 130 130 158 122 188 C129 210 122 224 126 234" stroke="#8F7BFF" stroke-width="4" fill="none"/>
+  <path d="M124 100 C120 130 130 158 122 188 C129 210 122 224 126 234" stroke="#B8A6FF" stroke-width="1.5" fill="none"/>
+  <!-- silver-shod foot with glowing core -->
+  <rect x="116" y="222" width="24" height="16" rx="3" fill="#C4CBD6"/>
+  <ellipse cx="128" cy="238" rx="12" ry="7" fill="#A6ADB8"/>
+  <ellipse cx="128" cy="236" rx="5" ry="4" fill="#B8A6FF"/>
+  <!-- ornate silver double crown setting -->
+  <rect x="110" y="80" width="36" height="13" rx="3" fill="#C4CBD6"/>
+  <rect x="110" y="80" width="36" height="4" fill="#DBE0E8"/>
+  <path d="M102 84 L112 56 L122 84 Z" fill="#A6ADB8"/>
+  <path d="M154 84 L144 56 L134 84 Z" fill="#A6ADB8"/>
+  <!-- orbiting motes / constellations -->
+  <circle cx="74" cy="44" r="4" fill="#B8A6FF"/>
+  <circle cx="182" cy="44" r="4" fill="#B8A6FF"/>
+  <circle cx="96" cy="14" r="3" fill="#8F7BFF"/>
+  <circle cx="160" cy="14" r="3" fill="#8F7BFF"/>
+  <circle cx="128" cy="98" r="3" fill="#B8A6FF"/>
+  <path d="M74 44 L96 14 L128 8 L160 14 L182 44" stroke="#8F7BFF" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <!-- blazing arcane crystal crown -->
+  <path d="M128 8 L104 48 L128 78 L152 48 Z" fill="#2E4E9E"/>
+  <path d="M128 8 L114 48 L128 78 Z" fill="#4A6CC4"/>
+  <path d="M128 14 L120 46 L128 66 Z" fill="#8F7BFF"/>
+  <path d="M128 20 L124 44 L128 58 Z" fill="#B8A6FF"/>
+  <!-- white-hot core -->
+  <circle cx="128" cy="44" r="6" fill="#E8E0FF"/>
+  <!-- blazing light rays -->
+  <path d="M128 2 L128 12 M98 26 L88 18 M158 26 L168 18 M108 64 L98 72 M148 64 L158 72" stroke="#B8A6FF" stroke-width="3" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Paladin hero warhammer line: heavy half-caster blunt weapon (RH_HeroWeaponMeleeBase defined in Weapons_Barbarian.xml). -->
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Paladin_T1</defName>
+    <label>lesser hero warhammer</label>
+    <description>A plain iron warhammer, blunt and brutally heavy. Bound to a hero paladin, it lends a faint thread of holy power to those sworn to wield it.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>700</MarketValue></statBases>
+    <equippedStatOffsets><RH_SpellPower>0.08</RH_SpellPower></equippedStatOffsets>
+    <tools>
+      <li><label>head</label><capacities><li>Blunt</li></capacities><power>24</power><cooldownTime>2.4</cooldownTime><armorPenetration>0.20</armorPenetration></li>
+      <li><label>handle</label><capacities><li>Poke</li></capacities><power>10</power><cooldownTime>2.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Paladin</heroClass><minLevel>1</minLevel><tier>1</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Paladin_T2</defName>
+    <label>hero warhammer</label>
+    <description>A bright steel warhammer banded with royal blue, its head true and well-tempered. It strikes harder than the lesser hammer and channels surer faith.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>1400</MarketValue></statBases>
+    <equippedStatOffsets><RH_SpellPower>0.15</RH_SpellPower></equippedStatOffsets>
+    <tools>
+      <li><label>head</label><capacities><li>Blunt</li></capacities><power>32</power><cooldownTime>2.4</cooldownTime><armorPenetration>0.28</armorPenetration></li>
+      <li><label>handle</label><capacities><li>Poke</li></capacities><power>12</power><cooldownTime>2.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Paladin</heroClass><minLevel>5</minLevel><tier>2</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Paladin_T3</defName>
+    <label>greater hero warhammer</label>
+    <description>A gold-engraved warhammer set with a royal sapphire, a faint holy light banked within its head. It shatters heavy armour and sharpens the wielder's prayers.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>2600</MarketValue></statBases>
+    <equippedStatOffsets><RH_SpellPower>0.22</RH_SpellPower></equippedStatOffsets>
+    <tools>
+      <li><label>head</label><capacities><li>Blunt</li></capacities><power>42</power><cooldownTime>2.4</cooldownTime><armorPenetration>0.36</armorPenetration></li>
+      <li><label>handle</label><capacities><li>Poke</li></capacities><power>14</power><cooldownTime>2.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Paladin</heroClass><minLevel>10</minLevel><tier>3</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Paladin_T4</defName>
+    <label>perfect hero warhammer</label>
+    <description>A radiant warhammer wreathed in white-gold light, holy runes blazing along its head. Each blow falls like judgement, and the wielder's spells burn with borrowed dawn.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>4200</MarketValue></statBases>
+    <equippedStatOffsets><RH_SpellPower>0.30</RH_SpellPower></equippedStatOffsets>
+    <tools>
+      <li><label>head</label><capacities><li>Blunt</li></capacities><power>54</power><cooldownTime>2.4</cooldownTime><armorPenetration>0.45</armorPenetration></li>
+      <li><label>handle</label><capacities><li>Poke</li></capacities><power>16</power><cooldownTime>2.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Paladin</heroClass><minLevel>15</minLevel><tier>4</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Paladin_T5</defName>
+    <label>Dawnbreaker</label>
+    <description>The capstone warhammer of the paladin, won only by a hero who has reached the height of their legend. Its head blazes with the light of breaking dawn; where it falls, darkness is unmade and the wielder's holy power burns brightest of all.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>9000</MarketValue><Mass>4.2</Mass></statBases>
+    <equippedStatOffsets><RH_SpellPower>0.40</RH_SpellPower></equippedStatOffsets>
+    <tools>
+      <li><label>head</label><capacities><li>Blunt</li></capacities><power>70</power><cooldownTime>2.4</cooldownTime><armorPenetration>0.60</armorPenetration></li>
+      <li><label>handle</label><capacities><li>Poke</li></capacities><power>19</power><cooldownTime>2.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Paladin</heroClass><minLevel>20</minLevel><tier>5</tier></li></modExtensions>
+  </ThingDef>
+
+</Defs>

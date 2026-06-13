@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Mace: plain iron flanged head, wooden haft. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <rect x="122" y="80" width="12" height="146" rx="5" fill="#6B4A2A"/>
+  <rect x="122" y="80" width="4" height="146" fill="#7E5A34"/>
+  <ellipse cx="128" cy="228" rx="10" ry="8" fill="#5A3E22"/>
+  <!-- neck collar -->
+  <rect x="118" y="74" width="20" height="12" rx="2" fill="#8E949B"/>
+  <!-- flanged round mace head -->
+  <path d="M128 38 L150 50 L160 74 L150 98 L128 110 L106 98 L96 74 L106 50 Z" fill="#8E949B"/>
+  <circle cx="128" cy="74" r="22" fill="#777D84"/>
+  <circle cx="128" cy="74" r="9" fill="#6A7077"/>
+  </g>
+</svg>

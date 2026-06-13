@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Greater Hero Longbow: horn-and-gold ornate recurve with a gem. Vertical. -->
+  <!-- recurve limbs (wood core) -->
+  <path d="M138 22 C160 36 150 54 130 70 C106 92 104 128 104 128 C104 128 106 164 130 186 C150 202 160 220 138 234" stroke="#6B4A2A" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <!-- horn backing inlay along the belly -->
+  <path d="M138 22 C160 36 150 54 130 70 C106 92 104 128 104 128 C104 128 106 164 130 186 C150 202 160 220 138 234" stroke="#D8CCB4" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- gold tip caps -->
+  <circle cx="138" cy="22" r="7" fill="#C79A3E"/>
+  <circle cx="138" cy="234" r="7" fill="#C79A3E"/>
+  <!-- gold limb bands -->
+  <rect x="120" y="64" width="22" height="9" rx="3" fill="#C79A3E" transform="rotate(-32 131 68)"/>
+  <rect x="120" y="183" width="22" height="9" rx="3" fill="#C79A3E" transform="rotate(32 131 187)"/>
+  <!-- bowstring -->
+  <path d="M138 22 L150 128 L138 234" stroke="#3E5A34" stroke-width="2.5" fill="none"/>
+  <!-- gold grip -->
+  <rect x="97" y="108" width="16" height="40" rx="3" fill="#C79A3E"/>
+  <rect x="99" y="110" width="12" height="36" rx="2" fill="#3E5A34"/>
+  <!-- gem on grip -->
+  <path d="M105 128 L111 134 L105 142 L99 134 Z" fill="#E04A4A"/>
+  <path d="M105 130 L108 134 L105 138 L102 134 Z" fill="#FF8A8A"/>
+</svg>

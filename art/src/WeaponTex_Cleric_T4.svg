@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Perfect Hero Mace: radiant glowing sun-head sheds light, runes, glow halo. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- broad radiant aura -->
+  <circle cx="128" cy="72" r="64" fill="#F2E8C0" opacity="0.18"/>
+  <circle cx="128" cy="72" r="48" fill="#F2E8C0" opacity="0.24"/>
+  <rect x="120" y="80" width="16" height="150" rx="6" fill="#4A3C2E"/>
+  <!-- glowing haft seam -->
+  <path d="M128 86 C124 130 132 170 128 222" stroke="#F2E8C0" stroke-width="2" fill="none"/>
+  <ellipse cx="128" cy="230" rx="14" ry="11" fill="#C9A23F"/>
+  <ellipse cx="128" cy="230" rx="6" ry="5" fill="#F2E8C0"/>
+  <!-- neck collar with rune -->
+  <rect x="112" y="70" width="32" height="16" rx="3" fill="#C9A23F"/>
+  <path d="M122 78 L128 72 L134 78 M128 72 L128 84" stroke="#F2E8C0" stroke-width="2" fill="none"/>
+  <!-- long radiant sun rays -->
+  <g stroke="#F2E8C0" stroke-width="4">
+    <line x1="128" y1="14" x2="128" y2="36"/>
+    <line x1="128" y1="108" x2="128" y2="124"/>
+    <line x1="74" y1="72" x2="92" y2="72"/>
+    <line x1="164" y1="72" x2="182" y2="72"/>
+  </g>
+  <g stroke="#C9A23F" stroke-width="4">
+    <line x1="90" y1="34" x2="102" y2="46"/>
+    <line x1="154" y1="98" x2="166" y2="110"/>
+    <line x1="166" y1="34" x2="154" y2="46"/>
+    <line x1="102" y1="98" x2="90" y2="110"/>
+  </g>
+  <!-- glowing gold sun head -->
+  <circle cx="128" cy="72" r="34" fill="#E8C56A"/>
+  <circle cx="128" cy="72" r="34" fill="none" stroke="#F2E8C0" stroke-width="3"/>
+  <circle cx="128" cy="72" r="22" fill="#C9A23F"/>
+  <!-- runes ring -->
+  <path d="M108 60 L114 64 L110 70 M148 60 L142 64 L146 70 M112 86 L118 82 M144 86 L138 82" stroke="#F5F2E8" stroke-width="2.5" fill="none"/>
+  <!-- blazing core gem -->
+  <path d="M128 56 L142 72 L128 88 L114 72 Z" fill="#F5F2E8"/>
+  <circle cx="128" cy="72" r="7" fill="#F2E8C0"/>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Perfect Hero Fist Wraps: chi-infused glowing wraps with runed bronze bands. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- chi glow aura -->
+  <rect x="42" y="74" width="86" height="112" rx="28" fill="#FFE08A" opacity="0.20"/>
+  <rect x="128" y="74" width="86" height="112" rx="28" fill="#FFE08A" opacity="0.20"/>
+  <rect x="50" y="82" width="70" height="96" rx="22" fill="#FFD06A" opacity="0.16"/>
+  <rect x="136" y="82" width="70" height="96" rx="22" fill="#FFD06A" opacity="0.16"/>
+
+  <!-- left wrapped fist -->
+  <rect x="56" y="88" width="58" height="84" rx="16" fill="#C9852E"/>
+  <rect x="56" y="88" width="20" height="84" rx="16" fill="#D89846"/>
+  <rect x="64" y="162" width="42" height="54" rx="10" fill="#B5762A"/>
+  <!-- left runed bronze knuckle guard -->
+  <path d="M52 98 Q85 80 118 98 L116 116 Q85 102 54 116 Z" fill="#A8732E"/>
+  <path d="M52 98 Q85 80 118 98 L117 104 Q85 88 53 104 Z" fill="#C49A4A"/>
+  <!-- glowing chi runes on guard -->
+  <path d="M70 102 L78 106 L72 112 M100 102 L92 106 L98 112" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
+  <!-- left glowing wrap bindings -->
+  <rect x="54" y="124" width="62" height="9" rx="4" fill="#A8431A"/>
+  <rect x="54" y="124" width="62" height="3" rx="1.5" fill="#FFE08A" opacity="0.8"/>
+  <rect x="54" y="146" width="62" height="9" rx="4" fill="#A8431A"/>
+  <rect x="54" y="146" width="62" height="3" rx="1.5" fill="#FFE08A" opacity="0.8"/>
+  <rect x="60" y="182" width="50" height="8" rx="4" fill="#A8431A"/>
+  <!-- left chi core spark -->
+  <circle cx="85" cy="138" r="6" fill="#FFD06A"/>
+  <circle cx="85" cy="138" r="2.5" fill="#FFF4C8"/>
+
+  <!-- right wrapped fist -->
+  <rect x="142" y="88" width="58" height="84" rx="16" fill="#C9852E"/>
+  <rect x="142" y="88" width="20" height="84" rx="16" fill="#D89846"/>
+  <rect x="150" y="162" width="42" height="54" rx="10" fill="#B5762A"/>
+  <path d="M138 98 Q171 80 204 98 L202 116 Q171 102 140 116 Z" fill="#A8732E"/>
+  <path d="M138 98 Q171 80 204 98 L203 104 Q171 88 139 104 Z" fill="#C49A4A"/>
+  <path d="M156 102 L164 106 L158 112 M186 102 L178 106 L184 112" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
+  <rect x="140" y="124" width="62" height="9" rx="4" fill="#A8431A"/>
+  <rect x="140" y="124" width="62" height="3" rx="1.5" fill="#FFE08A" opacity="0.8"/>
+  <rect x="140" y="146" width="62" height="9" rx="4" fill="#A8431A"/>
+  <rect x="140" y="146" width="62" height="3" rx="1.5" fill="#FFE08A" opacity="0.8"/>
+  <rect x="146" y="182" width="50" height="8" rx="4" fill="#A8431A"/>
+  <circle cx="171" cy="138" r="6" fill="#FFD06A"/>
+  <circle cx="171" cy="138" r="2.5" fill="#FFF4C8"/>
+  </g>
+</svg>

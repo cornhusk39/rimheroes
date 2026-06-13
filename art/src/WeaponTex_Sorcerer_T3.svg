@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Greater Hero Scepter: ornate gold rod, faceted crystal, faint energy crackle. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- handle -->
+  <rect x="120" y="82" width="16" height="144" rx="5" fill="#2A211D"/>
+  <rect x="120" y="82" width="5" height="144" fill="#3D332C"/>
+  <!-- ornate gold wrap bands -->
+  <rect x="116" y="110" width="24" height="10" rx="2" fill="#E0A030"/>
+  <rect x="116" y="148" width="24" height="10" rx="2" fill="#E0A030"/>
+  <rect x="116" y="186" width="24" height="10" rx="2" fill="#E0A030"/>
+  <rect x="116" y="110" width="24" height="3" fill="#F2C84A"/>
+  <rect x="116" y="148" width="24" height="3" fill="#F2C84A"/>
+  <rect x="116" y="186" width="24" height="3" fill="#F2C84A"/>
+  <!-- ornate pommel -->
+  <ellipse cx="128" cy="228" rx="13" ry="10" fill="#E0A030"/>
+  <ellipse cx="128" cy="228" rx="6" ry="5" fill="#8E2A2A"/>
+  <!-- ornate claw setting holding crystal -->
+  <path d="M110 80 L128 50 L146 80 Z" fill="#C79A3E"/>
+  <path d="M112 82 L106 64 M144 82 L150 64" stroke="#E0A030" stroke-width="5" stroke-linecap="round"/>
+  <!-- faint energy crackle -->
+  <path d="M98 56 L108 60 L102 68 M158 56 L148 60 L154 68" stroke="#F2C84A" stroke-width="2.5" fill="none" opacity="0.7"/>
+  <!-- faceted crimson crystal -->
+  <path d="M128 30 L150 62 L128 86 L106 62 Z" fill="#8E2A2A"/>
+  <path d="M128 30 L150 62 L128 62 Z" fill="#6E1E1E"/>
+  <path d="M128 30 L128 86 M106 62 L150 62" stroke="#A83838" stroke-width="2"/>
+  <path d="M128 30 L117 62 L128 86 Z" fill="#A83838" opacity="0.5"/>
+  </g>
+</svg>

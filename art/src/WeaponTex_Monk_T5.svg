@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- Thousand Hands (capstone): gauntlet-wraps blazing with chi, faint afterimage. -->
+  <!-- faint afterimage fists (offset, low opacity) -->
+  <rect x="40" y="86" width="60" height="88" rx="18" fill="#FFE08A" opacity="0.12"/>
+  <rect x="156" y="86" width="60" height="88" rx="18" fill="#FFE08A" opacity="0.12"/>
+  <rect x="30" y="90" width="60" height="88" rx="18" fill="#FFD06A" opacity="0.10"/>
+  <rect x="166" y="90" width="60" height="88" rx="18" fill="#FFD06A" opacity="0.10"/>
+
+  <!-- blazing chi aura -->
+  <rect x="44" y="70" width="88" height="120" rx="30" fill="#FFE08A" opacity="0.26"/>
+  <rect x="124" y="70" width="88" height="120" rx="30" fill="#FFE08A" opacity="0.26"/>
+  <rect x="52" y="80" width="72" height="102" rx="24" fill="#FFD06A" opacity="0.22"/>
+  <rect x="132" y="80" width="72" height="102" rx="24" fill="#FFD06A" opacity="0.22"/>
+
+  <!-- left gauntlet-wrapped fist -->
+  <rect x="54" y="86" width="60" height="88" rx="16" fill="#C9852E"/>
+  <rect x="54" y="86" width="22" height="88" rx="16" fill="#D89846"/>
+  <rect x="62" y="164" width="44" height="56" rx="10" fill="#B5762A"/>
+  <!-- left blazing bronze gauntlet guard -->
+  <path d="M50 96 Q84 76 118 96 L116 118 Q84 100 52 118 Z" fill="#A8732E"/>
+  <path d="M50 96 Q84 76 118 96 L117 103 Q84 84 51 103 Z" fill="#C49A4A"/>
+  <path d="M50 96 Q84 76 118 96" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
+  <!-- left blazing chi runes -->
+  <path d="M68 100 L76 105 L70 112 M100 100 L92 105 L98 112" stroke="#FFF4C8" stroke-width="2.5" fill="none"/>
+  <!-- left blazing wrap bindings -->
+  <rect x="52" y="124" width="64" height="9" rx="4" fill="#A8431A"/>
+  <rect x="52" y="124" width="64" height="3.5" rx="1.5" fill="#FFF4C8"/>
+  <rect x="52" y="146" width="64" height="9" rx="4" fill="#A8431A"/>
+  <rect x="52" y="146" width="64" height="3.5" rx="1.5" fill="#FFF4C8"/>
+  <rect x="58" y="184" width="52" height="8" rx="4" fill="#A8431A"/>
+  <rect x="58" y="184" width="52" height="3" rx="1.5" fill="#FFE08A"/>
+  <!-- left blazing chi core -->
+  <circle cx="84" cy="140" r="9" fill="#FFD06A"/>
+  <circle cx="84" cy="140" r="4" fill="#FFF4C8"/>
+
+  <!-- right gauntlet-wrapped fist -->
+  <rect x="142" y="86" width="60" height="88" rx="16" fill="#C9852E"/>
+  <rect x="142" y="86" width="22" height="88" rx="16" fill="#D89846"/>
+  <rect x="150" y="164" width="44" height="56" rx="10" fill="#B5762A"/>
+  <path d="M138 96 Q172 76 206 96 L204 118 Q172 100 140 118 Z" fill="#A8732E"/>
+  <path d="M138 96 Q172 76 206 96 L205 103 Q172 84 139 103 Z" fill="#C49A4A"/>
+  <path d="M138 96 Q172 76 206 96" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
+  <path d="M156 100 L164 105 L158 112 M188 100 L180 105 L186 112" stroke="#FFF4C8" stroke-width="2.5" fill="none"/>
+  <rect x="140" y="124" width="64" height="9" rx="4" fill="#A8431A"/>
+  <rect x="140" y="124" width="64" height="3.5" rx="1.5" fill="#FFF4C8"/>
+  <rect x="140" y="146" width="64" height="9" rx="4" fill="#A8431A"/>
+  <rect x="140" y="146" width="64" height="3.5" rx="1.5" fill="#FFF4C8"/>
+  <rect x="146" y="184" width="52" height="8" rx="4" fill="#A8431A"/>
+  <rect x="146" y="184" width="52" height="3" rx="1.5" fill="#FFE08A"/>
+  <circle cx="172" cy="140" r="9" fill="#FFD06A"/>
+  <circle cx="172" cy="140" r="4" fill="#FFF4C8"/>
+
+  <!-- rising chi wisps between the fists -->
+  <path d="M128 78 C124 60 132 50 128 34" stroke="#FFE08A" stroke-width="3" fill="none"/>
+  <path d="M128 78 C124 60 132 50 128 34" stroke="#FFF4C8" stroke-width="1.2" fill="none"/>
+  </g>
+</svg>

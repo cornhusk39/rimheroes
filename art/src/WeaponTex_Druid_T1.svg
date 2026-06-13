@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Living Staff: a plain gnarled branch staff. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- gnarled shaft, slight twists -->
+  <path d="M120 234 C115 190 132 150 122 110 C116 80 130 56 124 34 L138 34 C132 58 144 82 138 110 C146 150 131 190 136 234 Z" fill="#6E5638"/>
+  <path d="M122 230 C118 190 132 152 124 112 C119 82 130 60 126 38 L131 38 C128 60 137 82 132 112 C140 152 127 190 130 230 Z" fill="#856A48"/>
+  <!-- knots -->
+  <ellipse cx="128" cy="150" rx="9" ry="7" fill="#5A4630"/>
+  <ellipse cx="130" cy="90" rx="7" ry="6" fill="#5A4630"/>
+  <!-- base nub -->
+  <ellipse cx="128" cy="236" rx="13" ry="10" fill="#5A4630"/>
+  <!-- forked twig top -->
+  <path d="M124 36 L108 16 L116 22 L122 34 Z" fill="#6E5638"/>
+  <path d="M132 36 L150 18 L142 24 L136 34 Z" fill="#6E5638"/>
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Perfect Hero Lute: glowing magical lute, rising music notes, glowing strings, glow halo. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- glow halo -->
+  <ellipse cx="128" cy="190" rx="66" ry="60" fill="#F2C84A" opacity="0.18"/>
+  <ellipse cx="128" cy="190" rx="54" ry="50" fill="#F2C84A" opacity="0.15"/>
+  <!-- neck -->
+  <rect x="122" y="48" width="12" height="126" rx="4" fill="#A8732E"/>
+  <rect x="122" y="48" width="4" height="126" fill="#F2C84A"/>
+  <!-- tuning head with inlay -->
+  <path d="M115 26 L141 26 L139 56 L117 56 Z" fill="#8C5E24"/>
+  <path d="M115 26 L141 26 L140 40 L116 40 Z" fill="#C9A23F"/>
+  <path d="M128 28 L132 34 L128 40 L124 34 Z" fill="#F2C84A"/>
+  <circle cx="113" cy="38" r="3" fill="#F2C84A"/>
+  <circle cx="143" cy="38" r="3" fill="#F2C84A"/>
+  <circle cx="113" cy="48" r="3" fill="#F2C84A"/>
+  <circle cx="143" cy="48" r="3" fill="#F2C84A"/>
+  <!-- bowl body -->
+  <ellipse cx="128" cy="192" rx="50" ry="46" fill="#5E2548"/>
+  <ellipse cx="128" cy="190" rx="44" ry="40" fill="#8E3A6E"/>
+  <ellipse cx="110" cy="178" rx="15" ry="24" fill="#C264A0" opacity="0.6"/>
+  <!-- glowing gold binding + inlay -->
+  <ellipse cx="128" cy="190" rx="44" ry="40" fill="none" stroke="#F2C84A" stroke-width="3"/>
+  <path d="M102 156 Q128 148 154 156" stroke="#F2C84A" stroke-width="2" fill="none"/>
+  <path d="M98 224 Q128 232 158 224" stroke="#F2C84A" stroke-width="2" fill="none"/>
+  <!-- radiant rosette soundhole -->
+  <circle cx="128" cy="182" r="16" fill="#F2C84A" opacity="0.5"/>
+  <circle cx="128" cy="182" r="13" fill="#C9A23F"/>
+  <circle cx="128" cy="182" r="9" fill="#3A1730"/>
+  <circle cx="128" cy="182" r="4" fill="#FFF0B8"/>
+  <!-- inlaid gem -->
+  <path d="M128 158 L135 166 L128 175 L121 166 Z" fill="#F2C84A"/>
+  <path d="M128 161 L132 166 L128 171 L124 166 Z" fill="#FFF6D8"/>
+  <!-- bridge -->
+  <rect x="113" y="206" width="30" height="6" rx="2" fill="#F2C84A"/>
+  <!-- gold frets -->
+  <rect x="122" y="70" width="12" height="2.5" fill="#F2C84A"/>
+  <rect x="122" y="90" width="12" height="2.5" fill="#F2C84A"/>
+  <rect x="122" y="110" width="12" height="2.5" fill="#F2C84A"/>
+  <rect x="122" y="130" width="12" height="2.5" fill="#F2C84A"/>
+  <!-- glowing strings -->
+  <rect x="123" y="50" width="1.8" height="158" fill="#FFF0B8"/>
+  <rect x="127.5" y="50" width="1.8" height="158" fill="#FFF0B8"/>
+  <rect x="132" y="50" width="1.8" height="158" fill="#FFF0B8"/>
+  <!-- rising music notes -->
+  <g fill="#F2C84A">
+    <ellipse cx="172" cy="150" rx="5" ry="4" transform="rotate(-20 172 150)"/>
+    <rect x="175" y="130" width="2.5" height="22"/>
+    <ellipse cx="192" cy="120" rx="4" ry="3" transform="rotate(-20 192 120)"/>
+    <rect x="194.5" y="103" width="2" height="18"/>
+  </g>
+  <g fill="#FFF0B8">
+    <ellipse cx="186" cy="172" rx="4" ry="3" transform="rotate(-20 186 172)"/>
+    <rect x="188.5" y="155" width="2" height="18"/>
+  </g>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Greater Hero Mace: ornate gold sun-head, gem, faint glow, sun rays. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- faint glow halo -->
+  <circle cx="128" cy="74" r="44" fill="#F2E8C0" opacity="0.22"/>
+  <rect x="121" y="80" width="14" height="146" rx="5" fill="#5A4A3A"/>
+  <rect x="121" y="80" width="5" height="146" fill="#6E5C46"/>
+  <ellipse cx="128" cy="228" rx="12" ry="10" fill="#C9A23F"/>
+  <ellipse cx="128" cy="228" rx="5" ry="4" fill="#F2E8C0"/>
+  <!-- neck collar -->
+  <rect x="114" y="72" width="28" height="14" rx="2" fill="#C9A23F"/>
+  <!-- sun rays -->
+  <g stroke="#C9A23F" stroke-width="4">
+    <line x1="128" y1="26" x2="128" y2="40"/>
+    <line x1="128" y1="108" x2="128" y2="120"/>
+    <line x1="86" y1="74" x2="98" y2="74"/>
+    <line x1="158" y1="74" x2="170" y2="74"/>
+    <line x1="100" y1="46" x2="108" y2="54"/>
+    <line x1="148" y1="94" x2="156" y2="102"/>
+    <line x1="156" y1="46" x2="148" y2="54"/>
+    <line x1="108" y1="94" x2="100" y2="102"/>
+  </g>
+  <!-- gold sun head -->
+  <circle cx="128" cy="74" r="30" fill="#C9A23F"/>
+  <circle cx="128" cy="74" r="30" fill="none" stroke="#E8C56A" stroke-width="2"/>
+  <circle cx="128" cy="74" r="18" fill="#B0892F"/>
+  <!-- central gem -->
+  <path d="M128 62 L138 74 L128 86 L118 74 Z" fill="#E8E4D8"/>
+  <path d="M128 66 L134 74 L128 82 L122 74 Z" fill="#F5F2E8"/>
+  </g>
+</svg>

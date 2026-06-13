@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Greater Hero Warhammer: gold-engraved steel head, royal-blue gem, faint holy glow. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- faint glow halo behind head -->
+  <ellipse cx="128" cy="63" rx="64" ry="48" fill="#F2E8C0" opacity="0.14"/>
+  <!-- haft -->
+  <rect x="121" y="74" width="14" height="158" rx="5" fill="#5E4527"/>
+  <rect x="121" y="74" width="5" height="158" fill="#73552F"/>
+  <ellipse cx="128" cy="234" rx="12" ry="10" fill="#C9A23F"/>
+  <ellipse cx="128" cy="234" rx="5" ry="4" fill="#E3C56A"/>
+  <!-- blue grip wrap with gold pins -->
+  <rect x="119" y="148" width="18" height="26" rx="3" fill="#2E4E9E"/>
+  <rect x="119" y="153" width="18" height="3" fill="#4866BE"/>
+  <rect x="118" y="146" width="20" height="4" rx="2" fill="#C9A23F"/>
+  <rect x="118" y="172" width="20" height="4" rx="2" fill="#C9A23F"/>
+  <!-- hammer head block, steel -->
+  <rect x="88" y="40" width="80" height="44" rx="5" fill="#C4CBD6"/>
+  <rect x="88" y="40" width="80" height="13" fill="#DCE2EC"/>
+  <rect x="88" y="76" width="80" height="8" fill="#9AA3B0"/>
+  <!-- striking face -->
+  <rect x="84" y="44" width="8" height="36" rx="2" fill="#9AA3B0"/>
+  <!-- gold engraved bands -->
+  <rect x="88" y="44" width="80" height="6" fill="#C9A23F"/>
+  <rect x="88" y="74" width="80" height="6" fill="#C9A23F"/>
+  <!-- engraved scrollwork on face -->
+  <path d="M100 64 L112 64 M144 64 L156 64" stroke="#C9A23F" stroke-width="3" fill="none"/>
+  <!-- royal-blue gem set in head -->
+  <circle cx="128" cy="62" r="9" fill="#C9A23F"/>
+  <circle cx="128" cy="62" r="6" fill="#2E4E9E"/>
+  <circle cx="126" cy="60" r="2" fill="#6E8BDE"/>
+  <!-- back spike, gold-trimmed -->
+  <path d="M168 48 L204 56 L204 68 L168 76 Z" fill="#C4CBD6"/>
+  <path d="M168 56 L204 62 L168 68 Z" fill="#9AA3B0"/>
+  <path d="M168 54 L204 58" stroke="#C9A23F" stroke-width="3"/>
+  <!-- collar -->
+  <rect x="114" y="80" width="28" height="10" rx="2" fill="#C9A23F"/>
+  <!-- top of head -->
+  <rect x="123" y="32" width="10" height="14" rx="3" fill="#C4CBD6"/>
+  </g>
+</svg>

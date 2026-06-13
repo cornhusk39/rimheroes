@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Hero Longsword: keen steel blade with a fuller line, cobalt-wrapped grip. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- blade -->
+  <path d="M128 22 L117 42 L117 152 L139 152 L139 42 Z" fill="#9AA1AA"/>
+  <path d="M122 40 L122 152 L128 152 L128 30 Z" fill="#B8BEC6"/>
+  <!-- fuller line -->
+  <rect x="126" y="46" width="4" height="100" rx="2" fill="#7E848C"/>
+  <!-- crossguard -->
+  <rect x="90" y="152" width="76" height="14" rx="4" fill="#9AA1AA"/>
+  <rect x="90" y="152" width="76" height="5" fill="#B8BEC6"/>
+  <!-- cobalt-wrapped grip -->
+  <rect x="120" y="166" width="16" height="50" rx="4" fill="#2E4E9E"/>
+  <path d="M120 174 L136 178 M120 184 L136 188 M120 194 L136 198 M120 204 L136 208" stroke="#4A6CC4" stroke-width="3"/>
+  <!-- pommel -->
+  <circle cx="128" cy="224" r="11" fill="#9AA1AA"/>
+  <circle cx="128" cy="224" r="5" fill="#7E848C"/>
+  </g>
+</svg>

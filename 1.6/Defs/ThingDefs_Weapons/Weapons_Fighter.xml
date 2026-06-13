@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Class-locked hero longswords for the fighter. Base RH_HeroWeaponMeleeBase is defined in Weapons_Barbarian.xml. -->
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Fighter_T1</defName>
+    <label>lesser hero longsword</label>
+    <description>A plain arming sword of honest steel, balanced far finer than any common blade. Bound to a hero fighter — it answers to no other hand.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Fighter/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>700</MarketValue></statBases>
+    <tools>
+      <li><label>edge</label><capacities><li>Cut</li></capacities><power>22</power><cooldownTime>1.9</cooldownTime><armorPenetration>0.18</armorPenetration></li>
+      <li><label>point</label><capacities><li>Stab</li></capacities><power>21</power><cooldownTime>2.0</cooldownTime><armorPenetration>0.18</armorPenetration></li>
+      <li><label>handle</label><capacities><li>Blunt</li></capacities><power>9</power><cooldownTime>2.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Fighter</heroClass><minLevel>1</minLevel><tier>1</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Fighter_T2</defName>
+    <label>hero longsword</label>
+    <description>A masterwork steel longsword with a deep fuller and a cobalt-wrapped grip. It cuts cleaner and thrusts surer than the lesser blade.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Fighter/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>1400</MarketValue></statBases>
+    <tools>
+      <li><label>edge</label><capacities><li>Cut</li></capacities><power>29</power><cooldownTime>1.9</cooldownTime><armorPenetration>0.24</armorPenetration></li>
+      <li><label>point</label><capacities><li>Stab</li></capacities><power>28</power><cooldownTime>2.0</cooldownTime><armorPenetration>0.24</armorPenetration></li>
+      <li><label>handle</label><capacities><li>Blunt</li></capacities><power>11</power><cooldownTime>2.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Fighter</heroClass><minLevel>5</minLevel><tier>2</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Fighter_T3</defName>
+    <label>greater hero longsword</label>
+    <description>A gold-crossed longsword set with a cobalt gem in its pommel, its edges trailing a faint cold light. Heavy plate parts before it.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Fighter/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>2600</MarketValue></statBases>
+    <tools>
+      <li><label>edge</label><capacities><li>Cut</li></capacities><power>38</power><cooldownTime>1.9</cooldownTime><armorPenetration>0.32</armorPenetration></li>
+      <li><label>point</label><capacities><li>Stab</li></capacities><power>37</power><cooldownTime>2.0</cooldownTime><armorPenetration>0.32</armorPenetration></li>
+      <li><label>handle</label><capacities><li>Blunt</li></capacities><power>13</power><cooldownTime>2.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Fighter</heroClass><minLevel>10</minLevel><tier>3</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Fighter_T4</defName>
+    <label>perfect hero longsword</label>
+    <description>A longsword whose runed blade burns with cold blue light, set in a winged crossguard and haloed in soft radiance. Few foes stand against a single clean stroke.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Fighter/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>4200</MarketValue></statBases>
+    <tools>
+      <li><label>edge</label><capacities><li>Cut</li></capacities><power>48</power><cooldownTime>1.9</cooldownTime><armorPenetration>0.42</armorPenetration></li>
+      <li><label>point</label><capacities><li>Stab</li></capacities><power>47</power><cooldownTime>2.0</cooldownTime><armorPenetration>0.42</armorPenetration></li>
+      <li><label>handle</label><capacities><li>Blunt</li></capacities><power>15</power><cooldownTime>2.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Fighter</heroClass><minLevel>15</minLevel><tier>4</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Fighter_T5</defName>
+    <label>Aegisedge</label>
+    <description>The capstone longsword of the fighter, claimed only by a hero who has reached the summit of their legend. Its radiant blade never dims, sheathed in a blue-white aura that turns aside blows even as it cleaves them.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Fighter/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>9000</MarketValue></statBases>
+    <tools>
+      <li><label>edge</label><capacities><li>Cut</li></capacities><power>62</power><cooldownTime>1.9</cooldownTime><armorPenetration>0.55</armorPenetration></li>
+      <li><label>point</label><capacities><li>Stab</li></capacities><power>60</power><cooldownTime>2.0</cooldownTime><armorPenetration>0.55</armorPenetration></li>
+      <li><label>handle</label><capacities><li>Blunt</li></capacities><power>18</power><cooldownTime>2.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Fighter</heroClass><minLevel>20</minLevel><tier>5</tier></li></modExtensions>
+  </ThingDef>
+
+</Defs>

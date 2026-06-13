@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Greater Hero Longsword: gold crossguard, blue gem pommel, faint edge glow. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- faint edge glow -->
+  <path d="M128 18 L113 42 L113 156 L143 156 L143 42 Z" fill="#9DC2FF" opacity="0.22"/>
+  <!-- blade -->
+  <path d="M128 22 L117 42 L117 152 L139 152 L139 42 Z" fill="#9AA1AA"/>
+  <path d="M122 40 L122 152 L128 152 L128 30 Z" fill="#B8BEC6"/>
+  <!-- fuller line -->
+  <rect x="126" y="46" width="4" height="100" rx="2" fill="#7E848C"/>
+  <!-- gold crossguard -->
+  <rect x="86" y="152" width="84" height="15" rx="5" fill="#C9A23F"/>
+  <rect x="86" y="152" width="84" height="5" fill="#E6C766"/>
+  <ellipse cx="86" cy="159" rx="7" ry="8" fill="#C9A23F"/>
+  <ellipse cx="170" cy="159" rx="7" ry="8" fill="#C9A23F"/>
+  <!-- cobalt-wrapped grip -->
+  <rect x="120" y="167" width="16" height="48" rx="4" fill="#2E4E9E"/>
+  <path d="M120 175 L136 179 M120 185 L136 189 M120 195 L136 199 M120 205 L136 209" stroke="#4A6CC4" stroke-width="3"/>
+  <!-- gold pommel with blue gem -->
+  <circle cx="128" cy="224" r="13" fill="#C9A23F"/>
+  <circle cx="128" cy="224" r="7" fill="#2E4E9E"/>
+  <circle cx="125" cy="221" r="3" fill="#9DC2FF"/>
+  </g>
+</svg>

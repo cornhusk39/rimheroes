@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Lute: plain wooden lute, bowl body, fretted neck. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- neck -->
+  <rect x="122" y="54" width="12" height="120" rx="4" fill="#A8732E"/>
+  <rect x="122" y="54" width="4" height="120" fill="#BC8638"/>
+  <!-- tuning head -->
+  <path d="M118 32 L138 32 L136 56 L120 56 Z" fill="#8C5E24"/>
+  <circle cx="116" cy="38" r="3" fill="#5E2548"/>
+  <circle cx="140" cy="38" r="3" fill="#5E2548"/>
+  <circle cx="116" cy="48" r="3" fill="#5E2548"/>
+  <circle cx="140" cy="48" r="3" fill="#5E2548"/>
+  <!-- bowl body -->
+  <ellipse cx="128" cy="192" rx="46" ry="42" fill="#5E2548"/>
+  <ellipse cx="128" cy="190" rx="40" ry="36" fill="#8E3A6E"/>
+  <ellipse cx="112" cy="180" rx="14" ry="20" fill="#9C4A7C" opacity="0.5"/>
+  <!-- soundhole -->
+  <circle cx="128" cy="182" r="11" fill="#3A1730"/>
+  <!-- bridge -->
+  <rect x="116" y="206" width="24" height="6" rx="2" fill="#7E5224"/>
+  <!-- frets -->
+  <rect x="122" y="78" width="12" height="2.5" fill="#8C5E24"/>
+  <rect x="122" y="98" width="12" height="2.5" fill="#8C5E24"/>
+  <rect x="122" y="118" width="12" height="2.5" fill="#8C5E24"/>
+  <rect x="122" y="138" width="12" height="2.5" fill="#8C5E24"/>
+  <!-- strings -->
+  <rect x="125" y="56" width="1.5" height="152" fill="#D8C8A8"/>
+  <rect x="129.5" y="56" width="1.5" height="152" fill="#D8C8A8"/>
+  </g>
+</svg>

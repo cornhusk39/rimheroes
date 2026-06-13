@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Monk hero fist wraps / cestus: martial, fast low-damage flurry. Base RH_HeroWeaponMeleeBase defined in Weapons_Barbarian.xml. -->
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Monk_T1</defName>
+    <label>lesser hero fist wraps</label>
+    <description>Plain cloth strips wound tight around the hands of a hero monk. They turn a bare fist into a disciplined weapon, swift and tireless where heavier arms grow slow.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><Mass>0.6</Mass><MarketValue>700</MarketValue></statBases>
+    <tools>
+      <li><label>fist</label><capacities><li>Blunt</li></capacities><power>10</power><cooldownTime>1.0</cooldownTime><armorPenetration>0.10</armorPenetration></li>
+      <li><label>knuckle</label><capacities><li>Poke</li></capacities><power>8</power><cooldownTime>1.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Monk</heroClass><minLevel>1</minLevel><tier>1</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Monk_T2</defName>
+    <label>hero fist wraps</label>
+    <description>Studded wraps reinforced with a banded bronze knuckle. Each blow lands harder than bare cloth, yet they remain light enough for an endless flurry.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><Mass>0.6</Mass><MarketValue>1400</MarketValue></statBases>
+    <tools>
+      <li><label>fist</label><capacities><li>Blunt</li></capacities><power>14</power><cooldownTime>1.0</cooldownTime><armorPenetration>0.15</armorPenetration></li>
+      <li><label>knuckle</label><capacities><li>Poke</li></capacities><power>11</power><cooldownTime>1.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Monk</heroClass><minLevel>5</minLevel><tier>2</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Monk_T3</defName>
+    <label>greater hero fist wraps</label>
+    <description>Wraps capped with shaped bronze knuckle guards and strung with a strand of prayer beads. A faint warmth lingers in the cloth between strikes.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><Mass>0.6</Mass><MarketValue>2600</MarketValue></statBases>
+    <tools>
+      <li><label>fist</label><capacities><li>Blunt</li></capacities><power>18</power><cooldownTime>1.0</cooldownTime><armorPenetration>0.20</armorPenetration></li>
+      <li><label>knuckle</label><capacities><li>Poke</li></capacities><power>14</power><cooldownTime>1.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Monk</heroClass><minLevel>10</minLevel><tier>3</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Monk_T4</defName>
+    <label>perfect hero fist wraps</label>
+    <description>Chi-infused wraps that glow with channelled inner fire, their runed bronze bands singing on impact. Every blow flows from a well of disciplined power.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><Mass>0.6</Mass><MarketValue>4200</MarketValue></statBases>
+    <tools>
+      <li><label>fist</label><capacities><li>Blunt</li></capacities><power>23</power><cooldownTime>1.0</cooldownTime><armorPenetration>0.26</armorPenetration></li>
+      <li><label>knuckle</label><capacities><li>Poke</li></capacities><power>18</power><cooldownTime>1.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Monk</heroClass><minLevel>15</minLevel><tier>4</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Monk_T5</defName>
+    <label>Thousand Hands</label>
+    <description>The capstone wraps of the monk, earned only by a hero who has perfected body and spirit alike. Blazing with chi, the fists strike so swiftly they trail a thousand afterimages, and no flurry of mortal hands can match them.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><Mass>0.6</Mass><MarketValue>9000</MarketValue></statBases>
+    <tools>
+      <li><label>fist</label><capacities><li>Blunt</li></capacities><power>30</power><cooldownTime>1.0</cooldownTime><armorPenetration>0.34</armorPenetration></li>
+      <li><label>knuckle</label><capacities><li>Poke</li></capacities><power>24</power><cooldownTime>1.0</cooldownTime></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Monk</heroClass><minLevel>20</minLevel><tier>5</tier></li></modExtensions>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Greater Hero Fist Wraps: bronze knuckle guards, a prayer bead, faint glow. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- faint warm glow aura -->
+  <rect x="46" y="80" width="80" height="100" rx="24" fill="#FFD06A" opacity="0.12"/>
+  <rect x="130" y="80" width="80" height="100" rx="24" fill="#FFD06A" opacity="0.12"/>
+
+  <!-- left wrapped fist -->
+  <rect x="58" y="90" width="56" height="80" rx="16" fill="#C9852E"/>
+  <rect x="58" y="90" width="20" height="80" rx="16" fill="#D89846"/>
+  <rect x="66" y="160" width="40" height="52" rx="10" fill="#B5762A"/>
+  <!-- left bronze knuckle guard (raised plate over fingers) -->
+  <path d="M54 100 Q86 84 118 100 L116 116 Q86 104 56 116 Z" fill="#A8732E"/>
+  <path d="M54 100 Q86 84 118 100 L117 106 Q86 92 55 106 Z" fill="#C49A4A"/>
+  <circle cx="72" cy="105" r="3.5" fill="#8C5A1F"/>
+  <circle cx="86" cy="103" r="3.5" fill="#8C5A1F"/>
+  <circle cx="100" cy="105" r="3.5" fill="#8C5A1F"/>
+  <!-- left wrap bindings -->
+  <rect x="56" y="124" width="60" height="9" rx="4" fill="#A8431A"/>
+  <rect x="56" y="144" width="60" height="9" rx="4" fill="#A8431A"/>
+  <rect x="62" y="178" width="48" height="8" rx="4" fill="#A8431A"/>
+  <!-- prayer bead strand on left wrist -->
+  <circle cx="70" cy="196" r="4" fill="#7A3A18"/>
+  <circle cx="84" cy="200" r="4" fill="#7A3A18"/>
+  <circle cx="98" cy="196" r="4" fill="#7A3A18"/>
+
+  <!-- right wrapped fist -->
+  <rect x="142" y="90" width="56" height="80" rx="16" fill="#C9852E"/>
+  <rect x="142" y="90" width="20" height="80" rx="16" fill="#D89846"/>
+  <rect x="150" y="160" width="40" height="52" rx="10" fill="#B5762A"/>
+  <path d="M138 100 Q170 84 202 100 L200 116 Q170 104 140 116 Z" fill="#A8732E"/>
+  <path d="M138 100 Q170 84 202 100 L201 106 Q170 92 139 106 Z" fill="#C49A4A"/>
+  <circle cx="156" cy="105" r="3.5" fill="#8C5A1F"/>
+  <circle cx="170" cy="103" r="3.5" fill="#8C5A1F"/>
+  <circle cx="184" cy="105" r="3.5" fill="#8C5A1F"/>
+  <rect x="140" y="124" width="60" height="9" rx="4" fill="#A8431A"/>
+  <rect x="140" y="144" width="60" height="9" rx="4" fill="#A8431A"/>
+  <rect x="146" y="178" width="48" height="8" rx="4" fill="#A8431A"/>
+  </g>
+</svg>

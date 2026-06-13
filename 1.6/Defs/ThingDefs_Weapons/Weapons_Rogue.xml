@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Rogue twin daggers: fast, high armor-penetration paired blades. Base RH_HeroWeaponMeleeBase defined in Weapons_Barbarian.xml. -->
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Rogue_T1</defName>
+    <label>lesser hero daggers</label>
+    <description>A matched pair of keen hero daggers, light and wickedly balanced for the offhand. Bound to a hero rogue, they slip past armour where heavier blades only batter it.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>700</MarketValue></statBases>
+    <tools>
+      <li><label>blade</label><capacities><li>Stab</li></capacities><power>14</power><cooldownTime>1.1</cooldownTime><armorPenetration>0.30</armorPenetration></li>
+      <li><label>edge</label><capacities><li>Cut</li></capacities><power>12</power><cooldownTime>1.2</cooldownTime><armorPenetration>0.30</armorPenetration></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Rogue</heroClass><minLevel>1</minLevel><tier>1</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Rogue_T2</defName>
+    <label>hero daggers</label>
+    <description>Twin daggers with blackened blades and oxblood-wrapped grips, honed to find the gaps in plate. They drink the light, and the blood, of any who let the rogue close.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>1400</MarketValue></statBases>
+    <tools>
+      <li><label>blade</label><capacities><li>Stab</li></capacities><power>19</power><cooldownTime>1.1</cooldownTime><armorPenetration>0.38</armorPenetration></li>
+      <li><label>edge</label><capacities><li>Cut</li></capacities><power>16</power><cooldownTime>1.2</cooldownTime><armorPenetration>0.38</armorPenetration></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Rogue</heroClass><minLevel>5</minLevel><tier>2</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Rogue_T3</defName>
+    <label>greater hero daggers</label>
+    <description>A pair of ornate daggers with gilded guards and blood-ruby pommels, their edges humming with a faint banked power. Each strike threads armour like thread through cloth.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>2600</MarketValue></statBases>
+    <tools>
+      <li><label>blade</label><capacities><li>Stab</li></capacities><power>25</power><cooldownTime>1.1</cooldownTime><armorPenetration>0.46</armorPenetration></li>
+      <li><label>edge</label><capacities><li>Cut</li></capacities><power>21</power><cooldownTime>1.2</cooldownTime><armorPenetration>0.46</armorPenetration></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Rogue</heroClass><minLevel>10</minLevel><tier>3</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Rogue_T4</defName>
+    <label>perfect hero daggers</label>
+    <description>Twin blades wreathed in living shadow, their glowing edges trailing dark wisps and a red glint of bound malice. They cut where the eye cannot follow.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>4200</MarketValue></statBases>
+    <tools>
+      <li><label>blade</label><capacities><li>Stab</li></capacities><power>32</power><cooldownTime>1.1</cooldownTime><armorPenetration>0.55</armorPenetration></li>
+      <li><label>edge</label><capacities><li>Cut</li></capacities><power>27</power><cooldownTime>1.2</cooldownTime><armorPenetration>0.55</armorPenetration></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Rogue</heroClass><minLevel>15</minLevel><tier>4</tier></li></modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponMeleeBase">
+    <defName>RH_Weapon_Rogue_T5</defName>
+    <label>Whisper and Woe</label>
+    <description>The capstone daggers of the rogue, won only by a hero who has reached the height of their legend. Whisper takes the breath; Woe takes the rest. Twin blades trailing shadow, each set with a red eye-glint that watches for the killing gap — and never misses it.</description>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MarketValue>9000</MarketValue></statBases>
+    <tools>
+      <li><label>blade</label><capacities><li>Stab</li></capacities><power>42</power><cooldownTime>1.1</cooldownTime><armorPenetration>0.70</armorPenetration></li>
+      <li><label>edge</label><capacities><li>Cut</li></capacities><power>35</power><cooldownTime>1.2</cooldownTime><armorPenetration>0.70</armorPenetration></li>
+    </tools>
+    <modExtensions><li Class="RimHeroes.WeaponLockExtension"><heroClass>RH_Rogue</heroClass><minLevel>20</minLevel><tier>5</tier></li></modExtensions>
+  </ThingDef>
+
+</Defs>

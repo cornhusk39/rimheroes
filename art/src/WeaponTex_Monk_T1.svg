@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Fist Wraps: plain cloth strips wound around a pair of fists. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- left wrapped fist -->
+  <rect x="58" y="92" width="56" height="78" rx="16" fill="#C9852E"/>
+  <rect x="58" y="92" width="20" height="78" rx="16" fill="#D89846"/>
+  <!-- left forearm wrap tail -->
+  <rect x="66" y="160" width="40" height="50" rx="10" fill="#B5762A"/>
+  <!-- left wrap bindings -->
+  <rect x="56" y="104" width="60" height="9" rx="4" fill="#A8431A"/>
+  <rect x="56" y="124" width="60" height="9" rx="4" fill="#A8431A"/>
+  <rect x="56" y="144" width="60" height="9" rx="4" fill="#A8431A"/>
+  <rect x="62" y="176" width="48" height="8" rx="4" fill="#A8431A"/>
+  <!-- knuckle crease line -->
+  <path d="M62 100 L110 100" stroke="#8C5A1F" stroke-width="3" fill="none"/>
+
+  <!-- right wrapped fist -->
+  <rect x="142" y="92" width="56" height="78" rx="16" fill="#C9852E"/>
+  <rect x="142" y="92" width="20" height="78" rx="16" fill="#D89846"/>
+  <rect x="150" y="160" width="40" height="50" rx="10" fill="#B5762A"/>
+  <rect x="140" y="104" width="60" height="9" rx="4" fill="#A8431A"/>
+  <rect x="140" y="124" width="60" height="9" rx="4" fill="#A8431A"/>
+  <rect x="140" y="144" width="60" height="9" rx="4" fill="#A8431A"/>
+  <rect x="146" y="176" width="48" height="8" rx="4" fill="#A8431A"/>
+  <path d="M146 100 L194 100" stroke="#8C5A1F" stroke-width="3" fill="none"/>
+  </g>
+</svg>

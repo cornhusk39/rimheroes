@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Lesser Hero Longbow: plain wooden selfbow, vertical. -->
+  <!-- bow limbs: tall C-curve arc -->
+  <path d="M150 24 C108 70 104 128 104 128 C104 128 108 186 150 232" stroke="#6B4A2A" stroke-width="13" fill="none" stroke-linecap="round"/>
+  <path d="M150 24 C108 70 104 128 104 128 C104 128 108 186 150 232" stroke="#7E5A34" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- nocks -->
+  <circle cx="150" cy="24" r="6" fill="#5A3E22"/>
+  <circle cx="150" cy="232" r="6" fill="#5A3E22"/>
+  <!-- bowstring -->
+  <path d="M150 24 L150 232" stroke="#3E5A34" stroke-width="2.5" fill="none"/>
+  <!-- grip wrap -->
+  <rect x="98" y="116" width="14" height="24" rx="3" fill="#5A3E22"/>
+</svg>

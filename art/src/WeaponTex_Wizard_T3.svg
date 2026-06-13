@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Greater Hero Staff: ornate staff, floating orb cradled in a setting, faint arcane glow. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- faint arcane glow halo behind the orb -->
+  <circle cx="128" cy="46" r="34" fill="#8F7BFF" opacity="0.16"/>
+  <circle cx="128" cy="46" r="24" fill="#B8A6FF" opacity="0.16"/>
+  <rect x="121" y="70" width="14" height="168" rx="5" fill="#4A3320"/>
+  <rect x="121" y="70" width="5" height="168" fill="#5C4129"/>
+  <!-- silver-shod foot -->
+  <rect x="118" y="222" width="20" height="16" rx="3" fill="#C4CBD6"/>
+  <ellipse cx="128" cy="238" rx="10" ry="6" fill="#A6ADB8"/>
+  <!-- ornate silver mid-band -->
+  <rect x="116" y="140" width="24" height="9" rx="2" fill="#C4CBD6"/>
+  <!-- ornate silver crown setting (open claws cradling the orb) -->
+  <rect x="114" y="76" width="28" height="12" rx="3" fill="#C4CBD6"/>
+  <rect x="114" y="76" width="28" height="4" fill="#DBE0E8"/>
+  <path d="M106 80 L114 56 L122 80 Z" fill="#A6ADB8"/>
+  <path d="M150 80 L142 56 L134 80 Z" fill="#A6ADB8"/>
+  <!-- floating orb -->
+  <circle cx="128" cy="46" r="18" fill="#2E4E9E"/>
+  <circle cx="128" cy="46" r="13" fill="#4A6CC4"/>
+  <circle cx="123" cy="41" r="6" fill="#8F7BFF"/>
+  <circle cx="125" cy="43" r="2.5" fill="#B8A6FF"/>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Hero Mace: silver flanged head, small gold sun emblem. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <rect x="122" y="80" width="12" height="146" rx="5" fill="#5A4A3A"/>
+  <rect x="122" y="80" width="4" height="146" fill="#6E5C46"/>
+  <ellipse cx="128" cy="228" rx="11" ry="9" fill="#C9A23F"/>
+  <!-- neck collar -->
+  <rect x="116" y="72" width="24" height="14" rx="2" fill="#C2CAD4"/>
+  <!-- silver flanged round mace head -->
+  <path d="M128 34 L152 48 L162 74 L152 100 L128 114 L104 100 L94 74 L104 48 Z" fill="#C2CAD4"/>
+  <circle cx="128" cy="74" r="24" fill="#E6ECF4"/>
+  <circle cx="128" cy="74" r="24" fill="none" stroke="#A8B0BC" stroke-width="2"/>
+  <!-- gold sun emblem -->
+  <g stroke="#C9A23F" stroke-width="3">
+    <line x1="128" y1="50" x2="128" y2="58"/>
+    <line x1="128" y1="90" x2="128" y2="98"/>
+    <line x1="104" y1="74" x2="112" y2="74"/>
+    <line x1="144" y1="74" x2="152" y2="74"/>
+  </g>
+  <circle cx="128" cy="74" r="9" fill="#C9A23F"/>
+  </g>
+</svg>

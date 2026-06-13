@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Greater Hero Pact-Dagger: ornate violet hilt, green-runed blade, faint green glow. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <!-- faint glow halo -->
+  <path d="M128 24 L110 66 L112 158 L144 158 L146 66 Z" fill="#8EBE4A" opacity="0.16"/>
+  <!-- grip -->
+  <rect x="120" y="166" width="16" height="50" rx="6" fill="#4A2E6E"/>
+  <rect x="120" y="166" width="6" height="50" fill="#3A2356"/>
+  <path d="M122 172 L134 172 M122 192 L134 192" stroke="#8EBE4A" stroke-width="2"/>
+  <!-- ornate eye pommel -->
+  <path d="M104 224 C116 210 140 210 152 224 C140 238 116 238 104 224 Z" fill="#3A2356"/>
+  <path d="M104 224 C116 210 140 210 152 224 C140 238 116 238 104 224 Z" fill="none" stroke="#6E4A9E" stroke-width="2"/>
+  <ellipse cx="128" cy="224" rx="8" ry="7" fill="#B6E86A"/>
+  <ellipse cx="128" cy="224" rx="3" ry="6" fill="#2A1840"/>
+  <!-- ornate crossguard, swept -->
+  <path d="M96 158 C108 152 148 152 160 158 L160 168 C148 162 108 162 96 168 Z" fill="#3A2356"/>
+  <circle cx="98" cy="162" r="4" fill="#8EBE4A"/>
+  <circle cx="158" cy="162" r="4" fill="#8EBE4A"/>
+  <!-- blade -->
+  <path d="M128 24 L114 66 L116 156 L140 156 L142 66 Z" fill="#6E7479"/>
+  <path d="M128 24 L120 66 L122 156 L128 156 Z" fill="#9AA0A6"/>
+  <!-- green runes etched on blade -->
+  <path d="M124 88 L132 92 L126 100 M124 116 L132 120 L126 128" stroke="#8EBE4A" stroke-width="2.5" fill="none"/>
+  <path d="M128 24 L128 156" stroke="#C6CBD0" stroke-width="1.5"/>
+  </g>
+</svg>

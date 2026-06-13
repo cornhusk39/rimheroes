@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Perfect Hero Staff: glowing arcane staff, runed shaft, bright crystal shedding light, glow halo. Drawn vertical, rotated up-right. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- strong glow halo around the crystal -->
+  <circle cx="128" cy="48" r="44" fill="#8F7BFF" opacity="0.20"/>
+  <circle cx="128" cy="48" r="30" fill="#B8A6FF" opacity="0.22"/>
+  <rect x="121" y="74" width="14" height="164" rx="5" fill="#4A3320"/>
+  <rect x="121" y="74" width="5" height="164" fill="#5C4129"/>
+  <!-- glowing arcane runes channelled up the shaft -->
+  <path d="M128 96 C124 120 132 144 126 170 C131 196 124 212 128 232" stroke="#8F7BFF" stroke-width="3.5" fill="none"/>
+  <path d="M128 96 C124 120 132 144 126 170 C131 196 124 212 128 232" stroke="#B8A6FF" stroke-width="1.5" fill="none"/>
+  <!-- silver-shod foot -->
+  <rect x="118" y="224" width="20" height="14" rx="3" fill="#C4CBD6"/>
+  <ellipse cx="128" cy="238" rx="10" ry="6" fill="#A6ADB8"/>
+  <!-- silver crown setting holding the crystal -->
+  <rect x="114" y="78" width="28" height="12" rx="3" fill="#C4CBD6"/>
+  <rect x="114" y="78" width="28" height="4" fill="#DBE0E8"/>
+  <path d="M108 82 L116 60 L124 82 Z" fill="#A6ADB8"/>
+  <path d="M148 82 L140 60 L132 82 Z" fill="#A6ADB8"/>
+  <!-- bright arcane crystal shedding light -->
+  <path d="M128 18 L110 50 L128 72 L146 50 Z" fill="#2E4E9E"/>
+  <path d="M128 18 L118 50 L128 72 Z" fill="#4A6CC4"/>
+  <path d="M128 24 L122 48 L128 64 Z" fill="#8F7BFF"/>
+  <path d="M128 28 L125 46 L128 58 Z" fill="#B8A6FF"/>
+  <!-- light rays -->
+  <path d="M128 6 L128 16 M104 30 L96 22 M152 30 L160 22" stroke="#B8A6FF" stroke-width="3" fill="none"/>
+  </g>
+</svg>

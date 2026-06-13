@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- Lightbringer (capstone): mace blazing with holy light, a brilliant sunburst head. World-ending radiance. -->
+  <!-- vast holy aura -->
+  <circle cx="128" cy="70" r="78" fill="#F2E8C0" opacity="0.16"/>
+  <circle cx="128" cy="70" r="58" fill="#F5F2E8" opacity="0.22"/>
+  <circle cx="128" cy="70" r="38" fill="#F5F2E8" opacity="0.30"/>
+  <!-- haft of cream and gold -->
+  <rect x="119" y="82" width="18" height="150" rx="6" fill="#E8E4D8"/>
+  <rect x="119" y="82" width="6" height="150" fill="#F5F2E8"/>
+  <path d="M128 88 C124 132 132 172 128 224" stroke="#C9A23F" stroke-width="3" fill="none"/>
+  <ellipse cx="128" cy="232" rx="16" ry="13" fill="#C9A23F"/>
+  <ellipse cx="128" cy="232" rx="7" ry="6" fill="#F5F2E8"/>
+  <!-- radiant collar -->
+  <rect x="110" y="68" width="36" height="16" rx="3" fill="#C9A23F"/>
+  <path d="M120 76 L128 68 L136 76 M128 68 L128 84" stroke="#F5F2E8" stroke-width="2.5" fill="none"/>
+  <!-- brilliant long sunburst rays -->
+  <g stroke="#F5F2E8" stroke-width="5">
+    <line x1="128" y1="2" x2="128" y2="36"/>
+    <line x1="128" y1="104" x2="128" y2="128"/>
+    <line x1="60" y1="70" x2="92" y2="70"/>
+    <line x1="164" y1="70" x2="196" y2="70"/>
+  </g>
+  <g stroke="#F2E8C0" stroke-width="4">
+    <line x1="80" y1="22" x2="100" y2="42"/>
+    <line x1="156" y1="98" x2="176" y2="118"/>
+    <line x1="176" y1="22" x2="156" y2="42"/>
+    <line x1="100" y1="98" x2="80" y2="118"/>
+  </g>
+  <g stroke="#C9A23F" stroke-width="3">
+    <line x1="128" y1="36" x2="128" y2="48"/>
+    <line x1="92" y1="70" x2="104" y2="70"/>
+    <line x1="152" y1="70" x2="164" y2="70"/>
+    <line x1="128" y1="92" x2="128" y2="104"/>
+  </g>
+  <!-- blazing sunburst head -->
+  <circle cx="128" cy="70" r="38" fill="#F2E8C0"/>
+  <circle cx="128" cy="70" r="38" fill="none" stroke="#F5F2E8" stroke-width="3"/>
+  <circle cx="128" cy="70" r="26" fill="#E8C56A"/>
+  <circle cx="128" cy="70" r="14" fill="#C9A23F"/>
+  <!-- holy runes orbiting the head -->
+  <path d="M104 56 L110 60 L106 66 M152 56 L146 60 L150 66 M106 84 L112 80 M150 84 L144 80" stroke="#F5F2E8" stroke-width="2.5" fill="none"/>
+  <!-- radiant core gem -->
+  <path d="M128 54 L144 70 L128 86 L112 70 Z" fill="#F5F2E8"/>
+  <circle cx="128" cy="70" r="8" fill="#F2E8C0"/>
+  <!-- crowning light spike -->
+  <path d="M128 -2 L121 30 L135 30 Z" fill="#F5F2E8"/>
+  <line x1="128" y1="-2" x2="128" y2="30" stroke="#F2E8C0" stroke-width="3"/>
+  </g>
+</svg>

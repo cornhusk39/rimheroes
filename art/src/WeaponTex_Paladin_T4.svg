@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Perfect Hero Warhammer: radiant glowing head, holy runes, white-gold glow halo. -->
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
+  <!-- radiant glow halo, layered -->
+  <ellipse cx="128" cy="62" rx="86" ry="66" fill="#F2E8C0" opacity="0.16"/>
+  <ellipse cx="128" cy="62" rx="62" ry="48" fill="#FFF6D8" opacity="0.18"/>
+  <!-- glow rays -->
+  <path d="M128 62 L128 -8 M128 62 L60 4 M128 62 L196 4 M128 62 L40 62 M128 62 L216 62" stroke="#F2E8C0" stroke-width="3" opacity="0.3"/>
+  <!-- haft -->
+  <rect x="120" y="74" width="16" height="160" rx="6" fill="#4E3A20"/>
+  <rect x="120" y="74" width="5" height="160" fill="#6A4F2C"/>
+  <!-- glowing rune line down haft -->
+  <path d="M128 92 C124 130 132 168 128 200" stroke="#F2E8C0" stroke-width="2" fill="none" opacity="0.8"/>
+  <ellipse cx="128" cy="236" rx="14" ry="11" fill="#C9A23F"/>
+  <ellipse cx="128" cy="236" rx="6" ry="5" fill="#F2E8C0"/>
+  <!-- blue grip wrap with gold pins -->
+  <rect x="118" y="146" width="20" height="28" rx="3" fill="#2E4E9E"/>
+  <rect x="118" y="151" width="20" height="3" fill="#4866BE"/>
+  <rect x="116" y="144" width="24" height="4" rx="2" fill="#C9A23F"/>
+  <rect x="116" y="172" width="24" height="4" rx="2" fill="#C9A23F"/>
+  <!-- hammer head block, radiant steel -->
+  <rect x="84" y="36" width="88" height="48" rx="6" fill="#C4CBD6"/>
+  <rect x="84" y="36" width="88" height="14" fill="#E8EDF4"/>
+  <rect x="84" y="76" width="88" height="8" fill="#9AA3B0"/>
+  <!-- striking face, glowing edge -->
+  <rect x="80" y="40" width="8" height="40" rx="2" fill="#9AA3B0"/>
+  <rect x="80" y="40" width="3" height="40" fill="#F2E8C0"/>
+  <!-- gold bands -->
+  <rect x="84" y="40" width="88" height="6" fill="#C9A23F"/>
+  <rect x="84" y="74" width="88" height="6" fill="#C9A23F"/>
+  <!-- glowing holy runes on face -->
+  <path d="M100 58 L108 52 L108 70 M148 52 L156 58 L148 64 L156 70" stroke="#F2E8C0" stroke-width="3" fill="none"/>
+  <!-- radiant gem core -->
+  <circle cx="128" cy="60" r="12" fill="#C9A23F"/>
+  <circle cx="128" cy="60" r="8" fill="#2E4E9E"/>
+  <circle cx="128" cy="60" r="3.5" fill="#F2E8C0"/>
+  <!-- back spike, radiant -->
+  <path d="M172 44 L212 52 L212 68 L172 76 Z" fill="#C4CBD6"/>
+  <path d="M172 52 L212 60 L172 68 Z" fill="#9AA3B0"/>
+  <path d="M172 50 L212 56" stroke="#C9A23F" stroke-width="3"/>
+  <path d="M172 47 L212 53" stroke="#F2E8C0" stroke-width="1.5"/>
+  <!-- collar -->
+  <rect x="112" y="80" width="32" height="10" rx="2" fill="#C9A23F"/>
+  <!-- top spike -->
+  <path d="M128 18 L120 40 L136 40 Z" fill="#C4CBD6"/>
+  <path d="M128 18 L128 40" stroke="#F2E8C0" stroke-width="2.5"/>
+  </g>
+</svg>
