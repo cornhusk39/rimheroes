@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <!-- Thousand Hands (capstone): chi-blazing fists with a faint afterimage. -->
-  <g transform="translate(128 128) scale(0.78) rotate(45) translate(-128 -128)">
+  <g transform="translate(128 128) scale(0.78) translate(-128 -128)">
     <circle cx="90" cy="138" r="52" fill="#FFD06A" opacity="0.16"/>
     <circle cx="166" cy="138" r="52" fill="#FFD06A" opacity="0.16"/>
     <!-- afterimage fists, offset -->

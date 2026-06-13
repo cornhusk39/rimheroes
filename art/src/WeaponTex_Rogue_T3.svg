@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <!-- Greater Hero Daggers (L10): gold guards + red-gem pommels, faint glow. -->
-  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <g transform="translate(128 128) scale(0.8) translate(-128 -128)">
     <!-- LEFT -->
     <path d="M96 42 L84 132 L85 148 L107 148 L108 132 Z" fill="#5C6168"/>
     <path d="M96 42 L84 132 L95 140 L95 56 Z" fill="#C6CBD0"/>

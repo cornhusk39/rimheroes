@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <!-- Hero Fist Wraps (L5): studded cream knuckle band. -->
-  <g transform="translate(128 128) scale(0.82) rotate(45) translate(-128 -128)">
+  <g transform="translate(128 128) scale(0.82) translate(-128 -128)">
     <g>
       <ellipse cx="68" cy="150" rx="9" ry="12" fill="#B8772A"/>
       <path d="M68 120 C68 108 78 104 90 104 C102 104 112 108 112 120 L112 160 C112 172 68 172 68 160 Z" fill="#C9852E"/>

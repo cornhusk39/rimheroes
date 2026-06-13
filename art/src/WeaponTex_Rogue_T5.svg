@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <!-- Whisper & Woe (capstone): twin blades trailing shadow, red eye-glints. -->
-  <g transform="translate(128 128) scale(0.74) rotate(45) translate(-128 -128)">
+  <g transform="translate(128 128) scale(0.74) translate(-128 -128)">
     <!-- shadow aura -->
     <path d="M96 40 C84 16 72 6 74 -8 C86 10 98 22 102 40 Z" fill="#16161C" opacity="0.55"/>
     <path d="M160 40 C148 16 136 6 138 -8 C150 10 162 22 166 40 Z" fill="#16161C" opacity="0.55"/>

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <!-- Lesser Hero Daggers: a clearly-separated PAIR of plain daggers, side by side. -->
-  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+  <g transform="translate(128 128) scale(0.8) translate(-128 -128)">
     <!-- LEFT dagger (cx 96) -->
     <path d="M96 46 L86 132 L87 146 L105 146 L106 132 Z" fill="#777D84"/>
     <path d="M96 46 L86 132 L95 140 L95 60 Z" fill="#C6CBD0"/>

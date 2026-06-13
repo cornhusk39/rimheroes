@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <!-- Lesser Hero Fist Wraps: a clearly-separated PAIR of wrapped fists, side by side. -->
-  <g transform="translate(128 128) scale(0.82) rotate(45) translate(-128 -128)">
+  <g transform="translate(128 128) scale(0.82) translate(-128 -128)">
     <!-- LEFT fist (cx 90) -->
     <g>
       <ellipse cx="68" cy="150" rx="9" ry="12" fill="#B8772A"/>

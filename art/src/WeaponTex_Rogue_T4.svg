@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <!-- Perfect Hero Daggers (L15): shadow-wreathed glowing blades + red glint. -->
-  <g transform="translate(128 128) scale(0.76) rotate(45) translate(-128 -128)">
+  <g transform="translate(128 128) scale(0.76) translate(-128 -128)">
     <!-- subtle shadow wisps trailing each blade tip -->
     <path d="M96 42 C90 24 84 14 86 4 C92 16 98 26 100 40 Z" fill="#16161C" opacity="0.5"/>
     <path d="M160 42 C154 24 148 14 150 4 C156 16 162 26 164 40 Z" fill="#16161C" opacity="0.5"/>
