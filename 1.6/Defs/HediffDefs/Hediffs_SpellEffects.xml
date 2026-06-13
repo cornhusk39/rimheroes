@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Status hediffs applied by spells (slow, curse, ...). Timed via HediffCompProperties_Disappears. -->
+
+  <HediffDef>
+    <defName>RH_Chilled</defName>
+    <label>chilled</label>
+    <description>Numbed by magical frost: slower on their feet and clumsier in a fight.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.6, 0.82, 1.0)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>-0.7</MoveSpeed>
+          <MeleeHitChance>-2</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>RH_Baned</defName>
+    <label>baned</label>
+    <description>A clinging curse: their aim wavers and their courage frays.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.55, 0.25, 0.55)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>-4</MeleeHitChance>
+          <ShootingAccuracyPawn>-3</ShootingAccuracyPawn>
+          <MentalBreakThreshold>0.04</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1200</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

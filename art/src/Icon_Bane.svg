@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- a downward curse-sigil over a skull-ish mark -->
+  <circle cx="32" cy="30" r="22" fill="#3A1C42"/>
+  <circle cx="32" cy="30" r="22" fill="none" stroke="#7A3A86" stroke-width="3"/>
+  <path d="M32 14 L32 46 M20 24 L44 24 M22 36 L42 36" stroke="#C77ED8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M24 50 L32 58 L40 50" stroke="#C77ED8" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="26" cy="27" r="3" fill="#E6B8F0"/>
+  <circle cx="38" cy="27" r="3" fill="#E6B8F0"/>
+</svg>

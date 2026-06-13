@@ -181,9 +181,17 @@
         </abilities>
       </li>
       <li>
+        <level>3</level>
+        <abilities>
+          <li>RH_Spell_Bane</li>
+          <li>RH_Spell_LesserRestoration</li>
+        </abilities>
+      </li>
+      <li>
         <level>5</level>
         <abilities>
           <li>RH_Spell_Revivify</li>
+          <li>RH_Spell_PrayerOfHealing</li>
         </abilities>
       </li>
     </levelGrants>
@@ -245,6 +253,7 @@
         <level>1</level>
         <abilities>
           <li>RH_Spell_FireBolt</li>
+          <li>RH_Spell_RayOfFrost</li>
           <li>RH_Spell_MagicMissile</li>
           <li>RH_Spell_MageArmor</li>
         </abilities>

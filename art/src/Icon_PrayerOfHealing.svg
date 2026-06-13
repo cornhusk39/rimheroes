@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- radiant healing cross with surrounding sparks (AoE) -->
+  <circle cx="32" cy="32" r="24" fill="#FFF6D8" opacity="0.25"/>
+  <path d="M32 4 L34 12 M32 60 L34 52 M4 32 L12 30 M60 32 L52 30 M12 12 L18 18 M52 52 L46 46 M52 12 L46 18 M12 52 L18 46" stroke="#F2D86A" stroke-width="3" stroke-linecap="round"/>
+  <rect x="27" y="16" width="10" height="32" rx="3" fill="#7ED88A"/>
+  <rect x="16" y="27" width="32" height="10" rx="3" fill="#7ED88A"/>
+  <rect x="29" y="18" width="6" height="28" rx="2" fill="#C8F0CE"/>
+  <rect x="18" y="29" width="28" height="6" rx="2" fill="#C8F0CE"/>
+</svg>

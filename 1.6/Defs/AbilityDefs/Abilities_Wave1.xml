@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Template batch: one spell per new primitive (DamageTarget+applyHediff, ZoneHediff, Heal-AoE,
+       Cleanse). Establishes the conventions for the per-class spell rollout. Original text. -->
+
+  <!-- Ray of Frost (cantrip): cold dmg + slow (DamageTarget.applyHediff) -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_RayOfFrost</defName>
+    <label>ray of frost</label>
+    <description>A frigid beam that bites a foe and leaves them numb and slow. Cantrip - costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/RayOfFrost</iconPath>
+    <level>0</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>21.9</range>
+      <warmupTime>0.6</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <amount>6</amount>
+        <hits>1</hits>
+        <applyHediff>RH_Chilled</applyHediff>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Bane (lvl 1): debuff aura on a cluster of enemies (ZoneHediff) -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Bane</defName>
+    <label>bane</label>
+    <description>A whispered curse settles over a knot of foes, fouling their aim and nerve. Level 1.</description>
+    <iconPath>UI/RimHeroes/Bane</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>23.9</range>
+      <warmupTime>0.8</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Baned</hediff>
+        <radius>4.9</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Prayer of Healing (lvl 2): heal all allies in a radius (Heal.radius) -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_PrayerOfHealing</defName>
+    <label>prayer of healing</label>
+    <description>A shared prayer knits the wounds of every ally nearby. Level 2.</description>
+    <iconPath>UI/RimHeroes/PrayerOfHealing</iconPath>
+    <level>2</level>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <hostile>false</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>23.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>true</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityHeal">
+        <amount>14</amount>
+        <radius>4.9</radius>
+        <onlyAllies>true</onlyAllies>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Lesser Restoration (lvl 2): draw out poison/sickness (Cleanse) -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_LesserRestoration</defName>
+    <label>lesser restoration</label>
+    <description>Draws poison and creeping sickness out of one you touch. Level 2.</description>
+    <iconPath>UI/RimHeroes/LesserRestoration</iconPath>
+    <level>2</level>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>false</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3.9</range>
+      <warmupTime>1</warmupTime>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetSelf>true</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityCleanse">
+        <removeBadDiseases>true</removeBadDiseases>
+        <maxToRemove>3</maxToRemove>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>
