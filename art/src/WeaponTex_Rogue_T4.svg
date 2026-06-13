@@ -1,31 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-  <!-- Perfect Hero Daggers: shadow-wreathed glowing blades, dark wisps + red glint. -->
-  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
-  <!-- shadow halo -->
-  <path d="M104 150 L66 34 L92 132 Z" fill="#16161C" opacity="0.5" transform="rotate(-18 128 128) scale(1.32) translate(-31 -31)"/>
-  <path d="M152 150 L190 34 L164 132 Z" fill="#16161C" opacity="0.5" transform="rotate(18 128 128) scale(1.32) translate(-31 -31)"/>
-  <path d="M104 150 L66 34 L92 132 Z" fill="#C24A5C" opacity="0.18" transform="rotate(-18 128 128) scale(1.16) translate(-18 -18)"/>
-  <path d="M152 150 L190 34 L164 132 Z" fill="#C24A5C" opacity="0.18" transform="rotate(18 128 128) scale(1.16) translate(-18 -18)"/>
-  <!-- dark wisps trailing off the blades -->
-  <path d="M78 70 C58 60 50 74 36 66 M70 96 C52 92 46 106 30 100" stroke="#16161C" stroke-width="5" fill="none" opacity="0.7" transform="rotate(-18 128 128)"/>
-  <path d="M178 70 C198 60 206 74 220 66 M186 96 C204 92 210 106 226 100" stroke="#16161C" stroke-width="5" fill="none" opacity="0.7" transform="rotate(18 128 128)"/>
-  <!-- LEFT dagger -->
-  <rect x="118" y="150" width="13" height="80" rx="5" fill="#2E2E36" transform="rotate(-18 128 190)"/>
-  <path d="M118 160 L131 160 M118 176 L131 176 M118 192 L131 192" stroke="#6E2230" stroke-width="3" transform="rotate(-18 128 190)"/>
-  <ellipse cx="128" cy="226" rx="9" ry="8" fill="#C79A3E" transform="rotate(-18 128 190)"/>
-  <circle cx="128" cy="226" r="4" fill="#C24A5C" transform="rotate(-18 128 190)"/>
-  <rect x="98" y="141" width="48" height="13" rx="3" fill="#C79A3E" transform="rotate(-18 122 148)"/>
-  <path d="M104 150 L66 34 L92 132 Z" fill="#3A3A42" transform="rotate(-18 128 128)"/>
-  <path d="M104 150 L66 34 L82 96 Z" fill="#16161C" transform="rotate(-18 128 128)"/>
-  <path d="M66 34 L82 96" stroke="#C24A5C" stroke-width="3.5" fill="none" transform="rotate(-18 128 128)"/>
-  <!-- RIGHT dagger -->
-  <rect x="125" y="150" width="13" height="80" rx="5" fill="#2E2E36" transform="rotate(18 128 190)"/>
-  <path d="M125 160 L138 160 M125 176 L138 176 M125 192 L138 192" stroke="#6E2230" stroke-width="3" transform="rotate(18 128 190)"/>
-  <ellipse cx="128" cy="226" rx="9" ry="8" fill="#C79A3E" transform="rotate(18 128 190)"/>
-  <circle cx="128" cy="226" r="4" fill="#C24A5C" transform="rotate(18 128 190)"/>
-  <rect x="110" y="141" width="48" height="13" rx="3" fill="#C79A3E" transform="rotate(18 134 148)"/>
-  <path d="M152 150 L190 34 L164 132 Z" fill="#3A3A42" transform="rotate(18 128 128)"/>
-  <path d="M152 150 L190 34 L174 96 Z" fill="#16161C" transform="rotate(18 128 128)"/>
-  <path d="M190 34 L174 96" stroke="#C24A5C" stroke-width="3.5" fill="none" transform="rotate(18 128 128)"/>
+  <!-- Perfect Hero Daggers (L15): shadow-wreathed glowing blades + red glint. -->
+  <g transform="translate(128 128) scale(0.76) rotate(45) translate(-128 -128)">
+    <!-- subtle shadow wisps trailing each blade tip -->
+    <path d="M96 42 C90 24 84 14 86 4 C92 16 98 26 100 40 Z" fill="#16161C" opacity="0.5"/>
+    <path d="M160 42 C154 24 148 14 150 4 C156 16 162 26 164 40 Z" fill="#16161C" opacity="0.5"/>
+    <!-- LEFT -->
+    <path d="M96 42 L84 132 L85 148 L107 148 L108 132 Z" fill="#4A4F56"/>
+    <path d="M96 42 L84 132 L95 140 L95 56 Z" fill="#C6CBD0"/>
+    <path d="M96 58 L96 134" stroke="#C24A5C" stroke-width="2.5"/>
+    <rect x="78" y="145" width="36" height="9" rx="2" fill="#C79A3E"/>
+    <rect x="89" y="152" width="14" height="42" rx="3" fill="#6E2230"/>
+    <circle cx="96" cy="200" r="8" fill="#C79A3E"/>
+    <circle cx="96" cy="200" r="4" fill="#C24A5C"/>
+    <!-- RIGHT -->
+    <path d="M160 42 L148 132 L149 148 L171 148 L172 132 Z" fill="#4A4F56"/>
+    <path d="M160 42 L148 132 L159 140 L159 56 Z" fill="#C6CBD0"/>
+    <path d="M160 58 L160 134" stroke="#C24A5C" stroke-width="2.5"/>
+    <rect x="142" y="145" width="36" height="9" rx="2" fill="#C79A3E"/>
+    <rect x="153" y="152" width="14" height="42" rx="3" fill="#6E2230"/>
+    <circle cx="160" cy="200" r="8" fill="#C79A3E"/>
+    <circle cx="160" cy="200" r="4" fill="#C24A5C"/>
   </g>
 </svg>

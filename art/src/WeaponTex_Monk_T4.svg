@@ -1,44 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-  <!-- Perfect Hero Fist Wraps: chi-infused glowing wraps with runed bronze bands. Drawn vertical, rotated up-right. -->
-  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
-  <!-- chi glow aura -->
-  <rect x="42" y="74" width="86" height="112" rx="28" fill="#FFE08A" opacity="0.20"/>
-  <rect x="128" y="74" width="86" height="112" rx="28" fill="#FFE08A" opacity="0.20"/>
-  <rect x="50" y="82" width="70" height="96" rx="22" fill="#FFD06A" opacity="0.16"/>
-  <rect x="136" y="82" width="70" height="96" rx="22" fill="#FFD06A" opacity="0.16"/>
-
-  <!-- left wrapped fist -->
-  <rect x="56" y="88" width="58" height="84" rx="16" fill="#C9852E"/>
-  <rect x="56" y="88" width="20" height="84" rx="16" fill="#D89846"/>
-  <rect x="64" y="162" width="42" height="54" rx="10" fill="#B5762A"/>
-  <!-- left runed bronze knuckle guard -->
-  <path d="M52 98 Q85 80 118 98 L116 116 Q85 102 54 116 Z" fill="#A8732E"/>
-  <path d="M52 98 Q85 80 118 98 L117 104 Q85 88 53 104 Z" fill="#C49A4A"/>
-  <!-- glowing chi runes on guard -->
-  <path d="M70 102 L78 106 L72 112 M100 102 L92 106 L98 112" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
-  <!-- left glowing wrap bindings -->
-  <rect x="54" y="124" width="62" height="9" rx="4" fill="#A8431A"/>
-  <rect x="54" y="124" width="62" height="3" rx="1.5" fill="#FFE08A" opacity="0.8"/>
-  <rect x="54" y="146" width="62" height="9" rx="4" fill="#A8431A"/>
-  <rect x="54" y="146" width="62" height="3" rx="1.5" fill="#FFE08A" opacity="0.8"/>
-  <rect x="60" y="182" width="50" height="8" rx="4" fill="#A8431A"/>
-  <!-- left chi core spark -->
-  <circle cx="85" cy="138" r="6" fill="#FFD06A"/>
-  <circle cx="85" cy="138" r="2.5" fill="#FFF4C8"/>
-
-  <!-- right wrapped fist -->
-  <rect x="142" y="88" width="58" height="84" rx="16" fill="#C9852E"/>
-  <rect x="142" y="88" width="20" height="84" rx="16" fill="#D89846"/>
-  <rect x="150" y="162" width="42" height="54" rx="10" fill="#B5762A"/>
-  <path d="M138 98 Q171 80 204 98 L202 116 Q171 102 140 116 Z" fill="#A8732E"/>
-  <path d="M138 98 Q171 80 204 98 L203 104 Q171 88 139 104 Z" fill="#C49A4A"/>
-  <path d="M156 102 L164 106 L158 112 M186 102 L178 106 L184 112" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
-  <rect x="140" y="124" width="62" height="9" rx="4" fill="#A8431A"/>
-  <rect x="140" y="124" width="62" height="3" rx="1.5" fill="#FFE08A" opacity="0.8"/>
-  <rect x="140" y="146" width="62" height="9" rx="4" fill="#A8431A"/>
-  <rect x="140" y="146" width="62" height="3" rx="1.5" fill="#FFE08A" opacity="0.8"/>
-  <rect x="146" y="182" width="50" height="8" rx="4" fill="#A8431A"/>
-  <circle cx="171" cy="138" r="6" fill="#FFD06A"/>
-  <circle cx="171" cy="138" r="2.5" fill="#FFF4C8"/>
+  <!-- Perfect Hero Fist Wraps (L15): chi-infused glowing wraps + runed bands. -->
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
+    <circle cx="90" cy="140" r="44" fill="#FFE08A" opacity="0.14"/>
+    <circle cx="166" cy="140" r="44" fill="#FFE08A" opacity="0.14"/>
+    <g>
+      <ellipse cx="68" cy="150" rx="9" ry="12" fill="#B8772A"/>
+      <path d="M68 120 C68 108 78 104 90 104 C102 104 112 108 112 120 L112 160 C112 172 68 172 68 160 Z" fill="#D8902E"/>
+      <path d="M70 118 C80 110 100 110 110 118 L112 130 C112 136 68 136 68 130 Z" fill="#A8732E"/>
+      <path d="M70 118 C80 110 100 110 110 118" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
+      <path d="M70 142 L110 148 M70 154 L110 160" stroke="#FFD06A" stroke-width="4"/>
+      <path d="M88 124 L92 130 L88 134" stroke="#FFE08A" stroke-width="2" fill="none"/>
+      <rect x="74" y="160" width="32" height="26" rx="5" fill="#D8902E"/>
+      <path d="M76 168 L104 172 M76 178 L104 182" stroke="#FFD06A" stroke-width="3"/>
+    </g>
+    <g>
+      <ellipse cx="188" cy="150" rx="9" ry="12" fill="#B8772A"/>
+      <path d="M188 120 C188 108 178 104 166 104 C154 104 144 108 144 120 L144 160 C144 172 188 172 188 160 Z" fill="#D8902E"/>
+      <path d="M186 118 C176 110 156 110 146 118 L144 130 C144 136 188 136 188 130 Z" fill="#A8732E"/>
+      <path d="M186 118 C176 110 156 110 146 118" stroke="#FFE08A" stroke-width="2.5" fill="none"/>
+      <path d="M146 142 L186 148 M146 154 L186 160" stroke="#FFD06A" stroke-width="4"/>
+      <path d="M168 124 L164 130 L168 134" stroke="#FFE08A" stroke-width="2" fill="none"/>
+      <rect x="150" y="160" width="32" height="26" rx="5" fill="#D8902E"/>
+      <path d="M152 168 L180 172 M152 178 L180 182" stroke="#FFD06A" stroke-width="3"/>
+    </g>
   </g>
 </svg>

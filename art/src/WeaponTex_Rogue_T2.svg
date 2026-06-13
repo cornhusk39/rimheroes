@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-  <!-- Hero Daggers: blackened blades + oxblood-wrapped grips, crossed X. -->
+  <!-- Hero Daggers (L5): blackened blades + oxblood-wrapped grips. -->
   <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
-  <!-- LEFT dagger -->
-  <rect x="118" y="150" width="13" height="80" rx="5" fill="#2E2E36" transform="rotate(-18 128 190)"/>
-  <path d="M118 160 L131 160 M118 174 L131 174 M118 188 L131 188 M118 202 L131 202" stroke="#6E2230" stroke-width="3" transform="rotate(-18 128 190)"/>
-  <rect x="100" y="142" width="44" height="12" rx="3" fill="#3A3A42" transform="rotate(-18 122 148)"/>
-  <path d="M104 150 L68 38 L92 132 Z" fill="#3A3A42" transform="rotate(-18 128 128)"/>
-  <path d="M104 150 L68 38 L82 96 Z" fill="#2E2E36" transform="rotate(-18 128 128)"/>
-  <path d="M68 38 L82 96" stroke="#9AA0A6" stroke-width="2.5" fill="none" transform="rotate(-18 128 128)"/>
-  <!-- RIGHT dagger -->
-  <rect x="125" y="150" width="13" height="80" rx="5" fill="#2E2E36" transform="rotate(18 128 190)"/>
-  <path d="M125 160 L138 160 M125 174 L138 174 M125 188 L138 188 M125 202 L138 202" stroke="#6E2230" stroke-width="3" transform="rotate(18 128 190)"/>
-  <rect x="112" y="142" width="44" height="12" rx="3" fill="#3A3A42" transform="rotate(18 134 148)"/>
-  <path d="M152 150 L188 38 L164 132 Z" fill="#3A3A42" transform="rotate(18 128 128)"/>
-  <path d="M152 150 L188 38 L174 96 Z" fill="#2E2E36" transform="rotate(18 128 128)"/>
-  <path d="M188 38 L174 96" stroke="#9AA0A6" stroke-width="2.5" fill="none" transform="rotate(18 128 128)"/>
+    <!-- LEFT -->
+    <path d="M96 44 L85 132 L86 147 L106 147 L107 132 Z" fill="#5C6168"/>
+    <path d="M96 44 L85 132 L95 140 L95 58 Z" fill="#AEB4BA"/>
+    <rect x="79" y="144" width="34" height="8" rx="2" fill="#26262C"/>
+    <rect x="89" y="151" width="14" height="44" rx="3" fill="#6E2230"/>
+    <path d="M90 158 L102 162 M90 170 L102 174 M90 182 L102 186" stroke="#3A1620" stroke-width="2"/>
+    <circle cx="96" cy="199" r="7" fill="#3A3A42"/>
+    <!-- RIGHT -->
+    <path d="M160 44 L149 132 L150 147 L170 147 L171 132 Z" fill="#5C6168"/>
+    <path d="M160 44 L149 132 L159 140 L159 58 Z" fill="#AEB4BA"/>
+    <rect x="143" y="144" width="34" height="8" rx="2" fill="#26262C"/>
+    <rect x="153" y="151" width="14" height="44" rx="3" fill="#6E2230"/>
+    <path d="M154 158 L166 162 M154 170 L166 174 M154 182 L166 186" stroke="#3A1620" stroke-width="2"/>
+    <circle cx="160" cy="199" r="7" fill="#3A3A42"/>
   </g>
 </svg>

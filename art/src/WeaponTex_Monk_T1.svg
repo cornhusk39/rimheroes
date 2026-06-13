@@ -1,27 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-  <!-- Lesser Hero Fist Wraps: plain cloth strips wound around a pair of fists. Drawn vertical, rotated up-right. -->
-  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
-  <!-- left wrapped fist -->
-  <rect x="58" y="92" width="56" height="78" rx="16" fill="#C9852E"/>
-  <rect x="58" y="92" width="20" height="78" rx="16" fill="#D89846"/>
-  <!-- left forearm wrap tail -->
-  <rect x="66" y="160" width="40" height="50" rx="10" fill="#B5762A"/>
-  <!-- left wrap bindings -->
-  <rect x="56" y="104" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="56" y="124" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="56" y="144" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="62" y="176" width="48" height="8" rx="4" fill="#A8431A"/>
-  <!-- knuckle crease line -->
-  <path d="M62 100 L110 100" stroke="#8C5A1F" stroke-width="3" fill="none"/>
-
-  <!-- right wrapped fist -->
-  <rect x="142" y="92" width="56" height="78" rx="16" fill="#C9852E"/>
-  <rect x="142" y="92" width="20" height="78" rx="16" fill="#D89846"/>
-  <rect x="150" y="160" width="40" height="50" rx="10" fill="#B5762A"/>
-  <rect x="140" y="104" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="140" y="124" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="140" y="144" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="146" y="176" width="48" height="8" rx="4" fill="#A8431A"/>
-  <path d="M146 100 L194 100" stroke="#8C5A1F" stroke-width="3" fill="none"/>
+  <!-- Lesser Hero Fist Wraps: a clearly-separated PAIR of wrapped fists, side by side. -->
+  <g transform="translate(128 128) scale(0.82) rotate(45) translate(-128 -128)">
+    <!-- LEFT fist (cx 90) -->
+    <g>
+      <ellipse cx="68" cy="150" rx="9" ry="12" fill="#B8772A"/>
+      <path d="M68 120 C68 108 78 104 90 104 C102 104 112 108 112 120 L112 160 C112 172 68 172 68 160 Z" fill="#C9852E"/>
+      <circle cx="76" cy="108" r="6" fill="#D8902E"/>
+      <circle cx="86" cy="106" r="6" fill="#D8902E"/>
+      <circle cx="96" cy="106" r="6" fill="#D8902E"/>
+      <circle cx="106" cy="108" r="6" fill="#D8902E"/>
+      <path d="M80 114 L80 132 M90 113 L90 132 M100 114 L100 132" stroke="#A8431A" stroke-width="2.5"/>
+      <path d="M70 138 L110 144 M70 150 L110 156" stroke="#A8431A" stroke-width="4"/>
+      <rect x="74" y="160" width="32" height="26" rx="5" fill="#C9852E"/>
+      <path d="M76 166 L104 170 M76 176 L104 180" stroke="#A8431A" stroke-width="3"/>
+    </g>
+    <!-- RIGHT fist (cx 166) -->
+    <g>
+      <ellipse cx="188" cy="150" rx="9" ry="12" fill="#B8772A"/>
+      <path d="M188 120 C188 108 178 104 166 104 C154 104 144 108 144 120 L144 160 C144 172 188 172 188 160 Z" fill="#C9852E"/>
+      <circle cx="180" cy="108" r="6" fill="#D8902E"/>
+      <circle cx="170" cy="106" r="6" fill="#D8902E"/>
+      <circle cx="160" cy="106" r="6" fill="#D8902E"/>
+      <circle cx="150" cy="108" r="6" fill="#D8902E"/>
+      <path d="M176 114 L176 132 M166 113 L166 132 M156 114 L156 132" stroke="#A8431A" stroke-width="2.5"/>
+      <path d="M146 138 L186 144 M146 150 L186 156" stroke="#A8431A" stroke-width="4"/>
+      <rect x="150" y="160" width="32" height="26" rx="5" fill="#C9852E"/>
+      <path d="M152 166 L180 170 M152 176 L180 180" stroke="#A8431A" stroke-width="3"/>
+    </g>
   </g>
 </svg>

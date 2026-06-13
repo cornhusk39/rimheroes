@@ -1,40 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-  <!-- Greater Hero Fist Wraps: bronze knuckle guards, a prayer bead, faint glow. Drawn vertical, rotated up-right. -->
-  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
-  <!-- faint warm glow aura -->
-  <rect x="46" y="80" width="80" height="100" rx="24" fill="#FFD06A" opacity="0.12"/>
-  <rect x="130" y="80" width="80" height="100" rx="24" fill="#FFD06A" opacity="0.12"/>
-
-  <!-- left wrapped fist -->
-  <rect x="58" y="90" width="56" height="80" rx="16" fill="#C9852E"/>
-  <rect x="58" y="90" width="20" height="80" rx="16" fill="#D89846"/>
-  <rect x="66" y="160" width="40" height="52" rx="10" fill="#B5762A"/>
-  <!-- left bronze knuckle guard (raised plate over fingers) -->
-  <path d="M54 100 Q86 84 118 100 L116 116 Q86 104 56 116 Z" fill="#A8732E"/>
-  <path d="M54 100 Q86 84 118 100 L117 106 Q86 92 55 106 Z" fill="#C49A4A"/>
-  <circle cx="72" cy="105" r="3.5" fill="#8C5A1F"/>
-  <circle cx="86" cy="103" r="3.5" fill="#8C5A1F"/>
-  <circle cx="100" cy="105" r="3.5" fill="#8C5A1F"/>
-  <!-- left wrap bindings -->
-  <rect x="56" y="124" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="56" y="144" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="62" y="178" width="48" height="8" rx="4" fill="#A8431A"/>
-  <!-- prayer bead strand on left wrist -->
-  <circle cx="70" cy="196" r="4" fill="#7A3A18"/>
-  <circle cx="84" cy="200" r="4" fill="#7A3A18"/>
-  <circle cx="98" cy="196" r="4" fill="#7A3A18"/>
-
-  <!-- right wrapped fist -->
-  <rect x="142" y="90" width="56" height="80" rx="16" fill="#C9852E"/>
-  <rect x="142" y="90" width="20" height="80" rx="16" fill="#D89846"/>
-  <rect x="150" y="160" width="40" height="52" rx="10" fill="#B5762A"/>
-  <path d="M138 100 Q170 84 202 100 L200 116 Q170 104 140 116 Z" fill="#A8732E"/>
-  <path d="M138 100 Q170 84 202 100 L201 106 Q170 92 139 106 Z" fill="#C49A4A"/>
-  <circle cx="156" cy="105" r="3.5" fill="#8C5A1F"/>
-  <circle cx="170" cy="103" r="3.5" fill="#8C5A1F"/>
-  <circle cx="184" cy="105" r="3.5" fill="#8C5A1F"/>
-  <rect x="140" y="124" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="140" y="144" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="146" y="178" width="48" height="8" rx="4" fill="#A8431A"/>
+  <!-- Greater Hero Fist Wraps (L10): bronze knuckle guards + prayer bead. -->
+  <g transform="translate(128 128) scale(0.82) rotate(45) translate(-128 -128)">
+    <g>
+      <ellipse cx="68" cy="150" rx="9" ry="12" fill="#B8772A"/>
+      <path d="M68 120 C68 108 78 104 90 104 C102 104 112 108 112 120 L112 160 C112 172 68 172 68 160 Z" fill="#C9852E"/>
+      <path d="M70 118 C80 110 100 110 110 118 L112 130 C112 136 68 136 68 130 Z" fill="#A8732E"/>
+      <path d="M70 118 C80 110 100 110 110 118" stroke="#D8A24E" stroke-width="2.5" fill="none"/>
+      <circle cx="78" cy="120" r="3.5" fill="#7A5320"/><circle cx="90" cy="118" r="3.5" fill="#7A5320"/><circle cx="102" cy="120" r="3.5" fill="#7A5320"/>
+      <path d="M70 142 L110 148 M70 154 L110 160" stroke="#A8431A" stroke-width="4"/>
+      <rect x="74" y="160" width="32" height="26" rx="5" fill="#C9852E"/>
+      <path d="M76 168 L104 172 M76 178 L104 182" stroke="#A8431A" stroke-width="3"/>
+      <circle cx="72" cy="188" r="5" fill="#6E4A28"/>
+    </g>
+    <g>
+      <ellipse cx="188" cy="150" rx="9" ry="12" fill="#B8772A"/>
+      <path d="M188 120 C188 108 178 104 166 104 C154 104 144 108 144 120 L144 160 C144 172 188 172 188 160 Z" fill="#C9852E"/>
+      <path d="M186 118 C176 110 156 110 146 118 L144 130 C144 136 188 136 188 130 Z" fill="#A8732E"/>
+      <path d="M186 118 C176 110 156 110 146 118" stroke="#D8A24E" stroke-width="2.5" fill="none"/>
+      <circle cx="178" cy="120" r="3.5" fill="#7A5320"/><circle cx="166" cy="118" r="3.5" fill="#7A5320"/><circle cx="154" cy="120" r="3.5" fill="#7A5320"/>
+      <path d="M146 142 L186 148 M146 154 L186 160" stroke="#A8431A" stroke-width="4"/>
+      <rect x="150" y="160" width="32" height="26" rx="5" fill="#C9852E"/>
+      <path d="M152 168 L180 172 M152 178 L180 182" stroke="#A8431A" stroke-width="3"/>
+      <circle cx="184" cy="188" r="5" fill="#6E4A28"/>
+    </g>
   </g>
 </svg>

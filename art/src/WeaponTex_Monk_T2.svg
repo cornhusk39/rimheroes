@@ -1,33 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-  <!-- Hero Fist Wraps: studded wraps with a bronze knuckle band. Drawn vertical, rotated up-right. -->
-  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
-  <!-- left wrapped fist -->
-  <rect x="58" y="90" width="56" height="80" rx="16" fill="#C9852E"/>
-  <rect x="58" y="90" width="20" height="80" rx="16" fill="#D89846"/>
-  <rect x="66" y="160" width="40" height="52" rx="10" fill="#B5762A"/>
-  <!-- left knuckle band (bronze) -->
-  <rect x="54" y="96" width="64" height="14" rx="5" fill="#A8732E"/>
-  <rect x="54" y="96" width="64" height="5" rx="2" fill="#C49A4A"/>
-  <!-- studs on knuckle band -->
-  <circle cx="68" cy="103" r="3" fill="#D8B468"/>
-  <circle cx="86" cy="103" r="3" fill="#D8B468"/>
-  <circle cx="104" cy="103" r="3" fill="#D8B468"/>
-  <!-- left wrap bindings -->
-  <rect x="56" y="120" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="56" y="140" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="62" y="178" width="48" height="8" rx="4" fill="#A8431A"/>
-
-  <!-- right wrapped fist -->
-  <rect x="142" y="90" width="56" height="80" rx="16" fill="#C9852E"/>
-  <rect x="142" y="90" width="20" height="80" rx="16" fill="#D89846"/>
-  <rect x="150" y="160" width="40" height="52" rx="10" fill="#B5762A"/>
-  <rect x="138" y="96" width="64" height="14" rx="5" fill="#A8732E"/>
-  <rect x="138" y="96" width="64" height="5" rx="2" fill="#C49A4A"/>
-  <circle cx="152" cy="103" r="3" fill="#D8B468"/>
-  <circle cx="170" cy="103" r="3" fill="#D8B468"/>
-  <circle cx="188" cy="103" r="3" fill="#D8B468"/>
-  <rect x="140" y="120" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="140" y="140" width="60" height="9" rx="4" fill="#A8431A"/>
-  <rect x="146" y="178" width="48" height="8" rx="4" fill="#A8431A"/>
+  <!-- Hero Fist Wraps (L5): studded cream knuckle band. -->
+  <g transform="translate(128 128) scale(0.82) rotate(45) translate(-128 -128)">
+    <g>
+      <ellipse cx="68" cy="150" rx="9" ry="12" fill="#B8772A"/>
+      <path d="M68 120 C68 108 78 104 90 104 C102 104 112 108 112 120 L112 160 C112 172 68 172 68 160 Z" fill="#C9852E"/>
+      <circle cx="76" cy="108" r="6" fill="#D8902E"/><circle cx="86" cy="106" r="6" fill="#D8902E"/><circle cx="96" cy="106" r="6" fill="#D8902E"/><circle cx="106" cy="108" r="6" fill="#D8902E"/>
+      <path d="M72 122 C82 116 100 116 110 122 L108 132 C98 127 82 127 74 132 Z" fill="#E8D8A0"/>
+      <circle cx="80" cy="125" r="2" fill="#A8732E"/><circle cx="90" cy="124" r="2" fill="#A8732E"/><circle cx="100" cy="125" r="2" fill="#A8732E"/>
+      <path d="M70 140 L110 146 M70 152 L110 158" stroke="#A8431A" stroke-width="4"/>
+      <rect x="74" y="160" width="32" height="26" rx="5" fill="#C9852E"/>
+      <path d="M76 166 L104 170 M76 176 L104 180" stroke="#A8431A" stroke-width="3"/>
+    </g>
+    <g>
+      <ellipse cx="188" cy="150" rx="9" ry="12" fill="#B8772A"/>
+      <path d="M188 120 C188 108 178 104 166 104 C154 104 144 108 144 120 L144 160 C144 172 188 172 188 160 Z" fill="#C9852E"/>
+      <circle cx="180" cy="108" r="6" fill="#D8902E"/><circle cx="170" cy="106" r="6" fill="#D8902E"/><circle cx="160" cy="106" r="6" fill="#D8902E"/><circle cx="150" cy="108" r="6" fill="#D8902E"/>
+      <path d="M184 122 C174 116 156 116 146 122 L148 132 C158 127 174 127 182 132 Z" fill="#E8D8A0"/>
+      <circle cx="176" cy="125" r="2" fill="#A8732E"/><circle cx="166" cy="124" r="2" fill="#A8732E"/><circle cx="156" cy="125" r="2" fill="#A8732E"/>
+      <path d="M146 140 L186 146 M146 152 L186 158" stroke="#A8431A" stroke-width="4"/>
+      <rect x="150" y="160" width="32" height="26" rx="5" fill="#C9852E"/>
+      <path d="M152 166 L180 170 M152 176 L180 180" stroke="#A8431A" stroke-width="3"/>
+    </g>
   </g>
 </svg>

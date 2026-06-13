@@ -1,26 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-  <!-- Greater Hero Daggers: ornate gold guards + red gem pommels, faint glow, crossed X. -->
+  <!-- Greater Hero Daggers (L10): gold guards + red-gem pommels, faint glow. -->
   <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
-  <!-- faint glow aura -->
-  <path d="M104 150 L68 38 L92 132 Z" fill="#8E2E3E" opacity="0.16" transform="rotate(-18 128 128) scale(1.18) translate(-19 -19)"/>
-  <path d="M152 150 L188 38 L164 132 Z" fill="#8E2E3E" opacity="0.16" transform="rotate(18 128 128) scale(1.18) translate(-19 -19)"/>
-  <!-- LEFT dagger -->
-  <rect x="118" y="150" width="13" height="80" rx="5" fill="#2E2E36" transform="rotate(-18 128 190)"/>
-  <path d="M118 160 L131 160 M118 176 L131 176 M118 192 L131 192" stroke="#6E2230" stroke-width="3" transform="rotate(-18 128 190)"/>
-  <ellipse cx="128" cy="226" rx="9" ry="8" fill="#C79A3E" transform="rotate(-18 128 190)"/>
-  <circle cx="128" cy="226" r="4" fill="#8E2E3E" transform="rotate(-18 128 190)"/>
-  <rect x="98" y="141" width="48" height="13" rx="3" fill="#C79A3E" transform="rotate(-18 122 148)"/>
-  <path d="M104 150 L68 36 L92 132 Z" fill="#3A3A42" transform="rotate(-18 128 128)"/>
-  <path d="M104 150 L68 36 L82 96 Z" fill="#2E2E36" transform="rotate(-18 128 128)"/>
-  <path d="M68 36 L82 96" stroke="#C6CBD0" stroke-width="3" fill="none" transform="rotate(-18 128 128)"/>
-  <!-- RIGHT dagger -->
-  <rect x="125" y="150" width="13" height="80" rx="5" fill="#2E2E36" transform="rotate(18 128 190)"/>
-  <path d="M125 160 L138 160 M125 176 L138 176 M125 192 L138 192" stroke="#6E2230" stroke-width="3" transform="rotate(18 128 190)"/>
-  <ellipse cx="128" cy="226" rx="9" ry="8" fill="#C79A3E" transform="rotate(18 128 190)"/>
-  <circle cx="128" cy="226" r="4" fill="#8E2E3E" transform="rotate(18 128 190)"/>
-  <rect x="110" y="141" width="48" height="13" rx="3" fill="#C79A3E" transform="rotate(18 134 148)"/>
-  <path d="M152 150 L188 36 L164 132 Z" fill="#3A3A42" transform="rotate(18 128 128)"/>
-  <path d="M152 150 L188 36 L174 96 Z" fill="#2E2E36" transform="rotate(18 128 128)"/>
-  <path d="M188 36 L174 96" stroke="#C6CBD0" stroke-width="3" fill="none" transform="rotate(18 128 128)"/>
+    <!-- LEFT -->
+    <path d="M96 42 L84 132 L85 148 L107 148 L108 132 Z" fill="#5C6168"/>
+    <path d="M96 42 L84 132 L95 140 L95 56 Z" fill="#C6CBD0"/>
+    <path d="M96 60 L96 132" stroke="#3A3A42" stroke-width="2"/>
+    <rect x="78" y="145" width="36" height="9" rx="2" fill="#C79A3E"/>
+    <rect x="89" y="152" width="14" height="42" rx="3" fill="#6E2230"/>
+    <path d="M90 160 L102 164 M90 174 L102 178" stroke="#3A1620" stroke-width="2"/>
+    <circle cx="96" cy="200" r="8" fill="#C79A3E"/>
+    <circle cx="96" cy="200" r="4" fill="#8E2E3E"/>
+    <!-- RIGHT -->
+    <path d="M160 42 L148 132 L149 148 L171 148 L172 132 Z" fill="#5C6168"/>
+    <path d="M160 42 L148 132 L159 140 L159 56 Z" fill="#C6CBD0"/>
+    <path d="M160 60 L160 132" stroke="#3A3A42" stroke-width="2"/>
+    <rect x="142" y="145" width="36" height="9" rx="2" fill="#C79A3E"/>
+    <rect x="153" y="152" width="14" height="42" rx="3" fill="#6E2230"/>
+    <path d="M154 160 L166 164 M154 174 L166 178" stroke="#3A1620" stroke-width="2"/>
+    <circle cx="160" cy="200" r="8" fill="#C79A3E"/>
+    <circle cx="160" cy="200" r="4" fill="#8E2E3E"/>
   </g>
 </svg>

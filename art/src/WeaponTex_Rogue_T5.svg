@@ -1,39 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
-  <!-- Whisper & Woe (capstone): twin blades trailing shadow with red eye-glints. -->
-  <!-- deep shadow halo -->
-  <path d="M104 150 L60 28 L92 132 Z" fill="#16161C" opacity="0.6" transform="rotate(-18 128 128) scale(1.4) translate(-37 -37)"/>
-  <path d="M152 150 L196 28 L164 132 Z" fill="#16161C" opacity="0.6" transform="rotate(18 128 128) scale(1.4) translate(-37 -37)"/>
-  <path d="M104 150 L60 28 L92 132 Z" fill="#C24A5C" opacity="0.22" transform="rotate(-18 128 128) scale(1.18) translate(-21 -21)"/>
-  <path d="M152 150 L196 28 L164 132 Z" fill="#C24A5C" opacity="0.22" transform="rotate(18 128 128) scale(1.18) translate(-21 -21)"/>
-  <!-- long shadow wisps trailing the blades -->
-  <path d="M76 64 C52 52 44 70 26 60 M68 92 C44 86 38 104 18 96 M82 40 C62 30 56 44 40 36" stroke="#16161C" stroke-width="6" fill="none" opacity="0.75" transform="rotate(-18 128 128)"/>
-  <path d="M180 64 C204 52 212 70 230 60 M188 92 C212 86 218 104 238 96 M174 40 C194 30 200 44 216 36" stroke="#16161C" stroke-width="6" fill="none" opacity="0.75" transform="rotate(18 128 128)"/>
-  <!-- LEFT dagger -->
-  <rect x="118" y="150" width="14" height="82" rx="5" fill="#2E2E36" transform="rotate(-18 128 191)"/>
-  <path d="M118 160 L132 160 M118 176 L132 176 M118 192 L132 192 M118 208 L132 208" stroke="#8E2E3E" stroke-width="3.5" transform="rotate(-18 128 191)"/>
-  <ellipse cx="128" cy="228" rx="11" ry="10" fill="#C79A3E" transform="rotate(-18 128 191)"/>
-  <ellipse cx="128" cy="228" rx="5" ry="6" fill="#C24A5C" transform="rotate(-18 128 191)"/>
-  <ellipse cx="128" cy="228" rx="2" ry="3" fill="#FFE08A" transform="rotate(-18 128 191)"/>
-  <rect x="96" y="140" width="52" height="14" rx="3" fill="#C79A3E" transform="rotate(-18 122 147)"/>
-  <path d="M104 150 L60 28 L92 132 Z" fill="#3A3A42" transform="rotate(-18 128 128)"/>
-  <path d="M104 150 L60 28 L82 96 Z" fill="#16161C" transform="rotate(-18 128 128)"/>
-  <path d="M60 28 L82 96" stroke="#C24A5C" stroke-width="4" fill="none" transform="rotate(-18 128 128)"/>
-  <!-- red eye-glint on left blade -->
-  <circle cx="86" cy="86" r="6" fill="#C24A5C" transform="rotate(-18 128 128)"/>
-  <circle cx="86" cy="86" r="2.5" fill="#FFE08A" transform="rotate(-18 128 128)"/>
-  <!-- RIGHT dagger -->
-  <rect x="124" y="150" width="14" height="82" rx="5" fill="#2E2E36" transform="rotate(18 128 191)"/>
-  <path d="M124 160 L138 160 M124 176 L138 176 M124 192 L138 192 M124 208 L138 208" stroke="#8E2E3E" stroke-width="3.5" transform="rotate(18 128 191)"/>
-  <ellipse cx="128" cy="228" rx="11" ry="10" fill="#C79A3E" transform="rotate(18 128 191)"/>
-  <ellipse cx="128" cy="228" rx="5" ry="6" fill="#C24A5C" transform="rotate(18 128 191)"/>
-  <ellipse cx="128" cy="228" rx="2" ry="3" fill="#FFE08A" transform="rotate(18 128 191)"/>
-  <rect x="108" y="140" width="52" height="14" rx="3" fill="#C79A3E" transform="rotate(18 134 147)"/>
-  <path d="M152 150 L196 28 L164 132 Z" fill="#3A3A42" transform="rotate(18 128 128)"/>
-  <path d="M152 150 L196 28 L174 96 Z" fill="#16161C" transform="rotate(18 128 128)"/>
-  <path d="M196 28 L174 96" stroke="#C24A5C" stroke-width="4" fill="none" transform="rotate(18 128 128)"/>
-  <!-- red eye-glint on right blade -->
-  <circle cx="170" cy="86" r="6" fill="#C24A5C" transform="rotate(18 128 128)"/>
-  <circle cx="170" cy="86" r="2.5" fill="#FFE08A" transform="rotate(18 128 128)"/>
+  <!-- Whisper & Woe (capstone): twin blades trailing shadow, red eye-glints. -->
+  <g transform="translate(128 128) scale(0.74) rotate(45) translate(-128 -128)">
+    <!-- shadow aura -->
+    <path d="M96 40 C84 16 72 6 74 -8 C86 10 98 22 102 40 Z" fill="#16161C" opacity="0.55"/>
+    <path d="M160 40 C148 16 136 6 138 -8 C150 10 162 22 166 40 Z" fill="#16161C" opacity="0.55"/>
+    <path d="M84 150 C70 162 60 178 62 196 C74 180 86 168 92 154 Z" fill="#16161C" opacity="0.4"/>
+    <path d="M172 150 C186 162 196 178 194 196 C182 180 170 168 164 154 Z" fill="#16161C" opacity="0.4"/>
+    <!-- LEFT -->
+    <path d="M96 40 L83 132 L84 149 L108 149 L109 132 Z" fill="#4A4F56"/>
+    <path d="M96 40 L83 132 L95 140 L95 54 Z" fill="#E2E6EA"/>
+    <path d="M96 56 L96 134" stroke="#C24A5C" stroke-width="3"/>
+    <rect x="77" y="146" width="38" height="10" rx="2" fill="#E0B250"/>
+    <rect x="89" y="154" width="14" height="42" rx="3" fill="#8E2E3E"/>
+    <circle cx="96" cy="202" r="9" fill="#E0B250"/>
+    <circle cx="96" cy="202" r="4.5" fill="#FF5A6E"/>
+    <ellipse cx="96" cy="100" rx="5" ry="3.5" fill="#FF5A6E"/>
+    <!-- RIGHT -->
+    <path d="M160 40 L147 132 L148 149 L172 149 L173 132 Z" fill="#4A4F56"/>
+    <path d="M160 40 L147 132 L159 140 L159 54 Z" fill="#E2E6EA"/>
+    <path d="M160 56 L160 134" stroke="#C24A5C" stroke-width="3"/>
+    <rect x="141" y="146" width="38" height="10" rx="2" fill="#E0B250"/>
+    <rect x="153" y="154" width="14" height="42" rx="3" fill="#8E2E3E"/>
+    <circle cx="160" cy="202" r="9" fill="#E0B250"/>
+    <circle cx="160" cy="202" r="4.5" fill="#FF5A6E"/>
+    <ellipse cx="160" cy="100" rx="5" ry="3.5" fill="#FF5A6E"/>
   </g>
 </svg>
