@@ -14,6 +14,9 @@ namespace RimHeroes
         public HediffDef vestmentHediff;     // the class vestment (persistent armor-as-hediff)
         public int maxLevel = 20;
         public CasterProgression casterProgression = CasterProgression.None;
+        // 5e prepared casters (Wizard/Cleric/Druid/Paladin) ready a subset of known leveled spells
+        // and can swap them during a window after a long rest. Known casters cast all they know.
+        public bool preparesSpells = false;
 
         // What each level grants: abilities (spells/features as AbilityDefs), passive feature hediffs.
         public List<HeroLevelGrant> levelGrants = new List<HeroLevelGrant>();

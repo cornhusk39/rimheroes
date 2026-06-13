@@ -153,11 +153,66 @@ namespace RimHeroes
 
         private List<int> slotsExpended = new List<int>(new int[10]); // index = spell level 1..9
         private List<AbilityDef> autocastSpells = new List<AbilityDef>();
+        private List<AbilityDef> preparedSpells = new List<AbilityDef>(); // prepared casters' active leveled spells
+        private int prepareWindowEndTick = -1; // absolute tick; spells can be swapped until then
         public bool longResting;
         private int longRestProgress;
         private bool shortRestArmed = true;
 
         public const int LongRestDurationTicks = 30000; // 12 in-game hours of sleep
+        public const int PrepareWindowTicks = 15000;    // 6 in-game hours to swap spells after a long rest
+
+        // ===== Prepared casting (Wizard/Cleric/Druid/Paladin): ready a subset of known leveled spells =====
+
+        public bool PreparesSpells => classDef?.preparesSpells == true;
+
+        public bool PrepareWindowOpen => prepareWindowEndTick > 0 && Find.TickManager.TicksGame < prepareWindowEndTick;
+
+        /// <summary>How many leveled (non-cantrip) spells this hero may have prepared at once.</summary>
+        public int PreparedMax => Mathf.Max(1, 3 + level / 2);
+
+        public int PreparedLeveledCount => preparedSpells.Count(s => s != null && s.level > 0);
+
+        public bool IsPrepared(AbilityDef def) => preparedSpells.Contains(def);
+
+        /// <summary>Cantrips and known-caster spells are always castable; prepared casters gate leveled spells.</summary>
+        public bool CanCastSpell(AbilityDef def)
+        {
+            if (def == null) return false;
+            if (!PreparesSpells || def.level <= 0) return true;
+            return preparedSpells.Contains(def);
+        }
+
+        public bool SetPrepared(AbilityDef def, bool on)
+        {
+            if (def == null || def.level <= 0) return false;
+            if (on)
+            {
+                if (preparedSpells.Contains(def)) return true;
+                if (PreparedLeveledCount >= PreparedMax) return false; // at capacity
+                preparedSpells.Add(def);
+            }
+            else
+            {
+                preparedSpells.Remove(def);
+            }
+            return true;
+        }
+
+        /// <summary>Auto-ready a newly-learned leveled spell if there is still room (sensible default loadout).</summary>
+        private void AutoPrepare(AbilityDef def)
+        {
+            if (PreparesSpells && def != null && def.level > 0
+                && !preparedSpells.Contains(def) && PreparedLeveledCount < PreparedMax)
+            {
+                preparedSpells.Add(def);
+            }
+        }
+
+        public void OpenPrepareWindow()
+        {
+            prepareWindowEndTick = Find.TickManager.TicksGame + PrepareWindowTicks;
+        }
 
         public int MaxSlots(int spellLevel) => SpellUtility.MaxSlots(classDef?.casterProgression ?? CasterProgression.None, level, spellLevel);
 
@@ -217,6 +272,7 @@ namespace RimHeroes
             {
                 SetAutocast(def, true);
             }
+            AutoPrepare(def); // prepared casters start with a sensible loadout
         }
 
         private void TickRests(int delta)
@@ -238,6 +294,15 @@ namespace RimHeroes
                         if (PawnUtility.ShouldSendNotificationAbout(pawn))
                         {
                             Messages.Message("RH_LongRestComplete".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.PositiveEvent);
+                        }
+                        if (PreparesSpells)
+                        {
+                            OpenPrepareWindow();
+                            if (PawnUtility.ShouldSendNotificationAbout(pawn))
+                            {
+                                Messages.Message(pawn.LabelShortCap + " may prepare spells for the next 6 hours.",
+                                    pawn, MessageTypeDefOf.NeutralEvent);
+                            }
                         }
                     }
                 }
@@ -342,6 +407,18 @@ namespace RimHeroes
                         }
                     }
                 };
+                if (PreparesSpells)
+                {
+                    string suffix = PrepareWindowOpen ? "" : " (locked - rest to change)";
+                    yield return new Command_Action
+                    {
+                        defaultLabel = "Prepare spells" + (PrepareWindowOpen ? "" : " *"),
+                        defaultDesc = $"Ready which leveled spells {pawn.LabelShort} can cast ({PreparedLeveledCount}/{PreparedMax}). " +
+                                      "Swappable for 6 hours after a long rest." + suffix,
+                        icon = RH_Tex.LongRest,
+                        action = () => Find.WindowStack.Add(new Dialog_PrepareSpells(this))
+                    };
+                }
             }
             if (pawn.abilities != null)
             {
@@ -532,6 +609,8 @@ namespace RimHeroes
             Scribe_Collections.Look(ref mimBonds, "mimBonds", LookMode.Deep);
             Scribe_Collections.Look(ref slotsExpended, "slotsExpended", LookMode.Value);
             Scribe_Collections.Look(ref autocastSpells, "autocastSpells", LookMode.Def);
+            Scribe_Collections.Look(ref preparedSpells, "preparedSpells", LookMode.Def);
+            Scribe_Values.Look(ref prepareWindowEndTick, "prepareWindowEndTick", -1);
             Scribe_Values.Look(ref longResting, "longResting");
             Scribe_Values.Look(ref longRestProgress, "longRestProgress");
             Scribe_Values.Look(ref shortRestArmed, "shortRestArmed", true);
@@ -539,6 +618,7 @@ namespace RimHeroes
             {
                 if (mimBonds == null) mimBonds = new List<MimBond>();
                 if (autocastSpells == null) autocastSpells = new List<AbilityDef>();
+                if (preparedSpells == null) preparedSpells = new List<AbilityDef>();
                 if (slotsExpended == null || slotsExpended.Count != 10) slotsExpended = new List<int>(new int[10]);
             }
         }

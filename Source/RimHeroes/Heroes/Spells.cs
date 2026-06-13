@@ -119,6 +119,11 @@ namespace RimHeroes
                     reason = "RH_NotAHero".Translate();
                     return true;
                 }
+                if (!hero.CanCastSpell(def))
+                {
+                    reason = "Not prepared - ready this spell after a long rest";
+                    return true;
+                }
                 if (hero.RemainingSlots(SpellLevel) <= 0)
                 {
                     reason = "RH_NoSlots".Translate(SpellLevel);
