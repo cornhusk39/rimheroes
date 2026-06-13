@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Status hediffs applied by the warlock spell list. Timed via HediffCompProperties_Disappears.
+       Original flavor text. RH_Held (Banishment) lives in Hediffs_WizardSpells.xml and is reused. -->
+
+  <!-- Darkness: smothered in magical black - can barely see to aim or strike. -->
+  <HediffDef>
+    <defName>RH_Blinded</defName>
+    <label>blinded</label>
+    <description>Wrapped in clinging magical dark. They cannot see to aim, and their blows fall wide.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.35, 0.3, 0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ShootingAccuracyPawn>-6</ShootingAccuracyPawn>
+          <MeleeHitChance>-5</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Hunger of Hadar: gnawed at by the void - dragged down and clumsy. -->
+  <HediffDef>
+    <defName>RH_Devoured</defName>
+    <label>devoured</label>
+    <description>The hungering void gnaws at them from every side, dragging them down and fouling their attacks.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.25, 0.2, 0.35)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>-0.8</MoveSpeed>
+          <MeleeHitChance>-4</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1200</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Fear: gripped by raw dread - sluggish, clumsy, and near to breaking. -->
+  <HediffDef>
+    <defName>RH_Frightened</defName>
+    <label>frightened</label>
+    <description>Raw dread floods them. They flinch and falter, slow to move and quick to crack.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.5, 0.3, 0.55)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>-0.5</MoveSpeed>
+          <MeleeHitChance>-4</MeleeHitChance>
+          <MentalBreakThreshold>0.15</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1200</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

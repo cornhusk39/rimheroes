@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Buff hediffs applied by Paladin spells. Timed via HediffCompProperties_Disappears. -->
+
+  <!-- Searing Smite: holy fire sharpens the paladin's melee blows -->
+  <HediffDef>
+    <defName>RH_SearingSmite</defName>
+    <label>searing smite</label>
+    <description>Holy fire clings to their weapon, lending bite and heat to every melee strike.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(1.0, 0.7, 0.35)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>4</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <WorkSpeedGlobal>1.0</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Shield of Faith: a shimmering ward against incoming blows -->
+  <HediffDef>
+    <defName>RH_Shielded</defName>
+    <label>shielded</label>
+    <description>Wrapped in a shimmering field of force that turns aside sharp and crushing blows alike.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.7, 0.85, 1.0)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Aid: bolstered vigor and steadier nerves -->
+  <HediffDef>
+    <defName>RH_Aided</defName>
+    <label>aided</label>
+    <description>Bolstered by a wave of vigor: tougher against pain and steadier of heart.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.85, 0.95, 0.7)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <PainShockThreshold>0.1</PainShockThreshold>
+          <MentalBreakThreshold>-0.08</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Magic Weapon: a blessed weapon strikes truer -->
+  <HediffDef>
+    <defName>RH_MagicWeapon</defName>
+    <label>magic weapon</label>
+    <description>Their weapon hums with channeled power, guiding each melee strike truer.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.8, 0.7, 1.0)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>3</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Aura of Courage: steadied nerves and sharper blows -->
+  <HediffDef>
+    <defName>RH_Couraged</defName>
+    <label>emboldened</label>
+    <description>Buoyed by a steadying presence, standing firmer against fear and striking with surer aim.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(1.0, 0.85, 0.45)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MentalBreakThreshold>-0.12</MentalBreakThreshold>
+          <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Death Ward: a benediction against a mortal blow -->
+  <HediffDef>
+    <defName>RH_DeathWard</defName>
+    <label>death ward</label>
+    <description>A protective benediction blunts the force of every wound and steels them to endure a killing blow.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.95, 0.9, 0.6)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <PainShockThreshold>0.2</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.7</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

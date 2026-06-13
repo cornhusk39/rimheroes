@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<radialGradient id="sh_ring" cx="50%" cy="50%" r="55%">
+<stop offset="0%" stop-color="#CFE6FF"/>
+<stop offset="100%" stop-color="#3F6FB0"/>
+</radialGradient>
+</defs>
+<g stroke="url(#sh_ring)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M32 8 L36 24 L32 30 L28 24 Z"/>
+<path d="M56 32 L40 36 L34 32 L40 28 Z"/>
+<path d="M32 56 L28 40 L32 34 L36 40 Z"/>
+<path d="M8 32 L24 28 L30 32 L24 36 Z"/>
+</g>
+<g stroke="#9FC4F0" stroke-width="4" fill="none" stroke-linecap="round">
+<path d="M47 17 L40 24"/>
+<path d="M47 47 L40 40"/>
+<path d="M17 47 L24 40"/>
+<path d="M17 17 L24 24"/>
+</g>
+<circle cx="32" cy="32" r="5" fill="#EAF3FF"/>
+</svg>

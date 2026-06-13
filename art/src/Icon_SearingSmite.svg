@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<linearGradient id="searBlade" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#FFF6D8"/>
+<stop offset="1" stop-color="#C7CDD6"/>
+</linearGradient>
+</defs>
+<path d="M40 6 L46 12 L24 50 L18 48 L16 42 Z" fill="url(#searBlade)" stroke-linejoin="round"/>
+<rect x="14" y="46" width="16" height="6" rx="2" transform="rotate(45 22 49)" fill="#8A6B3A"/>
+<path d="M36 44 Q44 36 40 28 Q50 32 50 42 Q50 54 38 56 Q44 52 36 44 Z" fill="#F6A02C" stroke-linejoin="round"/>
+<path d="M40 46 Q45 41 43 36 Q49 40 46 47 Q43 52 40 46 Z" fill="#FBD96B" stroke-linejoin="round"/>
+</svg>

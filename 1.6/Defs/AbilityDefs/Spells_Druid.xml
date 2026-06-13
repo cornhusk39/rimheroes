@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Druid spell list: a FULL prepared caster, cantrip -> level 9. Built on the proven
+       SpellPower-scaling comps (DamageTarget / Explosion / Heal / ZoneHediff). All in-game text
+       is original, functional wording - no rulebook descriptions. Granted via the Druid's
+       levelGrants alongside existing grants (Thornlash, Cure Wounds) and the wildshape forms. -->
+
+  <!-- ============ CANTRIP (level 0, at-will) ============ -->
+
+  <!-- Produce Flame: a hurled mote of conjured fire -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_ProduceFlame</defName>
+    <label>produce flame</label>
+    <description>Kindle a flickering mote of fire in your palm and hurl it at a foe, where it bursts in a gout of flame. Cantrip - costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/ProduceFlame</iconPath>
+    <level>0</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>21.9</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Burn</damageDef>
+        <amount>8</amount>
+        <hits>1</hits>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 1 ============ -->
+
+  <!-- Entangle: grasping roots root a patch of enemies -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Entangle</defName>
+    <label>entangle</label>
+    <description>Living roots and vines erupt from the ground to seize every foe in a patch of land, pinning them where they stand. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/Entangle</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>200</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Entangled</hediff>
+        <radius>3.9</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 2 ============ -->
+
+  <!-- Moonbeam: a searing column of cold moonlight -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Moonbeam</defName>
+    <label>moonbeam</label>
+    <description>Call down a shaft of pale, freezing moonlight onto a foe, searing them with cold radiance. Consumes a level-2 spell slot.</description>
+    <iconPath>UI/RimHeroes/Moonbeam</iconPath>
+    <level>2</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Burn</damageDef>
+        <amount>16</amount>
+        <hits>1</hits>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 3 ============ -->
+
+  <!-- Call Lightning: a conjured storm-bolt that staggers -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_CallLightning</defName>
+    <label>call lightning</label>
+    <description>Summon a roiling storm-cloud overhead and call down a single brutal bolt onto a foe, leaving them stunned and twitching. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/CallLightning</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>150</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>29.9</range>
+      <warmupTime>1.2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Burn</damageDef>
+        <amount>28</amount>
+        <hits>1</hits>
+        <applyHediff>RH_Jolted</applyHediff>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Sleet Storm: freezing sleet chills a patch of ground -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_SleetStorm</defName>
+    <label>sleet storm</label>
+    <description>Conjure a driving fall of freezing sleet over a patch of ground, numbing and slowing everyone caught beneath it. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/SleetStorm</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>250</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>29.9</range>
+      <warmupTime>1.2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Chilled</hediff>
+        <radius>4</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 5 ============ -->
+
+  <!-- Insect Plague: a biting swarm fills an area -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_InsectPlague</defName>
+    <label>insect plague</label>
+    <description>Call up a seething swarm of biting insects that boils across an area, tearing at every foe within it. Consumes a level-5 spell slot.</description>
+    <iconPath>UI/RimHeroes/InsectPlague</iconPath>
+    <level>5</level>
+    <cooldownTicksRange>250</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Bite</damageDef>
+        <radius>3.9</radius>
+        <damageAmount>25</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 6 ============ -->
+
+  <!-- Sunbeam: a lance of burning sunlight -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Sunbeam</defName>
+    <label>sunbeam</label>
+    <description>Loose a lance of pure, scalding sunlight that spears a single foe and burns them to the core. Consumes a level-6 spell slot.</description>
+    <iconPath>UI/RimHeroes/Sunbeam</iconPath>
+    <level>6</level>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>29.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Burn</damageDef>
+        <amount>45</amount>
+        <hits>1</hits>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 7 ============ -->
+
+  <!-- Regenerate: flesh knits at unnatural speed -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Regenerate</defName>
+    <label>regenerate</label>
+    <description>Pour raw life into an ally so their flesh knits and mends at impossible speed, closing even grievous wounds. Consumes a level-7 spell slot.</description>
+    <iconPath>UI/RimHeroes/Regenerate</iconPath>
+    <level>7</level>
+    <cooldownTicksRange>350</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetSelf>true</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityHeal">
+        <amount>70</amount>
+        <radius>0</radius>
+        <onlyAllies>true</onlyAllies>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 8 ============ -->
+
+  <!-- Sunburst: a blinding burst of radiance -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Sunburst</defName>
+    <label>sunburst</label>
+    <description>Detonate a brilliant sphere of sunlight that erupts across a wide area, scorching every foe caught in the glare. Consumes a level-8 spell slot.</description>
+    <iconPath>UI/RimHeroes/Sunburst</iconPath>
+    <level>8</level>
+    <cooldownTicksRange>400</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>29.9</range>
+      <warmupTime>2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Flame</damageDef>
+        <radius>5</radius>
+        <damageAmount>55</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="dbCone" cx="0.15" cy="0.5">
+      <stop offset="0%" stop-color="#FFF3C4"/>
+      <stop offset="40%" stop-color="#FFB23D"/>
+      <stop offset="100%" stop-color="#E2581F"/>
+    </radialGradient>
+  </defs>
+  <!-- widening exhaled cone of fire from the left -->
+  <path d="M6 32 C26 24 44 18 60 8 C52 24 52 40 60 56 C44 46 26 40 6 32 Z"
+        fill="url(#dbCone)"/>
+  <!-- flame tongues licking off the leading edge -->
+  <path d="M58 12 C62 16 62 22 59 27 C58 21 56 17 53 14 Z" fill="#FF8A2A"/>
+  <path d="M59 54 C62 49 62 43 59 38 C58 44 56 49 53 52 Z" fill="#FF8A2A"/>
+  <path d="M48 30 C53 28 58 28 62 31 C57 33 53 34 49 35 Z" fill="#FFD43B"/>
+  <!-- hot inner breath core -->
+  <path d="M10 32 C24 28 36 24 48 18 C44 26 44 38 48 46 C36 40 24 36 10 32 Z"
+        fill="#FFE9A8" opacity="0.8"/>
+</svg>

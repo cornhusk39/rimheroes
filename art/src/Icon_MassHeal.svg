@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="mhGlow" cx="0.5" cy="0.45">
+      <stop offset="0%" stop-color="#F4FFF8"/>
+      <stop offset="50%" stop-color="#8FE3AC"/>
+      <stop offset="100%" stop-color="#2E8F55"/>
+    </radialGradient>
+  </defs>
+  <!-- great expanding tide: concentric rings -->
+  <circle cx="32" cy="32" r="29" fill="none" stroke="#8FE3AC" stroke-width="3" opacity="0.4"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="#8FE3AC" stroke-width="3" opacity="0.6"/>
+  <circle cx="32" cy="32" r="17" fill="url(#mhGlow)"/>
+  <!-- twin crosses to read as 'mass' -->
+  <path d="M29 21 L35 21 L35 29 L43 29 L43 35 L35 35 L35 43 L29 43 L29 35 L21 35 L21 29 L29 29 Z" fill="#FFFFFF"/>
+  <circle cx="32" cy="6" r="3" fill="#CFF5DB"/>
+  <circle cx="58" cy="32" r="3" fill="#CFF5DB"/>
+  <circle cx="32" cy="58" r="3" fill="#CFF5DB"/>
+  <circle cx="6" cy="32" r="3" fill="#CFF5DB"/>
+</svg>

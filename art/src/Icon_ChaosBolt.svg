@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="cbCore" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6EE6"/>
+      <stop offset="50%" stop-color="#9B4DFF"/>
+      <stop offset="100%" stop-color="#3FA0FF"/>
+    </linearGradient>
+  </defs>
+  <!-- churning chaotic bolt: jagged twisting streak -->
+  <path d="M50 6 L34 22 L44 26 L26 40 L36 44 L18 58"
+        fill="none" stroke="url(#cbCore)" stroke-width="11"
+        stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M50 6 L34 22 L44 26 L26 40 L36 44 L18 58"
+        fill="none" stroke="#FFEAFF" stroke-width="3"
+        stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+  <!-- scattered chaos motes -->
+  <circle cx="54" cy="20" r="4" fill="#FFD43B"/>
+  <circle cx="14" cy="40" r="3.5" fill="#3FF0C0"/>
+  <circle cx="46" cy="50" r="3" fill="#FF6EE6"/>
+</svg>

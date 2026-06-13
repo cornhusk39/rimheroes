@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<linearGradient id="dwWard" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#FFF8DC"/>
+<stop offset="1" stop-color="#D9B441"/>
+</linearGradient>
+</defs>
+<path d="M32 5 L53 12 L53 31 Q53 49 32 60 Q11 49 11 31 L11 12 Z" fill="url(#dwWard)" stroke-linejoin="round"/>
+<rect x="28" y="18" width="8" height="30" rx="2" fill="#FFFDF2"/>
+<rect x="20" y="26" width="24" height="8" rx="2" fill="#FFFDF2"/>
+</svg>

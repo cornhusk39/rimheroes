@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Warlock spell list: a FULL caster of the pact, trading raw breadth for eldritch blasts,
+       curses, and dark battlefield control. Built on proven SpellPower-scaling comps
+       (DamageTarget / Explosion / ZoneHediff). All text original and functional - no rulebook
+       wording. Granted via the Warlock's levelGrants. EldritchBlast (cantrip) and Hex (lvl 1)
+       are granted from the shared core list and are NOT re-authored here. -->
+
+  <!-- ============ LEVEL 1 ============ -->
+
+  <!-- Hellish Rebuke: searing flame punishes a foe -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_HellishRebuke</defName>
+    <label>hellish rebuke</label>
+    <description>Answer a foe with a lash of hellfire, wreathing them in punishing flame. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/HellishRebuke</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.8</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Burn</damageDef>
+        <amount>18</amount>
+        <hits>1</hits>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Arms of Hadar: dark tendrils lash out around the caster -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_ArmsOfHadar</defName>
+    <label>arms of hadar</label>
+    <description>Black tendrils of the Starless Dark erupt around you and flail at everything near. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/ArmsOfHadar</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>150</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0.8</warmupTime>
+      <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>false</canTargetPawns><canTargetLocations>false</canTargetLocations></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Blunt</damageDef>
+        <radius>2.5</radius>
+        <damageAmount>14</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 2 ============ -->
+
+  <!-- Darkness: clinging dark blinds foes in an area -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Darkness</defName>
+    <label>darkness</label>
+    <description>Pour out a pool of clinging, magical black that smothers sight and fouls every shot. Consumes a level-2 spell slot.</description>
+    <iconPath>UI/RimHeroes/Darkness</iconPath>
+    <level>2</level>
+    <cooldownTicksRange>200</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Blinded</hediff>
+        <radius>2.5</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Shatter: a burst of ringing force -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Shatter</defName>
+    <label>shatter</label>
+    <description>A sudden chord of ringing force detonates at a point, rattling everything caught within. Consumes a level-2 spell slot.</description>
+    <iconPath>UI/RimHeroes/Shatter</iconPath>
+    <level>2</level>
+    <cooldownTicksRange>150</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Blunt</damageDef>
+        <radius>3</radius>
+        <damageAmount>22</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 3 ============ -->
+
+  <!-- Hunger of Hadar: a devouring void opens -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_HungerOfHadar</defName>
+    <label>hunger of hadar</label>
+    <description>Tear open a hungering void that gnaws at all within, dragging them down and fouling their blows. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/HungerOfHadar</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>250</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Devoured</hediff>
+        <radius>3.9</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Fear: terror grips a group of foes -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Fear</defName>
+    <label>fear</label>
+    <description>Wash a cluster of foes in raw dread, leaving them flinching, sluggish, and close to breaking. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/Fear</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>250</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Frightened</hediff>
+        <radius>3.9</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 4 ============ -->
+
+  <!-- Banishment: a foe is wrenched partly out of the world, helpless -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Banishment</defName>
+    <label>banishment</label>
+    <description>Wrench a foe halfway into an empty elsewhere, leaving their body locked and unresponsive. Consumes a level-4 spell slot.</description>
+    <iconPath>UI/RimHeroes/Banishment</iconPath>
+    <level>4</level>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Held</hediff>
+        <radius>1.5</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============ LEVEL 6 ============ -->
+
+  <!-- Circle of Death: a wave of negative energy -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_CircleOfDeath</defName>
+    <label>circle of death</label>
+    <description>A ring of withering negative energy rolls outward from a point, sapping the life from all it sweeps over. Consumes a level-6 spell slot.</description>
+    <iconPath>UI/RimHeroes/CircleOfDeath</iconPath>
+    <level>6</level>
+    <cooldownTicksRange>350</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>29.9</range>
+      <warmupTime>1.8</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Blunt</damageDef>
+        <radius>5</radius>
+        <damageAmount>45</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

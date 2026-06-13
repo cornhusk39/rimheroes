@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Ranger spell list. HALF caster, known, spell levels 1-5, no cantrips.
+       Hunting, thorns, and nature utility. New ranger-exclusive spells only;
+       existing shared spells (HuntersMark, CureWounds) are granted via Classes_Core.
+       All description text is original functional wording. -->
+
+  <!-- Level 1: roots burst from a struck foe and bind them -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_EnsnaringStrike</defName>
+    <label>ensnaring strike</label>
+    <description>Your shot blooms into a tangle of grasping roots where it lands, snaring the target and dragging at their every step. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/EnsnaringStrike</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Snared</hediff>
+        <radius>1.9</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 1: a spray of conjured thorns tears across a spot -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_HailOfThorns</defName>
+    <label>hail of thorns</label>
+    <description>A burst of conjured thorns rains down around the chosen point, raking everything caught beneath the spray. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/HailOfThorns</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Stab</damageDef>
+        <radius>2.5</radius>
+        <damageAmount>14</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 1: restorative berries mend an ally -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Goodberry</defName>
+    <label>goodberry</label>
+    <description>A handful of berries swells with nourishing magic; an ally who eats them feels their wounds knit and their strength return. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/Goodberry</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityHeal">
+        <amount>20</amount>
+        <radius>0</radius>
+        <onlyAllies>true</onlyAllies>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 2: the ground bristles with conjured spikes -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_SpikeGrowth</defName>
+    <label>spike growth</label>
+    <description>A patch of ground erupts into a thicket of hardened spikes, slowing and gashing any enemy who tries to cross it. Consumes a level-2 spell slot.</description>
+    <iconPath>UI/RimHeroes/SpikeGrowth</iconPath>
+    <level>2</level>
+    <cooldownTicksRange>240</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Spiked</hediff>
+        <radius>3.9</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 3: a crackling shot that staggers -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_LightningArrow</defName>
+    <label>lightning arrow</label>
+    <description>Your shot transforms into a bolt of raw lightning, searing through the target and leaving them reeling. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/LightningArrow</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>240</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Burn</damageDef>
+        <amount>26</amount>
+        <hits>1</hits>
+        <applyHediff>RH_Jolted</applyHediff>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 3: a fanning volley of conjured projectiles -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_ConjureBarrage</defName>
+    <label>conjure barrage</label>
+    <description>A fan of conjured projectiles sprays outward from the marked point, peppering everything within the spread. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/ConjureBarrage</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>240</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Stab</damageDef>
+        <radius>3.5</radius>
+        <damageAmount>26</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 5: a rain of arrows blankets an area -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Volley</defName>
+    <label>volley</label>
+    <description>You loose a withering rain of arrows that blankets a wide swath of ground, striking down every foe caught in the open. Consumes a level-5 spell slot.</description>
+    <iconPath>UI/RimHeroes/Volley</iconPath>
+    <level>5</level>
+    <cooldownTicksRange>360</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Stab</damageDef>
+        <radius>4</radius>
+        <damageAmount>40</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

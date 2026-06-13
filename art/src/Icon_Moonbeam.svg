@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="mbeamG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF2FF"/>
+      <stop offset="1" stop-color="#5C7BD1"/>
+    </linearGradient>
+  </defs>
+  <path d="M22 6 L42 6 L52 58 L12 58 Z" fill="url(#mbeamG)" stroke-linejoin="round"/>
+  <path d="M28 6 L34 6 L37 58 L25 58 Z" fill="#F4F8FF" opacity="0.8"/>
+  <path d="M40 8 C32 10 28 17 28 24 C28 31 32 38 40 40 C35 38 33 31 33 24 C33 17 35 10 40 8 Z"
+        fill="#C6D6FF"/>
+</svg>

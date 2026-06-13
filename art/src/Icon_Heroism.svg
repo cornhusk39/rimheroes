@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<linearGradient id="heroShield" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#FBE08A"/>
+<stop offset="100%" stop-color="#B8861E"/>
+</linearGradient>
+</defs>
+<path d="M32 5 L55 13 L55 32 Q55 52 32 60 Q9 52 9 32 L9 13 Z" fill="url(#heroShield)" stroke-linejoin="round"/>
+<path d="M32 18 L36 28 L47 28 L38 35 L41 46 L32 39 L23 46 L26 35 L17 28 L28 28 Z" fill="#FFF7DA"/>
+</svg>

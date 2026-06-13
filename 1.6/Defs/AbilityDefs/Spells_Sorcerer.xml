@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================
+       SORCERER spells (FULL caster, known/spontaneous, up to lvl 9).
+       Only the class's EXCLUSIVE new spells are authored here; the
+       shared wizard evocations are granted by reference in the class
+       def and live in their own files.
+       ============================================================ -->
+
+  <!-- Level 1: churning random-energy bolt -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_ChaosBolt</defName>
+    <label>chaos bolt</label>
+    <description>A bolt of churning, unstable sorcerous energy leaps from your hand and slams into a single foe, its raw color shifting wildly as it flies. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/ChaosBolt</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>90</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Burn</damageDef>
+        <amount>16</amount>
+        <hits>1</hits>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 1: close-range fan of flame -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_BurningHands</defName>
+    <label>burning hands</label>
+    <description>You spread your thumbs together and a fan of searing flame sprays from your fingertips, scorching everything caught in the spread. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/BurningHands</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>90</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>9.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Flame</damageDef>
+        <radius>2.5</radius>
+        <damageAmount>14</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 1: sustained, staggering arc of lightning -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_WitchBolt</defName>
+    <label>witch bolt</label>
+    <description>You hurl a crackling arc of lightning that latches onto a foe and pours current through them, the jolt locking their muscles and leaving them reeling. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/WitchBolt</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Burn</damageDef>
+        <amount>12</amount>
+        <hits>1</hits>
+        <applyHediff>RH_Jolted</applyHediff>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 3: exhaled cone of elemental energy -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_DragonsBreath</defName>
+    <label>dragon's breath</label>
+    <description>Drawing on your draconic spark, you draw a deep breath and exhale a roaring cone of elemental fire that engulfs all before you. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/DragonsBreath</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>150</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>14.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Flame</damageDef>
+        <radius>3</radius>
+        <damageAmount>30</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="clcloudG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8A93A8"/>
+      <stop offset="1" stop-color="#4A5266"/>
+    </linearGradient>
+  </defs>
+  <path d="M16 26 C10 26 8 18 16 17 C16 9 28 8 30 15 C40 9 50 17 46 24 C54 24 54 32 46 32 L18 32 C12 32 12 26 16 26 Z"
+        fill="url(#clcloudG)" stroke-linejoin="round"/>
+  <path d="M34 30 L22 46 L31 46 L25 60 L46 38 L36 38 L42 30 Z"
+        fill="#FFD23E" stroke-linejoin="round"/>
+  <path d="M34 30 L26 42 L33 42 L30 50" fill="none" stroke="#FFF2B0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

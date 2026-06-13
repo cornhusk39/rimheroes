@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Status hediffs introduced by the Druid spell list. Timed via HediffCompProperties_Disappears.
+       Original flavor text. Other statuses used by the Druid (RH_Jolted, RH_Chilled) live in their
+       own files and are referenced, not re-authored here. -->
+
+  <!-- Entangle: held fast by grasping roots - cannot move. -->
+  <HediffDef>
+    <defName>RH_Entangled</defName>
+    <label>entangled</label>
+    <description>Grasping roots and vines have wound tight around their legs, rooting them in place.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.45, 0.65, 0.35)</defaultLabelColor>
+    <stages>
+      <li>
+        <capMods>
+          <li><capacity>Moving</capacity><offset>-1.0</offset></li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

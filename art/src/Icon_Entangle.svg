@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="entG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7BD15A"/>
+      <stop offset="1" stop-color="#2E7A2C"/>
+    </linearGradient>
+  </defs>
+  <path d="M14 58 C14 40 22 30 30 16 M30 16 C24 22 18 22 12 20 M30 16 C36 22 42 22 48 18"
+        fill="none" stroke="url(#entG)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 58 C50 42 44 32 36 20 M36 20 C42 24 48 24 54 22 M36 20 C30 25 24 25 20 24"
+        fill="none" stroke="url(#entG)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 58 C14 40 22 30 30 16" fill="none" stroke="#BFF0A0" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="30" cy="16" rx="4.5" ry="3" fill="#A8E68C" transform="rotate(-30 30 16)"/>
+  <ellipse cx="36" cy="20" rx="4.5" ry="3" fill="#A8E68C" transform="rotate(30 36 20)"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<radialGradient id="berryFill" cx="0.35" cy="0.3" r="0.8">
+<stop offset="0" stop-color="#C85A9E"/>
+<stop offset="1" stop-color="#7A1E52"/>
+</radialGradient>
+</defs>
+<path d="M30 14 C30 6 40 4 44 10 C50 6 58 12 52 20 C58 22 56 32 48 30" stroke="#4E8A1E" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="22" cy="40" r="13" fill="url(#berryFill)"/>
+<circle cx="42" cy="44" r="13" fill="url(#berryFill)"/>
+<circle cx="32" cy="26" r="11" fill="url(#berryFill)"/>
+<circle cx="18" cy="35" r="3.5" fill="#E69ACB"/>
+<circle cx="38" cy="39" r="3.5" fill="#E69ACB"/>
+<circle cx="28" cy="22" r="3" fill="#E69ACB"/>
+</svg>

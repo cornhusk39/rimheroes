@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ============================================================
+       BARD spell list (full caster, known spells, up to level 9).
+       A support / control / charm caster. All description text is
+       original functional wording. Existing spells (Vicious Mockery,
+       Healing Word, Bless, Lesser Restoration) are granted via the
+       class def and authored elsewhere; only NEW spells live here.
+       ============================================================ -->
+
+  <!-- Level 1: a stab of maddening sound that wracks the mind. -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_DissonantWhispers</defName>
+    <label>dissonant whispers</label>
+    <description>A torrent of discordant whispers floods one foe's mind, the noise alone hammering at them like a physical blow. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/DissonantWhispers</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>90</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Blunt</damageDef>
+        <amount>12</amount>
+        <hits>1</hits>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 1: fill an ally with surging valor. -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Heroism</defName>
+    <label>heroism</label>
+    <description>You pour a swell of fearless valor into a willing ally. They fight harder and steadier, shrugging off the dread that would break a lesser heart. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/Heroism</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>22.9</range>
+      <warmupTime>0.8</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_Heroism</hediffDef>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 2: bind a single foe rigid. Uses existing RH_Held. -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_HoldPerson</defName>
+    <label>hold person</label>
+    <description>Threads of compelling force seize a foe's body, locking joint and limb so they can neither flee nor strike. Consumes a level-2 spell slot.</description>
+    <iconPath>UI/RimHeroes/HoldPerson</iconPath>
+    <level>2</level>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Held</hediff>
+        <radius>1.5</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 3: dazzling lights daze a knot of foes. -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_HypnoticPattern</defName>
+    <label>hypnotic pattern</label>
+    <description>A lattice of shifting colored light blooms across the battlefield. Foes caught in it lose the thread of the fight, swaying and slow to react. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/HypnoticPattern</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>240</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>27.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Dazed</hediff>
+        <radius>4</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 4: foes reel, unable to act straight. -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Confusion</defName>
+    <label>confusion</label>
+    <description>A wave of jumbled compulsion washes over a cluster of foes. Their thoughts scatter, their footing falters, and their grip on calm begins to slip. Consumes a level-4 spell slot.</description>
+    <iconPath>UI/RimHeroes/Confusion</iconPath>
+    <level>4</level>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>27.9</range>
+      <warmupTime>1.8</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Confused</hediff>
+        <radius>3.9</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 6: your song emboldens nearby allies. -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Inspiration</defName>
+    <label>inspiration</label>
+    <description>You raise a stirring melody that lifts every ally within earshot, sharpening their aim, steadying their blows, and quickening their hands at any task. Consumes a level-6 spell slot.</description>
+    <iconPath>UI/RimHeroes/Inspiration</iconPath>
+    <level>6</level>
+    <cooldownTicksRange>360</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Inspired</hediff>
+        <radius>4.9</radius>
+        <targets>Allies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 8: a word of power that fully mends an ally. -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_PowerWordHeal</defName>
+    <label>power word heal</label>
+    <description>You speak a single word of profound power. Wounds close, bones knit, and the body is restored to wholeness in an instant. Consumes a level-8 spell slot.</description>
+    <iconPath>UI/RimHeroes/PowerWordHeal</iconPath>
+    <level>8</level>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>22.9</range>
+      <warmupTime>1.2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityHeal">
+        <amount>90</amount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="sgCore" cx="0.5" cy="0.5">
+      <stop offset="0%" stop-color="#F0FBFF"/>
+      <stop offset="60%" stop-color="#A8DFF0"/>
+      <stop offset="100%" stop-color="#5FA0C8"/>
+    </radialGradient>
+  </defs>
+  <!-- wheeling spirit wisps in a ring -->
+  <path d="M32 6 C40 8 44 14 42 22 C38 16 34 14 30 16 C30 10 30 7 32 6 Z" fill="#9AD3E8"/>
+  <path d="M58 32 C56 40 50 44 42 42 C48 38 50 34 48 30 C54 30 57 30 58 32 Z" fill="#7FC0DC"/>
+  <path d="M32 58 C24 56 20 50 22 42 C26 48 30 50 34 48 C34 54 34 57 32 58 Z" fill="#9AD3E8"/>
+  <path d="M6 32 C8 24 14 20 22 22 C16 26 14 30 16 34 C10 34 7 34 6 32 Z" fill="#7FC0DC"/>
+  <!-- central radiant core -->
+  <circle cx="32" cy="32" r="11" fill="url(#sgCore)"/>
+  <ellipse cx="28" cy="28" rx="4" ry="3" fill="#FFFFFF" opacity="0.85"/>
+</svg>

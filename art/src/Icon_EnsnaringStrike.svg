@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<linearGradient id="ensnareRoot" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#7FB23A"/>
+<stop offset="1" stop-color="#3B5E14"/>
+</linearGradient>
+</defs>
+<path d="M14 8 L46 56" stroke="#8A6A3A" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M44 50 L52 44 M44 50 L50 58 M44 50 L36 56" stroke="#C7A66A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M12 30 C24 22 40 26 50 16 M14 42 C26 36 44 40 54 30 M10 20 C20 16 30 18 38 12" stroke="url(#ensnareRoot)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="22" cy="34" r="4" fill="#9ED14E"/>
+<circle cx="40" cy="22" r="4" fill="#9ED14E"/>
+</svg>

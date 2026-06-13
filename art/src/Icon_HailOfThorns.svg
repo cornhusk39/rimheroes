@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<linearGradient id="thornHail" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#A8E05C"/>
+<stop offset="1" stop-color="#4A7A18"/>
+</linearGradient>
+</defs>
+<path d="M16 4 L24 28 L8 22 Z" fill="url(#thornHail)" stroke-linejoin="round"/>
+<path d="M34 6 L42 34 L24 26 Z" fill="url(#thornHail)" stroke-linejoin="round"/>
+<path d="M52 4 L58 30 L42 22 Z" fill="url(#thornHail)" stroke-linejoin="round"/>
+<path d="M14 34 L20 58 L6 50 Z" fill="url(#thornHail)" stroke-linejoin="round"/>
+<path d="M40 38 L46 60 L30 52 Z" fill="url(#thornHail)" stroke-linejoin="round"/>
+<path d="M56 34 L60 56 L46 48 Z" fill="url(#thornHail)" stroke-linejoin="round"/>
+</svg>

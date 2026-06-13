@@ -122,13 +122,23 @@
           <li>RH_Feature_Survivalist</li>
         </features>
       </li>
-      <li>
-        <level>2</level>
-        <abilities>
-          <li>RH_Spell_HuntersMark</li>
-          <li>RH_Spell_CureWounds</li>
-        </abilities>
-      </li>
+      <li><level>2</level><abilities>
+        <li>RH_Spell_HuntersMark</li>
+        <li>RH_Spell_CureWounds</li>
+        <li>RH_Spell_EnsnaringStrike</li>
+        <li>RH_Spell_HailOfThorns</li>
+        <li>RH_Spell_Goodberry</li>
+      </abilities></li>
+      <li><level>5</level><abilities>
+        <li>RH_Spell_SpikeGrowth</li>
+      </abilities></li>
+      <li><level>9</level><abilities>
+        <li>RH_Spell_LightningArrow</li>
+        <li>RH_Spell_ConjureBarrage</li>
+      </abilities></li>
+      <li><level>17</level><abilities>
+        <li>RH_Spell_Volley</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>
@@ -151,13 +161,26 @@
           <li>RH_Feature_DivineGrit</li>
         </features>
       </li>
-      <li>
-        <level>2</level>
-        <abilities>
-          <li>RH_Spell_LayOnHands</li>
-          <li>RH_Spell_Bless</li>
-        </abilities>
-      </li>
+      <li><level>2</level><abilities>
+        <li>RH_Spell_LayOnHands</li>
+        <li>RH_Spell_Bless</li>
+        <li>RH_Spell_DivineSmite</li>
+        <li>RH_Spell_SearingSmite</li>
+        <li>RH_Spell_ShieldOfFaith</li>
+      </abilities></li>
+      <li><level>5</level><abilities>
+        <li>RH_Spell_Aid</li>
+        <li>RH_Spell_MagicWeapon</li>
+        <li>RH_Spell_LesserRestoration</li>
+      </abilities></li>
+      <li><level>9</level><abilities>
+        <li>RH_Spell_AuraOfCourage</li>
+        <li>RH_Spell_Daylight</li>
+        <li>RH_Spell_Revivify</li>
+      </abilities></li>
+      <li><level>13</level><abilities>
+        <li>RH_Spell_DeathWard</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>
@@ -174,28 +197,39 @@
     <casterProgression>Full</casterProgression>
     <preparesSpells>true</preparesSpells>
     <levelGrants>
-      <li>
-        <level>1</level>
-        <abilities>
-          <li>RH_Spell_SacredFlame</li>
-          <li>RH_Spell_CureWounds</li>
-          <li>RH_Spell_Bless</li>
-        </abilities>
-      </li>
-      <li>
-        <level>3</level>
-        <abilities>
-          <li>RH_Spell_Bane</li>
-          <li>RH_Spell_LesserRestoration</li>
-        </abilities>
-      </li>
-      <li>
-        <level>5</level>
-        <abilities>
-          <li>RH_Spell_Revivify</li>
-          <li>RH_Spell_PrayerOfHealing</li>
-        </abilities>
-      </li>
+      <li><level>1</level><abilities>
+        <li>RH_Spell_Guidance</li>
+        <li>RH_Spell_SacredFlame</li>
+        <li>RH_Spell_CureWounds</li>
+        <li>RH_Spell_Bless</li>
+        <li>RH_Spell_Bane</li>
+        <li>RH_Spell_HealingWord</li>
+      </abilities></li>
+      <li><level>3</level><abilities>
+        <li>RH_Spell_SpiritualWeapon</li>
+        <li>RH_Spell_LesserRestoration</li>
+        <li>RH_Spell_PrayerOfHealing</li>
+      </abilities></li>
+      <li><level>5</level><abilities>
+        <li>RH_Spell_SpiritGuardians</li>
+        <li>RH_Spell_Revivify</li>
+      </abilities></li>
+      <li><level>7</level><abilities>
+        <li>RH_Spell_GuardianOfFaith</li>
+      </abilities></li>
+      <li><level>9</level><abilities>
+        <li>RH_Spell_FlameStrike</li>
+        <li>RH_Spell_MassCureWounds</li>
+      </abilities></li>
+      <li><level>11</level><abilities>
+        <li>RH_Spell_Heal</li>
+      </abilities></li>
+      <li><level>15</level><abilities>
+        <li>RH_Spell_HolyAura</li>
+      </abilities></li>
+      <li><level>17</level><abilities>
+        <li>RH_Spell_MassHeal</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Sweeper</job></li>
@@ -212,31 +246,38 @@
     <casterProgression>Full</casterProgression>
     <preparesSpells>true</preparesSpells>
     <levelGrants>
-      <li>
-        <level>1</level>
-        <abilities>
-          <li>RH_Spell_Thornlash</li>
-          <li>RH_Spell_CureWounds</li>
-        </abilities>
-      </li>
-      <li>
-        <level>2</level>
-        <abilities>
-          <li>RH_Ability_WildshapeDireWolf</li>
-        </abilities>
-      </li>
-      <li>
-        <level>5</level>
-        <abilities>
-          <li>RH_Ability_WildshapeOwlbear</li>
-        </abilities>
-      </li>
-      <li>
-        <level>8</level>
-        <abilities>
-          <li>RH_Ability_WildshapeGiantElk</li>
-        </abilities>
-      </li>
+      <li><level>1</level><abilities>
+        <li>RH_Spell_ProduceFlame</li>
+        <li>RH_Spell_Thornlash</li>
+        <li>RH_Spell_Entangle</li>
+        <li>RH_Spell_CureWounds</li>
+      </abilities></li>
+      <li><level>2</level><abilities>
+        <li>RH_Ability_WildshapeDireWolf</li>
+      </abilities></li>
+      <li><level>3</level><abilities>
+        <li>RH_Spell_Moonbeam</li>
+      </abilities></li>
+      <li><level>5</level><abilities>
+        <li>RH_Spell_CallLightning</li>
+        <li>RH_Spell_SleetStorm</li>
+        <li>RH_Ability_WildshapeOwlbear</li>
+      </abilities></li>
+      <li><level>8</level><abilities>
+        <li>RH_Ability_WildshapeGiantElk</li>
+      </abilities></li>
+      <li><level>9</level><abilities>
+        <li>RH_Spell_InsectPlague</li>
+      </abilities></li>
+      <li><level>11</level><abilities>
+        <li>RH_Spell_Sunbeam</li>
+      </abilities></li>
+      <li><level>13</level><abilities>
+        <li>RH_Spell_Regenerate</li>
+      </abilities></li>
+      <li><level>15</level><abilities>
+        <li>RH_Spell_Sunburst</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>
@@ -350,19 +391,33 @@
     <vestmentHediff>RH_Vestment_Sorcerer</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <levelGrants>
-      <li>
-        <level>1</level>
-        <abilities>
-          <li>RH_Spell_FireBolt</li>
-          <li>RH_Spell_MagicMissile</li>
-        </abilities>
-      </li>
-      <li>
-        <level>5</level>
-        <abilities>
-          <li>RH_Spell_Fireball</li>
-        </abilities>
-      </li>
+      <li><level>1</level><abilities>
+        <li>RH_Spell_FireBolt</li>
+        <li>RH_Spell_RayOfFrost</li>
+        <li>RH_Spell_ChaosBolt</li>
+        <li>RH_Spell_BurningHands</li>
+        <li>RH_Spell_WitchBolt</li>
+        <li>RH_Spell_MagicMissile</li>
+        <li>RH_Spell_ChromaticOrb</li>
+      </abilities></li>
+      <li><level>3</level><abilities>
+        <li>RH_Spell_ScorchingRay</li>
+      </abilities></li>
+      <li><level>5</level><abilities>
+        <li>RH_Spell_DragonsBreath</li>
+        <li>RH_Spell_Fireball</li>
+        <li>RH_Spell_LightningBolt</li>
+      </abilities></li>
+      <li><level>9</level><abilities>
+        <li>RH_Spell_ConeOfCold</li>
+      </abilities></li>
+      <li><level>11</level><abilities>
+        <li>RH_Spell_ChainLightning</li>
+        <li>RH_Spell_Disintegrate</li>
+      </abilities></li>
+      <li><level>17</level><abilities>
+        <li>RH_Spell_MeteorSwarm</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>
@@ -378,14 +433,29 @@
     <vestmentHediff>RH_Vestment_Bard</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <levelGrants>
-      <li>
-        <level>1</level>
-        <abilities>
-          <li>RH_Spell_ViciousMockery</li>
-          <li>RH_Spell_HealingWord</li>
-          <li>RH_Spell_Bless</li>
-        </abilities>
-      </li>
+      <li><level>1</level><abilities>
+        <li>RH_Spell_ViciousMockery</li>
+        <li>RH_Spell_DissonantWhispers</li>
+        <li>RH_Spell_Heroism</li>
+        <li>RH_Spell_HealingWord</li>
+        <li>RH_Spell_Bless</li>
+      </abilities></li>
+      <li><level>3</level><abilities>
+        <li>RH_Spell_HoldPerson</li>
+        <li>RH_Spell_LesserRestoration</li>
+      </abilities></li>
+      <li><level>5</level><abilities>
+        <li>RH_Spell_HypnoticPattern</li>
+      </abilities></li>
+      <li><level>7</level><abilities>
+        <li>RH_Spell_Confusion</li>
+      </abilities></li>
+      <li><level>11</level><abilities>
+        <li>RH_Spell_Inspiration</li>
+      </abilities></li>
+      <li><level>15</level><abilities>
+        <li>RH_Spell_PowerWordHeal</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Sweeper</job></li>
@@ -401,13 +471,26 @@
     <vestmentHediff>RH_Vestment_Warlock</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <levelGrants>
-      <li>
-        <level>1</level>
-        <abilities>
-          <li>RH_Spell_EldritchBlast</li>
-          <li>RH_Spell_Hex</li>
-        </abilities>
-      </li>
+      <li><level>1</level><abilities>
+        <li>RH_Spell_EldritchBlast</li>
+        <li>RH_Spell_Hex</li>
+        <li>RH_Spell_HellishRebuke</li>
+        <li>RH_Spell_ArmsOfHadar</li>
+      </abilities></li>
+      <li><level>3</level><abilities>
+        <li>RH_Spell_Darkness</li>
+        <li>RH_Spell_Shatter</li>
+      </abilities></li>
+      <li><level>5</level><abilities>
+        <li>RH_Spell_HungerOfHadar</li>
+        <li>RH_Spell_Fear</li>
+      </abilities></li>
+      <li><level>7</level><abilities>
+        <li>RH_Spell_Banishment</li>
+      </abilities></li>
+      <li><level>11</level><abilities>
+        <li>RH_Spell_CircleOfDeath</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Sweeper</job></li>

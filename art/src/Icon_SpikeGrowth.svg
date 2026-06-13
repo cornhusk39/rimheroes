@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<linearGradient id="spikeGround" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#8FB84A"/>
+<stop offset="1" stop-color="#3E5E16"/>
+</linearGradient>
+</defs>
+<path d="M6 52 L14 20 L20 52 Z" fill="url(#spikeGround)" stroke-linejoin="round"/>
+<path d="M18 54 L28 10 L36 54 Z" fill="url(#spikeGround)" stroke-linejoin="round"/>
+<path d="M34 54 L44 18 L50 54 Z" fill="url(#spikeGround)" stroke-linejoin="round"/>
+<path d="M46 54 L54 26 L60 54 Z" fill="url(#spikeGround)" stroke-linejoin="round"/>
+<path d="M4 52 L60 52" stroke="#6B4A22" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>

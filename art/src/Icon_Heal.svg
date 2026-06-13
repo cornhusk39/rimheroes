@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="healGlow" cx="0.5" cy="0.45">
+      <stop offset="0%" stop-color="#F4FFF8"/>
+      <stop offset="55%" stop-color="#9CE8B6"/>
+      <stop offset="100%" stop-color="#2E8F55"/>
+    </radialGradient>
+  </defs>
+  <!-- single powerful healing surge: heart with cross -->
+  <path d="M32 56 C12 42 8 28 14 20 C20 12 30 14 32 24 C34 14 44 12 50 20 C56 28 52 42 32 56 Z" fill="url(#healGlow)"/>
+  <!-- bright cross -->
+  <path d="M28 22 L36 22 L36 30 L44 30 L44 38 L36 38 L36 46 L28 46 L28 38 L20 38 L20 30 L28 30 Z" fill="#FFFFFF"/>
+  <!-- highlight -->
+  <ellipse cx="24" cy="24" rx="6" ry="4" fill="#FFFFFF" opacity="0.6"/>
+</svg>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Cleric spell list. FULL caster, prepared, spell levels 0-9.
+       New cleric-exclusive spells only; existing shared spells are granted via Classes_Core.
+       All description text is original functional wording. -->
+
+  <!-- Cantrip: a steadying blessing on an ally -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Guidance</defName>
+    <label>guidance</label>
+    <description>A whisper of divine favor settles over an ally, steadying their aim and their hands for the work ahead. Cantrip - costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/Guidance</iconPath>
+    <level>0</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_Guided</hediffDef>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 2: a spectral force weapon strikes a foe -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_SpiritualWeapon</defName>
+    <label>spiritual weapon</label>
+    <description>A weapon of shimmering force takes shape in the air and slams into the chosen enemy. Consumes a level-2 spell slot.</description>
+    <iconPath>UI/RimHeroes/SpiritualWeapon</iconPath>
+    <level>2</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Blunt</damageDef>
+        <amount>14</amount>
+        <hits>1</hits>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 3: wheeling spirits harry nearby foes -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_SpiritGuardians</defName>
+    <label>spirit guardians</label>
+    <description>Spectral guardians wheel through the air around the chosen point, battering and hindering every enemy they touch. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/SpiritGuardians</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Harried</hediff>
+        <radius>3.9</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 4: a blade of radiance smites a spot -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_GuardianOfFaith</defName>
+    <label>guardian of faith</label>
+    <description>A blade of searing radiance falls upon the marked spot, scorching all who stand within it. Consumes a level-4 spell slot.</description>
+    <iconPath>UI/RimHeroes/GuardianOfFaith</iconPath>
+    <level>4</level>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Flame</damageDef>
+        <radius>2.5</radius>
+        <damageAmount>30</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 5: a roaring column of divine fire -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_FlameStrike</defName>
+    <label>flame strike</label>
+    <description>A roaring column of divine fire crashes down on the target point, engulfing everything caught beneath it. Consumes a level-5 spell slot.</description>
+    <iconPath>UI/RimHeroes/FlameStrike</iconPath>
+    <level>5</level>
+    <cooldownTicksRange>240</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>29.9</range>
+      <warmupTime>2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Flame</damageDef>
+        <radius>3.5</radius>
+        <damageAmount>45</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 5: heals all allies near a point -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_MassCureWounds</defName>
+    <label>mass cure wounds</label>
+    <description>A spreading bloom of restorative light knits the wounds of every ally gathered near the chosen point. Consumes a level-5 spell slot.</description>
+    <iconPath>UI/RimHeroes/MassCureWounds</iconPath>
+    <level>5</level>
+    <cooldownTicksRange>240</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityHeal">
+        <amount>22</amount>
+        <radius>4.9</radius>
+        <onlyAllies>true</onlyAllies>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 6: a powerful surge of healing to one ally -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Heal</defName>
+    <label>heal</label>
+    <description>A potent surge of divine energy floods a single ally, mending grievous wounds in moments. Consumes a level-6 spell slot.</description>
+    <iconPath>UI/RimHeroes/Heal</iconPath>
+    <level>6</level>
+    <cooldownTicksRange>240</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityHeal">
+        <amount>60</amount>
+        <radius>0</radius>
+        <onlyAllies>true</onlyAllies>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 8: allies near you are warded by holy light -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_HolyAura</defName>
+    <label>holy aura</label>
+    <description>A corona of holy light blazes out from you, sheathing every nearby ally in protective radiance. Consumes a level-8 spell slot.</description>
+    <iconPath>UI/RimHeroes/HolyAura</iconPath>
+    <level>8</level>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>1.5</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_HolyWard</hediff>
+        <radius>4.9</radius>
+        <targets>Allies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 9: a great tide of healing washes over allies -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_MassHeal</defName>
+    <label>mass heal</label>
+    <description>A vast tide of healing light rolls outward from the chosen point, mending the wounds of every ally it reaches. Consumes a level-9 spell slot.</description>
+    <iconPath>UI/RimHeroes/MassHeal</iconPath>
+    <level>9</level>
+    <cooldownTicksRange>360</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityHeal">
+        <amount>40</amount>
+        <radius>7</radius>
+        <onlyAllies>true</onlyAllies>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

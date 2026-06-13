@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<linearGradient id="volleyArrow" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#D9B86A"/>
+<stop offset="1" stop-color="#8A5E22"/>
+</linearGradient>
+</defs>
+<g stroke-linecap="round" stroke-linejoin="round">
+<path d="M10 6 L20 34" stroke="url(#volleyArrow)" stroke-width="4" fill="none"/>
+<path d="M20 34 L13 28 L22 26 Z" fill="#A8C95C"/>
+<path d="M26 4 L34 36" stroke="url(#volleyArrow)" stroke-width="4" fill="none"/>
+<path d="M34 36 L27 30 L36 28 Z" fill="#A8C95C"/>
+<path d="M44 6 L46 38" stroke="url(#volleyArrow)" stroke-width="4" fill="none"/>
+<path d="M46 38 L40 31 L50 31 Z" fill="#A8C95C"/>
+<path d="M58 10 L52 40" stroke="url(#volleyArrow)" stroke-width="4" fill="none"/>
+<path d="M52 40 L48 32 L57 34 Z" fill="#A8C95C"/>
+</g>
+<path d="M8 46 C24 60 40 60 56 46" stroke="#6B4A22" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>

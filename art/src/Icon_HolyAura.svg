@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="haGlow" cx="0.5" cy="0.5">
+      <stop offset="0%" stop-color="#FFFDEB"/>
+      <stop offset="55%" stop-color="#FFE680"/>
+      <stop offset="100%" stop-color="#D8A21C"/>
+    </radialGradient>
+  </defs>
+  <!-- radiant aura rays -->
+  <path d="M32 30 L34 4 L36 30 L58 18 L40 33 L60 44 L37 36 L40 60 L32 38 L24 60 L27 36 L4 44 L24 33 L6 18 L28 30 Z" fill="#FFE680" opacity="0.55"/>
+  <!-- protective ring -->
+  <circle cx="32" cy="32" r="15" fill="none" stroke="#FFD24D" stroke-width="3"/>
+  <!-- holy core -->
+  <circle cx="32" cy="32" r="11" fill="url(#haGlow)"/>
+  <ellipse cx="28" cy="28" rx="4" ry="3" fill="#FFFFFF" opacity="0.85"/>
+</svg>

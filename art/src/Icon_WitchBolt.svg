@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="wbArc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E6D6FF"/>
+      <stop offset="100%" stop-color="#7B3FF2"/>
+    </linearGradient>
+  </defs>
+  <!-- sustained violet lightning arc, branching -->
+  <path d="M14 8 L30 26 L20 30 L40 44 L30 48 L50 60"
+        fill="none" stroke="#4A1F9E" stroke-width="11"
+        stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M14 8 L30 26 L20 30 L40 44 L30 48 L50 60"
+        fill="none" stroke="url(#wbArc)" stroke-width="5"
+        stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- side branch fork -->
+  <path d="M40 44 L54 38" fill="none" stroke="url(#wbArc)" stroke-width="4"
+        stroke-linecap="round"/>
+  <!-- crackle sparks at the strike point -->
+  <circle cx="50" cy="60" r="5" fill="#E6D6FF"/>
+  <circle cx="14" cy="8" r="4" fill="#B98CFF"/>
+</svg>

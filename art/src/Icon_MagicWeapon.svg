@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<linearGradient id="mwBlade" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#F0E4FF"/>
+<stop offset="1" stop-color="#9B6FD6"/>
+</linearGradient>
+</defs>
+<path d="M48 6 L52 10 L26 44 L20 42 L18 36 Z" fill="url(#mwBlade)" stroke-linejoin="round"/>
+<rect x="14" y="40" width="16" height="6" rx="2" transform="rotate(45 22 43)" fill="#C9A33E"/>
+<path d="M14 50 L20 52 L18 58 L12 56 Z" fill="#8A6B3A" stroke-linejoin="round"/>
+<path d="M40 12 L43 18 L49 21 L43 24 L40 30 L37 24 L31 21 L37 18 Z" fill="#F6E27A" stroke-linejoin="round"/>
+<circle cx="20" cy="20" r="3" fill="#E3D2FF"/>
+</svg>

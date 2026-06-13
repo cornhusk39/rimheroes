@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="mcwGlow" cx="0.5" cy="0.45">
+      <stop offset="0%" stop-color="#EAFBEF"/>
+      <stop offset="60%" stop-color="#7FD89A"/>
+      <stop offset="100%" stop-color="#2E8F55"/>
+    </radialGradient>
+  </defs>
+  <!-- spreading bloom of healing light -->
+  <circle cx="32" cy="32" r="26" fill="#7FD89A" opacity="0.3"/>
+  <circle cx="32" cy="32" r="19" fill="url(#mcwGlow)"/>
+  <!-- central cross -->
+  <path d="M28 18 L36 18 L36 28 L46 28 L46 36 L36 36 L36 46 L28 46 L28 36 L18 36 L18 28 L28 28 Z" fill="#FFFFFF"/>
+  <!-- radiating motes -->
+  <circle cx="32" cy="7" r="3" fill="#BFF0CE"/>
+  <circle cx="57" cy="32" r="3" fill="#BFF0CE"/>
+  <circle cx="32" cy="57" r="3" fill="#BFF0CE"/>
+  <circle cx="7" cy="32" r="3" fill="#BFF0CE"/>
+</svg>

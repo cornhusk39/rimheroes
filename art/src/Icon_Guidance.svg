@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="guidGlow" cx="0.5" cy="0.4">
+      <stop offset="0%" stop-color="#FFF6C4"/>
+      <stop offset="60%" stop-color="#FFD24D"/>
+      <stop offset="100%" stop-color="#C98A1C"/>
+    </radialGradient>
+  </defs>
+  <!-- guiding hand cupping a radiant mote -->
+  <path d="M16 52 C14 40 18 30 28 28 C26 36 28 44 34 50 C30 54 22 56 16 52 Z" fill="#C98A1C"/>
+  <path d="M20 50 C18 40 22 32 30 31 C28 38 30 45 35 50 C31 53 25 53 20 50 Z" fill="#E9B94A"/>
+  <circle cx="40" cy="24" r="13" fill="url(#guidGlow)"/>
+  <path d="M40 4 L40 14 M40 34 L40 44 M20 24 L30 24 M50 24 L60 24 M26 10 L33 17 M54 10 L47 17 M26 38 L33 31 M54 38 L47 31" stroke="#FFE680" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="36" cy="20" rx="5" ry="4" fill="#FFFBE0" opacity="0.9"/>
+</svg>

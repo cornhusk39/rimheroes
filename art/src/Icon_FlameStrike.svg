@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="fsCol" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFF3C4"/>
+      <stop offset="40%" stop-color="#FFB23D"/>
+      <stop offset="100%" stop-color="#D8401C"/>
+    </linearGradient>
+  </defs>
+  <!-- roaring column of divine fire -->
+  <path d="M26 4 C22 14 30 18 28 28 C34 22 33 14 32 8 C36 16 42 18 40 30 C44 40 38 50 32 58 C26 52 20 44 22 32 C24 22 28 14 26 4 Z" fill="url(#fsCol)"/>
+  <!-- inner bright flame -->
+  <path d="M31 22 C29 30 33 36 32 44 C36 38 36 30 33 24 C35 30 30 34 31 40 C28 36 28 30 31 22 Z" fill="#FFF3C4" opacity="0.9"/>
+  <!-- ground splash -->
+  <ellipse cx="32" cy="56" rx="16" ry="5" fill="#FF8A2A" opacity="0.8"/>
+</svg>

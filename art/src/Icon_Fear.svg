@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<linearGradient id="fr_skull" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#E8DFF2"/>
+<stop offset="100%" stop-color="#7E6B98"/>
+</linearGradient>
+</defs>
+<path d="M32 6 C45 6 54 16 54 30 C54 38 50 44 46 47 L46 54 L40 51 L36 56 L32 51 L28 56 L24 51 L18 54 L18 47 C14 44 10 38 10 30 C10 16 19 6 32 6 Z" fill="url(#fr_skull)" stroke-linejoin="round"/>
+<ellipse cx="23" cy="30" rx="6.5" ry="8" fill="#1A1026"/>
+<ellipse cx="41" cy="30" rx="6.5" ry="8" fill="#1A1026"/>
+<circle cx="23" cy="32" r="2.4" fill="#B95AE0"/>
+<circle cx="41" cy="32" r="2.4" fill="#B95AE0"/>
+<path d="M28 42 L32 38 L36 42 Z" fill="#1A1026"/>
+</svg>

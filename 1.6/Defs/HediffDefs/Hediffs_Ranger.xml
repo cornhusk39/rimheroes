@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Status hediffs introduced by the ranger spell list. Original flavor text.
+       Timed via HediffCompProperties_Disappears. -->
+
+  <!-- Ensnaring Strike: roots bind the target's legs, rooting them in place. -->
+  <HediffDef>
+    <defName>RH_Snared</defName>
+    <label>snared</label>
+    <description>A tangle of grasping roots has wound tight around their legs, pinning them where they stand.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.45, 0.6, 0.25)</defaultLabelColor>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-1.0</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>400</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Spike Growth: a thicket of spikes slows and harries those crossing it. -->
+  <HediffDef>
+    <defName>RH_Spiked</defName>
+    <label>spiked</label>
+    <description>Hardened thorns claw at their footing with every step, dragging them down and spoiling their swings.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.5, 0.65, 0.3)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>-0.7</MoveSpeed>
+          <MeleeHitChance>-2</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

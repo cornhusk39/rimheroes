@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Paladin spell list. HALF caster, prepared, spell levels 1-5.
+       New paladin-exclusive spells only; existing shared spells are granted via Classes_Core.
+       All description text is original functional wording. -->
+
+  <!-- Level 1: a bolt of searing radiance smites a foe -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_DivineSmite</defName>
+    <label>divine smite</label>
+    <description>You pour the weight of your oath into a single blow, and a bolt of searing radiance crashes down upon the chosen foe. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/DivineSmite</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+        <damageDef>Flame</damageDef>
+        <amount>24</amount>
+        <hits>1</hits>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 1: your strikes blaze with holy fire (self buff) -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_SearingSmite</defName>
+    <label>searing smite</label>
+    <description>Holy fire wreathes your weapon, and every blow you land burns with the heat of your conviction. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/SearingSmite</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_SearingSmite</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 1: ward an ally in shimmering force -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_ShieldOfFaith</defName>
+    <label>shield of faith</label>
+    <description>A shimmering field of force gathers around a chosen ally, turning aside blows that would otherwise bite deep. Consumes a level-1 spell slot.</description>
+    <iconPath>UI/RimHeroes/ShieldOfFaith</iconPath>
+    <level>1</level>
+    <cooldownTicksRange>120</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_Shielded</hediffDef>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 2: bolster the vigor of nearby allies -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Aid</defName>
+    <label>aid</label>
+    <description>A wave of vigor rolls outward from the chosen point, steadying the hearts and toughening the bodies of every ally it washes over. Consumes a level-2 spell slot.</description>
+    <iconPath>UI/RimHeroes/Aid</iconPath>
+    <level>2</level>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Aided</hediff>
+        <radius>4.9</radius>
+        <targets>Allies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 2: bless your weapon with power (self) -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_MagicWeapon</defName>
+    <label>magic weapon</label>
+    <description>You whisper a blessing over your arms, and your weapon hums with channeled power, guiding each strike truer than before. Consumes a level-2 spell slot.</description>
+    <iconPath>UI/RimHeroes/MagicWeapon</iconPath>
+    <level>2</level>
+    <cooldownTicksRange>180</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_MagicWeapon</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 3: allies near you steel their nerve -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_AuraOfCourage</defName>
+    <label>aura of courage</label>
+    <description>Your unwavering resolve radiates outward as a steadying presence, and every ally caught within it stands firmer against fear. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/AuraOfCourage</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>240</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Couraged</hediff>
+        <radius>4.9</radius>
+        <targets>Allies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 3: a burst of searing radiance -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_Daylight</defName>
+    <label>daylight</label>
+    <description>A blinding burst of searing radiance erupts at the chosen point, scorching everything caught in its glare. Consumes a level-3 spell slot.</description>
+    <iconPath>UI/RimHeroes/Daylight</iconPath>
+    <level>3</level>
+    <cooldownTicksRange>240</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion">
+        <damageDef>Flame</damageDef>
+        <radius>3</radius>
+        <damageAmount>24</damageAmount>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Level 4: ward an ally against a mortal blow -->
+  <AbilityDef ParentName="RH_SpellBase">
+    <defName>RH_Spell_DeathWard</defName>
+    <label>death ward</label>
+    <description>You lay a protective benediction upon an ally, blunting the force of every wound and steeling them to endure a blow that would fell a lesser soul. Consumes a level-4 spell slot.</description>
+    <iconPath>UI/RimHeroes/DeathWard</iconPath>
+    <level>4</level>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_DeathWard</hediffDef>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<defs>
+<linearGradient id="hpFig" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#9FB6E8"/>
+<stop offset="100%" stop-color="#43568C"/>
+</linearGradient>
+</defs>
+<circle cx="32" cy="16" r="8" fill="url(#hpFig)"/>
+<path d="M32 24 L32 46 M32 30 L20 38 M32 30 L44 38 M32 46 L24 58 M32 46 L40 58" stroke="url(#hpFig)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8 14 L8 50 M56 14 L56 50" stroke="#E7C24A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M8 22 L18 18 M8 46 L18 42 M56 22 L46 18 M56 46 L46 42" stroke="#E7C24A" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

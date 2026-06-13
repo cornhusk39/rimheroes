@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="sleetCloudG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#CDE4F2"/>
+      <stop offset="1" stop-color="#7FA8C4"/>
+    </linearGradient>
+  </defs>
+  <path d="M16 22 C10 22 8 14 16 13 C16 6 28 5 30 11 C40 5 50 13 46 20 C54 20 54 28 46 28 L18 28 C12 28 12 22 16 22 Z"
+        fill="url(#sleetCloudG)" stroke-linejoin="round"/>
+  <g stroke="#9FD0FF" stroke-width="4" stroke-linecap="round">
+    <line x1="18" y1="36" x2="13" y2="50"/>
+    <line x1="30" y1="38" x2="25" y2="54"/>
+    <line x1="42" y1="36" x2="37" y2="50"/>
+    <line x1="52" y1="38" x2="48" y2="48"/>
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="22" cy="44" r="3"/>
+    <circle cx="36" cy="48" r="3"/>
+    <circle cx="48" cy="42" r="2.6"/>
+  </g>
+</svg>
