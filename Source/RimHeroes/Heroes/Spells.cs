@@ -156,12 +156,20 @@ namespace RimHeroes
         }
     }
 
-    /// <summary>Auto-hit direct damage (Magic Missile-style).</summary>
+    /// <summary>
+    /// Auto-hit direct damage (Magic Missile-style). Scales with Spell Power. Optional extras:
+    /// lifesteal back to the caster, a bonus multiplier vs already-wounded targets (Toll the Dead),
+    /// and a hediff applied on hit (Chill Touch's "no heal", Ray of Frost's slow, etc.).
+    /// </summary>
     public class CompProperties_AbilityDamageTarget : CompProperties_AbilityEffect
     {
         public DamageDef damageDef;
         public float amount = 10f;
         public int hits = 1;
+        public float lifestealFraction = 0f;       // heal caster by this fraction of damage dealt
+        public float bonusVsWoundedFactor = 0f;    // extra damage multiplier if target already injured
+        public HediffDef applyHediff;              // debuff applied to the target on hit
+        public float applyHediffSeverity = 1f;
 
         public CompProperties_AbilityDamageTarget() => compClass = typeof(CompAbilityEffect_DamageTarget);
     }
@@ -179,17 +187,48 @@ namespace RimHeroes
                 return;
             }
             float amount = Props.amount * SpellPower.For(parent.pawn);
+            if (Props.bonusVsWoundedFactor > 0f && thing is Pawn wp && wp.health.summaryHealth.SummaryHealthPercent < 1f)
+            {
+                amount *= 1f + Props.bonusVsWoundedFactor;
+            }
             for (int i = 0; i < Props.hits; i++)
             {
                 thing.TakeDamage(new DamageInfo(Props.damageDef ?? DamageDefOf.Blunt, amount, 1f, -1f, parent.pawn));
             }
+            if (Props.applyHediff != null && thing is Pawn hp && !hp.Dead)
+            {
+                var h = hp.health.AddHediff(Props.applyHediff);
+                if (h != null) h.Severity = Props.applyHediffSeverity;
+            }
+            if (Props.lifestealFraction > 0f && parent.pawn != null && !parent.pawn.Dead)
+            {
+                HealPawn(parent.pawn, amount * Props.hits * Props.lifestealFraction);
+            }
+        }
+
+        internal static void HealPawn(Pawn pawn, float total)
+        {
+            float remaining = total;
+            foreach (var inj in pawn.health.hediffSet.hediffs.OfType<Hediff_Injury>()
+                .Where(i => !i.IsPermanent()).OrderByDescending(i => i.Severity).ToList())
+            {
+                if (remaining <= 0f) break;
+                float heal = Mathf.Min(remaining, inj.Severity);
+                inj.Heal(heal);
+                remaining -= heal;
+            }
         }
     }
 
-    /// <summary>Heals injuries on the target, worst-first (Cure Wounds family).</summary>
+    /// <summary>
+    /// Heals injuries worst-first (Cure Wounds family). With radius &gt; 0, heals every ally pawn in
+    /// the radius (Mass Cure Wounds / Prayer of Healing). Scales with Spell Power.
+    /// </summary>
     public class CompProperties_AbilityHeal : CompProperties_AbilityEffect
     {
         public float amount = 15f;
+        public float radius = 0f;       // 0 = single target; >0 = heal allies in radius around target cell
+        public bool onlyAllies = true;
 
         public CompProperties_AbilityHeal() => compClass = typeof(CompAbilityEffect_Heal);
     }
@@ -201,25 +240,100 @@ namespace RimHeroes
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            if (!(target.Thing is Pawn targetPawn))
+            float each = Props.amount * SpellPower.For(parent.pawn);
+            if (Props.radius > 0f)
             {
+                var map = parent.pawn?.MapHeld;
+                if (map == null) return;
+                foreach (var p in GenRadial.RadialDistinctThingsAround(target.Cell, map, Props.radius, true)
+                             .OfType<Pawn>().ToList())
+                {
+                    if (p.Dead) continue;
+                    if (Props.onlyAllies && p.HostileTo(parent.pawn)) continue;
+                    CompAbilityEffect_DamageTarget.HealPawn(p, each);
+                }
                 return;
             }
-            float remaining = Props.amount * SpellPower.For(parent.pawn);
-            var injuries = targetPawn.health.hediffSet.hediffs
-                .OfType<Hediff_Injury>()
-                .Where(i => !i.IsPermanent())
-                .OrderByDescending(i => i.Severity)
-                .ToList();
-            foreach (var injury in injuries)
+            if (target.Thing is Pawn targetPawn && !targetPawn.Dead)
             {
-                if (remaining <= 0f)
-                {
-                    break;
-                }
-                float heal = Mathf.Min(remaining, injury.Severity);
-                injury.Heal(heal);
-                remaining -= heal;
+                CompAbilityEffect_DamageTarget.HealPawn(targetPawn, each);
+            }
+        }
+
+        public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
+        {
+            if (Props.radius > 0f) return base.Valid(target, throwMessages);
+            return target.Thing is Pawn p && !p.Dead && base.Valid(target, throwMessages);
+        }
+    }
+
+    /// <summary>
+    /// Applies a hediff (buff or debuff) to every pawn in a radius — ally buffs (Bless), enemy
+    /// debuffs (Bane, Faerie Fire), or a damaging aura around a point (Spirit Guardians, via a
+    /// hediff that ticks damage). targetMode picks who is affected.
+    /// </summary>
+    public class CompProperties_AbilityZoneHediff : CompProperties_AbilityEffect
+    {
+        public HediffDef hediff;
+        public float radius = 4.9f;
+        public float severity = 1f;
+        public ZoneTargets targets = ZoneTargets.Allies;
+
+        public CompProperties_AbilityZoneHediff() => compClass = typeof(CompAbilityEffect_ZoneHediff);
+    }
+
+    public enum ZoneTargets { Allies, Enemies, All }
+
+    public class CompAbilityEffect_ZoneHediff : CompAbilityEffect
+    {
+        public new CompProperties_AbilityZoneHediff Props => (CompProperties_AbilityZoneHediff)props;
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            base.Apply(target, dest);
+            var caster = parent.pawn;
+            var map = caster?.MapHeld;
+            if (Props.hediff == null || map == null) return;
+            foreach (var p in GenRadial.RadialDistinctThingsAround(target.Cell, map, Props.radius, true)
+                         .OfType<Pawn>().ToList())
+            {
+                if (p.Dead) continue;
+                bool hostile = p.HostileTo(caster);
+                if (Props.targets == ZoneTargets.Allies && hostile) continue;
+                if (Props.targets == ZoneTargets.Enemies && !hostile) continue;
+                if (Props.targets == ZoneTargets.Allies && p == caster) { /* include self */ }
+                var h = p.health.AddHediff(Props.hediff);
+                if (h != null) h.Severity = Props.severity;
+            }
+        }
+    }
+
+    /// <summary>Removes hediffs of the given defs (or a hediff tag/category) from the target
+    /// (Lesser/Greater Restoration, cure poison, dispel a debuff).</summary>
+    public class CompProperties_AbilityCleanse : CompProperties_AbilityEffect
+    {
+        public System.Collections.Generic.List<HediffDef> hediffs;
+        public bool removeBadDiseases = false;   // also remove any tox/disease-type hediffs
+        public int maxToRemove = 99;
+
+        public CompProperties_AbilityCleanse() => compClass = typeof(CompAbilityEffect_Cleanse);
+    }
+
+    public class CompAbilityEffect_Cleanse : CompAbilityEffect
+    {
+        public new CompProperties_AbilityCleanse Props => (CompProperties_AbilityCleanse)props;
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            base.Apply(target, dest);
+            if (!(target.Thing is Pawn p) || p.Dead) return;
+            int removed = 0;
+            foreach (var h in p.health.hediffSet.hediffs.ToList())
+            {
+                if (removed >= Props.maxToRemove) break;
+                bool match = (Props.hediffs != null && Props.hediffs.Contains(h.def))
+                    || (Props.removeBadDiseases && h.def.makesSickThought);
+                if (match) { p.health.RemoveHediff(h); removed++; }
             }
         }
 
