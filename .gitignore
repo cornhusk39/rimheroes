@@ -8,3 +8,6 @@ Source/**/obj/
 # OS noise
 Thumbs.db
 .DS_Store
+
+# L20 aura demo raw capture frames (transient)
+tools/auraframes/

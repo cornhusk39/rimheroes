@@ -132,6 +132,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.72, 0.38, 0.16)</baseColor>
         <artDir>Barbarian</artDir>
+        <auraColor>(0.88, 0.20, 0.14, 0.5)</auraColor>
+        <auraMote>RH_Mote_Ember</auraMote>
       </li>
     </modExtensions>
     <renderNodeProperties>
@@ -156,6 +158,8 @@
         <baseColor>(0.9, 0.66, 0.2)</baseColor>
         <artDir>Monk</artDir>
         <helmKeepsHair>true</helmKeepsHair>
+        <auraColor>(1.0, 0.78, 0.40, 0.5)</auraColor>
+        <auraMote>RH_Mote_Orb</auraMote>
       </li>
     </modExtensions>
     <renderNodeProperties>
@@ -175,6 +179,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.3, 0.3, 0.36)</baseColor>
         <artDir>Rogue</artDir>
+        <auraColor>(0.52, 0.46, 0.64, 0.45)</auraColor>
+        <auraMote>RH_Mote_Wisp</auraMote>
       </li>
     </modExtensions>
     <renderNodeProperties>
@@ -201,6 +207,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.26, 0.5, 0.26)</baseColor>
         <artDir>Ranger</artDir>
+        <auraColor>(0.40, 0.78, 0.42, 0.5)</auraColor>
+        <auraMote>RH_Mote_Leaf</auraMote>
       </li>
     </modExtensions>
   </HediffDef>
@@ -213,6 +221,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.9, 0.85, 0.6)</baseColor>
         <artDir>Paladin</artDir>
+        <auraColor>(1.0, 0.90, 0.55, 0.40)</auraColor>
+        <auraMote>RH_Mote_Feather</auraMote>
       </li>
     </modExtensions>
     <renderNodeProperties>
@@ -232,6 +242,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.92, 0.88, 0.7)</baseColor>
         <artDir>Cleric</artDir>
+        <auraColor>(1.0, 0.92, 0.62, 0.42)</auraColor>
+        <auraMote>RH_Mote_Star</auraMote>
       </li>
     </modExtensions>
     <renderNodeProperties>
@@ -255,6 +267,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.3, 0.58, 0.3)</baseColor>
         <artDir>Druid</artDir>
+        <auraColor>(0.45, 0.82, 0.40, 0.5)</auraColor>
+        <auraMote>RH_Mote_Leaf</auraMote>
       </li>
     </modExtensions>
     <renderNodeProperties>
@@ -278,6 +292,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.27, 0.37, 0.8)</baseColor>
         <artDir>Wizard</artDir>
+        <auraColor>(0.48, 0.45, 0.98, 0.5)</auraColor>
+        <auraMote>RH_Mote_Star</auraMote>
       </li>
     </modExtensions>
     <renderNodeProperties>
@@ -301,6 +317,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.75, 0.26, 0.6)</baseColor>
         <artDir>Sorcerer</artDir>
+        <auraColor>(1.0, 0.80, 0.34, 0.5)</auraColor>
+        <auraMote>RH_Mote_Spark</auraMote>
       </li>
     </modExtensions>
     <renderNodeProperties>
@@ -331,6 +349,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.56, 0.32, 0.72)</baseColor>
         <artDir>Bard</artDir>
+        <auraColor>(0.80, 0.38, 0.86, 0.5)</auraColor>
+        <auraMote>RH_Mote_Note</auraMote>
       </li>
     </modExtensions>
   </HediffDef>
@@ -343,6 +363,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.42, 0.16, 0.52)</baseColor>
         <artDir>Warlock</artDir>
+        <auraColor>(0.56, 0.78, 0.30, 0.5)</auraColor>
+        <auraMote>RH_Mote_Wisp</auraMote>
       </li>
     </modExtensions>
     <renderNodeProperties>

@@ -17,6 +17,11 @@ namespace RimHeroes
         // Most headpieces (hoods, helms, caps) replace the hair. A headband-style piece sits
         // OVER the hair instead, so set this true to keep the hair drawn under the helm art.
         public bool helmKeepsHair = false;
+        // Tier-5 capstone aura. When alpha > 0, a soft class-tinted glow is drawn behind the
+        // L20 hero and motes drift off it. RGB = glow/mote colour, A = overall strength.
+        public Color auraColor = Color.clear;
+        // Per-class aura mote shape (ember, leaf, note, ...). Falls back to a soft dot if unset.
+        public FleckDef auraMote;
     }
 
     /// <summary>
@@ -84,6 +89,27 @@ namespace RimHeroes
                 Messages.Message("RH_VestmentUpgraded".Translate(pawn.LabelShortCap, def.label, tier),
                     pawn, MessageTypeDefOf.PositiveEvent);
             }
+        }
+
+        // Tier-5 capstone particles: a slow trickle of class-tinted motes drifting up off the hero.
+        // Ticks are paused-aware (unlike the per-frame glow), so the motes only emit during play.
+        public override void Tick()
+        {
+            base.Tick();
+            if (Tier < 5 || pawn == null || !pawn.Spawned || pawn.Map == null)
+            {
+                return;
+            }
+            if (!pawn.IsHashIntervalTick(20) || Hediff_Wildshape.IsShifted(pawn))
+            {
+                return;
+            }
+            var ext = def.GetModExtension<VestmentExtension>();
+            if (ext == null || ext.auraColor.a <= 0f)
+            {
+                return;
+            }
+            AuraFx.ThrowMote(pawn, ext.auraColor, ext.auraMote);
         }
     }
 

@@ -22,6 +22,8 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.78, 0.22, 0.18)</baseColor>
         <artDir>Fighter</artDir>
+        <auraColor>(0.55, 0.70, 0.95, 0.5)</auraColor>
+        <auraMote>RH_Mote_Spark</auraMote>
       </li>
     </modExtensions>
     <renderNodeProperties>
