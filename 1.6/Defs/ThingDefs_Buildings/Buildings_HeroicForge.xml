@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Heroic Forge: a power-free smithing station for crafting class-bound hero weapons.
+       Available from game start (no research). 3 wide x 1 tall, like a vanilla smithy. -->
+  <ThingDef ParentName="BenchBase">
+    <defName>RH_HeroicForge</defName>
+    <label>heroic forge</label>
+    <description>A smith's forge attuned to heroic destinies. Here a colony forges the class-bound weapons of its heroes. Anyone may craft them, but only the right hero may wield them. The forge draws on the heroes' own destiny and needs no power.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/RimHeroes/Buildings/HeroicForge</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <rect>(0.2,0.1,2.6,0.8)</rect>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Steel>150</Steel>
+      <WoodLog>100</WoodLog>
+    </costList>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>3500</WorkToBuild>
+      <Mass>32</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <designationHotKey>Misc7</designationHotKey>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <constructEffect>ConstructMetal</constructEffect>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+    </building>
+  </ThingDef>
+
+</Defs>

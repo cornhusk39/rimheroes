@@ -20,6 +20,9 @@
       <Mass>3.5</Mass>
       <Flammability>0.4</Flammability>
     </statBases>
+    <comps>
+      <li><compClass>CompQuality</compClass></li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">

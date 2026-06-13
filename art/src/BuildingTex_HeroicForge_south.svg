@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 192" width="448" height="192">
+  <!-- Heroic Forge (front): iron counter with an anvil, a glowing forge + chimney, and a hero weapon rack. -->
+  <!-- counter base -->
+  <rect x="22" y="96" width="404" height="58" rx="5" fill="#54545C"/>
+  <rect x="22" y="150" width="404" height="28" rx="4" fill="#34343C"/>
+  <rect x="22" y="96" width="404" height="8" rx="4" fill="#646470"/>
+  <path d="M28 154 L420 154" stroke="#26262C" stroke-width="2"/>
+  <rect x="30" y="160" width="40" height="14" rx="2" fill="#2A2A30"/>
+  <rect x="376" y="160" width="40" height="14" rx="2" fill="#2A2A30"/>
+
+  <!-- LEFT: anvil on a wood stump -->
+  <rect x="52" y="120" width="46" height="36" rx="2" fill="#5A3E22"/>
+  <path d="M56 122 L94 122 L100 128 L50 128 Z" fill="#6E4E2A"/>
+  <path d="M58 100 L96 100 L92 118 L62 118 Z" fill="#33333A"/>
+  <rect x="52" y="92" width="50" height="10" rx="2" fill="#4A4A54"/>
+  <path d="M102 94 L124 99 L102 106 Z" fill="#33333A"/>
+  <path d="M54 93 L100 93" stroke="#6A6A74" stroke-width="2"/>
+
+  <!-- CENTER: forge with chimney + glowing coals -->
+  <path d="M214 96 L274 96 L260 44 L228 44 Z" fill="#3A3A42"/>
+  <rect x="236" y="20" width="16" height="26" rx="2" fill="#2E2E36"/>
+  <rect x="232" y="16" width="24" height="8" rx="2" fill="#3E3E48"/>
+  <ellipse cx="244" cy="92" rx="58" ry="22" fill="#FF8A2A" opacity="0.22"/>
+  <rect x="190" y="100" width="108" height="46" rx="4" fill="#4A4248"/>
+  <rect x="190" y="100" width="108" height="46" rx="4" fill="none" stroke="#2E2A30" stroke-width="2"/>
+  <ellipse cx="244" cy="104" rx="46" ry="14" fill="#241C20"/>
+  <ellipse cx="244" cy="104" rx="40" ry="11" fill="#E0641C"/>
+  <ellipse cx="244" cy="103" rx="30" ry="7" fill="#FF9A3A"/>
+  <circle cx="232" cy="103" r="3" fill="#FFE08A"/><circle cx="252" cy="105" r="3" fill="#FFE08A"/><circle cx="244" cy="101" r="2.5" fill="#FFF0C0"/>
+  <rect x="190" y="140" width="108" height="6" fill="#C9A23F"/>
+
+  <!-- RIGHT: hero weapon rack + emblem -->
+  <rect x="330" y="86" width="84" height="8" rx="2" fill="#5A3E22"/>
+  <rect x="332" y="86" width="8" height="64" fill="#5A3E22"/>
+  <rect x="404" y="86" width="8" height="64" fill="#5A3E22"/>
+  <!-- a hero sword standing -->
+  <rect x="352" y="58" width="6" height="76" fill="#9AA0A6"/>
+  <rect x="352" y="58" width="2.5" height="76" fill="#C6CBD0"/>
+  <rect x="344" y="130" width="22" height="6" rx="2" fill="#C9A23F"/>
+  <rect x="352" y="134" width="6" height="14" fill="#4A3320"/>
+  <!-- a hero axe leaning -->
+  <rect x="384" y="60" width="6" height="74" fill="#6B4A2A"/>
+  <path d="M384 64 L362 70 C356 80 360 92 376 96 L390 88 Z" fill="#9AA0A6"/>
+  <path d="M362 70 C356 80 360 92 376 96" stroke="#C6CBD0" stroke-width="2.5" fill="none"/>
+  <!-- gold hero emblem (star) on the rack -->
+  <circle cx="372" cy="116" r="11" fill="#3A3A42"/>
+  <path d="M372 107 L375 114 L382 114 L376 119 L378 126 L372 122 L366 126 L368 119 L362 114 L369 114 Z" fill="#E0B250"/>
+</svg>

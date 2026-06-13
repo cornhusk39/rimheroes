@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 448" width="192" height="448">
+  <!-- Heroic Forge (side): the counter runs top-to-bottom; anvil, forge+chimney, rack stacked. -->
+  <rect x="42" y="34" width="104" height="380" rx="6" fill="#54545C"/>
+  <rect x="130" y="34" width="16" height="380" rx="5" fill="#34343C"/>
+  <rect x="42" y="34" width="92" height="380" rx="6" fill="#54545C"/>
+  <path d="M50 40 L50 408" stroke="#646470" stroke-width="3"/>
+
+  <!-- ANVIL (top) -->
+  <rect x="60" y="92" width="40" height="30" rx="2" fill="#5A3E22"/>
+  <path d="M62 74 L102 74 L98 90 L66 90 Z" fill="#33333A"/>
+  <rect x="58" y="66" width="46" height="9" rx="2" fill="#4A4A54"/>
+  <path d="M58 68 L40 72 L58 76 Z" fill="#33333A"/>
+
+  <!-- FORGE + chimney (middle) -->
+  <ellipse cx="92" cy="214" rx="22" ry="52" fill="#FF8A2A" opacity="0.20"/>
+  <path d="M70 196 L122 196 L116 150 L84 150 Z" fill="#3A3A42"/>
+  <rect x="92" y="126" width="16" height="26" rx="2" fill="#2E2E36"/>
+  <rect x="58" y="196" width="74" height="56" rx="4" fill="#4A4248"/>
+  <rect x="58" y="196" width="74" height="56" rx="4" fill="none" stroke="#2E2A30" stroke-width="2"/>
+  <ellipse cx="95" cy="206" rx="32" ry="12" fill="#241C20"/>
+  <ellipse cx="95" cy="206" rx="26" ry="9" fill="#E0641C"/>
+  <ellipse cx="95" cy="205" rx="18" ry="5" fill="#FF9A3A"/>
+  <circle cx="88" cy="206" r="2.5" fill="#FFE08A"/><circle cx="102" cy="207" r="2.5" fill="#FFE08A"/>
+  <rect x="58" y="246" width="74" height="6" fill="#C9A23F"/>
+
+  <!-- RACK (bottom) -->
+  <rect x="60" y="300" width="8" height="96" fill="#5A3E22"/>
+  <rect x="118" y="300" width="8" height="96" fill="#5A3E22"/>
+  <rect x="60" y="300" width="66" height="8" rx="2" fill="#5A3E22"/>
+  <rect x="80" y="316" width="6" height="74" fill="#9AA0A6"/>
+  <rect x="80" y="316" width="2.5" height="74" fill="#C6CBD0"/>
+  <rect x="72" y="382" width="22" height="6" rx="2" fill="#C9A23F"/>
+  <circle cx="106" cy="356" r="11" fill="#3A3A42"/>
+  <path d="M106 347 L109 354 L116 354 L110 359 L112 366 L106 362 L100 366 L102 359 L96 354 L103 354 Z" fill="#E0B250"/>
+</svg>

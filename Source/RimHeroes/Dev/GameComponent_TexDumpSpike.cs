@@ -36,6 +36,9 @@ namespace RimHeroes
             "Things/Item/Equipment/WeaponMelee/BreachAxe",
             "Things/Item/Equipment/WeaponMelee/LongSword",
             "Things/Item/Equipment/WeaponMelee/Mace",
+            "Things/Building/Production/TableSmithingFueled_south",
+            "Things/Building/Production/TableSmithingFueled_east",
+            "Things/Building/Production/TableMachining_south",
         };
 
         public GameComponent_TexDumpSpike(Game game) { }
