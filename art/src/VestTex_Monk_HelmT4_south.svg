@@ -1,10 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Monk T4 head-wrap, south: silk saffron wrap with a gold-thread brow band + bead. -->
-  <path d="M154 252 C150 192 198 148 256 148 C314 148 362 192 358 252 L354 266 C326 250 186 250 158 266 Z" fill="#D8902E"/>
-  <path d="M168 242 C170 198 206 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 170 232 168 242 Z" fill="#F0BA58"/>
-  <path d="M200 158 C228 174 290 174 318 158" stroke="#C97A20" stroke-width="4" fill="none"/>
-  <path d="M156 252 C184 238 328 238 356 252 L354 270 C326 254 186 254 158 270 Z" fill="#A8431A"/>
-  <path d="M158 256 C186 244 326 244 354 256 L353 262 C326 250 186 250 159 262 Z" fill="#C9A23F"/>
-  <circle cx="256" cy="256" r="8" fill="#C9A23F"/>
-  <circle cx="256" cy="256" r="4" fill="#8A6E48"/>
+  <!-- Monk HelmT4 south: silk headband + gold-thread trim, bead on the tail. -->
+  <path d="M170 238 C162 250 161 264 167 278 C173 270 177 258 179 248 Z" fill="#A8431A"/>
+  <path d="M178 240 C172 252 172 266 178 278 C184 268 186 256 186 246 Z" fill="#D8902E"/>
+  <circle cx="172" cy="284" r="8" fill="#6E4A28"/>
+  <circle cx="172" cy="284" r="3" fill="#C9A23F"/>
+  <path d="M178 230 C212 221 300 221 334 230 L332 252 C300 244 212 244 180 252 Z" fill="#D8902E"/>
+  <path d="M182 228 C212 220 300 220 330 228" stroke="#C9A23F" stroke-width="3" fill="none"/>
+  <path d="M182 252 C212 245 300 245 330 252" stroke="#C9A23F" stroke-width="3" fill="none"/>
+  <path d="M200 240 L216 240 M248 238 L264 238 M296 240 L312 240" stroke="#C9A23F" stroke-width="2" fill="none"/>
 </svg>

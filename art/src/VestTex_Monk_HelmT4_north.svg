@@ -1,8 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Monk T4 head-wrap, north: silk wrap, gold band, nape knot. -->
-  <path d="M154 250 C150 190 198 146 256 146 C314 146 362 190 358 250 C360 296 344 336 314 354 L198 354 C168 336 152 296 154 250 Z" fill="#D8902E"/>
-  <path d="M168 242 C170 198 206 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 170 232 168 242 Z" fill="#F0BA58"/>
-  <path d="M238 312 C248 304 264 304 274 312 C272 326 264 336 256 336 C248 336 240 326 238 312 Z" fill="#A8431A"/>
-  <path d="M170 314 C198 300 314 300 342 314 L336 332 C310 318 202 318 176 332 Z" fill="#A8431A"/>
-  <path d="M172 318 C198 306 314 306 340 318 L339 324 C314 312 198 312 173 324 Z" fill="#C9A23F"/>
+  <!-- Monk HelmT4 north: silk headband + gold trim, knot + bead at back. -->
+  <path d="M176 230 C210 221 302 221 336 230 L334 252 C302 244 210 244 178 252 Z" fill="#D8902E"/>
+  <path d="M180 228 C210 220 302 220 332 228" stroke="#C9A23F" stroke-width="3" fill="none"/>
+  <path d="M180 252 C210 245 302 245 332 252" stroke="#C9A23F" stroke-width="3" fill="none"/>
+  <path d="M246 246 L266 246 L262 252 L250 252 Z" fill="#C9A23F"/>
+  <path d="M248 252 C244 266 244 280 250 292 C254 280 254 266 254 254 Z" fill="#A8431A"/>
+  <path d="M262 252 C266 266 266 280 260 292 C256 280 256 266 258 254 Z" fill="#D8902E"/>
+  <circle cx="256" cy="298" r="8" fill="#6E4A28"/>
+  <circle cx="256" cy="298" r="3" fill="#C9A23F"/>
 </svg>

@@ -155,6 +155,7 @@
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.9, 0.66, 0.2)</baseColor>
         <artDir>Monk</artDir>
+        <helmKeepsHair>true</helmKeepsHair>
       </li>
     </modExtensions>
     <renderNodeProperties>

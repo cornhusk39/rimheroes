@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Monk T2 head-wrap, south: simple saffron cloth wrap over the crown. -->
-  <path d="M154 252 C150 192 198 148 256 148 C314 148 362 192 358 252 L354 266 C326 250 186 250 158 266 Z" fill="#C9852E"/>
-  <path d="M168 242 C170 198 206 164 256 164 C286 164 312 178 328 202 C302 182 216 184 190 214 C178 226 170 232 168 242 Z" fill="#E0A848"/>
-  <!-- wrap fold -->
-  <path d="M200 158 C228 174 290 174 318 158" stroke="#B06A1A" stroke-width="4" fill="none"/>
-  <path d="M156 252 C184 238 328 238 356 252 L354 270 C326 254 186 254 158 270 Z" fill="#A8431A"/>
+  <!-- Monk HelmT2 south: plain saffron headband across the brow, knot + tails on the left. -->
+  <path d="M170 238 C162 250 161 264 167 278 C173 270 177 258 179 248 Z" fill="#A8431A"/>
+  <path d="M178 240 C172 252 172 266 178 278 C184 268 186 256 186 246 Z" fill="#C9852E"/>
+  <path d="M178 230 C212 221 300 221 334 230 L332 252 C300 244 212 244 180 252 Z" fill="#C9852E"/>
+  <path d="M178 230 C212 221 300 221 334 230" stroke="#A8431A" stroke-width="3" fill="none"/>
+  <path d="M180 250 C212 243 300 243 332 250" stroke="#A8431A" stroke-width="3" fill="none"/>
 </svg>

@@ -130,9 +130,10 @@ namespace RimHeroes
                 return;
             }
             // Vestment headpieces work like hats: hide hair while a HelmT<tier> texture renders
-            // (beards stay - a skull cap shouldn't swallow the beard). HelmArtVisible is cached
+            // (beards stay - a skull cap shouldn't swallow the beard). Headband-style pieces
+            // (helmKeepsHair) sit over the hair, so they don't skip it. HelmHidesHair is cached
             // because this runs during parallel pre-draw where ContentFinder is off-limits.
-            if (vestment != null && vestment.HelmArtVisible)
+            if (vestment != null && vestment.HelmHidesHair)
             {
                 parms.skipFlags |= RenderSkipFlagDefOf.Hair;
             }

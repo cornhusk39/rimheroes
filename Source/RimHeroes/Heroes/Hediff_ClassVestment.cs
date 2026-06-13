@@ -14,6 +14,9 @@ namespace RimHeroes
     {
         public Color baseColor = Color.gray;
         public string artDir;
+        // Most headpieces (hoods, helms, caps) replace the hair. A headband-style piece sits
+        // OVER the hair instead, so set this true to keep the hair drawn under the helm art.
+        public bool helmKeepsHair = false;
     }
 
     /// <summary>
@@ -45,6 +48,11 @@ namespace RimHeroes
                 return helmArtExists;
             }
         }
+
+        // True when the helm art is showing AND this vestment's headpiece replaces hair
+        // (i.e. not a headband). Drives the hair-skip flag in the render postfix.
+        public bool HelmHidesHair =>
+            HelmArtVisible && !(def.GetModExtension<VestmentExtension>()?.helmKeepsHair ?? false);
 
         public override string LabelInBrackets => $"tier {Tier}";
 
