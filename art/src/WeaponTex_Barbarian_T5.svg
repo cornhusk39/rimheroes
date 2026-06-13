@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <g transform="translate(128 128) scale(0.72) rotate(45) translate(-128 -128)">
   <!-- Worldcleaver (capstone): world-ending. Huge jagged bits, molten haft crack, energy aura, blazing edges. -->
   <path d="M124 40 L14 54 C-6 88 4 124 54 142 L124 116 L132 116 L202 142 C252 124 262 88 242 54 L132 40 Z" fill="#FF6A2A" opacity="0.18"/>
   <path d="M124 48 L26 60 C8 90 16 122 58 138 L124 112 L132 112 L198 138 C240 122 248 90 230 60 L132 48 Z" fill="#FFB347" opacity="0.18"/>
@@ -29,4 +30,5 @@
   <!-- blazing top spike -->
   <path d="M128 8 L119 40 L137 40 Z" fill="#E6ECF4"/>
   <path d="M128 8 L128 40" stroke="#FFE08A" stroke-width="3"/>
+  </g>
 </svg>

@@ -33,6 +33,9 @@ namespace RimHeroes
             "Things/Pawn/Humanlike/Apparel/Hood/Hood_south",
             "Things/Pawn/Humanlike/Apparel/Hood/Hood_east",
             "Things/Pawn/Humanlike/Apparel/Hood/Hood_north",
+            "Things/Item/Equipment/WeaponMelee/BreachAxe",
+            "Things/Item/Equipment/WeaponMelee/LongSword",
+            "Things/Item/Equipment/WeaponMelee/Mace",
         };
 
         public GameComponent_TexDumpSpike(Game game) { }

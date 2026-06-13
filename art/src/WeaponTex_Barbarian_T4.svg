@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <g transform="translate(128 128) scale(0.74) rotate(45) translate(-128 -128)">
   <!-- Perfect Hero Greataxe (L15): clearly magical - glowing orange edges, back-spikes, molten runes, halo. -->
   <path d="M124 48 L30 60 C8 86 14 118 56 134 L124 110 L132 110 L200 134 C242 118 248 86 226 60 L132 48 Z" fill="#FF8A2A" opacity="0.16"/>
   <rect x="118" y="34" width="20" height="200" rx="6" fill="#4A3320"/>
@@ -20,4 +21,5 @@
   <path d="M120 96 L128 108 L136 96 M118 70 L128 80 L138 70" stroke="#FF8A2A" stroke-width="3" fill="none" opacity="0.9"/>
   <rect x="120" y="20" width="16" height="28" rx="3" fill="#D2D8E0"/>
   <path d="M128 20 L128 48" stroke="#FFB347" stroke-width="3"/>
+  </g>
 </svg>

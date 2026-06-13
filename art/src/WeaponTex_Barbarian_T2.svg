@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <g transform="translate(128 128) scale(0.8) rotate(45) translate(-128 -128)">
   <!-- Hero Greataxe (L5): polished steel, brass collar, etched rune, larger bits. -->
   <rect x="120" y="38" width="16" height="194" rx="5" fill="#6B4A2A"/>
   <rect x="120" y="38" width="6" height="194" fill="#82612F"/>
@@ -13,4 +14,5 @@
   <rect x="117" y="54" width="22" height="48" rx="3" fill="#A7AEB7"/>
   <path d="M128 64 L128 92 M120 78 L136 78" stroke="#6E747B" stroke-width="3"/>
   <rect x="122" y="26" width="12" height="30" rx="3" fill="#BFC5CD"/>
+  </g>
 </svg>

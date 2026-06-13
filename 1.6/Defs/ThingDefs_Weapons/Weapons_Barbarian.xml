@@ -8,7 +8,7 @@
     <burnableByRecipe>false</burnableByRecipe>
     <destroyOnDrop>false</destroyOnDrop>
     <tradeability>None</tradeability>
-    <equippedAngleOffset>-65</equippedAngleOffset>
+    <equippedAngleOffset>0</equippedAngleOffset>
     <weaponClasses>
       <li>Melee</li>
     </weaponClasses>
