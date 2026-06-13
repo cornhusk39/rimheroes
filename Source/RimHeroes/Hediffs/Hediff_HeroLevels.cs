@@ -17,6 +17,13 @@ namespace RimHeroes
         public int level = 1;
         public float xp;
         public bool capstoneGranted; // L20 "heroic trial" reward fired once
+        private List<int> resolvedChoiceLevels = new List<int>(); // trait/feat level-up picks already made
+        private List<FeatDef> takenFeats = new List<FeatDef>();
+
+        public List<FeatDef> TakenFeats => takenFeats;
+        public bool IsChoiceResolved(int lvl) => resolvedChoiceLevels.Contains(lvl);
+        public void MarkChoiceResolved(int lvl) { if (!resolvedChoiceLevels.Contains(lvl)) resolvedChoiceLevels.Add(lvl); }
+        public void AddTakenFeat(FeatDef f) { if (f != null && !takenFeats.Contains(f)) takenFeats.Add(f); }
 
         public override string LabelInBrackets => classDef != null ? $"{classDef.label} {level}" : base.LabelInBrackets;
 
@@ -500,6 +507,7 @@ namespace RimHeroes
             ApplyGrants();
             Vestment?.SetTierForLevel(level);
             TryGrantCapstone();
+            HeroChoices.CheckLevelChoices(this, allowDialog: false); // direct set = auto-pick (gen/debug)
         }
 
         public void GainXP(float amount)
@@ -526,6 +534,7 @@ namespace RimHeroes
                         pawn, MessageTypeDefOf.PositiveEvent);
                 }
                 TryGrantCapstone();
+                HeroChoices.CheckLevelChoices(this);
             }
             if (AtMaxLevel)
             {
@@ -606,6 +615,8 @@ namespace RimHeroes
             Scribe_Values.Look(ref level, "level", 1);
             Scribe_Values.Look(ref xp, "xp");
             Scribe_Values.Look(ref capstoneGranted, "capstoneGranted");
+            Scribe_Collections.Look(ref resolvedChoiceLevels, "resolvedChoiceLevels", LookMode.Value);
+            Scribe_Collections.Look(ref takenFeats, "takenFeats", LookMode.Def);
             Scribe_Collections.Look(ref mimBonds, "mimBonds", LookMode.Deep);
             Scribe_Collections.Look(ref slotsExpended, "slotsExpended", LookMode.Value);
             Scribe_Collections.Look(ref autocastSpells, "autocastSpells", LookMode.Def);
@@ -619,6 +630,8 @@ namespace RimHeroes
                 if (mimBonds == null) mimBonds = new List<MimBond>();
                 if (autocastSpells == null) autocastSpells = new List<AbilityDef>();
                 if (preparedSpells == null) preparedSpells = new List<AbilityDef>();
+                if (resolvedChoiceLevels == null) resolvedChoiceLevels = new List<int>();
+                if (takenFeats == null) takenFeats = new List<FeatDef>();
                 if (slotsExpended == null || slotsExpended.Count != 10) slotsExpended = new List<int>(new int[10]);
             }
         }

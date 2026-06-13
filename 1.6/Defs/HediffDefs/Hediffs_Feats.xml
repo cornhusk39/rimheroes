@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Permanent perk hediffs applied by feats (no Disappears comp). -->
+
+  <HediffDef Name="RH_FeatPerkBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1</maxSeverity>
+    <defaultLabelColor>(0.95, 0.9, 0.6)</defaultLabelColor>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_Resilient</defName>
+    <label>resilient</label>
+    <description>Hardened against harm.</description>
+    <stages><li><statFactors><IncomingDamageFactor>0.90</IncomingDamageFactor></statFactors></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_Ironhide</defName>
+    <label>ironhide</label>
+    <description>Skin like worked leather.</description>
+    <stages><li>
+      <statFactors><IncomingDamageFactor>0.95</IncomingDamageFactor></statFactors>
+      <statOffsets><ArmorRating_Sharp>0.15</ArmorRating_Sharp><ArmorRating_Blunt>0.15</ArmorRating_Blunt></statOffsets>
+    </li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_Duelist</defName>
+    <label>duelist</label>
+    <description>A master of the blade-dance.</description>
+    <stages><li><statOffsets><MeleeHitChance>5</MeleeHitChance><MeleeDodgeChance>6</MeleeDodgeChance></statOffsets></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_Deadeye</defName>
+    <label>deadeye</label>
+    <description>Preternaturally steady aim.</description>
+    <stages><li><statOffsets><ShootingAccuracyPawn>4</ShootingAccuracyPawn><AimingDelayFactor>-0.2</AimingDelayFactor></statOffsets></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_WarCaster</defName>
+    <label>war caster</label>
+    <description>You channel even under duress.</description>
+    <stages><li><statOffsets><RH_SpellPower>0.15</RH_SpellPower></statOffsets></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_SpellFocus</defName>
+    <label>spell focus</label>
+    <description>Long study sharpens the art.</description>
+    <stages><li><statOffsets><RH_SpellPower>0.20</RH_SpellPower></statOffsets></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_Fleet</defName>
+    <label>fleet</label>
+    <description>Fast on your feet.</description>
+    <stages><li><statOffsets><MoveSpeed>0.5</MoveSpeed></statOffsets></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_Lucky</defName>
+    <label>lucky</label>
+    <description>Fortune favors you.</description>
+    <stages><li><statOffsets><MeleeDodgeChance>3</MeleeDodgeChance><WorkSpeedGlobal>0.05</WorkSpeedGlobal><MentalBreakThreshold>-0.03</MentalBreakThreshold></statOffsets></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_Prodigy</defName>
+    <label>prodigy</label>
+    <description>A quick study.</description>
+    <stages><li><statOffsets><WorkSpeedGlobal>0.12</WorkSpeedGlobal><GlobalLearningFactor>0.3</GlobalLearningFactor></statOffsets></li></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_Stalwart</defName>
+    <label>stalwart</label>
+    <description>Iron of will and constitution.</description>
+    <stages><li><statOffsets><MentalBreakThreshold>-0.06</MentalBreakThreshold><ImmunityGainSpeed>0.2</ImmunityGainSpeed></statOffsets></li></stages>
+  </HediffDef>
+
+</Defs>
