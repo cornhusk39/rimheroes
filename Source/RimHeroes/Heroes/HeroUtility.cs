@@ -1,3 +1,4 @@
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -39,6 +40,9 @@ namespace RimHeroes
             {
                 return existing;
             }
+            // The blessing remakes flesh and fate: strip rolled traits and lasting afflictions so the
+            // hero begins clean. Universal — so enemy heroes generated for raids are clean too.
+            CleanseForHeroism(pawn, classDef);
             if (pawn.story?.traits != null && !pawn.story.traits.HasTrait(RH_DefOf.RH_Hero))
             {
                 pawn.story.traits.GainTrait(new Trait(RH_DefOf.RH_Hero));
@@ -57,6 +61,45 @@ namespace RimHeroes
                 vestment.SetTierForLevel(hediff.level);
             }
             return hediff;
+        }
+
+        /// <summary>
+        /// Wipes the pawn's rolled traits and lasting afflictions (missing limbs, addictions, chronic
+        /// illness, injuries) so a new hero begins whole. The Hero + class traits are added afterwards.
+        /// </summary>
+        public static void CleanseForHeroism(Pawn pawn, HeroClassDef classDef)
+        {
+            if (pawn.story?.traits != null && pawn.story.traits.allTraits.Count > 0)
+            {
+                pawn.story.traits.allTraits.Clear();
+                pawn.Notify_DisabledWorkTypesChanged();
+                pawn.skills?.Notify_SkillDisablesChanged();
+            }
+            if (pawn.health?.hediffSet != null)
+            {
+                foreach (var h in pawn.health.hediffSet.hediffs.Where(x => x.def.isBad).ToList())
+                {
+                    pawn.health.RemoveHediff(h);
+                }
+                pawn.health.Notify_HediffChanged(null);
+            }
+        }
+
+        /// <summary>Drops a poor-quality Lesser (T1) class weapon at the new hero's feet (player path).</summary>
+        public static void GrantStarterWeapon(Pawn pawn, HeroClassDef classDef)
+        {
+            if (pawn?.Map == null || classDef == null)
+            {
+                return;
+            }
+            var def = DefDatabase<ThingDef>.GetNamedSilentFail("RH_Weapon_" + classDef.defName.Substring("RH_".Length) + "_T1");
+            if (def == null)
+            {
+                return;
+            }
+            var w = (ThingWithComps)ThingMaker.MakeThing(def);
+            w.TryGetComp<CompQuality>()?.SetQuality(QualityCategory.Poor, ArtGenerationContext.Colony);
+            GenPlace.TryPlaceThing(w, pawn.Position, pawn.Map, ThingPlaceMode.Near);
         }
 
         /// <summary>

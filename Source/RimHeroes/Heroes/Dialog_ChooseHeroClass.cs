@@ -75,6 +75,7 @@ namespace RimHeroes
         public void Confirm(HeroClassDef classDef)
         {
             HeroUtility.MakeHero(pawn, classDef);
+            HeroUtility.GrantStarterWeapon(pawn, classDef);
             Messages.Message("RH_BecameHero".Translate(pawn.LabelShortCap, classDef.label), pawn, MessageTypeDefOf.PositiveEvent);
             Close();
         }

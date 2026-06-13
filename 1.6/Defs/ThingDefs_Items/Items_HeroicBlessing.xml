@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Heroic Blessing: the relic that awakens a hero. Given at scenario start and as a quest reward;
+       using it opens class selection and remakes the user (clean traits, cured body, starter weapon). -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>RH_HeroicBlessing</defName>
+    <label>heroic blessing</label>
+    <description>A warm, weightless mote of light that no one can quite explain. Some power - a forgotten god, a watching demon, fate itself - has marked the bearer for something greater. Hold it close and it unmakes every old wound and lesser habit, and remakes you as a Hero of the path you choose. The change cannot be undone.</description>
+    <graphicData>
+      <texPath>Things/Item/Special/PsylinkNeuroformer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(1.0, 0.92, 0.55)</color>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Receive {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="RimHeroes.CompProperties_UseEffectHeroicBlessing" />
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+</Defs>
