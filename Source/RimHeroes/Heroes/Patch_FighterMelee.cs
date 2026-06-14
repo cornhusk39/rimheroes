@@ -13,10 +13,10 @@ namespace RimHeroes
     [HarmonyPatch(typeof(Verb_MeleeAttackDamage), "DamageInfosToApply", new[] { typeof(LocalTargetInfo) })]
     public static class Patch_FighterMelee_Damage
     {
-        public static IEnumerable<DamageInfo> Postfix(IEnumerable<DamageInfo> __result, Verb_MeleeAttackDamage __instance)
+        public static IEnumerable<DamageInfo> Postfix(IEnumerable<DamageInfo> __result, Verb_MeleeAttackDamage __instance, LocalTargetInfo target)
         {
             var hero = HeroUtility.GetHeroHediff(__instance.CasterPawn);
-            float dmg = ClassFeatures.MeleeDamageFactor(hero);
+            float dmg = ClassFeatures.MeleeDamageFactor(hero) * ClassFeatures.MeleeDamageVsTarget(hero, target.Thing);
             float pen = ClassFeatures.MeleeArmorPenOffset(hero);
             bool mod = hero != null && (dmg != 1f || pen != 0f);
             foreach (var di in __result)

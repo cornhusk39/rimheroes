@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Barbarian / Monk / Rogue active abilities. Cooldown-based (RH_MartialBase, no spell slots).
+       Self-buffs use GiveHediff; Stunning Strike uses our ZoneHediff on an enemy. -->
+
+  <!-- Barbarian Rage -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_Rage</defName>
+    <label>rage</label>
+    <description>Fly into a battle fury: hit harder and shrug off blows, at the cost of your aim.</description>
+    <iconPath>UI/RimHeroes/Rage</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0</warmupTime>
+      <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>false</canTargetPawns><canTargetLocations>false</canTargetLocations><canTargetBuildings>false</canTargetBuildings></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_Rage</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Monk Flurry of Blows -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_FlurryOfBlows</defName>
+    <label>flurry of blows</label>
+    <description>Unleash a rapid storm of unarmed strikes for a few seconds.</description>
+    <iconPath>UI/RimHeroes/FlurryOfBlows</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0</warmupTime>
+      <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>false</canTargetPawns><canTargetLocations>false</canTargetLocations><canTargetBuildings>false</canTargetBuildings></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_Flurry</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Monk Patient Defense -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_PatientDefense</defName>
+    <label>patient defense</label>
+    <description>Settle into a still, ready guard - briefly very hard to hit.</description>
+    <iconPath>UI/RimHeroes/PatientDefense</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0</warmupTime>
+      <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>false</canTargetPawns><canTargetLocations>false</canTargetLocations><canTargetBuildings>false</canTargetBuildings></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_PatientDefense</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Monk Step of the Wind -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_StepOfTheWind</defName>
+    <label>step of the wind</label>
+    <description>Move with the speed of a gust for a short time.</description>
+    <iconPath>UI/RimHeroes/StepOfTheWind</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0</warmupTime>
+      <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>false</canTargetPawns><canTargetLocations>false</canTargetLocations><canTargetBuildings>false</canTargetBuildings></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_StepWind</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Monk Stunning Strike -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_StunningStrike</defName>
+    <label>stunning strike</label>
+    <description>A precise blow that briefly stuns a foe.</description>
+    <iconPath>UI/RimHeroes/StunningStrike</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>6.9</range>
+      <warmupTime>0.2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Stunned</hediff>
+        <radius>1.5</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Monk Empty Body -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_EmptyBody</defName>
+    <label>empty body</label>
+    <description>Slip half out of the world - briefly very hard to see or strike.</description>
+    <iconPath>UI/RimHeroes/EmptyBody</iconPath>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0.3</warmupTime>
+      <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>false</canTargetPawns><canTargetLocations>false</canTargetLocations><canTargetBuildings>false</canTargetBuildings></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_EmptyBody</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Rogue Cunning Action -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_CunningAction</defName>
+    <label>cunning action</label>
+    <description>Dart and weave: a burst of speed and evasion to reposition or escape.</description>
+    <iconPath>UI/RimHeroes/CunningAction</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0</warmupTime>
+      <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>false</canTargetPawns><canTargetLocations>false</canTargetLocations><canTargetBuildings>false</canTargetBuildings></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_CunningAction</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

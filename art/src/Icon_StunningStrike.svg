@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="stunBurst" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#fffbe0"/>
+      <stop offset="50%" stop-color="#ffd24a"/>
+      <stop offset="100%" stop-color="#c98a07"/>
+    </radialGradient>
+    <linearGradient id="stunPalm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff2c4"/>
+      <stop offset="100%" stop-color="#c98a18"/>
+    </linearGradient>
+  </defs>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 2 L37 22 L57 14 L42 30 L62 36 L41 38 L50 58 L34 44 L28 62 L25 41 L6 48 L19 32 L3 26 L23 25 L16 7 L30 21 Z" fill="url(#stunBurst)"/>
+    <path d="M24 40 q-2 -11 3 -13 q1 -4 5 -2 l1 -4 q1 -3 4 -2 q3 1 2 5 l0 6 q1 4 3 5 q4 2 2 7 q-3 8 -11 9 q-9 1 -12 -6 q-1 -4 3 -5 Z" fill="url(#stunPalm)"/>
+    <path d="M28 32 l0 -6 M33 32 l1 -7 M38 34 l3 -5" fill="none" stroke="#a06a08" stroke-width="2"/>
+    <g fill="#fffbe0">
+      <path d="M50 10 l1.5 3 3 1.5 -3 1.5 -1.5 3 -1.5 -3 -3 -1.5 3 -1.5 Z"/>
+      <path d="M12 14 l1.2 2.4 2.4 1.2 -2.4 1.2 -1.2 2.4 -1.2 -2.4 -2.4 -1.2 2.4 -1.2 Z"/>
+    </g>
+  </g>
+</svg>

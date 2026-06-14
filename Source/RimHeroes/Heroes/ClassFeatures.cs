@@ -9,6 +9,9 @@ namespace RimHeroes
     /// <summary>Fighter's level-1 Fighting Style pick.</summary>
     public enum FighterStyle { None, Quickness, Strength, Cunning }
 
+    /// <summary>Ranger's level-1 Favored Enemy pick.</summary>
+    public enum FavoredEnemy { None, Beasts, Mechanoids, Humanlikes, Insects }
+
     /// <summary>
     /// A single hediff per hero, labeled with the class name (Fighter, Wizard, ...), whose tooltip
     /// enumerates every active class feature. Passive class effects that map to real pawn stats
@@ -68,41 +71,125 @@ namespace RimHeroes
         public static int ExtraAttackTier(int level) => level >= 20 ? 3 : level >= 11 ? 2 : level >= 5 ? 1 : 0;
         public static int IndomitableTier(int level) => level >= 17 ? 3 : level >= 13 ? 2 : level >= 9 ? 1 : 0;
 
-        // ----- Fighter melee modifiers (no pawn stat exists for these; applied by Patch_FighterMelee) -----
+        // ----- Shared tier helpers -----
+        public static int BrutalCritTier(int level) => level >= 17 ? 3 : level >= 13 ? 2 : level >= 9 ? 1 : 0;
+        private static int OneAt(int level, int unlock) => level >= unlock ? 1 : 0;
 
-        /// <summary>Multiplier on melee damage dealt (Strength style + Extra Attack tiers + Action Surge).</summary>
+        private static bool Has(Hediff_HeroLevels h, HediffDef def) =>
+            def != null && h?.pawn?.health?.hediffSet?.HasHediff(def) == true;
+
+        public static bool ActionSurgeActive(Hediff_HeroLevels h) => Has(h, RH_DefOf.RH_ActionSurge);
+
+        // ----- Melee modifiers (no pawn stat exists for these; applied by Patch_FighterMelee) -----
+
+        /// <summary>Unconditional melee-damage multiplier per class (tiers + active burst hediffs).</summary>
         public static float MeleeDamageFactor(Hediff_HeroLevels h)
         {
-            if (!IsFighter(h)) return 1f;
+            if (h?.classDef == null) return 1f;
+            int lvl = h.level;
             float f = 1f;
-            if (h.FightingStyle == FighterStyle.Strength) f *= 1.15f;
-            f *= 1f + 0.33f * ExtraAttackTier(h.level);
-            if (ActionSurgeActive(h)) f *= h.level >= 17 ? 1.75f : 1.5f;
+            switch (h.classDef.defName)
+            {
+                case "RH_Fighter":
+                    if (h.FightingStyle == FighterStyle.Strength) f *= 1.15f;
+                    f *= 1f + 0.33f * ExtraAttackTier(lvl);
+                    if (Has(h, RH_DefOf.RH_ActionSurge)) f *= lvl >= 17 ? 1.75f : 1.5f;
+                    break;
+                case "RH_Barbarian":
+                    f *= 1f + 0.33f * OneAt(lvl, 5);            // Extra Attack
+                    f *= 1f + 0.15f * BrutalCritTier(lvl);      // Brutal Critical
+                    if (lvl >= 20) f *= 1.25f;                  // Primal Champion
+                    if (Has(h, RH_DefOf.RH_Rage)) f *= 1.5f;    // Rage
+                    break;
+                case "RH_Monk":
+                    f *= 1f + 0.006f * lvl;                     // Martial Arts scaling
+                    f *= 1f + 0.33f * OneAt(lvl, 5);            // Extra Attack
+                    if (Has(h, RH_DefOf.RH_Flurry)) f *= 1.4f;  // Flurry of Blows
+                    break;
+                case "RH_Paladin":
+                    f *= 1f + 0.33f * OneAt(lvl, 5);            // Extra Attack
+                    if (lvl >= 11) f *= 1.25f;                  // Improved Divine Smite
+                    break;
+                case "RH_Ranger":
+                    f *= 1f + 0.33f * OneAt(lvl, 5);            // Extra Attack (melee side)
+                    break;
+                case "RH_Rogue":
+                    if (lvl >= 20) f *= 1.15f;                  // Stroke of Luck
+                    break;
+            }
             return f;
         }
 
-        /// <summary>Multiplier on melee attack cooldown (Quickness style = faster swings).</summary>
+        /// <summary>Conditional melee-damage multiplier that needs the target (Sneak Attack, Favored Enemy).</summary>
+        public static float MeleeDamageVsTarget(Hediff_HeroLevels h, Thing target)
+        {
+            if (h?.classDef == null) return 1f;
+            switch (h.classDef.defName)
+            {
+                case "RH_Rogue":
+                    if (IsFlanked(h.pawn, target)) return 1f + 0.05f * h.level; // Sneak Attack
+                    break;
+                case "RH_Ranger":
+                    if (IsFavoredEnemy(h, target)) return 1f + (h.level >= 20 ? 0.06f : 0.04f) * h.level; // Favored Enemy / Foe Slayer
+                    break;
+            }
+            return 1f;
+        }
+
+        /// <summary>5e "advantage": the target is downed/asleep or focused on someone other than the rogue.</summary>
+        public static bool IsFlanked(Pawn attacker, Thing target)
+        {
+            if (!(target is Pawn tp)) return false;
+            if (tp.Downed || !tp.Awake()) return true;
+            var foe = tp.mindState?.enemyTarget;
+            return foe != null && foe != attacker;
+        }
+
+        public static bool IsFavoredEnemy(Hediff_HeroLevels h, Thing target)
+        {
+            if (!(target is Pawn tp) || h.favoredEnemy == FavoredEnemy.None) return false;
+            switch (h.favoredEnemy)
+            {
+                case FavoredEnemy.Beasts: return tp.RaceProps?.Animal == true;
+                case FavoredEnemy.Mechanoids: return tp.RaceProps?.IsMechanoid == true;
+                case FavoredEnemy.Humanlikes: return tp.RaceProps?.Humanlike == true;
+                case FavoredEnemy.Insects: return tp.RaceProps?.Insect == true;
+                default: return false;
+            }
+        }
+
+        /// <summary>Multiplier on melee attack cooldown (faster swings).</summary>
         public static float MeleeCooldownFactor(Hediff_HeroLevels h)
         {
-            if (!IsFighter(h)) return 1f;
+            if (h?.classDef == null) return 1f;
             float f = 1f;
-            if (h.FightingStyle == FighterStyle.Quickness) f *= 0.80f;
-            if (ActionSurgeActive(h)) f *= 0.80f;
+            if (h.classDef.defName == "RH_Fighter")
+            {
+                if (h.FightingStyle == FighterStyle.Quickness) f *= 0.80f;
+                if (Has(h, RH_DefOf.RH_ActionSurge)) f *= 0.80f;
+            }
+            if (Has(h, RH_DefOf.RH_Flurry)) f *= 0.65f;  // Monk Flurry of Blows
             return f;
         }
 
-        /// <summary>Flat armor-penetration added to melee hits (Cunning style).</summary>
-        public static float MeleeArmorPenOffset(Hediff_HeroLevels h) =>
-            IsFighter(h) && h.FightingStyle == FighterStyle.Cunning ? 0.20f : 0f;
+        /// <summary>Flat armor-penetration added to melee hits.</summary>
+        public static float MeleeArmorPenOffset(Hediff_HeroLevels h)
+        {
+            if (h?.classDef == null) return 0f;
+            float p = 0f;
+            if (h.classDef.defName == "RH_Fighter" && h.FightingStyle == FighterStyle.Cunning) p += 0.20f;
+            if (h.classDef.defName == "RH_Barbarian") p += 0.05f * BrutalCritTier(h.level); // Brutal Critical
+            return p;
+        }
 
-        public static bool ActionSurgeActive(Hediff_HeroLevels h) =>
-            h?.pawn?.health?.hediffSet?.HasHediff(RH_DefOf.RH_ActionSurge) == true;
-
-        /// <summary>Death-saving-throw bonus from Indomitable.</summary>
+        /// <summary>Death-saving-throw bonus (Fighter Indomitable, Barbarian Relentless Rage while raging).</summary>
         public static int DeathSaveBonus(Hediff_HeroLevels h)
         {
-            int t = IsFighter(h) ? IndomitableTier(h.level) : 0;
-            return t == 0 ? 0 : t + 1; // +2 / +3 / +4
+            if (h?.classDef == null) return 0;
+            int b = 0;
+            if (IsFighter(h)) { int t = IndomitableTier(h.level); if (t > 0) b += t + 1; }
+            if (h.classDef.defName == "RH_Barbarian" && h.level >= 11 && Has(h, RH_DefOf.RH_Rage)) b += 5; // Relentless Rage
+            return b;
         }
 
         // ----- Heroic growth: every class gains a little every level (no dead levels) -----
@@ -128,26 +215,66 @@ namespace RimHeroes
             stage.statOffsets.Add(new StatModifier { stat = StatDefOf.PainShockThreshold, value = PainPerLevel * lvl });
             stage.statFactors.Add(new StatModifier { stat = StatDefOf.MoveSpeed, value = 1f + MovePerLevel * lvl });
             stage.statFactors.Add(new StatModifier { stat = StatDefOf.WorkSpeedGlobal, value = 1f + WorkPerLevel * lvl });
-            float incomingFactor = 1f - ResistPerLevel * lvl;
 
-            // Fighter Indomitable toughness stacks on the baseline.
-            if (IsFighter(h))
-            {
-                int t = IndomitableTier(lvl);
-                if (t > 0)
-                {
-                    stage.statOffsets.Add(new StatModifier { stat = StatDefOf.PainShockThreshold, value = 0.05f + 0.10f * t });
-                    var mbt = Stat("MentalBreakThreshold");
-                    if (mbt != null) stage.statOffsets.Add(new StatModifier { stat = mbt, value = -0.05f - 0.05f * t });
-                    incomingFactor *= 1f - 0.05f * t;
-                }
-            }
-
+            // Incoming-damage resistance: universal + class (combined into one factor to avoid double-multiply).
             var idf = Stat("IncomingDamageFactor");
-            if (idf != null) stage.statFactors.Add(new StatModifier { stat = idf, value = incomingFactor });
+            if (idf != null)
+                stage.statFactors.Add(new StatModifier { stat = idf, value = (1f - ResistPerLevel * lvl) * ClassIncomingDamageMult(h, lvl) });
 
             AddFlavorTrickle(h, lvl, stage);
+            AddClassPassives(h, lvl, stage);
             return stage;
+        }
+
+        /// <summary>Class passive incoming-damage multipliers (Fighter Indomitable, Monk/Rogue Evasion, etc.).</summary>
+        private static float ClassIncomingDamageMult(Hediff_HeroLevels h, int lvl)
+        {
+            float m = 1f;
+            switch (h.classDef.defName)
+            {
+                case "RH_Fighter": { int t = IndomitableTier(lvl); if (t > 0) m *= 1f - 0.05f * t; break; }
+                case "RH_Monk": if (lvl >= 7) m *= 0.90f; break;                         // Evasion
+                case "RH_Rogue": if (lvl >= 5) m *= 0.90f; if (lvl >= 7) m *= 0.90f; break; // Uncanny Dodge + Evasion
+            }
+            return m;
+        }
+
+        /// <summary>Class milestone passives expressed as pawn-stat offsets (armor, dodge, immunity, mind, etc.).</summary>
+        private static void AddClassPassives(Hediff_HeroLevels h, int lvl, HediffStage stage)
+        {
+            void off(StatDef s, float v) { if (s != null && v != 0f) stage.statOffsets.Add(new StatModifier { stat = s, value = v }); }
+            var sharp = StatDefOf.ArmorRating_Sharp;
+            var blunt = StatDefOf.ArmorRating_Blunt;
+            var dodge = Stat("MeleeDodgeChance");
+            var mbt = Stat("MentalBreakThreshold");
+            var imm = Stat("ImmunityGainSpeed");
+            switch (h.classDef.defName)
+            {
+                case "RH_Fighter": { int t = IndomitableTier(lvl); if (t > 0) { off(StatDefOf.PainShockThreshold, 0.05f + 0.10f * t); off(mbt, -0.05f - 0.05f * t); } break; }
+
+                case "RH_Barbarian":
+                    off(sharp, 0.10f); off(blunt, 0.15f);                  // Unarmored Defense
+                    if (lvl >= 2) off(dodge, 4f);                          // Danger Sense
+                    if (lvl >= 5) off(StatDefOf.MoveSpeed, 0.4f);          // Fast Movement (flat, on top of % baseline)
+                    if (lvl >= 18) off(StatDefOf.PainShockThreshold, 0.15f); // Indomitable Might toughness
+                    if (lvl >= 20) { off(StatDefOf.PainShockThreshold, 0.10f); off(mbt, -0.10f); } // Primal Champion
+                    break;
+
+                case "RH_Monk":
+                    off(sharp, 0.10f); off(blunt, 0.10f);                  // Unarmored Defense
+                    off(StatDefOf.MoveSpeed, lvl >= 9 ? 0.6f : 0.3f);      // Unarmored Movement
+                    if (lvl >= 3) off(dodge, 3f);                          // Deflect Missiles (approx)
+                    if (lvl >= 10) off(imm, 2.0f);                         // Purity of Body
+                    if (lvl >= 14) off(mbt, -0.10f);                       // Diamond Soul
+                    break;
+
+                case "RH_Rogue":
+                    off(dodge, 4f);                                        // base nimbleness
+                    if (lvl >= 15) off(mbt, -0.10f);                       // Slippery Mind
+                    if (lvl >= 18) off(dodge, 8f);                         // Elusive
+                    off(Stat("GlobalLearningFactor"), 0.30f);             // Expertise
+                    break;
+            }
         }
 
         /// <summary>A small class-flavored per-level stat trickle on top of the universal growth.</summary>
@@ -203,6 +330,34 @@ namespace RimHeroes
                 int ind = IndomitableTier(lvl);
                 if (ind > 0)
                     sb.AppendLine($"Indomitable {Roman(ind)}: tougher, harder to break, and +{ind + 1} to death saves.");
+            }
+            else switch (h.classDef.defName)
+            {
+                case "RH_Barbarian":
+                    sb.AppendLine("Unarmored Defense: tougher skin (armor) and Danger Sense (dodge).");
+                    sb.AppendLine("Rage: a fury that boosts damage and shrugs off blows" + (lvl >= 15 ? " (lasts longer)." : "."));
+                    if (lvl >= 5) sb.AppendLine($"Extra Attack + Fast Movement: +33% melee, quicker on foot.");
+                    if (BrutalCritTier(lvl) > 0) sb.AppendLine($"Brutal Critical {Roman(BrutalCritTier(lvl))}: heavier hits and armor-shredding.");
+                    if (lvl >= 11) sb.AppendLine("Relentless Rage: while raging, far harder to put down.");
+                    if (lvl >= 20) sb.AppendLine("Primal Champion: peak might - bonus melee and toughness.");
+                    break;
+                case "RH_Monk":
+                    sb.AppendLine($"Martial Arts: unarmed strikes scale with level (+{Mathf.RoundToInt(0.6f * lvl)}% melee).");
+                    sb.AppendLine("Ki: Flurry of Blows, Patient Defense, Step of the Wind.");
+                    if (lvl >= 5) sb.AppendLine("Extra Attack + Stunning Strike.");
+                    if (lvl >= 7) sb.AppendLine("Evasion: takes less damage from blasts.");
+                    if (lvl >= 10) sb.AppendLine("Purity of Body: strong resistance to disease and toxins.");
+                    if (lvl >= 14) sb.AppendLine("Diamond Soul: iron-willed against mental strain.");
+                    if (lvl >= 18) sb.AppendLine("Empty Body: can slip out of sight.");
+                    break;
+                case "RH_Rogue":
+                    sb.AppendLine($"Sneak Attack: +{Mathf.RoundToInt(5f * lvl)}% damage to distracted or unaware foes.");
+                    sb.AppendLine("Cunning Action + Expertise: quick escapes, faster learning.");
+                    if (lvl >= 5) sb.AppendLine("Uncanny Dodge: halves a telling blow.");
+                    if (lvl >= 7) sb.AppendLine("Evasion: takes less damage from blasts.");
+                    if (lvl >= 18) sb.AppendLine("Elusive: maddeningly hard to pin down.");
+                    if (lvl >= 20) sb.AppendLine("Stroke of Luck: fortune turns misses into hits.");
+                    break;
             }
             return sb.ToString().TrimEndNewlines();
         }

@@ -36,18 +36,9 @@
     <description>Fury given a body. Hits like a falling tree and barely notices being hit back.</description>
     <vestmentHediff>RH_Vestment_Barbarian</vestmentHediff>
     <levelGrants>
-      <li>
-        <level>1</level>
-        <features>
-          <li>RH_Feature_Rage</li>
-        </features>
-      </li>
-      <li>
-        <level>5</level>
-        <features>
-          <li>RH_Feature_BattleHardened</li>
-        </features>
-      </li>
+      <li><level>1</level><abilities>
+        <li>RH_Ability_Rage</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>
@@ -62,18 +53,17 @@
     <description>A weapon that walks. Speed and discipline in place of steel.</description>
     <vestmentHediff>RH_Vestment_Monk</vestmentHediff>
     <levelGrants>
-      <li>
-        <level>1</level>
-        <features>
-          <li>RH_Feature_UnarmoredSwiftness</li>
-        </features>
-      </li>
-      <li>
-        <level>5</level>
-        <features>
-          <li>RH_Feature_FlurryOfBlows</li>
-        </features>
-      </li>
+      <li><level>2</level><abilities>
+        <li>RH_Ability_FlurryOfBlows</li>
+        <li>RH_Ability_PatientDefense</li>
+        <li>RH_Ability_StepOfTheWind</li>
+      </abilities></li>
+      <li><level>5</level><abilities>
+        <li>RH_Ability_StunningStrike</li>
+      </abilities></li>
+      <li><level>18</level><abilities>
+        <li>RH_Ability_EmptyBody</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Sweeper</job></li>
@@ -87,19 +77,13 @@
     <label>rogue</label>
     <description>Where the armor isn't. Quick hands, quicker exits.</description>
     <vestmentHediff>RH_Vestment_Rogue</vestmentHediff>
+    <bonusFeatLevels>
+      <li>10</li>
+    </bonusFeatLevels>
     <levelGrants>
-      <li>
-        <level>1</level>
-        <features>
-          <li>RH_Feature_CunningEdge</li>
-        </features>
-      </li>
-      <li>
-        <level>5</level>
-        <features>
-          <li>RH_Feature_Evasion</li>
-        </features>
-      </li>
+      <li><level>2</level><abilities>
+        <li>RH_Ability_CunningAction</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Sweeper</job></li>
