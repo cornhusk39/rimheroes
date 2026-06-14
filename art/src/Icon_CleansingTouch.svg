@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="cleanseGlow" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#fffef2"/>
+      <stop offset="0.5" stop-color="#ffe79a"/>
+      <stop offset="1" stop-color="#e0a83a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cleanseHand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9b8"/>
+      <stop offset="1" stop-color="#c98a3c"/>
+    </linearGradient>
+  </defs>
+  <!-- radiant aura -->
+  <circle cx="32" cy="28" r="26" fill="url(#cleanseGlow)"/>
+  <!-- light rays -->
+  <g stroke="#fff4c2" stroke-width="3" stroke-linecap="round" opacity="0.85">
+    <path d="M32 8 V2"/>
+    <path d="M14 14 L10 9"/>
+    <path d="M50 14 L54 9"/>
+    <path d="M8 30 H3"/>
+    <path d="M56 30 H61"/>
+  </g>
+  <!-- dispelled dark wisps -->
+  <path d="M48 40 q6 -3 4 -9" fill="none" stroke="#3a2150" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <path d="M14 42 q-6 -2 -5 -9" fill="none" stroke="#3a2150" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <!-- open palm: palm + thumb + four fingers -->
+  <path d="M22 58 L21 38 C21 33 26 33 26 38 L26 30 C26 25 30 25 30 30
+           L30 28 C30 23 34 23 34 28 L34 30 C34 25 38 25 38 30 L38 36
+           C42 32 46 36 42 41 L40 50 C39 55 36 58 32 58 Z"
+        fill="url(#cleanseHand)" stroke-linejoin="round"/>
+  <!-- palm highlight -->
+  <path d="M27 52 q5 3 9 0" fill="none" stroke="#fff4d6" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+</svg>

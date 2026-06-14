@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="vanishCloak" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f8f5a"/>
+      <stop offset="1" stop-color="#123524"/>
+    </linearGradient>
+    <linearGradient id="vanishSmoke" x1="0" y1="1" x2="0.4" y2="0">
+      <stop offset="0" stop-color="#1c4a2f"/>
+      <stop offset="1" stop-color="#5fbf7d"/>
+    </linearGradient>
+  </defs>
+  <!-- dissolving smoke trail -->
+  <path d="M40 50 C44 42 36 38 42 30 C46 24 38 20 44 13 C48 9 43 6 47 4"
+        fill="none" stroke="url(#vanishSmoke)" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M50 52 C54 46 49 42 53 36 C56 32 51 29 55 24"
+        fill="none" stroke="url(#vanishSmoke)" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  <!-- hooded cloaked figure, solid at bottom fading to dissolved top -->
+  <path d="M22 58 L20 40 C18 26 24 12 32 12 C40 12 46 26 44 40 L42 58 Z"
+        fill="url(#vanishCloak)" stroke-linejoin="round"/>
+  <!-- hood shadow -->
+  <path d="M27 24 C28 18 36 18 37 24 C36 30 28 30 27 24 Z" fill="#0c2418"/>
+  <!-- dissolving leaves -->
+  <path d="M30 18 q5 -4 9 0 q-4 5 -9 0 Z" fill="#6fd089" opacity="0.85"/>
+  <path d="M40 26 q4 -3 7 0 q-3 4 -7 0 Z" fill="#5fbf7d" opacity="0.65"/>
+  <path d="M44 14 q3 -3 6 0 q-3 3 -6 0 Z" fill="#7fe09a" opacity="0.5"/>
+  <!-- highlight edge on cloak -->
+  <path d="M24 54 L23 40 C21 28 26 16 31 14"
+        fill="none" stroke="#7fe09a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+</svg>

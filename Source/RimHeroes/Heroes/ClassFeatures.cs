@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using RimWorld;
 using UnityEngine;
@@ -54,6 +55,15 @@ namespace RimHeroes
             {
                 string s = ClassFeatures.DescribeEffects(Hero);
                 return string.IsNullOrEmpty(s) ? base.TipStringExtra : s;
+            }
+        }
+
+        public override void TickInterval(int delta)
+        {
+            base.TickInterval(delta);
+            if (pawn.IsHashIntervalTick(120, delta))
+            {
+                ClassFeatures.TickAuras(Hero);
             }
         }
     }
@@ -192,6 +202,42 @@ namespace RimHeroes
             return b;
         }
 
+        // ----- Passive ally-auras (Paladin; later Bard/Cleric). Refreshed by the class-hediff tick. -----
+
+        private const int AuraRefreshTicks = 240;
+
+        /// <summary>Called periodically by Hediff_ClassFeatures: refresh this hero's auras on nearby allies.</summary>
+        public static void TickAuras(Hediff_HeroLevels h)
+        {
+            if (h?.pawn == null || !h.pawn.Spawned || h.pawn.Dead || h.pawn.Map == null) return;
+            int lvl = h.level;
+            switch (h.classDef.defName)
+            {
+                case "RH_Paladin":
+                    float r = lvl >= 18 ? 7.9f : 4.9f;
+                    if (lvl >= 6) Emit(h.pawn, RH_DefOf.RH_AuraProtection, r);
+                    if (lvl >= 10) Emit(h.pawn, RH_DefOf.RH_AuraCourage, r);
+                    break;
+            }
+        }
+
+        private static void Emit(Pawn source, HediffDef def, float radius)
+        {
+            if (def == null) return;
+            foreach (var p in GenRadial.RadialDistinctThingsAround(source.Position, source.Map, radius, true).OfType<Pawn>())
+            {
+                if (p.Dead || p.HostileTo(source) || (p.RaceProps?.Humanlike != true && p.RaceProps?.Animal != true)) continue;
+                var existing = p.health.hediffSet.GetFirstHediffOfDef(def);
+                if (existing == null)
+                {
+                    p.health.AddHediff(def);
+                    existing = p.health.hediffSet.GetFirstHediffOfDef(def);
+                }
+                var dis = (existing as HediffWithComps)?.TryGetComp<HediffComp_Disappears>();
+                if (dis != null) dis.ticksToDisappear = AuraRefreshTicks + 60;
+            }
+        }
+
         // ----- Heroic growth: every class gains a little every level (no dead levels) -----
 
         // Universal per-level trickle (the "hit points" of 5e, mapped to RimWorld survivability + utility).
@@ -273,6 +319,16 @@ namespace RimHeroes
                     if (lvl >= 15) off(mbt, -0.10f);                       // Slippery Mind
                     if (lvl >= 18) off(dodge, 8f);                         // Elusive
                     off(Stat("GlobalLearningFactor"), 0.30f);             // Expertise
+                    break;
+
+                case "RH_Ranger":
+                    if (lvl >= 8) off(StatDefOf.MoveSpeed, 0.3f);          // Land's Stride
+                    if (lvl >= 18) off(Stat("ShootingAccuracyPawn"), 3f); // Feral Senses
+                    break;
+
+                case "RH_Paladin":
+                    off(sharp, 0.10f); off(blunt, 0.10f);                  // Fighting Style: Defense
+                    if (lvl >= 3) off(imm, 2.0f);                          // Divine Health
                     break;
             }
         }
@@ -357,6 +413,24 @@ namespace RimHeroes
                     if (lvl >= 7) sb.AppendLine("Evasion: takes less damage from blasts.");
                     if (lvl >= 18) sb.AppendLine("Elusive: maddeningly hard to pin down.");
                     if (lvl >= 20) sb.AppendLine("Stroke of Luck: fortune turns misses into hits.");
+                    break;
+                case "RH_Ranger":
+                    sb.AppendLine(h.favoredEnemy == FavoredEnemy.None
+                        ? "Favored Enemy: not yet chosen."
+                        : $"Favored Enemy ({h.favoredEnemy}): +{Mathf.RoundToInt((lvl >= 20 ? 6f : 4f) * lvl)}% damage to that foe.");
+                    if (lvl >= 5) sb.AppendLine("Extra Attack: +33% weapon damage.");
+                    if (lvl >= 8) sb.AppendLine("Land's Stride: surer footing, quicker travel.");
+                    if (lvl >= 14) sb.AppendLine("Vanish: slip out of sight in a pinch.");
+                    if (lvl >= 18) sb.AppendLine("Feral Senses: nothing escapes your aim.");
+                    break;
+                case "RH_Paladin":
+                    sb.AppendLine("Fighting Style: Defense (armor). Divine Smite empowers your strikes.");
+                    if (lvl >= 3) sb.AppendLine("Divine Health: immune to disease.");
+                    if (lvl >= 5) sb.AppendLine("Extra Attack: +33% melee damage.");
+                    if (lvl >= 6) sb.AppendLine($"Aura of Protection: nearby allies are tougher{(lvl >= 18 ? " (wide aura)" : "")}.");
+                    if (lvl >= 10) sb.AppendLine("Aura of Courage: nearby allies resist fear and mental strain.");
+                    if (lvl >= 11) sb.AppendLine("Improved Divine Smite: +radiant melee damage.");
+                    if (lvl >= 14) sb.AppendLine("Cleansing Touch: strip afflictions from an ally.");
                     break;
             }
             return sb.ToString().TrimEndNewlines();

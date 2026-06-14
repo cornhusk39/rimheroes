@@ -98,6 +98,7 @@
     <description>The wild's warden. Tracks anything, drops it from a treeline away.</description>
     <vestmentHediff>RH_Vestment_Ranger</vestmentHediff>
     <casterProgression>Half</casterProgression>
+    <favoredEnemyPick>true</favoredEnemyPick>
     <levelGrants>
       <li>
         <level>1</level>
@@ -118,6 +119,9 @@
       <li><level>9</level><abilities>
         <li>RH_Spell_LightningArrow</li>
         <li>RH_Spell_ConjureBarrage</li>
+      </abilities></li>
+      <li><level>14</level><abilities>
+        <li>RH_Ability_Vanish</li>
       </abilities></li>
       <li><level>17</level><abilities>
         <li>RH_Spell_Volley</li>
@@ -163,6 +167,9 @@
       </abilities></li>
       <li><level>13</level><abilities>
         <li>RH_Spell_DeathWard</li>
+      </abilities></li>
+      <li><level>14</level><abilities>
+        <li>RH_Ability_CleansingTouch</li>
       </abilities></li>
     </levelGrants>
     <mimUnlocks>

@@ -33,7 +33,7 @@ namespace RimHeroes
             ("QuickSleeper", 0), ("NightOwl", 0), ("TooSmart", 1), ("GreatMemory", 0), ("Neat", 0),
         };
 
-        private enum ChoiceKind { Style, Trait, Feat, BonusFeat }
+        private enum ChoiceKind { Style, Favored, Trait, Feat, BonusFeat }
 
         private class PendingChoice
         {
@@ -80,6 +80,10 @@ namespace RimHeroes
             {
                 consider(1, ChoiceKind.Style, hero.FightingStyle != FighterStyle.None);
             }
+            if (hero.classDef.favoredEnemyPick)
+            {
+                consider(1, ChoiceKind.Favored, hero.favoredEnemy != FavoredEnemy.None);
+            }
             foreach (int lvl in TraitLevels) consider(lvl, ChoiceKind.Trait, hero.IsChoiceResolved(lvl));
             foreach (int lvl in FeatLevels) consider(lvl, ChoiceKind.Feat, hero.IsChoiceResolved(lvl));
             if (hero.classDef.bonusFeatLevels != null)
@@ -91,9 +95,9 @@ namespace RimHeroes
 
         private static void MarkResolved(Hediff_HeroLevels hero, PendingChoice c)
         {
+            // Style/Favored resolution is detected by the stored field being set (by the option's apply).
             if (c.kind == ChoiceKind.BonusFeat) hero.MarkBonusFeatResolved(c.level);
-            else if (c.kind == ChoiceKind.Style) hero.SetFightingStyle(hero.FightingStyle); // style set by the option itself
-            else hero.MarkChoiceResolved(c.level);
+            else if (c.kind == ChoiceKind.Trait || c.kind == ChoiceKind.Feat) hero.MarkChoiceResolved(c.level);
         }
 
         private static List<HeroChoiceOption> BuildOptions(Hediff_HeroLevels hero, ChoiceKind kind)
@@ -101,22 +105,51 @@ namespace RimHeroes
             switch (kind)
             {
                 case ChoiceKind.Style: return BuildStyleOptions(hero);
+                case ChoiceKind.Favored: return BuildFavoredOptions(hero);
                 case ChoiceKind.Trait: return BuildTraitOptions(hero);
                 default: return BuildFeatOptions(hero); // Feat + BonusFeat
             }
         }
 
-        private static string TitleFor(ChoiceKind kind) =>
-            kind == ChoiceKind.Style ? "Choose a fighting style" : kind == ChoiceKind.Trait ? "Choose a trait" : "Choose a feat";
+        private static string TitleFor(ChoiceKind kind)
+        {
+            switch (kind)
+            {
+                case ChoiceKind.Style: return "Choose a fighting style";
+                case ChoiceKind.Favored: return "Choose your favored prey";
+                case ChoiceKind.Trait: return "Choose a trait";
+                default: return "Choose a feat";
+            }
+        }
 
         private static string SubtitleFor(Hediff_HeroLevels hero, ChoiceKind kind)
         {
             switch (kind)
             {
                 case ChoiceKind.Style: return $"{hero.pawn.LabelShortCap} settles into a way of fighting.";
+                case ChoiceKind.Favored: return $"{hero.pawn.LabelShortCap} marks the kind of foe they hunt best.";
                 case ChoiceKind.Trait: return $"{hero.pawn.LabelShortCap} has grown — pick one trait to keep.";
                 default: return $"{hero.pawn.LabelShortCap} has earned a feat — pick one.";
             }
+        }
+
+        private static readonly (FavoredEnemy foe, string label, string desc)[] FavoredPool =
+        {
+            (FavoredEnemy.Beasts, "Beasts", "You hunt wild animals best: bonus damage against animals."),
+            (FavoredEnemy.Mechanoids, "Mechanoids", "You know where machines break: bonus damage against mechanoids."),
+            (FavoredEnemy.Humanlikes, "Raiders", "You read people in a fight: bonus damage against humanlikes."),
+            (FavoredEnemy.Insects, "Insects", "You cull the swarms: bonus damage against insectoids."),
+        };
+
+        private static List<HeroChoiceOption> BuildFavoredOptions(Hediff_HeroLevels hero)
+        {
+            return FavoredPool.Select(f => new HeroChoiceOption
+            {
+                label = f.label,
+                description = f.desc,
+                icon = null,
+                apply = () => hero.SetFavoredEnemy(f.foe)
+            }).ToList();
         }
 
         private static readonly (FighterStyle style, string label, string desc)[] StylePool =

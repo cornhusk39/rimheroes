@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Aura buffs continuously refreshed on nearby allies by Hediff_ClassFeatures.TickAuras while
+       in range; they fade a few seconds after leaving the aura. -->
+
+  <HediffDef>
+    <defName>RH_AuraProtection</defName>
+    <label>aura of protection</label>
+    <description>Warded by a paladin's oath: tougher and harder to wound.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(1.0, 0.9, 0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <PainShockThreshold>0.1</PainShockThreshold>
+          <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>300</disappearsAfterTicks><showRemainingTime>false</showRemainingTime></li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>RH_AuraCourage</defName>
+    <label>aura of courage</label>
+    <description>Steadied by a paladin's presence: fear and despair lose their grip.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(1.0, 0.9, 0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>300</disappearsAfterTicks><showRemainingTime>false</showRemainingTime></li>
+    </comps>
+  </HediffDef>
+
+  <!-- Ranger Vanish: brief evasion (approximation of stealth). -->
+  <HediffDef>
+    <defName>RH_Vanished</defName>
+    <label>vanished</label>
+    <description>Melted into cover and shadow - very hard to spot or hit.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.55, 0.7, 0.55)</defaultLabelColor>
+    <stages>
+      <li><statOffsets><MeleeDodgeChance>40</MeleeDodgeChance><MoveSpeed>0.8</MoveSpeed></statOffsets></li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>500</disappearsAfterTicks><showRemainingTime>true</showRemainingTime></li>
+    </comps>
+  </HediffDef>
+
+</Defs>

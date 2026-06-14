@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Ranger / Paladin non-spell active abilities (cooldown-based martial abilities). -->
+
+  <!-- Ranger Vanish (L14): brief stealth/evasion. -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_Vanish</defName>
+    <label>vanish</label>
+    <description>Slip into cover and shadow, becoming very hard to see or strike for a short time.</description>
+    <iconPath>UI/RimHeroes/Vanish</iconPath>
+    <cooldownTicksRange>15000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0.2</warmupTime>
+      <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>false</canTargetPawns><canTargetLocations>false</canTargetLocations><canTargetBuildings>false</canTargetBuildings></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_Vanished</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Paladin Cleansing Touch (L14): strip afflictions from an ally. -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_CleansingTouch</defName>
+    <label>cleansing touch</label>
+    <description>Lay a hand on an ally and draw out disease, poison, and lingering curses.</description>
+    <iconPath>UI/RimHeroes/CleansingTouch</iconPath>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>3.9</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetSelf>true</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityCleanse">
+        <removeBadDiseases>true</removeBadDiseases>
+        <maxToRemove>4</maxToRemove>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>
