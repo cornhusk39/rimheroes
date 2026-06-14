@@ -44,7 +44,6 @@
       <foodType>CarnivoreAnimal</foodType>
       <trainability>None</trainability>
       <petness>0</petness>
-      <wildness>0.95</wildness>
       <lifeExpectancy>50</lifeExpectancy>
       <lifeStageAges>
         <li><def>AnimalAdult</def><minAge>0</minAge></li>
