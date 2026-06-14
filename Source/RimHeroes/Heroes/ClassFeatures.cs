@@ -105,24 +105,82 @@ namespace RimHeroes
             return t == 0 ? 0 : t + 1; // +2 / +3 / +4
         }
 
-        // ----- Dynamic stat stage (Indomitable toughness) -----
+        // ----- Heroic growth: every class gains a little every level (no dead levels) -----
+
+        // Universal per-level trickle (the "hit points" of 5e, mapped to RimWorld survivability + utility).
+        public const float PainPerLevel = 0.01f;        // +pain-shock threshold (toughness)
+        public const float ResistPerLevel = 0.005f;     // incoming-damage reduction
+        public const float MovePerLevel = 0.01f;        // +1% move speed / level
+        public const float WorkPerLevel = 0.02f;        // +2% work speed / level
+        public const float SpellPowerPerLevel = 0.005f; // casters: +spell power / level
+
+        private static StatDef Stat(string defName) => DefDatabase<StatDef>.GetNamedSilentFail(defName);
+
+        // ----- Dynamic stat stage (heroic growth + Fighter's Indomitable toughness) -----
 
         public static HediffStage BuildStage(Hediff_HeroLevels h)
         {
             var stage = new HediffStage { statOffsets = new List<StatModifier>(), statFactors = new List<StatModifier>() };
+            if (h?.classDef == null) return stage;
+            int lvl = h.level;
+
+            // Universal heroic growth, every level.
+            stage.statOffsets.Add(new StatModifier { stat = StatDefOf.PainShockThreshold, value = PainPerLevel * lvl });
+            stage.statFactors.Add(new StatModifier { stat = StatDefOf.MoveSpeed, value = 1f + MovePerLevel * lvl });
+            stage.statFactors.Add(new StatModifier { stat = StatDefOf.WorkSpeedGlobal, value = 1f + WorkPerLevel * lvl });
+            float incomingFactor = 1f - ResistPerLevel * lvl;
+
+            // Fighter Indomitable toughness stacks on the baseline.
             if (IsFighter(h))
             {
-                int t = IndomitableTier(h.level);
+                int t = IndomitableTier(lvl);
                 if (t > 0)
                 {
                     stage.statOffsets.Add(new StatModifier { stat = StatDefOf.PainShockThreshold, value = 0.05f + 0.10f * t });
-                    var mbt = DefDatabase<StatDef>.GetNamedSilentFail("MentalBreakThreshold");
+                    var mbt = Stat("MentalBreakThreshold");
                     if (mbt != null) stage.statOffsets.Add(new StatModifier { stat = mbt, value = -0.05f - 0.05f * t });
-                    var idf = DefDatabase<StatDef>.GetNamedSilentFail("IncomingDamageFactor");
-                    if (idf != null) stage.statFactors.Add(new StatModifier { stat = idf, value = 1f - 0.05f * t });
+                    incomingFactor *= 1f - 0.05f * t;
                 }
             }
+
+            var idf = Stat("IncomingDamageFactor");
+            if (idf != null) stage.statFactors.Add(new StatModifier { stat = idf, value = incomingFactor });
+
+            AddFlavorTrickle(h, lvl, stage);
             return stage;
+        }
+
+        /// <summary>A small class-flavored per-level stat trickle on top of the universal growth.</summary>
+        private static void AddFlavorTrickle(Hediff_HeroLevels h, int lvl, HediffStage stage)
+        {
+            void off(StatDef s, float v) { if (s != null) stage.statOffsets.Add(new StatModifier { stat = s, value = v }); }
+            switch (h.classDef.defName)
+            {
+                case "RH_Fighter":
+                case "RH_Barbarian":
+                case "RH_Paladin":
+                    off(StatDefOf.MeleeHitChance, 0.3f * lvl);
+                    break;
+                case "RH_Monk":
+                    off(StatDefOf.MeleeHitChance, 0.2f * lvl);
+                    off(Stat("MeleeDodgeChance"), 0.3f * lvl);
+                    break;
+                case "RH_Rogue":
+                    off(Stat("MeleeDodgeChance"), 0.4f * lvl);
+                    off(StatDefOf.MeleeHitChance, 0.2f * lvl);
+                    break;
+                case "RH_Ranger":
+                    off(Stat("ShootingAccuracyPawn"), 0.3f * lvl);
+                    break;
+                case "RH_Cleric":
+                case "RH_Druid":
+                case "RH_Wizard":
+                case "RH_Sorcerer":
+                case "RH_Bard":
+                case "RH_Warlock":
+                    off(RH_DefOf.RH_SpellPower, SpellPowerPerLevel * lvl);
+                    break;
+            }
         }
 
         // ----- Tooltip -----
@@ -130,25 +188,48 @@ namespace RimHeroes
         public static string DescribeEffects(Hediff_HeroLevels h)
         {
             if (h?.classDef == null) return null;
+            int lvl = h.level;
             var sb = new StringBuilder();
+            sb.AppendLine(GrowthLine(h, lvl));
             if (IsFighter(h))
             {
                 sb.AppendLine(StyleLine(h.FightingStyle));
                 sb.AppendLine("Second Wind: a self-mending burst on a cooldown.");
-                if (h.level >= 2)
-                    sb.AppendLine("Action Surge: a short surge of speed and striking power" + (h.level >= 17 ? " (improved)." : "."));
-                int ea = ExtraAttackTier(h.level);
+                if (lvl >= 2)
+                    sb.AppendLine("Action Surge: a short surge of speed and striking power" + (lvl >= 17 ? " (improved)." : "."));
+                int ea = ExtraAttackTier(lvl);
                 if (ea > 0)
                     sb.AppendLine($"Extra Attack {Roman(ea)}: +{Mathf.RoundToInt(33f * ea)}% melee damage.");
-                int ind = IndomitableTier(h.level);
+                int ind = IndomitableTier(lvl);
                 if (ind > 0)
                     sb.AppendLine($"Indomitable {Roman(ind)}: tougher, harder to break, and +{ind + 1} to death saves.");
             }
-            else
-            {
-                sb.AppendLine(h.classDef.description);
-            }
             return sb.ToString().TrimEndNewlines();
+        }
+
+        /// <summary>The universal "every level matters" line shown on every hero's class hediff.</summary>
+        private static string GrowthLine(Hediff_HeroLevels h, int lvl)
+        {
+            string s = $"Heroic growth (level {lvl}): +{Mathf.RoundToInt(ResistPerLevel * 100f * lvl)}% damage resistance, " +
+                       $"+{Mathf.RoundToInt(MovePerLevel * 100f * lvl)}% move speed, +{Mathf.RoundToInt(WorkPerLevel * 100f * lvl)}% work speed";
+            switch (h.classDef.defName)
+            {
+                case "RH_Cleric":
+                case "RH_Druid":
+                case "RH_Wizard":
+                case "RH_Sorcerer":
+                case "RH_Bard":
+                case "RH_Warlock":
+                    s += $", +{Mathf.RoundToInt(SpellPowerPerLevel * 100f * lvl)}% spell power";
+                    break;
+                case "RH_Ranger":
+                    s += $", +{(0.3f * lvl):0.#} shooting accuracy";
+                    break;
+                default:
+                    s += $", +{(0.3f * lvl):0.#} melee";
+                    break;
+            }
+            return s + ".";
         }
 
         private static string StyleLine(FighterStyle s)

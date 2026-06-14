@@ -48,7 +48,9 @@ namespace RimHeroes
                             $"armorPen+{ClassFeatures.MeleeArmorPenOffset(hero):F2} extraAtkT{ClassFeatures.ExtraAttackTier(lvl)} " +
                             $"indomT{ClassFeatures.IndomitableTier(lvl)} deathSave+{hero.DeathSaveBonus} " +
                             $"secondWind={hasSecondWind} actionSurge={hasActionSurge}");
-                Log.Message($"[RimHeroes.FighterDemo]   tooltip: " + (cf?.TipStringExtra ?? "").Replace("\n", " | "));
+                Log.Message($"[RimHeroes.FighterDemo]   tooltip: " + (cf?.TipStringExtra ?? "").Replace("\r", "").Replace("\n", " | "));
+                Log.Message($"[RimHeroes.FighterDemo]   stats: move={hero.pawn.GetStatValue(StatDefOf.MoveSpeed):F2} " +
+                            $"workx{hero.pawn.GetStatValue(StatDefOf.WorkSpeedGlobal):F2} painThresh={hero.pawn.GetStatValue(StatDefOf.PainShockThreshold):F2}");
 
                 if (cf == null || label != "Fighter") pass = false;
                 if (hero.FightingStyle == FighterStyle.None) pass = false;
