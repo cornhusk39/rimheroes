@@ -25,6 +25,29 @@
     </comps>
   </HediffDef>
 
+  <!-- Cleric Turn Undead, weaker version applied to living (non-undead) foes. -->
+  <HediffDef>
+    <defName>RH_TurnedWeak</defName>
+    <label>shaken</label>
+    <description>Unsettled by a wave of holy power - a little slowed and rattled.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(1.0, 0.95, 0.7)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>-0.2</MoveSpeed>
+          <MeleeHitChance>-2</MeleeHitChance>
+          <ShootingAccuracyPawn>-2</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>300</disappearsAfterTicks><showRemainingTime>true</showRemainingTime></li>
+    </comps>
+  </HediffDef>
+
   <!-- Bard Bardic Inspiration: an emboldened ally. -->
   <HediffDef>
     <defName>RH_BardicInspiration</defName>

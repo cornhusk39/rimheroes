@@ -152,6 +152,15 @@ namespace RimHeroes
             return 1f;
         }
 
+        /// <summary>Ranged-damage multiplier (Ranger Extra Attack + Favored Enemy / Foe Slayer). Applied by Patch_RangedDamage.</summary>
+        public static float RangedDamageFactor(Hediff_HeroLevels h, Thing target)
+        {
+            if (h?.classDef?.defName != "RH_Ranger") return 1f;
+            float f = 1f + 0.33f * OneAt(h.level, 5); // Extra Attack (ranged side)
+            if (IsFavoredEnemy(h, target)) f *= 1f + (h.level >= 20 ? 0.06f : 0.04f) * h.level;
+            return f;
+        }
+
         /// <summary>5e "advantage": the target is downed/asleep or focused on someone other than the rogue.</summary>
         public static bool IsFlanked(Pawn attacker, Thing target)
         {

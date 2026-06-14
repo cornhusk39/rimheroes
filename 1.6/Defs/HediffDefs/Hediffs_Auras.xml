@@ -46,20 +46,25 @@
     </comps>
   </HediffDef>
 
-  <!-- Ranger Vanish: brief evasion (approximation of stealth). -->
+  <!-- Ranger Vanish: true invisibility (enemies lose track) for a short, balanced window. -->
   <HediffDef>
     <defName>RH_Vanished</defName>
     <label>vanished</label>
-    <description>Melted into cover and shadow - very hard to spot or hit.</description>
+    <description>Melted into cover and shadow - unseen by enemies for a short time.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
     <scenarioCanAdd>false</scenarioCanAdd>
     <defaultLabelColor>(0.55, 0.7, 0.55)</defaultLabelColor>
     <stages>
-      <li><statOffsets><MeleeDodgeChance>40</MeleeDodgeChance><MoveSpeed>0.8</MoveSpeed></statOffsets></li>
+      <li><statOffsets><MoveSpeed>0.8</MoveSpeed></statOffsets></li>
     </stages>
     <comps>
-      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>500</disappearsAfterTicks><showRemainingTime>true</showRemainingTime></li>
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+      </li>
+      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>600</disappearsAfterTicks><showRemainingTime>true</showRemainingTime></li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
     </comps>
   </HediffDef>
 

@@ -20,10 +20,10 @@
       <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
-        <hediff>RH_Turned</hediff>
+      <li Class="RimHeroes.CompProperties_AbilityTurnUndead">
+        <undeadHediff>RH_Turned</undeadHediff>
+        <livingHediff>RH_TurnedWeak</livingHediff>
         <radius>5.9</radius>
-        <targets>Enemies</targets>
       </li>
     </comps>
   </AbilityDef>

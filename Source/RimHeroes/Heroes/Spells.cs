@@ -411,6 +411,42 @@ namespace RimHeroes
         }
     }
 
+    /// <summary>Turn Undead: a holy rebuke that fully fears the undead and lightly shakes everyone else.</summary>
+    public class CompProperties_AbilityTurnUndead : CompProperties_AbilityEffect
+    {
+        public HediffDef undeadHediff;     // strong fear, for the undead
+        public HediffDef livingHediff;     // weak fear, for everything else
+        public float radius = 5.9f;
+
+        public CompProperties_AbilityTurnUndead() => compClass = typeof(CompAbilityEffect_TurnUndead);
+    }
+
+    public class CompAbilityEffect_TurnUndead : CompAbilityEffect
+    {
+        public new CompProperties_AbilityTurnUndead Props => (CompProperties_AbilityTurnUndead)props;
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            base.Apply(target, dest);
+            var caster = parent.pawn;
+            var map = caster?.MapHeld;
+            if (map == null) return;
+            foreach (var p in GenRadial.RadialDistinctThingsAround(target.Cell, map, Props.radius, true)
+                         .OfType<Pawn>().ToList())
+            {
+                if (p.Dead || !p.HostileTo(caster)) continue;
+                var def = IsUndead(p) ? Props.undeadHediff : Props.livingHediff;
+                if (def != null && !p.health.hediffSet.HasHediff(def)) p.health.AddHediff(def);
+            }
+        }
+
+        private static bool IsUndead(Pawn p)
+        {
+            if (p.IsMutant) return true; // shamblers, ghouls, and other Anomaly undead
+            return p.RaceProps != null && p.RaceProps.IsAnomalyEntity;
+        }
+    }
+
     /// <summary>Centered explosion (Fireball).</summary>
     public class CompProperties_AbilityExplosion : CompProperties_AbilityEffect
     {

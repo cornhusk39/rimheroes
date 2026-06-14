@@ -78,20 +78,25 @@
     </comps>
   </HediffDef>
 
-  <!-- Monk Empty Body: hard to see and harder to hit (approximation of invisibility). -->
+  <!-- Monk Empty Body: true invisibility (enemies can't target) for a short, balanced window. -->
   <HediffDef>
     <defName>RH_EmptyBody</defName>
     <label>empty body</label>
-    <description>Half-faded from sight - blows pass through where the body should be.</description>
+    <description>Faded from the world - unseen by enemies and quick on your feet. Lasts only moments.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
     <scenarioCanAdd>false</scenarioCanAdd>
     <defaultLabelColor>(0.8, 0.75, 1.0)</defaultLabelColor>
     <stages>
-      <li><statOffsets><MeleeDodgeChance>40</MeleeDodgeChance><MoveSpeed>1.0</MoveSpeed></statOffsets></li>
+      <li><statOffsets><MoveSpeed>1.0</MoveSpeed></statOffsets></li>
     </stages>
     <comps>
-      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>600</disappearsAfterTicks><showRemainingTime>true</showRemainingTime></li>
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+      </li>
+      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>450</disappearsAfterTicks><showRemainingTime>true</showRemainingTime></li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
     </comps>
   </HediffDef>
 
