@@ -72,6 +72,20 @@ namespace RimHeroes
                 if (cf == null || cf.Label != cls.Substring("RH_".Length)) pass = false;
             }
 
+            // Warlock Pact of the Chain: force Chain and summon an imp familiar.
+            CellFinder.TryFindRandomCellNear(map.Center, map, 12, c => c.Standable(map), out var wcell);
+            var warlock = SpawnClass(map, wcell, "RH_Warlock", 5);
+            warlock.SetPactBoon(PactBoon.Chain);
+            var summonDef = DefDatabase<AbilityDef>.GetNamedSilentFail("RH_Ability_SummonImp");
+            warlock.pawn.abilities?.GainAbility(summonDef);
+            warlock.pawn.abilities?.GetAbility(summonDef)?.CompOfType<CompAbilityEffect_Summon>()
+                ?.Apply(new LocalTargetInfo(warlock.pawn), default);
+            int imps = map.mapPawns.AllPawnsSpawned.Count(p => p.kindDef.defName == "RH_ImpKind");
+            int impVerbs = map.mapPawns.AllPawnsSpawned.Where(p => p.kindDef.defName == "RH_ImpKind")
+                .Sum(p => p.verbTracker?.AllVerbs?.Count(v => v is Verb_Shoot) ?? 0);
+            Log.Message($"[RimHeroes.FighterDemo] WARLOCK Pact-of-Chain: imps spawned={imps} rangedFireVerbs={impVerbs}");
+            if (imps < 1 || impVerbs < 1) pass = false;
+
             Log.Message($"[RimHeroes.FighterDemo] RESULT: verdict={(pass ? "PASS" : "FAIL")}");
         }
 

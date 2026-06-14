@@ -447,6 +447,42 @@ namespace RimHeroes
         }
     }
 
+    /// <summary>Summons a familiar pawn of the caster's faction beside the caster (Warlock Pact of the Chain imp).</summary>
+    public class CompProperties_AbilitySummon : CompProperties_AbilityEffect
+    {
+        public PawnKindDef pawnKind;
+
+        public CompProperties_AbilitySummon() => compClass = typeof(CompAbilityEffect_Summon);
+    }
+
+    public class CompAbilityEffect_Summon : CompAbilityEffect
+    {
+        public new CompProperties_AbilitySummon Props => (CompProperties_AbilitySummon)props;
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            base.Apply(target, dest);
+            var caster = parent.pawn;
+            var map = caster?.MapHeld;
+            if (map == null || Props.pawnKind == null) return;
+
+            // One familiar at a time: dismiss any previous one of this kind in the caster's faction.
+            foreach (var old in map.mapPawns.SpawnedPawnsInFaction(caster.Faction)
+                         .Where(p => p.kindDef == Props.pawnKind).ToList())
+            {
+                old.Destroy();
+            }
+
+            var familiar = PawnGenerator.GeneratePawn(new PawnGenerationRequest(Props.pawnKind, caster.Faction));
+            var cell = CellFinder.RandomClosewalkCellNear(caster.Position, map, 3);
+            GenSpawn.Spawn(familiar, cell, map);
+            if (familiar.connections == null) familiar.connections = new Pawn_ConnectionsTracker(familiar);
+            familiar.connections.ConnectTo(caster);
+            Messages.Message(caster.LabelShortCap + " summons a fiendish familiar.",
+                familiar, MessageTypeDefOf.PositiveEvent, historical: false);
+        }
+    }
+
     /// <summary>Turn Undead: a holy rebuke that fully fears the undead and lightly shakes everyone else.</summary>
     public class CompProperties_AbilityTurnUndead : CompProperties_AbilityEffect
     {

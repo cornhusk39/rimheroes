@@ -178,6 +178,7 @@ namespace RimHeroes
         {
             (PactBoon.Blade, "Pact of the Blade", "Your patron's power flows into your strikes: a large bonus to melee damage."),
             (PactBoon.Tome, "Pact of the Tome", "Forbidden knowledge deepens your power: a bonus to spell power."),
+            (PactBoon.Chain, "Pact of the Chain", "Bind a fiendish familiar - a fire-flinging imp - to your service (Summon Imp)."),
         };
 
         private static List<HeroChoiceOption> BuildPactOptions(Hediff_HeroLevels hero)
@@ -187,7 +188,15 @@ namespace RimHeroes
                 label = b.label,
                 description = b.desc,
                 icon = null,
-                apply = () => hero.SetPactBoon(b.boon)
+                apply = () =>
+                {
+                    hero.SetPactBoon(b.boon);
+                    if (b.boon == PactBoon.Chain)
+                    {
+                        var summon = DefDatabase<AbilityDef>.GetNamedSilentFail("RH_Ability_SummonImp");
+                        if (summon != null) hero.pawn.abilities?.GainAbility(summon);
+                    }
+                }
             }).ToList();
         }
 

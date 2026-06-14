@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Warlock Pact of the Chain familiar: a small fiend that flings fire. Summoned by the warlock,
+       player faction. Placeholder art reuses a vanilla small-animal texture until imp art is made. -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>RH_Imp</defName>
+    <label>imp</label>
+    <description>A small, spiteful fiend bound to a warlock's service. It hurls bolts of fire and cackles while it does.</description>
+    <statBases>
+      <MoveSpeed>5.0</MoveSpeed>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>80</ComfyTemperatureMax>
+      <MarketValue>250</MarketValue>
+      <Wildness>0.95</Wildness>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>RH_Projectile_FireBolt</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>22.9</range>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Psycast_Skip_Pulse</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>claw</label>
+        <capacities><li>Scratch</li></capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+      <body>QuadrupedAnimalWithPaws</body>
+      <baseBodySize>0.4</baseBodySize>
+      <baseHungerRate>0.2</baseHungerRate>
+      <baseHealthScale>0.6</baseHealthScale>
+      <foodType>CarnivoreAnimal</foodType>
+      <trainability>None</trainability>
+      <petness>0</petness>
+      <wildness>0.95</wildness>
+      <lifeExpectancy>50</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalAdult</def><minAge>0</minAge></li>
+      </lifeStageAges>
+      <soundCallIntervalRange>2000~4000</soundCallIntervalRange>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>RH_ImpKind</defName>
+    <label>imp</label>
+    <race>RH_Imp</race>
+    <combatPower>90</combatPower>
+    <canArriveManhunter>false</canArriveManhunter>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
+          <drawSize>0.9</drawSize>
+          <color>(0.7, 0.25, 0.2)</color>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

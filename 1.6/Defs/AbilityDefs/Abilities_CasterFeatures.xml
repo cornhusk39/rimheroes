@@ -105,6 +105,28 @@
     </comps>
   </AbilityDef>
 
+  <!-- Warlock Pact of the Chain: Summon Imp familiar -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_SummonImp</defName>
+    <label>summon imp</label>
+    <description>Call your pact familiar to your side - a small fiend that flings bolts of fire at your enemies. If your imp is destroyed, you can summon a new one.</description>
+    <iconPath>UI/RimHeroes/Hex</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>false</canTargetPawns><canTargetLocations>false</canTargetLocations><canTargetBuildings>false</canTargetBuildings></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilitySummon">
+        <pawnKind>RH_ImpKind</pawnKind>
+      </li>
+    </comps>
+  </AbilityDef>
+
   <!-- Bard: Bardic Inspiration -->
   <AbilityDef ParentName="RH_MartialBase">
     <defName>RH_Ability_BardicInspiration</defName>

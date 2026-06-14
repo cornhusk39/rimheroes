@@ -13,8 +13,8 @@ namespace RimHeroes
     /// <summary>Ranger's level-1 Favored Enemy pick.</summary>
     public enum FavoredEnemy { None, Beasts, Mechanoids, Humanlikes, Insects }
 
-    /// <summary>Warlock's level-3 Pact Boon pick. (Chain familiar pending a design decision.)</summary>
-    public enum PactBoon { None, Blade, Tome }
+    /// <summary>Warlock's level-3 Pact Boon pick.</summary>
+    public enum PactBoon { None, Blade, Tome, Chain }
 
     /// <summary>
     /// A single hediff per hero, labeled with the class name (Fighter, Wizard, ...), whose tooltip
@@ -494,9 +494,13 @@ namespace RimHeroes
                     if (lvl >= 10) sb.AppendLine("Magical Secrets: a few spells borrowed from other traditions.");
                     break;
                 case "RH_Warlock":
-                    sb.AppendLine(h.pactBoon == PactBoon.None
-                        ? "Pact Boon: not yet chosen."
-                        : (h.pactBoon == PactBoon.Blade ? "Pact of the Blade: your strikes hit far harder." : "Pact of the Tome: deeper arcane power."));
+                    switch (h.pactBoon)
+                    {
+                        case PactBoon.Blade: sb.AppendLine("Pact of the Blade: your strikes hit far harder."); break;
+                        case PactBoon.Tome: sb.AppendLine("Pact of the Tome: deeper arcane power."); break;
+                        case PactBoon.Chain: sb.AppendLine("Pact of the Chain: a fire-flinging imp familiar (Summon Imp)."); break;
+                        default: sb.AppendLine("Pact Boon: not yet chosen."); break;
+                    }
                     sb.AppendLine("Eldritch Invocations: choose otherworldly gifts as feats as you level.");
                     break;
             }
