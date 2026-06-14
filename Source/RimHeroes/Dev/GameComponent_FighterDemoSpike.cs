@@ -59,7 +59,8 @@ namespace RimHeroes
                 if (lvl >= 5 && ClassFeatures.MeleeDamageFactor(hero) <= 1f) pass = false;
             }
             // Dump the other martials at L20 to eyeball their class hediff + abilities.
-            foreach (var cls in new[] { "RH_Barbarian", "RH_Monk", "RH_Rogue", "RH_Ranger", "RH_Paladin" })
+            foreach (var cls in new[] { "RH_Barbarian", "RH_Monk", "RH_Rogue", "RH_Ranger", "RH_Paladin",
+                                        "RH_Cleric", "RH_Druid", "RH_Sorcerer", "RH_Bard", "RH_Warlock", "RH_Wizard" })
             {
                 CellFinder.TryFindRandomCellNear(map.Center, map, 12, c => c.Standable(map), out var cell);
                 var h = SpawnClass(map, cell, cls, 20);

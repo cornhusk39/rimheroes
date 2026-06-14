@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Class-restricted feats: Sorcerer Metamagic and Warlock Eldritch Invocations. Offered in the
+       feat picker (alongside universal feats) at those classes' bonus-feat levels and ASI levels. -->
+
+  <!-- Sorcerer Metamagic -->
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_Empowered</defName>
+    <label>Empowered Spell</label>
+    <description>Pour raw force into your magic: a solid boost to spell power.</description>
+    <appliedHediff>RH_FeatHediff_Empowered</appliedHediff>
+    <classes><li>RH_Sorcerer</li></classes>
+  </RimHeroes.FeatDef>
+
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_CarefulMagic</defName>
+    <label>Careful Spell</label>
+    <description>Shape your magic safely: you take less damage in the chaos of battle.</description>
+    <appliedHediff>RH_FeatHediff_CarefulMagic</appliedHediff>
+    <classes><li>RH_Sorcerer</li></classes>
+  </RimHeroes.FeatDef>
+
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_SubtleMagic</defName>
+    <label>Subtle Spell</label>
+    <description>Cast without tell: composed under pressure and more persuasive.</description>
+    <appliedHediff>RH_FeatHediff_SubtleMagic</appliedHediff>
+    <classes><li>RH_Sorcerer</li></classes>
+  </RimHeroes.FeatDef>
+
+  <!-- Warlock Eldritch Invocations -->
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_AgonizingBlast</defName>
+    <label>Agonizing Blast</label>
+    <description>Your eldritch power lands harder: a boost to spell power.</description>
+    <appliedHediff>RH_FeatHediff_AgonizingBlast</appliedHediff>
+    <classes><li>RH_Warlock</li></classes>
+  </RimHeroes.FeatDef>
+
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_DevilsSight</defName>
+    <label>Devil's Sight</label>
+    <description>See through darkness: better ranged accuracy.</description>
+    <appliedHediff>RH_FeatHediff_DevilsSight</appliedHediff>
+    <classes><li>RH_Warlock</li></classes>
+  </RimHeroes.FeatDef>
+
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_ArmorOfShadows</defName>
+    <label>Armor of Shadows</label>
+    <description>A standing ward of gloom: better armour.</description>
+    <appliedHediff>RH_FeatHediff_ArmorOfShadows</appliedHediff>
+    <classes><li>RH_Warlock</li></classes>
+  </RimHeroes.FeatDef>
+
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_FiendishResilience</defName>
+    <label>Fiendish Resilience</label>
+    <description>Your patron's vitality: harder to hurt and harder to drop.</description>
+    <appliedHediff>RH_FeatHediff_FiendishResilience</appliedHediff>
+    <classes><li>RH_Warlock</li></classes>
+  </RimHeroes.FeatDef>
+
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_BeguilingInfluence</defName>
+    <label>Beguiling Influence</label>
+    <description>Otherworldly charm: people bend to your words.</description>
+    <appliedHediff>RH_FeatHediff_BeguilingInfluence</appliedHediff>
+    <classes><li>RH_Warlock</li></classes>
+  </RimHeroes.FeatDef>
+
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_EldritchMind</defName>
+    <label>Eldritch Mind</label>
+    <description>An anchored mind: very hard to break.</description>
+    <appliedHediff>RH_FeatHediff_EldritchMind</appliedHediff>
+    <classes><li>RH_Warlock</li></classes>
+  </RimHeroes.FeatDef>
+
+</Defs>

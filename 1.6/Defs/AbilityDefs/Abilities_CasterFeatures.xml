@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Cleric Channel Divinity + Divine Intervention and Bard Bardic Inspiration. These are class
+       FEATURE abilities (cooldown-based, on RH_MartialBase) - not slot-cast spells. -->
+
+  <!-- Cleric: Turn Undead -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_TurnUndead</defName>
+    <label>turn undead</label>
+    <description>Channel divine power to fill nearby foes with holy dread, slowing and shaking them.</description>
+    <iconPath>UI/RimHeroes/TurnUndead</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>12.9</range>
+      <warmupTime>0.8</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityZoneHediff">
+        <hediff>RH_Turned</hediff>
+        <radius>5.9</radius>
+        <targets>Enemies</targets>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Cleric: Channel Divinity radiant healing burst -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_DivineRadiance</defName>
+    <label>divine radiance</label>
+    <description>Channel divine power into a burst of healing light, mending allies around a point.</description>
+    <iconPath>UI/RimHeroes/DivineRadiance</iconPath>
+    <cooldownTicksRange>1500</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>19.9</range>
+      <warmupTime>1</warmupTime>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>true</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityHeal">
+        <amount>16</amount>
+        <radius>4.9</radius>
+        <onlyAllies>true</onlyAllies>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Cleric: Divine Intervention (L10) - a miracle of mass healing + cleansing -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_DivineIntervention</defName>
+    <label>divine intervention</label>
+    <description>Beseech your god for aid: a wave of healing washes over your allies, and the one you touch is cleansed of affliction.</description>
+    <iconPath>UI/RimHeroes/DivineIntervention</iconPath>
+    <cooldownTicksRange>120000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>2</warmupTime>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetSelf>true</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityHeal">
+        <amount>45</amount>
+        <radius>6.9</radius>
+        <onlyAllies>true</onlyAllies>
+      </li>
+      <li Class="RimHeroes.CompProperties_AbilityCleanse">
+        <removeBadDiseases>true</removeBadDiseases>
+        <maxToRemove>5</maxToRemove>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Bard: Bardic Inspiration -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_BardicInspiration</defName>
+    <label>bardic inspiration</label>
+    <description>Bolster an ally with a rousing word or song - steadier and more capable for a time.</description>
+    <iconPath>UI/RimHeroes/BardicInspiration</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetSelf>true</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_BardicInspiration</hediffDef>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

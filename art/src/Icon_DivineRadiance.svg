@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="radiantCore" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fffef6"/>
+      <stop offset="0.45" stop-color="#ffe98c"/>
+      <stop offset="1" stop-color="#e8a838"/>
+    </radialGradient>
+    <radialGradient id="radiantHalo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe98c" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#e8a838" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#radiantHalo)"/>
+  <!-- long radiant rays -->
+  <g fill="#ffe98c">
+    <path d="M32 2 L36 30 L28 30 Z"/>
+    <path d="M32 62 L28 34 L36 34 Z"/>
+    <path d="M2 32 L30 28 L30 36 Z"/>
+    <path d="M62 32 L34 36 L34 28 Z"/>
+    <path d="M10 10 L31 29 L29 31 Z"/>
+    <path d="M54 54 L33 35 L35 33 Z"/>
+    <path d="M54 10 L35 31 L33 29 Z"/>
+    <path d="M10 54 L29 33 L31 35 Z"/>
+  </g>
+  <!-- short rays between -->
+  <g fill="#fff3bf" opacity="0.85">
+    <path d="M21 6 L33 26 L29 27 Z"/>
+    <path d="M43 58 L31 38 L35 37 Z"/>
+    <path d="M58 21 L38 33 L37 29 Z"/>
+    <path d="M6 43 L26 31 L27 35 Z"/>
+  </g>
+  <!-- central glow -->
+  <circle cx="32" cy="32" r="12" fill="url(#radiantCore)" stroke-linejoin="round"/>
+  <circle cx="29" cy="29" r="4" fill="#fffef6" opacity="0.9"/>
+</svg>

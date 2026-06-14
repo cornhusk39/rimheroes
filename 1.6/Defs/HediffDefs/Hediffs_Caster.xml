@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Cleric Turn Undead: foes recoil in fear. -->
+  <HediffDef>
+    <defName>RH_Turned</defName>
+    <label>turned</label>
+    <description>Struck by holy dread - slowed, shaken, and on the edge of flight.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(1.0, 0.95, 0.6)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>-0.5</MoveSpeed>
+          <MeleeHitChance>-4</MeleeHitChance>
+          <ShootingAccuracyPawn>-4</ShootingAccuracyPawn>
+          <MentalBreakThreshold>0.2</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>600</disappearsAfterTicks><showRemainingTime>true</showRemainingTime></li>
+    </comps>
+  </HediffDef>
+
+  <!-- Bard Bardic Inspiration: an emboldened ally. -->
+  <HediffDef>
+    <defName>RH_BardicInspiration</defName>
+    <label>inspired</label>
+    <description>Emboldened by a bard - steadier aim, surer strikes, and quicker work.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.8, 0.6, 1.0)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>4</MeleeHitChance>
+          <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>1800</disappearsAfterTicks><showRemainingTime>true</showRemainingTime></li>
+    </comps>
+  </HediffDef>
+
+</Defs>

@@ -30,6 +30,8 @@ namespace RimHeroes
         public bool fightingStyles = false;
         // Ranger's L1 Favored Enemy pick (Beasts/Mechanoids/Humanlikes/Insects).
         public bool favoredEnemyPick = false;
+        // Warlock's L3 Pact Boon pick (Blade/Tome).
+        public bool pactBoonPick = false;
         // Extra ASI levels granted as bonus feat picks beyond the shared 4/8/12/16/19 (Fighter: 6, 14).
         public List<int> bonusFeatLevels = new List<int>();
 

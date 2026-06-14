@@ -38,6 +38,9 @@ namespace RimHeroes
         public FavoredEnemy favoredEnemy = FavoredEnemy.None; // Ranger's L1 Favored Enemy pick
         public void SetFavoredEnemy(FavoredEnemy e) { favoredEnemy = e; }
 
+        public PactBoon pactBoon = PactBoon.None; // Warlock's L3 Pact Boon pick
+        public void SetPactBoon(PactBoon b) { pactBoon = b; }
+
         /// <summary>Bonus to death saving throws from class features (Fighter's Indomitable).</summary>
         public int DeathSaveBonus => ClassFeatures.DeathSaveBonus(this);
 
@@ -786,6 +789,7 @@ namespace RimHeroes
             Scribe_Collections.Look(ref takenFeats, "takenFeats", LookMode.Def);
             Scribe_Values.Look(ref fighterStyle, "fighterStyle", FighterStyle.None);
             Scribe_Values.Look(ref favoredEnemy, "favoredEnemy", FavoredEnemy.None);
+            Scribe_Values.Look(ref pactBoon, "pactBoon", PactBoon.None);
             Scribe_Collections.Look(ref mimBonds, "mimBonds", LookMode.Deep);
             Scribe_Collections.Look(ref slotsExpended, "slotsExpended", LookMode.Value);
             Scribe_Collections.Look(ref autocastSpells, "autocastSpells", LookMode.Def);

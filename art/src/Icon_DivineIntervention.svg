@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="interBeam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf2"/>
+      <stop offset="0.5" stop-color="#ffe28a"/>
+      <stop offset="1" stop-color="#e8a838" stop-opacity="0.15"/>
+    </linearGradient>
+    <radialGradient id="interSun" cx="0.5" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#fffef6"/>
+      <stop offset="0.5" stop-color="#ffe28a"/>
+      <stop offset="1" stop-color="#e8a838" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="interHand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3cf"/>
+      <stop offset="1" stop-color="#d49a36"/>
+    </linearGradient>
+  </defs>
+  <!-- heavenly glow at top -->
+  <ellipse cx="32" cy="8" rx="30" ry="16" fill="url(#interSun)"/>
+  <!-- descending broad beam -->
+  <path d="M24 6 L40 6 L52 60 L12 60 Z" fill="url(#interBeam)"/>
+  <!-- side rays -->
+  <path d="M20 6 L8 58" fill="none" stroke="#fff3bf" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <path d="M44 6 L56 58" fill="none" stroke="#fff3bf" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <path d="M32 4 L32 60" fill="none" stroke="#fffef6" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <!-- descending divine hand reaching down -->
+  <path d="M26 22 C26 18 30 18 30 22 L30 18 C30 14 34 14 34 18
+           L34 20 C34 16 38 16 38 20 L38 22 C38 18 42 18 42 22 L42 30
+           C42 38 38 44 32 44 C26 44 24 38 24 32 L24 28
+           C24 24 26 24 26 28 Z"
+        fill="url(#interHand)" stroke-linejoin="round"/>
+  <path d="M28 38 q4 3 8 0" fill="none" stroke="#fff3d8" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+</svg>

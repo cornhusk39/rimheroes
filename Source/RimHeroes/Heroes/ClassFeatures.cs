@@ -13,6 +13,9 @@ namespace RimHeroes
     /// <summary>Ranger's level-1 Favored Enemy pick.</summary>
     public enum FavoredEnemy { None, Beasts, Mechanoids, Humanlikes, Insects }
 
+    /// <summary>Warlock's level-3 Pact Boon pick. (Chain familiar pending a design decision.)</summary>
+    public enum PactBoon { None, Blade, Tome }
+
     /// <summary>
     /// A single hediff per hero, labeled with the class name (Fighter, Wizard, ...), whose tooltip
     /// enumerates every active class feature. Passive class effects that map to real pawn stats
@@ -126,6 +129,9 @@ namespace RimHeroes
                 case "RH_Rogue":
                     if (lvl >= 20) f *= 1.15f;                  // Stroke of Luck
                     break;
+                case "RH_Warlock":
+                    if (h.pactBoon == PactBoon.Blade) f *= 1.25f; // Pact of the Blade
+                    break;
             }
             return f;
         }
@@ -217,6 +223,9 @@ namespace RimHeroes
                     float r = lvl >= 18 ? 7.9f : 4.9f;
                     if (lvl >= 6) Emit(h.pawn, RH_DefOf.RH_AuraProtection, r);
                     if (lvl >= 10) Emit(h.pawn, RH_DefOf.RH_AuraCourage, r);
+                    break;
+                case "RH_Bard":
+                    if (lvl >= 6) Emit(h.pawn, RH_DefOf.RH_AuraCourage, 5.9f); // Countercharm
                     break;
             }
         }
@@ -330,6 +339,21 @@ namespace RimHeroes
                     off(sharp, 0.10f); off(blunt, 0.10f);                  // Fighting Style: Defense
                     if (lvl >= 3) off(imm, 2.0f);                          // Divine Health
                     break;
+
+                case "RH_Druid":
+                    off(Stat("PlantWorkSpeed"), 0.3f);                     // nature affinity
+                    off(StatDefOf.MoveSpeed, 0.2f);
+                    break;
+                case "RH_Bard":
+                    off(Stat("GlobalLearningFactor"), 0.3f);              // Jack of All Trades
+                    off(Stat("SocialImpact"), 0.25f);
+                    break;
+                case "RH_Sorcerer":
+                    off(RH_DefOf.RH_SpellPower, 0.10f);                    // Font of Magic (innate power)
+                    break;
+                case "RH_Warlock":
+                    if (h.pactBoon == PactBoon.Tome) off(RH_DefOf.RH_SpellPower, 0.12f); // Pact of the Tome
+                    break;
             }
         }
 
@@ -431,6 +455,31 @@ namespace RimHeroes
                     if (lvl >= 10) sb.AppendLine("Aura of Courage: nearby allies resist fear and mental strain.");
                     if (lvl >= 11) sb.AppendLine("Improved Divine Smite: +radiant melee damage.");
                     if (lvl >= 14) sb.AppendLine("Cleansing Touch: strip afflictions from an ally.");
+                    break;
+                case "RH_Cleric":
+                    sb.AppendLine("Divine conduit: your spells grow stronger as you rise.");
+                    if (lvl >= 2) sb.AppendLine("Channel Divinity: Turn Undead and a burst of healing radiance.");
+                    if (lvl >= 10) sb.AppendLine("Divine Intervention: a miracle that mends and cleanses your allies.");
+                    break;
+                case "RH_Druid":
+                    sb.AppendLine("Nature's voice: stronger spells, faster plant work, surer footing.");
+                    sb.AppendLine("Wild Shape: take the forms of beasts in battle.");
+                    break;
+                case "RH_Sorcerer":
+                    sb.AppendLine("Font of Magic: raw innate power - your spells hit harder than a wizard's study allows.");
+                    sb.AppendLine("Metamagic: choose arcane refinements as feats as you level.");
+                    break;
+                case "RH_Bard":
+                    sb.AppendLine("Jack of All Trades: faster learning and a silver tongue.");
+                    sb.AppendLine("Bardic Inspiration: embolden an ally.");
+                    if (lvl >= 6) sb.AppendLine("Countercharm: nearby allies resist fear and despair.");
+                    if (lvl >= 10) sb.AppendLine("Magical Secrets: a few spells borrowed from other traditions.");
+                    break;
+                case "RH_Warlock":
+                    sb.AppendLine(h.pactBoon == PactBoon.None
+                        ? "Pact Boon: not yet chosen."
+                        : (h.pactBoon == PactBoon.Blade ? "Pact of the Blade: your strikes hit far harder." : "Pact of the Tome: deeper arcane power."));
+                    sb.AppendLine("Eldritch Invocations: choose otherworldly gifts as feats as you level.");
                     break;
             }
             return sb.ToString().TrimEndNewlines();

@@ -33,7 +33,7 @@ namespace RimHeroes
             ("QuickSleeper", 0), ("NightOwl", 0), ("TooSmart", 1), ("GreatMemory", 0), ("Neat", 0),
         };
 
-        private enum ChoiceKind { Style, Favored, Trait, Feat, BonusFeat }
+        private enum ChoiceKind { Style, Favored, Pact, Trait, Feat, BonusFeat }
 
         private class PendingChoice
         {
@@ -84,6 +84,10 @@ namespace RimHeroes
             {
                 consider(1, ChoiceKind.Favored, hero.favoredEnemy != FavoredEnemy.None);
             }
+            if (hero.classDef.pactBoonPick)
+            {
+                consider(3, ChoiceKind.Pact, hero.pactBoon != PactBoon.None);
+            }
             foreach (int lvl in TraitLevels) consider(lvl, ChoiceKind.Trait, hero.IsChoiceResolved(lvl));
             foreach (int lvl in FeatLevels) consider(lvl, ChoiceKind.Feat, hero.IsChoiceResolved(lvl));
             if (hero.classDef.bonusFeatLevels != null)
@@ -95,7 +99,7 @@ namespace RimHeroes
 
         private static void MarkResolved(Hediff_HeroLevels hero, PendingChoice c)
         {
-            // Style/Favored resolution is detected by the stored field being set (by the option's apply).
+            // Style/Favored/Pact resolution is detected by the stored field being set (by the option's apply).
             if (c.kind == ChoiceKind.BonusFeat) hero.MarkBonusFeatResolved(c.level);
             else if (c.kind == ChoiceKind.Trait || c.kind == ChoiceKind.Feat) hero.MarkChoiceResolved(c.level);
         }
@@ -106,6 +110,7 @@ namespace RimHeroes
             {
                 case ChoiceKind.Style: return BuildStyleOptions(hero);
                 case ChoiceKind.Favored: return BuildFavoredOptions(hero);
+                case ChoiceKind.Pact: return BuildPactOptions(hero);
                 case ChoiceKind.Trait: return BuildTraitOptions(hero);
                 default: return BuildFeatOptions(hero); // Feat + BonusFeat
             }
@@ -117,6 +122,7 @@ namespace RimHeroes
             {
                 case ChoiceKind.Style: return "Choose a fighting style";
                 case ChoiceKind.Favored: return "Choose your favored prey";
+                case ChoiceKind.Pact: return "Choose your pact boon";
                 case ChoiceKind.Trait: return "Choose a trait";
                 default: return "Choose a feat";
             }
@@ -128,6 +134,7 @@ namespace RimHeroes
             {
                 case ChoiceKind.Style: return $"{hero.pawn.LabelShortCap} settles into a way of fighting.";
                 case ChoiceKind.Favored: return $"{hero.pawn.LabelShortCap} marks the kind of foe they hunt best.";
+                case ChoiceKind.Pact: return $"{hero.pawn.LabelShortCap}'s patron offers a gift.";
                 case ChoiceKind.Trait: return $"{hero.pawn.LabelShortCap} has grown — pick one trait to keep.";
                 default: return $"{hero.pawn.LabelShortCap} has earned a feat — pick one.";
             }
@@ -149,6 +156,23 @@ namespace RimHeroes
                 description = f.desc,
                 icon = null,
                 apply = () => hero.SetFavoredEnemy(f.foe)
+            }).ToList();
+        }
+
+        private static readonly (PactBoon boon, string label, string desc)[] PactPool =
+        {
+            (PactBoon.Blade, "Pact of the Blade", "Your patron's power flows into your strikes: a large bonus to melee damage."),
+            (PactBoon.Tome, "Pact of the Tome", "Forbidden knowledge deepens your power: a bonus to spell power."),
+        };
+
+        private static List<HeroChoiceOption> BuildPactOptions(Hediff_HeroLevels hero)
+        {
+            return PactPool.Select(b => new HeroChoiceOption
+            {
+                label = b.label,
+                description = b.desc,
+                icon = null,
+                apply = () => hero.SetPactBoon(b.boon)
             }).ToList();
         }
 

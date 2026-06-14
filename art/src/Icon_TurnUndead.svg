@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="turnBurst" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0" stop-color="#fffdf0"/>
+      <stop offset="0.6" stop-color="#ffe07a"/>
+      <stop offset="1" stop-color="#d99a2c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="turnEmblem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff6cf"/>
+      <stop offset="1" stop-color="#d39a2e"/>
+    </linearGradient>
+  </defs>
+  <!-- radiant blast -->
+  <circle cx="32" cy="32" r="28" fill="url(#turnBurst)"/>
+  <!-- sunburst rays -->
+  <g fill="#ffeea0">
+    <path d="M32 4 L35 18 L29 18 Z"/>
+    <path d="M32 60 L29 46 L35 46 Z"/>
+    <path d="M4 32 L18 29 L18 35 Z"/>
+    <path d="M60 32 L46 35 L46 29 Z"/>
+    <path d="M12 12 L24 21 L21 24 Z"/>
+    <path d="M52 52 L40 43 L43 40 Z"/>
+    <path d="M52 12 L43 24 L40 21 Z"/>
+    <path d="M12 52 L21 40 L24 43 Z"/>
+  </g>
+  <!-- holy radiant emblem (cross-like with central disc) -->
+  <circle cx="32" cy="32" r="9" fill="url(#turnEmblem)" stroke-linejoin="round"/>
+  <path d="M30 14 H34 V50 H30 Z M16 30 H48 V34 H16 Z" fill="url(#turnEmblem)" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="4" fill="#fffdf0"/>
+  <!-- repelled dark shapes -->
+  <path d="M52 48 q7 1 8 -6" fill="none" stroke="#2c1840" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <path d="M11 49 q-7 0 -8 -7" fill="none" stroke="#2c1840" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+</svg>

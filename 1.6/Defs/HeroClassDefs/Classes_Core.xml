@@ -195,6 +195,10 @@
         <li>RH_Spell_Bane</li>
         <li>RH_Spell_HealingWord</li>
       </abilities></li>
+      <li><level>2</level><abilities>
+        <li>RH_Ability_TurnUndead</li>
+        <li>RH_Ability_DivineRadiance</li>
+      </abilities></li>
       <li><level>3</level><abilities>
         <li>RH_Spell_SpiritualWeapon</li>
         <li>RH_Spell_LesserRestoration</li>
@@ -210,6 +214,9 @@
       <li><level>9</level><abilities>
         <li>RH_Spell_FlameStrike</li>
         <li>RH_Spell_MassCureWounds</li>
+      </abilities></li>
+      <li><level>10</level><abilities>
+        <li>RH_Ability_DivineIntervention</li>
       </abilities></li>
       <li><level>11</level><abilities>
         <li>RH_Spell_Heal</li>
@@ -380,6 +387,11 @@
     <description>Magic in the blood, begging to get out. Less study than the wizard; more lightning.</description>
     <vestmentHediff>RH_Vestment_Sorcerer</vestmentHediff>
     <casterProgression>Full</casterProgression>
+    <bonusFeatLevels>
+      <li>3</li>
+      <li>10</li>
+      <li>17</li>
+    </bonusFeatLevels>
     <levelGrants>
       <li><level>1</level><abilities>
         <li>RH_Spell_FireBolt</li>
@@ -424,6 +436,7 @@
     <casterProgression>Full</casterProgression>
     <levelGrants>
       <li><level>1</level><abilities>
+        <li>RH_Ability_BardicInspiration</li>
         <li>RH_Spell_ViciousMockery</li>
         <li>RH_Spell_DissonantWhispers</li>
         <li>RH_Spell_Heroism</li>
@@ -446,6 +459,16 @@
       <li><level>15</level><abilities>
         <li>RH_Spell_PowerWordHeal</li>
       </abilities></li>
+      <!-- Magical Secrets: a few spells borrowed from other traditions (default picks). -->
+      <li><level>10</level><abilities>
+        <li>RH_Spell_Fireball</li>
+      </abilities></li>
+      <li><level>14</level><abilities>
+        <li>RH_Spell_Heal</li>
+      </abilities></li>
+      <li><level>18</level><abilities>
+        <li>RH_Spell_Haste</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Sweeper</job></li>
@@ -460,6 +483,16 @@
     <description>Power on loan from something that doesn't explain itself. The blast always works; that's the deal.</description>
     <vestmentHediff>RH_Vestment_Warlock</vestmentHediff>
     <casterProgression>Full</casterProgression>
+    <pactBoonPick>true</pactBoonPick>
+    <bonusFeatLevels>
+      <li>2</li>
+      <li>5</li>
+      <li>7</li>
+      <li>9</li>
+      <li>12</li>
+      <li>15</li>
+      <li>18</li>
+    </bonusFeatLevels>
     <levelGrants>
       <li><level>1</level><abilities>
         <li>RH_Spell_EldritchBlast</li>
