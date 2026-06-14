@@ -37,6 +37,7 @@
       </li>
     </tools>
     <race>
+      <thinkTreeMain>RH_ImpFamiliar</thinkTreeMain>
       <body>QuadrupedAnimalWithPaws</body>
       <baseBodySize>0.4</baseBodySize>
       <baseHungerRate>0.2</baseHungerRate>

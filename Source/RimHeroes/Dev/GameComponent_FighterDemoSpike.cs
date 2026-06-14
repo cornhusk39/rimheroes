@@ -80,11 +80,13 @@ namespace RimHeroes
             warlock.pawn.abilities?.GainAbility(summonDef);
             warlock.pawn.abilities?.GetAbility(summonDef)?.CompOfType<CompAbilityEffect_Summon>()
                 ?.Apply(new LocalTargetInfo(warlock.pawn), default);
+            var impPawn = map.mapPawns.AllPawnsSpawned.FirstOrDefault(p => p.kindDef.defName == "RH_ImpKind");
             int imps = map.mapPawns.AllPawnsSpawned.Count(p => p.kindDef.defName == "RH_ImpKind");
-            int impVerbs = map.mapPawns.AllPawnsSpawned.Where(p => p.kindDef.defName == "RH_ImpKind")
-                .Sum(p => p.verbTracker?.AllVerbs?.Count(v => v is Verb_Shoot) ?? 0);
-            Log.Message($"[RimHeroes.FighterDemo] WARLOCK Pact-of-Chain: imps spawned={imps} rangedFireVerbs={impVerbs}");
-            if (imps < 1 || impVerbs < 1) pass = false;
+            int impVerbs = impPawn?.verbTracker?.AllVerbs?.Count(v => v is Verb_Shoot) ?? 0;
+            bool masterBound = impPawn != null && impPawn.GetDevotion()?.master == warlock.pawn;
+            string tree = impPawn?.RaceProps?.thinkTreeMain?.defName ?? "(none)";
+            Log.Message($"[RimHeroes.FighterDemo] WARLOCK Pact-of-Chain: imps={imps} rangedFireVerbs={impVerbs} masterBound={masterBound} thinkTree={tree}");
+            if (imps < 1 || impVerbs < 1 || !masterBound || tree != "RH_ImpFamiliar") pass = false;
 
             Log.Message($"[RimHeroes.FighterDemo] RESULT: verdict={(pass ? "PASS" : "FAIL")}");
         }

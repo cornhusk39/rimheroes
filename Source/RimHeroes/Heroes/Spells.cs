@@ -478,6 +478,9 @@ namespace RimHeroes
             GenSpawn.Spawn(familiar, cell, map);
             if (familiar.connections == null) familiar.connections = new Pawn_ConnectionsTracker(familiar);
             familiar.connections.ConnectTo(caster);
+            // Bind the master so the familiar's think tree can follow and defend them.
+            var devotion = familiar.health.AddHediff(RH_DefOf.RH_MimDevotion) as Hediff_MimDevotion;
+            if (devotion != null) devotion.master = caster;
             Messages.Message(caster.LabelShortCap + " summons a fiendish familiar.",
                 familiar, MessageTypeDefOf.PositiveEvent, historical: false);
         }

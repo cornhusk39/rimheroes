@@ -5,9 +5,8 @@ using UnityEngine;
 namespace RimHeroes
 {
     /// <summary>
-    /// Sorcerer Metamagic - Quickened Spell: cut the cooldown of the sorcerer's spells. (Twinned and
-    /// the others are handled in the spell comps / class-feature stats; Distant range-scaling is
-    /// deferred - no safe verb hook.)
+    /// Sorcerer Metamagic - Quickened Spell: cut the cooldown of the sorcerer's spells. (Twinned is
+    /// handled in the spell comps; the rest are class-feature stats.)
     /// </summary>
     [HarmonyPatch(typeof(Ability), nameof(Ability.StartCooldown))]
     public static class Patch_Quickened

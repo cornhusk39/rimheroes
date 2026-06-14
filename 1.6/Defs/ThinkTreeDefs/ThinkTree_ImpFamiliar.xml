@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Warlock imp familiar: aggressively attack nearby enemies, otherwise stay close to the master. -->
+  <ThinkTreeDef>
+    <defName>RH_ImpFamiliar</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Subtree"><treeDef>Downed</treeDef></li>
+        <li Class="ThinkNode_Subtree"><treeDef>BurningResponse</treeDef></li>
+        <li Class="JobGiver_ReactToCloseMeleeThreat" />
+
+        <!-- Hunt down and attack any nearby hostile, using the fire-bolt verb. -->
+        <li Class="JobGiver_AIFightEnemies">
+          <targetAcquireRadius>40</targetAcquireRadius>
+          <targetKeepRadius>55</targetKeepRadius>
+        </li>
+
+        <!-- Nothing to fight: keep close to the warlock. -->
+        <li Class="RimHeroes.JobGiver_EscortMaster" />
+
+        <li Class="JobGiver_WanderAnywhere">
+          <maxDanger>Deadly</maxDanger>
+          <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+        </li>
+        <li Class="JobGiver_IdleError" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+</Defs>

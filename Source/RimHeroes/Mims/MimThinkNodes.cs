@@ -28,6 +28,28 @@ namespace RimHeroes
         public override bool Satisfied(Pawn pawn) => pawn.GetDevotion()?.InLeavePhase == true;
     }
 
+    /// <summary>Follow the master: a summoned familiar sticks close when there's nothing to fight.</summary>
+    public class JobGiver_EscortMaster : JobGiver_Wander
+    {
+        public JobGiver_EscortMaster()
+        {
+            wanderRadius = 6f;
+            ticksBetweenWandersRange = new IntRange(45, 110);
+            locomotionUrgency = LocomotionUrgency.Jog;
+            maxDanger = Danger.Deadly;
+        }
+
+        public override IntVec3 GetWanderRoot(Pawn pawn)
+        {
+            var master = pawn.GetDevotion()?.master;
+            if (master != null && master.Spawned && master.Map == pawn.Map)
+            {
+                return master.Position;
+            }
+            return pawn.Position;
+        }
+    }
+
     /// <summary>Vigil: hover near the ailing master instead of working.</summary>
     public class JobGiver_VigilNearMaster : JobGiver_Wander
     {
