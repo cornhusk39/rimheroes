@@ -9,6 +9,7 @@
         <li Class="ThinkNode_Subtree"><treeDef>Downed</treeDef></li>
         <li Class="ThinkNode_Subtree"><treeDef>BurningResponse</treeDef></li>
         <li Class="JobGiver_ReactToCloseMeleeThreat" />
+        <li Class="ThinkNode_QueuedJob" />
 
         <!-- Hunt down and attack any nearby hostile, using the fire-bolt verb. -->
         <li Class="JobGiver_AIFightEnemies">
@@ -16,7 +17,10 @@
           <targetKeepRadius>55</targetKeepRadius>
         </li>
 
-        <!-- Nothing to fight: keep close to the warlock. -->
+        <!-- Out of combat: eat / sleep if a need is pressing, so it doesn't starve or collapse. -->
+        <li Class="ThinkNode_Subtree"><treeDef>SatisfyBasicNeeds</treeDef></li>
+
+        <!-- Nothing urgent: keep close to the warlock. -->
         <li Class="RimHeroes.JobGiver_EscortMaster" />
 
         <li Class="JobGiver_WanderAnywhere">
