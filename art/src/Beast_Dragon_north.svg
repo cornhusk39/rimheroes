@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="dn_body" cx="0.5" cy="0.6" r="0.7">
+      <stop offset="0%" stop-color="#C72C25"/>
+      <stop offset="100%" stop-color="#8E1B19"/>
+    </radialGradient>
+    <linearGradient id="dn_back" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#D6342B"/>
+      <stop offset="100%" stop-color="#A52320"/>
+    </linearGradient>
+    <linearGradient id="dn_wingL" x1="1" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#A52320"/>
+      <stop offset="60%" stop-color="#C0312A"/>
+      <stop offset="100%" stop-color="#7E1818"/>
+    </linearGradient>
+    <linearGradient id="dn_wingR" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A52320"/>
+      <stop offset="60%" stop-color="#C0312A"/>
+      <stop offset="100%" stop-color="#7E1818"/>
+    </linearGradient>
+  </defs>
+
+  <!-- WINGS spread, seen from the back (darker outer surface) -->
+  <!-- Left wing -->
+  <path d="M112 110 C70 76 32 70 20 92 C42 90 58 100 66 116 C46 114 34 124 30 142 C54 134 68 140 76 152 C58 152 48 162 46 178 C72 166 90 168 104 172 C110 152 110 130 112 110 Z" fill="url(#dn_wingL)"/>
+  <!-- left finger bones (back) -->
+  <path d="M112 110 C86 100 56 100 38 110" fill="none" stroke="#C68F52" stroke-width="5" stroke-linecap="round"/>
+  <path d="M108 132 C84 126 56 128 40 142" fill="none" stroke="#C68F52" stroke-width="5" stroke-linecap="round"/>
+  <path d="M104 156 C84 154 62 158 50 170" fill="none" stroke="#C68F52" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Right wing -->
+  <path d="M144 110 C186 76 224 70 236 92 C214 90 198 100 190 116 C210 114 222 124 226 142 C202 134 188 140 180 152 C198 152 208 162 210 178 C184 166 166 168 152 172 C146 152 146 130 144 110 Z" fill="url(#dn_wingR)"/>
+  <path d="M144 110 C170 100 200 100 218 110" fill="none" stroke="#C68F52" stroke-width="5" stroke-linecap="round"/>
+  <path d="M148 132 C172 126 200 128 216 142" fill="none" stroke="#C68F52" stroke-width="5" stroke-linecap="round"/>
+  <path d="M152 156 C172 154 194 158 206 170" fill="none" stroke="#C68F52" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- BODY / back, seen from above-behind -->
+  <ellipse cx="128" cy="150" rx="38" ry="48" fill="url(#dn_back)"/>
+  <!-- back muscle shading -->
+  <ellipse cx="110" cy="146" rx="16" ry="30" fill="#B22822" opacity="0.45"/>
+  <ellipse cx="146" cy="146" rx="16" ry="30" fill="#B22822" opacity="0.45"/>
+
+  <!-- SPINE RIDGE running up the back -->
+  <path d="M128 196 l-9 -16 l18 0 Z" fill="#7E1818"/>
+  <path d="M128 178 l-10 -18 l20 0 Z" fill="#8E1B19"/>
+  <path d="M128 158 l-11 -20 l22 0 Z" fill="#7E1818"/>
+  <path d="M128 136 l-10 -18 l20 0 Z" fill="#8E1B19"/>
+  <path d="M128 116 l-8 -16 l16 0 Z" fill="#7E1818"/>
+
+  <!-- TAIL going UP / away (tapering, narrowing into distance) -->
+  <path d="M120 196 C116 176 116 150 128 138 C140 150 140 176 136 196 Z" fill="url(#dn_body)"/>
+  <path d="M122 196 C120 178 120 158 128 150 C136 158 136 178 134 196 Z" fill="#B22822" opacity="0.4"/>
+  <!-- distal tail tip far up -->
+  <path d="M124 100 C122 86 126 74 128 64 C130 74 134 86 132 100 Z" fill="url(#dn_body)"/>
+  <path d="M128 64 l-5 -12 l10 0 Z" fill="#EAD49A"/>
+
+  <!-- HIND LEGS at bottom (backs of thighs) -->
+  <path d="M96 176 C78 186 74 204 82 222 C86 208 96 200 106 198 C104 190 100 182 96 176 Z" fill="url(#dn_body)"/>
+  <path d="M160 176 C178 186 182 204 174 222 C170 208 160 200 150 198 C152 190 156 182 160 176 Z" fill="url(#dn_body)"/>
+  <path d="M78 218 l-4 12 m10 -10 l-2 14 m10 -12 l2 12" stroke="#D8C089" stroke-width="5" stroke-linecap="round"/>
+  <path d="M178 218 l4 12 m-10 -10 l2 14 m-10 -12 l-2 12" stroke="#D8C089" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- HEAD from behind: back of skull + horns -->
+  <path d="M128 90 C108 90 96 104 96 120 C96 134 110 144 128 144 C146 144 160 134 160 120 C160 104 148 90 128 90 Z" fill="url(#dn_body)"/>
+  <!-- skull crest shading -->
+  <path d="M128 96 C112 96 102 106 100 118 C114 110 142 110 156 118 C154 106 144 96 128 96 Z" fill="#B22822" opacity="0.5"/>
+  <!-- HORNS sweeping up/back -->
+  <path d="M108 100 C92 84 86 64 92 48 C100 66 106 80 120 96 Z" fill="#EAD49A"/>
+  <path d="M148 100 C164 84 170 64 164 48 C156 66 150 80 136 96 Z" fill="#EAD49A"/>
+  <path d="M108 100 C94 86 90 68 92 48" fill="none" stroke="#C9A85F" stroke-width="3" opacity="0.6"/>
+  <path d="M148 100 C162 86 166 68 164 48" fill="none" stroke="#C9A85F" stroke-width="3" opacity="0.6"/>
+  <!-- small back-of-jaw spikes -->
+  <path d="M100 122 l-12 4 l12 4 Z" fill="#8E1B19"/>
+  <path d="M156 122 l12 4 l-12 4 Z" fill="#8E1B19"/>
+</svg>

@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- Warlock Pact of the Chain familiar: a small fiend that flings fire. Summoned by the warlock,
-       player faction. Placeholder art reuses a vanilla small-animal texture until imp art is made. -->
+       player faction. -->
   <ThingDef ParentName="AnimalThingBase">
     <defName>RH_Imp</defName>
     <label>imp</label>
@@ -62,9 +62,8 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Rat/Rat</texPath>
-          <drawSize>0.9</drawSize>
-          <color>(0.7, 0.25, 0.2)</color>
+          <texPath>Things/RimHeroes/Beasts/Imp/Imp</texPath>
+          <drawSize>1.3</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>

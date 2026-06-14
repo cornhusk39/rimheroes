@@ -85,8 +85,7 @@
     </comps>
   </AbilityDef>
 
-  <!-- Archdruid capstone form: Dragon (L20). Placeholder render reuses the owlbear texture until
-       the dragon art is made. -->
+  <!-- Archdruid capstone form: Dragon (L20). Large drawSize so it visibly spans several tiles. -->
   <AbilityDef ParentName="RH_WildshapeBase">
     <defName>RH_Ability_WildshapeDragon</defName>
     <label>wildshape: dragon</label>
@@ -149,10 +148,9 @@
     <renderNodeProperties>
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
-        <texPath>Things/RimHeroes/Beasts/Owlbear/Owlbear</texPath>
+        <texPath>Things/RimHeroes/Beasts/Dragon/Dragon</texPath>
         <parentTagDef>Body</parentTagDef>
-        <drawSize>(3.0, 3.0)</drawSize>
-        <color>(0.7, 0.3, 0.25)</color>
+        <drawSize>(4.5, 4.5)</drawSize>
         <pawnType>Any</pawnType>
         <drawData>
           <defaultData>
