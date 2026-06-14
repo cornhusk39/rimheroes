@@ -405,6 +405,9 @@
         <li>RH_Spell_MagicMissile</li>
         <li>RH_Spell_ChromaticOrb</li>
       </abilities></li>
+      <li><level>2</level><abilities>
+        <li>RH_Ability_FontOfMagic</li>
+      </abilities></li>
       <li><level>3</level><abilities>
         <li>RH_Spell_ScorchingRay</li>
       </abilities></li>

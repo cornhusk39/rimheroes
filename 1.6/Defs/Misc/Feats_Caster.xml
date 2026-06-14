@@ -29,6 +29,22 @@
     <classes><li>RH_Sorcerer</li></classes>
   </RimHeroes.FeatDef>
 
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_Quickened</defName>
+    <label>Quickened Spell</label>
+    <description>Bend time around your casting: your spells come off cooldown markedly faster.</description>
+    <appliedHediff>RH_FeatHediff_Quickened</appliedHediff>
+    <classes><li>RH_Sorcerer</li></classes>
+  </RimHeroes.FeatDef>
+
+  <RimHeroes.FeatDef>
+    <defName>RH_Feat_Twinned</defName>
+    <label>Twinned Spell</label>
+    <description>Split your magic in two: your single-target spells also strike a second nearby foe.</description>
+    <appliedHediff>RH_FeatHediff_Twinned</appliedHediff>
+    <classes><li>RH_Sorcerer</li></classes>
+  </RimHeroes.FeatDef>
+
   <!-- Warlock Eldritch Invocations -->
   <RimHeroes.FeatDef>
     <defName>RH_Feat_AgonizingBlast</defName>

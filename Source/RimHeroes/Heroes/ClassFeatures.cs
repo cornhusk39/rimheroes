@@ -93,6 +93,13 @@ namespace RimHeroes
 
         public static bool ActionSurgeActive(Hediff_HeroLevels h) => Has(h, RH_DefOf.RH_ActionSurge);
 
+        /// <summary>True if this pawn is a sorcerer who has taken the named Metamagic feat.</summary>
+        public static bool HasMetamagic(Pawn p, string featDefName)
+        {
+            var hero = HeroUtility.GetHeroHediff(p);
+            return hero?.classDef?.defName == "RH_Sorcerer" && hero.TakenFeats.Any(f => f.defName == featDefName);
+        }
+
         // ----- Melee modifiers (no pawn stat exists for these; applied by Patch_FighterMelee) -----
 
         /// <summary>Unconditional melee-damage multiplier per class (tiers + active burst hediffs).</summary>
@@ -477,8 +484,8 @@ namespace RimHeroes
                     if (lvl >= 20) sb.AppendLine("Archdruid: take the form of a dragon - scaled, fanged, and fire-breathing.");
                     break;
                 case "RH_Sorcerer":
-                    sb.AppendLine("Font of Magic: raw innate power - your spells hit harder than a wizard's study allows.");
-                    sb.AppendLine("Metamagic: choose arcane refinements as feats as you level.");
+                    sb.AppendLine("Font of Magic: raw innate power (stronger spells) and an overcharge burst you can unleash.");
+                    sb.AppendLine("Metamagic: pick arcane refinements (Empowered/Careful/Subtle/Quickened/Twinned) as feats.");
                     break;
                 case "RH_Bard":
                     sb.AppendLine("Jack of All Trades: faster learning and a silver tongue.");

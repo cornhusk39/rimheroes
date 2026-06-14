@@ -48,6 +48,23 @@
     </comps>
   </HediffDef>
 
+  <!-- Sorcerer Font of Magic: a burst of overcharged casting power. -->
+  <HediffDef>
+    <defName>RH_Overcharge</defName>
+    <label>overcharged</label>
+    <description>Raw magic floods your veins - your spells hit far harder for a short while.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.9, 0.5, 1.0)</defaultLabelColor>
+    <stages>
+      <li><statOffsets><RH_SpellPower>0.5</RH_SpellPower></statOffsets></li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>900</disappearsAfterTicks><showRemainingTime>true</showRemainingTime></li>
+    </comps>
+  </HediffDef>
+
   <!-- Bard Bardic Inspiration: an emboldened ally. -->
   <HediffDef>
     <defName>RH_BardicInspiration</defName>

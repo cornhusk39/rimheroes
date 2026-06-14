@@ -25,6 +25,20 @@
     <stages><li><statOffsets><MentalBreakThreshold>-0.1</MentalBreakThreshold><SocialImpact>0.2</SocialImpact></statOffsets></li></stages>
   </HediffDef>
 
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_Quickened</defName>
+    <label>quickened spell</label>
+    <description>Your spells return to readiness markedly faster.</description>
+    <stages><li /></stages>
+  </HediffDef>
+
+  <HediffDef ParentName="RH_FeatPerkBase">
+    <defName>RH_FeatHediff_Twinned</defName>
+    <label>twinned spell</label>
+    <description>Your single-target spells split to strike a second nearby foe.</description>
+    <stages><li /></stages>
+  </HediffDef>
+
   <!-- Warlock Eldritch Invocations -->
   <HediffDef ParentName="RH_FeatPerkBase">
     <defName>RH_FeatHediff_AgonizingBlast</defName>

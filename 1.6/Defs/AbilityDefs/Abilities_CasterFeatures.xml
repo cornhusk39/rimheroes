@@ -80,6 +80,31 @@
     </comps>
   </AbilityDef>
 
+  <!-- Sorcerer: Font of Magic - overcharge your next spells -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_FontOfMagic</defName>
+    <label>font of magic</label>
+    <description>Draw on the raw font of magic in your blood, overcharging your spells for a short time.</description>
+    <iconPath>UI/RimHeroes/Haste</iconPath>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>-1</range>
+      <warmupTime>0.3</warmupTime>
+      <targetParams><canTargetSelf>true</canTargetSelf><canTargetPawns>false</canTargetPawns><canTargetLocations>false</canTargetLocations><canTargetBuildings>false</canTargetBuildings></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_Overcharge</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
   <!-- Bard: Bardic Inspiration -->
   <AbilityDef ParentName="RH_MartialBase">
     <defName>RH_Ability_BardicInspiration</defName>

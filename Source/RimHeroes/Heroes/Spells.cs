@@ -219,6 +219,17 @@ namespace RimHeroes
             {
                 return;
             }
+            DealTo(thing);
+            // Sorcerer Twinned Spell: a single-target spell also strikes a second nearby foe.
+            if (thing is Pawn && ClassFeatures.HasMetamagic(parent.pawn, "RH_Feat_Twinned"))
+            {
+                var twin = FindTwin(thing);
+                if (twin != null) DealTo(twin);
+            }
+        }
+
+        private void DealTo(Thing thing)
+        {
             float amount = Props.amount * SpellPower.For(parent.pawn);
             if (Props.bonusVsWoundedFactor > 0f && thing is Pawn wp && wp.health.summaryHealth.SummaryHealthPercent < 1f)
             {
@@ -237,6 +248,21 @@ namespace RimHeroes
             {
                 HealPawn(parent.pawn, amount * Props.hits * Props.lifestealFraction);
             }
+        }
+
+        private Thing FindTwin(Thing primary)
+        {
+            var map = parent.pawn?.MapHeld;
+            if (map == null) return null;
+            Thing best = null;
+            float bestDist = 999f;
+            foreach (var p in GenRadial.RadialDistinctThingsAround(primary.Position, map, 6.9f, true).OfType<Pawn>())
+            {
+                if (p == primary || p.Dead || !p.HostileTo(parent.pawn)) continue;
+                float d = primary.Position.DistanceTo(p.Position);
+                if (d < bestDist) { best = p; bestDist = d; }
+            }
+            return best;
         }
 
         internal static void HealPawn(Pawn pawn, float total)
