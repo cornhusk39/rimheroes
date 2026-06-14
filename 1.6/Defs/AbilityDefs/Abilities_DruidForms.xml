@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Signature attacks for each wildshape form. Each is granted only while its form is active
+       (via HediffComp_GrantAbility on the form hediff). Cooldown-based (RH_MartialBase). Icons reuse
+       the matching form/spell icons for now. -->
+
+  <!-- Dire Wolf: Pounce -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_Pounce</defName>
+    <label>pounce</label>
+    <description>Leap onto a foe with a savage bite.</description>
+    <iconPath>UI/RimHeroes/WildshapeDireWolf</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>8.9</range>
+      <warmupTime>0.3</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget"><damageDef>Bite</damageDef><amount>22</amount><hits>1</hits></li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Owlbear: Rend -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_Rend</defName>
+    <label>rend</label>
+    <description>Tear into a foe with claw and beak - far worse for the already-wounded.</description>
+    <iconPath>UI/RimHeroes/WildshapeOwlbear</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>4.9</range>
+      <warmupTime>0.4</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget"><damageDef>Scratch</damageDef><amount>28</amount><hits>1</hits><bonusVsWoundedFactor>0.6</bonusVsWoundedFactor></li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Giant Elk: Trample -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_Trample</defName>
+    <label>trample</label>
+    <description>Charge through a spot, battering everything underfoot.</description>
+    <iconPath>UI/RimHeroes/WildshapeGiantElk</iconPath>
+    <cooldownTicksRange>700</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>11.9</range>
+      <warmupTime>0.4</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion"><damageDef>Blunt</damageDef><radius>2.5</radius><damageAmount>22</damageAmount></li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Dragon: Fire Breath -->
+  <AbilityDef ParentName="RH_MartialBase">
+    <defName>RH_Ability_DragonBreath</defName>
+    <label>dragon breath</label>
+    <description>Exhale a roaring gout of flame that engulfs a swathe of the battlefield.</description>
+    <iconPath>UI/RimHeroes/Fireball</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <hostile>true</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>19.9</range>
+      <warmupTime>0.8</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>true</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="RimHeroes.CompProperties_AbilityExplosion"><damageDef>Flame</damageDef><radius>4</radius><damageAmount>50</damageAmount></li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Archdruid capstone form: Dragon (L20). Placeholder render reuses the owlbear texture until
+       the dragon art is made. -->
+  <AbilityDef ParentName="RH_WildshapeBase">
+    <defName>RH_Ability_WildshapeDragon</defName>
+    <label>wildshape: dragon</label>
+    <description>Take the shape of a dragon: armoured in scale, terrible in melee, and able to breathe fire. The pinnacle of an archdruid's art. Costs no spell slot.</description>
+    <iconPath>UI/RimHeroes/Fireball</iconPath>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>RH_WildshapeDragon</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <HediffDef>
+    <defName>RH_WildshapeDragon</defName>
+    <label>dragon form</label>
+    <description>This archdruid wears the shape of a dragon: scaled, immense, and wreathed in fire. Their gear is subsumed into the form.</description>
+    <hediffClass>RimHeroes.Hediff_Wildshape</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <defaultLabelColor>(0.85, 0.35, 0.2)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>1.0</MoveSpeed>
+          <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.8</ArmorRating_Heat>
+          <PainShockThreshold>0.4</PainShockThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>20000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>dragon claws</label>
+            <capacities><li>Scratch</li></capacities>
+            <power>35</power>
+            <cooldownTime>2</cooldownTime>
+          </li>
+          <li>
+            <label>dragon bite</label>
+            <capacities><li>Bite</li></capacities>
+            <power>45</power>
+            <cooldownTime>2.6</cooldownTime>
+            <chanceFactor>0.7</chanceFactor>
+          </li>
+        </tools>
+      </li>
+      <li Class="RimHeroes.HediffCompProperties_GrantAbility"><ability>RH_Ability_DragonBreath</ability></li>
+    </comps>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
+        <texPath>Things/RimHeroes/Beasts/Owlbear/Owlbear</texPath>
+        <parentTagDef>Body</parentTagDef>
+        <drawSize>(3.0, 3.0)</drawSize>
+        <color>(0.7, 0.3, 0.25)</color>
+        <pawnType>Any</pawnType>
+        <drawData>
+          <defaultData>
+            <layer>40</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+</Defs>

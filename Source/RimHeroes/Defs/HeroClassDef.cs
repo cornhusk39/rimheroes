@@ -32,6 +32,8 @@ namespace RimHeroes
         public bool favoredEnemyPick = false;
         // Warlock's L3 Pact Boon pick (Blade/Tome).
         public bool pactBoonPick = false;
+        // Bard's Magical Secrets: levels at which they pick a spell from the cross-class pool.
+        public List<int> magicalSecretLevels = new List<int>();
         // Extra ASI levels granted as bonus feat picks beyond the shared 4/8/12/16/19 (Fighter: 6, 14).
         public List<int> bonusFeatLevels = new List<int>();
 

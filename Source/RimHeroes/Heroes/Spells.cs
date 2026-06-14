@@ -111,6 +111,16 @@ namespace RimHeroes
             {
                 return true;
             }
+            // Beast Spells: a wildshaped druid can't cast spells until level 18.
+            if (Hediff_Wildshape.IsShifted(pawn))
+            {
+                var beastHero = Hero;
+                if (beastHero == null || beastHero.level < 18)
+                {
+                    reason = "Can't cast spells in beast form until level 18 (Beast Spells).";
+                    return true;
+                }
+            }
             if (SpellLevel > 0)
             {
                 var hero = Hero;

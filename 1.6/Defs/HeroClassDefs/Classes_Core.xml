@@ -275,6 +275,9 @@
       <li><level>15</level><abilities>
         <li>RH_Spell_Sunburst</li>
       </abilities></li>
+      <li><level>20</level><abilities>
+        <li>RH_Ability_WildshapeDragon</li>
+      </abilities></li>
     </levelGrants>
     <mimUnlocks>
       <li><level>3</level><job>RH_Mim_Porter</job></li>
@@ -434,6 +437,11 @@
     <description>Wit sharp enough to wound and songs that close wounds. Better with friends.</description>
     <vestmentHediff>RH_Vestment_Bard</vestmentHediff>
     <casterProgression>Full</casterProgression>
+    <magicalSecretLevels>
+      <li>10</li>
+      <li>14</li>
+      <li>18</li>
+    </magicalSecretLevels>
     <levelGrants>
       <li><level>1</level><abilities>
         <li>RH_Ability_BardicInspiration</li>
@@ -458,16 +466,6 @@
       </abilities></li>
       <li><level>15</level><abilities>
         <li>RH_Spell_PowerWordHeal</li>
-      </abilities></li>
-      <!-- Magical Secrets: a few spells borrowed from other traditions (default picks). -->
-      <li><level>10</level><abilities>
-        <li>RH_Spell_Fireball</li>
-      </abilities></li>
-      <li><level>14</level><abilities>
-        <li>RH_Spell_Heal</li>
-      </abilities></li>
-      <li><level>18</level><abilities>
-        <li>RH_Spell_Haste</li>
       </abilities></li>
     </levelGrants>
     <mimUnlocks>

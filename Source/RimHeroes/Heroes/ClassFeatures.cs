@@ -472,7 +472,9 @@ namespace RimHeroes
                     break;
                 case "RH_Druid":
                     sb.AppendLine("Nature's voice: stronger spells, faster plant work, surer footing.");
-                    sb.AppendLine("Wild Shape: take the forms of beasts in battle.");
+                    sb.AppendLine("Wild Shape: take beast forms, each with its own attack (Pounce / Rend / Trample).");
+                    if (lvl >= 18) sb.AppendLine("Beast Spells: you can cast your spells while in beast form.");
+                    if (lvl >= 20) sb.AppendLine("Archdruid: take the form of a dragon - scaled, fanged, and fire-breathing.");
                     break;
                 case "RH_Sorcerer":
                     sb.AppendLine("Font of Magic: raw innate power - your spells hit harder than a wizard's study allows.");

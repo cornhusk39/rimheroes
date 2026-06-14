@@ -33,7 +33,15 @@ namespace RimHeroes
             ("QuickSleeper", 0), ("NightOwl", 0), ("TooSmart", 1), ("GreatMemory", 0), ("Neat", 0),
         };
 
-        private enum ChoiceKind { Style, Favored, Pact, Trait, Feat, BonusFeat }
+        private enum ChoiceKind { Style, Favored, Pact, Secret, Trait, Feat, BonusFeat }
+
+        // Bard Magical Secrets pool: spells borrowed from other traditions.
+        private static readonly string[] SecretPool =
+        {
+            "RH_Spell_Fireball", "RH_Spell_LightningBolt", "RH_Spell_ConeOfCold", "RH_Spell_Heal",
+            "RH_Spell_MassHeal", "RH_Spell_Haste", "RH_Spell_Revivify", "RH_Spell_HoldMonster",
+            "RH_Spell_Disintegrate", "RH_Spell_Slow",
+        };
 
         private class PendingChoice
         {
@@ -88,6 +96,10 @@ namespace RimHeroes
             {
                 consider(3, ChoiceKind.Pact, hero.pactBoon != PactBoon.None);
             }
+            if (hero.classDef.magicalSecretLevels != null)
+            {
+                foreach (int lvl in hero.classDef.magicalSecretLevels) consider(lvl, ChoiceKind.Secret, hero.IsChoiceResolved(lvl));
+            }
             foreach (int lvl in TraitLevels) consider(lvl, ChoiceKind.Trait, hero.IsChoiceResolved(lvl));
             foreach (int lvl in FeatLevels) consider(lvl, ChoiceKind.Feat, hero.IsChoiceResolved(lvl));
             if (hero.classDef.bonusFeatLevels != null)
@@ -101,7 +113,7 @@ namespace RimHeroes
         {
             // Style/Favored/Pact resolution is detected by the stored field being set (by the option's apply).
             if (c.kind == ChoiceKind.BonusFeat) hero.MarkBonusFeatResolved(c.level);
-            else if (c.kind == ChoiceKind.Trait || c.kind == ChoiceKind.Feat) hero.MarkChoiceResolved(c.level);
+            else if (c.kind == ChoiceKind.Trait || c.kind == ChoiceKind.Feat || c.kind == ChoiceKind.Secret) hero.MarkChoiceResolved(c.level);
         }
 
         private static List<HeroChoiceOption> BuildOptions(Hediff_HeroLevels hero, ChoiceKind kind)
@@ -111,6 +123,7 @@ namespace RimHeroes
                 case ChoiceKind.Style: return BuildStyleOptions(hero);
                 case ChoiceKind.Favored: return BuildFavoredOptions(hero);
                 case ChoiceKind.Pact: return BuildPactOptions(hero);
+                case ChoiceKind.Secret: return BuildSecretOptions(hero);
                 case ChoiceKind.Trait: return BuildTraitOptions(hero);
                 default: return BuildFeatOptions(hero); // Feat + BonusFeat
             }
@@ -123,6 +136,7 @@ namespace RimHeroes
                 case ChoiceKind.Style: return "Choose a fighting style";
                 case ChoiceKind.Favored: return "Choose your favored prey";
                 case ChoiceKind.Pact: return "Choose your pact boon";
+                case ChoiceKind.Secret: return "Choose a magical secret";
                 case ChoiceKind.Trait: return "Choose a trait";
                 default: return "Choose a feat";
             }
@@ -135,6 +149,7 @@ namespace RimHeroes
                 case ChoiceKind.Style: return $"{hero.pawn.LabelShortCap} settles into a way of fighting.";
                 case ChoiceKind.Favored: return $"{hero.pawn.LabelShortCap} marks the kind of foe they hunt best.";
                 case ChoiceKind.Pact: return $"{hero.pawn.LabelShortCap}'s patron offers a gift.";
+                case ChoiceKind.Secret: return $"{hero.pawn.LabelShortCap} masters a spell from another tradition.";
                 case ChoiceKind.Trait: return $"{hero.pawn.LabelShortCap} has grown — pick one trait to keep.";
                 default: return $"{hero.pawn.LabelShortCap} has earned a feat — pick one.";
             }
@@ -174,6 +189,23 @@ namespace RimHeroes
                 icon = null,
                 apply = () => hero.SetPactBoon(b.boon)
             }).ToList();
+        }
+
+        private static List<HeroChoiceOption> BuildSecretOptions(Hediff_HeroLevels hero)
+        {
+            var pawn = hero.pawn;
+            var owned = pawn.abilities?.abilities;
+            return SecretPool
+                .Select(d => DefDatabase<AbilityDef>.GetNamedSilentFail(d))
+                .Where(d => d != null && (owned == null || !owned.Any(a => a.def == d)))
+                .InRandomOrder().Take(OptionsShown)
+                .Select(d => new HeroChoiceOption
+                {
+                    label = d.LabelCap,
+                    description = d.description,
+                    icon = d.uiIcon,
+                    apply = () => { pawn.abilities?.GainAbility(d); hero.Notify_SpellGranted(d); }
+                }).ToList();
         }
 
         private static readonly (FighterStyle style, string label, string desc)[] StylePool =

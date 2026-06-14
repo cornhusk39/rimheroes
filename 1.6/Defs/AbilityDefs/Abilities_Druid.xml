@@ -74,6 +74,7 @@
           </li>
         </tools>
       </li>
+      <li Class="RimHeroes.HediffCompProperties_GrantAbility"><ability>RH_Ability_Pounce</ability></li>
     </comps>
     <renderNodeProperties>
       <li>
@@ -142,6 +143,7 @@
           </li>
         </tools>
       </li>
+      <li Class="RimHeroes.HediffCompProperties_GrantAbility"><ability>RH_Ability_Trample</ability></li>
     </comps>
     <renderNodeProperties>
       <li>
@@ -235,6 +237,7 @@
           </li>
         </tools>
       </li>
+      <li Class="RimHeroes.HediffCompProperties_GrantAbility"><ability>RH_Ability_Rend</ability></li>
     </comps>
     <renderNodeProperties>
       <li>
