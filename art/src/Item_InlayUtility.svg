@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- seal frame (shared across all inlays): flat-top hexagon -->
+  <polygon points="58,32 45,54.5 19,54.5 6,32 19,9.5 45,9.5" fill="#1a1510"/>
+  <polygon points="53,32 42,51 22,51 11,32 22,13 42,13" fill="#4c6b4f"/>
+  <polygon points="53,32 42,51 22,51 11,32 22,13 42,13" fill="none" stroke="#5f8a63" stroke-width="1.5"/>
+  <!-- rivets at the corners -->
+  <circle cx="32" cy="14.5" r="1.4" fill="#1e2c1f"/>
+  <circle cx="32" cy="49.5" r="1.4" fill="#1e2c1f"/>
+  <!-- glyph: wings (utility / fleetness) -->
+  <g stroke="#16241a" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M31 19 C20 23 14 31 14 43 C22 37 27 35 31 37 Z" fill="#b3d4b8"/>
+    <path d="M33 19 C44 23 50 31 50 43 C42 37 37 35 33 37 Z" fill="#b3d4b8"/>
+    <rect x="30.4" y="18" width="3.2" height="24" rx="1.4" fill="#7fae84"/>
+  </g>
+</svg>

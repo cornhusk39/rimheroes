@@ -8,10 +8,9 @@
     <label>heroic blessing</label>
     <description>A warm, weightless mote of light that no one can quite explain. Some power has marked the bearer for something greater. Perhaps a forgotten god, perhaps a watching demon, perhaps fate itself. Hold it close and it unmakes every old wound and lesser habit, then remakes you as a Hero of the path you choose. The change cannot be undone.</description>
     <graphicData>
-      <texPath>Things/Item/Special/PsylinkNeuroformer</texPath>
+      <texPath>Things/RimHeroes/Items/HeroicBlessing</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <color>(1.0, 0.92, 0.55)</color>
-      <drawSize>0.85</drawSize>
+      <drawSize>0.9</drawSize>
     </graphicData>
     <stackLimit>1</stackLimit>
     <statBases>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- seal frame (shared across all inlays): flat-top hexagon -->
+  <polygon points="58,32 45,54.5 19,54.5 6,32 19,9.5 45,9.5" fill="#1a1510"/>
+  <polygon points="53,32 42,51 22,51 11,32 22,13 42,13" fill="#45566b"/>
+  <polygon points="53,32 42,51 22,51 11,32 22,13 42,13" fill="none" stroke="#5a6f8a" stroke-width="1.5"/>
+  <!-- rivets at the corners -->
+  <circle cx="32" cy="14.5" r="1.4" fill="#1c2430"/>
+  <circle cx="32" cy="49.5" r="1.4" fill="#1c2430"/>
+  <!-- glyph: shield (defense) -->
+  <g stroke="#16202c" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M32 17 L45 22 C45 38 39 46 32 49 C25 46 19 38 19 22 Z" fill="#b3c4d8"/>
+    <path d="M32 22 L40 25 C40 36 36 42 32 44 C28 42 24 36 24 25 Z" fill="#7e93ab"/>
+  </g>
+</svg>
