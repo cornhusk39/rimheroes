@@ -8,7 +8,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_RayOfFrost</defName>
     <label>ray of frost</label>
-    <description>A frigid beam that bites a foe and leaves them numb and slow. Cantrip - costs no spell slot.</description>
+    <description>A frigid beam that bites a foe and leaves them numb and slow. Cantrip, costs no spell slot.</description>
     <iconPath>UI/RimHeroes/RayOfFrost</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>
@@ -33,7 +33,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_Bane</defName>
     <label>bane</label>
-    <description>A whispered curse settles over a knot of foes, fouling their aim and nerve. Level 1.</description>
+    <description>A whispered curse settles over a knot of foes, fouling their aim and nerve. Consumes a level-1 spell slot.</description>
     <iconPath>UI/RimHeroes/Bane</iconPath>
     <level>1</level>
     <cooldownTicksRange>600</cooldownTicksRange>
@@ -58,7 +58,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_PrayerOfHealing</defName>
     <label>prayer of healing</label>
-    <description>A shared prayer knits the wounds of every ally nearby. Level 2.</description>
+    <description>A shared prayer knits the wounds of every ally nearby. Consumes a level-2 spell slot.</description>
     <iconPath>UI/RimHeroes/PrayerOfHealing</iconPath>
     <level>2</level>
     <cooldownTicksRange>900</cooldownTicksRange>
@@ -83,7 +83,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_LesserRestoration</defName>
     <label>lesser restoration</label>
-    <description>Draws poison and creeping sickness out of one you touch. Level 2.</description>
+    <description>Draw poison and creeping sickness out of one you touch. Consumes a level-2 spell slot.</description>
     <iconPath>UI/RimHeroes/LesserRestoration</iconPath>
     <level>2</level>
     <cooldownTicksRange>600</cooldownTicksRange>

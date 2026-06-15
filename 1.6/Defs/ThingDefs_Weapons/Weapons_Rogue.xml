@@ -6,7 +6,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Rogue_T1</defName>
     <label>lesser hero daggers</label>
-    <description>A matched pair of keen hero daggers, light and wickedly balanced for the offhand. Bound to a hero rogue, they slip past armour where heavier blades only batter it.</description>
+    <description>A matched pair of keen daggers, light and wickedly balanced for fast offhand work. Bound to a hero rogue, they slide past armour that heavier blades can only dent.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <tools>
@@ -19,7 +19,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Rogue_T2</defName>
     <label>hero daggers</label>
-    <description>Twin daggers with blackened blades and oxblood-wrapped grips, honed to find the gaps in plate. They drink the light, and the blood, of any who let the rogue close.</description>
+    <description>Twin daggers with blackened blades and oxblood-wrapped grips, honed to seek the seams in plate. They take the light, and the blood, of anyone careless enough to let the rogue close.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <tools>
@@ -32,7 +32,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Rogue_T3</defName>
     <label>greater hero daggers</label>
-    <description>A pair of ornate daggers with gilded guards and blood-ruby pommels, their edges humming with a faint banked power. Each strike threads armour like thread through cloth.</description>
+    <description>A pair of ornate daggers with gilded guards and blood-ruby pommels, their edges humming with held-back power. Each thrust threads through armour as easily as a needle through cloth.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <tools>
@@ -45,7 +45,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Rogue_T4</defName>
     <label>perfect hero daggers</label>
-    <description>Twin blades wreathed in living shadow, their glowing edges trailing dark wisps and a red glint of bound malice. They cut where the eye cannot follow.</description>
+    <description>Twin blades shrouded in living shadow, their glowing edges trailing dark wisps and a red glint of bound malice. They cut faster than the eye can track them.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <tools>
@@ -58,7 +58,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Rogue_T5</defName>
     <label>Whisper and Woe</label>
-    <description>The capstone daggers of the rogue, won only by a hero who has reached the height of their legend. Whisper takes the breath; Woe takes the rest. Twin blades trailing shadow, each set with a red eye-glint that watches for the killing gap — and never misses it.</description>
+    <description>The rogue's capstone daggers, won only by a hero whose legend has reached its peak. Whisper takes the breath; Woe takes the rest. Both blades trail shadow, and the red glint set in each one watches for the killing gap with patience that never once fails.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>9000</MarketValue></statBases>
     <tools>

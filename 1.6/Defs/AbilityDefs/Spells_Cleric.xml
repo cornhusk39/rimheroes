@@ -9,7 +9,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_Guidance</defName>
     <label>guidance</label>
-    <description>A whisper of divine favor settles over an ally, steadying their aim and their hands for the work ahead. Cantrip - costs no spell slot.</description>
+    <description>A whisper of divine favor settles over an ally, steadying their aim and their hands for the work ahead. Cantrip, costs no spell slot.</description>
     <iconPath>UI/RimHeroes/Guidance</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>

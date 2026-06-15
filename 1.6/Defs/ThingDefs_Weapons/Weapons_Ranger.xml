@@ -7,7 +7,7 @@
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>RH_Weapon_Ranger_T1</defName>
     <label>lesser hero longbow</label>
-    <description>A tall hero's selfbow of seasoned heartwood, drawing a heavier pull than any common bow. Bound to a hero ranger — none but they can string and bend it.</description>
+    <description>A tall selfbow of seasoned heartwood, drawing a far heavier pull than any common bow. It is bound to a hero ranger, and no one else can string it, let alone bend it.</description>
     <techLevel>Medieval</techLevel>
     <smeltable>false</smeltable>
     <tradeability>None</tradeability>
@@ -67,7 +67,7 @@
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>RH_Weapon_Ranger_T2</defName>
     <label>hero longbow</label>
-    <description>A masterwork recurve longbow, its limbs sprung like a tuned spring and wrapped in hunter's green. It looses a faster, surer arrow than the lesser bow.</description>
+    <description>A masterwork recurve longbow, its limbs tuned tight and wrapped in hunter's green. It sends an arrow faster and straighter than the lesser bow ever could.</description>
     <techLevel>Medieval</techLevel>
     <smeltable>false</smeltable>
     <tradeability>None</tradeability>
@@ -127,7 +127,7 @@
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>RH_Weapon_Ranger_T3</defName>
     <label>greater hero longbow</label>
-    <description>A horn-and-gold composite recurve set with a single blood-ruby, its draw humming with banked power. It sends an arrow flat and far through heavy armour.</description>
+    <description>A horn-and-gold composite recurve set with a single blood-ruby, its draw humming with held-back power. Its arrows fly flat and far, and punch clean through heavy armour.</description>
     <techLevel>Medieval</techLevel>
     <smeltable>false</smeltable>
     <tradeability>None</tradeability>
@@ -187,7 +187,7 @@
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>RH_Weapon_Ranger_T4</defName>
     <label>perfect hero longbow</label>
-    <description>A bow wrought of enchanted heartwood and gold, its string a thread of cold light and its limbs scribed with running runes. Every arrow flies as if guided.</description>
+    <description>A bow wrought of enchanted heartwood and gold, its string a taut thread of cold light, its limbs scribed with running runes. Every arrow flies as though something unseen guides it home.</description>
     <techLevel>Medieval</techLevel>
     <smeltable>false</smeltable>
     <tradeability>None</tradeability>
@@ -247,7 +247,7 @@
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>RH_Weapon_Ranger_T5</defName>
     <label>Stormfall</label>
-    <description>The capstone longbow of the ranger, won only by a hero at the height of their legend. Its limbs and string crackle with caged storm-light; each loosed arrow leaves on a crack of thunder and strikes like a falling bolt.</description>
+    <description>The ranger's capstone longbow, won only by a hero standing at the height of their legend. Caged storm-light crackles down its limbs and string; each arrow leaves on a clap of thunder and lands like a falling bolt.</description>
     <techLevel>Medieval</techLevel>
     <smeltable>false</smeltable>
     <tradeability>None</tradeability>

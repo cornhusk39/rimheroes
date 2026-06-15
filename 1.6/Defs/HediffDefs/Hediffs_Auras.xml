@@ -50,7 +50,7 @@
   <HediffDef>
     <defName>RH_Vanished</defName>
     <label>vanished</label>
-    <description>Melted into cover and shadow - unseen by enemies for a short time.</description>
+    <description>Melted into cover and shadow, unseen by enemies for a short time.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <everCurableByItem>false</everCurableByItem>

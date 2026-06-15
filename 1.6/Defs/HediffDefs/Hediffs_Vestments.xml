@@ -17,7 +17,7 @@
   <HediffDef ParentName="RH_VestmentMartialBase">
     <defName>RH_Vestment_Fighter</defName>
     <label>fighter's vestment</label>
-    <description>A hero's battle harness, bound to their very destiny. It cannot be removed, and it grows with its bearer - plain leathers hardening into legend-forged plate. It IS the fighter's armor; mundane torso armor cannot be worn over it.</description>
+    <description>A hero's battle harness, bound to their very destiny. It cannot be removed, and it grows with its bearer, plain leathers hardening into legend-forged plate. It IS the fighter's armor; mundane torso armor cannot be worn over it.</description>
     <modExtensions>
       <li Class="RimHeroes.VestmentExtension">
         <baseColor>(0.78, 0.22, 0.18)</baseColor>

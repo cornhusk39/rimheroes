@@ -29,7 +29,7 @@
   <AbilityDef ParentName="RH_MartialBase">
     <defName>RH_Ability_Rend</defName>
     <label>rend</label>
-    <description>Tear into a foe with claw and beak - far worse for the already-wounded.</description>
+    <description>Tear into a foe with claw and beak, savaging the already-wounded all the harder.</description>
     <iconPath>UI/RimHeroes/WildshapeOwlbear</iconPath>
     <cooldownTicksRange>600</cooldownTicksRange>
     <hostile>true</hostile>

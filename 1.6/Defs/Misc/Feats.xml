@@ -6,70 +6,70 @@
   <RimHeroes.FeatDef>
     <defName>RH_Feat_Resilient</defName>
     <label>Resilient</label>
-    <description>You shrug off blows that would fell others. Take 10% less damage from all sources.</description>
+    <description>You shrug off blows that would put others on the ground. Take 10% less damage from all sources.</description>
     <appliedHediff>RH_FeatHediff_Resilient</appliedHediff>
   </RimHeroes.FeatDef>
 
   <RimHeroes.FeatDef>
     <defName>RH_Feat_Ironhide</defName>
     <label>Ironhide</label>
-    <description>Your skin turns blades. Better sharp and blunt armour, and a little less damage taken.</description>
+    <description>Your skin turns blades aside like bark. Better sharp and blunt armour, and a little less damage taken.</description>
     <appliedHediff>RH_FeatHediff_Ironhide</appliedHediff>
   </RimHeroes.FeatDef>
 
   <RimHeroes.FeatDef>
     <defName>RH_Feat_Duelist</defName>
     <label>Duelist</label>
-    <description>A master of the blade-dance. Your melee strikes land truer and you slip more blows.</description>
+    <description>You read a fight like a dance you already know the steps to. Your melee strikes land truer and you slip more blows.</description>
     <appliedHediff>RH_FeatHediff_Duelist</appliedHediff>
   </RimHeroes.FeatDef>
 
   <RimHeroes.FeatDef>
     <defName>RH_Feat_Deadeye</defName>
     <label>Deadeye</label>
-    <description>Preternaturally steady aim — better ranged accuracy and faster shots.</description>
+    <description>A stillness in the hands that no battlefield can shake. Better ranged accuracy and faster shots.</description>
     <appliedHediff>RH_FeatHediff_Deadeye</appliedHediff>
   </RimHeroes.FeatDef>
 
   <RimHeroes.FeatDef>
     <defName>RH_Feat_WarCaster</defName>
     <label>War Caster</label>
-    <description>You channel even amid the chaos of battle. Your spells hit noticeably harder.</description>
+    <description>You hold the weave steady even as the world comes apart around you. Your spells hit noticeably harder.</description>
     <appliedHediff>RH_FeatHediff_WarCaster</appliedHediff>
   </RimHeroes.FeatDef>
 
   <RimHeroes.FeatDef>
     <defName>RH_Feat_SpellFocus</defName>
     <label>Spell Focus</label>
-    <description>Long study sharpens your craft. Your spells hit harder still.</description>
+    <description>Years of study honed to a single point. Your spells hit harder still.</description>
     <appliedHediff>RH_FeatHediff_SpellFocus</appliedHediff>
   </RimHeroes.FeatDef>
 
   <RimHeroes.FeatDef>
     <defName>RH_Feat_Fleet</defName>
     <label>Fleet</label>
-    <description>Light and quick on your feet — a marked boost to movement.</description>
+    <description>You move like the ground was made to help you. A marked boost to movement.</description>
     <appliedHediff>RH_FeatHediff_Fleet</appliedHediff>
   </RimHeroes.FeatDef>
 
   <RimHeroes.FeatDef>
     <defName>RH_Feat_Lucky</defName>
     <label>Lucky</label>
-    <description>Fortune favours you — a little better at dodging, working, and holding your nerve.</description>
+    <description>Fortune leans your way more often than it should. A little better at dodging, working, and holding your nerve.</description>
     <appliedHediff>RH_FeatHediff_Lucky</appliedHediff>
   </RimHeroes.FeatDef>
 
   <RimHeroes.FeatDef>
     <defName>RH_Feat_Prodigy</defName>
     <label>Prodigy</label>
-    <description>A quick study — you work and learn markedly faster.</description>
+    <description>Things click for you that take others years. You work and learn markedly faster.</description>
     <appliedHediff>RH_FeatHediff_Prodigy</appliedHediff>
   </RimHeroes.FeatDef>
 
   <RimHeroes.FeatDef>
     <defName>RH_Feat_Stalwart</defName>
     <label>Stalwart</label>
-    <description>Iron of will and constitution — harder to break, and you fight off illness faster.</description>
+    <description>Iron in the will and iron in the gut. Harder to break, and you fight off illness faster.</description>
     <appliedHediff>RH_FeatHediff_Stalwart</appliedHediff>
   </RimHeroes.FeatDef>
 

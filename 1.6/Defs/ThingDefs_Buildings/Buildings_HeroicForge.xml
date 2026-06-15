@@ -6,7 +6,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>RH_HeroicForge</defName>
     <label>heroic forge</label>
-    <description>A smith's forge attuned to heroic destinies. Here a colony forges the class-bound weapons of its heroes. Anyone may craft them, but only the right hero may wield them. The forge draws on the heroes' own destiny and needs no power.</description>
+    <description>A smith's forge attuned to heroic destinies. Here a colony shapes the class-bound weapons its heroes are owed. Anyone may craft them, but only the right hero may ever wield them. The forge feeds on destiny rather than fuel, and so it needs no power.</description>
     <thingClass>Building_WorkTable</thingClass>
     <graphicData>
       <texPath>Things/RimHeroes/Buildings/HeroicForge</texPath>

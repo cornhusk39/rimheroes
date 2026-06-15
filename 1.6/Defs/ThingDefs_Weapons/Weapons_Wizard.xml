@@ -6,7 +6,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Wizard_T1</defName>
     <label>lesser hero staff</label>
-    <description>A plain wooden staff with a small bound stone lashed at its head. A poor club, but in a hero wizard's grip it focuses the weave and lends weight to their spells.</description>
+    <description>A plain wooden staff with a small bound stone lashed at its head. It makes a poor club, but in a hero wizard's grip it gathers the weave and lends real weight to their spells.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Wizard/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <tools>
@@ -19,7 +19,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Wizard_T2</defName>
     <label>hero staff</label>
-    <description>A silver-shod staff crowned with a cut blue gem. The stone drinks ambient mana, sharpening every incantation its bearer speaks.</description>
+    <description>A silver-shod staff crowned with a cut blue gem. The stone draws in the mana around it and sharpens every incantation its bearer speaks.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Wizard/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <tools>
@@ -32,7 +32,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Wizard_T3</defName>
     <label>greater hero staff</label>
-    <description>An ornate staff whose silver claws cradle a floating orb that never quite touches its setting. A faint arcane glow trails the bearer, and their spells strike with a scholar's precision.</description>
+    <description>An ornate staff whose silver claws hold a floating orb that never quite settles into them. A faint arcane glow trails the bearer, and their spells land with a scholar's precision.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Wizard/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <tools>
@@ -45,7 +45,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Wizard_T4</defName>
     <label>perfect hero staff</label>
-    <description>A runed staff crowned with a brilliant crystal that sheds cold light across the field. Glyphs crawl up its shaft as it answers the bearer's will, and spent through it, every spell redoubles.</description>
+    <description>A runed staff crowned with a brilliant crystal that throws cold light across the field. Glyphs crawl up the shaft as it answers the bearer's will, and any spell loosed through it strikes with redoubled force.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Wizard/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <tools>
@@ -58,7 +58,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Wizard_T5</defName>
     <label>Codex Eterna</label>
-    <description>The capstone focus of the wizard, won only by a hero who has read the world down to its first runes. Crowned with a blazing arcane crystal and ringed by orbiting motes like a captive constellation, it does not amplify magic so much as remember it. With the Codex in hand, no spell is beyond reach.</description>
+    <description>The wizard's capstone focus, won only by a hero who has read the world down to its first runes. Crowned with a blazing arcane crystal and ringed by orbiting motes like a captive constellation, it does not so much amplify magic as recall it whole. With the Codex in hand, no spell lies beyond reach.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Wizard/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>9000</MarketValue></statBases>
     <tools>

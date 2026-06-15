@@ -11,7 +11,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_ShockingGrasp</defName>
     <label>shocking grasp</label>
-    <description>Loose a jolt of lightning into a foe at close range, leaving them twitching. Cantrip - costs no spell slot.</description>
+    <description>Loose a jolt of lightning into a foe at close range, leaving them twitching. Cantrip, costs no spell slot.</description>
     <iconPath>UI/RimHeroes/ShockingGrasp</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>
@@ -37,7 +37,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_TollTheDead</defName>
     <label>toll the dead</label>
-    <description>A mournful bell only the target hears wracks them with pain - and far worse if they are already hurt. Cantrip - costs no spell slot.</description>
+    <description>A mournful bell only the target hears wracks them with pain, and bites far deeper into one already wounded. Cantrip, costs no spell slot.</description>
     <iconPath>UI/RimHeroes/TollTheDead</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>

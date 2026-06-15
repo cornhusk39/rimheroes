@@ -4,7 +4,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Warlock_T1</defName>
     <label>lesser hero pact-dagger</label>
-    <description>A plain dark athame, both a stabbing blade and a focus for a warlock's borrowed power. A small green gem set in the pommel drinks the dark and gives nothing back.</description>
+    <description>A plain dark athame, at once a stabbing blade and a focus for a warlock's borrowed power. The small green gem in its pommel swallows the dark around it and gives nothing back.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Warlock/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <tools>
@@ -17,7 +17,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Warlock_T2</defName>
     <label>hero pact-dagger</label>
-    <description>A keener athame whose pommel has opened into a lidless eye, its hilt etched in sickly green sigils. The patron watches a little closer now.</description>
+    <description>A keener athame whose pommel has opened into a lidless eye, its hilt cut with sickly green sigils. The patron watches a little closer now, and lends its power a little quicker.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Warlock/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <tools>
@@ -30,7 +30,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Warlock_T3</defName>
     <label>greater hero pact-dagger</label>
-    <description>An ornate violet-hilted athame, its dark blade graven with green runes that hold a faint, breathing glow. Spells cast through it bite as deep as the blade itself.</description>
+    <description>An ornate violet-hilted athame, its dark blade graven with green runes that hold a slow, breathing glow. The spells cast through it bite every bit as deep as the blade.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Warlock/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <tools>
@@ -43,7 +43,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Warlock_T4</defName>
     <label>perfect hero pact-dagger</label>
-    <description>A pact-blade wreathed in a withering green aura, an open eye burning at its heart. The air around it greys and dies, and the patron's voice is never far.</description>
+    <description>A pact-blade shrouded in a withering green aura, an open eye burning at its heart. The air around it greys and dies, the patron's whisper never quite out of earshot, and its power flooding the warlock's every spell.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Warlock/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <tools>
@@ -56,7 +56,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Warlock_T5</defName>
     <label>Maw of the Patron</label>
-    <description>The capstone athame of the warlock, won only by a hero who has paid every clause of the pact in full. Its blade is wreathed in green eldritch fire and a glaring eye stares from the pommel; where it cuts, the world remembers being unmade. Tendrils of cold green flame answer the patron's hunger.</description>
+    <description>The warlock's capstone athame, won only by a hero who has paid out every clause of the pact in full. Green eldritch fire sheathes the blade and a glaring eye stares from the pommel; where it cuts, the world seems to recall being unmade. Tendrils of cold green flame uncoil from it to answer the patron's hunger.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Warlock/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>9000</MarketValue></statBases>
     <tools>

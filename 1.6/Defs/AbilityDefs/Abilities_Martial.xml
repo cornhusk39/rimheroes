@@ -58,7 +58,7 @@
   <AbilityDef ParentName="RH_MartialBase">
     <defName>RH_Ability_PatientDefense</defName>
     <label>patient defense</label>
-    <description>Settle into a still, ready guard - briefly very hard to hit.</description>
+    <description>Settle into a still, ready guard, becoming very hard to hit for a moment.</description>
     <iconPath>UI/RimHeroes/PatientDefense</iconPath>
     <cooldownTicksRange>600</cooldownTicksRange>
     <hostile>false</hostile>
@@ -132,7 +132,7 @@
   <AbilityDef ParentName="RH_MartialBase">
     <defName>RH_Ability_EmptyBody</defName>
     <label>empty body</label>
-    <description>Slip half out of the world - briefly very hard to see or strike.</description>
+    <description>Slip half out of the world, becoming very hard to see or strike for a short time.</description>
     <iconPath>UI/RimHeroes/EmptyBody</iconPath>
     <cooldownTicksRange>30000</cooldownTicksRange>
     <hostile>false</hostile>

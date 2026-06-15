@@ -8,7 +8,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_SacredFlame</defName>
     <label>sacred flame</label>
-    <description>Radiant fire descends on a foe. Cantrip - costs no spell slot.</description>
+    <description>Call down a flicker of radiant fire onto a foe. Cantrip, costs no spell slot.</description>
     <iconPath>UI/RimHeroes/SacredFlame</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>
@@ -36,7 +36,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_ViciousMockery</defName>
     <label>vicious mockery</label>
-    <description>An insult laced with subtle enchantment. It genuinely hurts. Cantrip - costs no spell slot.</description>
+    <description>A cutting insult laced with subtle enchantment, sharp enough to draw real blood. Cantrip, costs no spell slot.</description>
     <iconPath>UI/RimHeroes/ViciousMockery</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>
@@ -64,7 +64,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_EldritchBlast</defName>
     <label>eldritch blast</label>
-    <description>A crackling beam of otherworldly force. The signature of every pact. Cantrip - costs no spell slot.</description>
+    <description>A crackling beam of otherworldly force, the signature strike of every warlock's pact. Cantrip, costs no spell slot.</description>
     <iconPath>UI/RimHeroes/EldritchBlast</iconPath>
     <level>0</level>
     <cooldownTicksRange>90</cooldownTicksRange>
@@ -108,7 +108,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_Thornlash</defName>
     <label>thornlash</label>
-    <description>A whip of thorned vine lashes out from the druid's hand. Cantrip - costs no spell slot.</description>
+    <description>A whip of thorned vine lashes out to rake a nearby foe. Cantrip, costs no spell slot.</description>
     <iconPath>UI/RimHeroes/Thornlash</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>

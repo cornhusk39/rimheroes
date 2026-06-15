@@ -190,8 +190,8 @@ namespace RimHeroes
                 case ChoiceKind.Favored: return $"{hero.pawn.LabelShortCap} marks the kind of foe they hunt best.";
                 case ChoiceKind.Pact: return $"{hero.pawn.LabelShortCap}'s patron offers a gift.";
                 case ChoiceKind.Secret: return $"{hero.pawn.LabelShortCap} masters a spell from another tradition.";
-                case ChoiceKind.Trait: return $"{hero.pawn.LabelShortCap} has grown — pick one trait to keep.";
-                default: return $"{hero.pawn.LabelShortCap} has earned a feat — pick one.";
+                case ChoiceKind.Trait: return $"{hero.pawn.LabelShortCap} has grown. Pick one trait to keep.";
+                default: return $"{hero.pawn.LabelShortCap} has earned a feat. Choose one.";
             }
         }
 

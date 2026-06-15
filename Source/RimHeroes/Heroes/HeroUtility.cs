@@ -41,7 +41,7 @@ namespace RimHeroes
                 return existing;
             }
             // The blessing remakes flesh and fate: strip rolled traits and lasting afflictions so the
-            // hero begins clean. Universal — so enemy heroes generated for raids are clean too.
+            // hero begins clean. Universal - so enemy heroes generated for raids are clean too.
             CleanseForHeroism(pawn, classDef);
             if (pawn.story?.traits != null && !pawn.story.traits.HasTrait(RH_DefOf.RH_Hero))
             {

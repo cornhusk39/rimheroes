@@ -8,7 +8,7 @@
   <HediffDef>
     <defName>RH_Rage</defName>
     <label>raging</label>
-    <description>A red fury: blows barely register and damage flows easily, though precision suffers.</description>
+    <description>A red fury where blows barely register and damage flows easily, though precision suffers.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>
@@ -48,7 +48,7 @@
   <HediffDef>
     <defName>RH_PatientDefense</defName>
     <label>patient defense</label>
-    <description>A still, ready stance - very hard to land a blow on.</description>
+    <description>A still, ready stance that makes them very hard to land a blow on.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>
@@ -65,7 +65,7 @@
   <HediffDef>
     <defName>RH_StepWind</defName>
     <label>step of the wind</label>
-    <description>Light as a gust - moving at blinding speed.</description>
+    <description>Light as a gust, moving at blinding speed.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>
@@ -82,7 +82,7 @@
   <HediffDef>
     <defName>RH_EmptyBody</defName>
     <label>empty body</label>
-    <description>Faded from the world - unseen by enemies and quick on your feet. Lasts only moments.</description>
+    <description>Faded from the world, unseen by enemies and quick on their feet. Lasts only moments.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <everCurableByItem>false</everCurableByItem>
@@ -104,7 +104,7 @@
   <HediffDef>
     <defName>RH_CunningAction</defName>
     <label>cunning action</label>
-    <description>Darting and weaving - quick to reposition and slip away.</description>
+    <description>Darting and weaving, quick to reposition and slip away.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>
@@ -121,7 +121,7 @@
   <HediffDef>
     <defName>RH_Stunned</defName>
     <label>stunned</label>
-    <description>Reeling from a precise blow - momentarily unable to move or fight.</description>
+    <description>Reeling from a precise blow, momentarily unable to move or fight.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>true</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>

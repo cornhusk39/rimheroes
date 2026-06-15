@@ -28,7 +28,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Fighter</defName>
     <label>tome of the fighter</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the fighter's path - a destiny that cannot be undone.</description>
+    <description>A battered drill-manual, its margins crowded with the notes of soldiers long dead. Whoever truly studies it awakens as a Hero of the fighter's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -51,7 +51,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Barbarian</defName>
     <label>tome of the barbarian</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the barbarian's path - a destiny that cannot be undone.</description>
+    <description>Less a book than a bundle of hide and bone, scratched with the war-cries of old clans. Whoever truly studies it awakens as a Hero of the barbarian's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -74,7 +74,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Monk</defName>
     <label>tome of the monk</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the monk's path - a destiny that cannot be undone.</description>
+    <description>Spare pages of breathing-forms and quiet discipline, worn soft by a thousand readings. Whoever truly studies it awakens as a Hero of the monk's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -97,7 +97,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Rogue</defName>
     <label>tome of the rogue</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the rogue's path - a destiny that cannot be undone.</description>
+    <description>A slim, unmarked book of locks, lies, and lethal angles, the kind that is never sold openly. Whoever truly studies it awakens as a Hero of the rogue's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -120,7 +120,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Ranger</defName>
     <label>tome of the ranger</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the ranger's path - a destiny that cannot be undone.</description>
+    <description>A field journal of tracks, snares, and quiet kills, its pages still smelling faintly of pine. Whoever truly studies it awakens as a Hero of the ranger's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -143,7 +143,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Paladin</defName>
     <label>tome of the paladin</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the paladin's path - a destiny that cannot be undone.</description>
+    <description>A book of oaths bound in pale leather, each vow heavier than the last. Whoever truly studies it awakens as a Hero of the paladin's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -166,7 +166,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Cleric</defName>
     <label>tome of the cleric</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the cleric's path - a destiny that cannot be undone.</description>
+    <description>A holy book whose prayers seem to read themselves aloud in the quiet. Whoever truly studies it awakens as a Hero of the cleric's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -189,7 +189,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Druid</defName>
     <label>tome of the druid</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the druid's path - a destiny that cannot be undone.</description>
+    <description>Bark-bound pages that still seem to be growing, ink the colour of sap and storm. Whoever truly studies it awakens as a Hero of the druid's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -212,7 +212,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Wizard</defName>
     <label>tome of the wizard</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the wizard's path - a destiny that cannot be undone.</description>
+    <description>A dense grimoire of diagrams and dangerous equations, the kind that rewards patience and punishes haste. Whoever truly studies it awakens as a Hero of the wizard's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -235,7 +235,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Sorcerer</defName>
     <label>tome of the sorcerer</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the sorcerer's path - a destiny that cannot be undone.</description>
+    <description>A book that grows warm in the hands of the wrong reader, as if recognising kin. Whoever truly studies it awakens as a Hero of the sorcerer's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -258,7 +258,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Bard</defName>
     <label>tome of the bard</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the bard's path - a destiny that cannot be undone.</description>
+    <description>A songbook of half the world's stories and a few it would rather forget. Whoever truly studies it awakens as a Hero of the bard's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -281,7 +281,7 @@
   <ThingDef ParentName="RH_TomeBase">
     <defName>RH_Tome_Warlock</defName>
     <label>tome of the warlock</label>
-    <description>A worn manual of legend. A pawn who studies it awakens as a Hero of the warlock's path - a destiny that cannot be undone.</description>
+    <description>A book that reads like a contract, with terms you only notice once you have agreed to them. Whoever truly studies it awakens as a Hero of the warlock's path. That awakening cannot be undone.</description>
     <graphicData>
       <texPath>Things/Item/Book/Textbook/Textbook</texPath>
       <graphicClass>Graphic_Single</graphicClass>

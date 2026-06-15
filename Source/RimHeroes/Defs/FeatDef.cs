@@ -6,7 +6,7 @@ namespace RimHeroes
 {
     /// <summary>
     /// A feat: a permanent perk a hero picks at an ASI level (4/8/12/16/19). RimWorld-flavored
-    /// translation of 5e feats — applies a perk hediff, optionally grants an ability and/or a trait.
+    /// translation of 5e feats - applies a perk hediff, optionally grants an ability and/or a trait.
     /// </summary>
     public class FeatDef : Def
     {

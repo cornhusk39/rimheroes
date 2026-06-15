@@ -28,7 +28,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Barbarian_T1</defName>
     <label>lesser hero greataxe</label>
-    <description>A brutal two-handed greataxe, far heavier and keener than any common axe. Bound to the rage of a hero barbarian — none but they can lift it in anger.</description>
+    <description>A crude two-handed greataxe, heavier in the head and keener at the edge than any axe a smith would call common. It is bound to a hero barbarian's rage, and no one else can heft it in anger.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Barbarian/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <tools>
@@ -41,7 +41,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Barbarian_T2</defName>
     <label>hero greataxe</label>
-    <description>A masterwork steel greataxe, etched with a rune of fury. It bites deeper and swings truer than the lesser axe.</description>
+    <description>A masterwork steel greataxe cut with a single rune of fury along the cheek. It bites deeper and tracks truer through a swing than any lesser blade.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Barbarian/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <tools>
@@ -54,7 +54,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Barbarian_T3</defName>
     <label>greater hero greataxe</label>
-    <description>A gold-bound greataxe set with a blood-ruby, its edges humming with banked power. Cleaves heavy armour like cloth.</description>
+    <description>A gold-bound greataxe set with a blood-ruby, its edges humming with held-back power. Plate splits before it like wet cloth.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Barbarian/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <tools>
@@ -67,7 +67,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Barbarian_T4</defName>
     <label>perfect hero greataxe</label>
-    <description>A greataxe wreathed in molten runelight, its spiked bits singing with bound fire. Few foes survive a single full swing.</description>
+    <description>A greataxe sheathed in molten runelight, its spiked bits keening with bound fire. Almost nothing on two legs walks away from a full swing.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Barbarian/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <tools>
@@ -80,7 +80,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Barbarian_T5</defName>
     <label>Worldcleaver</label>
-    <description>The capstone greataxe of the barbarian, won only by a hero who has reached the height of their legend. Its molten core never cools; one swing splits earth and army alike.</description>
+    <description>The barbarian's capstone greataxe, taken up only by a hero whose legend has run its full length. The molten heart of the blade never cools, and a single swing parts earth and army with the same indifference.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Barbarian/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>9000</MarketValue><Mass>4.2</Mass></statBases>
     <tools>

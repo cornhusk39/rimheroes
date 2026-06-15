@@ -7,7 +7,7 @@
   <StatDef>
     <defName>RH_SpellPower</defName>
     <label>spell power</label>
-    <description>A multiplier on the strength of this hero's spells — damage dealt, wounds healed, and effect magnitude. A class focus weapon (staff, mace, grimoire, and the like) raises it.</description>
+    <description>A multiplier on the strength of this hero's spells - damage dealt, wounds healed, and effect magnitude. A class focus weapon (staff, mace, grimoire, and the like) raises it.</description>
     <category>PawnCombat</category>
     <defaultBaseValue>1.0</defaultBaseValue>
     <minValue>0.1</minValue>

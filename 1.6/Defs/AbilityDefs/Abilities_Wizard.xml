@@ -19,7 +19,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_FireBolt</defName>
     <label>fire bolt</label>
-    <description>Hurl a mote of fire at a target. Cantrip - costs no spell slot.</description>
+    <description>Hurl a mote of fire at a distant target. Cantrip, costs no spell slot.</description>
     <iconPath>UI/RimHeroes/FireBolt</iconPath>
     <level>0</level>
     <cooldownTicksRange>90</cooldownTicksRange>

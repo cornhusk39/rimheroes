@@ -6,7 +6,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Cleric_T1</defName>
     <label>lesser hero mace</label>
-    <description>A stout iron mace crowned with a flanged sun-head, blessed for a hero cleric's hand. It channels the faintest thread of holy power and still cracks bone with ease.</description>
+    <description>A stout iron mace topped with a flanged sun-head, consecrated for a hero cleric's grip. It carries only the faintest thread of holy power, yet it still caves a skull without complaint.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Cleric/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <tools>
@@ -19,7 +19,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Cleric_T2</defName>
     <label>hero mace</label>
-    <description>A silver-headed mace bearing a gilded sun emblem. The holy sigil drinks the light of prayer, lending real strength to a cleric's invocations.</description>
+    <description>A silver-headed mace stamped with a gilded sun. The sigil seems to drink in every prayer spoken near it, and gives that strength back to the cleric's invocations.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Cleric/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <tools>
@@ -32,7 +32,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Cleric_T3</defName>
     <label>greater hero mace</label>
-    <description>An ornate golden mace, its sun-head ringed with rays and set with a pale gem. A faint holy glow clings to the metal, and miracles come quicker to its bearer.</description>
+    <description>An ornate golden mace whose sun-head fans out in carved rays around a pale gem. A soft holy glow rests on the metal, and miracles answer its bearer faster than they have any right to.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Cleric/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <tools>
@@ -45,7 +45,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Cleric_T4</defName>
     <label>perfect hero mace</label>
-    <description>A radiant mace whose sun-head sheds true light, runes burning bright around its rim and a halo of holy glow at its crown. In a cleric's grip it pours out power like sunrise.</description>
+    <description>A radiant mace whose sun-head casts real light, its rim ringed with burning runes and crowned in a halo of holy fire. In a cleric's hand it floods their prayers with power, steady and bright as a sunrise.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Cleric/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <tools>
@@ -58,7 +58,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Cleric_T5</defName>
     <label>Lightbringer</label>
-    <description>The capstone mace of the cleric, blazing with holy light from a brilliant sunburst head that never dims. Won only by a hero who has reached the height of their faith; its radiance scatters darkness and shatters the wicked in a single righteous blow.</description>
+    <description>The cleric's capstone mace, its sunburst head blazing with a holy light that never dims. It comes only to a hero whose faith has run as deep as faith can go; its radiance throws back the dark, and one righteous blow is enough to break the wicked outright.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Cleric/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>9000</MarketValue><Mass>4.2</Mass></statBases>
     <tools>

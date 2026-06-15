@@ -7,21 +7,21 @@
   <HediffDef ParentName="RH_FeatPerkBase">
     <defName>RH_FeatHediff_Empowered</defName>
     <label>empowered spell</label>
-    <description>You pour raw force into your magic - it hits noticeably harder.</description>
+    <description>You pour raw force into your magic, and it hits noticeably harder.</description>
     <stages><li><statOffsets><RH_SpellPower>0.15</RH_SpellPower></statOffsets></li></stages>
   </HediffDef>
 
   <HediffDef ParentName="RH_FeatPerkBase">
     <defName>RH_FeatHediff_CarefulMagic</defName>
     <label>careful spell</label>
-    <description>You shape your magic so it never turns on you - and the backlash of battle bothers you less.</description>
+    <description>You shape your magic so it never turns on you, and the backlash of battle bothers you less.</description>
     <stages><li><statFactors><IncomingDamageFactor>0.90</IncomingDamageFactor></statFactors></li></stages>
   </HediffDef>
 
   <HediffDef ParentName="RH_FeatPerkBase">
     <defName>RH_FeatHediff_SubtleMagic</defName>
     <label>subtle spell</label>
-    <description>You cast without obvious tell - composed under pressure and more persuasive.</description>
+    <description>You cast without obvious tell, composed under pressure and more persuasive.</description>
     <stages><li><statOffsets><MentalBreakThreshold>-0.1</MentalBreakThreshold><SocialImpact>0.2</SocialImpact></statOffsets></li></stages>
   </HediffDef>
 
@@ -43,42 +43,42 @@
   <HediffDef ParentName="RH_FeatPerkBase">
     <defName>RH_FeatHediff_AgonizingBlast</defName>
     <label>agonizing blast</label>
-    <description>Your eldritch power lands with cruel force - your spells hit harder.</description>
+    <description>Your eldritch power lands with cruel force, and your spells hit harder.</description>
     <stages><li><statOffsets><RH_SpellPower>0.12</RH_SpellPower></statOffsets></li></stages>
   </HediffDef>
 
   <HediffDef ParentName="RH_FeatPerkBase">
     <defName>RH_FeatHediff_DevilsSight</defName>
     <label>devil's sight</label>
-    <description>Darkness is no veil to you - your aim never falters for want of light.</description>
+    <description>Darkness is no veil to you, and your aim never falters for want of light.</description>
     <stages><li><statOffsets><ShootingAccuracyPawn>3</ShootingAccuracyPawn></statOffsets></li></stages>
   </HediffDef>
 
   <HediffDef ParentName="RH_FeatPerkBase">
     <defName>RH_FeatHediff_ArmorOfShadows</defName>
     <label>armor of shadows</label>
-    <description>Wreathed in protective gloom - a standing ward against harm.</description>
+    <description>Wreathed in protective gloom, a standing ward against harm.</description>
     <stages><li><statOffsets><ArmorRating_Sharp>0.15</ArmorRating_Sharp><ArmorRating_Blunt>0.15</ArmorRating_Blunt></statOffsets></li></stages>
   </HediffDef>
 
   <HediffDef ParentName="RH_FeatPerkBase">
     <defName>RH_FeatHediff_FiendishResilience</defName>
     <label>fiendish resilience</label>
-    <description>Your patron's vitality flows in you - harder to hurt and harder to drop.</description>
+    <description>Your patron's vitality flows in you, harder to hurt and harder to drop.</description>
     <stages><li><statFactors><IncomingDamageFactor>0.92</IncomingDamageFactor></statFactors><statOffsets><PainShockThreshold>0.15</PainShockThreshold></statOffsets></li></stages>
   </HediffDef>
 
   <HediffDef ParentName="RH_FeatPerkBase">
     <defName>RH_FeatHediff_BeguilingInfluence</defName>
     <label>beguiling influence</label>
-    <description>Honeyed, otherworldly charm - people bend to your words.</description>
+    <description>Honeyed, otherworldly charm that bends people to your words.</description>
     <stages><li><statOffsets><SocialImpact>0.3</SocialImpact></statOffsets></li></stages>
   </HediffDef>
 
   <HediffDef ParentName="RH_FeatPerkBase">
     <defName>RH_FeatHediff_EldritchMind</defName>
     <label>eldritch mind</label>
-    <description>Your mind is anchored against the things you have seen - very hard to break.</description>
+    <description>Your mind is anchored against the things you have seen, very hard to break.</description>
     <stages><li><statOffsets><MentalBreakThreshold>-0.15</MentalBreakThreshold></statOffsets></li></stages>
   </HediffDef>
 

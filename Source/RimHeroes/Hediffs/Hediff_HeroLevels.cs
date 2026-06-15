@@ -791,7 +791,7 @@ namespace RimHeroes
             Find.LetterStack.ReceiveLetter(
                 "Heroic capstone",
                 pawn.LabelShortCap + " has reached the height of their " + classDef.label +
-                " legend. Their capstone weapon — the " + def.label + " — has manifested at their side.",
+                " legend. Their capstone weapon, the " + def.label + ", has manifested at their side.",
                 LetterDefOf.PositiveEvent, new TargetInfo(weapon.PositionHeld, pawn.Map));
         }
 

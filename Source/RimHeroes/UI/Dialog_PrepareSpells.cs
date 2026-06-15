@@ -31,12 +31,12 @@ namespace RimHeroes
             bool editable = hero.PrepareWindowOpen;
 
             Text.Font = GameFont.Medium;
-            Widgets.Label(new Rect(0f, 0f, inRect.width, 34f), "Prepare spells — " + pawn.LabelShortCap);
+            Widgets.Label(new Rect(0f, 0f, inRect.width, 34f), "Prepare spells: " + pawn.LabelShortCap);
             Text.Font = GameFont.Small;
             GUI.color = editable ? new Color(0.7f, 0.9f, 0.7f) : new Color(0.85f, 0.7f, 0.5f);
             Widgets.Label(new Rect(0f, 36f, inRect.width, 24f),
-                $"Prepared {hero.PreparedLeveledCount}/{hero.PreparedMax}" +
-                (editable ? "    — window open" : "    — locked; finish a long rest to change"));
+                $"Prepared {hero.PreparedLeveledCount} of {hero.PreparedMax}" +
+                (editable ? "   (you may change these now)" : "   (locked. Finish a long rest to change them.)"));
             GUI.color = Color.white;
 
             var spells = pawn.abilities.abilities
@@ -68,7 +68,7 @@ namespace RimHeroes
                     if (now && !prepared)
                     {
                         if (!hero.SetPrepared(def, true))
-                            Messages.Message("All spell slots for preparation are full — unready one first.",
+                            Messages.Message("Your prepared spells are full. Unready one first.",
                                 MessageTypeDefOf.RejectInput, false);
                     }
                     else if (!now && prepared)
@@ -79,7 +79,7 @@ namespace RimHeroes
                 else
                 {
                     GUI.color = prepared ? new Color(0.7f, 0.9f, 0.7f) : new Color(0.6f, 0.6f, 0.6f);
-                    Widgets.Label(cb, prepared ? "ready" : "—");
+                    Widgets.Label(cb, prepared ? "ready" : "not ready");
                     GUI.color = Color.white;
                 }
                 y += rowH;

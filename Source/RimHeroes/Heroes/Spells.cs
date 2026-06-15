@@ -135,7 +135,7 @@ namespace RimHeroes
                 {
                     if (!hero.CanCastSpell(def))
                     {
-                        reason = "Not prepared - ready this spell after a long rest";
+                        reason = "This spell is not prepared. Ready it after a long rest.";
                         return true;
                     }
                     if (hero.RemainingSlots(SpellLevel) <= 0)
@@ -327,7 +327,7 @@ namespace RimHeroes
     }
 
     /// <summary>
-    /// Applies a hediff (buff or debuff) to every pawn in a radius — ally buffs (Bless), enemy
+    /// Applies a hediff (buff or debuff) to every pawn in a radius - ally buffs (Bless), enemy
     /// debuffs (Bane, Faerie Fire), or a damaging aura around a point (Spirit Guardians, via a
     /// hediff that ticks damage). targetMode picks who is affected.
     /// </summary>

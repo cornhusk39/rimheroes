@@ -4,7 +4,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Sorcerer_T1</defName>
     <label>lesser hero scepter</label>
-    <description>A plain dark rod crowned with a small red gem, a focus through which a hero sorcerer channels their innate magic. A poor club, but it sharpens the will behind a spell.</description>
+    <description>A plain dark rod tipped with a small red gem, a focus through which a hero sorcerer pours their inborn magic. It makes a poor club, but it sharpens the will behind every spell.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <tools>
@@ -17,7 +17,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Sorcerer_T2</defName>
     <label>hero scepter</label>
-    <description>A gold-banded scepter set with a large crimson gem. The bound metal hums faintly when magic flows through it, lending greater force to every spell.</description>
+    <description>A gold-banded scepter set with a large crimson gem. The bound metal hums when magic runs through it, and pushes greater force behind everything the sorcerer casts.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <tools>
@@ -30,7 +30,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Sorcerer_T3</defName>
     <label>greater hero scepter</label>
-    <description>An ornate scepter cradling a faceted crimson crystal in golden claws. A faint crackle of energy dances at its crown, drawn out by the sorcerer's growing power.</description>
+    <description>An ornate scepter holding a faceted crimson crystal in golden claws. Energy crackles and skips across its crown, coaxed out by the sorcerer's swelling power.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <tools>
@@ -43,7 +43,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Sorcerer_T4</defName>
     <label>perfect hero scepter</label>
-    <description>A scepter wreathed in arcing gold sparks, its glowing gem haloed in raw magic. In a hero's grip it makes spells erupt with brutal, near-uncontrollable force.</description>
+    <description>A scepter wreathed in arcing gold sparks, its glowing gem ringed with raw magic. In a hero's grip it makes spells detonate with brutal force that barely stays leashed.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <tools>
@@ -56,7 +56,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Sorcerer_T5</defName>
     <label>Bloodfire Scepter</label>
-    <description>The capstone scepter of the sorcerer, won only by a hero who has reached the height of their legend. Molten crimson-gold bloodfire erupts from its gem and never dies; the spells it focuses fall on the world like a burning storm.</description>
+    <description>The sorcerer's capstone scepter, won only by a hero whose legend stands at its peak. Molten crimson-gold bloodfire pours from its gem and never gutters out; the spells it focuses come down on the world like a storm made of fire.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>9000</MarketValue></statBases>
     <tools>

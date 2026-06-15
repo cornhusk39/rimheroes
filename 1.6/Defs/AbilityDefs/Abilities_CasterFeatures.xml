@@ -109,7 +109,7 @@
   <AbilityDef ParentName="RH_MartialBase">
     <defName>RH_Ability_SummonImp</defName>
     <label>summon imp</label>
-    <description>Call your pact familiar to your side - a small fiend that flings bolts of fire at your enemies. If your imp is destroyed, you can summon a new one.</description>
+    <description>Call your pact familiar to your side, a small fiend that flings bolts of fire at your enemies. If your imp is destroyed, you can summon a new one.</description>
     <iconPath>UI/RimHeroes/Hex</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <hostile>false</hostile>
@@ -131,7 +131,7 @@
   <AbilityDef ParentName="RH_MartialBase">
     <defName>RH_Ability_BardicInspiration</defName>
     <label>bardic inspiration</label>
-    <description>Bolster an ally with a rousing word or song - steadier and more capable for a time.</description>
+    <description>Bolster an ally with a rousing word or song, leaving them steadier and more capable for a time.</description>
     <iconPath>UI/RimHeroes/BardicInspiration</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <hostile>false</hostile>

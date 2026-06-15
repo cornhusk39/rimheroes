@@ -6,7 +6,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Bard_T1</defName>
     <label>lesser hero lute</label>
-    <description>A plain wooden hero's lute, its bowl carved from dark heartwood. It is no warrior's weapon, but in a bard's hands its first chords already stir courage in allies and dread in foes.</description>
+    <description>A plain lute with a bowl carved from dark heartwood, bound to a hero bard. It will never win a melee, but even its first rough chords lend force to a bard's magic, steadying friends and unsettling foes.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Bard/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <tools>
@@ -19,7 +19,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Bard_T2</defName>
     <label>hero lute</label>
-    <description>A polished lute bound with gold frets and a carved rosette soundhole. Its voice carries clear across a battlefield, and the magic woven through every note rings truer than the lesser instrument.</description>
+    <description>A polished lute strung over gold frets, its soundhole ringed by a carved rosette. The tone carries clean across a battlefield, and the spellcraft riding each note bites harder than the lesser instrument could manage.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Bard/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <tools>
@@ -32,7 +32,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Bard_T3</defName>
     <label>greater hero lute</label>
-    <description>An ornately inlaid lute set with a glowing gemstone above its rosette, a faint golden shimmer clinging to its strings. Spells loosed to its accompaniment land with deeper power.</description>
+    <description>A richly inlaid lute crowned with a glowing gem above the rosette, a faint gold shimmer clinging to the strings. Any spell sung over its accompaniment lands with markedly greater weight.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Bard/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <tools>
@@ -45,7 +45,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Bard_T4</defName>
     <label>perfect hero lute</label>
-    <description>A lute aglow with bound magic, golden music-notes rising unbidden from its blazing strings. Each chord crackles with power, and a hero bard wielding it can turn the tide of a whole engagement with a single song.</description>
+    <description>A lute alive with bound magic, golden notes drifting up unbidden from its blazing strings. Every chord pours raw power into the bard's spellcraft, enough that a single well-placed song can decide an entire fight.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Bard/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <tools>
@@ -58,7 +58,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Bard_T5</defName>
     <label>Dirge of Kings</label>
-    <description>The capstone lute of the bard, won only by a hero who has reached the height of their legend. It radiates golden song without being played; its brilliant inlay shines like a crown, and motes of living music drift from its strings. When a master bard sounds the Dirge of Kings, armies kneel and empires remember their endings.</description>
+    <description>The bard's capstone lute, granted only to a hero whose legend has reached its summit. It sings of its own accord, golden and unplayed; its inlay glitters like a crown, and motes of living music spill from the strings to amplify every spell its bearer weaves. When a master bard strikes the Dirge of Kings, armies kneel and empires recall how they were meant to end.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Bard/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><MarketValue>9000</MarketValue></statBases>
     <tools>

@@ -8,7 +8,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Fighter</defName>
     <label>fighter</label>
-    <description>A master of martial combat. Holds the line while others break.</description>
+    <description>A master of weapons and the line of battle. Stands where lesser soldiers would already be running.</description>
     <vestmentHediff>RH_Vestment_Fighter</vestmentHediff>
     <fightingStyles>true</fightingStyles>
     <bonusFeatLevels>
@@ -33,7 +33,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Barbarian</defName>
     <label>barbarian</label>
-    <description>Fury given a body. Hits like a falling tree and barely notices being hit back.</description>
+    <description>Fury wearing a body. Hits like a falling tree and hardly notices being hit back.</description>
     <vestmentHediff>RH_Vestment_Barbarian</vestmentHediff>
     <levelGrants>
       <li><level>1</level><abilities>
@@ -50,7 +50,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Monk</defName>
     <label>monk</label>
-    <description>A weapon that walks. Speed and discipline in place of steel.</description>
+    <description>A weapon that walks and breathes. Where others reach for steel, the monk has only speed and an unbreakable will.</description>
     <vestmentHediff>RH_Vestment_Monk</vestmentHediff>
     <levelGrants>
       <li><level>2</level><abilities>
@@ -75,7 +75,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Rogue</defName>
     <label>rogue</label>
-    <description>Where the armor isn't. Quick hands, quicker exits.</description>
+    <description>Finds the gap the armor forgot. Quick hands, quicker exits, and a knife already where it hurts most.</description>
     <vestmentHediff>RH_Vestment_Rogue</vestmentHediff>
     <bonusFeatLevels>
       <li>10</li>
@@ -95,7 +95,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Ranger</defName>
     <label>ranger</label>
-    <description>The wild's warden. Tracks anything, drops it from a treeline away.</description>
+    <description>Warden of the wild places. Tracks anything that breathes and drops it from a treeline away.</description>
     <vestmentHediff>RH_Vestment_Ranger</vestmentHediff>
     <casterProgression>Half</casterProgression>
     <cantripsKnownBase>0</cantripsKnownBase>
@@ -139,7 +139,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Paladin</defName>
     <label>paladin</label>
-    <description>An oath wearing armor. Stands between the helpless and the dark.</description>
+    <description>An oath given armor and a sword. Stands between the helpless and the dark, and does not move.</description>
     <vestmentHediff>RH_Vestment_Paladin</vestmentHediff>
     <casterProgression>Half</casterProgression>
     <preparesSpells>true</preparesSpells>
@@ -184,7 +184,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Cleric</defName>
     <label>cleric</label>
-    <description>A conduit of the divine. Mends the broken - and, when the need is great, calls the dead back.</description>
+    <description>A conduit of the divine. Mends the broken, and when the need is dire enough, calls the dead back to finish the fight.</description>
     <vestmentHediff>RH_Vestment_Cleric</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <preparesSpells>true</preparesSpells>
@@ -240,7 +240,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Druid</defName>
     <label>druid</label>
-    <description>A voice of the wild. Wears the shapes of beasts and commands the green.</description>
+    <description>A voice the wild answers to. Wears the shapes of beasts and turns the green itself against intruders.</description>
     <vestmentHediff>RH_Vestment_Druid</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <preparesSpells>true</preparesSpells>
@@ -291,7 +291,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Wizard</defName>
     <label>wizard</label>
-    <description>A scholar of the arcane. Fragile, studious, and capable of erasing a raid before it closes the distance.</description>
+    <description>A scholar of the arcane. Fragile and bookish, and able to erase a whole raid before it reaches the wall.</description>
     <vestmentHediff>RH_Vestment_Wizard</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <preparesSpells>true</preparesSpells>
@@ -389,7 +389,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Sorcerer</defName>
     <label>sorcerer</label>
-    <description>Magic in the blood, begging to get out. Less study than the wizard; more lightning.</description>
+    <description>Magic in the blood, always straining to get out. Less patience than a wizard, and a great deal more lightning.</description>
     <vestmentHediff>RH_Vestment_Sorcerer</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <cantripsKnownBase>4</cantripsKnownBase>
@@ -441,7 +441,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Bard</defName>
     <label>bard</label>
-    <description>Wit sharp enough to wound and songs that close wounds. Better with friends.</description>
+    <description>Wit sharp enough to draw blood and songs that close the wounds again. Always at their best with a crowd to play to.</description>
     <vestmentHediff>RH_Vestment_Bard</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <cantripsKnownBase>2</cantripsKnownBase>
@@ -487,7 +487,7 @@
   <RimHeroes.HeroClassDef>
     <defName>RH_Warlock</defName>
     <label>warlock</label>
-    <description>Power on loan from something that doesn't explain itself. The blast always works; that's the deal.</description>
+    <description>Power borrowed from something that never explains itself. The blast always answers, no matter the hour. That part of the bargain holds.</description>
     <vestmentHediff>RH_Vestment_Warlock</vestmentHediff>
     <casterProgression>Full</casterProgression>
     <cantripsKnownBase>2</cantripsKnownBase>

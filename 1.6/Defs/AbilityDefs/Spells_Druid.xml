@@ -12,7 +12,7 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_ProduceFlame</defName>
     <label>produce flame</label>
-    <description>Kindle a flickering mote of fire in your palm and hurl it at a foe, where it bursts in a gout of flame. Cantrip - costs no spell slot.</description>
+    <description>Kindle a flickering mote of fire in your palm and hurl it at a foe, where it bursts in a gout of flame. Cantrip, costs no spell slot.</description>
     <iconPath>UI/RimHeroes/ProduceFlame</iconPath>
     <level>0</level>
     <cooldownTicksRange>120</cooldownTicksRange>

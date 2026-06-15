@@ -9,7 +9,7 @@
       <li>
         <label>hero</label>
         <degree>0</degree>
-        <description>{PAWN_nameDef} is bound to a heroic destiny. Death itself hesitates to claim {PAWN_objective}.</description>
+        <description>{PAWN_nameDef} is bound to a heroic destiny, and the world seems to bend a little to make room for it. Even death hesitates to claim {PAWN_objective}.</description>
       </li>
     </degreeDatas>
     <exclusionTags>

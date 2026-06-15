@@ -18,7 +18,7 @@
   <HediffDef>
     <defName>RH_DeathsDoor</defName>
     <label>at death's door</label>
-    <description>This hero should be dead - only destiny holds the line. Each hour they make a death saving throw. Three successes and they stabilize; three failures and even destiny lets go. Tended wounds improve the odds, and taking damage in this state counts as a failure.</description>
+    <description>This hero should be dead, and only destiny holds the line. Each hour they make a death saving throw. Three successes and they stabilize; three failures and even destiny lets go. Tended wounds improve the odds, and taking damage in this state counts as a failure.</description>
     <hediffClass>RimHeroes.Hediff_DeathsDoor</hediffClass>
     <isBad>true</isBad>
     <initialSeverity>0.5</initialSeverity>
@@ -36,7 +36,7 @@
   <HediffDef>
     <defName>RH_MimDevotion</defName>
     <label>devotion</label>
-    <description>This mim is bound to a hero. Its spirits - and its diligence - rise and fall with its master's condition.</description>
+    <description>This mim is bound to a hero. Its spirits, and its diligence, rise and fall with its master's condition.</description>
     <hediffClass>RimHeroes.Hediff_MimDevotion</hediffClass>
     <isBad>false</isBad>
     <initialSeverity>0.1</initialSeverity>

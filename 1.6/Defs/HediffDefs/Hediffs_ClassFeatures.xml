@@ -23,7 +23,7 @@
   <HediffDef>
     <defName>RH_ActionSurge</defName>
     <label>action surge</label>
-    <description>A surge of battle focus - faster, harder-hitting, and quicker on their feet.</description>
+    <description>A surge of battle focus: faster, harder-hitting, and quicker on their feet.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>

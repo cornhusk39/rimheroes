@@ -5,7 +5,7 @@
   <HediffDef>
     <defName>RH_Turned</defName>
     <label>turned</label>
-    <description>Struck by holy dread - slowed, shaken, and on the edge of flight.</description>
+    <description>Struck by holy dread: slowed, shaken, and on the edge of flight.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>true</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>
@@ -29,7 +29,7 @@
   <HediffDef>
     <defName>RH_TurnedWeak</defName>
     <label>shaken</label>
-    <description>Unsettled by a wave of holy power - a little slowed and rattled.</description>
+    <description>Unsettled by a wave of holy power, a little slowed and rattled.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>true</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>
@@ -52,7 +52,7 @@
   <HediffDef>
     <defName>RH_Overcharge</defName>
     <label>overcharged</label>
-    <description>Raw magic floods your veins - your spells hit far harder for a short while.</description>
+    <description>Raw magic floods their veins, and their spells hit far harder for a short while.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>
@@ -69,7 +69,7 @@
   <HediffDef>
     <defName>RH_BardicInspiration</defName>
     <label>inspired</label>
-    <description>Emboldened by a bard - steadier aim, surer strikes, and quicker work.</description>
+    <description>Emboldened by a bard: steadier aim, surer strikes, and quicker work.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>

@@ -6,7 +6,7 @@ namespace RimHeroes
 {
     /// <summary>
     /// Marks a hero weapon as bound to one class and a minimum hero level. Only a hero pawn of that
-    /// class, at or above the level, may equip it — no other classes, no non-heroes.
+    /// class, at or above the level, may equip it - no other classes, no non-heroes.
     /// </summary>
     public class WeaponLockExtension : DefModExtension
     {

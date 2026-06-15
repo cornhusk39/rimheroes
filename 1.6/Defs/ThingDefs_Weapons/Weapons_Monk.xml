@@ -6,7 +6,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Monk_T1</defName>
     <label>lesser hero fist wraps</label>
-    <description>Plain cloth strips wound tight around the hands of a hero monk. They turn a bare fist into a disciplined weapon, swift and tireless where heavier arms grow slow.</description>
+    <description>Plain cloth strips wound tight over a hero monk's hands. They turn a bare fist into a disciplined weapon, quick and tireless long after heavier arms have grown slow.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><Mass>0.6</Mass><MarketValue>700</MarketValue></statBases>
     <tools>
@@ -19,7 +19,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Monk_T2</defName>
     <label>hero fist wraps</label>
-    <description>Studded wraps reinforced with a banded bronze knuckle. Each blow lands harder than bare cloth, yet they remain light enough for an endless flurry.</description>
+    <description>Studded wraps backed by a banded bronze knuckle. Each strike lands far harder than bare cloth, yet they stay light enough to keep a flurry going without end.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><Mass>0.6</Mass><MarketValue>1400</MarketValue></statBases>
     <tools>
@@ -32,7 +32,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Monk_T3</defName>
     <label>greater hero fist wraps</label>
-    <description>Wraps capped with shaped bronze knuckle guards and strung with a strand of prayer beads. A faint warmth lingers in the cloth between strikes.</description>
+    <description>Wraps capped with shaped bronze guards and threaded with a strand of prayer beads. A faint warmth lingers in the cloth between blows, and the strikes come faster than the eye expects.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><Mass>0.6</Mass><MarketValue>2600</MarketValue></statBases>
     <tools>
@@ -45,7 +45,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Monk_T4</defName>
     <label>perfect hero fist wraps</label>
-    <description>Chi-infused wraps that glow with channelled inner fire, their runed bronze bands singing on impact. Every blow flows from a well of disciplined power.</description>
+    <description>Chi-charged wraps that glow with channelled inner fire, their runed bronze bands ringing on impact. Each blow flows from a deep well of disciplined power and lands before the last has finished.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><Mass>0.6</Mass><MarketValue>4200</MarketValue></statBases>
     <tools>
@@ -58,7 +58,7 @@
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Monk_T5</defName>
     <label>Thousand Hands</label>
-    <description>The capstone wraps of the monk, earned only by a hero who has perfected body and spirit alike. Blazing with chi, the fists strike so swiftly they trail a thousand afterimages, and no flurry of mortal hands can match them.</description>
+    <description>The monk's capstone wraps, earned only by a hero who has brought body and spirit into perfect accord. Ablaze with chi, the fists move so fast they trail a thousand afterimages, and no merely mortal flurry can keep pace with them.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
     <statBases><Mass>0.6</Mass><MarketValue>9000</MarketValue></statBases>
     <tools>
