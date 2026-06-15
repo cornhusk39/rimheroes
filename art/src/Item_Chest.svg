@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- top-down bound treasure chest -->
+  <rect x="20" y="32" width="88" height="66" rx="7" fill="#6b4a2a" stroke="#2c1c0e" stroke-width="5"/>
+  <rect x="20" y="32" width="88" height="22" rx="7" fill="#7e5934"/>
+  <line x1="20" y1="54" x2="108" y2="54" stroke="#2c1c0e" stroke-width="3"/>
+  <rect x="36" y="32" width="9" height="66" fill="#caa05a" stroke="#2c1c0e" stroke-width="2"/>
+  <rect x="83" y="32" width="9" height="66" fill="#caa05a" stroke="#2c1c0e" stroke-width="2"/>
+  <rect x="57" y="58" width="14" height="16" rx="2" fill="#e6c46a" stroke="#2c1c0e" stroke-width="2.5"/>
+  <circle cx="64" cy="65" r="2.6" fill="#2c1c0e"/>
+</svg>

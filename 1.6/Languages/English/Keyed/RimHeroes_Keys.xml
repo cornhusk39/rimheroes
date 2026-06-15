@@ -58,4 +58,6 @@
   <RH_TooLongDead>Too long dead. Revivify needs a fresh body.</RH_TooLongDead>
   <RH_AlertHeroUnburied>Fallen hero unburied</RH_AlertHeroUnburied>
   <RH_AlertHeroUnburiedDesc>A hero's body lies unburied. Lay them in a grave or sarcophagus. Calling them back needs a body, and while corpse protection is on, a hero cannot be cremated or butchered.</RH_AlertHeroUnburiedDesc>
+  <RH_ChestLooted>You pry open the chest and gather its treasure.</RH_ChestLooted>
+  <RH_ChestMimic>The chest sprouts teeth. It was a mimic!</RH_ChestMimic>
 </LanguageData>

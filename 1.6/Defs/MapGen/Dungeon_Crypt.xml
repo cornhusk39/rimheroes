@@ -21,6 +21,7 @@
     </pocketMapProperties>
     <genSteps>
       <li>RH_CryptLayout</li>
+      <li>RH_CryptPopulate</li>
     </genSteps>
   </MapGeneratorDef>
 
@@ -28,6 +29,12 @@
     <defName>RH_CryptLayout</defName>
     <order>500</order>
     <genStep Class="RimHeroes.GenStep_CryptLayout" />
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>RH_CryptPopulate</defName>
+    <order>520</order>
+    <genStep Class="RimHeroes.GenStep_CryptPopulate" />
   </GenStepDef>
 
 </Defs>
