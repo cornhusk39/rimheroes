@@ -11,8 +11,9 @@ namespace RimHeroes
     /// </summary>
     public class CheckDef : Def
     {
-        public SkillDef skill;          // optional: modifier scales off this skill
-        public int flatModifier = 0;    // optional flat bonus on top of the skill modifier
+        public CheckKind kind = CheckKind.Skill;  // where the base modifier comes from
+        public SkillDef skill;          // used when kind == Skill
+        public int flatModifier = 0;    // optional flat bonus on top
         public int dc = 10;
 
         // optional per-outcome flavor (falls back to the generic title when null)

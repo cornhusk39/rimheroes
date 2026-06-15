@@ -7,7 +7,7 @@
   <RimHeroes.CheckDef>
     <defName>RH_Check_LockPick</defName>
     <label>pick the ancient lock</label>
-    <skill>Intellectual</skill>
+    <kind>Lockpick</kind>
     <dc>14</dc>
     <critSuccessText>The mechanism yields with a satisfying click, and you spot the hidden catch that disarms its ward entirely. The way ahead is open and safe.</critSuccessText>
     <successText>The tumblers fall into line one by one. The lock springs open.</successText>
@@ -18,7 +18,7 @@
   <RimHeroes.CheckDef>
     <defName>RH_Check_Parley</defName>
     <label>parley with the warden</label>
-    <skill>Social</skill>
+    <kind>Social</kind>
     <dc>13</dc>
     <critSuccessText>Your words land perfectly. The warden lowers its blade and offers to lead you past the deeper wards.</critSuccessText>
     <successText>The warden hears you out and stands aside.</successText>

@@ -9,6 +9,10 @@ namespace RimHeroes
 
     public enum RollBucket { CriticalFailure, Failure, Success, CriticalSuccess }
 
+    // What a check draws its base modifier from. Skill uses CheckDef.skill; the rest map to vanilla
+    // skills/stats with no new game stats (see CheckMods).
+    public enum CheckKind { Skill, Lockpick, Arcane, Perception, Dodge, Strength, Social, Endurance }
+
     public struct RollResult
     {
         public int rawDie;     // the natural d20 (1-20), before the modifier
@@ -30,16 +34,7 @@ namespace RimHeroes
     {
         /// <summary>5e-style modifier from a hero: floor((skillLevel - 8) / 2), centered so RimWorld's
         /// 0-20 skills map to roughly -4..+6, plus any flat bonus on the check.</summary>
-        public static int GetModifier(Pawn pawn, CheckDef check)
-        {
-            int mod = check?.flatModifier ?? 0;
-            if (check?.skill != null && pawn?.skills != null)
-            {
-                int lvl = pawn.skills.GetSkill(check.skill).Level;
-                mod += Mathf.FloorToInt((lvl - 8) / 2f);
-            }
-            return mod;
-        }
+        public static int GetModifier(Pawn pawn, CheckDef check) => CheckMods.GetModifier(pawn, check);
 
         public static RollResult Roll(int modifier, int dc, RollAdvantage adv = RollAdvantage.None, int forcedRaw = 0)
         {
