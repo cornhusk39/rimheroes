@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
-  <!-- top-down everburning brazier -->
-  <circle cx="64" cy="64" r="36" fill="#3b3b40" stroke="#16161a" stroke-width="6"/>
-  <circle cx="64" cy="64" r="25" fill="#241a12"/>
-  <circle cx="64" cy="64" r="18" fill="#b8531a"/>
-  <circle cx="64" cy="64" r="11" fill="#ef9b27"/>
-  <circle cx="62" cy="61" r="5" fill="#ffe07a"/>
+  <!-- top-down soul brazier: eerie cyan-blue flame (Minecraft soul-lantern vibe) -->
+  <circle cx="64" cy="64" r="36" fill="#2b2f3a" stroke="#14151a" stroke-width="6"/>
+  <circle cx="64" cy="64" r="25" fill="#10222e"/>
+  <circle cx="64" cy="64" r="18" fill="#1a6f8e"/>
+  <circle cx="64" cy="64" r="11" fill="#33d2e2"/>
+  <circle cx="62" cy="61" r="5" fill="#bdf7ff"/>
 </svg>
