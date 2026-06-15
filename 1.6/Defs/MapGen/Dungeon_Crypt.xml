@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Crypt dungeon (MVP). An instanced pocket map: solid rock carved into rooms + corridors by
+       GenStep_CryptLayout. Monsters, loot, traps, and fog arrive in later phases. -->
+
+  <BiomeDef ParentName="Biome_Underground">
+    <defName>RH_CryptBiome</defName>
+    <label>crypt</label>
+    <description>The cold, still dark of an ancient crypt hewn from the rock.</description>
+  </BiomeDef>
+
+  <MapGeneratorDef>
+    <defName>RH_DungeonGen</defName>
+    <label>crypt</label>
+    <isUnderground>true</isUnderground>
+    <disableCallAid>true</disableCallAid>
+    <pocketMapProperties>
+      <biome>RH_CryptBiome</biome>
+      <temperature>12</temperature>
+    </pocketMapProperties>
+    <genSteps>
+      <li>RH_CryptLayout</li>
+    </genSteps>
+  </MapGeneratorDef>
+
+  <GenStepDef>
+    <defName>RH_CryptLayout</defName>
+    <order>500</order>
+    <genStep Class="RimHeroes.GenStep_CryptLayout" />
+  </GenStepDef>
+
+</Defs>

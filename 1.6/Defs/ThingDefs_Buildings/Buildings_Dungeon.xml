@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Crypt entrance: a MapPortal you send a party through to delve the instanced crypt below.
+       Reuses Anomaly's CaveExit as the climb-out (placed by GenStep_CryptLayout). Placeholder art. -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RH_DungeonEntrance</defName>
+    <label>crypt entrance</label>
+    <description>A dark stairway descending into an ancient crypt. Send a party of heroes down to delve it; they can climb back out the way they came.</description>
+    <thingClass>MapPortal</thingClass>
+    <size>(3, 3)</size>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <passability>Impassable</passability>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <holdsRoof>false</holdsRoof>
+    <castEdgeShadows>false</castEdgeShadows>
+    <destroyable>false</destroyable>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/PitGate/CaveExit</texPath>
+      <drawSize>(3, 3)</drawSize>
+    </graphicData>
+    <building>
+      <isEdifice>true</isEdifice>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <expandHomeArea>false</expandHomeArea>
+      <isInert>true</isInert>
+    </building>
+    <portal>
+      <pocketMapGenerator>RH_DungeonGen</pocketMapGenerator>
+      <exitDef>CaveExit</exitDef>
+      <enteredLetterLabel>Crypt entered</enteredLetterLabel>
+      <enteredLetterText>Your party descends the worn stairs into the dark of the crypt.</enteredLetterText>
+      <enteredLetterDef>NeutralEvent</enteredLetterDef>
+    </portal>
+    <inspectorTabs>
+      <li>ITab_ContentsMapPortal</li>
+    </inspectorTabs>
+  </ThingDef>
+
+</Defs>
