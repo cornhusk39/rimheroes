@@ -30,37 +30,51 @@ namespace RimHeroes
 
         public override Vector2 InitialSize => new Vector2(560f, 540f);
 
+        private static readonly Color Gold = new Color(0.92f, 0.82f, 0.45f);
+        private static readonly Color Muted = new Color(0.78f, 0.78f, 0.78f);
+
         public override void DoWindowContents(Rect inRect)
         {
             Text.Font = GameFont.Medium;
+            GUI.color = Gold;
             Widgets.Label(new Rect(0f, 0f, inRect.width, 34f), title);
+            GUI.color = Color.white;
             Text.Font = GameFont.Small;
-            GUI.color = new Color(0.8f, 0.8f, 0.8f);
+            GUI.color = Muted;
             Widgets.Label(new Rect(0f, 34f, inRect.width, 24f), subtitle);
             GUI.color = Color.white;
+            Widgets.DrawLineHorizontal(0f, 60f, inRect.width);
 
-            const float rowH = 86f;
+            const float rowH = 88f;
             var viewRect = new Rect(0f, 0f, inRect.width - 20f, options.Count * (rowH + 8f));
-            var outRect = new Rect(0f, 64f, inRect.width, inRect.height - 64f);
+            var outRect = new Rect(0f, 68f, inRect.width, inRect.height - 68f);
             Widgets.BeginScrollView(outRect, ref scroll, viewRect);
             float y = 0f;
             foreach (var opt in options)
             {
                 var card = new Rect(0f, y, viewRect.width, rowH);
                 Widgets.DrawMenuSection(card);
-                var inner = card.ContractedBy(10f);
+                bool hovered = Mouse.IsOver(card);
+                if (hovered) Widgets.DrawHighlight(card);
+                var inner = card.ContractedBy(12f);
                 if (opt.icon != null)
                 {
-                    GUI.DrawTexture(new Rect(inner.x, inner.y + 4f, 40f, 40f), opt.icon);
+                    GUI.DrawTexture(new Rect(inner.x, inner.y + 4f, 42f, 42f), opt.icon);
                 }
-                float tx = opt.icon != null ? inner.x + 48f : inner.x;
+                float tx = opt.icon != null ? inner.x + 52f : inner.x;
                 Text.Font = GameFont.Small;
-                GUI.color = new Color(0.95f, 0.92f, 0.7f);
-                Widgets.Label(new Rect(tx, inner.y, inner.width - 110f, 24f), opt.label);
-                GUI.color = new Color(0.82f, 0.82f, 0.82f);
-                Widgets.Label(new Rect(tx, inner.y + 24f, inner.width - 110f, inner.height - 24f), opt.description ?? "");
+                GUI.color = Gold;
+                Widgets.Label(new Rect(tx, inner.y, inner.width - 16f, 24f), opt.label);
+                GUI.color = Muted;
+                Widgets.Label(new Rect(tx, inner.y + 24f, inner.width - 16f, inner.height - 24f), opt.description ?? "");
                 GUI.color = Color.white;
-                if (Widgets.ButtonText(new Rect(card.xMax - 96f, card.y + (rowH - 32f) / 2f, 84f, 32f), "Pick"))
+                // The whole card is clickable; a hint chevron sits on the right.
+                Text.Anchor = TextAnchor.MiddleRight;
+                GUI.color = hovered ? Gold : Muted;
+                Widgets.Label(new Rect(card.xMax - 40f, card.y, 28f, rowH), "›");
+                GUI.color = Color.white;
+                Text.Anchor = TextAnchor.UpperLeft;
+                if (Widgets.ButtonInvisible(card))
                 {
                     opt.apply?.Invoke();
                     onDone?.Invoke();
