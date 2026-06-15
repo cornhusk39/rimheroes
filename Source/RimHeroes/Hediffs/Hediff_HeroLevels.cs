@@ -535,7 +535,7 @@ namespace RimHeroes
 
         private void TickAutocast()
         {
-            if (!pawn.IsColonistPlayerControlled || !pawn.Spawned || pawn.Downed || pawn.Dead || pawn.abilities == null)
+            if (!pawn.Spawned || pawn.Downed || pawn.Dead || pawn.abilities == null)
             {
                 return;
             }
@@ -543,6 +543,20 @@ namespace RimHeroes
             {
                 return; // already casting: one cast at a time, let it finish
             }
+            if (pawn.IsColonistPlayerControlled)
+            {
+                TickAutocastPlayer();
+            }
+            else if (HeroAutocast.InCombat(pawn))
+            {
+                // AI heroes (enemy raiders, allied fighters) use their whole kit while fighting.
+                TickAutocastAI();
+            }
+        }
+
+        // Player heroes: opt-in per-ability toggles, and offense only fires while drafted.
+        private void TickAutocastPlayer()
+        {
             foreach (var ability in pawn.abilities.abilities)
             {
                 if (ability == null || !AutocastEnabled(ability.def))
@@ -561,6 +575,24 @@ namespace RimHeroes
                 if (offensive && !pawn.Drafted)
                 {
                     continue;
+                }
+                if (HeroAutocast.TryResolveTarget(pawn, ability, out var target) && target.IsValid)
+                {
+                    ability.QueueCastingJob(target, target);
+                    return; // one cast per tick
+                }
+            }
+        }
+
+        // AI heroes: cast the full arsenal automatically (no toggles, no draft gate). The think tree
+        // handles movement/melee in between; we just inject the ability casts.
+        private void TickAutocastAI()
+        {
+            foreach (var ability in pawn.abilities.abilities)
+            {
+                if (ability == null || !ability.CanCast)
+                {
+                    continue; // CanCast covers cooldown, slots, and the prepared-gate
                 }
                 if (HeroAutocast.TryResolveTarget(pawn, ability, out var target) && target.IsValid)
                 {

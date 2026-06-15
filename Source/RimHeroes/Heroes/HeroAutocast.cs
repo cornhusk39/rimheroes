@@ -108,6 +108,23 @@ namespace RimHeroes
             }
         }
 
+        /// <summary>
+        /// True when the pawn is actively fighting: has a live enemy target, or any hostile pawn is
+        /// within sight. Gates AI-hero autocast so raiders only spend their kit in a real fight.
+        /// </summary>
+        public static bool InCombat(Pawn pawn)
+        {
+            if (pawn?.Map == null)
+            {
+                return false;
+            }
+            if (pawn.mindState?.enemyTarget is Pawn et && !et.Dead && !et.Downed)
+            {
+                return true;
+            }
+            return NearestHostileInRange(pawn, 40f, requireLineOfSight: false) != null;
+        }
+
         // ===== Hostile single-target / projectile / hostile verb =====
 
         private static bool TryHostileSingle(Pawn caster, Ability ability, float range, out LocalTargetInfo target)

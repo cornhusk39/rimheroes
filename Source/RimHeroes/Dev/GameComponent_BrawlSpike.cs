@@ -62,7 +62,6 @@ namespace RimHeroes
         private IntVec3 center;
         private readonly List<Pawn> spawned = new List<Pawn>();
         private readonly HashSet<Pawn> heroes = new HashSet<Pawn>();
-        private readonly Dictionary<Pawn, int> nextCast = new Dictionary<Pawn, int>();
 
         public GameComponent_BrawlSpike(Game game) { }
 
@@ -154,50 +153,15 @@ namespace RimHeroes
         // ability auto-cast + engagement nudge for the humanlike combatants
         private void Drive(Map map)
         {
-            int now = Find.TickManager.TicksGame;
+            // Ability casting for these AI heroes is handled by the real feature
+            // (Hediff_HeroLevels.TickAutocastAI). The brawl only nudges engagement/movement.
             foreach (var p in spawned)
             {
                 if (p == null || !p.Spawned || p.Dead || p.Downed) continue;
                 if (!p.RaceProps.Humanlike) continue;          // mechs/insects self-drive
                 if (p.CurJob?.ability != null) continue;        // let a cast finish
-
-                bool cast = false;
-                int due = nextCast.TryGetValue(p, out var t) ? t : 0;
-                if (heroes.Contains(p) && now >= due)
-                {
-                    cast = TryCast(p);
-                    nextCast[p] = now + (cast ? 150 : 45);
-                }
-                if (!cast) EnsureFighting(p);
+                EnsureFighting(p);
             }
-        }
-
-        private bool TryCast(Pawn p)
-        {
-            if (p.abilities == null) return false;
-            foreach (var ability in p.abilities.abilities)
-            {
-                try
-                {
-                    if (!ability.CanCast) continue;
-                    LocalTargetInfo target;
-                    if (ability.def.hostile)
-                    {
-                        float range = ability.verb?.verbProps?.range ?? 25f;
-                        var enemy = NearestEnemy(p, range, true);
-                        if (enemy == null) continue;
-                        target = enemy;
-                    }
-                    else
-                    {
-                        target = p;                            // self / buff
-                    }
-                    ability.QueueCastingJob(target, target);
-                    return true;
-                }
-                catch { /* invalid target for this ability; try the next */ }
-            }
-            return false;
         }
 
         private void EnsureFighting(Pawn p)
@@ -356,7 +320,6 @@ namespace RimHeroes
             }
             spawned.Clear();
             heroes.Clear();
-            nextCast.Clear();
             // sweep corpses/filth left behind in the arena
             for (int dx = -24; dx <= 24; dx++)
                 for (int dz = -14; dz <= 14; dz++)
