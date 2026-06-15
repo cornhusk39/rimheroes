@@ -11,3 +11,10 @@ Thumbs.db
 
 # L20 aura demo raw capture frames (transient)
 tools/auraframes/
+
+# Tool scratch: review sheets, preview captures, art-gen intermediates (regenerable)
+tools/*.png
+tools/artgen/
+tools/vestmock/
+tools/inspect-fringe.mjs
+tools/verify-dark.mjs
