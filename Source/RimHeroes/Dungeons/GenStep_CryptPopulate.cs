@@ -80,11 +80,16 @@ namespace RimHeroes
                        ?? DefDatabase<ThingDef>.GetNamedSilentFail("Penoxycyline");
             if (drug != null) Place(map, c, drug, Rand.RangeInclusive(3, 6));
 
-            // 1-2 inlays: the rare draw.
-            var inlays = DefDatabase<ThingDef>.AllDefs.Where(d => d.defName.StartsWith("RH_InlayItem_")).ToList();
-            int n = Rand.RangeInclusive(1, 2);
-            for (int k = 0; k < n && inlays.Count > 0; k++)
-                Place(map, c, inlays.RandomElement(), 1);
+            // The rare inlay draw is locked inside the reliquary, not scattered loose.
+            PlaceReliquary(map, room);
+        }
+
+        private static void PlaceReliquary(Map map, CellRect room)
+        {
+            var def = DefDatabase<ThingDef>.GetNamedSilentFail("RH_Reliquary");
+            if (def == null) return;
+            if (!TryRoomCell(map, room, out var cell)) cell = room.CenterCell;
+            GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);   // Building_Reliquary stocks itself on spawn
         }
 
         private static void PlaceBrazier(Map map, CellRect room)

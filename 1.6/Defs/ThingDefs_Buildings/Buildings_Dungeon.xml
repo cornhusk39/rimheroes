@@ -72,6 +72,35 @@
     </comps>
   </ThingDef>
 
+  <!-- Boss-vault reliquary: a warded coffer holding the rare inlay drop behind a d20 lock. -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RH_Reliquary</defName>
+    <label>warded reliquary</label>
+    <description>An ancient coffer bound with sigil-locks, set in the heart of the vault. Whatever it guards is worth the warding. Send your finest hand to pick the lock.</description>
+    <thingClass>RimHeroes.Building_Reliquary</thingClass>
+    <size>(1, 1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/RimHeroes/Items/Reliquary</texPath>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <building>
+      <isEdifice>false</isEdifice>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+    </building>
+  </ThingDef>
+
   <!-- Crypt loot chest: open it (gizmo) for treasure, or spring a mimic. thingClass handles both. -->
   <ThingDef ParentName="BuildingBase">
     <defName>RH_LootChest</defName>

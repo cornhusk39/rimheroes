@@ -60,4 +60,14 @@
   <RH_AlertHeroUnburiedDesc>A hero's body lies unburied. Lay them in a grave or sarcophagus. Calling them back needs a body, and while corpse protection is on, a hero cannot be cremated or butchered.</RH_AlertHeroUnburiedDesc>
   <RH_ChestLooted>You pry open the chest and gather its treasure.</RH_ChestLooted>
   <RH_ChestMimic>The chest sprouts teeth. It was a mimic!</RH_ChestMimic>
+  <RH_ReliquaryPick>Pick the lock</RH_ReliquaryPick>
+  <RH_ReliquaryPickDesc>Attempt the reliquary's sigil-lock (DC {0}). Choose who tries. Each failure hardens the lock by 5; let it reach 25 and it jams for good.</RH_ReliquaryPickDesc>
+  <RH_ReliquaryPickerOption>{0}  (lockpick {1})</RH_ReliquaryPickerOption>
+  <RH_ReliquaryNoPicker>No colonist can reach the reliquary</RH_ReliquaryNoPicker>
+  <RH_ReliquaryOpened>{0} works the lock free. The reliquary gives up what it guarded.</RH_ReliquaryOpened>
+  <RH_ReliquaryFailed>The lock holds and hardens. It will resist the next attempt more (DC {0}).</RH_ReliquaryFailed>
+  <RH_ReliquaryJammed>The lock grinds shut for good. This reliquary will not be opened by craft now.</RH_ReliquaryJammed>
+  <RH_ReliquaryStateLocked>Locked (DC {0})</RH_ReliquaryStateLocked>
+  <RH_ReliquaryStateJammed>Jammed: the lock can no longer be picked</RH_ReliquaryStateJammed>
+  <RH_ReliquaryStateOpened>Opened</RH_ReliquaryStateOpened>
 </LanguageData>

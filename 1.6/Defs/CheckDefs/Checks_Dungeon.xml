@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Live d20 checks called by dungeon fixtures. The reliquary overrides the DC per attempt
+       (it climbs as the lock resists), so the dc here is only a fallback; the flavor is what matters. -->
+
+  <RimHeroes.CheckDef>
+    <defName>RH_Check_Reliquary</defName>
+    <label>pick the reliquary lock</label>
+    <kind>Lockpick</kind>
+    <dc>15</dc>
+    <critSuccessText>Every ward unwinds at once, as if the lock wanted to be opened by a hand this sure. The coffer falls wide.</critSuccessText>
+    <successText>The sigil-bolts draw back one by one, and the lid eases up under your fingers.</successText>
+    <failureText>A ward bites back and the mechanism resets harder than before. It can be tried again, but it will not be kind.</failureText>
+    <critFailureText>You feel a tumbler shear somewhere deep inside. The lock grinds, then sets itself stubbornly against you.</critFailureText>
+  </RimHeroes.CheckDef>
+
+</Defs>
