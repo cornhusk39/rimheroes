@@ -40,6 +40,14 @@ namespace RimHeroes
                     boss.equipment.AddEquipment(w);
                 }
 
+                // 25% chance to carry a reliquary key, dropped with its body on death
+                if (Rand.Chance(0.25f))
+                {
+                    var keyDef = DefDatabase<ThingDef>.GetNamedSilentFail("RH_ReliquaryKey");
+                    if (keyDef != null && boss.inventory != null)
+                        boss.inventory.innerContainer.TryAdd(ThingMaker.MakeThing(keyDef));
+                }
+
                 boss.Name = new NameSingle("Crypt Lord");
                 boss.Drawer?.renderer?.renderTree?.SetDirty();
                 boss.Drawer?.renderer?.SetAllGraphicsDirty();

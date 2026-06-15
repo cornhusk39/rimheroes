@@ -55,8 +55,37 @@ namespace RimHeroes
             crit.ResolveAttempt(picker, ForcedRoll(20, crit.CurrentDC)); // nat 20 at DC 20
             Assert(!crit.CanAttempt && InlaysNear(map, crit.Position) >= 1, "natural 20 opens a hard lock");
 
+            // 4) A carried reliquary key auto-opens even a hard lock and is consumed.
+            var keyTest = MakeReliquary(map, new IntVec3(map.Center.x + 4, 0, map.Center.z + 4), tier: 3);
+            GiveItem(picker, Building_Reliquary.KeyDef, 1);
+            bool hadKey = Building_Reliquary.CountItem(picker, Building_Reliquary.KeyDef) == 1;
+            bool keyOpened = keyTest.TryOpenWithKey(picker);
+            Assert(hadKey && keyOpened && !keyTest.CanAttempt
+                   && Building_Reliquary.CountItem(picker, Building_Reliquary.KeyDef) == 0
+                   && InlaysNear(map, keyTest.Position) >= 1, "reliquary key auto-opens a hard lock and is consumed");
+
+            // 5) A lockpick cuts the DC by 7, is spent, and turns a failing roll into a success.
+            var pickTest = MakeReliquary(map, new IntVec3(map.Center.x - 4, 0, map.Center.z + 4), tier: 3); // DC 15
+            GiveItem(picker, Building_Reliquary.LockpickDef, 2);
+            int baseDC = pickTest.CurrentDC;
+            int redDC = Building_Reliquary.ReducedDC(baseDC);
+            bool spent = Building_Reliquary.ConsumeOne(picker, Building_Reliquary.LockpickDef);
+            Assert(redDC == baseDC - 7 && spent && Building_Reliquary.CountItem(picker, Building_Reliquary.LockpickDef) == 1,
+                   $"lockpick cuts DC {baseDC}->{redDC} and spends one (1 left)");
+            Assert(!ForcedRoll(baseDC - 3, baseDC).Passed && ForcedRoll(baseDC - 3, redDC).Passed,
+                   "the reduced DC turns a failing roll into a success");
+
             Log.Message($"[RimHeroes.Reliquary] RESULT: reliquary lock verdict={(ok ? "PASS" : "FAIL")}");
             Root.Shutdown();
+        }
+
+        private static void GiveItem(Pawn p, string defName, int count)
+        {
+            var def = DefDatabase<ThingDef>.GetNamedSilentFail(defName);
+            if (def == null) return;
+            var t = ThingMaker.MakeThing(def);
+            t.stackCount = count;
+            p.inventory.innerContainer.TryAdd(t);
         }
 
         private static Building_Reliquary MakeReliquary(Map map, IntVec3 pos, int tier)

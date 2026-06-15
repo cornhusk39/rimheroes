@@ -24,10 +24,15 @@ namespace RimHeroes
         private List<ThingDef> contents = new List<ThingDef>();
 
         private const int SealDC = 25;
+        public const string KeyDef = "RH_ReliquaryKey";
+        public const string LockpickDef = "RH_Lockpick";
+        public const int LockpickDcReduction = 7;
 
         private int StartDC => lockTier <= 1 ? 5 : (lockTier == 2 ? 10 : 15);
         public int CurrentDC => StartDC + 5 * failures;
         public bool CanAttempt => !opened && !jammed && CurrentDC < SealDC;
+
+        public static int ReducedDC(int dc) => Mathf.Max(1, dc - LockpickDcReduction);
 
         private static CheckDef Check => DefDatabase<CheckDef>.GetNamedSilentFail("RH_Check_Reliquary");
 
@@ -81,8 +86,17 @@ namespace RimHeroes
             {
                 Pawn picker = p;
                 int mod = CheckMods.GetModifier(picker, check);
+
+                // a held reliquary key skips the roll entirely
+                if (CountItem(picker, KeyDef) > 0)
+                    options.Add(new FloatMenuOption("RH_ReliquaryUseKey".Translate(picker.LabelShortCap), () => TryOpenWithKey(picker)));
+
+                // a held lockpick cuts the DC by 7 and is spent on the attempt
+                if (CountItem(picker, LockpickDef) > 0)
+                    options.Add(new FloatMenuOption("RH_ReliquaryUseLockpick".Translate(picker.LabelShortCap, ReducedDC(CurrentDC)), () => BeginAttempt(picker, true)));
+
                 string label = "RH_ReliquaryPickerOption".Translate(picker.LabelShortCap, Signed(mod));
-                options.Add(new FloatMenuOption(label, () => BeginAttempt(picker)));
+                options.Add(new FloatMenuOption(label, () => BeginAttempt(picker, false)));
             }
 
             if (options.Count == 0)
@@ -90,13 +104,48 @@ namespace RimHeroes
             Find.WindowStack.Add(new FloatMenu(options));
         }
 
-        private void BeginAttempt(Pawn picker)
+        private void BeginAttempt(Pawn picker, bool useLockpick)
         {
             if (!CanAttempt) return;
+            int dc = CurrentDC;
+            if (useLockpick)
+            {
+                if (ConsumeOne(picker, LockpickDef)) dc = ReducedDC(CurrentDC);
+                else useLockpick = false;   // none left after all; roll the lock straight
+            }
             var check = Check;
             int mod = CheckMods.GetModifier(picker, check);
-            RollResult result = D20.Roll(mod, CurrentDC);   // DC drives both display and pass/fail
+            RollResult result = D20.Roll(mod, dc);   // DC drives both display and pass/fail
             Find.WindowStack.Add(new Dialog_D20Roll(picker, check, result, r => ResolveAttempt(picker, r)));
+        }
+
+        /// <summary>Spend a reliquary key the picker is carrying to open the lock outright. Returns false
+        /// if the lock can't be attempted or the pawn has no key.</summary>
+        public bool TryOpenWithKey(Pawn picker)
+        {
+            if (!CanAttempt || !ConsumeOne(picker, KeyDef)) return false;
+            Messages.Message("RH_ReliquaryKeyUsed".Translate(picker.LabelShortCap), new LookTargets(this), MessageTypeDefOf.PositiveEvent, false);
+            OpenAndSpill(picker);
+            return true;
+        }
+
+        public static int CountItem(Pawn p, string defName)
+        {
+            var def = DefDatabase<ThingDef>.GetNamedSilentFail(defName);
+            if (def == null || p?.inventory == null) return 0;
+            return p.inventory.innerContainer.Where(t => t.def == def).Sum(t => t.stackCount);
+        }
+
+        /// <summary>Remove one of the named item from the pawn's carried inventory. Returns false if none.</summary>
+        public static bool ConsumeOne(Pawn p, string defName)
+        {
+            var def = DefDatabase<ThingDef>.GetNamedSilentFail(defName);
+            if (def == null || p?.inventory == null) return false;
+            var thing = p.inventory.innerContainer.FirstOrDefault(t => t.def == def);
+            if (thing == null) return false;
+            if (thing.stackCount > 1) thing.stackCount--;
+            else { p.inventory.innerContainer.Remove(thing); thing.Destroy(); }
+            return true;
         }
 
         /// <summary>Apply a resolved roll. Split out from the dialog so the dev spike can drive it with

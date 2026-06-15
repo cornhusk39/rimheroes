@@ -63,6 +63,9 @@
   <RH_ReliquaryPick>Pick the lock</RH_ReliquaryPick>
   <RH_ReliquaryPickDesc>Attempt the reliquary's sigil-lock (DC {0}). Choose who tries. Each failure hardens the lock by 5; let it reach 25 and it jams for good.</RH_ReliquaryPickDesc>
   <RH_ReliquaryPickerOption>{0}  (lockpick {1})</RH_ReliquaryPickerOption>
+  <RH_ReliquaryUseKey>{0} opens it with a reliquary key</RH_ReliquaryUseKey>
+  <RH_ReliquaryUseLockpick>{0} uses a lockpick set (DC {1})</RH_ReliquaryUseLockpick>
+  <RH_ReliquaryKeyUsed>{0} sets the reliquary key. Every ward unwinds at once and the lock falls open.</RH_ReliquaryKeyUsed>
   <RH_ReliquaryNoPicker>No colonist can reach the reliquary</RH_ReliquaryNoPicker>
   <RH_ReliquaryOpened>{0} works the lock free. The reliquary gives up what it guarded.</RH_ReliquaryOpened>
   <RH_ReliquaryFailed>The lock holds and hardens. It will resist the next attempt more (DC {0}).</RH_ReliquaryFailed>

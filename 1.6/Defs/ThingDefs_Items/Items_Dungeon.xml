@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Dungeon consumables: the reliquary key (auto-opens a warded reliquary, consumed) and the
+       lockpick (cuts any lock DC by 7, consumed). See Building_Reliquary. -->
+
+  <!-- Reliquary key: a 25% drop from dungeon bosses and a rare quest reward (RewardStandardLowFreq).
+       Not stocked by traders (Sellable only), so the only ways to get one are bosses and quests. -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>RH_ReliquaryKey</defName>
+    <label>reliquary key</label>
+    <description>A heavy sigil-cut key, warm to the touch, ground to fit the locks the old vaults used. Set it in a warded reliquary and every ward unwinds at once. The key crumbles to slag once its work is done.</description>
+    <graphicData>
+      <texPath>Things/RimHeroes/Items/ReliquaryKey</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <stackLimit>5</stackLimit>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <MarketValue>450</MarketValue>
+      <Mass>0.4</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <!-- Lockpick: cuts any lock DC by 7, consumed on use. Cannot be crafted; the only source is trader
+       stock, where it appears at the same frequency as mortar shells (shared MortarShell trade tag). -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>RH_Lockpick</defName>
+    <label>lockpick set</label>
+    <description>A tidy roll of tension wrenches and picks, the tools of a careful hand. Worked against a stubborn lock it shaves the work down sharply, though the delicate picks rarely survive a single serious lock.</description>
+    <graphicData>
+      <texPath>Things/RimHeroes/Items/Lockpick</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>140</MarketValue>
+      <Mass>0.5</Mass>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>MortarShell</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

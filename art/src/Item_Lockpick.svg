@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- a tension wrench + two picks crossed, steel with dark grips -->
+  <!-- tension wrench (L-shaped) -->
+  <path d="M30 96 L30 64 L48 64" fill="none" stroke="#9aa0a6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- hook pick -->
+  <line x1="44" y1="100" x2="92" y2="40" stroke="#c2c7cc" stroke-width="7" stroke-linecap="round"/>
+  <path d="M92 40 q6 -6 12 -2" fill="none" stroke="#c2c7cc" stroke-width="7" stroke-linecap="round"/>
+  <rect x="36" y="92" width="16" height="20" rx="3" transform="rotate(-38 44 102)" fill="#5a4632" stroke="#161214" stroke-width="2.5"/>
+  <!-- diamond pick -->
+  <line x1="60" y1="104" x2="100" y2="56" stroke="#c2c7cc" stroke-width="6" stroke-linecap="round"/>
+  <rect x="52" y="96" width="15" height="19" rx="3" transform="rotate(-50 60 105)" fill="#5a4632" stroke="#161214" stroke-width="2.5"/>
+</svg>
