@@ -20,7 +20,7 @@
     <destroyable>false</destroyable>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Things/Building/PitGate/CaveExit</texPath>
+      <texPath>Things/RimHeroes/Items/CryptEntrance</texPath>
       <drawSize>(3, 3)</drawSize>
     </graphicData>
     <building>
