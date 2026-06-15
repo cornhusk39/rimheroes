@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- d20 die: point-up icosahedron silhouette, bronze/gold facets, clear central face for the number -->
+  <polygon points="128,18 223,73 223,183 128,238 33,183 33,73" fill="#6b5430" stroke="#241a0d" stroke-width="7" stroke-linejoin="round"/>
+  <!-- facet shading -->
+  <polygon points="128,18 223,73 128,58 33,73" fill="#806339"/>
+  <polygon points="33,73 128,58 80,150 33,183" fill="#5b4727"/>
+  <polygon points="223,73 223,183 176,150 128,58" fill="#5b4727"/>
+  <polygon points="33,183 80,150 128,238 176,150 223,183" fill="#4d3c20"/>
+  <!-- central face (holds the number) -->
+  <polygon points="128,58 80,150 176,150" fill="#b78f4d" stroke="#241a0d" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- facet edges -->
+  <g stroke="#2a1f10" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <line x1="128" y1="58" x2="128" y2="18"/>
+    <line x1="80" y1="150" x2="33" y2="183"/>
+    <line x1="176" y1="150" x2="223" y2="183"/>
+    <line x1="80" y1="150" x2="128" y2="238"/>
+    <line x1="176" y1="150" x2="128" y2="238"/>
+    <line x1="128" y1="58" x2="223" y2="73"/>
+    <line x1="128" y1="58" x2="33" y2="73"/>
+    <line x1="80" y1="150" x2="33" y2="73"/>
+    <line x1="176" y1="150" x2="223" y2="73"/>
+  </g>
+</svg>

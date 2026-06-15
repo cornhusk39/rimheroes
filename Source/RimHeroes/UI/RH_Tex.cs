@@ -8,5 +8,6 @@ namespace RimHeroes
     {
         public static readonly Texture2D LongRest = ContentFinder<Texture2D>.Get("UI/RimHeroes/LongRest");
         public static readonly Texture2D RevertForm = ContentFinder<Texture2D>.Get("UI/RimHeroes/RevertForm");
+        public static readonly Texture2D D20Die = ContentFinder<Texture2D>.Get("UI/RimHeroes/D20");
     }
 }

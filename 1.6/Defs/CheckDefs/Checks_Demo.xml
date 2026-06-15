@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Demo d20 checks. These exist to exercise the roll system; real checks live alongside the
+       quests and dungeon hazards that call them. -->
+
+  <RimHeroes.CheckDef>
+    <defName>RH_Check_LockPick</defName>
+    <label>pick the ancient lock</label>
+    <skill>Intellectual</skill>
+    <dc>14</dc>
+    <critSuccessText>The mechanism yields with a satisfying click, and you spot the hidden catch that disarms its ward entirely. The way ahead is open and safe.</critSuccessText>
+    <successText>The tumblers fall into line one by one. The lock springs open.</successText>
+    <failureText>The pick slips on a stubborn pin. The lock holds fast, for now.</failureText>
+    <critFailureText>The pick snaps off deep in the mechanism and jams it solid. This door will not be opened by craft alone.</critFailureText>
+  </RimHeroes.CheckDef>
+
+  <RimHeroes.CheckDef>
+    <defName>RH_Check_Parley</defName>
+    <label>parley with the warden</label>
+    <skill>Social</skill>
+    <dc>13</dc>
+    <critSuccessText>Your words land perfectly. The warden lowers its blade and offers to lead you past the deeper wards.</critSuccessText>
+    <successText>The warden hears you out and stands aside.</successText>
+    <failureText>The warden is unmoved and bars the way.</failureText>
+    <critFailureText>You misjudge it badly. The warden takes offense and reaches for its weapon.</critFailureText>
+  </RimHeroes.CheckDef>
+
+</Defs>
