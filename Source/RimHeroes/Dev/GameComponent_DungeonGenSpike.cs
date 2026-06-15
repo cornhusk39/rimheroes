@@ -41,6 +41,9 @@ namespace RimHeroes
                         dungeon = PocketMapUtility.GeneratePocketMap(new IntVec3(64, 1, 64), gen, null, src);
                         Current.Game.CurrentMap = dungeon;
                         var comp = dungeon.GetComponent<MapComponent_CryptDungeon>();
+                        // reveal the fog for the review screenshot (real play stays explore-to-reveal)
+                        if (comp != null && comp.entranceIndex >= 0 && comp.entranceIndex < comp.rooms.Count)
+                            FloodFillerFog.FloodUnfog(comp.rooms[comp.entranceIndex].CenterCell, dungeon);
                         Log.Message($"[RimHeroes.DungeonGen] generated {dungeon.Size.x}x{dungeon.Size.z}, rooms={comp?.rooms?.Count ?? -1}");
                     }
                     catch (System.Exception e) { Log.Error($"[RimHeroes.DungeonGen] gen failed: {e}"); state = 3; return; }

@@ -22,6 +22,7 @@
     <genSteps>
       <li>RH_CryptLayout</li>
       <li>RH_CryptPopulate</li>
+      <li>Fog</li>
     </genSteps>
   </MapGeneratorDef>
 
