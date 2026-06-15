@@ -7,7 +7,7 @@
     <defName>RH_Weapon_Paladin_T1</defName>
     <label>lesser hero warhammer</label>
     <description>A plain iron warhammer, blunt and brutally heavy in the hand. Bound to a hero paladin, it carries a faint thread of holy power for the one sworn to swing it.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T1</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.10</drawSize></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <equippedStatOffsets><RH_SpellPower>0.08</RH_SpellPower></equippedStatOffsets>
     <tools>
@@ -21,7 +21,7 @@
     <defName>RH_Weapon_Paladin_T2</defName>
     <label>hero warhammer</label>
     <description>A bright steel warhammer banded in royal blue, its head true and well-tempered. It hits harder than the lesser hammer and carries the paladin's faith with a steadier hand.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T2</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.15</drawSize></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <equippedStatOffsets><RH_SpellPower>0.15</RH_SpellPower></equippedStatOffsets>
     <tools>
@@ -35,7 +35,7 @@
     <defName>RH_Weapon_Paladin_T3</defName>
     <label>greater hero warhammer</label>
     <description>A gold-engraved warhammer set with a royal sapphire, a holy light banked low within its head. It staves in heavy armour and lends real edge to the wielder's prayers.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T3</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.15</drawSize></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <equippedStatOffsets><RH_SpellPower>0.22</RH_SpellPower></equippedStatOffsets>
     <tools>
@@ -49,7 +49,7 @@
     <defName>RH_Weapon_Paladin_T4</defName>
     <label>perfect hero warhammer</label>
     <description>A radiant warhammer wrapped in white-gold light, holy runes burning along its head. Every blow lands like a verdict, and the wielder's spells take on the heat of a borrowed dawn.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T4</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.20</drawSize></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <equippedStatOffsets><RH_SpellPower>0.30</RH_SpellPower></equippedStatOffsets>
     <tools>
@@ -63,7 +63,7 @@
     <defName>RH_Weapon_Paladin_T5</defName>
     <label>Dawnbreaker</label>
     <description>The paladin's capstone warhammer, won only by a hero whose legend has reached its full height. Its head blazes with the light of a breaking dawn; where it falls, the dark is simply undone, and the wielder's holy power burns brighter than it ever has.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Paladin/T5</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.30</drawSize></graphicData>
     <statBases><MarketValue>9000</MarketValue><Mass>4.2</Mass></statBases>
     <equippedStatOffsets><RH_SpellPower>0.40</RH_SpellPower></equippedStatOffsets>
     <tools>

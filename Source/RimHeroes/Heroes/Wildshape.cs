@@ -16,6 +16,29 @@ namespace RimHeroes
     {
         public override bool ShouldRemove => base.ShouldRemove;
 
+        private Graphic beastGraphic;
+
+        /// <summary>The beast texture (directional Graphic_Multi), read from the form def's render node
+        /// properties. Drawn directly by Patch_DrawBeast since runtime-added hediff render nodes do not
+        /// reliably enter the draw tree.</summary>
+        public Graphic BeastGraphic
+        {
+            get
+            {
+                if (beastGraphic == null)
+                {
+                    var rp = def.renderNodeProperties != null && def.renderNodeProperties.Count > 0
+                        ? def.renderNodeProperties[0] : null;
+                    if (rp != null && !rp.texPath.NullOrEmpty())
+                    {
+                        beastGraphic = GraphicDatabase.Get<Graphic_Multi>(rp.texPath, ShaderDatabase.Cutout,
+                            rp.drawSize, rp.color ?? Color.white);
+                    }
+                }
+                return beastGraphic;
+            }
+        }
+
         public override void PostAdd(DamageInfo? dinfo)
         {
             base.PostAdd(dinfo);
@@ -28,13 +51,13 @@ namespace RimHeroes
                     pawn.health.RemoveHediff(other);
                 }
             }
-            pawn.Drawer?.renderer?.SetAllGraphicsDirty();
+            RebuildRenderTree();
         }
 
         public override void PostRemoved()
         {
             base.PostRemoved();
-            pawn.Drawer?.renderer?.SetAllGraphicsDirty();
+            RebuildRenderTree();
             if (PawnUtility.ShouldSendNotificationAbout(pawn))
             {
                 Messages.Message("RH_WildshapeReverted".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.NeutralEvent);
@@ -57,6 +80,17 @@ namespace RimHeroes
                     action = () => pawn.health.RemoveHediff(this)
                 };
             }
+        }
+
+        // A hediff added at runtime only gets its render node into the draw tree if the tree's NODE
+        // STRUCTURE is rebuilt. SetAllGraphicsDirty alone just re-resolves existing graphics, so the
+        // beast node (cached but never added) never draws. SetDirty forces a full structural rebuild.
+        private void RebuildRenderTree()
+        {
+            var renderer = pawn?.Drawer?.renderer;
+            if (renderer == null) return;
+            renderer.renderTree?.SetDirty();
+            renderer.SetAllGraphicsDirty();
         }
 
         public static bool IsShifted(Pawn pawn)
@@ -95,15 +129,29 @@ namespace RimHeroes
     }
 
     /// <summary>
-    /// While wildshaped: hide the human body/head/hair/eyes and all worn apparel. One postfix on
-    /// the render tree's parms assembly - the wildshape render node itself carries no skip flag,
-    /// so the beast still draws.
+    /// While wildshaped: hide the human head/hair/beard/eyes (those are separate render subtrees that
+    /// do NOT contain the beast) and all worn apparel. The human BODY graphic is suppressed separately
+    /// in Patch_PawnRenderNode_Body_GraphicFor by returning null from the body node, NOT via a Body
+    /// skip flag - because the beast render node is parented under the Body tag, and a skip flag culls
+    /// the tagged node together with its entire subtree, which would take the beast down with it.
     /// </summary>
     [HarmonyPatch(typeof(PawnRenderTree), "AdjustParms")]
     public static class Patch_PawnRenderTree_AdjustParms
     {
         private static RenderSkipFlagDef bodyFlag;
-        private static RenderSkipFlagDef BodyFlag => bodyFlag ?? (bodyFlag = DefDatabase<RenderSkipFlagDef>.GetNamed("Body"));
+        private static bool bodyFlagResolved;
+        private static RenderSkipFlagDef BodyFlag
+        {
+            get
+            {
+                if (!bodyFlagResolved)
+                {
+                    bodyFlag = DefDatabase<RenderSkipFlagDef>.GetNamedSilentFail("Body");
+                    bodyFlagResolved = true;
+                }
+                return bodyFlag;
+            }
+        }
 
         public static void Postfix(PawnRenderTree __instance, ref PawnDrawParms parms)
         {
@@ -121,7 +169,8 @@ namespace RimHeroes
 
             if (Hediff_Wildshape.IsShifted(__instance.pawn))
             {
-                parms.skipFlags |= BodyFlag;
+                // Hide the entire human body subtree; the beast itself is drawn by Patch_DrawBeast.
+                if (BodyFlag != null) parms.skipFlags |= BodyFlag;
                 parms.skipFlags |= RenderSkipFlagDefOf.Head;
                 parms.skipFlags |= RenderSkipFlagDefOf.Hair;
                 parms.skipFlags |= RenderSkipFlagDefOf.Beard;
@@ -137,6 +186,33 @@ namespace RimHeroes
             {
                 parms.skipFlags |= RenderSkipFlagDefOf.Hair;
             }
+        }
+    }
+
+    /// <summary>
+    /// Draws the beast graphic directly over the (body-hidden) pawn while wildshaped. Runtime-added
+    /// hediff render nodes do not reliably enter the pawn draw tree, so we draw the form ourselves
+    /// in the render postfix, picking the directional texture from the pawn's facing.
+    /// </summary>
+    [HarmonyPatch(typeof(PawnRenderer), nameof(PawnRenderer.RenderPawnAt))]
+    public static class Patch_DrawBeast
+    {
+        public static void Postfix(PawnRenderer __instance, Vector3 drawLoc)
+        {
+            var pawn = __instance.pawn;
+            var hediffs = pawn?.health?.hediffSet?.hediffs;
+            if (hediffs == null) return;
+            Hediff_Wildshape form = null;
+            for (int i = 0; i < hediffs.Count; i++)
+            {
+                if (hediffs[i] is Hediff_Wildshape w) { form = w; break; }
+            }
+            if (form == null) return;
+            var g = form.BeastGraphic;
+            if (g == null) return;
+            var loc = drawLoc;
+            loc.y += 0.046875f; // a couple of altitude layers up, above the hidden body
+            g.Draw(loc, pawn.Rotation, pawn);
         }
     }
 }

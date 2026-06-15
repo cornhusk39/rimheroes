@@ -445,8 +445,21 @@ namespace RimHeroes
 
         public void Notify_SpellGranted(AbilityDef def)
         {
-            // Hostile cantrips autocast by default; self/utility spells stay manual.
-            if (SpellUtility.IsCantrip(def) && def.hostile)
+            if (def == null)
+            {
+                return;
+            }
+            // Default-ON the fire-and-forget options so a fresh hero is useful out of the box:
+            //   - hostile cantrips (at-will, no slot cost)
+            //   - support that can't be wasted: heals (gated on real injury) and party/self buffs
+            // Leave slot-expensive nukes, summons, and revivify OFF so they aren't burned on cooldown.
+            var intent = HeroAutocast.ClassifyIntent(def);
+            bool defaultOn =
+                (SpellUtility.IsCantrip(def) && def.hostile)
+                || intent == HeroAutocast.Intent.Heal
+                || intent == HeroAutocast.Intent.AllySupport
+                || (intent == HeroAutocast.Intent.SelfBuff && !def.hostile);
+            if (defaultOn)
             {
                 SetAutocast(def, true);
             }
@@ -522,56 +535,39 @@ namespace RimHeroes
 
         private void TickAutocast()
         {
-            if (!pawn.Spawned || pawn.Downed || pawn.Dead || !pawn.Drafted || pawn.abilities == null)
+            if (!pawn.IsColonistPlayerControlled || !pawn.Spawned || pawn.Downed || pawn.Dead || pawn.abilities == null)
             {
                 return;
             }
             if (pawn.CurJob?.ability != null)
             {
-                return; // already casting
+                return; // already casting: one cast at a time, let it finish
             }
             foreach (var ability in pawn.abilities.abilities)
             {
-                if (!(ability is Ability_Spell spell) || !AutocastEnabled(spell.def) || !spell.def.hostile)
+                if (ability == null || !AutocastEnabled(ability.def))
                 {
                     continue;
                 }
-                if (spell.GizmoDisabled(out _))
+                // Respect every cast gate: slots, cooldown, prepared-gate, wildshape-lock, etc.
+                if (ability.GizmoDisabled(out _) || !ability.CanCast)
                 {
                     continue;
                 }
-                float range = spell.verb?.verbProps?.range ?? 0f;
-                if (range <= 0f)
+                // Offense only fires while drafted; support (heals/buffs/summons) may fire freely.
+                var intent = HeroAutocast.ClassifyIntent(ability);
+                bool offensive = intent == HeroAutocast.Intent.HostileSingle
+                                 || intent == HeroAutocast.Intent.EnemyAoE;
+                if (offensive && !pawn.Drafted)
                 {
                     continue;
                 }
-                var target = FindAutocastTarget(range);
-                if (target != null)
+                if (HeroAutocast.TryResolveTarget(pawn, ability, out var target) && target.IsValid)
                 {
-                    spell.QueueCastingJob(target, target);
-                    return;
+                    ability.QueueCastingJob(target, target);
+                    return; // one cast per tick
                 }
             }
-        }
-
-        private Pawn FindAutocastTarget(float range)
-        {
-            Pawn best = null;
-            float bestDist = float.MaxValue;
-            foreach (var other in pawn.Map.mapPawns.AllPawnsSpawned)
-            {
-                if (other.Dead || other.Downed || !other.HostileTo(pawn))
-                {
-                    continue;
-                }
-                float dist = pawn.Position.DistanceTo(other.Position);
-                if (dist <= range && dist < bestDist && GenSight.LineOfSight(pawn.Position, other.Position, pawn.Map, skipFirstCell: true))
-                {
-                    best = other;
-                    bestDist = dist;
-                }
-            }
-            return best;
         }
 
         public override IEnumerable<Gizmo> GetGizmos()
@@ -650,13 +646,14 @@ namespace RimHeroes
             }
             if (pawn.abilities != null)
             {
+                // Every autocastable ability gets a toggle, spells AND non-spell martial abilities.
                 foreach (var ability in pawn.abilities.abilities)
                 {
-                    if (!(ability is Ability_Spell spell))
+                    if (ability?.def == null || HeroAutocast.ClassifyIntent(ability) == HeroAutocast.Intent.None)
                     {
                         continue;
                     }
-                    var def = spell.def;
+                    var def = ability.def;
                     yield return new Command_Toggle
                     {
                         defaultLabel = "RH_AutocastGizmo".Translate(def.label),

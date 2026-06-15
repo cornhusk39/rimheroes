@@ -80,9 +80,8 @@
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
         <texPath>Things/RimHeroes/Beasts/DireWolf/DireWolf</texPath>
-        <parentTagDef>Body</parentTagDef>
-        <drawSize>(1.8, 1.8)</drawSize>
-        <pawnType>Any</pawnType>
+        <parentTagDef>Root</parentTagDef>
+        <drawSize>(1.8, 1.8)</drawSize>
         <drawData>
           <defaultData>
             <layer>40</layer>
@@ -149,9 +148,8 @@
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
         <texPath>Things/RimHeroes/Beasts/GiantElk/GiantElk</texPath>
-        <parentTagDef>Body</parentTagDef>
-        <drawSize>(2.6, 2.6)</drawSize>
-        <pawnType>Any</pawnType>
+        <parentTagDef>Root</parentTagDef>
+        <drawSize>(2.6, 2.6)</drawSize>
         <drawData>
           <defaultData>
             <layer>40</layer>
@@ -243,9 +241,8 @@
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
         <texPath>Things/RimHeroes/Beasts/Owlbear/Owlbear</texPath>
-        <parentTagDef>Body</parentTagDef>
+        <parentTagDef>Root</parentTagDef>
         <drawSize>(2.4, 2.4)</drawSize>
-        <pawnType>Any</pawnType>
         <drawData>
           <defaultData>
             <layer>40</layer>

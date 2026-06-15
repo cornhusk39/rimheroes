@@ -6,6 +6,7 @@
 
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>RH_Weapon_Ranger_T1</defName>
+    <equippedAngleOffset>180</equippedAngleOffset>
     <label>lesser hero longbow</label>
     <description>A tall selfbow of seasoned heartwood, drawing a far heavier pull than any common bow. It is bound to a hero ranger, and no one else can string it, let alone bend it.</description>
     <techLevel>Medieval</techLevel>
@@ -66,6 +67,7 @@
 
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>RH_Weapon_Ranger_T2</defName>
+    <equippedAngleOffset>180</equippedAngleOffset>
     <label>hero longbow</label>
     <description>A masterwork recurve longbow, its limbs tuned tight and wrapped in hunter's green. It sends an arrow faster and straighter than the lesser bow ever could.</description>
     <techLevel>Medieval</techLevel>
@@ -73,7 +75,7 @@
     <tradeability>None</tradeability>
     <graphicData>
       <texPath>Things/RimHeroes/Weapons/Ranger/T2</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass><drawSize>1.10</drawSize>
     </graphicData>
     <soundInteract>Bow_Large</soundInteract>
     <statBases>
@@ -126,6 +128,7 @@
 
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>RH_Weapon_Ranger_T3</defName>
+    <equippedAngleOffset>180</equippedAngleOffset>
     <label>greater hero longbow</label>
     <description>A horn-and-gold composite recurve set with a single blood-ruby, its draw humming with held-back power. Its arrows fly flat and far, and punch clean through heavy armour.</description>
     <techLevel>Medieval</techLevel>
@@ -133,7 +136,7 @@
     <tradeability>None</tradeability>
     <graphicData>
       <texPath>Things/RimHeroes/Weapons/Ranger/T3</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass><drawSize>1.25</drawSize>
     </graphicData>
     <soundInteract>Bow_Large</soundInteract>
     <statBases>
@@ -186,6 +189,7 @@
 
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>RH_Weapon_Ranger_T4</defName>
+    <equippedAngleOffset>180</equippedAngleOffset>
     <label>perfect hero longbow</label>
     <description>A bow wrought of enchanted heartwood and gold, its string a taut thread of cold light, its limbs scribed with running runes. Every arrow flies as though something unseen guides it home.</description>
     <techLevel>Medieval</techLevel>
@@ -193,7 +197,7 @@
     <tradeability>None</tradeability>
     <graphicData>
       <texPath>Things/RimHeroes/Weapons/Ranger/T4</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass><drawSize>1.30</drawSize>
     </graphicData>
     <soundInteract>Bow_Large</soundInteract>
     <statBases>
@@ -246,6 +250,7 @@
 
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>RH_Weapon_Ranger_T5</defName>
+    <equippedAngleOffset>180</equippedAngleOffset>
     <label>Stormfall</label>
     <description>The ranger's capstone longbow, won only by a hero standing at the height of their legend. Caged storm-light crackles down its limbs and string; each arrow leaves on a clap of thunder and lands like a falling bolt.</description>
     <techLevel>Medieval</techLevel>
@@ -253,7 +258,7 @@
     <tradeability>None</tradeability>
     <graphicData>
       <texPath>Things/RimHeroes/Weapons/Ranger/T5</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass><drawSize>1.50</drawSize>
     </graphicData>
     <soundInteract>Bow_Large</soundInteract>
     <statBases>

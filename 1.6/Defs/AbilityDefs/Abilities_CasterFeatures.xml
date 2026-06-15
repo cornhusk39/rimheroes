@@ -85,7 +85,7 @@
     <defName>RH_Ability_FontOfMagic</defName>
     <label>font of magic</label>
     <description>Draw on the raw font of magic in your blood, overcharging your spells for a short time.</description>
-    <iconPath>UI/RimHeroes/Haste</iconPath>
+    <iconPath>UI/RimHeroes/FontOfMagic</iconPath>
     <cooldownTicksRange>30000</cooldownTicksRange>
     <hostile>false</hostile>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
@@ -110,7 +110,7 @@
     <defName>RH_Ability_SummonImp</defName>
     <label>summon imp</label>
     <description>Call your pact familiar to your side, a small fiend that flings bolts of fire at your enemies. If your imp is destroyed, you can summon a new one.</description>
-    <iconPath>UI/RimHeroes/Hex</iconPath>
+    <iconPath>UI/RimHeroes/SummonImp</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <hostile>false</hostile>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>

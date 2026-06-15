@@ -46,7 +46,7 @@
     <defName>RH_Weapon_Monk_T4</defName>
     <label>perfect hero fist wraps</label>
     <description>Chi-charged wraps that glow with channelled inner fire, their runed bronze bands ringing on impact. Each blow flows from a deep well of disciplined power and lands before the last has finished.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T4</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.10</drawSize></graphicData>
     <statBases><Mass>0.6</Mass><MarketValue>4200</MarketValue></statBases>
     <tools>
       <li><label>fist</label><capacities><li>Blunt</li></capacities><power>23</power><cooldownTime>1.0</cooldownTime><armorPenetration>0.26</armorPenetration></li>
@@ -59,7 +59,7 @@
     <defName>RH_Weapon_Monk_T5</defName>
     <label>Thousand Hands</label>
     <description>The monk's capstone wraps, earned only by a hero who has brought body and spirit into perfect accord. Ablaze with chi, the fists move so fast they trail a thousand afterimages, and no merely mortal flurry can keep pace with them.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Monk/T5</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.20</drawSize></graphicData>
     <statBases><Mass>0.6</Mass><MarketValue>9000</MarketValue></statBases>
     <tools>
       <li><label>fist</label><capacities><li>Blunt</li></capacities><power>30</power><cooldownTime>1.0</cooldownTime><armorPenetration>0.34</armorPenetration></li>

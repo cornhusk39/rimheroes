@@ -3,9 +3,10 @@
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Sorcerer_T1</defName>
+    <equippedAngleOffset>270</equippedAngleOffset>
     <label>lesser hero scepter</label>
     <description>A plain dark rod tipped with a small red gem, a focus through which a hero sorcerer pours their inborn magic. It makes a poor club, but it sharpens the will behind every spell.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T1</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.10</drawSize></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <tools>
       <li><label>shaft</label><capacities><li>Blunt</li></capacities><power>8</power><cooldownTime>2.0</cooldownTime></li>
@@ -16,9 +17,10 @@
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Sorcerer_T2</defName>
+    <equippedAngleOffset>270</equippedAngleOffset>
     <label>hero scepter</label>
     <description>A gold-banded scepter set with a large crimson gem. The bound metal hums when magic runs through it, and pushes greater force behind everything the sorcerer casts.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T2</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.10</drawSize></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <tools>
       <li><label>shaft</label><capacities><li>Blunt</li></capacities><power>9</power><cooldownTime>2.0</cooldownTime></li>
@@ -29,9 +31,10 @@
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Sorcerer_T3</defName>
+    <equippedAngleOffset>270</equippedAngleOffset>
     <label>greater hero scepter</label>
     <description>An ornate scepter holding a faceted crimson crystal in golden claws. Energy crackles and skips across its crown, coaxed out by the sorcerer's swelling power.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T3</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.20</drawSize></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <tools>
       <li><label>shaft</label><capacities><li>Blunt</li></capacities><power>11</power><cooldownTime>2.0</cooldownTime></li>
@@ -42,9 +45,10 @@
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Sorcerer_T4</defName>
+    <equippedAngleOffset>270</equippedAngleOffset>
     <label>perfect hero scepter</label>
     <description>A scepter wreathed in arcing gold sparks, its glowing gem ringed with raw magic. In a hero's grip it makes spells detonate with brutal force that barely stays leashed.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T4</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.20</drawSize></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <tools>
       <li><label>shaft</label><capacities><li>Blunt</li></capacities><power>13</power><cooldownTime>2.0</cooldownTime></li>
@@ -55,9 +59,10 @@
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Sorcerer_T5</defName>
+    <equippedAngleOffset>270</equippedAngleOffset>
     <label>Bloodfire Scepter</label>
     <description>The sorcerer's capstone scepter, won only by a hero whose legend stands at its peak. Molten crimson-gold bloodfire pours from its gem and never gutters out; the spells it focuses come down on the world like a storm made of fire.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Sorcerer/T5</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.30</drawSize></graphicData>
     <statBases><MarketValue>9000</MarketValue></statBases>
     <tools>
       <li><label>shaft</label><capacities><li>Blunt</li></capacities><power>16</power><cooldownTime>2.0</cooldownTime></li>

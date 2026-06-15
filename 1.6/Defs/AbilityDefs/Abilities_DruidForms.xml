@@ -10,7 +10,7 @@
     <defName>RH_Ability_Pounce</defName>
     <label>pounce</label>
     <description>Leap onto a foe with a savage bite.</description>
-    <iconPath>UI/RimHeroes/WildshapeDireWolf</iconPath>
+    <iconPath>UI/RimHeroes/Pounce</iconPath>
     <cooldownTicksRange>600</cooldownTicksRange>
     <hostile>true</hostile>
     <verbProperties>
@@ -30,7 +30,7 @@
     <defName>RH_Ability_Rend</defName>
     <label>rend</label>
     <description>Tear into a foe with claw and beak, savaging the already-wounded all the harder.</description>
-    <iconPath>UI/RimHeroes/WildshapeOwlbear</iconPath>
+    <iconPath>UI/RimHeroes/Rend</iconPath>
     <cooldownTicksRange>600</cooldownTicksRange>
     <hostile>true</hostile>
     <verbProperties>
@@ -50,7 +50,7 @@
     <defName>RH_Ability_Trample</defName>
     <label>trample</label>
     <description>Charge through a spot, battering everything underfoot.</description>
-    <iconPath>UI/RimHeroes/WildshapeGiantElk</iconPath>
+    <iconPath>UI/RimHeroes/Trample</iconPath>
     <cooldownTicksRange>700</cooldownTicksRange>
     <hostile>true</hostile>
     <verbProperties>
@@ -70,7 +70,7 @@
     <defName>RH_Ability_DragonBreath</defName>
     <label>dragon breath</label>
     <description>Exhale a roaring gout of flame that engulfs a swathe of the battlefield.</description>
-    <iconPath>UI/RimHeroes/Fireball</iconPath>
+    <iconPath>UI/RimHeroes/DragonBreath</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <hostile>true</hostile>
     <verbProperties>
@@ -90,7 +90,7 @@
     <defName>RH_Ability_WildshapeDragon</defName>
     <label>wildshape: dragon</label>
     <description>Take the shape of a dragon: armoured in scale, terrible in melee, and able to breathe fire. The pinnacle of an archdruid's art. Costs no spell slot.</description>
-    <iconPath>UI/RimHeroes/Fireball</iconPath>
+    <iconPath>UI/RimHeroes/WildshapeDragon</iconPath>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
         <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -149,9 +149,8 @@
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
         <texPath>Things/RimHeroes/Beasts/Dragon/Dragon</texPath>
-        <parentTagDef>Body</parentTagDef>
+        <parentTagDef>Root</parentTagDef>
         <drawSize>(4.5, 4.5)</drawSize>
-        <pawnType>Any</pawnType>
         <drawData>
           <defaultData>
             <layer>40</layer>

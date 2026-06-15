@@ -78,12 +78,20 @@ namespace RimHeroes
                 }
                 case 1:
                 {
-                    hero = map.mapPawns.FreeColonistsSpawned.FirstOrDefault();
-                    if (hero == null)
-                    {
-                        hero = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist, Faction.OfPlayer);
-                        GenSpawn.Spawn(hero, map.Center, map);
-                    }
+                    // dedicated isolated druid on cleared sand, away from the quicktest base, so the
+                    // auto-hero starting colonists don't get confused with our test subject
+                    var spot = map.Center + new IntVec3(28, 0, 0);
+                    for (int dx = -6; dx <= 6; dx++)
+                        for (int dz = -6; dz <= 6; dz++)
+                        {
+                            var c = spot + new IntVec3(dx, 0, dz);
+                            if (!c.InBounds(map)) continue;
+                            foreach (var t in c.GetThingList(map).ToList())
+                                if (!(t is Pawn) && t.def.destroyable) t.Destroy(DestroyMode.Vanish);
+                            map.terrainGrid.SetTerrain(c, TerrainDefOf.Sand);
+                        }
+                    hero = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist, Faction.OfPlayer);
+                    GenSpawn.Spawn(hero, spot, map);
                     var levels = HeroUtility.MakeHero(hero, DefDatabase<HeroClassDef>.GetNamed("RH_Druid"));
                     levels.GainXP(1300f); // L8: dire wolf (2), owlbear (5), giant elk (8)
                     baseMoveSpeed = hero.GetStatValue(StatDefOf.MoveSpeed);
@@ -112,7 +120,14 @@ namespace RimHeroes
                 }
                 case 2:
                 {
-                    Find.CameraDriver.SetRootPosAndSize(hero.DrawPos, 7f); // re-assert right before the shot
+                    // close every open window (dev log + auto class-pick dialogs) so they don't photobomb
+                    foreach (var w in Find.WindowStack.Windows.ToList())
+                    {
+                        if (!(w is MainTabWindow)) w.Close(false);
+                    }
+                    Messages.Clear();
+                    hero.jobs?.StopAll();
+                    Find.CameraDriver.SetRootPosAndSize(hero.Position.ToVector3Shifted(), 7f); // re-assert right before the shot
                     nextStateTime = Time.realtimeSinceStartup + 1.5f;
                     ScreenshotTaker.TakeNonSteamShot("rhshapespike");
                     state = 3;

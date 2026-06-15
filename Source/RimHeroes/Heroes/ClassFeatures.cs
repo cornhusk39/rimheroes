@@ -272,6 +272,10 @@ namespace RimHeroes
         public const float WorkPerLevel = 0.02f;        // +2% work speed / level
         public const float SpellPowerPerLevel = 0.005f; // casters: +spell power / level
 
+        /// <summary>Body-part HP-pool multiplier (Pawn.HealthScale): x1.0 at L0 -> x2.2 at L20, so high-level
+        /// heroes soak like a raid boss. Applied by Patch_HeroHealth.</summary>
+        public static float HeroHealthFactor(int level) => 1f + 0.06f * Mathf.Clamp(level, 0, 20);
+
         private static StatDef Stat(string defName) => DefDatabase<StatDef>.GetNamedSilentFail(defName);
 
         // ----- Dynamic stat stage (heroic growth + Fighter's Indomitable toughness) -----

@@ -3,9 +3,10 @@
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Druid_T1</defName>
+    <equippedAngleOffset>270</equippedAngleOffset>
     <label>lesser hero living staff</label>
     <description>A gnarled staff of living wood, taken from a branch still green and bound to a hero druid. It opens the druid's magic to the wild that made it, though as a club it is honestly just a stout stick.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Druid/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Druid/T1</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.10</drawSize></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <tools>
       <li><label>shaft</label><capacities><li>Blunt</li></capacities><power>8</power><cooldownTime>2.0</cooldownTime></li>
@@ -16,9 +17,10 @@
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Druid_T2</defName>
+    <equippedAngleOffset>270</equippedAngleOffset>
     <label>hero living staff</label>
     <description>A living staff laced with creeping vine, sprouting fresh leaves along its length that never brown or fall. Wild magic runs more freely through the growing wood, feeding the druid's spells.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Druid/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Druid/T2</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.10</drawSize></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <tools>
       <li><label>shaft</label><capacities><li>Blunt</li></capacities><power>9</power><cooldownTime>2.0</cooldownTime></li>
@@ -29,9 +31,10 @@
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Druid_T3</defName>
+    <equippedAngleOffset>270</equippedAngleOffset>
     <label>greater hero living staff</label>
     <description>A living staff forked at its crown like antlers of pale bone-wood, holding a bead of amber sap that glows with a quiet inner warmth. When it is raised, the wild leans in to listen, and the druid's magic carries further.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Druid/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Druid/T3</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.15</drawSize></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <tools>
       <li><label>shaft</label><capacities><li>Blunt</li></capacities><power>11</power><cooldownTime>2.0</cooldownTime></li>
@@ -42,9 +45,10 @@
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Druid_T4</defName>
+    <equippedAngleOffset>270</equippedAngleOffset>
     <label>perfect hero living staff</label>
     <description>A living staff veined with glowing amber sap that pulses up the wood like a slow heartbeat, wreathed in leaves and a soft halo of lifelight. Spring follows wherever it goes, and the wild answers the druid's call before the words are finished.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Druid/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Druid/T4</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.15</drawSize></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <tools>
       <li><label>shaft</label><capacities><li>Blunt</li></capacities><power>13</power><cooldownTime>2.0</cooldownTime></li>
@@ -55,9 +59,10 @@
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
     <defName>RH_Weapon_Druid_T5</defName>
+    <equippedAngleOffset>270</equippedAngleOffset>
     <label>Worldroot</label>
     <description>The druid's capstone staff, given only to a hero who has grown into the living world itself. Worldroot burns with amber lifelight, crowned in antlers and evergreen leaves, its roots forever groping for soil. Strike it to the ground and forests surge up, while the fallen are quietly drawn back into the wild.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Druid/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Druid/T5</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.35</drawSize></graphicData>
     <statBases><MarketValue>9000</MarketValue></statBases>
     <tools>
       <li><label>shaft</label><capacities><li>Blunt</li></capacities><power>16</power><cooldownTime>2.0</cooldownTime></li>

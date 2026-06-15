@@ -105,14 +105,39 @@ namespace RimHeroes
 
         private Hediff_HeroLevels Hero => HeroUtility.GetHeroHediff(pawn);
 
+        // A wildshape ability is a free (level 0) ability whose GiveHediff effect grants a
+        // Hediff_Wildshape. These must stay castable while shifted so a druid can switch forms;
+        // the Beast Spells lock below would otherwise trap them in their current shape.
+        private bool IsWildshapeAbility
+        {
+            get
+            {
+                if (def.level != 0 || def.comps == null)
+                {
+                    return false;
+                }
+                foreach (var comp in def.comps)
+                {
+                    if (comp is RimWorld.CompProperties_AbilityGiveHediff give
+                        && give.hediffDef != null
+                        && typeof(Hediff_Wildshape).IsAssignableFrom(give.hediffDef.hediffClass))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+
         public override bool GizmoDisabled(out string reason)
         {
             if (base.GizmoDisabled(out reason))
             {
                 return true;
             }
-            // Beast Spells: a wildshaped druid can't cast spells until level 18.
-            if (Hediff_Wildshape.IsShifted(pawn))
+            // Beast Spells: a wildshaped druid can't cast spells until level 18. Wildshape abilities
+            // are exempt so a shifted druid can still cast another form to switch shapes.
+            if (Hediff_Wildshape.IsShifted(pawn) && !IsWildshapeAbility)
             {
                 var beastHero = Hero;
                 if (beastHero == null || beastHero.level < 18)

@@ -7,7 +7,7 @@
     <defName>RH_Weapon_Rogue_T1</defName>
     <label>lesser hero daggers</label>
     <description>A matched pair of keen daggers, light and wickedly balanced for fast offhand work. Bound to a hero rogue, they slide past armour that heavier blades can only dent.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T1</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T1</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.05</drawSize></graphicData>
     <statBases><MarketValue>700</MarketValue></statBases>
     <tools>
       <li><label>blade</label><capacities><li>Stab</li></capacities><power>14</power><cooldownTime>1.1</cooldownTime><armorPenetration>0.30</armorPenetration></li>
@@ -20,7 +20,7 @@
     <defName>RH_Weapon_Rogue_T2</defName>
     <label>hero daggers</label>
     <description>Twin daggers with blackened blades and oxblood-wrapped grips, honed to seek the seams in plate. They take the light, and the blood, of anyone careless enough to let the rogue close.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T2</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T2</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.05</drawSize></graphicData>
     <statBases><MarketValue>1400</MarketValue></statBases>
     <tools>
       <li><label>blade</label><capacities><li>Stab</li></capacities><power>19</power><cooldownTime>1.1</cooldownTime><armorPenetration>0.38</armorPenetration></li>
@@ -33,7 +33,7 @@
     <defName>RH_Weapon_Rogue_T3</defName>
     <label>greater hero daggers</label>
     <description>A pair of ornate daggers with gilded guards and blood-ruby pommels, their edges humming with held-back power. Each thrust threads through armour as easily as a needle through cloth.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T3</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T3</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.10</drawSize></graphicData>
     <statBases><MarketValue>2600</MarketValue></statBases>
     <tools>
       <li><label>blade</label><capacities><li>Stab</li></capacities><power>25</power><cooldownTime>1.1</cooldownTime><armorPenetration>0.46</armorPenetration></li>
@@ -46,7 +46,7 @@
     <defName>RH_Weapon_Rogue_T4</defName>
     <label>perfect hero daggers</label>
     <description>Twin blades shrouded in living shadow, their glowing edges trailing dark wisps and a red glint of bound malice. They cut faster than the eye can track them.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T4</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T4</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.10</drawSize></graphicData>
     <statBases><MarketValue>4200</MarketValue></statBases>
     <tools>
       <li><label>blade</label><capacities><li>Stab</li></capacities><power>32</power><cooldownTime>1.1</cooldownTime><armorPenetration>0.55</armorPenetration></li>
@@ -59,7 +59,7 @@
     <defName>RH_Weapon_Rogue_T5</defName>
     <label>Whisper and Woe</label>
     <description>The rogue's capstone daggers, won only by a hero whose legend has reached its peak. Whisper takes the breath; Woe takes the rest. Both blades trail shadow, and the red glint set in each one watches for the killing gap with patience that never once fails.</description>
-    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T5</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <graphicData><texPath>Things/RimHeroes/Weapons/Rogue/T5</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.15</drawSize></graphicData>
     <statBases><MarketValue>9000</MarketValue></statBases>
     <tools>
       <li><label>blade</label><capacities><li>Stab</li></capacities><power>42</power><cooldownTime>1.1</cooldownTime><armorPenetration>0.70</armorPenetration></li>
