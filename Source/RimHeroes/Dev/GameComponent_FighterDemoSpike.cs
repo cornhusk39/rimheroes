@@ -88,6 +88,16 @@ namespace RimHeroes
             Log.Message($"[RimHeroes.FighterDemo] WARLOCK Pact-of-Chain: imps={imps} rangedFireVerbs={impVerbs} masterBound={masterBound} thinkTree={tree}");
             if (imps < 1 || impVerbs < 1 || !masterBound || tree != "RH_ImpFamiliar") pass = false;
 
+            // Known-caster spell limits: a L5 Sorcerer should learn a CAPPED set, not the whole pool.
+            CellFinder.TryFindRandomCellNear(map.Center, map, 12, c => c.Standable(map), out var scell);
+            var sorc = SpawnClass(map, scell, "RH_Sorcerer", 5);
+            int poolLeveled = sorc.LearnableSpellPool().Where(s => s.level > 0).Distinct().Count();
+            int spellsOnPawn = sorc.pawn.abilities?.abilities?.Count(a => a is Ability_Spell) ?? 0;
+            Log.Message($"[RimHeroes.FighterDemo] SORCERER L5 known: cantrips={sorc.KnownCantrips}/{sorc.CantripsAllowed} " +
+                        $"leveled={sorc.KnownLeveledSpells}/{sorc.LeveledSpellsAllowed} poolLeveled={poolLeveled} totalSpellAbilities={spellsOnPawn} limited={sorc.LearnsLimitedSpells}");
+            bool knownOk = sorc.LearnsLimitedSpells && sorc.KnownLeveledSpells == sorc.LeveledSpellsAllowed && sorc.KnownLeveledSpells < poolLeveled;
+            if (!knownOk) pass = false;
+
             Log.Message($"[RimHeroes.FighterDemo] RESULT: verdict={(pass ? "PASS" : "FAIL")}");
         }
 

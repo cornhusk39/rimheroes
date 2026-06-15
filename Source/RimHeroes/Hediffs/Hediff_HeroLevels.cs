@@ -41,6 +41,59 @@ namespace RimHeroes
         public PactBoon pactBoon = PactBoon.None; // Warlock's L3 Pact Boon pick
         public void SetPactBoon(PactBoon b) { pactBoon = b; }
 
+        // ===== Known-caster spell learning (5e: limited spells known, player-picked) =====
+
+        private List<AbilityDef> learnedSpells = new List<AbilityDef>();
+        public List<AbilityDef> LearnedSpells => learnedSpells;
+
+        /// <summary>True for known casters that learn a capped set (Sorcerer/Bard/Ranger/Warlock);
+        /// prepared casters (Cleric/Druid/Wizard/Paladin) know all their granted spells instead.</summary>
+        public bool LearnsLimitedSpells =>
+            classDef != null && !classDef.preparesSpells
+            && classDef.casterProgression != CasterProgression.None
+            && classDef.spellsKnownByLevel != null && classDef.spellsKnownByLevel.Count > 0;
+
+        public int CantripsAllowed =>
+            classDef == null ? 0 : classDef.cantripsKnownBase + (level >= 4 ? 1 : 0) + (level >= 10 ? 1 : 0);
+
+        public int LeveledSpellsAllowed
+        {
+            get
+            {
+                var t = classDef?.spellsKnownByLevel;
+                if (t == null || t.Count == 0) return 0;
+                return t[Mathf.Clamp(level - 1, 0, t.Count - 1)];
+            }
+        }
+
+        public int KnownCantrips => learnedSpells.Count(s => s != null && s.level == 0);
+        public int KnownLeveledSpells => learnedSpells.Count(s => s != null && s.level > 0);
+
+        public bool HasLearned(AbilityDef def) => learnedSpells.Contains(def);
+
+        public void LearnSpell(AbilityDef def)
+        {
+            if (def == null || learnedSpells.Contains(def)) return;
+            learnedSpells.Add(def);
+            pawn.abilities?.GainAbility(def);
+            Notify_SpellGranted(def);
+        }
+
+        /// <summary>All spells (cantrips + leveled) this class can learn at the current level,
+        /// drawn from its levelGrants pool. Used by the learn UI / auto-learn.</summary>
+        public IEnumerable<AbilityDef> LearnableSpellPool()
+        {
+            if (classDef?.levelGrants == null) yield break;
+            foreach (var grant in classDef.levelGrants)
+            {
+                if (grant.level > level || grant.abilities == null) continue;
+                foreach (var a in grant.abilities)
+                {
+                    if (a != null && SpellUtility.IsSpell(a)) yield return a;
+                }
+            }
+        }
+
         /// <summary>Bonus to death saving throws from class features (Fighter's Indomitable).</summary>
         public int DeathSaveBonus => ClassFeatures.DeathSaveBonus(this);
 
@@ -742,36 +795,52 @@ namespace RimHeroes
                 LetterDefOf.PositiveEvent, new TargetInfo(weapon.PositionHeld, pawn.Map));
         }
 
-        /// <summary>Idempotent: applies every grant at or below the current level.</summary>
+        /// <summary>Idempotent: applies every grant at or below the current level. Known casters skip
+        /// auto-granting spells (they learn a capped set via picks); everything else always grants.</summary>
         private void ApplyGrants()
         {
-            if (classDef?.levelGrants == null)
+            if (classDef == null)
             {
                 return;
             }
-            foreach (var grant in classDef.levelGrants)
+            bool limited = LearnsLimitedSpells;
+            if (classDef.levelGrants != null)
             {
-                if (grant.level > level)
+                foreach (var grant in classDef.levelGrants)
                 {
-                    continue;
-                }
-                if (grant.abilities != null)
-                {
-                    foreach (var abilityDef in grant.abilities)
+                    if (grant.level > level)
                     {
-                        pawn.abilities?.GainAbility(abilityDef); // dup-safe in vanilla
-                        Notify_SpellGranted(abilityDef);
+                        continue;
                     }
-                }
-                if (grant.features != null)
-                {
-                    foreach (var featureDef in grant.features)
+                    if (grant.abilities != null)
                     {
-                        if (!pawn.health.hediffSet.HasHediff(featureDef))
+                        foreach (var abilityDef in grant.abilities)
                         {
-                            pawn.health.AddHediff(featureDef);
+                            if (limited && SpellUtility.IsSpell(abilityDef))
+                            {
+                                continue; // known casters learn these via picks, not auto-grant
+                            }
+                            pawn.abilities?.GainAbility(abilityDef); // dup-safe in vanilla
+                            Notify_SpellGranted(abilityDef);
                         }
                     }
+                    if (grant.features != null)
+                    {
+                        foreach (var featureDef in grant.features)
+                        {
+                            if (!pawn.health.hediffSet.HasHediff(featureDef))
+                            {
+                                pawn.health.AddHediff(featureDef);
+                            }
+                        }
+                    }
+                }
+            }
+            if (limited)
+            {
+                foreach (var s in learnedSpells)
+                {
+                    if (s != null) { pawn.abilities?.GainAbility(s); Notify_SpellGranted(s); }
                 }
             }
             EnsureSignaturePicks(); // fill default Spell Mastery / Signature Spell picks once unlocked
@@ -790,6 +859,7 @@ namespace RimHeroes
             Scribe_Values.Look(ref fighterStyle, "fighterStyle", FighterStyle.None);
             Scribe_Values.Look(ref favoredEnemy, "favoredEnemy", FavoredEnemy.None);
             Scribe_Values.Look(ref pactBoon, "pactBoon", PactBoon.None);
+            Scribe_Collections.Look(ref learnedSpells, "learnedSpells", LookMode.Def);
             Scribe_Collections.Look(ref mimBonds, "mimBonds", LookMode.Deep);
             Scribe_Collections.Look(ref slotsExpended, "slotsExpended", LookMode.Value);
             Scribe_Collections.Look(ref autocastSpells, "autocastSpells", LookMode.Def);
@@ -812,6 +882,7 @@ namespace RimHeroes
                 if (preparedSpells == null) preparedSpells = new List<AbilityDef>();
                 if (resolvedChoiceLevels == null) resolvedChoiceLevels = new List<int>();
                 if (resolvedBonusFeatLevels == null) resolvedBonusFeatLevels = new List<int>();
+                if (learnedSpells == null) learnedSpells = new List<AbilityDef>();
                 if (takenFeats == null) takenFeats = new List<FeatDef>();
                 if (slotsExpended == null || slotsExpended.Count != 10) slotsExpended = new List<int>(new int[10]);
             }

@@ -98,6 +98,8 @@
     <description>The wild's warden. Tracks anything, drops it from a treeline away.</description>
     <vestmentHediff>RH_Vestment_Ranger</vestmentHediff>
     <casterProgression>Half</casterProgression>
+    <cantripsKnownBase>0</cantripsKnownBase>
+    <spellsKnownByLevel><li>0</li><li>2</li><li>3</li><li>3</li><li>4</li><li>4</li><li>5</li><li>5</li><li>6</li><li>6</li><li>7</li><li>7</li><li>8</li><li>8</li><li>9</li><li>9</li><li>10</li><li>10</li><li>11</li><li>11</li></spellsKnownByLevel>
     <favoredEnemyPick>true</favoredEnemyPick>
     <levelGrants>
       <li>
@@ -390,6 +392,8 @@
     <description>Magic in the blood, begging to get out. Less study than the wizard; more lightning.</description>
     <vestmentHediff>RH_Vestment_Sorcerer</vestmentHediff>
     <casterProgression>Full</casterProgression>
+    <cantripsKnownBase>4</cantripsKnownBase>
+    <spellsKnownByLevel><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>12</li><li>13</li><li>13</li><li>14</li><li>14</li><li>15</li><li>15</li><li>15</li><li>15</li></spellsKnownByLevel>
     <bonusFeatLevels>
       <li>3</li>
       <li>10</li>
@@ -440,6 +444,8 @@
     <description>Wit sharp enough to wound and songs that close wounds. Better with friends.</description>
     <vestmentHediff>RH_Vestment_Bard</vestmentHediff>
     <casterProgression>Full</casterProgression>
+    <cantripsKnownBase>2</cantripsKnownBase>
+    <spellsKnownByLevel><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li><li>14</li><li>15</li><li>15</li><li>16</li><li>18</li><li>19</li><li>19</li><li>20</li><li>22</li><li>22</li><li>22</li></spellsKnownByLevel>
     <magicalSecretLevels>
       <li>10</li>
       <li>14</li>
@@ -484,6 +490,8 @@
     <description>Power on loan from something that doesn't explain itself. The blast always works; that's the deal.</description>
     <vestmentHediff>RH_Vestment_Warlock</vestmentHediff>
     <casterProgression>Full</casterProgression>
+    <cantripsKnownBase>2</cantripsKnownBase>
+    <spellsKnownByLevel><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>10</li><li>11</li><li>11</li><li>12</li><li>12</li><li>13</li><li>13</li><li>14</li><li>14</li><li>15</li></spellsKnownByLevel>
     <pactBoonPick>true</pactBoonPick>
     <bonusFeatLevels>
       <li>2</li>

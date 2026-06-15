@@ -34,6 +34,13 @@ namespace RimHeroes
         public bool pactBoonPick = false;
         // Bard's Magical Secrets: levels at which they pick a spell from the cross-class pool.
         public List<int> magicalSecretLevels = new List<int>();
+
+        // Known casters (preparesSpells=false) LEARN a limited set the player picks; prepared casters
+        // (preparesSpells=true) know all their granted spells. spellsKnownByLevel = leveled spells
+        // known at each class level (5e table, 20 entries); cantripsKnownBase = cantrips at level 1
+        // (+1 at L4, +1 at L10). Leave empty for know-all (prepared) classes.
+        public List<int> spellsKnownByLevel = new List<int>();
+        public int cantripsKnownBase = 0;
         // Extra ASI levels granted as bonus feat picks beyond the shared 4/8/12/16/19 (Fighter: 6, 14).
         public List<int> bonusFeatLevels = new List<int>();
 

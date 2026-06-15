@@ -53,6 +53,22 @@ namespace RimHeroes
         {
             if (hero?.pawn == null || hero.classDef == null) return;
             bool player = allowDialog && hero.pawn.IsColonistPlayerControlled;
+
+            // Known casters learn their newly-available spells first (cantrips + leveled, up to the cap).
+            if (hero.LearnsLimitedSpells && OwesSpells(hero))
+            {
+                if (player)
+                {
+                    Find.WindowStack.Add(new Dialog_LearnSpells(hero, () => ResolveChoices(hero, true)));
+                    return; // resolve the rest after the learn window closes
+                }
+                AutoLearnSpells(hero);
+            }
+            ResolveChoices(hero, player);
+        }
+
+        private static void ResolveChoices(Hediff_HeroLevels hero, bool player)
+        {
             while (true)
             {
                 var next = NextUnresolved(hero);
@@ -68,9 +84,33 @@ namespace RimHeroes
                 Find.WindowStack.Add(new Dialog_HeroChoice(TitleFor(next.kind), SubtitleFor(hero, next.kind), options, () =>
                 {
                     MarkResolved(hero, captured);
-                    CheckLevelChoices(hero);
+                    ResolveChoices(hero, player);
                 }));
                 return; // resolve the rest after this dialog closes
+            }
+        }
+
+        public static bool OwesSpells(Hediff_HeroLevels hero)
+        {
+            var pool = hero.LearnableSpellPool().Where(s => !hero.HasLearned(s)).ToList();
+            bool cantripRoom = hero.KnownCantrips < hero.CantripsAllowed && pool.Any(s => s.level == 0);
+            bool leveledRoom = hero.KnownLeveledSpells < hero.LeveledSpellsAllowed && pool.Any(s => s.level > 0);
+            return cantripRoom || leveledRoom;
+        }
+
+        /// <summary>Auto-fill a known caster's spells (enemy/debug heroes): cantrips then leveled, random.</summary>
+        public static void AutoLearnSpells(Hediff_HeroLevels hero)
+        {
+            var pool = hero.LearnableSpellPool().Where(s => !hero.HasLearned(s)).ToList();
+            foreach (var c in pool.Where(s => s.level == 0).InRandomOrder())
+            {
+                if (hero.KnownCantrips >= hero.CantripsAllowed) break;
+                hero.LearnSpell(c);
+            }
+            foreach (var l in pool.Where(s => s.level > 0).InRandomOrder())
+            {
+                if (hero.KnownLeveledSpells >= hero.LeveledSpellsAllowed) break;
+                hero.LearnSpell(l);
             }
         }
 
