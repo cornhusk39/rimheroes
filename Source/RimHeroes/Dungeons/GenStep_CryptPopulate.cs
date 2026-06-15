@@ -65,29 +65,8 @@ namespace RimHeroes
 
         private static void SpawnBoss(Map map, CellRect room, Faction faction)
         {
-            var classDef = DefDatabase<HeroClassDef>.GetNamedSilentFail("RH_Fighter");
-            if (classDef == null) return;
             if (!TryRoomCell(map, room, out var cell)) cell = room.CenterCell;
-            try
-            {
-                var boss = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, faction,
-                    fixedBiologicalAge: 45f, fixedChronologicalAge: 45f, forceGenerateNewPawn: true, fixedGender: Gender.Male));
-                GenSpawn.Spawn(boss, cell, map);
-                boss.apparel?.DestroyAll();
-                boss.equipment?.DestroyAllEquipment();
-                var levels = HeroUtility.MakeHero(boss, classDef);
-                levels.SetLevelDirect(20);
-                var wpn = DefDatabase<ThingDef>.GetNamedSilentFail("RH_Weapon_Fighter_T5");
-                if (wpn != null)
-                {
-                    var w = (ThingWithComps)ThingMaker.MakeThing(wpn);
-                    boss.equipment.MakeRoomFor(w);
-                    boss.equipment.AddEquipment(w);
-                }
-                boss.Name = new NameSingle("Crypt Lord");
-                boss.Drawer?.renderer?.SetAllGraphicsDirty();
-            }
-            catch (System.Exception e) { Log.Error($"[RimHeroes.CryptPopulate] boss spawn failed: {e}"); }
+            DungeonBoss.SpawnCryptLord(map, cell, faction);
         }
 
         private static void SpawnVaultLoot(Map map, CellRect room)

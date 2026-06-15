@@ -36,6 +36,9 @@ namespace RimHeroes
 
         public int Tier => Mathf.Clamp(Mathf.RoundToInt(Severity), 1, 5);
 
+        // When set, the vestment renders with a heavy dark tint (desecrated -- used by undead bosses).
+        public bool desecrated;
+
         // Cached "this tier has helm art" answer for the render thread: ContentFinder may only
         // be touched on the main thread, but AdjustParms runs during parallel pre-draw.
         private int helmArtTier = -1;
@@ -57,7 +60,7 @@ namespace RimHeroes
         // True when the helm art is showing AND this vestment's headpiece replaces hair
         // (i.e. not a headband). Drives the hair-skip flag in the render postfix.
         public bool HelmHidesHair =>
-            HelmArtVisible && !(def.GetModExtension<VestmentExtension>()?.helmKeepsHair ?? false);
+            HelmArtVisible && !desecrated && !(def.GetModExtension<VestmentExtension>()?.helmKeepsHair ?? false);
 
         public override string LabelInBrackets => $"tier {Tier}";
 
@@ -111,6 +114,12 @@ namespace RimHeroes
             }
             AuraFx.ThrowMote(pawn, ext.auraColor, ext.auraMote);
         }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref desecrated, "desecrated");
+        }
     }
 
     /// <summary>
@@ -136,7 +145,8 @@ namespace RimHeroes
             string artPath = VestmentArt.TierBodyPath(vestment, pawn);
             if (artPath != null)
             {
-                return GraphicDatabase.Get<Graphic_Multi>(artPath, ShaderDatabase.Cutout, Vector2.one, Color.white);
+                Color tint = vestment.desecrated ? new Color(0.2f, 0.2f, 0.22f) : Color.white;
+                return GraphicDatabase.Get<Graphic_Multi>(artPath, ShaderDatabase.Cutout, Vector2.one, tint);
             }
             if (props.texPath.NullOrEmpty())
             {
@@ -207,9 +217,9 @@ namespace RimHeroes
                 return null;
             }
             var vestment = pawn.health?.hediffSet?.hediffs?.OfType<Hediff_ClassVestment>().FirstOrDefault();
-            if (vestment == null)
+            if (vestment == null || vestment.desecrated)
             {
-                return null;
+                return null;   // desecrated bosses go bare-headed so the undead face shows
             }
             string path = VestmentArt.HelmPath(vestment);
             return path == null ? null
