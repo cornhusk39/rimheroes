@@ -15,4 +15,38 @@
     <critFailureText>You feel a tumbler shear somewhere deep inside. The lock grinds, then sets itself stubbornly against you.</critFailureText>
   </RimHeroes.CheckDef>
 
+  <!-- Trap: a silent Perception spot reveals it, a Dodge save dodges it, a Perception disarm neutralizes
+       it. The trap def's TrapExtension overrides these DCs per trap; the dc here is only a fallback. -->
+
+  <RimHeroes.CheckDef>
+    <defName>RH_Check_TrapSpot</defName>
+    <label>spot the trap</label>
+    <kind>Perception</kind>
+    <dc>13</dc>
+    <successText>Something about this stretch of floor is wrong. You catch it just in time.</successText>
+    <failureText>Nothing seems amiss here.</failureText>
+  </RimHeroes.CheckDef>
+
+  <RimHeroes.CheckDef>
+    <defName>RH_Check_TrapSave</defName>
+    <label>dodge the trap</label>
+    <kind>Dodge</kind>
+    <dc>13</dc>
+    <critSuccessText>You feel the plate give and you are already moving. The mechanism bites nothing but the air where you stood.</critSuccessText>
+    <successText>You throw yourself sideways as it goes off. It misses.</successText>
+    <failureText>You react a heartbeat too slow. The trap catches you.</failureText>
+    <critFailureText>You step square onto it with no warning at all. It takes you full force.</critFailureText>
+  </RimHeroes.CheckDef>
+
+  <RimHeroes.CheckDef>
+    <defName>RH_Check_TrapDisarm</defName>
+    <label>disarm the trap</label>
+    <kind>Perception</kind>
+    <dc>14</dc>
+    <critSuccessText>You read the whole mechanism at a glance and still its heart with one certain touch.</critSuccessText>
+    <successText>You trace the linkage, ease the tension off the trigger, and the trap goes quiet.</successText>
+    <failureText>Your hand slips on the trigger and the trap springs.</failureText>
+    <critFailureText>You catch exactly the wrong piece. It goes off in your hands.</critFailureText>
+  </RimHeroes.CheckDef>
+
 </Defs>

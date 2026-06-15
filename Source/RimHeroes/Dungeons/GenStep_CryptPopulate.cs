@@ -22,6 +22,7 @@ namespace RimHeroes
             var faction = Faction.OfEntities;
 
             int chestsLeft = 2;
+            int trapsLeft = 3;
             for (int i = 0; i < comp.rooms.Count; i++)
             {
                 var room = comp.rooms[i];
@@ -42,6 +43,7 @@ namespace RimHeroes
                 {
                     SpawnGuards(map, room, faction, Rand.RangeInclusive(2, 4));
                     if (chestsLeft > 0 && Rand.Chance(0.6f)) { PlaceChest(map, room); chestsLeft--; }
+                    if (trapsLeft > 0 && Rand.Chance(0.6f)) { PlaceTrap(map, room); trapsLeft--; }
                 }
             }
         }
@@ -103,6 +105,16 @@ namespace RimHeroes
         private static void PlaceChest(Map map, CellRect room)
         {
             var def = DefDatabase<ThingDef>.GetNamedSilentFail("RH_LootChest");
+            if (def == null) return;
+            if (TryRoomCell(map, room, out var cell))
+                GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);
+        }
+
+        private static readonly string[] TrapDefs = { "RH_Trap_Blade", "RH_Trap_Dart" };
+
+        private static void PlaceTrap(Map map, CellRect room)
+        {
+            var def = DefDatabase<ThingDef>.GetNamedSilentFail(TrapDefs[Rand.Range(0, TrapDefs.Length)]);
             if (def == null) return;
             if (TryRoomCell(map, room, out var cell))
                 GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);

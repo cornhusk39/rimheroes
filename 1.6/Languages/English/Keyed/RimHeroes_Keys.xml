@@ -73,4 +73,13 @@
   <RH_ReliquaryStateLocked>Locked (DC {0})</RH_ReliquaryStateLocked>
   <RH_ReliquaryStateJammed>Jammed: the lock can no longer be picked</RH_ReliquaryStateJammed>
   <RH_ReliquaryStateOpened>Opened</RH_ReliquaryStateOpened>
+  <RH_TrapDisarm>Disarm trap</RH_TrapDisarm>
+  <RH_TrapDisarmDesc>Carefully neutralize this trap (Perception DC {0}). Choose who tries. Botch it and the trap goes off in their hands.</RH_TrapDisarmDesc>
+  <RH_TrapDisarmerOption>{0}  (perception {1})</RH_TrapDisarmerOption>
+  <RH_TrapNoDisarmer>No colonist can reach the trap</RH_TrapNoDisarmer>
+  <RH_TrapSpotted>{0} spots a hidden trap.</RH_TrapSpotted>
+  <RH_TrapDodged>{0} throws themselves clear of the trap.</RH_TrapDodged>
+  <RH_TrapHit>{0} is caught by a trap.</RH_TrapHit>
+  <RH_TrapDisarmed>The trap is safely disarmed.</RH_TrapDisarmed>
+  <RH_TrapStateArmed>Armed: step on it and the stepping pawn must dodge, or disarm it by hand</RH_TrapStateArmed>
 </LanguageData>

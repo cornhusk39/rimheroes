@@ -101,6 +101,71 @@
     </building>
   </ThingDef>
 
+  <!-- Hidden dungeon traps: spot-then-save. See Building_DungeonTrap. Standable + invisible until
+       revealed, so the party walks onto them unless someone spots them first. -->
+  <ThingDef Name="RH_TrapBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>RimHeroes.Building_DungeonTrap</thingClass>
+    <size>(1, 1)</size>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <fillPercent>0</fillPercent>
+    <useHitPoints>false</useHitPoints>
+    <selectable>true</selectable>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <castEdgeShadows>false</castEdgeShadows>
+    <building>
+      <isEdifice>false</isEdifice>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <expandHomeArea>false</expandHomeArea>
+      <isInert>true</isInert>
+    </building>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/RimHeroes/Items/Trap</texPath>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TrapBase">
+    <defName>RH_Trap_Blade</defName>
+    <label>scything blade trap</label>
+    <description>A pressure plate wired to a hidden blade. Step on it unaware and it scythes across the floor.</description>
+    <modExtensions>
+      <li Class="RimHeroes.TrapExtension">
+        <damage>Cut</damage>
+        <damageAmount>16~28</damageAmount>
+        <spotDC>12</spotDC>
+        <saveDC>13</saveDC>
+        <disarmDC>14</disarmDC>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TrapBase">
+    <defName>RH_Trap_Dart</defName>
+    <label>dart trap</label>
+    <description>A near-invisible tripwire feeding a bank of spring-loaded darts. Subtle, and quick.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/RimHeroes/Items/Trap</texPath>
+      <drawSize>(1, 1)</drawSize>
+      <color>(0.62, 0.66, 0.72)</color>
+    </graphicData>
+    <modExtensions>
+      <li Class="RimHeroes.TrapExtension">
+        <damage>Stab</damage>
+        <damageAmount>10~20</damageAmount>
+        <spotDC>15</spotDC>
+        <saveDC>12</saveDC>
+        <disarmDC>13</disarmDC>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
   <!-- Crypt loot chest: open it (gizmo) for treasure, or spring a mimic. thingClass handles both. -->
   <ThingDef ParentName="BuildingBase">
     <defName>RH_LootChest</defName>
