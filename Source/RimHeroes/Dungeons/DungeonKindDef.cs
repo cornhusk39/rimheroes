@@ -16,8 +16,12 @@ namespace RimHeroes
         // ===== theme =====
         public ThingDef rockDef;                 // wall rock (default Granite)
         public TerrainDef floorDef;              // default AncientTile
-        public Color brazierGlow = new Color(0.37f, 0.80f, 0.92f, 0f);  // soul-cyan default
+        public ThingDef brazierDef;              // light source (default RH_Brazier)
         public float temperature = 12f;
+
+        // ===== boss presentation =====
+        public float bossScale = 1.35f;          // render scale so the boss looms over its kin
+        public Color bossAura = Color.clear;     // magical glow behind the boss (clear = none)
 
         // ===== population =====
         public List<DungeonMonster> monsters = new List<DungeonMonster>();

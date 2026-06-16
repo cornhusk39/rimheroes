@@ -31,13 +31,13 @@ namespace RimHeroes
                 bool isEntrance = i == comp.entranceIndex;
                 bool isBoss = i == comp.bossIndex;
 
-                PlaceBrazier(map, room);
+                PlaceBrazier(map, room, kind);
                 if (isEntrance) continue;   // the party arrives here; keep it clear
 
                 if (isBoss)
                 {
                     if (TryRoomCell(map, room, out var bossCell) || (bossCell = room.CenterCell) != IntVec3.Invalid)
-                        DungeonBoss.Spawn(map, bossCell, faction, kind.boss);
+                        DungeonBoss.Spawn(map, bossCell, faction, kind);
                     SpawnMonsters(map, room, faction, kind, kind.bossGuards);
                     SpawnVaultLoot(map, room, kind);
                 }
@@ -92,9 +92,9 @@ namespace RimHeroes
             GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);
         }
 
-        private static void PlaceBrazier(Map map, CellRect room)
+        private static void PlaceBrazier(Map map, CellRect room, DungeonKindDef kind)
         {
-            var def = DefDatabase<ThingDef>.GetNamedSilentFail("RH_Brazier");
+            var def = kind?.brazierDef ?? DefDatabase<ThingDef>.GetNamedSilentFail("RH_Brazier");
             if (def == null) return;
             if (TryRoomCell(map, room, out var cell))
                 GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);

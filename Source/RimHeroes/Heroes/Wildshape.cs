@@ -193,6 +193,16 @@ namespace RimHeroes
                     new Vector3(0f, 0f, (s - 1f) * 0.35f), Quaternion.identity, new Vector3(s, 1f, s));
             }
 
+            // Dungeon bosses loom over their lesser kin (a Menagerie monster kept at full ability, just
+            // drawn larger). Skips portraits so the info card stays tidy.
+            var bossH = Hediff_DungeonBoss.On(__instance.pawn);
+            if (bossH != null && bossH.scale > 1.001f && !parms.Portrait)
+            {
+                float s = bossH.scale;
+                parms.matrix *= Matrix4x4.TRS(
+                    new Vector3(0f, 0f, (s - 1f) * 0.45f), Quaternion.identity, new Vector3(s, 1f, s));
+            }
+
             if (Hediff_Wildshape.IsShifted(__instance.pawn))
             {
                 // Hide the entire human body subtree; the beast itself is drawn by Patch_DrawBeast.

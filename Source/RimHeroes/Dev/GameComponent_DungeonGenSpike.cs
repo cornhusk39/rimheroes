@@ -26,13 +26,14 @@ namespace RimHeroes
         private float nextTime = -1f;
         private Map dungeon;
         private Map src;
+        private Pawn bossShotTarget;
         private bool ok = true;
 
         public GameComponent_DungeonGenSpike(Game game) { }
 
         public override void GameComponentUpdate()
         {
-            if (!Active || state > 3) return;
+            if (!Active || state > 5) return;
             if (src == null) src = Find.CurrentMap;
             if (src == null || Find.TickManager.TicksGame < 120) return;
             float now = Time.realtimeSinceStartup;
@@ -71,11 +72,27 @@ namespace RimHeroes
                     break;
                 }
                 case 1:
+                {
                     foreach (var w in Find.WindowStack.Windows.ToList()) if (!(w is MainTabWindow)) w.Close(false);
                     Messages.Clear();
                     Find.CameraDriver.SetRootPosAndSize(dungeon.Center.ToVector3(), 36f);
                     ScreenshotTaker.TakeNonSteamShot("rhdungeon_" + KindsToShow[idx].Replace("RH_Dungeon_", ""));
+                    // close-up on the boss so its scale + aura can be eyeballed
+                    var bossPawn = dungeon.mapPawns.AllPawnsSpawned.FirstOrDefault(p =>
+                        p.health?.hediffSet?.GetFirstHediffOfDef(HediffDef.Named("RH_DungeonBoss")) != null);
+                    if (bossPawn != null) Find.CameraDriver.SetRootPosAndSize(bossPawn.Position.ToVector3Shifted(), 9f);
                     nextTime = now + 1f;
+                    state = 5;
+                    bossShotTarget = bossPawn;
+                    break;
+                }
+                case 5:
+                    if (bossShotTarget != null)
+                    {
+                        Find.CameraDriver.SetRootPosAndSize(bossShotTarget.Position.ToVector3Shifted(), 9f);
+                        ScreenshotTaker.TakeNonSteamShot("rhboss_" + KindsToShow[idx].Replace("RH_Dungeon_", ""));
+                    }
+                    nextTime = now + 0.5f;
                     state = 2;
                     break;
                 case 2:
@@ -87,7 +104,7 @@ namespace RimHeroes
                     break;
                 case 3:
                     Log.Message($"[RimHeroes.DungeonGen] RESULT: dungeon kinds verdict={(ok ? "PASS" : "FAIL")}");
-                    state = 4;
+                    state = 6;
                     Root.Shutdown();
                     break;
             }

@@ -10,8 +10,9 @@ namespace RimHeroes
     /// RH_DungeonBoss buff so it reads as a boss, not just a bigger mook.</summary>
     public static class DungeonBoss
     {
-        public static Pawn Spawn(Map map, IntVec3 cell, Faction faction, DungeonBossSpec spec)
+        public static Pawn Spawn(Map map, IntVec3 cell, Faction faction, DungeonKindDef kind)
         {
+            var spec = kind?.boss;
             if (spec == null) return null;
             try
             {
@@ -22,7 +23,12 @@ namespace RimHeroes
 
                 if (!spec.label.NullOrEmpty()) boss.Name = new NameSingle(spec.label);
                 var buff = DefDatabase<HediffDef>.GetNamedSilentFail("RH_DungeonBoss");
-                if (buff != null && boss.health.hediffSet.GetFirstHediffOfDef(buff) == null) boss.health.AddHediff(buff);
+                if (buff != null && boss.health.hediffSet.GetFirstHediffOfDef(buff) == null
+                    && boss.health.AddHediff(buff) is Hediff_DungeonBoss bossHediff)
+                {
+                    bossHediff.scale = kind.bossScale;
+                    bossHediff.aura = kind.bossAura;
+                }
                 boss.Drawer?.renderer?.renderTree?.SetDirty();
                 boss.Drawer?.renderer?.SetAllGraphicsDirty();
                 return boss;

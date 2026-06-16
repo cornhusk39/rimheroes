@@ -25,7 +25,7 @@ namespace RimHeroes
         private static Material glowMat;
         private static MaterialPropertyBlock mpb;
 
-        public static void DrawGlow(Pawn pawn, Vector3 drawLoc, Color baseColor)
+        public static void DrawGlow(Pawn pawn, Vector3 drawLoc, Color baseColor, float size = 2.1f)
         {
             if (glowMat == null)
             {
@@ -38,7 +38,6 @@ namespace RimHeroes
             c.a *= pulse;
             mpb.SetColor(ShaderPropertyIDs.Color, c);
 
-            const float size = 2.1f;
             Vector3 pos = drawLoc;
             pos.y -= 0.06f; // tuck behind the pawn so the bright core is occluded, leaving a halo
             var matrix = Matrix4x4.TRS(pos, Quaternion.identity, new Vector3(size, 1f, size));
@@ -74,10 +73,19 @@ namespace RimHeroes
         public static void Postfix(PawnRenderer __instance, Vector3 drawLoc)
         {
             var pawn = __instance?.pawn;
-            if (pawn == null || !pawn.Spawned || Hediff_Wildshape.IsShifted(pawn))
+            if (pawn == null || !pawn.Spawned)
             {
                 return;
             }
+
+            // Dungeon bosses get their kind's coloured menace glow (drawn even in beast form).
+            var boss = Hediff_DungeonBoss.On(pawn);
+            if (boss != null && boss.aura.a > 0f)
+            {
+                AuraFx.DrawGlow(pawn, drawLoc, boss.aura, 2.7f);
+            }
+
+            if (Hediff_Wildshape.IsShifted(pawn)) return;
             var vestment = pawn.health?.hediffSet?.hediffs?.OfType<Hediff_ClassVestment>().FirstOrDefault();
             if (vestment == null || vestment.Tier < 5)
             {

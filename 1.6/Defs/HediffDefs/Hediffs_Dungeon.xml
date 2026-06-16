@@ -5,6 +5,7 @@
        harder, and shrugs off pain. Stacks on top of whatever the boss's own kit already provides. -->
   <HediffDef>
     <defName>RH_DungeonBoss</defName>
+    <hediffClass>RimHeroes.Hediff_DungeonBoss</hediffClass>
     <label>dungeon lord</label>
     <description>This creature is the master of its dungeon, far tougher and more dangerous than its lesser kin.</description>
     <isBad>false</isBad>

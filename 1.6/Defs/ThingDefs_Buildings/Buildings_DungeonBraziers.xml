@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Per-dungeon brazier colours. Same everburning brazier, different light colour: the room glow is
+       what carries each dungeon's mood. RH_Brazier (cyan, in Buildings_Dungeon.xml) is the crypt one. -->
+  <ThingDef Abstract="True" Name="RH_BrazierColorBase" ParentName="BuildingBase">
+    <label>brazier</label>
+    <description>An everburning brazier that lights the dark of the dungeon.</description>
+    <size>(1, 1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.25</fillPercent>
+    <useHitPoints>false</useHitPoints>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/RimHeroes/Items/Brazier</texPath>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <building>
+      <isEdifice>false</isEdifice>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_BrazierColorBase"><defName>RH_Brazier_Green</defName><comps><li Class="CompProperties_Glower"><glowRadius>9</glowRadius><glowColor>(150,210,110,0)</glowColor></li></comps></ThingDef>
+  <ThingDef ParentName="RH_BrazierColorBase"><defName>RH_Brazier_Steel</defName><comps><li Class="CompProperties_Glower"><glowRadius>9</glowRadius><glowColor>(175,200,235,0)</glowColor></li></comps></ThingDef>
+  <ThingDef ParentName="RH_BrazierColorBase"><defName>RH_Brazier_Violet</defName><comps><li Class="CompProperties_Glower"><glowRadius>9</glowRadius><glowColor>(185,110,235,0)</glowColor></li></comps></ThingDef>
+  <ThingDef ParentName="RH_BrazierColorBase"><defName>RH_Brazier_Pale</defName><comps><li Class="CompProperties_Glower"><glowRadius>9</glowRadius><glowColor>(185,225,180,0)</glowColor></li></comps></ThingDef>
+  <ThingDef ParentName="RH_BrazierColorBase"><defName>RH_Brazier_Magenta</defName><comps><li Class="CompProperties_Glower"><glowRadius>9</glowRadius><glowColor>(225,110,200,0)</glowColor></li></comps></ThingDef>
+  <ThingDef ParentName="RH_BrazierColorBase"><defName>RH_Brazier_Teal</defName><comps><li Class="CompProperties_Glower"><glowRadius>9</glowRadius><glowColor>(120,215,165,0)</glowColor></li></comps></ThingDef>
+  <ThingDef ParentName="RH_BrazierColorBase"><defName>RH_Brazier_Amber</defName><comps><li Class="CompProperties_Glower"><glowRadius>9</glowRadius><glowColor>(240,180,90,0)</glowColor></li></comps></ThingDef>
+  <ThingDef ParentName="RH_BrazierColorBase"><defName>RH_Brazier_Red</defName><comps><li Class="CompProperties_Glower"><glowRadius>9</glowRadius><glowColor>(245,135,70,0)</glowColor></li></comps></ThingDef>
+
+</Defs>

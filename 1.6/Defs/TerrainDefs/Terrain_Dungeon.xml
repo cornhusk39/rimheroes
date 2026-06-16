@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Per-dungeon floors: vanilla flagstone texture recoloured per theme (kept out of the build menu;
+       these are placed by the dungeon generator, not crafted). Walls stay vanilla rock per kind. -->
+  <TerrainDef Abstract="True" Name="RH_DungeonFloorBase" ParentName="FlagstoneBase">
+    <designationCategory Inherit="False" IsNull="True" />
+    <designatorDropdown Inherit="False" IsNull="True" />
+    <tags Inherit="False" />
+    <costList Inherit="False" />
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+      <Beauty>0</Beauty>
+      <CleaningTimeFactor>0.8</CleaningTimeFactor>
+    </statBases>
+  </TerrainDef>
+
+  <TerrainDef ParentName="RH_DungeonFloorBase"><defName>RH_Floor_Crypt</defName><label>crypt stone</label><color>(95,105,120)</color></TerrainDef>
+  <TerrainDef ParentName="RH_DungeonFloorBase"><defName>RH_Floor_BeastWarren</defName><label>mossy stone</label><color>(95,105,75)</color></TerrainDef>
+  <TerrainDef ParentName="RH_DungeonFloorBase"><defName>RH_Floor_ConstructVault</defName><label>steel-grey stone</label><color>(90,100,115)</color></TerrainDef>
+  <TerrainDef ParentName="RH_DungeonFloorBase"><defName>RH_Floor_CultistSanctum</defName><label>violet stone</label><color>(100,82,118)</color></TerrainDef>
+  <TerrainDef ParentName="RH_DungeonFloorBase"><defName>RH_Floor_MedusaGallery</defName><label>pale stone</label><color>(142,150,135)</color></TerrainDef>
+  <TerrainDef ParentName="RH_DungeonFloorBase"><defName>RH_Floor_HundredEyes</defName><label>fleshy stone</label><color>(122,80,95)</color></TerrainDef>
+  <TerrainDef ParentName="RH_DungeonFloorBase"><defName>RH_Floor_DrownedVault</defName><label>drowned stone</label><color>(75,100,95)</color></TerrainDef>
+  <TerrainDef ParentName="RH_DungeonFloorBase"><defName>RH_Floor_RustWarren</defName><label>rusted stone</label><color>(128,90,62)</color></TerrainDef>
+  <TerrainDef ParentName="RH_DungeonFloorBase"><defName>RH_Floor_AnnihilatorForge</defName><label>charred stone</label><color>(92,66,60)</color></TerrainDef>
+
+</Defs>
