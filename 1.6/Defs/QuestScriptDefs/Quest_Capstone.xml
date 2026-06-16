@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- The capstone "mysterious stranger" quest. Launched in code when a hero hits the level cap (never
+       auto-rolled by the storyteller: rootSelectionWeight 0). Never expires. Shelter the colony through
+       a 20-30 day stay and two raids; on success a capstone dungeon is marked carrying the hero's class
+       weapon. Modeled on the vanilla ThreatReward_Raid_Joiner. -->
+  <QuestScriptDef>
+    <defName>RH_Quest_Capstone</defName>
+    <rootSelectionWeight>0</rootSelectionWeight>
+    <rootMinPoints>0</rootMinPoints>
+    <canGiveRoyalFavor>false</canGiveRoyalFavor>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->The Hooded Stranger</li>
+        <li>questName->A Stranger's Bargain</li>
+        <li>questName->[heroName]'s Final Trial</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->A hooded stranger has sent word to [map_definite], begging sanctuary. An evil band of adventurers from [enemyFaction_name] hunts him, and they will come for him here.\n\nShelter against their assault. If your colony stands through his stay, the stranger will reveal what he knows: the resting place of [weaponLabel], the capstone weapon of [heroName]'s path.\n\nThe offer does not expire. Accept it whenever you are ready to be hunted.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+
+        <li Class="QuestNode_GetMap" />
+
+        <li Class="QuestNode_GetWalkInSpot" />
+
+        <li Class="QuestNode_GetFaction">
+          <allowEnemy>true</allowEnemy>
+          <mustBePermanentEnemy>true</mustBePermanentEnemy>
+          <storeAs>enemyFaction</storeAs>
+        </li>
+
+        <li Class="QuestNode_Set">
+          <name>stayTicks</name>
+          <value>$(randInt(20,30)*60000)</value>
+        </li>
+
+        <!-- First raid, about a third of the way through the stay -->
+        <li Class="QuestNode_Delay">
+          <delayTicks>$($stayTicks/3)</delayTicks>
+          <node Class="QuestNode_SubScript">
+            <def>Util_Raid</def>
+            <prefix>raid1</prefix>
+            <parms>
+              <inSignal>$inSignal</inSignal>
+              <map>$map</map>
+              <points>$points</points>
+              <enemyFaction>$enemyFaction</enemyFaction>
+              <walkInSpot>$walkInSpot</walkInSpot>
+              <customLetterLabel>The hunters come</customLetterLabel>
+              <customLetterText>The band hunting the stranger has reached [map_definite]. They mean to take him, and they will go through you to do it.</customLetterText>
+            </parms>
+          </node>
+        </li>
+
+        <!-- Second raid, about two thirds through -->
+        <li Class="QuestNode_Delay">
+          <delayTicks>$($stayTicks*2/3)</delayTicks>
+          <node Class="QuestNode_SubScript">
+            <def>Util_Raid</def>
+            <prefix>raid2</prefix>
+            <parms>
+              <inSignal>$inSignal</inSignal>
+              <map>$map</map>
+              <points>$points</points>
+              <enemyFaction>$enemyFaction</enemyFaction>
+              <walkInSpot>$walkInSpot</walkInSpot>
+              <customLetterLabel>The hunters return</customLetterLabel>
+              <customLetterText>The hunters have come again, in greater force. The stranger's pursuers will not give up easily.</customLetterText>
+            </parms>
+          </node>
+        </li>
+
+        <!-- Stay survived: mark the capstone dungeon and close the quest -->
+        <li Class="QuestNode_Delay">
+          <delayTicks>$stayTicks</delayTicks>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label>The stranger keeps his word</label>
+                <text>The hunters are beaten and the stranger is safe. True to his word, he marks a place on your map where [weaponLabel] waits, then slips away into the wilds.</text>
+              </li>
+              <li Class="RimHeroes.QuestNode_RH_MarkCapstone" />
+              <li Class="QuestNode_End">
+                <outcome>Success</outcome>
+              </li>
+            </nodes>
+          </node>
+        </li>
+
+      </nodes>
+    </root>
+  </QuestScriptDef>
+
+</Defs>

@@ -1,5 +1,6 @@
 using RimWorld;
 using RimWorld.Planet;
+using RimWorld.QuestGen;
 using Verse;
 
 namespace RimHeroes
@@ -13,6 +14,28 @@ namespace RimHeroes
     public static class CapstoneQuest
     {
         private static readonly string[] CapstoneKinds = { "RH_Dungeon_HundredEyes", "RH_Dungeon_AnnihilatorForge" };
+
+        /// <summary>Fired when a player hero hits the level cap: offers the mysterious-stranger quest
+        /// (never expires, accept any time). Its success marks the capstone dungeon for this class.</summary>
+        public static void LaunchStrangerQuest(Pawn hero, HeroClassDef heroClass)
+        {
+            var def = DefDatabase<QuestScriptDef>.GetNamedSilentFail("RH_Quest_Capstone");
+            var map = hero?.MapHeld ?? Find.AnyPlayerHomeMap;
+            if (def == null || map == null) return;
+            try
+            {
+                var slate = new Slate();
+                slate.Set("heroClass", heroClass);
+                slate.Set("map", map);
+                slate.Set("points", StorytellerUtility.DefaultThreatPointsNow(map));
+                slate.Set("heroName", hero != null ? hero.LabelShortCap.ToString() : "a hero");
+                var weapon = CapstoneWeaponFor(heroClass);
+                slate.Set("weaponLabel", weapon != null ? weapon.label : "a legendary weapon");
+                var quest = QuestUtility.GenerateQuestAndMakeAvailable(def, slate);
+                if (quest != null && !quest.hidden) QuestUtility.SendLetterQuestAvailable(quest);
+            }
+            catch (System.Exception e) { Log.Error($"[RimHeroes] capstone quest launch failed: {e}"); }
+        }
 
         public static ThingDef CapstoneWeaponFor(HeroClassDef heroClass)
         {

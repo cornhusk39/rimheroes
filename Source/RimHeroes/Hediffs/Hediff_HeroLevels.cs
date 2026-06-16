@@ -793,35 +793,22 @@ namespace RimHeroes
         }
 
         /// <summary>
-        /// "Heroic trial" capstone reward (dev stub for the real quest): when a player hero hits max
-        /// level, drop their class's legendary capstone weapon at their feet, once.
+        /// Capstone trigger: when a player hero first hits the level cap, offer the mysterious-stranger
+        /// quest. Sheltering the stranger through his stay (and two raids) marks a capstone dungeon that
+        /// holds this hero's class capstone weapon. The offer never expires and can be accepted any time.
         /// </summary>
         private void TryGrantCapstone()
         {
-            if (capstoneGranted || classDef == null || level < (classDef.maxLevel))
+            if (capstoneGranted || classDef == null || level < classDef.maxLevel)
             {
                 return;
             }
-            if (pawn == null || !pawn.Spawned || pawn.Map == null || pawn.Faction != Faction.OfPlayer)
-            {
-                return;
-            }
-            string weaponDefName = "RH_Weapon_" + classDef.defName.Substring("RH_".Length) + "_T5";
-            var def = DefDatabase<ThingDef>.GetNamedSilentFail(weaponDefName);
-            if (def == null)
+            if (pawn == null || pawn.Faction != Faction.OfPlayer)
             {
                 return;
             }
             capstoneGranted = true;
-            var weapon = (ThingWithComps)ThingMaker.MakeThing(def);
-            weapon.TryGetComp<CompQuality>()?.SetQuality(QualityCategory.Legendary, ArtGenerationContext.Colony);
-            GenPlace.TryPlaceThing(weapon, pawn.Position, pawn.Map, ThingPlaceMode.Near);
-            Log.Message($"[RimHeroes] capstone granted to {pawn.LabelShort}: {def.defName} (Legendary)");
-            Find.LetterStack.ReceiveLetter(
-                "Heroic capstone",
-                pawn.LabelShortCap + " has reached the height of their " + classDef.label +
-                " legend. Their capstone weapon, the " + def.label + ", has manifested at their side.",
-                LetterDefOf.PositiveEvent, new TargetInfo(weapon.PositionHeld, pawn.Map));
+            CapstoneQuest.LaunchStrangerQuest(pawn, classDef);
         }
 
         /// <summary>Idempotent: applies every grant at or below the current level. Known casters skip
