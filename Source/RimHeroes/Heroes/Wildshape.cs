@@ -17,6 +17,13 @@ namespace RimHeroes
         public override bool ShouldRemove => base.ShouldRemove;
 
         private Graphic beastGraphic;
+        private Graphic overlayGraphic;
+
+        // Light purple wash drawn over the beast so a druid's wildshape reads as conjured, not a wild animal.
+        private static readonly Color OverlayTint = new Color(0.62f, 0.40f, 0.95f, 0.28f);
+
+        private PawnRenderNodeProperties FormRenderProps =>
+            def.renderNodeProperties != null && def.renderNodeProperties.Count > 0 ? def.renderNodeProperties[0] : null;
 
         /// <summary>The beast texture (directional Graphic_Multi), read from the form def's render node
         /// properties. Drawn directly by Patch_DrawBeast since runtime-added hediff render nodes do not
@@ -27,8 +34,7 @@ namespace RimHeroes
             {
                 if (beastGraphic == null)
                 {
-                    var rp = def.renderNodeProperties != null && def.renderNodeProperties.Count > 0
-                        ? def.renderNodeProperties[0] : null;
+                    var rp = FormRenderProps;
                     if (rp != null && !rp.texPath.NullOrEmpty())
                     {
                         beastGraphic = GraphicDatabase.Get<Graphic_Multi>(rp.texPath, ShaderDatabase.Cutout,
@@ -36,6 +42,25 @@ namespace RimHeroes
                     }
                 }
                 return beastGraphic;
+            }
+        }
+
+        /// <summary>A translucent purple silhouette of the form, drawn on top of the beast as the druid-magic
+        /// overlay. Same texture as the beast but on the Transparent shader so it tints rather than glows.</summary>
+        public Graphic OverlayGraphic
+        {
+            get
+            {
+                if (overlayGraphic == null)
+                {
+                    var rp = FormRenderProps;
+                    if (rp != null && !rp.texPath.NullOrEmpty())
+                    {
+                        overlayGraphic = GraphicDatabase.Get<Graphic_Multi>(rp.texPath, ShaderDatabase.Transparent,
+                            rp.drawSize, OverlayTint);
+                    }
+                }
+                return overlayGraphic;
             }
         }
 
@@ -52,6 +77,7 @@ namespace RimHeroes
                 }
             }
             RebuildRenderTree();
+            WildshapeFx.PlayShift(pawn);
         }
 
         public override void PostRemoved()
@@ -213,6 +239,56 @@ namespace RimHeroes
             var loc = drawLoc;
             loc.y += 0.046875f; // a couple of altitude layers up, above the hidden body
             g.Draw(loc, pawn.Rotation, pawn);
+
+            // light purple druid-magic wash, drawn one sub-layer above the beast
+            var ov = form.OverlayGraphic;
+            if (ov != null)
+            {
+                var oloc = loc;
+                oloc.y += 0.0234375f;
+                ov.Draw(oloc, pawn.Rotation, pawn);
+            }
+        }
+    }
+
+    /// <summary>One-shot transform VFX: a short burst of soft purple gas and bright sparkles at the pawn
+    /// the moment a wildshape form takes hold.</summary>
+    public static class WildshapeFx
+    {
+        public static void PlayShift(Pawn pawn)
+        {
+            var map = pawn?.Map;
+            if (map == null) return;
+            Vector3 center = pawn.DrawPos;
+
+            for (int i = 0; i < 9; i++)
+            {
+                Vector3 loc = center + new Vector3(Rand.Range(-0.45f, 0.45f), 0f, Rand.Range(-0.35f, 0.55f));
+                if (!loc.ShouldSpawnMotesAt(map)) continue;
+                var d = FleckMaker.GetDataStatic(loc, map, RH_FleckDefOf.RH_Fleck_WildshapeGas, Rand.Range(1.1f, 1.8f));
+                Color c = new Color(0.60f, 0.34f, 0.95f, 0.70f);
+                c.r += Rand.Range(-0.06f, 0.06f);
+                c.b += Rand.Range(-0.05f, 0.05f);
+                d.instanceColor = c;
+                d.rotation = Rand.Range(0f, 360f);
+                d.rotationRate = Rand.Range(-40f, 40f);
+                d.velocityAngle = Rand.Range(0f, 360f);
+                d.velocitySpeed = Rand.Range(0.2f, 0.55f);
+                map.flecks.CreateFleck(d);
+            }
+
+            for (int i = 0; i < 8; i++)
+            {
+                Vector3 loc = center + new Vector3(Rand.Range(-0.55f, 0.55f), 0f, Rand.Range(-0.45f, 0.65f));
+                if (!loc.ShouldSpawnMotesAt(map)) continue;
+                var d = FleckMaker.GetDataStatic(loc, map, RH_FleckDefOf.RH_Mote_Spark, Rand.Range(0.45f, 0.9f));
+                Color c = new Color(0.86f, 0.72f, 1f, 0.9f);
+                d.instanceColor = c;
+                d.rotation = Rand.Range(0f, 360f);
+                d.velocityAngle = Rand.Range(0f, 360f);
+                d.velocitySpeed = Rand.Range(0.5f, 1.2f);
+                map.flecks.CreateFleck(d);
+            }
         }
     }
 }

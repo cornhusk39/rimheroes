@@ -85,11 +85,12 @@
     </comps>
   </AbilityDef>
 
-  <!-- Archdruid capstone form: Dragon (L20). Large drawSize so it visibly spans several tiles. -->
+  <!-- Archdruid capstone form: Faerie Dragon (L20), grown to a great wyrm's scale (large drawSize so
+       it visibly spans several tiles). Art from Mooloh's Dnd Menagerie (purple variant). -->
   <AbilityDef ParentName="RH_WildshapeBase">
     <defName>RH_Ability_WildshapeDragon</defName>
     <label>wildshape: dragon</label>
-    <description>Take the shape of a dragon: armoured in scale, terrible in melee, and able to breathe fire. The pinnacle of an archdruid's art. Costs no spell slot.</description>
+    <description>Take the shape of a dragon, drawing a faerie dragon's spirit up into a great wyrm's frame: armoured in scale, terrible in melee, and able to breathe fire. The pinnacle of an archdruid's art. Costs no spell slot.</description>
     <iconPath>UI/RimHeroes/WildshapeDragon</iconPath>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
@@ -148,9 +149,9 @@
     <renderNodeProperties>
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
-        <texPath>Things/RimHeroes/Beasts/Dragon/Dragon</texPath>
+        <texPath>Things/Pawn/Animal/DND_FaerieDragon/DND_FDragonPurple</texPath>
         <parentTagDef>Root</parentTagDef>
-        <drawSize>(4.5, 4.5)</drawSize>
+        <drawSize>(3.4, 3.4)</drawSize>
         <drawData>
           <defaultData>
             <layer>40</layer>

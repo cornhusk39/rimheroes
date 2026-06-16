@@ -3,7 +3,8 @@
 
   <!-- Wildshape forms: free abilities (no slot), at-will with a long cooldown; duration via
        HediffComp_Disappears, manual revert via the hediff's gizmo, one form at a time.
-       Form ladder: dire wolf L2, owlbear L5, giant elk L8. -->
+       Form ladder: displacer beast L2, owlbear L5, basilisk L8. All form art is from Mooloh's
+       Dnd Menagerie (hard dependency). -->
 
   <AbilityDef Name="RH_WildshapeBase" ParentName="RH_SpellBase" Abstract="True">
     <level>0</level>
@@ -23,11 +24,11 @@
     </verbProperties>
   </AbilityDef>
 
-  <!-- Dire wolf: fast skirmisher form -->
+  <!-- Displacer beast: fast skirmisher form -->
   <AbilityDef ParentName="RH_WildshapeBase">
     <defName>RH_Ability_WildshapeDireWolf</defName>
-    <label>wildshape: dire wolf</label>
-    <description>Take the shape of a dire wolf for a few hours: swift, tireless, all fangs. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>
+    <label>wildshape: displacer beast</label>
+    <description>Take the shape of a displacer beast for a few hours: a six-legged panther wreathed in shadow, here and not quite here, lashing with barbed tentacles. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>
     <iconPath>UI/RimHeroes/WildshapeDireWolf</iconPath>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
@@ -41,8 +42,8 @@
 
   <HediffDef>
     <defName>RH_WildshapeDireWolf</defName>
-    <label>dire wolf form</label>
-    <description>This druid wears the shape of a dire wolf: swift, relentless, and armed with rending fangs. Their gear is subsumed into the form.</description>
+    <label>displacer beast form</label>
+    <description>This druid wears the shape of a displacer beast: swift, shadow-clad, and armed with lashing barbed tentacles. Their gear is subsumed into the form.</description>
     <hediffClass>RimHeroes.Hediff_Wildshape</hediffClass>
     <isBad>false</isBad>
     <everCurableByItem>false</everCurableByItem>
@@ -65,7 +66,7 @@
       <li Class="HediffCompProperties_VerbGiver">
         <tools>
           <li>
-            <label>dire wolf fangs</label>
+            <label>displacer beast tentacle</label>
             <capacities>
               <li>Bite</li>
             </capacities>
@@ -79,9 +80,9 @@
     <renderNodeProperties>
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
-        <texPath>Things/RimHeroes/Beasts/DireWolf/DireWolf</texPath>
+        <texPath>Things/Pawn/Animal/DND_DisplacerBeast/DND_DisplacerBeast</texPath>
         <parentTagDef>Root</parentTagDef>
-        <drawSize>(1.8, 1.8)</drawSize>
+        <drawSize>(2.0, 2.0)</drawSize>
         <drawData>
           <defaultData>
             <layer>40</layer>
@@ -91,11 +92,11 @@
     </renderNodeProperties>
   </HediffDef>
 
-  <!-- Giant elk: travel/carry utility form -->
+  <!-- Basilisk: heavy charging form -->
   <AbilityDef ParentName="RH_WildshapeBase">
     <defName>RH_Ability_WildshapeGiantElk</defName>
-    <label>wildshape: giant elk</label>
-    <description>Take the shape of a giant elk for a few hours: towering, fleet, and strong enough to carry a household. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>
+    <label>wildshape: basilisk</label>
+    <description>Take the shape of a basilisk for a few hours: a low, armoured reptile that batters everything in its path. Weapons and apparel are subsumed into the form. Costs no spell slot.</description>
     <iconPath>UI/RimHeroes/WildshapeGiantElk</iconPath>
     <comps>
       <li Class="CompProperties_AbilityGiveHediff">
@@ -109,8 +110,8 @@
 
   <HediffDef>
     <defName>RH_WildshapeGiantElk</defName>
-    <label>giant elk form</label>
-    <description>This druid wears the shape of a giant elk: towering, fleet, and tireless under burden. Their gear is subsumed into the form.</description>
+    <label>basilisk form</label>
+    <description>This druid wears the shape of a basilisk: low, armoured, and strong enough to bowl through a line and carry a heavy load. Their gear is subsumed into the form.</description>
     <hediffClass>RimHeroes.Hediff_Wildshape</hediffClass>
     <isBad>false</isBad>
     <everCurableByItem>false</everCurableByItem>
@@ -133,7 +134,7 @@
       <li Class="HediffCompProperties_VerbGiver">
         <tools>
           <li>
-            <label>giant antlers</label>
+            <label>basilisk headbutt</label>
             <capacities>
               <li>Blunt</li>
             </capacities>
@@ -147,9 +148,9 @@
     <renderNodeProperties>
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
-        <texPath>Things/RimHeroes/Beasts/GiantElk/GiantElk</texPath>
+        <texPath>Things/Pawn/Animal/DND_Basilisk/DND_Basilisk</texPath>
         <parentTagDef>Root</parentTagDef>
-        <drawSize>(2.6, 2.6)</drawSize>
+        <drawSize>(2.5, 2.5)</drawSize>
         <drawData>
           <defaultData>
             <layer>40</layer>
@@ -240,7 +241,7 @@
     <renderNodeProperties>
       <li>
         <nodeClass>RimHeroes.PawnRenderNode_Wildshape</nodeClass>
-        <texPath>Things/RimHeroes/Beasts/Owlbear/Owlbear</texPath>
+        <texPath>Things/Pawn/Animal/DND_Owlbear/DND_Owlbear</texPath>
         <parentTagDef>Root</parentTagDef>
         <drawSize>(2.4, 2.4)</drawSize>
         <drawData>

@@ -6,8 +6,8 @@ namespace RimHeroes
 {
     /// <summary>
     /// A crypt loot chest. Select it and hit Open: most chests spill their treasure, but some are
-    /// mimics that spring into a monster instead. (Placeholder mimic = a bound imp; swaps to Mooloh's
-    /// Menagerie mimic once that dependency is installed.)
+    /// mimics that spring into a monster instead. The mimic is Menagerie's animated tool cabinet (a
+    /// chest that comes alive); it falls back to a bound imp if Menagerie is somehow missing.
     /// </summary>
     public class Building_LootChest : Building
     {
@@ -54,7 +54,8 @@ namespace RimHeroes
 
         private static void SpawnMimic(Map map, IntVec3 pos)
         {
-            var kind = DefDatabase<PawnKindDef>.GetNamedSilentFail("RH_ImpKind");
+            var kind = DefDatabase<PawnKindDef>.GetNamedSilentFail("DND_AnimatedToolCabinet")
+                       ?? DefDatabase<PawnKindDef>.GetNamedSilentFail("RH_ImpKind");
             if (kind == null) return;
             try
             {

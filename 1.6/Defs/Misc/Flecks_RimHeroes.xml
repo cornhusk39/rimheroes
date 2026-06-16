@@ -57,4 +57,22 @@
     <graphicData><texPath>Things/RimHeroes/Vestments/Effects/Mote_Orb</texPath></graphicData>
   </FleckDef>
 
+  <!-- Wildshape cast: a soft purple gas cloud that billows out and fades. Transparent (not additive)
+       so it reads as smoke, not a glow. Tinted purple per-instance in Wildshape.PlayShiftFx. -->
+  <FleckDef>
+    <defName>RH_Fleck_WildshapeGas</defName>
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.12</fadeInTime>
+    <solidTime>0.1</solidTime>
+    <fadeOutTime>0.75</fadeOutTime>
+    <growthRate>0.6</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <texPath>Things/RimHeroes/Vestments/Effects/Mote_Cloud</texPath>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+  </FleckDef>
+
 </Defs>
