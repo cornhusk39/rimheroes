@@ -12,12 +12,15 @@
     <size>(3, 3)</size>
     <tickerType>Normal</tickerType>
     <rotatable>false</rotatable>
-    <useHitPoints>false</useHitPoints>
+    <useHitPoints>true</useHitPoints>
     <passability>Impassable</passability>
     <altitudeLayer>FloorEmplacement</altitudeLayer>
     <holdsRoof>false</holdsRoof>
     <castEdgeShadows>false</castEdgeShadows>
-    <destroyable>false</destroyable>
+    <statBases>
+      <MaxHitPoints>900</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/RimHeroes/Items/CryptEntrance</texPath>
@@ -28,7 +31,6 @@
       <deconstructible>false</deconstructible>
       <claimable>false</claimable>
       <expandHomeArea>false</expandHomeArea>
-      <isInert>true</isInert>
     </building>
     <portal>
       <pocketMapGenerator>RH_DungeonGen</pocketMapGenerator>

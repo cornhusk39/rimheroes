@@ -28,6 +28,7 @@ namespace RimHeroes
                 {
                     bossHediff.scale = kind.bossScale;
                     bossHediff.aura = kind.bossAura;
+                    bossHediff.sourceEntrance = Building_DungeonEntrance.Generating;
                 }
 
                 // 5% chance to carry a heroic blessing, dropped with its body on death.

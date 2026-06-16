@@ -63,6 +63,10 @@
   <RH_CandyNotHero>Only a hero can draw experience from this candy.</RH_CandyNotHero>
   <RH_CandyMaxLevel>{0} has already reached the height of their path.</RH_CandyMaxLevel>
   <RH_CandyEaten>{0} eats the candy and gains {1} experience.</RH_CandyEaten>
+  <RH_TrickleStart>Monsters are seeping out of the {0}. Delve it or tear it down before it festers.</RH_TrickleStart>
+  <RH_DungeonSealed>The {0} falls silent. No more monsters will come from it.</RH_DungeonSealed>
+  <RH_EntranceActive>Active: monsters trickle out, faster the longer it stands. Delve and slay its lord, or destroy it, to stop them.</RH_EntranceActive>
+  <RH_EntranceSealed>Sealed. The flow of monsters has stopped.</RH_EntranceSealed>
   <RH_ReliquaryPick>Pick the lock</RH_ReliquaryPick>
   <RH_ReliquaryPickDesc>Attempt the reliquary's sigil-lock (DC {0}). Choose who tries. Each failure hardens the lock by 5; let it reach 25 and it jams for good.</RH_ReliquaryPickDesc>
   <RH_ReliquaryPickerOption>{0}  (lockpick {1})</RH_ReliquaryPickerOption>
