@@ -30,7 +30,7 @@
 
         <!-- The hooded stranger -->
         <li Class="QuestNode_GeneratePawn">
-          <kindDef>SpaceRefugee</kindDef>
+          <kindDef>RH_HoodedStranger</kindDef>
           <addToList>lodgers</addToList>
           <storeAs>stranger</storeAs>
         </li>

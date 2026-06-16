@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- The capstone quest's mysterious stranger: a refugee forced into a dark robe and hood. -->
+  <PawnKindDef ParentName="SpaceRefugeeBase">
+    <defName>RH_HoodedStranger</defName>
+    <label>hooded stranger</label>
+    <apparelMoney>120~400</apparelMoney>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelColor>(0.11, 0.11, 0.13)</apparelColor>
+    <apparelRequired>
+      <li>Apparel_Robe</li>
+      <li>Apparel_HatHood</li>
+    </apparelRequired>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>12~19</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

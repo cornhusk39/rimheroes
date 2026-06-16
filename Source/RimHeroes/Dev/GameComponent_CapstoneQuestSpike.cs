@@ -62,6 +62,16 @@ namespace RimHeroes
             catch (System.Exception e) { Log.Error($"[RimHeroes.CapQuest] launcher threw: {e}"); ok = false; }
             Log.Message("[RimHeroes.CapQuest] OK: LaunchStrangerQuest ran without throwing");
 
+            // the hooded stranger is dressed in a dark robe + hood
+            var kind = DefDatabase<PawnKindDef>.GetNamedSilentFail("RH_HoodedStranger");
+            Assert(kind != null, "RH_HoodedStranger loads");
+            if (kind != null)
+            {
+                var stranger = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, Faction.OfPlayer, forceGenerateNewPawn: true));
+                var worn = stranger.apparel?.WornApparel?.Select(a => a.def.defName).ToList() ?? new System.Collections.Generic.List<string>();
+                Assert(worn.Contains("Apparel_Robe") && worn.Contains("Apparel_HatHood"), "stranger wears a robe + hood (" + string.Join(",", worn) + ")");
+            }
+
             Log.Message($"[RimHeroes.CapQuest] RESULT: capstone quest verdict={(ok ? "PASS" : "FAIL")}");
             Root.Shutdown();
         }
