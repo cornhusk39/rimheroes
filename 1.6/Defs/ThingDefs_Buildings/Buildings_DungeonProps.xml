@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Boss-vault sigil: a glowing seal on the floor, tinted to the dungeon's theme colour at spawn. -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>RH_VaultSigil</defName>
+    <label>vault sigil</label>
+    <description>An old seal worked into the vault floor, still faintly lit.</description>
+    <thingClass>RimHeroes.Building_VaultSigil</thingClass>
+    <size>(1, 1)</size>
+    <passability>Standable</passability>
+    <fillPercent>0</fillPercent>
+    <useHitPoints>false</useHitPoints>
+    <rotatable>false</rotatable>
+    <drawerType>RealtimeOnly</drawerType>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <castEdgeShadows>false</castEdgeShadows>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/RimHeroes/Items/VaultSigil</texPath>
+      <drawSize>(3, 3)</drawSize>
+    </graphicData>
+    <building>
+      <isEdifice>false</isEdifice>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+      <isInert>true</isInert>
+    </building>
+  </ThingDef>
+
+  <!-- Set-dressing props: decorative theme objects scattered through dungeon rooms. -->
+  <ThingDef Name="RH_DungeonPropBase" Abstract="True" ParentName="BuildingBase">
+    <size>(1, 1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.35</fillPercent>
+    <useHitPoints>false</useHitPoints>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
+    <building>
+      <isEdifice>false</isEdifice>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_DungeonPropBase"><defName>RH_Prop_Statue</defName><label>weathered statue</label><description>A worn statue, its features long since smoothed away.</description><graphicData><graphicClass>Graphic_Single</graphicClass><texPath>Things/RimHeroes/Items/PropStatue</texPath><drawSize>(1,1)</drawSize></graphicData></ThingDef>
+  <ThingDef ParentName="RH_DungeonPropBase"><defName>RH_Prop_Anvil</defName><label>ancient anvil</label><description>A pitted anvil on a charred stump.</description><graphicData><graphicClass>Graphic_Single</graphicClass><texPath>Things/RimHeroes/Items/PropAnvil</texPath><drawSize>(1,1)</drawSize></graphicData></ThingDef>
+  <ThingDef ParentName="RH_DungeonPropBase"><defName>RH_Prop_Bones</defName><label>bone pile</label><description>A scatter of old bones and a cracked skull.</description><graphicData><graphicClass>Graphic_Single</graphicClass><texPath>Things/RimHeroes/Items/PropBones</texPath><drawSize>(1,1)</drawSize></graphicData></ThingDef>
+  <ThingDef ParentName="RH_DungeonPropBase"><defName>RH_Prop_RustHusk</defName><label>corroded husk</label><description>The rusted shell of some long-dead construct.</description><graphicData><graphicClass>Graphic_Single</graphicClass><texPath>Things/RimHeroes/Items/PropRustHusk</texPath><drawSize>(1,1)</drawSize></graphicData></ThingDef>
+  <ThingDef ParentName="RH_DungeonPropBase"><defName>RH_Prop_Eyestalk</defName><label>eye-stalk growth</label><description>A fleshy stalk, its single eye twitching.</description><graphicData><graphicClass>Graphic_Single</graphicClass><texPath>Things/RimHeroes/Items/PropEyestalk</texPath><drawSize>(1,1)</drawSize></graphicData></ThingDef>
+  <ThingDef ParentName="RH_DungeonPropBase"><defName>RH_Prop_Mushroom</defName><label>glowing fungus</label><description>A cluster of softly glowing cave mushrooms.</description><graphicData><graphicClass>Graphic_Single</graphicClass><texPath>Things/RimHeroes/Items/PropMushroom</texPath><drawSize>(1,1)</drawSize></graphicData></ThingDef>
+
+</Defs>

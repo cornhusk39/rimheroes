@@ -13,6 +13,7 @@
     <floorDef>RH_Floor_Crypt</floorDef>
     <bossScale>1.3</bossScale>
     <bossAura>(0.40, 0.80, 0.92, 0.5)</bossAura>
+    <props><li>RH_Prop_Bones</li><li>RH_Prop_Statue</li></props>
     <monsters>
       <li><kind>ShamblerSoldier</kind><weight>1</weight></li>
       <li><kind>ShamblerSwarmer</kind><weight>1.2</weight></li>
@@ -38,6 +39,8 @@
     <brazierDef>RH_Brazier_Green</brazierDef>
     <bossScale>1.5</bossScale>
     <bossAura>(0.45, 0.85, 0.40, 0.5)</bossAura>
+    <entranceTexPath>Things/RimHeroes/Items/EntranceBurrow</entranceTexPath>
+    <props><li>RH_Prop_Bones</li><li>RH_Prop_Mushroom</li></props>
     <monsters>
       <li><kind>DND_Owlbear</kind><weight>1</weight></li>
       <li><kind>DND_DisplacerBeast</kind><weight>1.2</weight></li>
@@ -64,6 +67,7 @@
     <brazierDef>RH_Brazier_Steel</brazierDef>
     <bossScale>1.25</bossScale>
     <bossAura>(0.55, 0.70, 0.95, 0.5)</bossAura>
+    <props><li>RH_Prop_RustHusk</li></props>
     <monsters>
       <li><kind>DND_GolemStone</kind><weight>1</weight></li>
       <li><kind>DND_GolemFlesh</kind><weight>0.8</weight></li>
@@ -93,6 +97,7 @@
     <brazierDef>RH_Brazier_Violet</brazierDef>
     <bossScale>1.25</bossScale>
     <bossAura>(0.65, 0.35, 0.95, 0.55)</bossAura>
+    <props><li>RH_Prop_Statue</li></props>
     <monsters>
       <li><kind>RH_ImpKind</kind><weight>1.4</weight></li>
       <li><kind>DND_Spectator</kind><weight>1</weight></li>
@@ -120,6 +125,7 @@
     <brazierDef>RH_Brazier_Pale</brazierDef>
     <bossScale>1.4</bossScale>
     <bossAura>(0.65, 0.85, 0.65, 0.5)</bossAura>
+    <props><li>RH_Prop_Statue</li></props>
     <monsters>
       <li><kind>DND_Basilisk</kind><weight>1</weight></li>
       <li><kind>DND_Spectator</kind><weight>0.8</weight></li>
@@ -147,6 +153,7 @@
     <brazierDef>RH_Brazier_Magenta</brazierDef>
     <bossScale>1.3</bossScale>
     <bossAura>(0.90, 0.35, 0.80, 0.55)</bossAura>
+    <props><li>RH_Prop_Eyestalk</li></props>
     <monsters>
       <li><kind>DND_Spectator</kind><weight>1.3</weight></li>
       <li><kind>DND_GibberingMouther</kind><weight>0.7</weight></li>
@@ -174,6 +181,8 @@
     <brazierDef>RH_Brazier_Teal</brazierDef>
     <bossScale>1.5</bossScale>
     <bossAura>(0.35, 0.80, 0.70, 0.5)</bossAura>
+    <entranceTexPath>Things/RimHeroes/Items/EntranceFlooded</entranceTexPath>
+    <props><li>RH_Prop_Mushroom</li><li>RH_Prop_Bones</li></props>
     <monsters>
       <li><kind>DND_DisplacerBeast</kind><weight>1</weight></li>
       <li><kind>DND_Flumph</kind><weight>0.7</weight></li>
@@ -201,6 +210,8 @@
     <brazierDef>RH_Brazier_Amber</brazierDef>
     <bossScale>1.6</bossScale>
     <bossAura>(0.95, 0.60, 0.25, 0.5)</bossAura>
+    <entranceTexPath>Things/RimHeroes/Items/EntranceBurrow</entranceTexPath>
+    <props><li>RH_Prop_RustHusk</li></props>
     <monsters>
       <li><kind>DND_RustMonster</kind><weight>1</weight></li>
     </monsters>
@@ -228,6 +239,8 @@
     <temperature>40</temperature>
     <bossScale>1.3</bossScale>
     <bossAura>(0.95, 0.35, 0.25, 0.6)</bossAura>
+    <entranceTexPath>Things/RimHeroes/Items/EntranceForge</entranceTexPath>
+    <props><li>RH_Prop_Anvil</li><li>RH_Prop_RustHusk</li></props>
     <monsters>
       <li><kind>DND_GolemSteel</kind><weight>0.7</weight></li>
       <li><kind>DND_GolemStone</kind><weight>1</weight></li>

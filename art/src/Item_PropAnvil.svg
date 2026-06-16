@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- top-down anvil on a stump -->
+  <ellipse cx="64" cy="70" rx="34" ry="30" fill="#3b2c1d" stroke="#1c140b" stroke-width="4"/>
+  <!-- anvil body (the classic profile from above) -->
+  <path d="M40 58 L88 58 L82 70 L92 76 L78 82 L50 82 L36 76 L46 70 Z" fill="#5b5f63" stroke="#191b1d" stroke-width="3.5"/>
+  <rect x="52" y="50" width="24" height="10" rx="2" fill="#6d7176" stroke="#191b1d" stroke-width="3"/>
+  <!-- horn -->
+  <path d="M88 58 q14 2 16 8 q-10 0 -16 4 Z" fill="#5b5f63" stroke="#191b1d" stroke-width="3"/>
+  <!-- spark -->
+  <circle cx="70" cy="55" r="2.5" fill="#ffcf6b"/>
+</svg>

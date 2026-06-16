@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- a fleshy eye-stalk growth, top-down -->
+  <ellipse cx="64" cy="74" rx="30" ry="22" fill="#6b2f44" stroke="#2c1019" stroke-width="4"/>
+  <ellipse cx="64" cy="72" rx="20" ry="14" fill="#8a3d58"/>
+  <!-- the stalk + eye rising -->
+  <path d="M58 72 q-4 -26 6 -40 q10 14 6 40 Z" fill="#9a4763" stroke="#2c1019" stroke-width="3"/>
+  <circle cx="64" cy="34" r="13" fill="#f0e7e0" stroke="#2c1019" stroke-width="3.5"/>
+  <circle cx="64" cy="34" r="7" fill="#b6324a"/>
+  <circle cx="64" cy="34" r="3" fill="#1a0a0e"/>
+  <!-- veins -->
+  <path d="M50 78 q8 4 0 12" fill="none" stroke="#4a1c2a" stroke-width="2"/>
+  <path d="M78 80 q-6 4 2 12" fill="none" stroke="#4a1c2a" stroke-width="2"/>
+</svg>

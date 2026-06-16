@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace RimHeroes
@@ -34,8 +35,11 @@ namespace RimHeroes
                 PlaceBrazier(map, room, kind);
                 if (isEntrance) continue;   // the party arrives here; keep it clear
 
+                PlaceProps(map, room, kind);
+
                 if (isBoss)
                 {
+                    PlaceSigil(map, room, kind);
                     if (TryRoomCell(map, room, out var bossCell) || (bossCell = room.CenterCell) != IntVec3.Invalid)
                         DungeonBoss.Spawn(map, bossCell, faction, kind);
                     SpawnMonsters(map, room, faction, kind, kind.bossGuards);
@@ -98,6 +102,32 @@ namespace RimHeroes
             if (def == null) return;
             if (TryRoomCell(map, room, out var cell))
                 GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);
+        }
+
+        private static void PlaceProps(Map map, CellRect room, DungeonKindDef kind)
+        {
+            if (kind?.props.NullOrEmpty() ?? true) return;
+            int n = kind.propsPerRoom.RandomInRange;
+            for (int i = 0; i < n; i++)
+            {
+                var def = kind.RandomProp();
+                if (def == null) break;
+                if (TryRoomCell(map, room, out var cell))
+                    GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);
+            }
+        }
+
+        private static void PlaceSigil(Map map, CellRect room, DungeonKindDef kind)
+        {
+            var def = DefDatabase<ThingDef>.GetNamedSilentFail("RH_VaultSigil");
+            if (def == null) return;
+            var cell = room.CenterCell;
+            if (!cell.InBounds(map) || cell.GetEdifice(map) != null)
+                if (!TryRoomCell(map, room, out cell)) return;
+            var sigil = (Building_VaultSigil)GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);
+            var c = kind.bossAura.a > 0f ? kind.bossAura : Color.white;
+            c.a = 1f;
+            sigil.SetTint(c);
         }
 
         private static void PlaceChest(Map map, CellRect room)

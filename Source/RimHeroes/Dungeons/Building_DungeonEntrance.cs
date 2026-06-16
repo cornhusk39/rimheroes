@@ -1,4 +1,5 @@
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace RimHeroes
@@ -21,6 +22,21 @@ namespace RimHeroes
             ?? DefDatabase<DungeonKindDef>.GetNamedSilentFail("RH_Dungeon_Crypt");
 
         public override string Label => kind != null ? kind.LabelCap : base.Label;
+
+        private Graphic cachedGraphic;
+
+        // Per-theme entrance sprite, when the kind specifies one; otherwise the default crypt stairway.
+        public override Graphic Graphic
+        {
+            get
+            {
+                if (kind == null || kind.entranceTexPath.NullOrEmpty()) return base.Graphic;
+                if (cachedGraphic == null)
+                    cachedGraphic = GraphicDatabase.Get<Graphic_Single>(
+                        kind.entranceTexPath, ShaderDatabase.Cutout, def.graphicData.drawSize, Color.white);
+                return cachedGraphic;
+            }
+        }
 
         public override void ExposeData()
         {

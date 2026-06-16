@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- top-down beast burrow: a ragged earthen hole ringed with dug soil and bone -->
+  <ellipse cx="64" cy="66" rx="52" ry="48" fill="#5a4632" stroke="#2c2014" stroke-width="5"/>
+  <ellipse cx="64" cy="66" rx="38" ry="34" fill="#3a2c1c" stroke="#221809" stroke-width="3"/>
+  <ellipse cx="64" cy="68" rx="24" ry="20" fill="#100b06"/>
+  <!-- clawed dirt mounds -->
+  <path d="M20 50 q10 -10 22 -6" fill="none" stroke="#6b543a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M108 54 q-12 -10 -24 -4" fill="none" stroke="#6b543a" stroke-width="5" stroke-linecap="round"/>
+  <!-- gnawed bones at the mouth -->
+  <line x1="30" y1="92" x2="44" y2="86" stroke="#d9d2c0" stroke-width="4" stroke-linecap="round"/>
+  <line x1="92" y1="96" x2="104" y2="88" stroke="#d9d2c0" stroke-width="4" stroke-linecap="round"/>
+</svg>

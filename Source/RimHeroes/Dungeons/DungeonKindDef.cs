@@ -35,10 +35,17 @@ namespace RimHeroes
         // ===== vault loot (on top of the base silver/medicine + the reliquary's inlay) =====
         public List<DungeonLoot> vaultLoot = new List<DungeonLoot>();
 
+        // ===== set dressing =====
+        public string entranceTexPath;           // per-theme entrance sprite (default the crypt stairway)
+        public List<ThingDef> props = new List<ThingDef>();  // decorative theme props scattered in rooms
+        public IntRange propsPerRoom = new IntRange(0, 2);
+
         // ===== entrance / incident =====
         public string entranceLabel;             // letter label when the entrance appears
         public string entranceText;              // letter body
         public float incidentCommonality = 1f;   // relative weight when an entrance is rolled
+
+        public ThingDef RandomProp() => props.NullOrEmpty() ? null : props.RandomElement();
 
         public PawnKindDef RandomMonster()
         {

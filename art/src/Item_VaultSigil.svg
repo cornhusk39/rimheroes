@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- arcane vault seal: white so it tints to the dungeon theme colour. Transparent shader = it glows. -->
+  <g fill="none" stroke="#ffffff" stroke-width="2.5">
+    <circle cx="64" cy="64" r="56" stroke-opacity="0.55"/>
+    <circle cx="64" cy="64" r="46" stroke-opacity="0.85"/>
+    <circle cx="64" cy="64" r="24" stroke-opacity="0.9"/>
+  </g>
+  <!-- runic ticks around the ring -->
+  <g stroke="#ffffff" stroke-width="3" stroke-opacity="0.8">
+    <line x1="64" y1="8" x2="64" y2="20"/>
+    <line x1="64" y1="108" x2="64" y2="120"/>
+    <line x1="8" y1="64" x2="20" y2="64"/>
+    <line x1="108" y1="64" x2="120" y2="64"/>
+    <line x1="24" y1="24" x2="33" y2="33"/>
+    <line x1="104" y1="24" x2="95" y2="33"/>
+    <line x1="24" y1="104" x2="33" y2="95"/>
+    <line x1="104" y1="104" x2="95" y2="95"/>
+  </g>
+  <!-- central glyph: a four-point star -->
+  <path d="M64 44 L70 64 L64 84 L58 64 Z" fill="#ffffff" fill-opacity="0.95"/>
+  <path d="M44 64 L64 58 L84 64 L64 70 Z" fill="#ffffff" fill-opacity="0.95"/>
+</svg>

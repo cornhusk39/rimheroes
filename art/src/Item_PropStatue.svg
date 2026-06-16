@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- top-down weathered statue on a square plinth -->
+  <rect x="34" y="34" width="60" height="60" rx="4" fill="#7d7c74" stroke="#3a3935" stroke-width="4"/>
+  <rect x="42" y="42" width="44" height="44" rx="3" fill="#94938a"/>
+  <!-- carved figure (head + shoulders from above) -->
+  <circle cx="64" cy="58" r="11" fill="#aeada3" stroke="#46453f" stroke-width="2.5"/>
+  <path d="M48 80 q16 -16 32 0 Z" fill="#aeada3" stroke="#46453f" stroke-width="2.5"/>
+  <!-- cracks -->
+  <path d="M54 44 l4 10 l-3 8" fill="none" stroke="#5a594f" stroke-width="2"/>
+</svg>

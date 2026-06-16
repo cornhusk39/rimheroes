@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- top-down flooded stairwell: mossy stone rim around dark water with a sunken stair -->
+  <rect x="14" y="14" width="100" height="100" rx="8" fill="#3f4a44" stroke="#161c19" stroke-width="5"/>
+  <rect x="26" y="26" width="76" height="76" rx="4" fill="#22302c"/>
+  <!-- dark water -->
+  <rect x="32" y="32" width="64" height="64" rx="3" fill="#13201f"/>
+  <!-- submerged steps fading into the deep -->
+  <rect x="38" y="38" width="52" height="11" fill="#1d302d" opacity="0.9"/>
+  <rect x="44" y="52" width="40" height="10" fill="#182926" opacity="0.9"/>
+  <rect x="50" y="65" width="28" height="9" fill="#132220" opacity="0.9"/>
+  <!-- ripple highlights -->
+  <path d="M40 84 q12 -5 24 0 t24 0" fill="none" stroke="#5a8c84" stroke-width="2.5" stroke-opacity="0.55"/>
+  <path d="M44 92 q10 -4 20 0 t20 0" fill="none" stroke="#5a8c84" stroke-width="2" stroke-opacity="0.4"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- a scatter of bones and a skull, top-down -->
+  <g stroke="#3a352a" stroke-width="3" stroke-linecap="round">
+    <line x1="28" y1="44" x2="60" y2="56" stroke="#e6dfca"/>
+    <line x1="40" y1="92" x2="78" y2="80" stroke="#e6dfca"/>
+    <line x1="84" y1="40" x2="96" y2="70" stroke="#d8d1bb"/>
+    <line x1="30" y1="70" x2="50" y2="74" stroke="#d8d1bb"/>
+  </g>
+  <!-- rib curve -->
+  <path d="M62 88 q14 -10 28 -2" fill="none" stroke="#d8d1bb" stroke-width="3.5"/>
+  <!-- skull -->
+  <ellipse cx="74" cy="56" rx="16" ry="14" fill="#ece6d3" stroke="#3a352a" stroke-width="3.5"/>
+  <circle cx="68" cy="55" r="3.5" fill="#2a261d"/>
+  <circle cx="80" cy="55" r="3.5" fill="#2a261d"/>
+  <path d="M70 64 l3 4 l4 -4" fill="none" stroke="#2a261d" stroke-width="2.5"/>
+</svg>
