@@ -67,6 +67,7 @@
     <label>quiller</label>
     <description>A mim ranged fighter. Never misses twice.</description>
     <isCombat>true</isCombat>
+    <pawnKind>RH_MimQuillerKind</pawnKind>
   </RimHeroes.MimJobDef>
 
   <RimHeroes.MimJobDef>
@@ -74,6 +75,7 @@
     <label>wisp</label>
     <description>A mim spellcaster. Crackles faintly when excited.</description>
     <isCombat>true</isCombat>
+    <pawnKind>RH_MimWispKind</pawnKind>
   </RimHeroes.MimJobDef>
 
 </Defs>

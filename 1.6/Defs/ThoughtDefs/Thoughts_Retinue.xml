@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Hero mood tied to their mim retinue: content with a full retinue, uneasy when one has fallen
+       and not yet been replaced. Situational thought, worker-driven; inactive for non-heroes. -->
+  <ThoughtDef>
+    <defName>RH_Retinue</defName>
+    <workerClass>RimHeroes.ThoughtWorker_Retinue</workerClass>
+    <stages>
+      <li>
+        <label>retinue at my side</label>
+        <description>My mims are with me, every one of them. All is as it should be.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>a companion lost</label>
+        <description>One of my mims has fallen, and the gap where it should be aches at me.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

@@ -360,4 +360,109 @@
     </lifeStages>
   </PawnKindDef>
 
+  <!-- Quiller: ranged combat caste. Flings barbed quills from a distance; melee teeth as a fallback. -->
+  <ThingDef ParentName="RH_MimBase">
+    <defName>RH_MimQuiller</defName>
+    <label>quiller mim</label>
+    <description>A small, devoted fighter that flings barbed quills from cover. Never misses twice.</description>
+    <statBases Inherit="False">
+      <MoveSpeed>4.8</MoveSpeed>
+      <MarketValue>300</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <Wildness>0</Wildness>
+    </statBases>
+    <race>
+      <baseHealthScale>0.7</baseHealthScale>
+    </race>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Arrow_Short</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>25.9</range>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable" />
+      <!-- Empty worker comp: initializes workSettings with no work enabled (combat caste). -->
+      <li Class="RimHeroes.CompProperties_MimWorker" />
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="RH_MimKindBase">
+    <defName>RH_MimQuillerKind</defName>
+    <label>quiller mim</label>
+    <race>RH_MimQuiller</race>
+    <combatPower>50</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/RimHeroes/Mims/Quiller/Quiller</texPath>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- Wisp: caster combat caste. Hurls crackling arcane bolts; melee teeth as a fallback. -->
+  <ThingDef ParentName="RH_MimBase">
+    <defName>RH_MimWisp</defName>
+    <label>wisp mim</label>
+    <description>A small, devoted familiar that crackles with borrowed magic and flings it at the master's foes.</description>
+    <statBases Inherit="False">
+      <MoveSpeed>4.4</MoveSpeed>
+      <MarketValue>300</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <Wildness>0</Wildness>
+    </statBases>
+    <race>
+      <baseHealthScale>0.55</baseHealthScale>
+    </race>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>RH_Projectile_EldritchBlast</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>23.9</range>
+        <ticksBetweenBurstShots>14</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Psycast_Skip_Pulse</soundCast>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="VEF.AnimalBehaviours.CompProperties_Draftable" />
+      <!-- Empty worker comp: initializes workSettings with no work enabled (combat caste). -->
+      <li Class="RimHeroes.CompProperties_MimWorker" />
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="RH_MimKindBase">
+    <defName>RH_MimWispKind</defName>
+    <label>wisp mim</label>
+    <race>RH_MimWisp</race>
+    <combatPower>55</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/RimHeroes/Mims/Wisp/Wisp</texPath>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Rat/Dessicated_Rat</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
 </Defs>

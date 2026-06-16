@@ -162,6 +162,20 @@ namespace RimHeroes
 
         private const int InitialSpawnDelayTicks = 600;
 
+        // Extra mim castes granted beyond the class unlocks - the level-20 free pick. Synced and replaced
+        // on death exactly like a class caste.
+        private List<MimJobDef> bonusMimJobs = new List<MimJobDef>();
+
+        public bool HasMimCaste(MimJobDef job) =>
+            job != null && ((classDef?.mimUnlocks?.Any(u => u.job == job) ?? false) || bonusMimJobs.Contains(job));
+
+        /// <summary>Grant a permanent extra mim caste (the level-20 free pick). Joins the retinue.</summary>
+        public void GrantBonusMim(MimJobDef job)
+        {
+            if (job == null || HasMimCaste(job)) return;
+            bonusMimJobs.Add(job);
+        }
+
         /// <summary>
         /// Keeps the retinue in sync with unlocks: creates bonds as levels unlock them, schedules
         /// walk-in replacements (1-3 days) when a mim dies or departs, and spawns arrivals.
@@ -172,38 +186,49 @@ namespace RimHeroes
         {
             // Player heroes only: enemy heroes don't trail walk-in retinues (their combat
             // mims will come with raid composition work later).
-            if (classDef?.mimUnlocks == null || pawn.Dead || pawn.Faction != Faction.OfPlayer)
+            if (pawn.Dead || pawn.Faction != Faction.OfPlayer)
             {
                 return;
             }
             int now = Find.TickManager.TicksGame;
-            foreach (var unlock in classDef.mimUnlocks)
+            if (classDef?.mimUnlocks != null)
             {
-                if (unlock.level > level || unlock.job?.pawnKind == null)
+                foreach (var unlock in classDef.mimUnlocks)
                 {
-                    continue;
+                    SyncBond(unlock.job, unlock.level, now);
                 }
-                var bond = mimBonds.FirstOrDefault(b => b.job == unlock.job);
-                if (bond == null)
+            }
+            foreach (var job in bonusMimJobs)
+            {
+                SyncBond(job, 20, now);
+            }
+        }
+
+        private void SyncBond(MimJobDef job, int unlockLevel, int now)
+        {
+            if (job?.pawnKind == null || unlockLevel > level)
+            {
+                return;
+            }
+            var bond = mimBonds.FirstOrDefault(b => b.job == job);
+            if (bond == null)
+            {
+                mimBonds.Add(new MimBond { job = job, respawnAtTick = now + InitialSpawnDelayTicks });
+                return;
+            }
+            if (bond.mim != null && (bond.mim.Dead || bond.mim.Destroyed || !bond.mim.SpawnedOrAnyParentSpawned))
+            {
+                bool died = bond.mim.Dead || bond.mim.Destroyed;
+                bond.mim = null;
+                bond.respawnAtTick = now + Rand.Range(60000, 180000); // 1-3 days
+                if (died && PawnUtility.ShouldSendNotificationAbout(pawn))
                 {
-                    bond = new MimBond { job = unlock.job, respawnAtTick = now + InitialSpawnDelayTicks };
-                    mimBonds.Add(bond);
-                    continue;
+                    Messages.Message("RH_MimLost".Translate(job.LabelCap, pawn.LabelShortCap), pawn, MessageTypeDefOf.NegativeEvent);
                 }
-                if (bond.mim != null && (bond.mim.Dead || bond.mim.Destroyed || !bond.mim.SpawnedOrAnyParentSpawned))
-                {
-                    bool died = bond.mim.Dead || bond.mim.Destroyed;
-                    bond.mim = null;
-                    bond.respawnAtTick = now + Rand.Range(60000, 180000); // 1-3 days
-                    if (died && PawnUtility.ShouldSendNotificationAbout(pawn))
-                    {
-                        Messages.Message("RH_MimLost".Translate(unlock.job.LabelCap, pawn.LabelShortCap), pawn, MessageTypeDefOf.NegativeEvent);
-                    }
-                }
-                if (bond.mim == null && now >= bond.respawnAtTick && pawn.Spawned && pawn.Map != null)
-                {
-                    SpawnMim(bond);
-                }
+            }
+            if (bond.mim == null && now >= bond.respawnAtTick && pawn.Spawned && pawn.Map != null)
+            {
+                SpawnMim(bond);
             }
         }
 
@@ -390,8 +415,22 @@ namespace RimHeroes
 
         public int MaxSlots(int spellLevel) => SpellUtility.MaxSlots(classDef?.casterProgression ?? CasterProgression.None, level, spellLevel);
 
-        public int RemainingSlots(int spellLevel) =>
-            spellLevel < 1 || spellLevel > 9 ? 0 : Mathf.Max(0, MaxSlots(spellLevel) - slotsExpended[spellLevel]);
+        // Warlock pact magic: one pool of slots, all at a single rising level, drawn on by any spell of
+        // that level or lower (a low spell is just upcast into the pact slot).
+        public bool IsPactCaster => (classDef?.casterProgression ?? CasterProgression.None) == CasterProgression.Pact;
+        private int PactLevel => SpellUtility.PactSlotLevel(level);
+
+        public int RemainingSlots(int spellLevel)
+        {
+            if (spellLevel < 1 || spellLevel > 9) return 0;
+            if (IsPactCaster)
+            {
+                if (spellLevel > PactLevel) return 0; // can't reach above the pact slot level
+                int pl = PactLevel;
+                return Mathf.Max(0, MaxSlots(pl) - slotsExpended[pl]);
+            }
+            return Mathf.Max(0, MaxSlots(spellLevel) - slotsExpended[spellLevel]);
+        }
 
         public bool TryExpendSlot(int spellLevel)
         {
@@ -399,7 +438,7 @@ namespace RimHeroes
             {
                 return false;
             }
-            slotsExpended[spellLevel]++;
+            slotsExpended[IsPactCaster ? PactLevel : spellLevel]++;
             return true;
         }
 
@@ -427,6 +466,19 @@ namespace RimHeroes
                 }
             }
             return false;
+        }
+
+        /// <summary>Short-rest recovery, by caster type: a warlock refills their whole pact pool (Pact
+        /// Magic), every other caster recovers a single lowest-level slot.</summary>
+        public bool RestoreShortRestSlots()
+        {
+            if (IsPactCaster)
+            {
+                int pl = PactLevel;
+                if (slotsExpended[pl] > 0) { slotsExpended[pl] = 0; return true; }
+                return false;
+            }
+            return RestoreLowestExpendedSlot();
         }
 
         public bool AutocastEnabled(AbilityDef def) => autocastSpells.Contains(def);
@@ -506,7 +558,7 @@ namespace RimHeroes
             if (shortRestArmed && asleep && rest.CurLevelPercentage >= 0.98f)
             {
                 shortRestArmed = false;
-                bool any = RestoreLowestExpendedSlot();
+                bool any = RestoreShortRestSlots();
                 // Arcane Recovery rides the short rest: a wizard reclaims a burst of slots, once per long rest.
                 if (HasArcaneRecovery && arcaneRecoveryReady)
                 {
@@ -877,6 +929,7 @@ namespace RimHeroes
             Scribe_Values.Look(ref pactBoon, "pactBoon", PactBoon.None);
             Scribe_Collections.Look(ref learnedSpells, "learnedSpells", LookMode.Def);
             Scribe_Collections.Look(ref mimBonds, "mimBonds", LookMode.Deep);
+            Scribe_Collections.Look(ref bonusMimJobs, "bonusMimJobs", LookMode.Def);
             Scribe_Collections.Look(ref slotsExpended, "slotsExpended", LookMode.Value);
             Scribe_Collections.Look(ref autocastSpells, "autocastSpells", LookMode.Def);
             Scribe_Collections.Look(ref preparedSpells, "preparedSpells", LookMode.Def);
@@ -894,6 +947,7 @@ namespace RimHeroes
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 if (mimBonds == null) mimBonds = new List<MimBond>();
+                if (bonusMimJobs == null) bonusMimJobs = new List<MimJobDef>();
                 if (autocastSpells == null) autocastSpells = new List<AbilityDef>();
                 if (preparedSpells == null) preparedSpells = new List<AbilityDef>();
                 if (resolvedChoiceLevels == null) resolvedChoiceLevels = new List<int>();

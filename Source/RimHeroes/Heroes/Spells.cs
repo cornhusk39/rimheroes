@@ -10,8 +10,8 @@ namespace RimHeroes
     {
         None,
         Full,
-        Half // paladin/ranger
-        // Pact (warlock) later; warlock uses Full for now
+        Half, // paladin/ranger
+        Pact  // warlock: a small pool of slots, all at a single rising level, refilled on a SHORT rest
     }
 
     public static class SpellUtility
@@ -79,9 +79,34 @@ namespace RimHeroes
                     return FullCaster[classLevel - 1][spellLevel - 1];
                 case CasterProgression.Half when spellLevel <= 5:
                     return HalfCaster[classLevel - 1][spellLevel - 1];
+                case CasterProgression.Pact:
+                    return spellLevel == PactSlotLevel(classLevel) ? PactSlots(classLevel) : 0;
                 default:
                     return 0;
             }
+        }
+
+        // Warlock Pact Magic: a few slots, all cast at one rising level, refreshed on a SHORT rest.
+        // 5e splits off Mystic Arcanum for 6th-9th; we fold the 6th into the pact level so a high-level
+        // warlock can still reach their top spells (our warlock tops out at 6th). Deliberately simple.
+        public static int PactSlotLevel(int classLevel)
+        {
+            classLevel = Mathf.Clamp(classLevel, 1, 20);
+            if (classLevel >= 11) return 6;
+            if (classLevel >= 9) return 5;
+            if (classLevel >= 7) return 4;
+            if (classLevel >= 5) return 3;
+            if (classLevel >= 3) return 2;
+            return 1;
+        }
+
+        public static int PactSlots(int classLevel)
+        {
+            classLevel = Mathf.Clamp(classLevel, 1, 20);
+            if (classLevel >= 17) return 4;
+            if (classLevel >= 11) return 3;
+            if (classLevel >= 2) return 2;
+            return 1;
         }
 
         public static bool IsSpell(AbilityDef def) => typeof(Ability_Spell).IsAssignableFrom(def.abilityClass);

@@ -9,6 +9,11 @@ namespace RimHeroes
         // Work types this mim caste performs (e.g. Cleaning for the Sweeper).
         public List<WorkTypeDef> workTypes = new List<WorkTypeDef>();
 
+        // Mims have no skills tracker, so any skill-gated bill (a minimum-skill recipe) or quality roll
+        // would treat them as unskilled. This is the skill level a mim "has" for those checks; it makes
+        // the Hearth (cooking) and Salve (doctor) castes competent at skill-required work. See Patch_MimSkills.
+        public int fixedSkillLevel = 8;
+
         public CompProperties_MimWorker() => compClass = typeof(CompMimWorker);
     }
 

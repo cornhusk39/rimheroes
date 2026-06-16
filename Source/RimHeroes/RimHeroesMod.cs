@@ -14,6 +14,12 @@ namespace RimHeroes
 
         public override string SettingsCategory() => "RimHeroes";
 
+        public override void WriteSettings()
+        {
+            base.WriteSettings();
+            TechLeakFilter.Apply(); // re-apply the leak filter when the player toggles the setting
+        }
+
         public override void DoSettingsWindowContents(Rect inRect)
         {
             var listing = new Listing_Standard();
@@ -30,7 +36,8 @@ namespace RimHeroes
 
     public class RimHeroesSettings : ModSettings
     {
-        // Filters Odyssey Starjacks faction, leaking quest scripts, etc. (DESIGN.md: anti-tech layer 1).
+        // When on, zeroes the selection weight of spacer-flavoured leak quests (e.g. the ancient gun
+        // mercenaries) to protect the medieval tone. See TechLeakFilter. (DESIGN.md: anti-tech layer 1.)
         public bool techLeakStopper = true;
         // Rare Hero pawns in high-point raids, escorted by combat mims.
         public bool enemyHeroRaids = true;

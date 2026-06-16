@@ -33,7 +33,11 @@ borrowed sprite is the **class tome** (a tinted vanilla textbook).
   (L20). Forms render as Menagerie creatures. One form at a time.
 - **Cleric**: Revivify (L5) raises corpses dead less than a day.
 - **Death saves**: heroes collapse at death's door instead of dying — tend them to boost saves.
-- **Mims**: walk in at hero levels 3/8/12; die → replaced in 1–3 days; master dies → panic, leave.
+- **Mims**: walk in at hero levels 3/8/12 (work castes plus combat castes — melee, tank, the ranged
+  quiller, the spellcasting wisp); at level 20 the hero calls one extra caste of their choosing. Die →
+  replaced in 1–3 days; master dies → panic, leave. A full retinue lifts the hero's mood.
+- **Warlock**: pact magic — a few spell slots, all at one rising level, that all come back on a short
+  rest (sleep) rather than only on a long rest.
 - **Inlays**: 3 vestment slots (defense/offense/utility) × lesser/regular/greater, installed by surgery.
 - **Dungeons**: a wealth-scaled entrance can appear on your colony map (trickles monsters until you
   delve or destroy it), arrive as a nearby world-tile quest site (guarded), or roll as an incident.
@@ -66,12 +70,9 @@ borrowed sprite is the **class tome** (a tinted vanilla textbook).
 ## Known gaps (not yet coded)
 
 - **Class tome art** — the one remaining borrowed sprite (tinted vanilla textbook); all other art is real.
-- **Quiller / Wisp mim castes** — art and job defs exist, but no race def, so those L12 unlock
-  slots stay empty.
-- **L20 capstone mim free-choice** and **mim beds / hero-housing thoughts** — designed, not built.
-- **Warlock Pact Magic** — warlock currently uses full-caster slots; short-rest pact recharge isn't
-  modeled yet.
-- **`techLeakStopper` setting** — declared but unwired (a no-op toggle; remove or implement).
+- **Mim beds / bed-placement housing** — the hero now carries a retinue mood (content with a full
+  retinue, uneasy when a mim has fallen and not yet returned), but dedicated mim-bed furniture and
+  room-sharing rules are still a future feature.
 - **Upcasting, spell-choice subclasses, inlay/tome crafting recipes** — trade/loot only for now.
 
 See [docs/DESIGN.md](docs/DESIGN.md) for the full design and rationale.

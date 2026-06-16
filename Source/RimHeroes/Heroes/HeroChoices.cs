@@ -33,7 +33,7 @@ namespace RimHeroes
             ("QuickSleeper", 0), ("NightOwl", 0), ("TooSmart", 1), ("GreatMemory", 0), ("Neat", 0),
         };
 
-        private enum ChoiceKind { Style, Favored, Pact, Secret, Trait, Feat, BonusFeat }
+        private enum ChoiceKind { Style, Favored, Pact, Secret, Trait, Feat, BonusFeat, Mim }
 
         // Bard Magical Secrets pool: spells borrowed from other traditions.
         private static readonly string[] SecretPool =
@@ -146,6 +146,8 @@ namespace RimHeroes
             {
                 foreach (int lvl in hero.classDef.bonusFeatLevels) consider(lvl, ChoiceKind.BonusFeat, hero.IsBonusFeatResolved(lvl));
             }
+            // Level-20 capstone: every hero may call one extra mim caste of their choosing.
+            consider(20, ChoiceKind.Mim, hero.IsChoiceResolved(20));
             return best;
         }
 
@@ -153,7 +155,7 @@ namespace RimHeroes
         {
             // Style/Favored/Pact resolution is detected by the stored field being set (by the option's apply).
             if (c.kind == ChoiceKind.BonusFeat) hero.MarkBonusFeatResolved(c.level);
-            else if (c.kind == ChoiceKind.Trait || c.kind == ChoiceKind.Feat || c.kind == ChoiceKind.Secret) hero.MarkChoiceResolved(c.level);
+            else if (c.kind == ChoiceKind.Trait || c.kind == ChoiceKind.Feat || c.kind == ChoiceKind.Secret || c.kind == ChoiceKind.Mim) hero.MarkChoiceResolved(c.level);
         }
 
         private static List<HeroChoiceOption> BuildOptions(Hediff_HeroLevels hero, ChoiceKind kind)
@@ -165,6 +167,7 @@ namespace RimHeroes
                 case ChoiceKind.Pact: return BuildPactOptions(hero);
                 case ChoiceKind.Secret: return BuildSecretOptions(hero);
                 case ChoiceKind.Trait: return BuildTraitOptions(hero);
+                case ChoiceKind.Mim: return BuildMimOptions(hero);
                 default: return BuildFeatOptions(hero); // Feat + BonusFeat
             }
         }
@@ -178,6 +181,7 @@ namespace RimHeroes
                 case ChoiceKind.Pact: return "Choose your pact boon";
                 case ChoiceKind.Secret: return "Choose a magical secret";
                 case ChoiceKind.Trait: return "Choose a trait";
+                case ChoiceKind.Mim: return "Call a companion";
                 default: return "Choose a feat";
             }
         }
@@ -191,6 +195,7 @@ namespace RimHeroes
                 case ChoiceKind.Pact: return $"{hero.pawn.LabelShortCap}'s patron offers a gift.";
                 case ChoiceKind.Secret: return $"{hero.pawn.LabelShortCap} masters a spell from another tradition.";
                 case ChoiceKind.Trait: return $"{hero.pawn.LabelShortCap} has grown. Pick one trait to keep.";
+                case ChoiceKind.Mim: return $"{hero.pawn.LabelShortCap}'s legend draws a new mim to their service. Choose one.";
                 default: return $"{hero.pawn.LabelShortCap} has earned a feat. Choose one.";
             }
         }
@@ -293,6 +298,21 @@ namespace RimHeroes
                     apply = () => pawn.story?.traits?.GainTrait(new Trait(x.def, x.degree))
                 };
             }).ToList();
+        }
+
+        // Level-20 capstone: offer mim castes the hero doesn't already field (including Quiller/Wisp).
+        private static List<HeroChoiceOption> BuildMimOptions(Hediff_HeroLevels hero)
+        {
+            return DefDatabase<MimJobDef>.AllDefs
+                .Where(j => j.pawnKind != null && !hero.HasMimCaste(j))
+                .InRandomOrder().Take(OptionsShown)
+                .Select(j => new HeroChoiceOption
+                {
+                    label = j.LabelCap,
+                    description = j.description,
+                    icon = null,
+                    apply = () => hero.GrantBonusMim(j)
+                }).ToList();
         }
 
         private static List<HeroChoiceOption> BuildFeatOptions(Hediff_HeroLevels hero)

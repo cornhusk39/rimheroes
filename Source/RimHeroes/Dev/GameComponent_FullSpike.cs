@@ -59,7 +59,7 @@ namespace RimHeroes
                     bool allComplete = classes.All(c => c.vestmentHediff != null && c.mimUnlocks?.Count == 3);
                     int casters = classes.Count(c => c.casterProgression != CasterProgression.None);
                     int wiredCastes = DefDatabase<MimJobDef>.AllDefsListForReading.Count(j => j.pawnKind != null);
-                    passA = classes.Count == 12 && allComplete && casters == 8 && wiredCastes == 8;
+                    passA = classes.Count == 12 && allComplete && casters == 8 && wiredCastes == 10;
                     Log.Message($"[RimHeroes.FullSpike] A: classes={classes.Count} complete={allComplete} casters={casters} wiredCastes={wiredCastes} pass={passA}");
                     state = 1;
                     break;
@@ -161,7 +161,7 @@ namespace RimHeroes
                             Log.Message($"[RimHeroes.FullSpike] F: caste {job.defName} failed (spawned={mim.Spawned} workOk={workOk})");
                         }
                     }
-                    passF = ok == wired.Count && wired.Count == 8;
+                    passF = ok == wired.Count && wired.Count == 10;
                     Log.Message($"[RimHeroes.FullSpike] F(castes): {ok}/{wired.Count} ok pass={passF}");
 
                     string verdict = passA && passB && passC && passD && passE && passF ? "PASS" : "FAIL";
