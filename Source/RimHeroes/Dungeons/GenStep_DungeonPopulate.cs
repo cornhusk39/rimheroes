@@ -84,6 +84,15 @@ namespace RimHeroes
                     if (loot.thing != null && Rand.Chance(loot.chance))
                         Place(map, c, loot.thing, loot.count.RandomInRange);
 
+            // rare-but-not-impossible: a chance at exp candy in the vault, weighted toward small sizes
+            if (Rand.Chance(0.35f))
+            {
+                float r = Rand.Value;
+                string candy = r < 0.55f ? "RH_ExpCandy_S" : r < 0.83f ? "RH_ExpCandy_M"
+                               : r < 0.96f ? "RH_ExpCandy_L" : "RH_ExpCandy_XL";
+                Place(map, c, DefDatabase<ThingDef>.GetNamedSilentFail(candy), candy.EndsWith("_S") ? Rand.RangeInclusive(1, 2) : 1);
+            }
+
             // the rare inlay draw is locked inside the reliquary, not scattered loose
             PlaceReliquary(map, room);
         }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Experience candy: eaten by a hero for a lump of XP. Rare-but-not-impossible dungeon drops, and
+       carried in small numbers by exotic goods traders. Four sizes, escalating XP + rarity. -->
+  <ThingDef Name="RH_ExpCandyBase" ParentName="ResourceBase" Abstract="True">
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <Mass>0.1</Mass>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Eat {0_label}</useLabel>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_ExpCandyBase">
+    <defName>RH_ExpCandy_S</defName>
+    <label>S exp candy</label>
+    <description>A small, chewy candy that hums faintly with stored experience. A hero who eats it learns a little from the rush of borrowed memory. Useless to anyone who walks no heroic path.</description>
+    <graphicData><texPath>Things/RimHeroes/Items/ExpCandyS</texPath><graphicClass>Graphic_StackCount</graphicClass><drawSize>0.75</drawSize></graphicData>
+    <statBases><MarketValue>120</MarketValue></statBases>
+    <comps>
+      <li Class="RimHeroes.CompProperties_UseEffectGrantHeroXP"><xp>150</xp></li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_ExpCandyBase">
+    <defName>RH_ExpCandy_M</defName>
+    <label>M exp candy</label>
+    <description>A medium candy dense with stored experience. A hero who eats it learns a fair bit from the rush of borrowed memory. Useless to anyone who walks no heroic path.</description>
+    <graphicData><texPath>Things/RimHeroes/Items/ExpCandyM</texPath><graphicClass>Graphic_StackCount</graphicClass><drawSize>0.85</drawSize></graphicData>
+    <statBases><MarketValue>340</MarketValue></statBases>
+    <comps>
+      <li Class="RimHeroes.CompProperties_UseEffectGrantHeroXP"><xp>500</xp></li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_ExpCandyBase">
+    <defName>RH_ExpCandy_L</defName>
+    <label>L exp candy</label>
+    <description>A large candy heavy with stored experience. A hero who eats it learns a great deal from the rush of borrowed memory. Useless to anyone who walks no heroic path.</description>
+    <graphicData><texPath>Things/RimHeroes/Items/ExpCandyL</texPath><graphicClass>Graphic_StackCount</graphicClass><drawSize>0.95</drawSize></graphicData>
+    <statBases><MarketValue>880</MarketValue></statBases>
+    <comps>
+      <li Class="RimHeroes.CompProperties_UseEffectGrantHeroXP"><xp>1500</xp></li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_ExpCandyBase">
+    <defName>RH_ExpCandy_XL</defName>
+    <label>XL exp candy</label>
+    <description>An enormous candy brimming with stored experience. A hero who eats it learns more in a moment than most do in a season. Useless to anyone who walks no heroic path.</description>
+    <graphicData><texPath>Things/RimHeroes/Items/ExpCandyXL</texPath><graphicClass>Graphic_StackCount</graphicClass><drawSize>1.05</drawSize></graphicData>
+    <statBases><MarketValue>2200</MarketValue></statBases>
+    <comps>
+      <li Class="RimHeroes.CompProperties_UseEffectGrantHeroXP"><xp>4000</xp></li>
+    </comps>
+  </ThingDef>
+
+</Defs>

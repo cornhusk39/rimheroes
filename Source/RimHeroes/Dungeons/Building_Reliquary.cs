@@ -54,6 +54,12 @@ namespace RimHeroes
                 var regular = InlaysWith("_Regular");
                 if (regular.Count > 0) contents.Add(regular.RandomElement());
             }
+            // 5% chance to also enshrine a heroic blessing.
+            if (Rand.Chance(0.05f))
+            {
+                var blessing = DefDatabase<ThingDef>.GetNamedSilentFail("RH_HeroicBlessing");
+                if (blessing != null) contents.Add(blessing);
+            }
         }
 
         private static List<ThingDef> InlaysWith(string suffix) =>

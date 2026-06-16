@@ -29,6 +29,15 @@ namespace RimHeroes
                     bossHediff.scale = kind.bossScale;
                     bossHediff.aura = kind.bossAura;
                 }
+
+                // 5% chance to carry a heroic blessing, dropped with its body on death.
+                if (Rand.Chance(0.05f))
+                {
+                    var blessing = DefDatabase<ThingDef>.GetNamedSilentFail("RH_HeroicBlessing");
+                    if (blessing != null && boss.inventory != null)
+                        boss.inventory.innerContainer.TryAdd(ThingMaker.MakeThing(blessing));
+                }
+
                 boss.Drawer?.renderer?.renderTree?.SetDirty();
                 boss.Drawer?.renderer?.SetAllGraphicsDirty();
                 return boss;

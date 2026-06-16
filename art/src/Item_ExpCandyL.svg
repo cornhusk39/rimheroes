@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- large blue exp candy -->
+  <rect x="30" y="30" width="68" height="68" rx="19" fill="#2f7fd8" stroke="#143f7a" stroke-width="5"/>
+  <rect x="39" y="39" width="50" height="50" rx="13" fill="#5fa3ef"/>
+  <ellipse cx="54" cy="52" rx="13" ry="8" fill="#ffffff" fill-opacity="0.7"/>
+  <circle cx="80" cy="80" r="5" fill="#cfe4ff" fill-opacity="0.85"/>
+</svg>
