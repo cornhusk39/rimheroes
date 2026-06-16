@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <RH_Settings_TechLeakStopper>Block high-tech leaks</RH_Settings_TechLeakStopper>
-  <RH_Settings_TechLeakStopper_Desc>Filters spacer-tech content that slips past tech-restriction mods, such as Odyssey Starjack raiders and certain quest rewards. Best paired with World Tech Level.</RH_Settings_TechLeakStopper_Desc>
   <RH_Settings_EnemyHeroRaids>Enemy heroes in raids</RH_Settings_EnemyHeroRaids>
   <RH_Settings_EnemyHeroRaids_Desc>Now and then a large raid is led by an enemy hero with their own mim retinue. They fall carrying vestment enhancements, and on rare days a class tome.</RH_Settings_EnemyHeroRaids_Desc>
   <RH_Settings_AllowHeroCorpseDestruction>Allow destroying hero corpses</RH_Settings_AllowHeroCorpseDestruction>
