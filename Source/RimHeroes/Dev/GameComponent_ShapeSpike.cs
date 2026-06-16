@@ -51,28 +51,12 @@ namespace RimHeroes
             {
                 case 0:
                 {
-                    // Spawn the whole bestiary; verify biome lists carry each kind somewhere.
-                    string[] kinds = { "RH_OwlbearKind", "RH_DireWolfKind", "RH_GiantElkKind", "RH_AnkhegKind", "RH_BasiliskKind" };
-                    int spawned = 0;
-                    foreach (var kindName in kinds)
-                    {
-                        var kind = PawnKindDef.Named(kindName);
-                        var beast = PawnGenerator.GeneratePawn(kind);
-                        CellFinder.TryFindRandomCellNear(map.Center + new IntVec3(15, 0, 15), map, 12, c => c.Standable(map), out var cell);
-                        GenSpawn.Spawn(beast, cell, map);
-                        if (beast.Spawned)
-                        {
-                            spawned++;
-                        }
-                    }
-                    bool inBiomes =
-                        DefDatabase<BiomeDef>.GetNamed("TemperateForest").AllWildAnimals.Contains(PawnKindDef.Named("RH_OwlbearKind"))
-                        && DefDatabase<BiomeDef>.GetNamed("BorealForest").AllWildAnimals.Contains(PawnKindDef.Named("RH_DireWolfKind"))
-                        && DefDatabase<BiomeDef>.GetNamed("Tundra").AllWildAnimals.Contains(PawnKindDef.Named("RH_GiantElkKind"))
-                        && DefDatabase<BiomeDef>.GetNamed("AridShrubland").AllWildAnimals.Contains(PawnKindDef.Named("RH_AnkhegKind"))
-                        && DefDatabase<BiomeDef>.GetNamed("Desert").AllWildAnimals.Contains(PawnKindDef.Named("RH_BasiliskKind"));
-                    passA = spawned == kinds.Length && inBiomes;
-                    Log.Message($"[RimHeroes.ShapeSpike] PhaseA: beasts spawned={spawned}/{kinds.Length} biomes={inBiomes} pass={passA}");
+                    // Our custom wild beast races were retired in favour of Mooloh's Dnd Menagerie, so
+                    // there is no longer a bestiary to spawn here. Phase A just confirms the old kinds
+                    // are gone (no stragglers) and moves on to the wildshape forms.
+                    string[] retired = { "RH_OwlbearKind", "RH_DireWolfKind", "RH_GiantElkKind", "RH_AnkhegKind", "RH_BasiliskKind" };
+                    passA = retired.All(k => DefDatabase<PawnKindDef>.GetNamedSilentFail(k) == null);
+                    Log.Message($"[RimHeroes.ShapeSpike] PhaseA: retired beast kinds absent={passA}");
                     state = 1;
                     break;
                 }

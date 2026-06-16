@@ -19,7 +19,7 @@ namespace RimHeroes
         private IntVec3 anchor;
 
         private static readonly string[] Kinds =
-            { "Bear_Grizzly", "Wolf_Timber", "Deer", "RH_OwlbearKind", "RH_DireWolfKind", "RH_GiantElkKind" };
+            { "Bear_Grizzly", "Wolf_Timber", "Deer" };
 
         public GameComponent_RefSpike(Game game) { }
 
