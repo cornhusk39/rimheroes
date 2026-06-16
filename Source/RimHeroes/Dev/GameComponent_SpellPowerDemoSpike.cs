@@ -69,7 +69,7 @@ namespace RimHeroes
             Log.Message($"[RimHeroes.SpellPowerDemo] BARE       spell='{spellName}' base={baseAmount:F0}  RH_SpellPower={sp0:P0}  effective={baseAmount * sp0:F1}  dummyTookDamage={d0:F1}");
 
             // 2) with the Perfect Hero Staff equipped (+0.75 spell power)
-            EquipOn(wizard, "RH_Weapon_Wizard_T4");
+            EquipOn(wizard, "RH_Weapon_Wizard_TierIV");
             float sp1 = SpellPower.For(wizard);
             Heal(dummy);
             comp.Apply(new LocalTargetInfo(dummy), default);

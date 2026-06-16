@@ -33,7 +33,7 @@ namespace RimHeroes
             Log.Message("[RimHeroes.Capstone] === capstone payoff ===");
             var fighter = DefDatabase<HeroClassDef>.GetNamedSilentFail("RH_Fighter");
             var weapon = CapstoneQuest.CapstoneWeaponFor(fighter);
-            Assert(weapon != null && weapon.defName == "RH_Weapon_Fighter_T5", $"class maps to capstone weapon ({weapon?.defName})");
+            Assert(weapon != null && weapon.defName == "RH_Weapon_Fighter_TierV", $"class maps to capstone weapon ({weapon?.defName})");
 
             var site = CapstoneQuest.MarkCapstoneDungeon(fighter);
             var comp = (site as WorldObject)?.GetComponent<WorldObjectComp_DungeonSite>();

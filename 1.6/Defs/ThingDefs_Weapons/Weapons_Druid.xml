@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Druid_T1</defName>
+    <defName>RH_Weapon_Druid_TierI</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>lesser hero living staff</label>
     <description>A gnarled staff of living wood, taken from a branch still green and bound to a hero druid. It opens the druid's magic to the wild that made it, though as a club it is honestly just a stout stick.</description>
@@ -16,7 +16,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Druid_T2</defName>
+    <defName>RH_Weapon_Druid_TierII</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>hero living staff</label>
     <description>A living staff laced with creeping vine, sprouting fresh leaves along its length that never brown or fall. Wild magic runs more freely through the growing wood, feeding the druid's spells.</description>
@@ -30,7 +30,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Druid_T3</defName>
+    <defName>RH_Weapon_Druid_TierIII</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>greater hero living staff</label>
     <description>A living staff forked at its crown like antlers of pale bone-wood, holding a bead of amber sap that glows with a quiet inner warmth. When it is raised, the wild leans in to listen, and the druid's magic carries further.</description>
@@ -44,7 +44,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Druid_T4</defName>
+    <defName>RH_Weapon_Druid_TierIV</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>perfect hero living staff</label>
     <description>A living staff veined with glowing amber sap that pulses up the wood like a slow heartbeat, wreathed in leaves and a soft halo of lifelight. Spring follows wherever it goes, and the wild answers the druid's call before the words are finished.</description>
@@ -58,7 +58,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Druid_T5</defName>
+    <defName>RH_Weapon_Druid_TierV</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>Worldroot</label>
     <description>The druid's capstone staff, given only to a hero who has grown into the living world itself. Worldroot burns with amber lifelight, crowned in antlers and evergreen leaves, its roots forever groping for soil. Strike it to the ground and forests surge up, while the fallen are quietly drawn back into the wild.</description>

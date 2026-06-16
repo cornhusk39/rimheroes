@@ -8,6 +8,23 @@ namespace RimHeroes
     {
         private static readonly string[] CorpseDestroyingRecipes = { "CremateCorpse", "ButcherCorpseFlesh" };
 
+        /// <summary>
+        /// Tier suffix for class-weapon defNames. RimWorld forbids ThingDef defNames that end in a
+        /// digit, so the five weapon tiers use Roman numerals (e.g. RH_Weapon_Rogue_TierIII).
+        /// </summary>
+        public static string WeaponTierSuffix(int tier)
+        {
+            switch (tier)
+            {
+                case 1: return "TierI";
+                case 2: return "TierII";
+                case 3: return "TierIII";
+                case 4: return "TierIV";
+                case 5: return "TierV";
+                default: return "Tier" + tier;
+            }
+        }
+
         public static bool CorpseBillBlocked(RecipeDef recipe, Thing thing)
         {
             if (RimHeroesMod.Settings.allowHeroCorpseDestruction || recipe == null)
@@ -92,7 +109,7 @@ namespace RimHeroes
             {
                 return;
             }
-            var def = DefDatabase<ThingDef>.GetNamedSilentFail("RH_Weapon_" + classDef.defName.Substring("RH_".Length) + "_T1");
+            var def = DefDatabase<ThingDef>.GetNamedSilentFail("RH_Weapon_" + classDef.defName.Substring("RH_".Length) + "_" + WeaponTierSuffix(1));
             if (def == null)
             {
                 return;

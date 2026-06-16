@@ -22,7 +22,7 @@
       <kind>Colonist</kind>
       <mutant>Shambler</mutant>
       <vestmentHediff>RH_Vestment_Fighter</vestmentHediff>
-      <weapon>RH_Weapon_Fighter_T5</weapon>
+      <weapon>RH_Weapon_Fighter_TierV</weapon>
       <label>Crypt Lord</label>
     </boss>
     <minTier>1</minTier>

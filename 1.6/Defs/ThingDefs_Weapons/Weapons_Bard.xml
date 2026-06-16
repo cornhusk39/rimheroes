@@ -4,7 +4,7 @@
   <!-- Bard hero lutes: caster focus, weak melee, scaling RH_SpellPower. Base RH_HeroWeaponMeleeBase defined in Weapons_Barbarian.xml. -->
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Bard_T1</defName>
+    <defName>RH_Weapon_Bard_TierI</defName>
     <label>lesser hero lute</label>
     <description>A plain lute with a bowl carved from dark heartwood, bound to a hero bard. It will never win a melee, but even its first rough chords lend force to a bard's magic, steadying friends and unsettling foes.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Bard/T1</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.20</drawSize></graphicData>
@@ -17,7 +17,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Bard_T2</defName>
+    <defName>RH_Weapon_Bard_TierII</defName>
     <label>hero lute</label>
     <description>A polished lute strung over gold frets, its soundhole ringed by a carved rosette. The tone carries clean across a battlefield, and the spellcraft riding each note bites harder than the lesser instrument could manage.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Bard/T2</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.20</drawSize></graphicData>
@@ -30,7 +30,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Bard_T3</defName>
+    <defName>RH_Weapon_Bard_TierIII</defName>
     <label>greater hero lute</label>
     <description>A richly inlaid lute crowned with a glowing gem above the rosette, a faint gold shimmer clinging to the strings. Any spell sung over its accompaniment lands with markedly greater weight.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Bard/T3</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.20</drawSize></graphicData>
@@ -43,7 +43,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Bard_T4</defName>
+    <defName>RH_Weapon_Bard_TierIV</defName>
     <label>perfect hero lute</label>
     <description>A lute alive with bound magic, golden notes drifting up unbidden from its blazing strings. Every chord pours raw power into the bard's spellcraft, enough that a single well-placed song can decide an entire fight.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Bard/T4</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.20</drawSize></graphicData>
@@ -56,7 +56,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Bard_T5</defName>
+    <defName>RH_Weapon_Bard_TierV</defName>
     <label>Dirge of Kings</label>
     <description>The bard's capstone lute, granted only to a hero whose legend has reached its summit. It sings of its own accord, golden and unplayed; its inlay glitters like a crown, and motes of living music spill from the strings to amplify every spell its bearer weaves. When a master bard strikes the Dirge of Kings, armies kneel and empires recall how they were meant to end.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Bard/T5</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.30</drawSize></graphicData>

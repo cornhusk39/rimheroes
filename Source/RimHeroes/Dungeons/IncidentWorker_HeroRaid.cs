@@ -61,7 +61,7 @@ namespace RimHeroes
                 var levels = HeroUtility.MakeHero(hero, cls);
                 levels?.GainXP(level * 150f);
                 int tier = Mathf.Clamp(Mathf.CeilToInt(level / 4f), 1, 5);
-                var wpn = DefDatabase<ThingDef>.GetNamedSilentFail("RH_Weapon_" + cls.defName.Substring(3) + "_T" + tier);
+                var wpn = DefDatabase<ThingDef>.GetNamedSilentFail("RH_Weapon_" + cls.defName.Substring(3) + "_" + HeroUtility.WeaponTierSuffix(tier));
                 if (wpn != null && hero.equipment != null)
                 {
                     var w = (ThingWithComps)ThingMaker.MakeThing(wpn);

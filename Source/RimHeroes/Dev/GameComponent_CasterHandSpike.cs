@@ -94,7 +94,7 @@ namespace RimHeroes
                 p.equipment?.DestroyAllEquipment();
                 var levels = HeroUtility.MakeHero(p, classDef);
                 levels.SetLevelDirect(20);
-                var def = DefDatabase<ThingDef>.GetNamedSilentFail($"RH_Weapon_{cls.Replace("RH_", "")}_T5");
+                var def = DefDatabase<ThingDef>.GetNamedSilentFail($"RH_Weapon_{cls.Replace("RH_", "")}_{HeroUtility.WeaponTierSuffix(5)}");
                 if (def != null)
                 {
                     var wpn = (ThingWithComps)ThingMaker.MakeThing(def);

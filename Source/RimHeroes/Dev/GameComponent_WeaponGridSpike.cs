@@ -83,7 +83,7 @@ namespace RimHeroes
                     if (p == null) continue;
                     p.Name = new NameSingle($"{Classes[col]} T{tier}");
                     pawns.Add(p);
-                    string wdef = $"RH_Weapon_{Classes[col]}_T{tier}";
+                    string wdef = $"RH_Weapon_{Classes[col]}_{HeroUtility.WeaponTierSuffix(tier)}";
                     if (!EquipOn(p, wdef)) Log.Message($"[RimHeroes.WeaponGrid] FAIL equip {wdef}");
                 }
             }

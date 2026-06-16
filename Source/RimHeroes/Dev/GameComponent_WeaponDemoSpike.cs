@@ -54,7 +54,7 @@ namespace RimHeroes
                         var p = SpawnHero(map, cell, "RH_" + Classes[i], 20);
                         if (p == null) continue;
                         pawns.Add(p);
-                        string wdef = $"RH_Weapon_{Classes[i]}_T5";
+                        string wdef = $"RH_Weapon_{Classes[i]}_{HeroUtility.WeaponTierSuffix(5)}";
                         bool ok = EquipOn(p, wdef);
                         Log.Message($"[RimHeroes.WeaponDemo] {(ok ? "OK" : "FAIL")} {Classes[i]} capstone {wdef}");
                     }

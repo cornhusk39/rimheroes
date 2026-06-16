@@ -4,7 +4,7 @@
   <!-- Class-locked hero longswords for the fighter. Base RH_HeroWeaponMeleeBase is defined in Weapons_Barbarian.xml. -->
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Fighter_T1</defName>
+    <defName>RH_Weapon_Fighter_TierI</defName>
     <label>lesser hero longsword</label>
     <description>A plain arming sword of honest steel, balanced far better than its looks suggest. It is bound to a hero fighter and sits dead in any other hand.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Fighter/T1</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.15</drawSize></graphicData>
@@ -18,7 +18,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Fighter_T2</defName>
+    <defName>RH_Weapon_Fighter_TierII</defName>
     <label>hero longsword</label>
     <description>A masterwork longsword with a deep fuller and a cobalt-wrapped grip. It cuts cleaner and thrusts straighter than the lesser blade, and never seems to tire the wrist.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Fighter/T2</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.15</drawSize></graphicData>
@@ -32,7 +32,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Fighter_T3</defName>
+    <defName>RH_Weapon_Fighter_TierIII</defName>
     <label>greater hero longsword</label>
     <description>A gold-crossed longsword with a cobalt gem in the pommel, its edges trailing a thin cold light. Heavy plate splits where it lands.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Fighter/T3</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.15</drawSize></graphicData>
@@ -46,7 +46,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Fighter_T4</defName>
+    <defName>RH_Weapon_Fighter_TierIV</defName>
     <label>perfect hero longsword</label>
     <description>A longsword whose runed blade burns cold blue, hung in a winged crossguard and ringed with a soft radiance. Few foes keep their feet after one clean stroke.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Fighter/T4</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.20</drawSize></graphicData>
@@ -60,7 +60,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Fighter_T5</defName>
+    <defName>RH_Weapon_Fighter_TierV</defName>
     <label>Aegisedge</label>
     <description>The fighter's capstone longsword, claimed only by a hero whose legend stands at its peak. The blade never dims, sheathed in a blue-white aura that turns aside incoming blows in the same motion it deals its own.</description>
     <graphicData><texPath>Things/RimHeroes/Weapons/Fighter/T5</texPath><graphicClass>Graphic_Single</graphicClass><drawSize>1.35</drawSize></graphicData>

@@ -71,253 +71,253 @@
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Barbarian_T1</defName>
     <label>make lesser hero greataxe</label>
-    <products><RH_Weapon_Barbarian_T1>1</RH_Weapon_Barbarian_T1></products>
+    <products><RH_Weapon_Barbarian_TierI>1</RH_Weapon_Barbarian_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Barbarian_T2</defName>
     <label>make hero greataxe</label>
-    <products><RH_Weapon_Barbarian_T2>1</RH_Weapon_Barbarian_T2></products>
+    <products><RH_Weapon_Barbarian_TierII>1</RH_Weapon_Barbarian_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Barbarian_T3</defName>
     <label>make greater hero greataxe</label>
-    <products><RH_Weapon_Barbarian_T3>1</RH_Weapon_Barbarian_T3></products>
+    <products><RH_Weapon_Barbarian_TierIII>1</RH_Weapon_Barbarian_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Barbarian_T4</defName>
     <label>make perfect hero greataxe</label>
-    <products><RH_Weapon_Barbarian_T4>1</RH_Weapon_Barbarian_T4></products>
+    <products><RH_Weapon_Barbarian_TierIV>1</RH_Weapon_Barbarian_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Fighter_T1</defName>
     <label>make lesser hero longsword</label>
-    <products><RH_Weapon_Fighter_T1>1</RH_Weapon_Fighter_T1></products>
+    <products><RH_Weapon_Fighter_TierI>1</RH_Weapon_Fighter_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Fighter_T2</defName>
     <label>make hero longsword</label>
-    <products><RH_Weapon_Fighter_T2>1</RH_Weapon_Fighter_T2></products>
+    <products><RH_Weapon_Fighter_TierII>1</RH_Weapon_Fighter_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Fighter_T3</defName>
     <label>make greater hero longsword</label>
-    <products><RH_Weapon_Fighter_T3>1</RH_Weapon_Fighter_T3></products>
+    <products><RH_Weapon_Fighter_TierIII>1</RH_Weapon_Fighter_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Fighter_T4</defName>
     <label>make perfect hero longsword</label>
-    <products><RH_Weapon_Fighter_T4>1</RH_Weapon_Fighter_T4></products>
+    <products><RH_Weapon_Fighter_TierIV>1</RH_Weapon_Fighter_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Rogue_T1</defName>
     <label>make lesser hero daggers</label>
-    <products><RH_Weapon_Rogue_T1>1</RH_Weapon_Rogue_T1></products>
+    <products><RH_Weapon_Rogue_TierI>1</RH_Weapon_Rogue_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Rogue_T2</defName>
     <label>make hero daggers</label>
-    <products><RH_Weapon_Rogue_T2>1</RH_Weapon_Rogue_T2></products>
+    <products><RH_Weapon_Rogue_TierII>1</RH_Weapon_Rogue_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Rogue_T3</defName>
     <label>make greater hero daggers</label>
-    <products><RH_Weapon_Rogue_T3>1</RH_Weapon_Rogue_T3></products>
+    <products><RH_Weapon_Rogue_TierIII>1</RH_Weapon_Rogue_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Rogue_T4</defName>
     <label>make perfect hero daggers</label>
-    <products><RH_Weapon_Rogue_T4>1</RH_Weapon_Rogue_T4></products>
+    <products><RH_Weapon_Rogue_TierIV>1</RH_Weapon_Rogue_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Monk_T1</defName>
     <label>make lesser hero fist wraps</label>
-    <products><RH_Weapon_Monk_T1>1</RH_Weapon_Monk_T1></products>
+    <products><RH_Weapon_Monk_TierI>1</RH_Weapon_Monk_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Monk_T2</defName>
     <label>make hero fist wraps</label>
-    <products><RH_Weapon_Monk_T2>1</RH_Weapon_Monk_T2></products>
+    <products><RH_Weapon_Monk_TierII>1</RH_Weapon_Monk_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Monk_T3</defName>
     <label>make greater hero fist wraps</label>
-    <products><RH_Weapon_Monk_T3>1</RH_Weapon_Monk_T3></products>
+    <products><RH_Weapon_Monk_TierIII>1</RH_Weapon_Monk_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Monk_T4</defName>
     <label>make perfect hero fist wraps</label>
-    <products><RH_Weapon_Monk_T4>1</RH_Weapon_Monk_T4></products>
+    <products><RH_Weapon_Monk_TierIV>1</RH_Weapon_Monk_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Ranger_T1</defName>
     <label>make lesser hero longbow</label>
-    <products><RH_Weapon_Ranger_T1>1</RH_Weapon_Ranger_T1></products>
+    <products><RH_Weapon_Ranger_TierI>1</RH_Weapon_Ranger_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Ranger_T2</defName>
     <label>make hero longbow</label>
-    <products><RH_Weapon_Ranger_T2>1</RH_Weapon_Ranger_T2></products>
+    <products><RH_Weapon_Ranger_TierII>1</RH_Weapon_Ranger_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Ranger_T3</defName>
     <label>make greater hero longbow</label>
-    <products><RH_Weapon_Ranger_T3>1</RH_Weapon_Ranger_T3></products>
+    <products><RH_Weapon_Ranger_TierIII>1</RH_Weapon_Ranger_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Ranger_T4</defName>
     <label>make perfect hero longbow</label>
-    <products><RH_Weapon_Ranger_T4>1</RH_Weapon_Ranger_T4></products>
+    <products><RH_Weapon_Ranger_TierIV>1</RH_Weapon_Ranger_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Paladin_T1</defName>
     <label>make lesser hero warhammer</label>
-    <products><RH_Weapon_Paladin_T1>1</RH_Weapon_Paladin_T1></products>
+    <products><RH_Weapon_Paladin_TierI>1</RH_Weapon_Paladin_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Paladin_T2</defName>
     <label>make hero warhammer</label>
-    <products><RH_Weapon_Paladin_T2>1</RH_Weapon_Paladin_T2></products>
+    <products><RH_Weapon_Paladin_TierII>1</RH_Weapon_Paladin_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Paladin_T3</defName>
     <label>make greater hero warhammer</label>
-    <products><RH_Weapon_Paladin_T3>1</RH_Weapon_Paladin_T3></products>
+    <products><RH_Weapon_Paladin_TierIII>1</RH_Weapon_Paladin_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Paladin_T4</defName>
     <label>make perfect hero warhammer</label>
-    <products><RH_Weapon_Paladin_T4>1</RH_Weapon_Paladin_T4></products>
+    <products><RH_Weapon_Paladin_TierIV>1</RH_Weapon_Paladin_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Wizard_T1</defName>
     <label>make lesser hero staff</label>
-    <products><RH_Weapon_Wizard_T1>1</RH_Weapon_Wizard_T1></products>
+    <products><RH_Weapon_Wizard_TierI>1</RH_Weapon_Wizard_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Wizard_T2</defName>
     <label>make hero staff</label>
-    <products><RH_Weapon_Wizard_T2>1</RH_Weapon_Wizard_T2></products>
+    <products><RH_Weapon_Wizard_TierII>1</RH_Weapon_Wizard_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Wizard_T3</defName>
     <label>make greater hero staff</label>
-    <products><RH_Weapon_Wizard_T3>1</RH_Weapon_Wizard_T3></products>
+    <products><RH_Weapon_Wizard_TierIII>1</RH_Weapon_Wizard_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Wizard_T4</defName>
     <label>make perfect hero staff</label>
-    <products><RH_Weapon_Wizard_T4>1</RH_Weapon_Wizard_T4></products>
+    <products><RH_Weapon_Wizard_TierIV>1</RH_Weapon_Wizard_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Sorcerer_T1</defName>
     <label>make lesser hero scepter</label>
-    <products><RH_Weapon_Sorcerer_T1>1</RH_Weapon_Sorcerer_T1></products>
+    <products><RH_Weapon_Sorcerer_TierI>1</RH_Weapon_Sorcerer_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Sorcerer_T2</defName>
     <label>make hero scepter</label>
-    <products><RH_Weapon_Sorcerer_T2>1</RH_Weapon_Sorcerer_T2></products>
+    <products><RH_Weapon_Sorcerer_TierII>1</RH_Weapon_Sorcerer_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Sorcerer_T3</defName>
     <label>make greater hero scepter</label>
-    <products><RH_Weapon_Sorcerer_T3>1</RH_Weapon_Sorcerer_T3></products>
+    <products><RH_Weapon_Sorcerer_TierIII>1</RH_Weapon_Sorcerer_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Sorcerer_T4</defName>
     <label>make perfect hero scepter</label>
-    <products><RH_Weapon_Sorcerer_T4>1</RH_Weapon_Sorcerer_T4></products>
+    <products><RH_Weapon_Sorcerer_TierIV>1</RH_Weapon_Sorcerer_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Cleric_T1</defName>
     <label>make lesser hero mace</label>
-    <products><RH_Weapon_Cleric_T1>1</RH_Weapon_Cleric_T1></products>
+    <products><RH_Weapon_Cleric_TierI>1</RH_Weapon_Cleric_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Cleric_T2</defName>
     <label>make hero mace</label>
-    <products><RH_Weapon_Cleric_T2>1</RH_Weapon_Cleric_T2></products>
+    <products><RH_Weapon_Cleric_TierII>1</RH_Weapon_Cleric_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Cleric_T3</defName>
     <label>make greater hero mace</label>
-    <products><RH_Weapon_Cleric_T3>1</RH_Weapon_Cleric_T3></products>
+    <products><RH_Weapon_Cleric_TierIII>1</RH_Weapon_Cleric_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Cleric_T4</defName>
     <label>make perfect hero mace</label>
-    <products><RH_Weapon_Cleric_T4>1</RH_Weapon_Cleric_T4></products>
+    <products><RH_Weapon_Cleric_TierIV>1</RH_Weapon_Cleric_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Druid_T1</defName>
     <label>make lesser hero living staff</label>
-    <products><RH_Weapon_Druid_T1>1</RH_Weapon_Druid_T1></products>
+    <products><RH_Weapon_Druid_TierI>1</RH_Weapon_Druid_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Druid_T2</defName>
     <label>make hero living staff</label>
-    <products><RH_Weapon_Druid_T2>1</RH_Weapon_Druid_T2></products>
+    <products><RH_Weapon_Druid_TierII>1</RH_Weapon_Druid_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Druid_T3</defName>
     <label>make greater hero living staff</label>
-    <products><RH_Weapon_Druid_T3>1</RH_Weapon_Druid_T3></products>
+    <products><RH_Weapon_Druid_TierIII>1</RH_Weapon_Druid_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Druid_T4</defName>
     <label>make perfect hero living staff</label>
-    <products><RH_Weapon_Druid_T4>1</RH_Weapon_Druid_T4></products>
+    <products><RH_Weapon_Druid_TierIV>1</RH_Weapon_Druid_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Bard_T1</defName>
     <label>make lesser hero lute</label>
-    <products><RH_Weapon_Bard_T1>1</RH_Weapon_Bard_T1></products>
+    <products><RH_Weapon_Bard_TierI>1</RH_Weapon_Bard_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Bard_T2</defName>
     <label>make hero lute</label>
-    <products><RH_Weapon_Bard_T2>1</RH_Weapon_Bard_T2></products>
+    <products><RH_Weapon_Bard_TierII>1</RH_Weapon_Bard_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Bard_T3</defName>
     <label>make greater hero lute</label>
-    <products><RH_Weapon_Bard_T3>1</RH_Weapon_Bard_T3></products>
+    <products><RH_Weapon_Bard_TierIII>1</RH_Weapon_Bard_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Bard_T4</defName>
     <label>make perfect hero lute</label>
-    <products><RH_Weapon_Bard_T4>1</RH_Weapon_Bard_T4></products>
+    <products><RH_Weapon_Bard_TierIV>1</RH_Weapon_Bard_TierIV></products>
   </RecipeDef>
 
   <RecipeDef ParentName="RH_ForgeRecipeT1">
     <defName>RH_Make_Warlock_T1</defName>
     <label>make lesser hero pact-dagger</label>
-    <products><RH_Weapon_Warlock_T1>1</RH_Weapon_Warlock_T1></products>
+    <products><RH_Weapon_Warlock_TierI>1</RH_Weapon_Warlock_TierI></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT2">
     <defName>RH_Make_Warlock_T2</defName>
     <label>make hero pact-dagger</label>
-    <products><RH_Weapon_Warlock_T2>1</RH_Weapon_Warlock_T2></products>
+    <products><RH_Weapon_Warlock_TierII>1</RH_Weapon_Warlock_TierII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT3">
     <defName>RH_Make_Warlock_T3</defName>
     <label>make greater hero pact-dagger</label>
-    <products><RH_Weapon_Warlock_T3>1</RH_Weapon_Warlock_T3></products>
+    <products><RH_Weapon_Warlock_TierIII>1</RH_Weapon_Warlock_TierIII></products>
   </RecipeDef>
   <RecipeDef ParentName="RH_ForgeRecipeT4">
     <defName>RH_Make_Warlock_T4</defName>
     <label>make perfect hero pact-dagger</label>
-    <products><RH_Weapon_Warlock_T4>1</RH_Weapon_Warlock_T4></products>
+    <products><RH_Weapon_Warlock_TierIV>1</RH_Weapon_Warlock_TierIV></products>
   </RecipeDef>
 
 </Defs>

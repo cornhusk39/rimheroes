@@ -4,7 +4,7 @@
   <!-- Cleric hero maces: holy caster focus (RH_SpellPower) with a decent bludgeon. Base RH_HeroWeaponMeleeBase defined in Weapons_Barbarian.xml. -->
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Cleric_T1</defName>
+    <defName>RH_Weapon_Cleric_TierI</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>lesser hero mace</label>
     <description>A stout iron mace topped with a flanged sun-head, consecrated for a hero cleric's grip. It carries only the faintest thread of holy power, yet it still caves a skull without complaint.</description>
@@ -18,7 +18,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Cleric_T2</defName>
+    <defName>RH_Weapon_Cleric_TierII</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>hero mace</label>
     <description>A silver-headed mace stamped with a gilded sun. The sigil seems to drink in every prayer spoken near it, and gives that strength back to the cleric's invocations.</description>
@@ -32,7 +32,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Cleric_T3</defName>
+    <defName>RH_Weapon_Cleric_TierIII</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>greater hero mace</label>
     <description>An ornate golden mace whose sun-head fans out in carved rays around a pale gem. A soft holy glow rests on the metal, and miracles answer its bearer faster than they have any right to.</description>
@@ -46,7 +46,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Cleric_T4</defName>
+    <defName>RH_Weapon_Cleric_TierIV</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>perfect hero mace</label>
     <description>A radiant mace whose sun-head casts real light, its rim ringed with burning runes and crowned in a halo of holy fire. In a cleric's hand it floods their prayers with power, steady and bright as a sunrise.</description>
@@ -60,7 +60,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Cleric_T5</defName>
+    <defName>RH_Weapon_Cleric_TierV</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>Lightbringer</label>
     <description>The cleric's capstone mace, its sunburst head blazing with a holy light that never dims. It comes only to a hero whose faith has run as deep as faith can go; its radiance throws back the dark, and one righteous blow is enough to break the wicked outright.</description>

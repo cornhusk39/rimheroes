@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Sorcerer_T1</defName>
+    <defName>RH_Weapon_Sorcerer_TierI</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>lesser hero scepter</label>
     <description>A plain dark rod tipped with a small red gem, a focus through which a hero sorcerer pours their inborn magic. It makes a poor club, but it sharpens the will behind every spell.</description>
@@ -16,7 +16,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Sorcerer_T2</defName>
+    <defName>RH_Weapon_Sorcerer_TierII</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>hero scepter</label>
     <description>A gold-banded scepter set with a large crimson gem. The bound metal hums when magic runs through it, and pushes greater force behind everything the sorcerer casts.</description>
@@ -30,7 +30,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Sorcerer_T3</defName>
+    <defName>RH_Weapon_Sorcerer_TierIII</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>greater hero scepter</label>
     <description>An ornate scepter holding a faceted crimson crystal in golden claws. Energy crackles and skips across its crown, coaxed out by the sorcerer's swelling power.</description>
@@ -44,7 +44,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Sorcerer_T4</defName>
+    <defName>RH_Weapon_Sorcerer_TierIV</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>perfect hero scepter</label>
     <description>A scepter wreathed in arcing gold sparks, its glowing gem ringed with raw magic. In a hero's grip it makes spells detonate with brutal force that barely stays leashed.</description>
@@ -58,7 +58,7 @@
   </ThingDef>
 
   <ThingDef ParentName="RH_HeroWeaponMeleeBase">
-    <defName>RH_Weapon_Sorcerer_T5</defName>
+    <defName>RH_Weapon_Sorcerer_TierV</defName>
     <equippedAngleOffset>270</equippedAngleOffset>
     <label>Bloodfire Scepter</label>
     <description>The sorcerer's capstone scepter, won only by a hero whose legend stands at its peak. Molten crimson-gold bloodfire pours from its gem and never gutters out; the spells it focuses come down on the world like a storm made of fire.</description>

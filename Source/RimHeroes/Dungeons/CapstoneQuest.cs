@@ -40,7 +40,7 @@ namespace RimHeroes
         public static ThingDef CapstoneWeaponFor(HeroClassDef heroClass)
         {
             if (heroClass == null || !heroClass.defName.StartsWith("RH_")) return null;
-            return DefDatabase<ThingDef>.GetNamedSilentFail("RH_Weapon_" + heroClass.defName.Substring(3) + "_T5");
+            return DefDatabase<ThingDef>.GetNamedSilentFail("RH_Weapon_" + heroClass.defName.Substring(3) + "_" + HeroUtility.WeaponTierSuffix(5));
         }
 
         public static WorldObject MarkCapstoneDungeon(HeroClassDef heroClass)
