@@ -12,13 +12,20 @@ namespace RimHeroes
     public class Building_DungeonEntrance : MapPortal
     {
         public DungeonKindDef kind;
+        public int tier = 1;
+        public float difficulty = 1f;
 
-        // Dev-only override so spikes can generate a chosen kind without a live portal-enter flow.
+        // Dev-only overrides so spikes can generate a chosen kind/tier without a live portal-enter flow.
         public static DungeonKindDef DebugForcedKind;
+        public static int DebugForcedTier = 1;
+        public static float DebugForcedDifficulty = 1f;
+
+        public static Building_DungeonEntrance Generating =>
+            PocketMapUtility.currentlyGeneratingPortal as Building_DungeonEntrance;
 
         public static DungeonKindDef GeneratingKind =>
             DebugForcedKind
-            ?? (PocketMapUtility.currentlyGeneratingPortal as Building_DungeonEntrance)?.kind
+            ?? Generating?.kind
             ?? DefDatabase<DungeonKindDef>.GetNamedSilentFail("RH_Dungeon_Crypt");
 
         public override string Label => kind != null ? kind.LabelCap : base.Label;
@@ -42,6 +49,8 @@ namespace RimHeroes
         {
             base.ExposeData();
             Scribe_Defs.Look(ref kind, "kind");
+            Scribe_Values.Look(ref tier, "tier", 1);
+            Scribe_Values.Look(ref difficulty, "difficulty", 1f);
         }
     }
 }

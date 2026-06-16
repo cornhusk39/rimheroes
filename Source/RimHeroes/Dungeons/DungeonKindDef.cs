@@ -44,6 +44,10 @@ namespace RimHeroes
         public string entranceLabel;             // letter label when the entrance appears
         public string entranceText;              // letter body
         public float incidentCommonality = 1f;   // relative weight when an entrance is rolled
+        public int minTier = 1;                  // which tiers this kind can roll at (1 Delve..3 Capstone)
+        public int maxTier = 3;
+
+        public bool AllowedAtTier(int tier) => tier >= minTier && tier <= maxTier;
 
         public ThingDef RandomProp() => props.NullOrEmpty() ? null : props.RandomElement();
 

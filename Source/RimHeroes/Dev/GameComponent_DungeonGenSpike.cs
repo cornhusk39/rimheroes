@@ -50,10 +50,12 @@ namespace RimHeroes
                     try
                     {
                         Building_DungeonEntrance.DebugForcedKind = kind;
+                        Building_DungeonEntrance.DebugForcedTier = 3;        // exercise max-tier scaling
+                        Building_DungeonEntrance.DebugForcedDifficulty = 2.4f;
                         dungeon = PocketMapUtility.GeneratePocketMap(new IntVec3(64, 1, 64), gen, null, src);
                     }
-                    catch (System.Exception e) { Log.Error($"[RimHeroes.DungeonGen] {kind.defName} gen failed: {e}"); ok = false; Building_DungeonEntrance.DebugForcedKind = null; state = 3; return; }
-                    finally { Building_DungeonEntrance.DebugForcedKind = null; }
+                    catch (System.Exception e) { Log.Error($"[RimHeroes.DungeonGen] {kind.defName} gen failed: {e}"); ok = false; ResetDebug(); state = 3; return; }
+                    finally { ResetDebug(); }
 
                     Current.Game.CurrentMap = dungeon;
                     var comp = dungeon.GetComponent<MapComponent_Dungeon>();
@@ -62,7 +64,7 @@ namespace RimHeroes
                     bool reliquary = dungeon.listerThings.AllThings.Any(t => t.def.defName == "RH_Reliquary");
                     bool kindOk = comp?.kind == kind && (comp?.rooms?.Count ?? 0) >= 3 && monsters > 0 && boss && reliquary;
                     if (!kindOk) ok = false;
-                    Log.Message($"[RimHeroes.DungeonGen] {kind.defName}: rooms={comp?.rooms?.Count ?? -1} hostiles={monsters} boss={boss} reliquary={reliquary} {(kindOk ? "OK" : "FAIL")}");
+                    Log.Message($"[RimHeroes.DungeonGen] {kind.defName} (T{comp?.tier} x{comp?.difficulty:F1}): rooms={comp?.rooms?.Count ?? -1} hostiles={monsters} boss={boss} reliquary={reliquary} {(kindOk ? "OK" : "FAIL")}");
                     if (comp != null && comp.entranceIndex >= 0 && comp.entranceIndex < comp.rooms.Count)
                         FloodFillerFog.FloodUnfog(comp.rooms[comp.entranceIndex].CenterCell, dungeon);
                     Find.CameraDriver.SetRootPosAndSize(dungeon.Center.ToVector3(), 36f);
@@ -108,6 +110,13 @@ namespace RimHeroes
                     Root.Shutdown();
                     break;
             }
+        }
+
+        private static void ResetDebug()
+        {
+            Building_DungeonEntrance.DebugForcedKind = null;
+            Building_DungeonEntrance.DebugForcedTier = 1;
+            Building_DungeonEntrance.DebugForcedDifficulty = 1f;
         }
     }
 }

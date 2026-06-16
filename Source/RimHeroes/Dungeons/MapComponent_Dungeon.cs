@@ -14,6 +14,8 @@ namespace RimHeroes
         public int entranceIndex = -1;
         public int bossIndex = -1;
         public DungeonKindDef kind;
+        public int tier = 1;
+        public float difficulty = 1f;
 
         public MapComponent_Dungeon(Map map) : base(map) { }
 
@@ -27,6 +29,8 @@ namespace RimHeroes
             Scribe_Values.Look(ref entranceIndex, "entranceIndex", -1);
             Scribe_Values.Look(ref bossIndex, "bossIndex", -1);
             Scribe_Defs.Look(ref kind, "kind");
+            Scribe_Values.Look(ref tier, "tier", 1);
+            Scribe_Values.Look(ref difficulty, "difficulty", 1f);
         }
     }
 }

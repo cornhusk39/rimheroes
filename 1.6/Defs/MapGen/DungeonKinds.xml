@@ -25,6 +25,8 @@
       <weapon>RH_Weapon_Fighter_T5</weapon>
       <label>Crypt Lord</label>
     </boss>
+    <minTier>1</minTier>
+    <maxTier>2</maxTier>
     <entranceLabel>Crypt entrance</entranceLabel>
     <entranceText>A worn stairway has opened in the ground, descending into the cold dark of an ancient crypt. Undead stir below. Send a party of heroes to delve it.</entranceText>
     <incidentCommonality>1.2</incidentCommonality>
@@ -54,6 +56,8 @@
     <vaultLoot>
       <li><thing>Leather_Heavy</thing><count>30~70</count></li>
     </vaultLoot>
+    <minTier>1</minTier>
+    <maxTier>2</maxTier>
     <entranceLabel>Beast warren</entranceLabel>
     <entranceText>A reeking burrow gapes in the earth, a predators' warren of owlbears and stranger things. The bones around the mouth are not all animal. A bold party could clear it for its hoard.</entranceText>
   </RimHeroes.DungeonKindDef>
@@ -83,6 +87,8 @@
       <li><thing>ComponentSpacer</thing><count>2~5</count><chance>0.7</chance></li>
       <li><thing>Plasteel</thing><count>40~90</count></li>
     </vaultLoot>
+    <minTier>2</minTier>
+    <maxTier>3</maxTier>
     <entranceLabel>Construct vault</entranceLabel>
     <entranceText>A sealed vault door has surfaced, and behind it ancient automatons still stand their watch. Beware the rust monsters that nest there; their touch eats metal armour. The vault's components are worth the risk.</entranceText>
     <incidentCommonality>0.9</incidentCommonality>
@@ -112,6 +118,8 @@
     <vaultLoot>
       <li><thing>Gold</thing><count>40~120</count></li>
     </vaultLoot>
+    <minTier>2</minTier>
+    <maxTier>3</maxTier>
     <entranceLabel>Cultist sanctum</entranceLabel>
     <entranceText>A hidden shrine has been uncovered, lit by candles no one tends. A warlock and their bound imps keep something precious in the dark below. Send heroes before whatever they are summoning is finished.</entranceText>
   </RimHeroes.DungeonKindDef>
@@ -139,6 +147,8 @@
       <li><thing>Jade</thing><count>30~80</count></li>
       <li><thing>Gold</thing><count>20~60</count></li>
     </vaultLoot>
+    <minTier>2</minTier>
+    <maxTier>3</maxTier>
     <entranceLabel>Petrified gallery</entranceLabel>
     <entranceText>A hall of statues has been found below, figures caught mid-stride in stone. They were not always statues. A medusa and her basilisks lair within, and their gaze turns flesh to rock. Look away, and look to your dead.</entranceText>
     <incidentCommonality>0.8</incidentCommonality>
@@ -167,6 +177,8 @@
       <li><thing>ComponentSpacer</thing><count>3~7</count></li>
       <li><thing>Gold</thing><count>40~100</count></li>
     </vaultLoot>
+    <minTier>3</minTier>
+    <maxTier>3</maxTier>
     <entranceLabel>Warren of eyes</entranceLabel>
     <entranceText>A fleshy warren has opened in the rock, lined with watching eyes. A beholder rules it, and its gaze can paralyze, wither, or simply kill. Whatever it hoards, it has never had to share.</entranceText>
     <incidentCommonality>0.7</incidentCommonality>
@@ -196,6 +208,8 @@
     <vaultLoot>
       <li><thing>Gold</thing><count>50~140</count></li>
     </vaultLoot>
+    <minTier>2</minTier>
+    <maxTier>3</maxTier>
     <entranceLabel>Drowned vault</entranceLabel>
     <entranceText>A flooded stairwell has surfaced, ankle-deep and stinking of rot. Something gibbers in the dark water below. The mud will slow your heroes, and the things down there will not.</entranceText>
     <incidentCommonality>0.9</incidentCommonality>
@@ -224,6 +238,8 @@
       <li><thing>Steel</thing><count>120~300</count></li>
       <li><thing>ComponentIndustrial</thing><count>8~18</count></li>
     </vaultLoot>
+    <minTier>1</minTier>
+    <maxTier>2</maxTier>
     <entranceLabel>Rust warren</entranceLabel>
     <entranceText>A tunnel mouth crusted in orange rot has opened up. A whole hive of rust monsters nests inside, and their touch oxidizes metal armour and weapons to flakes. Send heroes who can fight without steel, or be ready to lose some.</entranceText>
     <incidentCommonality>0.8</incidentCommonality>
@@ -259,6 +275,8 @@
       <li><thing>Gold</thing><count>60~160</count></li>
       <li><thing>RH_InlayItem_Keenness_Greater</thing><count>1~1</count><chance>0.6</chance></li>
     </vaultLoot>
+    <minTier>3</minTier>
+    <maxTier>3</maxTier>
     <entranceLabel>Titan's forge</entranceLabel>
     <entranceText>Heat rolls up out of a newly-opened shaft, and deep below something vast turns over in its sleep. An ancient forge, guarded by golems and a titan they call the Annihilator. The richest prize a delve can offer, for a party that can survive it.</entranceText>
     <incidentCommonality>0.5</incidentCommonality>

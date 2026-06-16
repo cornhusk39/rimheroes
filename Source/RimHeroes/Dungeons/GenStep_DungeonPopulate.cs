@@ -23,6 +23,8 @@ namespace RimHeroes
             var kind = comp.kind ?? DefDatabase<DungeonKindDef>.GetNamedSilentFail("RH_Dungeon_Crypt");
             if (kind == null) return;
             var faction = Faction.OfEntities;
+            float diff = Mathf.Max(0.5f, comp.difficulty);
+            int tier = comp.tier;
 
             int chestsLeft = kind.chestCount;
             int trapsLeft = kind.useTraps ? kind.trapCount : 0;
@@ -42,12 +44,12 @@ namespace RimHeroes
                     PlaceSigil(map, room, kind);
                     if (TryRoomCell(map, room, out var bossCell) || (bossCell = room.CenterCell) != IntVec3.Invalid)
                         DungeonBoss.Spawn(map, bossCell, faction, kind);
-                    SpawnMonsters(map, room, faction, kind, kind.bossGuards);
-                    SpawnVaultLoot(map, room, kind);
+                    SpawnMonsters(map, room, faction, kind, kind.bossGuards + (tier - 1));
+                    SpawnVaultLoot(map, room, kind, tier);
                 }
                 else
                 {
-                    SpawnMonsters(map, room, faction, kind, kind.perRoomMonsters.RandomInRange);
+                    SpawnMonsters(map, room, faction, kind, Mathf.RoundToInt(kind.perRoomMonsters.RandomInRange * diff));
                     if (chestsLeft > 0 && Rand.Chance(0.6f)) { PlaceChest(map, room); chestsLeft--; }
                     if (trapsLeft > 0 && Rand.Chance(0.6f)) { PlaceTrap(map, room); trapsLeft--; }
                 }
@@ -70,24 +72,25 @@ namespace RimHeroes
             }
         }
 
-        private static void SpawnVaultLoot(Map map, CellRect room, DungeonKindDef kind)
+        private static void SpawnVaultLoot(Map map, CellRect room, DungeonKindDef kind, int tier)
         {
             var c = room.CenterCell;
-            Place(map, c, ThingDefOf.Silver, Rand.RangeInclusive(400, 800));
+            float lootMult = 1f + 0.5f * (tier - 1);   // tier 2 = 1.5x, tier 3 = 2x
+            Place(map, c, ThingDefOf.Silver, Mathf.RoundToInt(Rand.RangeInclusive(400, 800) * lootMult));
             var med = DefDatabase<ThingDef>.GetNamedSilentFail("MedicineUltratech")
                       ?? DefDatabase<ThingDef>.GetNamedSilentFail("MedicineIndustrial");
-            if (med != null) Place(map, c, med, Rand.RangeInclusive(4, 8));
+            if (med != null) Place(map, c, med, Mathf.RoundToInt(Rand.RangeInclusive(4, 8) * lootMult));
 
             // kind-specific extra loot (components for constructs, hides for beasts, etc.)
             if (kind.vaultLoot != null)
                 foreach (var loot in kind.vaultLoot)
                     if (loot.thing != null && Rand.Chance(loot.chance))
-                        Place(map, c, loot.thing, loot.count.RandomInRange);
+                        Place(map, c, loot.thing, Mathf.RoundToInt(loot.count.RandomInRange * lootMult));
 
-            // rare-but-not-impossible: a chance at exp candy in the vault, weighted toward small sizes
-            if (Rand.Chance(0.35f))
+            // rare-but-not-impossible: a chance at exp candy in the vault. Higher tiers favour larger candy.
+            if (Rand.Chance(0.35f + 0.1f * (tier - 1)))
             {
-                float r = Rand.Value;
+                float r = Rand.Value - 0.15f * (tier - 1);   // shift the weights toward bigger candy
                 string candy = r < 0.55f ? "RH_ExpCandy_S" : r < 0.83f ? "RH_ExpCandy_M"
                                : r < 0.96f ? "RH_ExpCandy_L" : "RH_ExpCandy_XL";
                 Place(map, c, DefDatabase<ThingDef>.GetNamedSilentFail(candy), candy.EndsWith("_S") ? Rand.RangeInclusive(1, 2) : 1);

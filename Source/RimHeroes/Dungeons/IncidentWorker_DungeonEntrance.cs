@@ -28,12 +28,19 @@ namespace RimHeroes
             var def = DefDatabase<ThingDef>.GetNamedSilentFail(EntranceDefName);
             if (def == null) return false;
 
-            var kind = DefDatabase<DungeonKindDef>.AllDefs
-                .RandomElementByWeightWithFallback(k => k.incidentCommonality);
+            float points = DungeonTiers.PointsForMap(map);
+            int tier = DungeonTiers.TierForPoints(points);
+            float difficulty = DungeonTiers.DifficultyForPoints(points);
+
+            var kind = DefDatabase<DungeonKindDef>.AllDefs.Where(k => k.AllowedAtTier(tier))
+                           .RandomElementByWeightWithFallback(k => k.incidentCommonality)
+                       ?? DefDatabase<DungeonKindDef>.AllDefs.RandomElementByWeightWithFallback(k => k.incidentCommonality);
             if (kind == null) return false;
 
             var entrance = (Building_DungeonEntrance)ThingMaker.MakeThing(def);
             entrance.kind = kind;
+            entrance.tier = tier;
+            entrance.difficulty = difficulty;
             GenSpawn.Spawn(entrance, cell, map);
 
             string label = kind.entranceLabel.NullOrEmpty() ? def.LabelCap.ToString() : kind.entranceLabel;
