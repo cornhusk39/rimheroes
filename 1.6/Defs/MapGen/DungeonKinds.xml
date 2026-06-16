@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- The themed dungeons. One DungeonKindDef = theme + monster pool + boss + vault loot; the generic
+       GenSteps build it. Signature hazards come free from the monsters (Menagerie basilisks/medusae
+       petrify, beholders fire eye-rays, rust monsters corrode metal gear). -->
+
+  <!-- ===== Crypt: Anomaly undead (the original) ===== -->
+  <RimHeroes.DungeonKindDef>
+    <defName>RH_Dungeon_Crypt</defName>
+    <label>crypt</label>
+    <rockDef>Granite</rockDef>
+    <floorDef>AncientTile</floorDef>
+    <monsters>
+      <li><kind>ShamblerSoldier</kind><weight>1</weight></li>
+      <li><kind>ShamblerSwarmer</kind><weight>1.2</weight></li>
+    </monsters>
+    <boss>
+      <kind>Colonist</kind>
+      <mutant>Shambler</mutant>
+      <vestmentHediff>RH_Vestment_Fighter</vestmentHediff>
+      <weapon>RH_Weapon_Fighter_T5</weapon>
+      <label>Crypt Lord</label>
+    </boss>
+    <entranceLabel>Crypt entrance</entranceLabel>
+    <entranceText>A worn stairway has opened in the ground, descending into the cold dark of an ancient crypt. Undead stir below. Send a party of heroes to delve it.</entranceText>
+    <incidentCommonality>1.2</incidentCommonality>
+  </RimHeroes.DungeonKindDef>
+
+  <!-- ===== Beast Warren: natural predator den ===== -->
+  <RimHeroes.DungeonKindDef>
+    <defName>RH_Dungeon_BeastWarren</defName>
+    <label>beast warren</label>
+    <rockDef>Sandstone</rockDef>
+    <floorDef>Gravel</floorDef>
+    <monsters>
+      <li><kind>DND_Owlbear</kind><weight>1</weight></li>
+      <li><kind>DND_DisplacerBeast</kind><weight>1.2</weight></li>
+      <li><kind>DND_Basilisk</kind><weight>0.8</weight></li>
+    </monsters>
+    <perRoomMonsters>2~3</perRoomMonsters>
+    <boss>
+      <kind>DND_Owlbear</kind>
+      <label>the Dire Owlbear</label>
+    </boss>
+    <vaultLoot>
+      <li><thing>Leather_Heavy</thing><count>30~70</count></li>
+    </vaultLoot>
+    <entranceLabel>Beast warren</entranceLabel>
+    <entranceText>A reeking burrow gapes in the earth, a predators' warren of owlbears and stranger things. The bones around the mouth are not all animal. A bold party could clear it for its hoard.</entranceText>
+  </RimHeroes.DungeonKindDef>
+
+  <!-- ===== Construct Vault: golems + rust monsters (corrode gear) ===== -->
+  <RimHeroes.DungeonKindDef>
+    <defName>RH_Dungeon_ConstructVault</defName>
+    <label>construct vault</label>
+    <rockDef>Slate</rockDef>
+    <floorDef>Concrete</floorDef>
+    <monsters>
+      <li><kind>DND_GolemStone</kind><weight>1</weight></li>
+      <li><kind>DND_GolemFlesh</kind><weight>0.8</weight></li>
+      <li><kind>DND_RustMonster</kind><weight>1.3</weight></li>
+    </monsters>
+    <perRoomMonsters>2~3</perRoomMonsters>
+    <boss>
+      <kind>DND_GolemSteel</kind>
+      <label>the Steel Sentinel</label>
+    </boss>
+    <vaultLoot>
+      <li><thing>ComponentIndustrial</thing><count>10~25</count></li>
+      <li><thing>ComponentSpacer</thing><count>2~5</count><chance>0.7</chance></li>
+      <li><thing>Plasteel</thing><count>40~90</count></li>
+    </vaultLoot>
+    <entranceLabel>Construct vault</entranceLabel>
+    <entranceText>A sealed vault door has surfaced, and behind it ancient automatons still stand their watch. Beware the rust monsters that nest there; their touch eats metal armour. The vault's components are worth the risk.</entranceText>
+    <incidentCommonality>0.9</incidentCommonality>
+  </RimHeroes.DungeonKindDef>
+
+  <!-- ===== Cultist Sanctum: imps + lesser eyes, led by an enemy hero ===== -->
+  <RimHeroes.DungeonKindDef>
+    <defName>RH_Dungeon_CultistSanctum</defName>
+    <label>cultist sanctum</label>
+    <rockDef>Marble</rockDef>
+    <floorDef>AncientTile</floorDef>
+    <monsters>
+      <li><kind>RH_ImpKind</kind><weight>1.4</weight></li>
+      <li><kind>DND_Spectator</kind><weight>1</weight></li>
+    </monsters>
+    <perRoomMonsters>3~4</perRoomMonsters>
+    <boss>
+      <kind>Colonist</kind>
+      <heroClass>RH_Warlock</heroClass>
+      <label>the Cult Hierophant</label>
+    </boss>
+    <bossGuards>3</bossGuards>
+    <vaultLoot>
+      <li><thing>Gold</thing><count>40~120</count></li>
+    </vaultLoot>
+    <entranceLabel>Cultist sanctum</entranceLabel>
+    <entranceText>A hidden shrine has been uncovered, lit by candles no one tends. A warlock and their bound imps keep something precious in the dark below. Send heroes before whatever they are summoning is finished.</entranceText>
+  </RimHeroes.DungeonKindDef>
+
+  <!-- ===== Medusa's Gallery: petrifying gaze (Menagerie native) ===== -->
+  <RimHeroes.DungeonKindDef>
+    <defName>RH_Dungeon_MedusaGallery</defName>
+    <label>petrified gallery</label>
+    <rockDef>Marble</rockDef>
+    <floorDef>AncientTile</floorDef>
+    <monsters>
+      <li><kind>DND_Basilisk</kind><weight>1</weight></li>
+      <li><kind>DND_Spectator</kind><weight>0.8</weight></li>
+    </monsters>
+    <perRoomMonsters>2~3</perRoomMonsters>
+    <boss>
+      <kind>DND_Medusa</kind>
+      <label>the Medusa Matron</label>
+    </boss>
+    <vaultLoot>
+      <li><thing>Jade</thing><count>30~80</count></li>
+      <li><thing>Gold</thing><count>20~60</count></li>
+    </vaultLoot>
+    <entranceLabel>Petrified gallery</entranceLabel>
+    <entranceText>A hall of statues has been found below, figures caught mid-stride in stone. They were not always statues. A medusa and her basilisks lair within, and their gaze turns flesh to rock. Look away, and look to your dead.</entranceText>
+    <incidentCommonality>0.8</incidentCommonality>
+  </RimHeroes.DungeonKindDef>
+
+  <!-- ===== The Hundred Eyes: a beholder and its eye-rays (Menagerie native) ===== -->
+  <RimHeroes.DungeonKindDef>
+    <defName>RH_Dungeon_HundredEyes</defName>
+    <label>warren of eyes</label>
+    <rockDef>Granite</rockDef>
+    <floorDef>AncientTile</floorDef>
+    <monsters>
+      <li><kind>DND_Spectator</kind><weight>1.3</weight></li>
+      <li><kind>DND_GibberingMouther</kind><weight>0.7</weight></li>
+    </monsters>
+    <perRoomMonsters>2~3</perRoomMonsters>
+    <boss>
+      <kind>DND_Beholder</kind>
+      <label>the Watcher in the Deep</label>
+    </boss>
+    <vaultLoot>
+      <li><thing>ComponentSpacer</thing><count>3~7</count></li>
+      <li><thing>Gold</thing><count>40~100</count></li>
+    </vaultLoot>
+    <entranceLabel>Warren of eyes</entranceLabel>
+    <entranceText>A fleshy warren has opened in the rock, lined with watching eyes. A beholder rules it, and its gaze can paralyze, wither, or simply kill. Whatever it hoards, it has never had to share.</entranceText>
+    <incidentCommonality>0.7</incidentCommonality>
+  </RimHeroes.DungeonKindDef>
+
+  <!-- ===== Drowned Vault: flooded swamp ruin, aberrations ===== -->
+  <RimHeroes.DungeonKindDef>
+    <defName>RH_Dungeon_DrownedVault</defName>
+    <label>drowned vault</label>
+    <rockDef>Slate</rockDef>
+    <floorDef>Mud</floorDef>
+    <monsters>
+      <li><kind>DND_DisplacerBeast</kind><weight>1</weight></li>
+      <li><kind>DND_Flumph</kind><weight>0.7</weight></li>
+      <li><kind>DND_GibberingMouther</kind><weight>1</weight></li>
+    </monsters>
+    <perRoomMonsters>2~4</perRoomMonsters>
+    <boss>
+      <kind>DND_GibberingMouther</kind>
+      <label>the Sunken Maw</label>
+    </boss>
+    <vaultLoot>
+      <li><thing>Gold</thing><count>50~140</count></li>
+    </vaultLoot>
+    <entranceLabel>Drowned vault</entranceLabel>
+    <entranceText>A flooded stairwell has surfaced, ankle-deep and stinking of rot. Something gibbers in the dark water below. The mud will slow your heroes, and the things down there will not.</entranceText>
+    <incidentCommonality>0.9</incidentCommonality>
+  </RimHeroes.DungeonKindDef>
+
+  <!-- ===== Rust Warren: a hive of rust monsters that eat your gear ===== -->
+  <RimHeroes.DungeonKindDef>
+    <defName>RH_Dungeon_RustWarren</defName>
+    <label>rust warren</label>
+    <rockDef>Sandstone</rockDef>
+    <floorDef>Gravel</floorDef>
+    <monsters>
+      <li><kind>DND_RustMonster</kind><weight>1</weight></li>
+    </monsters>
+    <perRoomMonsters>3~5</perRoomMonsters>
+    <boss>
+      <kind>DND_RustMonster</kind>
+      <label>the Rust Monger</label>
+    </boss>
+    <vaultLoot>
+      <li><thing>Steel</thing><count>120~300</count></li>
+      <li><thing>ComponentIndustrial</thing><count>8~18</count></li>
+    </vaultLoot>
+    <entranceLabel>Rust warren</entranceLabel>
+    <entranceText>A tunnel mouth crusted in orange rot has opened up. A whole hive of rust monsters nests inside, and their touch oxidizes metal armour and weapons to flakes. Send heroes who can fight without steel, or be ready to lose some.</entranceText>
+    <incidentCommonality>0.8</incidentCommonality>
+  </RimHeroes.DungeonKindDef>
+
+  <!-- ===== Annihilator's Forge: capstone-tier, the richest loot ===== -->
+  <RimHeroes.DungeonKindDef>
+    <defName>RH_Dungeon_AnnihilatorForge</defName>
+    <label>titan's forge</label>
+    <rockDef>Slate</rockDef>
+    <floorDef>Concrete</floorDef>
+    <temperature>40</temperature>
+    <monsters>
+      <li><kind>DND_GolemSteel</kind><weight>0.7</weight></li>
+      <li><kind>DND_GolemStone</kind><weight>1</weight></li>
+      <li><kind>DND_RustMonster</kind><weight>1</weight></li>
+    </monsters>
+    <perRoomMonsters>3~4</perRoomMonsters>
+    <boss>
+      <kind>DND_Annihilator</kind>
+      <label>the Annihilator</label>
+    </boss>
+    <bossGuards>3</bossGuards>
+    <trapCount>4</trapCount>
+    <vaultLoot>
+      <li><thing>Plasteel</thing><count>80~160</count></li>
+      <li><thing>ComponentSpacer</thing><count>5~12</count></li>
+      <li><thing>Gold</thing><count>60~160</count></li>
+      <li><thing>RH_InlayItem_Keenness_Greater</thing><count>1~1</count><chance>0.6</chance></li>
+    </vaultLoot>
+    <entranceLabel>Titan's forge</entranceLabel>
+    <entranceText>Heat rolls up out of a newly-opened shaft, and deep below something vast turns over in its sleep. An ancient forge, guarded by golems and a titan they call the Annihilator. The richest prize a delve can offer, for a party that can survive it.</entranceText>
+    <incidentCommonality>0.5</incidentCommonality>
+  </RimHeroes.DungeonKindDef>
+
+</Defs>

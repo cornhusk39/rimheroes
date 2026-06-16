@@ -40,7 +40,8 @@ namespace RimHeroes
                         map.roofGrid.SetRoof(c, null);
                         map.snowGrid?.SetDepth(c, 0f);
                     }
-                    boss = DungeonBoss.SpawnCryptLord(map, cell, Faction.OfEntities);
+                    var crypt = DefDatabase<DungeonKindDef>.GetNamedSilentFail("RH_Dungeon_Crypt");
+                    boss = DungeonBoss.Spawn(map, cell, Faction.OfEntities, crypt?.boss);
                     Find.CameraDriver.SetRootPosAndSize((boss?.Position ?? cell).ToVector3(), 6f);
                     Find.TickManager.CurTimeSpeed = TimeSpeed.Normal;   // tick so the vestment mesh builds
                     nextTime = now + 3f;

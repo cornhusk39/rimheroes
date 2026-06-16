@@ -1,59 +1,82 @@
+using System.Linq;
 using RimWorld;
 using Verse;
 
 namespace RimHeroes
 {
-    /// <summary>Builds dungeon bosses. The Crypt Lord is a humanlike clad in a desecrated Fighter
-    /// vestment (so the vestment art renders), turned shambler-grey via the Anomaly Shambler mutant,
-    /// wielding the capstone fighter weapon.</summary>
+    /// <summary>Builds a dungeon boss from a DungeonBossSpec. Three shapes: a hero boss (our own class,
+    /// so it fights with the enemy-hero autocast), the crypt-lord recipe (humanlike + Shambler mutant +
+    /// desecrated vestment), or a plain Menagerie/animal pawnkind dressed up. Every boss gets the
+    /// RH_DungeonBoss buff so it reads as a boss, not just a bigger mook.</summary>
     public static class DungeonBoss
     {
-        public static Pawn SpawnCryptLord(Map map, IntVec3 cell, Faction faction)
+        public static Pawn Spawn(Map map, IntVec3 cell, Faction faction, DungeonBossSpec spec)
         {
+            if (spec == null) return null;
             try
             {
-                var boss = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, faction,
-                    fixedBiologicalAge: 45f, fixedChronologicalAge: 45f, forceGenerateNewPawn: true, fixedGender: Gender.Male));
-                GenSpawn.Spawn(boss, cell, map);
-                boss.apparel?.DestroyAll();
-                boss.equipment?.DestroyAllEquipment();
+                Pawn boss = !spec.heroClass.NullOrEmpty()
+                    ? SpawnHeroBoss(map, cell, faction, spec)
+                    : SpawnMonsterBoss(map, cell, faction, spec);
+                if (boss == null) return null;
 
-                // shambler-grey look first, then the vestment on top (added pre-first-draw so it renders)
-                var mutant = DefDatabase<MutantDef>.GetNamedSilentFail("Shambler");
-                if (mutant != null)
-                {
-                    try { MutantUtility.SetPawnAsMutantInstantly(boss, mutant); } catch (System.Exception e) { Log.Warning($"[RimHeroes] shambler mutant failed: {e.Message}"); }
-                }
-
-                var vestDef = DefDatabase<HediffDef>.GetNamedSilentFail("RH_Vestment_Fighter");
-                if (vestDef != null && boss.health.AddHediff(vestDef) is Hediff_ClassVestment vest)
-                {
-                    vest.Severity = 5f;
-                    vest.desecrated = true;
-                }
-
-                var wpn = DefDatabase<ThingDef>.GetNamedSilentFail("RH_Weapon_Fighter_T5");
-                if (wpn != null && boss.equipment != null)
-                {
-                    var w = (ThingWithComps)ThingMaker.MakeThing(wpn);
-                    boss.equipment.MakeRoomFor(w);
-                    boss.equipment.AddEquipment(w);
-                }
-
-                // 25% chance to carry a reliquary key, dropped with its body on death
-                if (Rand.Chance(0.25f))
-                {
-                    var keyDef = DefDatabase<ThingDef>.GetNamedSilentFail("RH_ReliquaryKey");
-                    if (keyDef != null && boss.inventory != null)
-                        boss.inventory.innerContainer.TryAdd(ThingMaker.MakeThing(keyDef));
-                }
-
-                boss.Name = new NameSingle("Crypt Lord");
+                if (!spec.label.NullOrEmpty()) boss.Name = new NameSingle(spec.label);
+                var buff = DefDatabase<HediffDef>.GetNamedSilentFail("RH_DungeonBoss");
+                if (buff != null && boss.health.hediffSet.GetFirstHediffOfDef(buff) == null) boss.health.AddHediff(buff);
                 boss.Drawer?.renderer?.renderTree?.SetDirty();
                 boss.Drawer?.renderer?.SetAllGraphicsDirty();
                 return boss;
             }
-            catch (System.Exception e) { Log.Error($"[RimHeroes] Crypt Lord spawn failed: {e}"); return null; }
+            catch (System.Exception e) { Log.Error($"[RimHeroes] dungeon boss spawn failed: {e}"); return null; }
+        }
+
+        private static Pawn SpawnMonsterBoss(Map map, IntVec3 cell, Faction faction, DungeonBossSpec spec)
+        {
+            var kind = spec.kind ?? PawnKindDefOf.Colonist;
+            var boss = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, faction, forceGenerateNewPawn: true));
+            GenSpawn.Spawn(boss, cell, map);
+
+            if (spec.mutant != null)
+            {
+                try { MutantUtility.SetPawnAsMutantInstantly(boss, spec.mutant); }
+                catch (System.Exception e) { Log.Warning($"[RimHeroes] boss mutant failed: {e.Message}"); }
+            }
+            if (!spec.vestmentHediff.NullOrEmpty())
+            {
+                boss.apparel?.DestroyAll();
+                var vestDef = DefDatabase<HediffDef>.GetNamedSilentFail(spec.vestmentHediff);
+                if (vestDef != null && boss.health.AddHediff(vestDef) is Hediff_ClassVestment vest)
+                {
+                    vest.Severity = 5f;
+                    vest.desecrated = spec.desecrated;
+                }
+            }
+            EquipWeapon(boss, spec.weapon);
+            return boss;
+        }
+
+        private static Pawn SpawnHeroBoss(Map map, IntVec3 cell, Faction faction, DungeonBossSpec spec)
+        {
+            var boss = PawnGenerator.GeneratePawn(new PawnGenerationRequest(spec.kind ?? PawnKindDefOf.Colonist, faction, forceGenerateNewPawn: true));
+            GenSpawn.Spawn(boss, cell, map);
+            var classDef = DefDatabase<HeroClassDef>.GetNamedSilentFail(spec.heroClass);
+            if (classDef != null)
+            {
+                var levels = HeroUtility.MakeHero(boss, classDef);
+                levels?.GainXP(200000f);   // drive it to the level cap so it has its full kit
+            }
+            EquipWeapon(boss, spec.weapon);
+            return boss;
+        }
+
+        private static void EquipWeapon(Pawn boss, string weaponDefName)
+        {
+            if (weaponDefName.NullOrEmpty() || boss.equipment == null) return;
+            var wpn = DefDatabase<ThingDef>.GetNamedSilentFail(weaponDefName);
+            if (wpn == null) return;
+            var w = (ThingWithComps)ThingMaker.MakeThing(wpn);
+            boss.equipment.MakeRoomFor(w);
+            boss.equipment.AddEquipment(w);
         }
     }
 }

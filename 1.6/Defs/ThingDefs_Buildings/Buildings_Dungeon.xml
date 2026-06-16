@@ -6,9 +6,9 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>RH_DungeonEntrance</defName>
-    <label>crypt entrance</label>
-    <description>A dark stairway descending into an ancient crypt. Send a party of heroes down to delve it; they can climb back out the way they came.</description>
-    <thingClass>MapPortal</thingClass>
+    <label>dungeon entrance</label>
+    <description>A dark stairway descending into an instanced dungeon. Send a party of heroes down to delve it; they can climb back out the way they came.</description>
+    <thingClass>RimHeroes.Building_DungeonEntrance</thingClass>
     <size>(3, 3)</size>
     <tickerType>Normal</tickerType>
     <rotatable>false</rotatable>

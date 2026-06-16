@@ -1,11 +1,13 @@
+using System.Linq;
 using RimWorld;
 using Verse;
 
 namespace RimHeroes
 {
     /// <summary>
-    /// Opens a crypt entrance somewhere on the player's map. The entrance is a MapPortal the player
-    /// sends a party of heroes through to delve the instanced crypt below.
+    /// Opens a dungeon entrance somewhere on the player's map. Rolls a weighted-random DungeonKind,
+    /// stamps it on the entrance (a Building_DungeonEntrance, which the generic GenSteps read while
+    /// building the pocket map), and sends a themed letter. The party delves through the MapPortal.
     /// </summary>
     public class IncidentWorker_DungeonEntrance : IncidentWorker
     {
@@ -15,6 +17,7 @@ namespace RimHeroes
         {
             return base.CanFireNowSub(parms)
                    && parms.target is Map map
+                   && DefDatabase<DungeonKindDef>.AllDefs.Any()
                    && TryFindCell(map, out _);
         }
 
@@ -25,8 +28,17 @@ namespace RimHeroes
             var def = DefDatabase<ThingDef>.GetNamedSilentFail(EntranceDefName);
             if (def == null) return false;
 
-            var thing = GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);
-            SendStandardLetter(parms, thing);
+            var kind = DefDatabase<DungeonKindDef>.AllDefs
+                .RandomElementByWeightWithFallback(k => k.incidentCommonality);
+            if (kind == null) return false;
+
+            var entrance = (Building_DungeonEntrance)ThingMaker.MakeThing(def);
+            entrance.kind = kind;
+            GenSpawn.Spawn(entrance, cell, map);
+
+            string label = kind.entranceLabel.NullOrEmpty() ? def.LabelCap.ToString() : kind.entranceLabel;
+            string text = kind.entranceText.NullOrEmpty() ? def.description : kind.entranceText;
+            SendStandardLetter(new TaggedString(label), new TaggedString(text), LetterDefOf.NeutralEvent, parms, entrance);
             return true;
         }
 

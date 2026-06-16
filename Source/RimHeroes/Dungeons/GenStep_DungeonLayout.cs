@@ -7,12 +7,12 @@ using Verse;
 namespace RimHeroes
 {
     /// <summary>
-    /// Phase A crypt layout: fills the pocket map with solid rock, then carves a handful of rooms
+    /// Dungeon layout: fills the pocket map with the kind's solid rock, then carves a handful of rooms
     /// joined by corridors (so the uncarved rock IS the dungeon walls). Marks the first room as the
-    /// entrance (drops the climb-out exit there) and the last as the boss vault. Monsters, loot, traps,
-    /// and fog come in later phases; this step just produces an enterable multi-room dungeon.
+    /// entrance (drops the climb-out exit there) and the last as the boss vault. Reads the active
+    /// DungeonKind off the entrance portal to theme the rock/floor and records it for the populate step.
     /// </summary>
-    public class GenStep_CryptLayout : GenStep
+    public class GenStep_DungeonLayout : GenStep
     {
         private const int Margin = 4;
         private const int MinRoom = 8;
@@ -23,9 +23,13 @@ namespace RimHeroes
 
         public override void Generate(Map map, GenStepParams parms)
         {
-            var floor = DefDatabase<TerrainDef>.GetNamedSilentFail("AncientTile")
+            var kind = Building_DungeonEntrance.GeneratingKind;
+
+            var floor = kind?.floorDef
+                        ?? DefDatabase<TerrainDef>.GetNamedSilentFail("AncientTile")
                         ?? TerrainDefOf.Soil;
-            var rock = DefDatabase<ThingDef>.GetNamedSilentFail("Granite")
+            var rock = kind?.rockDef
+                       ?? DefDatabase<ThingDef>.GetNamedSilentFail("Granite")
                        ?? DefDatabase<ThingDef>.AllDefs.FirstOrDefault(d => d.building != null && d.building.isNaturalRock && d.mineable);
 
             // Pick non-overlapping rooms.
@@ -80,13 +84,14 @@ namespace RimHeroes
             }
             MapGenerator.PlayerStartSpot = entrance.CenterCell;
 
-            // Remember the layout for later phases (monsters / loot / traps).
-            var comp = map.GetComponent<MapComponent_CryptDungeon>();
+            // Remember the layout + kind for the populate step and any runtime hooks.
+            var comp = map.GetComponent<MapComponent_Dungeon>();
             if (comp != null)
             {
                 comp.rooms = rooms;
                 comp.entranceIndex = 0;
                 comp.bossIndex = rooms.Count - 1;
+                comp.kind = kind;
             }
         }
 

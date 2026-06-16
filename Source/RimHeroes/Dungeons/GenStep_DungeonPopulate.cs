@@ -6,23 +6,25 @@ using Verse;
 namespace RimHeroes
 {
     /// <summary>
-    /// Phase B: stocks the carved crypt. Undead (Anomaly shamblers) hold the rooms, a death-knight
-    /// boss (a level-20 enemy hero, so it fights with the full hero AI autocast) guards the vault with
-    /// the loot and 1-2 inlays, every room gets a brazier for light, and a couple of mimic chests hide
-    /// among them. All hostiles are on the Anomaly entities faction.
+    /// Stocks a carved dungeon from its DungeonKind: a themed monster pool holds the rooms, the boss
+    /// guards the vault with loot + 1-2 inlays (locked in the reliquary), every room gets a brazier for
+    /// light, and traps + mimic chests hide among them. All hostiles spawn on the Anomaly entities
+    /// faction so they are uniformly hostile regardless of which mod supplied the monster.
     /// </summary>
-    public class GenStep_CryptPopulate : GenStep
+    public class GenStep_DungeonPopulate : GenStep
     {
         public override int SeedPart => 779912034;
 
         public override void Generate(Map map, GenStepParams parms)
         {
-            var comp = map.GetComponent<MapComponent_CryptDungeon>();
+            var comp = map.GetComponent<MapComponent_Dungeon>();
             if (comp == null || !comp.IsDungeon) return;
+            var kind = comp.kind ?? DefDatabase<DungeonKindDef>.GetNamedSilentFail("RH_Dungeon_Crypt");
+            if (kind == null) return;
             var faction = Faction.OfEntities;
 
-            int chestsLeft = 2;
-            int trapsLeft = 3;
+            int chestsLeft = kind.chestCount;
+            int trapsLeft = kind.useTraps ? kind.trapCount : 0;
             for (int i = 0; i < comp.rooms.Count; i++)
             {
                 var room = comp.rooms[i];
@@ -30,59 +32,55 @@ namespace RimHeroes
                 bool isBoss = i == comp.bossIndex;
 
                 PlaceBrazier(map, room);
-
                 if (isEntrance) continue;   // the party arrives here; keep it clear
 
                 if (isBoss)
                 {
-                    SpawnBoss(map, room, faction);
-                    SpawnGuards(map, room, faction, 2);
-                    SpawnVaultLoot(map, room);
+                    if (TryRoomCell(map, room, out var bossCell) || (bossCell = room.CenterCell) != IntVec3.Invalid)
+                        DungeonBoss.Spawn(map, bossCell, faction, kind.boss);
+                    SpawnMonsters(map, room, faction, kind, kind.bossGuards);
+                    SpawnVaultLoot(map, room, kind);
                 }
                 else
                 {
-                    SpawnGuards(map, room, faction, Rand.RangeInclusive(2, 4));
+                    SpawnMonsters(map, room, faction, kind, kind.perRoomMonsters.RandomInRange);
                     if (chestsLeft > 0 && Rand.Chance(0.6f)) { PlaceChest(map, room); chestsLeft--; }
                     if (trapsLeft > 0 && Rand.Chance(0.6f)) { PlaceTrap(map, room); trapsLeft--; }
                 }
             }
         }
 
-        private static void SpawnGuards(Map map, CellRect room, Faction faction, int count)
+        private static void SpawnMonsters(Map map, CellRect room, Faction faction, DungeonKindDef kind, int count)
         {
-            string[] kinds = { "ShamblerSoldier", "ShamblerSwarmer" };
             for (int n = 0; n < count; n++)
             {
-                var kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kinds[Rand.Range(0, kinds.Length)]);
-                if (kind == null) continue;
+                var kindDef = kind.RandomMonster();
+                if (kindDef == null) break;
                 if (!TryRoomCell(map, room, out var cell)) break;
                 try
                 {
-                    var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, faction, forceGenerateNewPawn: true));
+                    var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kindDef, faction, forceGenerateNewPawn: true));
                     GenSpawn.Spawn(p, cell, map);
                 }
-                catch (System.Exception e) { Log.Warning($"[RimHeroes.CryptPopulate] shambler spawn failed: {e.Message}"); }
+                catch (System.Exception e) { Log.Warning($"[RimHeroes.DungeonPopulate] {kindDef.defName} spawn failed: {e.Message}"); }
             }
         }
 
-        private static void SpawnBoss(Map map, CellRect room, Faction faction)
-        {
-            if (!TryRoomCell(map, room, out var cell)) cell = room.CenterCell;
-            DungeonBoss.SpawnCryptLord(map, cell, faction);
-        }
-
-        private static void SpawnVaultLoot(Map map, CellRect room)
+        private static void SpawnVaultLoot(Map map, CellRect room, DungeonKindDef kind)
         {
             var c = room.CenterCell;
             Place(map, c, ThingDefOf.Silver, Rand.RangeInclusive(400, 800));
             var med = DefDatabase<ThingDef>.GetNamedSilentFail("MedicineUltratech")
                       ?? DefDatabase<ThingDef>.GetNamedSilentFail("MedicineIndustrial");
             if (med != null) Place(map, c, med, Rand.RangeInclusive(4, 8));
-            var drug = DefDatabase<ThingDef>.GetNamedSilentFail("GoJuice")
-                       ?? DefDatabase<ThingDef>.GetNamedSilentFail("Penoxycyline");
-            if (drug != null) Place(map, c, drug, Rand.RangeInclusive(3, 6));
 
-            // The rare inlay draw is locked inside the reliquary, not scattered loose.
+            // kind-specific extra loot (components for constructs, hides for beasts, etc.)
+            if (kind.vaultLoot != null)
+                foreach (var loot in kind.vaultLoot)
+                    if (loot.thing != null && Rand.Chance(loot.chance))
+                        Place(map, c, loot.thing, loot.count.RandomInRange);
+
+            // the rare inlay draw is locked inside the reliquary, not scattered loose
             PlaceReliquary(map, room);
         }
 
@@ -91,7 +89,7 @@ namespace RimHeroes
             var def = DefDatabase<ThingDef>.GetNamedSilentFail("RH_Reliquary");
             if (def == null) return;
             if (!TryRoomCell(map, room, out var cell)) cell = room.CenterCell;
-            GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);   // Building_Reliquary stocks itself on spawn
+            GenSpawn.Spawn(ThingMaker.MakeThing(def), cell, map);
         }
 
         private static void PlaceBrazier(Map map, CellRect room)
