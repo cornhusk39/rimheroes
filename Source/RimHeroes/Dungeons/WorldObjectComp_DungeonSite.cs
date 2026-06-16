@@ -16,6 +16,7 @@ namespace RimHeroes
         public DungeonKindDef kind;
         public int tier = 1;
         public float difficulty = 1f;
+        public ThingDef capstoneWeapon;   // when set, the dungeon's vault yields this weapon (Legendary)
 
         public override void PostExposeData()
         {
@@ -23,6 +24,7 @@ namespace RimHeroes
             Scribe_Defs.Look(ref kind, "rhKind");
             Scribe_Values.Look(ref tier, "rhTier", 1);
             Scribe_Values.Look(ref difficulty, "rhDifficulty", 1f);
+            Scribe_Defs.Look(ref capstoneWeapon, "rhCapstoneWeapon");
         }
     }
 }

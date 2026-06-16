@@ -21,6 +21,7 @@ namespace RimHeroes
         public DungeonKindDef kind;
         public int tier = 1;
         public float difficulty = 1f;
+        public ThingDef capstoneWeapon;   // a capstone-trial entrance: its dungeon vault yields this weapon
 
         private bool sealedShut;
         private int spawnTick;
@@ -35,6 +36,7 @@ namespace RimHeroes
         public static DungeonKindDef DebugForcedKind;
         public static int DebugForcedTier = 1;
         public static float DebugForcedDifficulty = 1f;
+        public static ThingDef DebugForcedCapstoneWeapon;
 
         public static Building_DungeonEntrance Generating =>
             PocketMapUtility.currentlyGeneratingPortal as Building_DungeonEntrance;
@@ -154,6 +156,7 @@ namespace RimHeroes
             Scribe_Defs.Look(ref kind, "kind");
             Scribe_Values.Look(ref tier, "tier", 1);
             Scribe_Values.Look(ref difficulty, "difficulty", 1f);
+            Scribe_Defs.Look(ref capstoneWeapon, "capstoneWeapon");
             Scribe_Values.Look(ref sealedShut, "sealedShut");
             Scribe_Values.Look(ref spawnTick, "spawnTick");
             Scribe_Values.Look(ref lastDamageTick, "lastDamageTick", -999999);

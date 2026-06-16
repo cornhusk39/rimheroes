@@ -69,6 +69,8 @@
   <RH_EntranceSealed>Sealed. The flow of monsters has stopped.</RH_EntranceSealed>
   <RH_QuestSiteLabel>{0} found nearby</RH_QuestSiteLabel>
   <RH_QuestSiteText>Word reaches the colony of a {0} out in the wilds, its entrance guarded by the creatures that lair within. Send a caravan to clear the guardians and delve it. The site is marked on your world map.</RH_QuestSiteText>
+  <RH_CapstoneSiteLabel>The capstone trial</RH_CapstoneSiteLabel>
+  <RH_CapstoneSiteText>The stranger keeps his word. He marks a place on your map: a {0}, deep and deadly, where the promised weapon waits. Delve it and claim {1} from its vault. This is your hero's final trial.</RH_CapstoneSiteText>
   <RH_ReliquaryPick>Pick the lock</RH_ReliquaryPick>
   <RH_ReliquaryPickDesc>Attempt the reliquary's sigil-lock (DC {0}). Choose who tries. Each failure hardens the lock by 5; let it reach 25 and it jams for good.</RH_ReliquaryPickDesc>
   <RH_ReliquaryPickerOption>{0}  (lockpick {1})</RH_ReliquaryPickerOption>

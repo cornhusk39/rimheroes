@@ -46,6 +46,7 @@ namespace RimHeroes
                         DungeonBoss.Spawn(map, bossCell, faction, kind);
                     SpawnMonsters(map, room, faction, kind, kind.bossGuards + (tier - 1));
                     SpawnVaultLoot(map, room, kind, tier);
+                    PlaceCapstoneWeapon(map, room, comp.capstoneWeapon);
                 }
                 else
                 {
@@ -98,6 +99,14 @@ namespace RimHeroes
 
             // the rare inlay draw is locked inside the reliquary, not scattered loose
             PlaceReliquary(map, room);
+        }
+
+        private static void PlaceCapstoneWeapon(Map map, CellRect room, ThingDef weaponDef)
+        {
+            if (weaponDef == null) return;
+            var w = (ThingWithComps)ThingMaker.MakeThing(weaponDef);
+            w.TryGetComp<CompQuality>()?.SetQuality(QualityCategory.Legendary, ArtGenerationContext.Outsider);
+            GenPlace.TryPlaceThing(w, room.CenterCell, map, ThingPlaceMode.Near);
         }
 
         private static void PlaceReliquary(Map map, CellRect room)

@@ -16,6 +16,7 @@ namespace RimHeroes
         public DungeonKindDef kind;
         public int tier = 1;
         public float difficulty = 1f;
+        public ThingDef capstoneWeapon;
 
         public MapComponent_Dungeon(Map map) : base(map) { }
 
@@ -31,6 +32,7 @@ namespace RimHeroes
             Scribe_Defs.Look(ref kind, "kind");
             Scribe_Values.Look(ref tier, "tier", 1);
             Scribe_Values.Look(ref difficulty, "difficulty", 1f);
+            Scribe_Defs.Look(ref capstoneWeapon, "capstoneWeapon");
         }
     }
 }

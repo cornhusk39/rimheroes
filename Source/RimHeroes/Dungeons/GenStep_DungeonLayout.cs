@@ -95,6 +95,7 @@ namespace RimHeroes
                 var srcEntrance = Building_DungeonEntrance.Generating;
                 comp.tier = srcEntrance?.tier ?? Building_DungeonEntrance.DebugForcedTier;
                 comp.difficulty = srcEntrance?.difficulty ?? Building_DungeonEntrance.DebugForcedDifficulty;
+                comp.capstoneWeapon = srcEntrance?.capstoneWeapon ?? Building_DungeonEntrance.DebugForcedCapstoneWeapon;
             }
         }
 

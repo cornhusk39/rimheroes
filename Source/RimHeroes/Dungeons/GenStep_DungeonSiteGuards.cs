@@ -23,12 +23,12 @@ namespace RimHeroes
             var comp = (map.Parent as WorldObject)?.GetComponent<WorldObjectComp_DungeonSite>();
             var kind = comp?.kind ?? DefDatabase<DungeonKindDef>.GetNamedSilentFail("RH_Dungeon_Crypt");
             if (kind == null) return;
-            Populate(map, kind, comp?.tier ?? 1, comp?.difficulty ?? 1f);
+            Populate(map, kind, comp?.tier ?? 1, comp?.difficulty ?? 1f, comp?.capstoneWeapon);
         }
 
         /// <summary>Drop the entrance + guard force on a site map. Split out so the dev spike can drive
         /// it directly on a plain map without standing up a full world site.</summary>
-        public static void Populate(Map map, DungeonKindDef kind, int tier, float difficulty)
+        public static void Populate(Map map, DungeonKindDef kind, int tier, float difficulty, ThingDef capstoneWeapon = null)
         {
             if (!CellFinder.TryFindRandomCellNear(map.Center, map, 14, c => EntranceSpotOk(c, map), out var eCell))
                 eCell = map.Center;
@@ -43,6 +43,7 @@ namespace RimHeroes
                 entrance.kind = kind;
                 entrance.tier = tier;
                 entrance.difficulty = difficulty;
+                entrance.capstoneWeapon = capstoneWeapon;
                 GenSpawn.Spawn(entrance, eCell, map);
             }
 
