@@ -35,8 +35,11 @@ namespace RimHeroes
     [HarmonyPatch(typeof(VerbProperties), nameof(VerbProperties.AdjustedCooldown), new[] { typeof(Verb), typeof(Pawn) })]
     public static class Patch_FighterMelee_Cooldown
     {
-        public static void Postfix(ref float __result, Pawn attacker)
+        public static void Postfix(ref float __result, Pawn attacker, VerbProperties __instance)
         {
+            // AdjustedCooldown is the generic cooldown hook -- it fires for ranged verbs too. The
+            // fighter/monk speedups are melee-only, so skip anything that isn't a melee verb.
+            if (!__instance.IsMeleeAttack) return;
             float f = ClassFeatures.MeleeCooldownFactor(HeroUtility.GetHeroHediff(attacker));
             if (f != 1f) __result *= f;
         }

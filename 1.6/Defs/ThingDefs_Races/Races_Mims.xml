@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Mim race (placeholder rat art, tinted per job). One ThingDef per job caste so each
-       carries its own CompMimWorker work-type allowlist (dryad pattern). -->
+  <!-- Mim race. Each caste has its own art under Things/RimHeroes/Mims/<Caste>/; only the
+       dessicatedBodyGraphicData (the rarely-seen corpse sprite) falls back to the vanilla rat.
+       One ThingDef per job caste so each carries its own CompMimWorker work-type allowlist
+       (dryad pattern). -->
 
   <ThingDef Name="RH_MimBase" ParentName="AnimalThingBase" Abstract="True">
     <statBases>

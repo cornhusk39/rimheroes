@@ -231,7 +231,7 @@ namespace RimHeroes
         /// <summary>Called periodically by Hediff_ClassFeatures: refresh this hero's auras on nearby allies.</summary>
         public static void TickAuras(Hediff_HeroLevels h)
         {
-            if (h?.pawn == null || !h.pawn.Spawned || h.pawn.Dead || h.pawn.Map == null) return;
+            if (h?.pawn == null || h.classDef == null || !h.pawn.Spawned || h.pawn.Dead || h.pawn.Map == null) return;
             int lvl = h.level;
             switch (h.classDef.defName)
             {

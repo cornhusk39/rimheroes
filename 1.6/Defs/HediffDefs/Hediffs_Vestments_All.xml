@@ -2,7 +2,8 @@
 <Defs>
 
   <!-- Vestments for the remaining 11 classes. Martial template = Fighter's curve; caster
-       template is lighter. All share the flak-vest placeholder visual, tinted per class. -->
+       template is lighter. Each class has real per-tier art under Things/RimHeroes/Vestments/;
+       the flak-vest texPath is only the fallback when a class has no art dir. -->
 
   <HediffDef Name="RH_VestmentMartialBase" ParentName="RH_VestmentBase" Abstract="True">
     <stages>

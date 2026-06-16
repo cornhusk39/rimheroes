@@ -2,7 +2,9 @@
 <Defs>
 
   <!-- Class vestments: persistent armor-as-hediff. Severity == tier (1-4; tiers advance at hero
-       levels 5/11/17). Placeholder visuals: tinted flak vest worn texture; real art later. -->
+       levels 5/11/17). Real per-tier art under Things/RimHeroes/Vestments/<Class>/ (resolved by
+       Hediff_ClassVestment / VestmentArt); the tinted flak-vest texture is only the fallback for a
+       class that has no art dir. -->
 
   <HediffDef Name="RH_VestmentBase" Abstract="True">
     <hediffClass>RimHeroes.Hediff_ClassVestment</hediffClass>

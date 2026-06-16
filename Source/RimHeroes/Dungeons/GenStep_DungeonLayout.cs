@@ -46,6 +46,11 @@ namespace RimHeroes
                 rooms.Add(r);
             }
 
+            // Guarantee at least one room: a tiny or unlucky pocket map can wash out all 400 placement
+            // attempts, and rooms[0] / the role indexing below must never index an empty list.
+            if (rooms.Count == 0)
+                rooms.Add(CellRect.CenteredOn(map.Center, MinRoom, MinRoom).ClipInsideMap(map));
+
             // Order rooms by distance from the first so corridors and roles read sensibly.
             var entrance = rooms[0];
             rooms = new List<CellRect> { entrance }

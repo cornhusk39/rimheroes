@@ -2,7 +2,8 @@
 <Defs>
 
   <!-- Crypt entrance: a MapPortal you send a party through to delve the instanced crypt below.
-       Reuses Anomaly's CaveExit as the climb-out (placed by GenStep_CryptLayout). Placeholder art. -->
+       The entrance graphic is real RH art (Things/RimHeroes/Items/CryptEntrance); only the
+       climb-out stairway reuses Anomaly's CaveExit (placed by the layout GenStep). -->
 
   <ThingDef ParentName="BuildingBase">
     <defName>RH_DungeonEntrance</defName>
