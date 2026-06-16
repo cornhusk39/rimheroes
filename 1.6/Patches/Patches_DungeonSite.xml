@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- Attach our dungeon-site data comp to the vanilla Site world object, so a world-tile dungeon can
+       carry its kind/tier/difficulty to the site-map GenStep. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/WorldObjectDef[defName="Site"]/comps</xpath>
+    <value>
+      <li Class="RimHeroes.WorldObjectCompProperties_DungeonSite" />
+    </value>
+  </Operation>
+
+</Patch>

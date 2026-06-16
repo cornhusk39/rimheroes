@@ -67,6 +67,8 @@
   <RH_DungeonSealed>The {0} falls silent. No more monsters will come from it.</RH_DungeonSealed>
   <RH_EntranceActive>Active: monsters trickle out, faster the longer it stands. Delve and slay its lord, or destroy it, to stop them.</RH_EntranceActive>
   <RH_EntranceSealed>Sealed. The flow of monsters has stopped.</RH_EntranceSealed>
+  <RH_QuestSiteLabel>{0} found nearby</RH_QuestSiteLabel>
+  <RH_QuestSiteText>Word reaches the colony of a {0} out in the wilds, its entrance guarded by the creatures that lair within. Send a caravan to clear the guardians and delve it. The site is marked on your world map.</RH_QuestSiteText>
   <RH_ReliquaryPick>Pick the lock</RH_ReliquaryPick>
   <RH_ReliquaryPickDesc>Attempt the reliquary's sigil-lock (DC {0}). Choose who tries. Each failure hardens the lock by 5; let it reach 25 and it jams for good.</RH_ReliquaryPickDesc>
   <RH_ReliquaryPickerOption>{0}  (lockpick {1})</RH_ReliquaryPickerOption>

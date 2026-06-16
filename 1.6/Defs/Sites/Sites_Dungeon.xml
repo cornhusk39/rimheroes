@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- World-tile dungeon: a site the party caravans to. The entrance + its guard of dungeon monsters
+       are placed by the linked GenStep when the site map is generated. -->
+  <SitePartDef>
+    <defName>RH_DungeonSite</defName>
+    <label>dungeon</label>
+    <description>A dungeon entrance out in the wilds, guarded by its denizens.</description>
+    <workerClass>RimHeroes.SitePartWorker_DungeonSite</workerClass>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/Sites/SleepingPawns</expandingIconTexture>
+    <arrivedLetter>Your party arrives at the dungeon. Its guardians stir. Clear them, then send your heroes down to delve it.</arrivedLetter>
+    <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>RH_DungeonSiteGuards</defName>
+    <linkWithSite>RH_DungeonSite</linkWithSite>
+    <order>1600</order>
+    <genStep Class="RimHeroes.GenStep_DungeonSiteGuards" />
+  </GenStepDef>
+
+</Defs>

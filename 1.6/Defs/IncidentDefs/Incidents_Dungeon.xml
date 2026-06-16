@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+  <!-- A dungeon entrance opens on the colony map (it then trickles monsters until delved or destroyed). -->
   <IncidentDef>
     <defName>RH_Incident_CryptEntrance</defName>
-    <label>crypt entrance</label>
+    <label>dungeon entrance</label>
     <category>Misc</category>
     <targetTags>
       <li>Map_PlayerHome</li>
@@ -12,8 +13,19 @@
     <baseChance>0.6</baseChance>
     <minRefireDays>15</minRefireDays>
     <letterDef>NeutralEvent</letterDef>
-    <letterLabel>A crypt entrance has opened</letterLabel>
-    <letterText>The ground has given way to reveal a dark stairway descending into an ancient crypt. Treasure and danger wait below in equal measure.\n\nSend a party of heroes down to delve it. They can climb back out the way they came.</letterText>
+  </IncidentDef>
+
+  <!-- Word of a dungeon out in the world: spawns a visitable site to caravan to. -->
+  <IncidentDef>
+    <defName>RH_Incident_DungeonQuest</defName>
+    <label>dungeon discovered</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>RimHeroes.IncidentWorker_DungeonQuest</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>20</minRefireDays>
   </IncidentDef>
 
 </Defs>
