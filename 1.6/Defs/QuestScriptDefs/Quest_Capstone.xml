@@ -2,9 +2,10 @@
 <Defs>
 
   <!-- The capstone "mysterious stranger" quest. Launched in code when a hero hits the level cap (never
-       auto-rolled by the storyteller: rootSelectionWeight 0). Never expires. Shelter the colony through
-       a 20-30 day stay and two raids; on success a capstone dungeon is marked carrying the hero's class
-       weapon. Modeled on the vanilla ThreatReward_Raid_Joiner. -->
+       auto-rolled: rootSelectionWeight 0; never expires). A hooded stranger arrives and joins as a
+       guest you must protect through a 20-30 day stay and two raids by an evil party of enemy heroes
+       (RH_Incident_HeroRaid). If he survives, a capstone dungeon is marked carrying the hero's class
+       weapon; if he dies, the quest fails. Modeled on the vanilla Hospitality lodger pattern. -->
   <QuestScriptDef>
     <defName>RH_Quest_Capstone</defName>
     <rootSelectionWeight>0</rootSelectionWeight>
@@ -19,7 +20,7 @@
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription->A hooded stranger has sent word to [map_definite], begging sanctuary. An evil band of adventurers from [enemyFaction_name] hunts him, and they will come for him here.\n\nShelter against their assault. If your colony stands through his stay, the stranger will reveal what he knows: the resting place of [weaponLabel], the capstone weapon of [heroName]'s path.\n\nThe offer does not expire. Accept it whenever you are ready to be hunted.</li>
+        <li>questDescription->A hooded stranger has come to [map_definite], begging sanctuary. An evil band of adventurers hunts him, and they will come here for him.\n\nShelter him through his stay. If he lives to the end, he will reveal what he knows: the resting place of [weaponLabel], the capstone weapon of [heroName]'s path. If he dies, his secret dies with him.\n\nThe offer does not expire. Accept it whenever you are ready to be hunted.</li>
       </rulesStrings>
     </questDescriptionRules>
     <root Class="QuestNode_Sequence">
@@ -27,12 +28,17 @@
 
         <li Class="QuestNode_GetMap" />
 
-        <li Class="QuestNode_GetWalkInSpot" />
+        <!-- The hooded stranger -->
+        <li Class="QuestNode_GeneratePawn">
+          <kindDef>SpaceRefugee</kindDef>
+          <addToList>lodgers</addToList>
+          <storeAs>stranger</storeAs>
+        </li>
 
         <li Class="QuestNode_GetFaction">
+          <storeAs>enemyFaction</storeAs>
           <allowEnemy>true</allowEnemy>
           <mustBePermanentEnemy>true</mustBePermanentEnemy>
-          <storeAs>enemyFaction</storeAs>
         </li>
 
         <li Class="QuestNode_Set">
@@ -40,40 +46,62 @@
           <value>$(randInt(20,30)*60000)</value>
         </li>
 
-        <!-- First raid, about a third of the way through the stay -->
-        <li Class="QuestNode_Delay">
-          <delayTicks>$($stayTicks/3)</delayTicks>
-          <node Class="QuestNode_SubScript">
-            <def>Util_Raid</def>
-            <prefix>raid1</prefix>
-            <parms>
-              <inSignal>$inSignal</inSignal>
-              <map>$map</map>
-              <points>$points</points>
-              <enemyFaction>$enemyFaction</enemyFaction>
-              <walkInSpot>$walkInSpot</walkInSpot>
-              <customLetterLabel>The hunters come</customLetterLabel>
-              <customLetterText>The band hunting the stranger has reached [map_definite]. They mean to take him, and they will go through you to do it.</customLetterText>
-            </parms>
+        <!-- He arrives and joins as a guest you shelter -->
+        <li Class="QuestNode_DropPods">
+          <contents>$lodgers</contents>
+          <useTradeDropSpot>true</useTradeDropSpot>
+        </li>
+        <li Class="QuestNode_JoinPlayer">
+          <pawns>$lodgers</pawns>
+          <joinPlayer>true</joinPlayer>
+        </li>
+        <li Class="QuestNode_Letter">
+          <label>The stranger arrives</label>
+          <text>The hooded stranger has arrived at [map_definite] and thrown himself on your mercy. Keep him alive through the hunt to come.</text>
+          <lookTargets>$lodgers</lookTargets>
+        </li>
+
+        <!-- He leaves when the quest ends -->
+        <li Class="QuestNode_LeaveOnCleanup">
+          <pawns>$lodgers</pawns>
+        </li>
+
+        <!-- Fail if he is killed or lost -->
+        <li Class="QuestNode_Signal">
+          <inSignal>lodgers.Destroyed</inSignal>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label>The stranger is slain</label>
+                <letterDef>NegativeEvent</letterDef>
+                <text>The hooded stranger is dead, and his secret with him. The quest '[resolvedQuestName]' has failed.</text>
+              </li>
+              <li Class="QuestNode_End"><outcome>Fail</outcome></li>
+            </nodes>
+          </node>
+        </li>
+        <li Class="QuestNode_Signal">
+          <inSignal>lodgers.LeftMap</inSignal>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label>The stranger is gone</label>
+                <letterDef>NegativeEvent</letterDef>
+                <text>The hooded stranger has left, taking his secret with him. The quest '[resolvedQuestName]' has failed.</text>
+              </li>
+              <li Class="QuestNode_End"><outcome>Fail</outcome></li>
+            </nodes>
           </node>
         </li>
 
-        <!-- Second raid, about two thirds through -->
-        <li Class="QuestNode_Delay">
-          <delayTicks>$($stayTicks*2/3)</delayTicks>
-          <node Class="QuestNode_SubScript">
-            <def>Util_Raid</def>
-            <prefix>raid2</prefix>
-            <parms>
-              <inSignal>$inSignal</inSignal>
-              <map>$map</map>
-              <points>$points</points>
-              <enemyFaction>$enemyFaction</enemyFaction>
-              <walkInSpot>$walkInSpot</walkInSpot>
-              <customLetterLabel>The hunters return</customLetterLabel>
-              <customLetterText>The hunters have come again, in greater force. The stranger's pursuers will not give up easily.</customLetterText>
-            </parms>
-          </node>
+        <!-- Two raids by the evil hero-party, spread across the stay -->
+        <li Class="QuestNode_CreateIncidents">
+          <incidentDef>RH_Incident_HeroRaid</incidentDef>
+          <randomIncidents>2</randomIncidents>
+          <startOffsetTicks>$(2*60000)</startOffsetTicks>
+          <duration>$stayTicks</duration>
+          <points>$points</points>
+          <faction>$enemyFaction</faction>
         </li>
 
         <!-- Stay survived: mark the capstone dungeon and close the quest -->
@@ -83,12 +111,10 @@
             <nodes>
               <li Class="QuestNode_Letter">
                 <label>The stranger keeps his word</label>
-                <text>The hunters are beaten and the stranger is safe. True to his word, he marks a place on your map where [weaponLabel] waits, then slips away into the wilds.</text>
+                <text>The hunters are beaten and the stranger lives. True to his word, he marks a place on your map where [weaponLabel] waits, then slips away into the wilds.</text>
               </li>
               <li Class="RimHeroes.QuestNode_RH_MarkCapstone" />
-              <li Class="QuestNode_End">
-                <outcome>Success</outcome>
-              </li>
+              <li Class="QuestNode_End"><outcome>Success</outcome></li>
             </nodes>
           </node>
         </li>

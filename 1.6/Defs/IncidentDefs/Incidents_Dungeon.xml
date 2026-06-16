@@ -15,6 +15,18 @@
     <letterDef>NeutralEvent</letterDef>
   </IncidentDef>
 
+  <!-- An evil party of enemy heroes raids the colony (used by the capstone quest's CreateIncidents). -->
+  <IncidentDef>
+    <defName>RH_Incident_HeroRaid</defName>
+    <label>adventuring party raid</label>
+    <category>ThreatBig</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>RimHeroes.IncidentWorker_HeroRaid</workerClass>
+    <baseChance>0</baseChance>
+  </IncidentDef>
+
   <!-- Word of a dungeon out in the world: spawns a visitable site to caravan to. -->
   <IncidentDef>
     <defName>RH_Incident_DungeonQuest</defName>
