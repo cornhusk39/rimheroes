@@ -60,12 +60,22 @@ namespace RimHeroes
                     SoundDefOf.Click.PlayOneShotOnCamera();
                 }
                 var inner = row.ContractedBy(10f);
+                // Class portrait on the left; text column starts to its right.
+                float iconSize = inner.height;
+                var iconRect = new Rect(inner.x, inner.y, iconSize, iconSize);
+                var icon = classDef.Icon;
+                if (icon != null && icon != BaseContent.BadTex)
+                {
+                    GUI.DrawTexture(iconRect, icon, ScaleMode.ScaleToFit);
+                }
+                float textX = iconRect.xMax + 10f;
+                float textW = inner.xMax - textX;
                 Text.Font = GameFont.Medium;
                 GUI.color = Gold;
-                Widgets.Label(new Rect(inner.x, inner.y, inner.width, 30f), classDef.LabelCap);
+                Widgets.Label(new Rect(textX, inner.y, textW, 30f), classDef.LabelCap);
                 GUI.color = new Color(0.85f, 0.85f, 0.85f);
                 Text.Font = GameFont.Small;
-                Widgets.Label(new Rect(inner.x, inner.y + 30f, inner.width, inner.height - 30f), classDef.description);
+                Widgets.Label(new Rect(textX, inner.y + 30f, textW, inner.height - 30f), classDef.description);
                 GUI.color = Color.white;
                 y += RowHeight + RowGap;
             }

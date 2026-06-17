@@ -97,6 +97,46 @@ namespace RimHeroes
         }
     }
 
+    /// <summary>Moonbeam: a column of cold moonlight that sears the target. Drops a bright, sustained
+    /// shaft of pale light onto the target cell (descending from above, like the spell's pillar) plus a
+    /// radiant flash, and deals Spell-Power-scaled damage. A column reads better than the caster-to-target
+    /// ray the other beam spells use, since moonbeam falls from the sky rather than firing from the hand.</summary>
+    public class CompProperties_AbilityMoonbeam : CompProperties_AbilityEffect
+    {
+        public DamageDef damageDef;
+        public float amount = 16f;
+        public Color color = new Color(0.82f, 0.9f, 1f, 1f); // pale cold moonlight
+
+        public CompProperties_AbilityMoonbeam() => compClass = typeof(CompAbilityEffect_Moonbeam);
+    }
+
+    public class CompAbilityEffect_Moonbeam : CompAbilityEffect
+    {
+        public new CompProperties_AbilityMoonbeam Props => (CompProperties_AbilityMoonbeam)props;
+
+        public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            base.Apply(target, dest);
+            var caster = parent.pawn;
+            var map = caster?.MapHeld;
+            if (map == null) return;
+
+            Vector3 to = target.HasThing ? target.Thing.DrawPos : target.Cell.ToVector3Shifted();
+            Vector3 from = to + new Vector3(0f, 0f, 7f); // start well above the target (north on screen)
+            Color shaft = Props.color; shaft.a = 0.55f;
+            Color core = Props.color; core.a = 0.7f;
+            MapComponent_SpellBeams.Add(map, from, to, shaft, Color.clear, BeamStyle.Ray, 45, 1.3f); // wide soft shaft
+            MapComponent_SpellBeams.Add(map, from, to, core, Color.clear, BeamStyle.Ray, 45, 0.5f);  // bright core
+
+            if (target.Thing is Pawn p && !p.Dead)
+            {
+                SpellFx.RadiantFlash(p, Props.color);
+                float dmg = Props.amount * SpellPower.For(caster);
+                p.TakeDamage(new DamageInfo(Props.damageDef ?? DamageDefOf.Burn, dmg, 0.4f, -1f, caster));
+            }
+        }
+    }
+
     /// <summary>
     /// Draws short-lived spell beams each frame. Lightning beams are jagged, re-jittered every frame and
     /// alpha-flickering (unstable). Ray beams are straight and thin, swelling from nothing to full then

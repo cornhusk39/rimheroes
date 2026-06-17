@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace RimHeroes
@@ -12,6 +13,26 @@ namespace RimHeroes
     {
         public TraitDef classTrait;          // flavor trait applied alongside RH_Hero
         public HediffDef vestmentHediff;     // the class vestment (persistent armor-as-hediff)
+        public string iconPath;              // optional; falls back to the class's tier-1 vestment portrait
+
+        private Texture2D iconCached;
+
+        /// <summary>Class portrait for menus (class picker, hero tab). Uses iconPath if set, otherwise the
+        /// tier-1 vestment's south-facing sprite, so every class shows its own look without extra art.</summary>
+        public Texture2D Icon
+        {
+            get
+            {
+                if (iconCached == null)
+                {
+                    string path = !iconPath.NullOrEmpty()
+                        ? iconPath
+                        : "Things/RimHeroes/Vestments/" + GenText.CapitalizeFirst(label) + "/T1_Male_south";
+                    iconCached = ContentFinder<Texture2D>.Get(path, false) ?? BaseContent.BadTex;
+                }
+                return iconCached;
+            }
+        }
         public int maxLevel = 20;
         public CasterProgression casterProgression = CasterProgression.None;
         // 5e prepared casters (Wizard/Cleric/Druid/Paladin) ready a subset of known leveled spells
