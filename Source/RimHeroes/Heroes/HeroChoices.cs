@@ -293,7 +293,7 @@ namespace RimHeroes
                 return new HeroChoiceOption
                 {
                     label = trait.LabelCap,
-                    description = x.def.DataAtDegree(x.degree)?.description ?? trait.CurrentData?.description ?? "",
+                    description = trait.TipString(pawn),
                     icon = null,
                     apply = () => pawn.story?.traits?.GainTrait(new Trait(x.def, x.degree))
                 };

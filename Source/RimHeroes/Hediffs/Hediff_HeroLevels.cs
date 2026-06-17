@@ -501,17 +501,10 @@ namespace RimHeroes
             {
                 return;
             }
-            // Default-ON the fire-and-forget options so a fresh hero is useful out of the box:
-            //   - hostile cantrips (at-will, no slot cost)
-            //   - support that can't be wasted: heals (gated on real injury) and party/self buffs
-            // Leave slot-expensive nukes, summons, and revivify OFF so they aren't burned on cooldown.
-            var intent = HeroAutocast.ClassifyIntent(def);
-            bool defaultOn =
-                (SpellUtility.IsCantrip(def) && def.hostile)
-                || intent == HeroAutocast.Intent.Heal
-                || intent == HeroAutocast.Intent.AllySupport
-                || (intent == HeroAutocast.Intent.SelfBuff && !def.hostile);
-            if (defaultOn)
+            // Default-ON only at-will hostile cantrips (no slot cost). Everything leveled - heals,
+            // buffs, nukes, summons - stays OFF by default and the player opts in per spell, which
+            // matches the autocast gizmo copy.
+            if (SpellUtility.IsCantrip(def) && def.hostile)
             {
                 SetAutocast(def, true);
             }

@@ -7,7 +7,7 @@
   <HediffDef>
     <defName>RH_ClassFeatures</defName>
     <label>class</label>
-    <description>This hero's class training and signature techniques. Hover for the full list.</description>
+    <description>This hero's class training and signature techniques.</description>
     <hediffClass>RimHeroes.Hediff_ClassFeatures</hediffClass>
     <isBad>false</isBad>
     <everCurableByItem>false</everCurableByItem>
