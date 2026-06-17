@@ -599,7 +599,7 @@ namespace RimHeroes
             }
         }
 
-        // Player heroes: opt-in per-ability toggles, and offense only fires while drafted.
+        // Player heroes: opt-in per-ability toggles; offense fires while drafted or when defending an attack.
         private void TickAutocastPlayer()
         {
             foreach (var ability in pawn.abilities.abilities)
@@ -613,11 +613,14 @@ namespace RimHeroes
                 {
                     continue;
                 }
-                // Offense only fires while drafted; support (heals/buffs/summons) may fire freely.
+                // Offense fires while drafted, or while undrafted only if the hero is actually engaged
+                // with an enemy (defending itself), so it opens with spells instead of meleeing. Support
+                // (heals/buffs/summons) may fire freely.
                 var intent = HeroAutocast.ClassifyIntent(ability);
                 bool offensive = intent == HeroAutocast.Intent.HostileSingle
                                  || intent == HeroAutocast.Intent.EnemyAoE;
-                if (offensive && !pawn.Drafted)
+                bool engaged = pawn.mindState?.enemyTarget is Pawn et && !et.Dead && !et.Downed;
+                if (offensive && !pawn.Drafted && !engaged)
                 {
                     continue;
                 }

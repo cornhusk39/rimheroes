@@ -438,6 +438,12 @@ namespace RimHeroes
     {
         public new CompProperties_AbilityZoneHediff Props => (CompProperties_AbilityZoneHediff)props;
 
+        // Show the area of effect while aiming a ground-targeted zone spell (Entangle, Spike Growth, etc.).
+        public override void DrawEffectPreview(LocalTargetInfo target)
+        {
+            GenDraw.DrawRadiusRing(target.Cell, Props.radius);
+        }
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
@@ -654,6 +660,12 @@ namespace RimHeroes
     public class CompAbilityEffect_Explosion : CompAbilityEffect
     {
         public new CompProperties_AbilityExplosion Props => (CompProperties_AbilityExplosion)props;
+
+        // Show the blast radius while aiming an AoE damage spell (Fireball, Daylight, etc.).
+        public override void DrawEffectPreview(LocalTargetInfo target)
+        {
+            GenDraw.DrawRadiusRing(target.Cell, Props.radius);
+        }
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
