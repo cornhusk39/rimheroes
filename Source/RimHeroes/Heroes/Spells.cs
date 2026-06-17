@@ -340,6 +340,15 @@ namespace RimHeroes
         public float radius = 0f;       // 0 = single target; >0 = heal allies in radius around target cell
         public bool onlyAllies = true;
 
+        // VFX: each healed pawn gets a feet bloom in bloomColor; radius heals flash a range ring in
+        // ringColor; an optional casterFleck burst plays over the caster (e.g. Power Word Heal notes).
+        public Color bloomColor = new Color(0.35f, 0.95f, 0.45f);
+        public Color ringColor = new Color(0.35f, 0.95f, 0.45f);
+        public FleckDef casterFleck;
+        public Color casterFleckColor = new Color(0.35f, 0.95f, 0.45f);
+        public int casterFleckCount = 4;
+        public float casterFleckScale = 0.95f;
+
         public CompProperties_AbilityHeal() => compClass = typeof(CompAbilityEffect_Heal);
     }
 
@@ -350,23 +359,29 @@ namespace RimHeroes
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            float each = Props.amount * SpellPower.For(parent.pawn);
+            var caster = parent.pawn;
+            float each = Props.amount * SpellPower.For(caster);
+            if (Props.casterFleck != null)
+                HealFx.CasterMotes(caster, Props.casterFleck, Props.casterFleckColor, Props.casterFleckCount, Props.casterFleckScale);
             if (Props.radius > 0f)
             {
-                var map = parent.pawn?.MapHeld;
+                var map = caster?.MapHeld;
                 if (map == null) return;
+                HealFx.RangeRing(map, target.Cell.ToVector3Shifted(), Props.radius, Props.ringColor);
                 foreach (var p in GenRadial.RadialDistinctThingsAround(target.Cell, map, Props.radius, true)
                              .OfType<Pawn>().ToList())
                 {
                     if (p.Dead) continue;
-                    if (Props.onlyAllies && p.HostileTo(parent.pawn)) continue;
+                    if (Props.onlyAllies && p.HostileTo(caster)) continue;
                     CompAbilityEffect_DamageTarget.HealPawn(p, each);
+                    HealFx.Bloom(p, Props.bloomColor);
                 }
                 return;
             }
             if (target.Thing is Pawn targetPawn && !targetPawn.Dead)
             {
                 CompAbilityEffect_DamageTarget.HealPawn(targetPawn, each);
+                HealFx.Bloom(targetPawn, Props.bloomColor);
             }
         }
 

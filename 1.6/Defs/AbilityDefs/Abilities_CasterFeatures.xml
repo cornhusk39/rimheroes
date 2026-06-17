@@ -48,6 +48,7 @@
         <amount>16</amount>
         <radius>4.9</radius>
         <onlyAllies>true</onlyAllies>
+        <ringColor>(1.0, 0.95, 0.7, 1)</ringColor>
       </li>
     </comps>
   </AbilityDef>
@@ -72,6 +73,7 @@
         <amount>45</amount>
         <radius>6.9</radius>
         <onlyAllies>true</onlyAllies>
+        <ringColor>(1.0, 0.95, 0.7, 1)</ringColor>
       </li>
       <li Class="RimHeroes.CompProperties_AbilityCleanse">
         <removeBadDiseases>true</removeBadDiseases>

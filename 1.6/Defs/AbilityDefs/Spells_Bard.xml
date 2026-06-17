@@ -209,6 +209,10 @@
     <comps>
       <li Class="RimHeroes.CompProperties_AbilityHeal">
         <amount>90</amount>
+        <casterFleck>RH_Mote_Note</casterFleck>
+        <casterFleckColor>(0.35, 0.95, 0.45, 1)</casterFleckColor>
+        <casterFleckCount>4</casterFleckCount>
+        <casterFleckScale>1.1</casterFleckScale>
       </li>
     </comps>
   </AbilityDef>

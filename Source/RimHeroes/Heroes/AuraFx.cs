@@ -12,6 +12,9 @@ namespace RimHeroes
         public static FleckDef RH_AuraMote;
         public static FleckDef RH_Fleck_WildshapeGas;
         public static FleckDef RH_Mote_Spark;
+        public static FleckDef RH_Mote_Note;
+        public static FleckDef RH_Fleck_HealBloom;
+        public static FleckDef RH_Fleck_RangeRing;
         static RH_FleckDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(RH_FleckDefOf));
     }
 
