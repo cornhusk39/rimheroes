@@ -111,9 +111,9 @@ namespace RimHeroes
 
         public override bool ShouldRemove => false;
 
-        // Level curve: 100 XP for the first level, x1.35 per level after. Steep top end so reaching
-        // level 20 is a long-colony-arc grind (~85k total XP) rather than a few big raids.
-        public static float XPRequiredForLevel(int lvl) => 100f * Mathf.Pow(1.35f, lvl - 1);
+        // Level curve: 100 XP for the first level, x1.25 per level after. Steeper top end so reaching
+        // level 20 is a long-colony-arc goal (~27k total XP) rather than a few big raids.
+        public static float XPRequiredForLevel(int lvl) => 100f * Mathf.Pow(1.25f, lvl - 1);
 
         public float XPForNextLevel => XPRequiredForLevel(level);
 
