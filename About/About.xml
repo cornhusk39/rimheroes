@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>RimHeroes (D&amp;D Classes) [WIP]</name>
+  <name>RimHeroes (D&amp;D Classes) [Alpha]</name>
   <author>Arcanicap</author>
   <packageId>Arcanicap.RimHeroes</packageId>
   <supportedVersions>
@@ -35,7 +35,7 @@
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
     <li>mooloh.dndmenagerie</li>
   </loadAfter>
-  <description>D&amp;D classes for RimWorld. Rare Hero pawns bear a class central to their identity: levels 1-20, Vancian spell slots, death saving throws, a transforming class vestment, and a retinue of job-specialized mim followers.
+  <description>D&amp;D classes for RimWorld. Rare Hero pawns bear a class central to their identity: levels 1 to 20, Vancian spell slots, death saving throws, a transforming class vestment with inlay slots, and a retinue of job-specialized mim followers. Heroes delve themed dungeons for loot and capstone weapons, backed by a growing fantasy bestiary.
 
-Work in progress - not ready for play.</description>
+Requires Mooloh's D&amp;D Menagerie. In active development and tuned through play, so feedback and bug reports are welcome.</description>
 </ModMetaData>
