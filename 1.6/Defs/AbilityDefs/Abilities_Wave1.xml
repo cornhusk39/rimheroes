@@ -22,6 +22,7 @@
     </verbProperties>
     <comps>
       <li Class="RimHeroes.CompProperties_AbilityBeam">
+        <attackRoll>true</attackRoll>
         <damageDef>Blunt</damageDef>
         <amount>6</amount>
         <hits>1</hits>

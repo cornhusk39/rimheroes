@@ -44,6 +44,7 @@
   <RH_LongRestComplete>{0} finishes a long rest. Every spell slot is restored.</RH_LongRestComplete>
   <RH_LongRestGizmo>Long rest</RH_LongRestGizmo>
   <RH_LongRestGizmoDesc>Settle in for a long rest, roughly twelve hours of sleep, after which all spell slots return. Progress builds while sleeping. Toggle off to cancel.</RH_LongRestGizmoDesc>
+  <RH_SpellMiss>miss</RH_SpellMiss>
   <RH_AutocastGizmo>Auto: {0}</RH_AutocastGizmo>
   <RH_AutocastGizmoDesc>Cast {0} on its own when there is a fitting target nearby. Cantrips do this by default; leveled spells must be switched on here.</RH_AutocastGizmoDesc>
   <RH_RevertForm>Revert form</RH_RevertForm>

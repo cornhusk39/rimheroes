@@ -15,6 +15,14 @@ namespace RimHeroes
     {
         public override void Impact(Thing hitThing, bool blockedByShield = false)
         {
+            // Spell attack roll: a tagged bolt (Fire Bolt, Chromatic Orb, Produce Flame) can miss its mark.
+            if (hitThing is Pawn victim && !victim.Dead && SpellAccuracy.UsesAttackRoll(def)
+                && !SpellAccuracy.Hits(launcher as Pawn, victim))
+            {
+                SpellAccuracy.ThrowMiss(victim);
+                base.Impact(null, blockedByShield);
+                return;
+            }
             if (hitThing != null)
             {
                 float mult = launcher is Pawn p ? SpellPower.For(p) : 1f;

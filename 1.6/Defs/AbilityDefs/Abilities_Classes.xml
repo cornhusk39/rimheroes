@@ -87,6 +87,7 @@
       <!-- A hitscan crackling red beam snapped from caster to target (drawn unstable + jittering in
            MapComponent_SpellBeams), with Spell-Power-scaled damage. Replaces the borrowed projectile. -->
       <li Class="RimHeroes.CompProperties_AbilityBeam">
+        <attackRoll>true</attackRoll>
         <damageDef>Burn</damageDef>
         <amount>14</amount>
         <color>(0.95, 0.16, 0.12, 1)</color>

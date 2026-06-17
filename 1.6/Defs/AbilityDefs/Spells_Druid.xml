@@ -48,6 +48,11 @@
       <speed>38</speed>
       <armorPenetrationBase>0.15</armorPenetrationBase>
     </projectile>
+    <modExtensions>
+      <li Class="RimHeroes.SpellAccuracyExtension">
+        <attackRoll>true</attackRoll>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <!-- ============ LEVEL 1 ============ -->

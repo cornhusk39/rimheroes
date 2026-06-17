@@ -176,6 +176,7 @@
   <ThingDef ParentName="BaseBullet">
     <defName>RH_Projectile_FireBolt</defName>
     <label>fire bolt</label>
+    <thingClass>RimHeroes.Projectile_RHSpellDart</thingClass>
     <graphicData>
       <texPath>Things/RimHeroes/Projectiles/Fireball</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -188,6 +189,11 @@
       <speed>40</speed>
       <armorPenetrationBase>0.3</armorPenetrationBase>
     </projectile>
+    <modExtensions>
+      <li Class="RimHeroes.SpellAccuracyExtension">
+        <attackRoll>true</attackRoll>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <!-- Mage armor buff -->

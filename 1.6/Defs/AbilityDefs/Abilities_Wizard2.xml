@@ -25,6 +25,7 @@
     </verbProperties>
     <comps>
       <li Class="RimHeroes.CompProperties_AbilityBeam">
+        <attackRoll>true</attackRoll>
         <damageDef>Burn</damageDef>
         <amount>8</amount>
         <hits>1</hits>
@@ -131,6 +132,11 @@
       <speed>32</speed>
       <armorPenetrationBase>0.2</armorPenetrationBase>
     </projectile>
+    <modExtensions>
+      <li Class="RimHeroes.SpellAccuracyExtension">
+        <attackRoll>true</attackRoll>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <!-- ============ LEVEL 2 ============ -->
@@ -153,6 +159,7 @@
     </verbProperties>
     <comps>
       <li Class="RimHeroes.CompProperties_AbilityBeam">
+        <attackRoll>true</attackRoll>
         <damageDef>Burn</damageDef>
         <amount>7</amount>
         <hits>3</hits>

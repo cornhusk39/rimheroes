@@ -30,6 +30,7 @@
     </verbProperties>
     <comps>
       <li Class="RimHeroes.CompProperties_AbilityBeam">
+        <attackRoll>true</attackRoll>
         <damageDef>Burn</damageDef>
         <amount>16</amount>
         <hits>1</hits>

@@ -30,6 +30,7 @@ namespace RimHeroes
         public BeamStyle style = BeamStyle.Lightning;
         public int ticks = 24;
         public float width = 0.34f;
+        public bool attackRoll = false;        // true for spell-attack rays (Ray of Frost, Eldritch Blast, ...) that can miss
 
         public CompProperties_AbilityBeam() => compClass = typeof(CompAbilityEffect_Beam);
     }
@@ -46,6 +47,16 @@ namespace RimHeroes
             if (map == null) return;
 
             Vector3 to = target.HasThing ? target.Thing.DrawPos : target.Cell.ToVector3Shifted();
+
+            // Spell attack roll: an attack-style ray can miss, in which case it flies wide of the target.
+            if (Props.attackRoll && target.Thing is Pawn tp && !tp.Dead && !SpellAccuracy.Hits(caster, tp))
+            {
+                Vector3 wide = to + new Vector3(Rand.Range(-1.6f, 1.6f), 0f, Rand.Range(1.2f, 2.4f));
+                MapComponent_SpellBeams.Add(map, caster.DrawPos, wide, Props.color, Props.innerColor, Props.style, Props.ticks, Props.width);
+                SpellAccuracy.ThrowMiss(tp);
+                return;
+            }
+
             MapComponent_SpellBeams.Add(map, caster.DrawPos, to, Props.color, Props.innerColor, Props.style, Props.ticks, Props.width);
 
             var thing = target.Thing;
