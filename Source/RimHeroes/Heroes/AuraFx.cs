@@ -89,6 +89,20 @@ namespace RimHeroes
                 AuraFx.DrawGlow(pawn, drawLoc, boss.aura, 2.7f);
             }
 
+            // Persistent buff/debuff glows (Shield of Faith, Holy Aura, Mirror Image, etc.).
+            var hediffs = pawn.health?.hediffSet?.hediffs;
+            if (hediffs != null)
+            {
+                for (int i = 0; i < hediffs.Count; i++)
+                {
+                    var vfx = (hediffs[i] as HediffWithComps)?.TryGetComp<HediffComp_Vfx>();
+                    if (vfx != null && vfx.Props.glowColor.a > 0f)
+                    {
+                        AuraFx.DrawGlow(pawn, drawLoc, vfx.Props.glowColor, vfx.Props.glowSize);
+                    }
+                }
+            }
+
             if (Hediff_Wildshape.IsShifted(pawn)) return;
             var vestment = pawn.health?.hediffSet?.hediffs?.OfType<Hediff_ClassVestment>().FirstOrDefault();
             if (vestment == null || vestment.Tier < 5)
