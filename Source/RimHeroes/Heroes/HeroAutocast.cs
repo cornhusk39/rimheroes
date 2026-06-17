@@ -48,6 +48,10 @@ namespace RimHeroes
                 {
                     switch (c)
                     {
+                        // Wildshape is a manual transform, never a fire-and-forget autocast. Auto-firing it
+                        // re-shifts every time it comes off cooldown and spams the revert message.
+                        case CompProperties_AbilityGiveHediff gh when gh.hediffDef?.hediffClass == typeof(Hediff_Wildshape):
+                            return Intent.None;
                         case CompProperties_AbilityHeal _:
                             return Intent.Heal;
                         case CompProperties_AbilityRevivify _:
