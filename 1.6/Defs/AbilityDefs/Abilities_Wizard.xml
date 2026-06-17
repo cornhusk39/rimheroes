@@ -125,22 +125,43 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityExplosion">
-        <damageDef>Flame</damageDef>
-        <radius>3.9</radius>
-        <damageAmount>35</damageAmount>
+      <!-- Now flies a visible ball of flame to the target, then detonates (blast scaled by Spell Power
+           in Projectile_RHFireball). Was an instant explosion with no projectile. -->
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>RH_Projectile_Fireball</projectileDef>
       </li>
     </comps>
   </AbilityDef>
 
-  <!-- Fire bolt projectile -->
+  <!-- Fireball projectile: a thrown ball of flame that explodes on impact (Spell-Power-scaled blast). -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>RH_Projectile_Fireball</defName>
+    <label>fireball</label>
+    <thingClass>RimHeroes.Projectile_RHFireball</thingClass>
+    <graphicData>
+      <texPath>Things/RimHeroes/Projectiles/Fireball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <explosionRadius>3.9</explosionRadius>
+      <speed>32</speed>
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <!-- Fire bolt projectile: a small fireball (reuses the Fireball sprite, scaled down), direct hit. -->
   <ThingDef ParentName="BaseBullet">
     <defName>RH_Projectile_FireBolt</defName>
     <label>fire bolt</label>
     <graphicData>
-      <texPath>Things/Projectile/LauncherShot</texPath>
+      <texPath>Things/RimHeroes/Projectiles/Fireball</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.55</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Flame</damageDef>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 64">
+  <defs>
+    <linearGradient id="v" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="38%" stop-color="#ffd2cc" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="62%" stop-color="#ffd2cc" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- soft glow halo (full width, vertical falloff) -->
+  <rect x="0" y="0" width="256" height="64" fill="url(#v)"/>
+  <!-- bright hot core line -->
+  <rect x="0" y="29" width="256" height="6" fill="#ffffff"/>
+</svg>

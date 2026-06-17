@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="fb" cx="48%" cy="54%" r="52%">
+      <stop offset="0%" stop-color="#fff7d6"/>
+      <stop offset="26%" stop-color="#ffd24a"/>
+      <stop offset="52%" stop-color="#ff8a1e"/>
+      <stop offset="80%" stop-color="#e8401a"/>
+      <stop offset="100%" stop-color="#e8401a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- trailing flame licks -->
+  <path d="M64 14 q12 26 0 40 q-12 -14 0 -40" fill="#ffd24a" opacity="0.85"/>
+  <path d="M38 26 q10 22 3 36 q-14 -12 -3 -36" fill="#ff8a1e" opacity="0.65"/>
+  <path d="M90 26 q-10 22 -3 36 q14 -12 3 -36" fill="#ff8a1e" opacity="0.65"/>
+  <!-- core ball -->
+  <circle cx="64" cy="68" r="46" fill="url(#fb)"/>
+  <circle cx="60" cy="62" r="20" fill="#fff7d6" opacity="0.92"/>
+</svg>

@@ -82,8 +82,14 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="CompProperties_AbilityLaunchProjectile">
-        <projectileDef>RH_Projectile_EldritchBlast</projectileDef>
+      <!-- A hitscan crackling red beam snapped from caster to target (drawn unstable + jittering in
+           MapComponent_SpellBeams), with Spell-Power-scaled damage. Replaces the borrowed projectile. -->
+      <li Class="RimHeroes.CompProperties_AbilityBeam">
+        <damageDef>Burn</damageDef>
+        <amount>14</amount>
+        <color>(0.95, 0.16, 0.12, 1)</color>
+        <ticks>26</ticks>
+        <width>0.36</width>
       </li>
     </comps>
   </AbilityDef>

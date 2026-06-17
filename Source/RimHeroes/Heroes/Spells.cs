@@ -204,6 +204,7 @@ namespace RimHeroes
             {
                 return false;
             }
+            SpellCastFx.Play(pawn);   // subtle per-class charge burst on cast
             return base.Activate(target, dest);
         }
 
