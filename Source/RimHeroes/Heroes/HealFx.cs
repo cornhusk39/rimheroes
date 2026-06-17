@@ -45,7 +45,7 @@ namespace RimHeroes
         {
             if (map == null || radius <= 0f) return;
             var ring = FleckMaker.GetDataStatic(center, map, RH_FleckDefOf.RH_Fleck_RangeRing, radius * 2f);
-            Color c = color; c.a = 0.6f;
+            Color c = color; c.a = 0.3f;
             ring.instanceColor = c;
             map.flecks.CreateFleck(ring);
         }
