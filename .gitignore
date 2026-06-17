@@ -1,4 +1,4 @@
-# Build artifacts (the shipped DLL in 1.6/Assemblies IS committed)
+# Build artifacts (the shipped DLL in 1.6/Assemblies is committed)
 Source/**/bin/
 Source/**/obj/
 *.user
@@ -9,20 +9,6 @@ Source/**/obj/
 Thumbs.db
 .DS_Store
 
-# L20 aura demo raw capture frames (transient)
-tools/auraframes/
-
-# Tool scratch: review sheets, preview captures, art-gen intermediates (regenerable)
-tools/*.png
-tools/*.jpg
-tools/*.jpeg
-tools/artgen/
-tools/vestmock/
-tools/vanilla_dump/
-tools/inspect-fringe.mjs
-tools/verify-dark.mjs
-
-# Menagerie reference downloads + nested tool scratch
-tools/moo/
-tools/**/*.png
-tools/**/*.jpg
+# Local dev tooling and notes (not shipped)
+tools/
+docs/
