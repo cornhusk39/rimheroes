@@ -30,6 +30,7 @@
         <damageDef>Flame</damageDef>
         <amount>24</amount>
         <hits>1</hits>
+        <flashColor>(1.0, 0.95, 0.7)</flashColor>
       </li>
     </comps>
   </AbilityDef>

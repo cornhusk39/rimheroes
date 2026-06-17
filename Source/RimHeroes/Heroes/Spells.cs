@@ -254,6 +254,8 @@ namespace RimHeroes
         public float bonusVsWoundedFactor = 0f;    // extra damage multiplier if target already injured
         public HediffDef applyHediff;              // debuff applied to the target on hit
         public float applyHediffSeverity = 1f;
+        public Color flashColor = Color.clear;     // a radiant flash over the target (Divine Smite / Sacred Flame)
+        public Color downColumnColor = Color.clear; // a descending light column onto the target (Sacred Flame)
 
         public CompProperties_AbilityDamageTarget() => compClass = typeof(CompAbilityEffect_DamageTarget);
     }
@@ -271,6 +273,11 @@ namespace RimHeroes
                 return;
             }
             DealTo(thing);
+            if (thing is Pawn fp)
+            {
+                if (Props.flashColor.a > 0f) SpellFx.RadiantFlash(fp, Props.flashColor);
+                if (Props.downColumnColor.a > 0f) SpellFx.DownColumn(fp, Props.downColumnColor);
+            }
             // Sorcerer Twinned Spell: a single-target spell also strikes a second nearby foe.
             if (thing is Pawn && ClassFeatures.HasMetamagic(parent.pawn, "RH_Feat_Twinned"))
             {

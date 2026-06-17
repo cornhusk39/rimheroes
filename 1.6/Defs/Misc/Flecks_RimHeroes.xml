@@ -93,6 +93,24 @@
     </graphicData>
   </FleckDef>
 
+  <!-- Radiant flash: a quick additive glow over a struck pawn (Divine Smite / Sacred Flame), tinted
+       radiant gold per instance. -->
+  <FleckDef>
+    <defName>RH_Fleck_RadiantFlash</defName>
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.05</fadeInTime>
+    <solidTime>0.1</solidTime>
+    <fadeOutTime>0.4</fadeOutTime>
+    <growthRate>0.5</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <texPath>Things/RimHeroes/Vestments/Effects/AuraGlow</texPath>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+  </FleckDef>
+
   <!-- Range ring: a thin circular outline drawn at the caster for ~0.8s to show a radius spell's reach.
        Non-glowing (Transparent), scaled to 2*radius and tinted at ~60% alpha per instance. -->
   <FleckDef>
