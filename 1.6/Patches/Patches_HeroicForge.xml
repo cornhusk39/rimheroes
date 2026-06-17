@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- The Heroic Forge is a custom workbench, so no vanilla work-giver knows to run its bills:
+       colonists would see bills queued but never carry them out. Register it with the weapon-
+       smithing work-giver (the one that drives the smithy) so anyone on Smithing work will forge
+       hero weapons there. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/WorkGiverDef[defName="DoBillsMakeWeapons"]/fixedBillGiverDefs</xpath>
+    <value>
+      <li>RH_HeroicForge</li>
+    </value>
+  </Operation>
+
+</Patch>
