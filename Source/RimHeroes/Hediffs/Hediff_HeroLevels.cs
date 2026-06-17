@@ -275,7 +275,7 @@ namespace RimHeroes
         private int longRestProgress;
         private bool shortRestArmed = true;
 
-        public const int LongRestDurationTicks = 30000; // 12 in-game hours of sleep
+        public const int LongRestDurationTicks = 60000; // a full day (24 in-game hours) of sleep
         public const int PrepareWindowTicks = 15000;    // 6 in-game hours to swap spells after a long rest
 
         // ===== Wizard signature mechanics (Arcane Recovery / Spell Mastery / Signature Spells) =====
@@ -512,10 +512,38 @@ namespace RimHeroes
             AutoPrepare(def); // prepared casters start with a sensible loadout
         }
 
+        /// <summary>How far along a long rest is, 0..1 (0 when not resting). Drives the gizmo's fill bar.</summary>
+        public float LongRestProgressPct => longResting ? Mathf.Clamp01((float)longRestProgress / LongRestDurationTicks) : 0f;
+
+        /// <summary>Stop a long rest. If it was meaningfully underway and did not finish, the hero is left
+        /// with the "rest interrupted" debuff for a couple of days.</summary>
+        private void CancelLongRest(bool completed)
+        {
+            bool interrupted = !completed && longRestProgress > LongRestDurationTicks / 10;
+            longResting = false;
+            longRestProgress = 0;
+            if (interrupted && pawn != null && !pawn.Dead && RH_DefOf.RH_LongRestInterrupted != null)
+            {
+                var h = pawn.health.hediffSet.GetFirstHediffOfDef(RH_DefOf.RH_LongRestInterrupted)
+                        ?? pawn.health.AddHediff(RH_DefOf.RH_LongRestInterrupted);
+                h.Severity = 1f;
+                if (PawnUtility.ShouldSendNotificationAbout(pawn))
+                {
+                    Messages.Message("RH_LongRestBroken".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.NegativeEvent);
+                }
+            }
+        }
+
         private void TickRests(int delta)
         {
             bool asleep = !pawn.Dead && !pawn.Awake();
             var rest = pawn.needs?.rest;
+            // Drafting or a mental break breaks a long rest in progress.
+            if (longResting && (pawn.Drafted || pawn.InMentalState))
+            {
+                CancelLongRest(false);
+                return;
+            }
             if (longResting)
             {
                 if (asleep)
@@ -663,19 +691,28 @@ namespace RimHeroes
             }
             if (classDef != null && classDef.casterProgression != CasterProgression.None)
             {
-                yield return new Command_Toggle
+                string restDesc = "RH_LongRestGizmoDesc".Translate();
+                if (longResting)
+                {
+                    restDesc += "\n\n" + "RH_LongRestProgress".Translate(Mathf.RoundToInt(LongRestProgressPct * 100f));
+                }
+                yield return new Command_LongRest
                 {
                     defaultLabel = "RH_LongRestGizmo".Translate(),
-                    defaultDesc = "RH_LongRestGizmoDesc".Translate(),
+                    defaultDesc = restDesc,
                     icon = RH_Tex.LongRest,
                     isActive = () => longResting,
+                    progress = () => LongRestProgressPct,
                     toggleAction = () =>
                     {
-                        longResting = !longResting;
-                        if (!longResting)
+                        if (longResting)
                         {
-                            longRestProgress = 0;
+                            CancelLongRest(false);
+                            return;
                         }
+                        Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
+                            "RH_LongRestConfirm".Translate(pawn.LabelShortCap),
+                            () => { longResting = true; longRestProgress = 0; }));
                     }
                 };
                 if (PreparesSpells)

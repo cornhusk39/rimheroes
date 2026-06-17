@@ -17,6 +17,7 @@ namespace RimHeroes
         public static HediffDef RH_Flurry;
         public static HediffDef RH_AuraProtection;
         public static HediffDef RH_AuraCourage;
+        public static HediffDef RH_LongRestInterrupted;
         public static StatDef RH_SpellPower;
 
         static RH_DefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(RH_DefOf));

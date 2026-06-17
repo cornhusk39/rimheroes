@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Applied when a hero's long rest is broken before it finishes. A frayed mind and unsettled magic
+       for a couple of days, nudging the player to see a long rest through rather than start and stop it. -->
+  <HediffDef>
+    <defName>RH_LongRestInterrupted</defName>
+    <label>rest interrupted</label>
+    <description>A long rest was broken before it could finish. Mind and magic stay frayed until proper rest is found.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <maxSeverity>1</maxSeverity>
+    <defaultLabelColor>(0.8, 0.6, 0.4)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>120000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

@@ -43,7 +43,10 @@
   <RH_ShortRest>{0} catches their breath, and a spell slot returns (short rest).</RH_ShortRest>
   <RH_LongRestComplete>{0} finishes a long rest. Every spell slot is restored.</RH_LongRestComplete>
   <RH_LongRestGizmo>Long rest</RH_LongRestGizmo>
-  <RH_LongRestGizmoDesc>Settle in for a long rest, roughly twelve hours of sleep, after which all spell slots return. Progress builds while sleeping. Toggle off to cancel.</RH_LongRestGizmoDesc>
+  <RH_LongRestGizmoDesc>Settle in for a long rest, a full day of sleep, after which all spell slots return. Progress builds only while sleeping and pauses if the hero is up. Toggle off to cancel.</RH_LongRestGizmoDesc>
+  <RH_LongRestProgress>Rest progress: {0}%</RH_LongRestProgress>
+  <RH_LongRestConfirm>{0} will commit to a full day of sleep to recover every spell slot. Drafting them or a mental break will interrupt it and leave them frayed. Begin the long rest?</RH_LongRestConfirm>
+  <RH_LongRestBroken>{0}'s long rest was interrupted.</RH_LongRestBroken>
   <RH_SpellMiss>miss</RH_SpellMiss>
   <RH_AutocastGizmo>Auto: {0}</RH_AutocastGizmo>
   <RH_AutocastGizmoDesc>Cast {0} on its own when there is a fitting target nearby. Cantrips do this by default; leveled spells must be switched on here.</RH_AutocastGizmoDesc>
