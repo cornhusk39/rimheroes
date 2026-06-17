@@ -4,7 +4,23 @@
   <!-- Class-locked hero longbows for the Ranger. Ranged (mirrors vanilla Bow_Great / Arrow_Great).
        Half-caster: equipping grants RH_SpellPower. Bound items: no smelt, no trade. -->
 
-  <ThingDef ParentName="BaseWeaponNeolithic">
+  <!-- Ranged hero-weapon base: like the melee base, with no crafting recipeMaker (these are forged via
+       the Heroic Forge recipes and the capstone quest, not made at a vanilla bench). -->
+  <ThingDef Name="RH_HeroWeaponRangedBase" ParentName="BaseWeapon" Abstract="True">
+    <techLevel>Medieval</techLevel>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+    <destroyOnDrop>false</destroyOnDrop>
+    <tradeability>None</tradeability>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li><compClass>CompQuality</compClass></li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_HeroWeaponRangedBase">
     <defName>RH_Weapon_Ranger_TierI</defName>
     <equippedAngleOffset>180</equippedAngleOffset>
     <label>lesser hero longbow</label>
@@ -65,7 +81,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="BaseWeaponNeolithic">
+  <ThingDef ParentName="RH_HeroWeaponRangedBase">
     <defName>RH_Weapon_Ranger_TierII</defName>
     <equippedAngleOffset>180</equippedAngleOffset>
     <label>hero longbow</label>
@@ -126,7 +142,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="BaseWeaponNeolithic">
+  <ThingDef ParentName="RH_HeroWeaponRangedBase">
     <defName>RH_Weapon_Ranger_TierIII</defName>
     <equippedAngleOffset>180</equippedAngleOffset>
     <label>greater hero longbow</label>
@@ -187,7 +203,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="BaseWeaponNeolithic">
+  <ThingDef ParentName="RH_HeroWeaponRangedBase">
     <defName>RH_Weapon_Ranger_TierIV</defName>
     <equippedAngleOffset>180</equippedAngleOffset>
     <label>perfect hero longbow</label>
@@ -248,7 +264,7 @@
     </modExtensions>
   </ThingDef>
 
-  <ThingDef ParentName="BaseWeaponNeolithic">
+  <ThingDef ParentName="RH_HeroWeaponRangedBase">
     <defName>RH_Weapon_Ranger_TierV</defName>
     <equippedAngleOffset>180</equippedAngleOffset>
     <label>Stormfall</label>
