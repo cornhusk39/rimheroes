@@ -7,6 +7,13 @@
        (dryad pattern). -->
 
   <ThingDef Name="RH_MimBase" ParentName="AnimalThingBase" Abstract="True">
+    <!-- Mims work through the colony work pipeline (CompMimWorker), not the animal training system, so
+         hide the Training tab: a mim never needs to be taught Haul/Rescue/etc. to do its job. -->
+    <inspectorTabs Inherit="False">
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Social</li>
+    </inspectorTabs>
     <statBases>
       <MoveSpeed>4.2</MoveSpeed>
       <MarketValue>300</MarketValue>

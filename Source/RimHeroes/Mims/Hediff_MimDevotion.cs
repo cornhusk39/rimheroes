@@ -37,7 +37,9 @@ namespace RimHeroes
                 {
                     return DevotionState.Bereft;
                 }
-                if (master.Downed || master.health.HasHediffsNeedingTend() || HealthAIUtility.ShouldSeekMedicalRest(master))
+                // Only keep vigil when the master is genuinely down or needs bed rest. A minor untended
+                // scratch (common after any skirmish) should not stop the mim from working.
+                if (master.Downed || HealthAIUtility.ShouldSeekMedicalRest(master))
                 {
                     return DevotionState.Worried;
                 }
