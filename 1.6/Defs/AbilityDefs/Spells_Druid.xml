@@ -25,13 +25,30 @@
       <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
-        <damageDef>Burn</damageDef>
-        <amount>8</amount>
-        <hits>1</hits>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>RH_Projectile_ProduceFlame</projectileDef>
       </li>
     </comps>
   </AbilityDef>
+
+  <!-- Produce flame projectile: a small hurled mote of fire (reuses the fireball sprite), scaled damage. -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>RH_Projectile_ProduceFlame</defName>
+    <label>flame</label>
+    <thingClass>RimHeroes.Projectile_RHSpellDart</thingClass>
+    <graphicData>
+      <texPath>Things/RimHeroes/Projectiles/Fireball</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>38</speed>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
 
   <!-- ============ LEVEL 1 ============ -->
 

@@ -82,6 +82,9 @@ namespace RimHeroes
             Add("RH_Spiked",   mote: "RH_AuraMote", moteColor: new Color(0.50f, 0.50f, 0.20f), interval: 16, radius: 0.50f, rise: false); // Spike Growth
             Add("RH_Dazed",    glow: new Color(0.85f, 0.40f, 0.95f, 0.30f), glowSize: 1.6f,
                 mote: "RH_Mote_Spark", moteColor: new Color(0.90f, 0.50f, 1.00f), interval: 12, radius: 0.60f, rise: false); // Hypnotic Pattern
+
+            // Summons: the spiritual weapon carries a soft radiant-gold aura while it persists.
+            Add("RH_SummonLifespan", glow: new Color(1.00f, 0.93f, 0.55f, 0.45f), glowSize: 1.8f);
         }
 
         static void Add(string defName, Color glow = default, float glowSize = 2.0f, string mote = null,

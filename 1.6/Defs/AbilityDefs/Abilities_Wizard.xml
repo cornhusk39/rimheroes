@@ -64,13 +64,32 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
-        <damageDef>Blunt</damageDef>
-        <amount>4</amount>
-        <hits>3</hits>
+      <li Class="RimHeroes.CompProperties_AbilityLaunchVolley">
+        <projectileDef>RH_Projectile_MagicMissile</projectileDef>
+        <count>3</count>
+        <staggerTicks>7</staggerTicks>
       </li>
     </comps>
   </AbilityDef>
+
+  <!-- Magic missile projectile: a pink dart of force, three fired in quick succession, scaled damage. -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>RH_Projectile_MagicMissile</defName>
+    <label>magic missile</label>
+    <thingClass>RimHeroes.Projectile_RHSpellDart</thingClass>
+    <graphicData>
+      <texPath>Things/RimHeroes/Projectiles/MagicMissile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>4</damageAmountBase>
+      <speed>42</speed>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
 
   <!-- Level 1: self armor buff -->
   <AbilityDef ParentName="RH_SpellBase">

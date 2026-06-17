@@ -38,27 +38,28 @@
   <AbilityDef ParentName="RH_SpellBase">
     <defName>RH_Spell_SpiritualWeapon</defName>
     <label>spiritual weapon</label>
-    <description>A weapon of shimmering force takes shape in the air and slams into the chosen enemy. Consumes a level-2 spell slot.</description>
+    <description>A weapon of shimmering force takes shape in the air beside you and floats at your side, striking down enemies of its own accord. It lasts a few hours before fading. Casting again replaces the old weapon. Consumes a level-2 spell slot.</description>
     <iconPath>UI/RimHeroes/SpiritualWeapon</iconPath>
     <level>2</level>
-    <cooldownTicksRange>120</cooldownTicksRange>
-    <hostile>true</hostile>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <range>24.9</range>
+      <range>-1</range>
       <warmupTime>1</warmupTime>
-      <requireLineOfSight>true</requireLineOfSight>
       <targetParams>
-        <canTargetPawns>true</canTargetPawns>
-        <canTargetAnimals>true</canTargetAnimals>
-        <canTargetSelf>false</canTargetSelf>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
-        <damageDef>Blunt</damageDef>
-        <amount>14</amount>
-        <hits>1</hits>
+      <li Class="RimHeroes.CompProperties_AbilitySummon">
+        <pawnKind>RH_SpiritWeaponKind</pawnKind>
+        <durationTicks>10000</durationTicks>
+        <summonMessage>conjures a spiritual weapon.</summonMessage>
       </li>
     </comps>
   </AbilityDef>

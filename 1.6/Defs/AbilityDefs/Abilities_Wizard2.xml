@@ -104,13 +104,30 @@
       <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
-        <damageDef>Burn</damageDef>
-        <amount>18</amount>
-        <hits>1</hits>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>RH_Projectile_ChromaticOrb</projectileDef>
       </li>
     </comps>
   </AbilityDef>
+
+  <!-- Chromatic orb projectile: a glassy elemental sphere that spins and sheds sparks as it flies. -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>RH_Projectile_ChromaticOrb</defName>
+    <label>chromatic orb</label>
+    <thingClass>RimHeroes.Projectile_RHChromaticOrb</thingClass>
+    <graphicData>
+      <texPath>Things/RimHeroes/Projectiles/ChromaticOrb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <speed>32</speed>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
 
   <!-- ============ LEVEL 2 ============ -->
 

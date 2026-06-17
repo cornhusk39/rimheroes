@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff7ad6" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#ff4fc0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff4fc0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#ffc7ec"/>
+      <stop offset="100%" stop-color="#ff3fb8"/>
+    </linearGradient>
+  </defs>
+  <!-- soft halo -->
+  <ellipse cx="64" cy="64" rx="40" ry="58" fill="url(#glow)"/>
+  <!-- dart body: a pointed force bolt aiming up (north) -->
+  <path d="M64 14 L80 70 Q64 86 48 70 Z" fill="url(#body)"/>
+  <!-- white-hot core streak -->
+  <path d="M64 24 L70 68 Q64 78 58 68 Z" fill="#ffffff" opacity="0.85"/>
+  <!-- trailing sparkle tail -->
+  <path d="M58 78 L64 104 L70 78 Q64 90 58 78 Z" fill="#ff6fce" opacity="0.6"/>
+</svg>

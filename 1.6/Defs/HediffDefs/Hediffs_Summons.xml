@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Lifespan timer for temporary summons (e.g. Spiritual Weapon). The summoning ability sets the
+       remaining ticks; when it runs out the comp dissolves the pawn. -->
+  <HediffDef>
+    <defName>RH_SummonLifespan</defName>
+    <label>conjured</label>
+    <description>Sustained by magic for a limited time. When the magic fades, this being dissolves.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1</maxSeverity>
+    <defaultLabelColor>(1, 0.9, 0.5)</defaultLabelColor>
+    <comps>
+      <li Class="RimHeroes.HediffCompProperties_SummonLifespan" />
+    </comps>
+  </HediffDef>
+
+</Defs>

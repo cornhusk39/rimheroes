@@ -524,6 +524,8 @@ namespace RimHeroes
     public class CompProperties_AbilitySummon : CompProperties_AbilityEffect
     {
         public PawnKindDef pawnKind;
+        public int durationTicks = 0;    // 0 = permanent (until destroyed); >0 = timed summon that dissolves
+        public string summonMessage;     // verb phrase after the caster's name; null = imp default
 
         public CompProperties_AbilitySummon() => compClass = typeof(CompAbilityEffect_Summon);
     }
@@ -554,7 +556,20 @@ namespace RimHeroes
             // Bind the master so the familiar's think tree can follow and defend them.
             var devotion = familiar.health.AddHediff(RH_DefOf.RH_MimDevotion) as Hediff_MimDevotion;
             if (devotion != null) devotion.master = caster;
-            Messages.Message(caster.LabelShortCap + " summons a fiendish familiar.",
+
+            // Timed summons (e.g. Spiritual Weapon) get a lifespan hediff that dissolves them on expiry.
+            if (Props.durationTicks > 0)
+            {
+                var lifeDef = DefDatabase<HediffDef>.GetNamedSilentFail("RH_SummonLifespan");
+                if (lifeDef != null && familiar.health.AddHediff(lifeDef) is HediffWithComps life)
+                {
+                    var comp = life.TryGetComp<HediffComp_SummonLifespan>();
+                    if (comp != null) comp.ticksLeft = Props.durationTicks;
+                }
+            }
+
+            string verb = Props.summonMessage.NullOrEmpty() ? "summons a fiendish familiar." : Props.summonMessage;
+            Messages.Message(caster.LabelShortCap + " " + verb,
                 familiar, MessageTypeDefOf.PositiveEvent, historical: false);
         }
     }

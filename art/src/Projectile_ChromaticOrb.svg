@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#b0e0ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#b0e0ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glass" cx="38%" cy="34%" r="68%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#dff3ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#6fb7e6" stop-opacity="0.65"/>
+    </radialGradient>
+  </defs>
+  <!-- outer halo -->
+  <circle cx="64" cy="64" r="58" fill="url(#orbGlow)"/>
+  <!-- elemental swirl inside the glass: red / fire / leaf / arcane wedges -->
+  <g opacity="0.7">
+    <path d="M64 64 L64 18 A46 46 0 0 1 104 41 Z" fill="#ff5a3c"/>
+    <path d="M64 64 L104 41 A46 46 0 0 1 100 96 Z" fill="#ffd24a"/>
+    <path d="M64 64 L100 96 A46 46 0 0 1 40 104 Z" fill="#4fd06a"/>
+    <path d="M64 64 L40 104 A46 46 0 0 1 24 41 Z" fill="#7a6cff"/>
+    <path d="M64 64 L24 41 A46 46 0 0 1 64 18 Z" fill="#ff5ccd"/>
+  </g>
+  <!-- glassy sphere overlay -->
+  <circle cx="64" cy="64" r="46" fill="url(#glass)" opacity="0.6"/>
+  <circle cx="64" cy="64" r="46" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+  <!-- specular highlight -->
+  <ellipse cx="48" cy="46" rx="15" ry="10" fill="#ffffff" opacity="0.8"/>
+</svg>
