@@ -30,7 +30,7 @@ namespace RimHeroes
         private static readonly (string defName, int degree)[] TraitPool =
         {
             ("Industriousness", 2), ("Kind", 0), ("NaturalMood", 2), ("Nerves", 2), ("Ascetic", 0),
-            ("QuickSleeper", 0), ("NightOwl", 0), ("TooSmart", 1), ("GreatMemory", 0), ("Neat", 0),
+            ("QuickSleeper", 0), ("NightOwl", 0), ("TooSmart", 0), ("GreatMemory", 0), ("Neat", 0),
         };
 
         private enum ChoiceKind { Style, Favored, Pact, Secret, Trait, Feat, BonusFeat, Mim }
