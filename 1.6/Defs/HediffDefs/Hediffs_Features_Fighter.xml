@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Fighter class features (passive hediffs granted by level). Placeholder numbers. -->
+  <!-- Fighter class features (passive hediffs granted by level). -->
 
   <HediffDef Name="RH_FeatureBase" Abstract="True">
     <hediffClass>HediffWithComps</hediffClass>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- Mim job castes. Visuals follow the JOB, not the master's class.
-       pawnKind wired once the mim race exists (post work-AI spike). -->
+  <!-- Mim job castes. Visuals follow the JOB, not the master's class. -->
 
   <RimHeroes.MimJobDef>
     <defName>RH_Mim_Porter</defName>
