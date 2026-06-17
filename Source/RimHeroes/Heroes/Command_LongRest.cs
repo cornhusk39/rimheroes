@@ -6,6 +6,7 @@ namespace RimHeroes
 {
     /// <summary>The long-rest toggle, with a fill bar across the bottom showing how far the sleep has
     /// progressed (like vanilla deathrest). The bar only draws while a rest is underway.</summary>
+    [StaticConstructorOnStartup]
     public class Command_LongRest : Command_Toggle
     {
         public Func<float> progress;
