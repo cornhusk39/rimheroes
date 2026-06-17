@@ -1,6 +1,7 @@
 using RimWorld;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace RimHeroes
 {
@@ -62,9 +63,15 @@ namespace RimHeroes
             {
                 masterDeadTick = Find.TickManager.TicksGame;
                 leaveAtTick = masterDeadTick + PanicDurationTicks;
-                if (pawn.Spawned && PawnUtility.ShouldSendNotificationAbout(pawn))
+                if (pawn.Spawned)
                 {
-                    Messages.Message("RH_MimPanic".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.NegativeEvent);
+                    // Stop whatever the mim is doing (even sleeping) so the think tree re-evaluates into
+                    // the bereft panic path immediately, rather than finishing its current job first.
+                    pawn.jobs?.EndCurrentJob(JobCondition.InterruptForced);
+                    if (PawnUtility.ShouldSendNotificationAbout(pawn))
+                    {
+                        Messages.Message("RH_MimPanic".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.NegativeEvent);
+                    }
                 }
             }
             else if (state != DevotionState.Bereft)
