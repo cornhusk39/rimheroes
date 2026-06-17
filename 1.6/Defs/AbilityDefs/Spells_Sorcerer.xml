@@ -29,10 +29,13 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+      <li Class="RimHeroes.CompProperties_AbilityBeam">
         <damageDef>Burn</damageDef>
         <amount>16</amount>
         <hits>1</hits>
+        <style>Lightning</style>
+        <color>(0.62, 0.3, 0.92, 1)</color>
+        <innerColor>(0.4, 0.95, 0.45, 1)</innerColor>
       </li>
     </comps>
   </AbilityDef>
@@ -88,11 +91,13 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+      <li Class="RimHeroes.CompProperties_AbilityBeam">
         <damageDef>Burn</damageDef>
         <amount>12</amount>
         <hits>1</hits>
         <applyHediff>RH_Jolted</applyHediff>
+        <style>Lightning</style>
+        <color>(0.35, 0.95, 0.4, 1)</color>
       </li>
     </comps>
   </AbilityDef>

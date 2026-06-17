@@ -21,10 +21,15 @@
       <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+      <li Class="RimHeroes.CompProperties_AbilityBeam">
+        <damageDef>Blunt</damageDef>
         <amount>6</amount>
         <hits>1</hits>
         <applyHediff>RH_Chilled</applyHediff>
+        <style>Ray</style>
+        <color>(0.55, 0.85, 1.0, 1)</color>
+        <width>0.2</width>
+        <ticks>16</ticks>
       </li>
     </comps>
   </AbilityDef>

@@ -24,11 +24,13 @@
       <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+      <li Class="RimHeroes.CompProperties_AbilityBeam">
         <damageDef>Burn</damageDef>
         <amount>8</amount>
         <hits>1</hits>
         <applyHediff>RH_Jolted</applyHediff>
+        <style>Lightning</style>
+        <color>(0.5, 0.68, 1.0, 1)</color>
       </li>
     </comps>
   </AbilityDef>
@@ -129,10 +131,14 @@
       <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+      <li Class="RimHeroes.CompProperties_AbilityBeam">
         <damageDef>Burn</damageDef>
         <amount>7</amount>
         <hits>3</hits>
+        <style>Ray</style>
+        <color>(1.0, 0.5, 0.12, 1)</color>
+        <width>0.2</width>
+        <ticks>16</ticks>
       </li>
     </comps>
   </AbilityDef>
@@ -209,11 +215,13 @@
       <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+      <li Class="RimHeroes.CompProperties_AbilityBeam">
         <damageDef>Burn</damageDef>
         <amount>30</amount>
         <hits>1</hits>
         <applyHediff>RH_Jolted</applyHediff>
+        <style>Lightning</style>
+        <color>(0.45, 0.6, 1.0, 1)</color>
       </li>
     </comps>
   </AbilityDef>
@@ -377,10 +385,14 @@
       <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget">
+      <li Class="RimHeroes.CompProperties_AbilityBeam">
         <damageDef>Burn</damageDef>
         <amount>60</amount>
         <hits>1</hits>
+        <style>Ray</style>
+        <color>(0.95, 0.13, 0.1, 1)</color>
+        <width>0.22</width>
+        <ticks>16</ticks>
       </li>
     </comps>
   </AbilityDef>
