@@ -35,7 +35,9 @@
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
     <li>mooloh.dndmenagerie</li>
   </loadAfter>
-  <description>[h1]RimHeroes[/h1]
+  <description>[img]https://images.steamusercontent.com/ugc/10035557948060073630/700F63B6E09FE0C84BA28DE9D4716D16D15CEF45/[/img]
+
+[h1]RimHeroes[/h1]
 [i]Once in a while, a colonist is born for more.[/i]
 
 Most of your colonists are ordinary people. They farm, they haul, they patch each other up after a raid and carry on. Every so often, though, one of them turns out to be something bigger: a Hero, born with a Dungeons and Dragons class in their bones. A Hero climbs from level 1 to 20, learns real spells, wears armor that grows into legend, gathers a retinue of devoted little companions, and walks into dungeons that would kill anyone else in the colony.
@@ -59,6 +61,8 @@ RimHeroes is built on top of [b]Mooloh's D&amp;D Menagerie[/b]. The monsters tha
 [*][b]A retinue of mim companions[/b] that move in to cook, haul, dig, heal, and fight at your Hero's side.
 [*][b]Druid wildshape[/b] into real creatures, up to a full dragon at the height of their power.
 [/list]
+
+[img]https://images.steamusercontent.com/ugc/16238378865181349853/71B44D54E93E553889221730EB18D8B4FA9217FC/[/img]
 
 [h1]A hero, not a stat block[/h1]
 Every Hero carries a trait and a hidden class engine under the hood. They earn experience from ordinary colony life and from the fights only they can win, and every level makes them tougher. The milestone levels are where they pick up their signature class features.
@@ -84,6 +88,8 @@ Their armor is part of who they are. The [b]class vestment[/b] is bound to the H
 [/list]
 Heroes turn up on their own now and then. You can also make one yourself: hand any colonist a [b]class tome[/b], bought from exotic traders or looted off a fallen enemy Hero, and they wake up as the real thing.
 
+[img]https://images.steamusercontent.com/ugc/18074770911893860873/44CACC54EA475DE471ED744B587E096F1911139D/[/img]
+
 [h1]Real spellcasting[/h1]
 Eight of the twelve classes cast, and between them they share ninety spells running from cantrips up to ninth level. Magic uses spell slots the old fashioned way. Spend them, run dry, and earn them back by resting. A short rest gives a little back, a long rest gives back everything.
 [list]
@@ -93,10 +99,14 @@ Eight of the twelve classes cast, and between them they share ninety spells runn
 [/list]
 Set a spell to fire on its own, or hold it and cast it yourself when the moment counts.
 
+[img]https://images.steamusercontent.com/ugc/15732677197880314157/233E4560624DE3718124CF28A98C3626F4576896/[/img]
+
 [h1]A retinue of mims[/h1]
 Heroes do not work alone. As they level, small devoted creatures called [b]mims[/b] walk into the colony to serve them, each shaped for one job. Some keep the home running as porters, sweepers, diggers, cooks, growers, and doctors. Others go to war: a melee scrapper, a shield-bearing vanguard, a ranged quiller, and a spell-slinging wisp. At level 20 a Hero calls in one extra mim of their choosing.
 
 A mim is bound to its master. Lose one and a replacement shows up within days. Lose the master and the rest scatter in grief. A Hero with their whole retinue around them rests a lot easier.
+
+[img]https://images.steamusercontent.com/ugc/14055883178522211658/4C06E011E7ADBA6D0B2F10AF9418BF89228D8A52/[/img]
 
 [h1]Delve the dungeons[/h1]
 A growing colony starts drawing attention, and some of that attention is worth raiding back. A dungeon entrance can open right on your map, sit a short march away as a guarded site, or arrive as a quest. Put a party of Heroes together and head down.
@@ -109,6 +119,8 @@ A growing colony starts drawing attention, and some of that attention is worth r
 [*][b]Rewards[/b] worth the trip: inlays, experience candy, the rare Heroic Blessing, and a class's legendary capstone weapon.
 [/list]
 Once a Hero hits the level cap, a hooded stranger comes asking for shelter. Keep him alive past the hunters on his trail and he marks the resting place of your class's ultimate weapon.
+
+[img]https://images.steamusercontent.com/ugc/15662071753606976759/73DDD1BE7BF2ECD29668B0D79CD7129EC86C2C95/[/img]
 
 [h1]Wildshape and a fantasy bestiary[/h1]
 Your druids take the shapes of real creatures pulled from [b]D&amp;D Menagerie[/b]: a dire wolf, an owlbear, a giant elk, and at full power, a dragon. That same bestiary stocks the dungeons and the wilds with things that belong in a fantasy world. Drop to zero while shifted and you snap back to your own body, hurt but breathing, with no beast carcass left lying around.
