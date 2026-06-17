@@ -83,10 +83,22 @@ namespace RimHeroes
         public override void PostRemoved()
         {
             base.PostRemoved();
+            WildshapeFx.PlayShift(pawn); // a puff on the way out as well as in
             RebuildRenderTree();
             if (PawnUtility.ShouldSendNotificationAbout(pawn))
             {
                 Messages.Message("RH_WildshapeReverted".Translate(pawn.LabelShortCap), pawn, MessageTypeDefOf.NeutralEvent);
+            }
+        }
+
+        // 5e rule: a wildshaped druid that is knocked out reverts to their own form rather than fighting
+        // on as an incapacitated beast (a lethal blow is handled separately in Patch_Pawn_Kill_Wildshape).
+        public override void TickInterval(int delta)
+        {
+            base.TickInterval(delta);
+            if (pawn != null && pawn.Spawned && !pawn.Dead && pawn.Downed)
+            {
+                pawn.health.RemoveHediff(this);
             }
         }
 
@@ -258,6 +270,48 @@ namespace RimHeroes
                 oloc.y += 0.0234375f;
                 ov.Draw(oloc, pawn.Rotation, pawn);
             }
+        }
+    }
+
+    /// <summary>
+    /// 5e rule: when a wildshaped druid would be killed, they instead revert to their own form and
+    /// survive the blow badly hurt (excess damage carries over). A beast form never dies or leaves a
+    /// beast corpse. If the druid is unsalvageable even after reverting, they die as themselves.
+    /// </summary>
+    [HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
+    public static class Patch_Pawn_Kill_Wildshape
+    {
+        public static bool Prefix(Pawn __instance)
+        {
+            if (__instance?.health?.hediffSet == null) return true;
+            Hediff_Wildshape form = null;
+            var hediffs = __instance.health.hediffSet.hediffs;
+            for (int i = 0; i < hediffs.Count; i++)
+            {
+                if (hediffs[i] is Hediff_Wildshape w) { form = w; break; }
+            }
+            if (form == null) return true;
+
+            __instance.health.RemoveHediff(form); // revert to the druid's own form
+
+            // The beast form soaked most of the blow: pull the worst injuries back so the druid lives,
+            // left hurt (and likely downed). A still-fatal state (e.g. a destroyed vital part) falls through
+            // to a normal death as the druid - which leaves a human corpse, never a beast.
+            var hs = __instance.health.hediffSet;
+            foreach (var inj in hs.hediffs.OfType<Hediff_Injury>().ToList())
+            {
+                inj.Severity = Mathf.Max(0f, inj.Severity * 0.4f);
+                if (inj.Severity <= 0.01f) __instance.health.RemoveHediff(inj);
+            }
+            hs.DirtyCache();
+            if (__instance.health.ShouldBeDead()) return true;
+
+            if (PawnUtility.ShouldSendNotificationAbout(__instance))
+            {
+                Messages.Message("RH_WildshapeRevertStruck".Translate(__instance.LabelShortCap),
+                    __instance, MessageTypeDefOf.NegativeHealthEvent);
+            }
+            return false; // skip the kill: the druid reverted and survived
         }
     }
 

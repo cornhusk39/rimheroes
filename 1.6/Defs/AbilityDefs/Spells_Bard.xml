@@ -34,6 +34,9 @@
         <damageDef>Blunt</damageDef>
         <amount>12</amount>
         <hits>1</hits>
+        <radialBurstFleck>RH_Mote_Note</radialBurstFleck>
+        <radialBurstColor>(0.85, 0.35, 0.80)</radialBurstColor>
+        <radialBurstCount>12</radialBurstCount>
       </li>
     </comps>
   </AbilityDef>

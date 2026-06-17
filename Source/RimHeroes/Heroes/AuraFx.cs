@@ -16,6 +16,9 @@ namespace RimHeroes
         public static FleckDef RH_Fleck_HealBloom;
         public static FleckDef RH_Fleck_RangeRing;
         public static FleckDef RH_Fleck_RadiantFlash;
+        public static FleckDef RH_Fleck_DarkBurst;
+        public static FleckDef RH_Fleck_PowerWord;
+        public static FleckDef RH_Fleck_Slash;
         static RH_FleckDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(RH_FleckDefOf));
     }
 

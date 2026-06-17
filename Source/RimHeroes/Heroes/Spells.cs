@@ -256,6 +256,15 @@ namespace RimHeroes
         public float applyHediffSeverity = 1f;
         public Color flashColor = Color.clear;     // a radiant flash over the target (Divine Smite / Sacred Flame)
         public Color downColumnColor = Color.clear; // a descending light column onto the target (Sacred Flame)
+        public Color darkFlashColor = Color.clear;  // a murky dark puff over the target (Power Word Kill, Toll the Dead)
+        public FleckDef casterFleck;                // a fleck over the caster's head (Power Word Kill's spoken word)
+        public Color casterFleckColor = Color.white;
+        public FleckDef radialBurstFleck;           // motes flung outward from the target (Dissonant Whispers, Toll pulse)
+        public Color radialBurstColor = Color.white;
+        public int radialBurstCount = 10;
+        public FleckDef impactFleck;                // a claw/slash mark over the target (Pounce, Rend)
+        public Color impactFleckColor = Color.white;
+        public bool desiccateOnKill = false;        // if the target dies from this, wither its corpse at once (Power Word Kill)
 
         public CompProperties_AbilityDamageTarget() => compClass = typeof(CompAbilityEffect_DamageTarget);
     }
@@ -272,12 +281,21 @@ namespace RimHeroes
             {
                 return;
             }
-            DealTo(thing);
+            // On-target / caster VFX fires first, while the target is still alive to show it (a lethal
+            // hit would despawn the pawn before the fleck could attach).
             if (thing is Pawn fp)
             {
                 if (Props.flashColor.a > 0f) SpellFx.RadiantFlash(fp, Props.flashColor);
                 if (Props.downColumnColor.a > 0f) SpellFx.DownColumn(fp, Props.downColumnColor);
+                if (Props.darkFlashColor.a > 0f) SpellFx.DarkBurst(fp, Props.darkFlashColor);
+                if (Props.impactFleck != null) SpellFx.ImpactSlash(fp, Props.impactFleck, Props.impactFleckColor);
+                if (Props.radialBurstFleck != null) SpellFx.RadialBurst(fp, Props.radialBurstFleck, Props.radialBurstColor, Props.radialBurstCount);
             }
+            if (Props.casterFleck != null) SpellFx.CasterFleck(parent.pawn, Props.casterFleck, Props.casterFleckColor);
+
+            DealTo(thing);
+
+            if (Props.desiccateOnKill && thing is Pawn kp && kp.Dead) SpellFx.Desiccate(kp);
             // Sorcerer Twinned Spell: a single-target spell also strikes a second nearby foe.
             if (thing is Pawn && ClassFeatures.HasMetamagic(parent.pawn, "RH_Feat_Twinned"))
             {
@@ -467,6 +485,8 @@ namespace RimHeroes
                     || (Props.removeBadDiseases && h.def.makesSickThought);
                 if (match) { p.health.RemoveHediff(h); removed++; }
             }
+            // a soft cleansing shimmer over the target (Lesser Restoration, Cleansing Touch)
+            if (!p.Dead) SpellFx.RadiantFlash(p, new Color(0.80f, 1.0f, 0.90f));
         }
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
@@ -497,6 +517,10 @@ namespace RimHeroes
             var innerPawn = corpse.InnerPawn; // resurrection destroys the corpse - capture first
             if (innerPawn != null && ResurrectionUtility.TryResurrect(innerPawn))
             {
+                // a bright pulse of returning life + rising motes over the revived pawn
+                SpellFx.RadiantFlash(innerPawn, new Color(0.70f, 1.0f, 0.78f));
+                for (int i = 0; i < 6; i++)
+                    AuraFx.ThrowMote(innerPawn, new Color(0.62f, 1.0f, 0.72f), RH_FleckDefOf.RH_AuraMote);
                 Messages.Message("RH_Revivified".Translate(innerPawn.LabelShortCap, parent.pawn.LabelShortCap),
                     innerPawn, MessageTypeDefOf.PositiveEvent);
             }
@@ -526,6 +550,7 @@ namespace RimHeroes
         public PawnKindDef pawnKind;
         public int durationTicks = 0;    // 0 = permanent (until destroyed); >0 = timed summon that dissolves
         public string summonMessage;     // verb phrase after the caster's name; null = imp default
+        public Color arrivalFleckColor = Color.clear; // a small puff at the summon's arrival (a>0 to enable)
 
         public CompProperties_AbilitySummon() => compClass = typeof(CompAbilityEffect_Summon);
     }
@@ -551,6 +576,12 @@ namespace RimHeroes
             var familiar = PawnGenerator.GeneratePawn(new PawnGenerationRequest(Props.pawnKind, caster.Faction));
             var cell = CellFinder.RandomClosewalkCellNear(caster.Position, map, 3);
             GenSpawn.Spawn(familiar, cell, map);
+            if (Props.arrivalFleckColor.a > 0f)
+            {
+                for (int i = 0; i < 8; i++)
+                    FleckMaker.ThrowDustPuffThick(familiar.DrawPos + new Vector3(Rand.Range(-0.3f, 0.3f), 0f, Rand.Range(-0.3f, 0.3f)),
+                        map, Rand.Range(1.0f, 1.7f), Props.arrivalFleckColor);
+            }
             if (familiar.connections == null) familiar.connections = new Pawn_ConnectionsTracker(familiar);
             familiar.connections.ConnectTo(caster);
             // Bind the master so the familiar's think tree can follow and defend them.

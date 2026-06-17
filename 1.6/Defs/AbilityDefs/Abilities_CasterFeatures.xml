@@ -125,6 +125,7 @@
     <comps>
       <li Class="RimHeroes.CompProperties_AbilitySummon">
         <pawnKind>RH_ImpKind</pawnKind>
+        <arrivalFleckColor>(1.0, 0.55, 0.20, 0.9)</arrivalFleckColor>
       </li>
     </comps>
   </AbilityDef>

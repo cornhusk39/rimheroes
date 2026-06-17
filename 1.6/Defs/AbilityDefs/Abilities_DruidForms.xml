@@ -21,7 +21,7 @@
       <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget"><damageDef>Bite</damageDef><amount>22</amount><hits>1</hits></li>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget"><damageDef>Bite</damageDef><amount>22</amount><hits>1</hits><impactFleck>RH_Fleck_Slash</impactFleck><impactFleckColor>(1.0, 0.85, 0.8)</impactFleckColor></li>
     </comps>
   </AbilityDef>
 
@@ -41,7 +41,7 @@
       <targetParams><canTargetPawns>true</canTargetPawns><canTargetAnimals>true</canTargetAnimals><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="RimHeroes.CompProperties_AbilityDamageTarget"><damageDef>Scratch</damageDef><amount>28</amount><hits>1</hits><bonusVsWoundedFactor>0.6</bonusVsWoundedFactor></li>
+      <li Class="RimHeroes.CompProperties_AbilityDamageTarget"><damageDef>Scratch</damageDef><amount>28</amount><hits>1</hits><bonusVsWoundedFactor>0.6</bonusVsWoundedFactor><impactFleck>RH_Fleck_Slash</impactFleck><impactFleckColor>(1.0, 0.82, 0.78)</impactFleckColor></li>
     </comps>
   </AbilityDef>
 

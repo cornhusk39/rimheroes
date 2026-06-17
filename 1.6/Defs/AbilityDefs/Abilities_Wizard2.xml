@@ -56,6 +56,10 @@
         <amount>6</amount>
         <hits>1</hits>
         <bonusVsWoundedFactor>1.2</bonusVsWoundedFactor>
+        <darkFlashColor>(0.18, 0.12, 0.24, 0.7)</darkFlashColor>
+        <radialBurstFleck>RH_Mote_Wisp</radialBurstFleck>
+        <radialBurstColor>(0.55, 0.50, 0.62)</radialBurstColor>
+        <radialBurstCount>10</radialBurstCount>
       </li>
     </comps>
   </AbilityDef>
@@ -544,6 +548,11 @@
         <damageDef>Blunt</damageDef>
         <amount>120</amount>
         <hits>1</hits>
+        <casterFleck>RH_Fleck_PowerWord</casterFleck>
+        <casterFleckColor>(0.72, 0.45, 1.0)</casterFleckColor>
+        <flashColor>(0.62, 0.22, 0.88)</flashColor>
+        <darkFlashColor>(0.10, 0.03, 0.16, 0.85)</darkFlashColor>
+        <desiccateOnKill>true</desiccateOnKill>
       </li>
     </comps>
   </AbilityDef>

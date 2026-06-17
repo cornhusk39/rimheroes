@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- stylized "word of power" speech bubble: drawn light so it tints to purple at cast -->
+  <g>
+    <!-- bubble body -->
+    <rect x="34" y="40" width="188" height="118" rx="34" fill="#f3ecff" stroke="#cdb7ff" stroke-width="6"/>
+    <!-- tail pointing down toward the caster -->
+    <path d="M104 150 L120 206 L150 154 Z" fill="#f3ecff" stroke="#cdb7ff" stroke-width="6" stroke-linejoin="round"/>
+    <!-- jagged arcane glyphs inside (the spoken word) -->
+    <g stroke="#6a3fb0" stroke-width="9" stroke-linecap="round" fill="none">
+      <path d="M64 78 L64 122 M64 100 L86 100"/>
+      <path d="M108 76 L100 122 L124 122"/>
+      <path d="M150 122 L150 78 L172 100 L150 100"/>
+      <path d="M196 78 L196 122 M196 78 L184 78 M196 78 L208 78"/>
+    </g>
+  </g>
+</svg>

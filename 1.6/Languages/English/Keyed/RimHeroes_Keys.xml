@@ -49,6 +49,7 @@
   <RH_RevertForm>Revert form</RH_RevertForm>
   <RH_RevertFormDesc>Shed the beast shape and return to your own.</RH_RevertFormDesc>
   <RH_WildshapeReverted>{0} returns to their natural shape.</RH_WildshapeReverted>
+  <RH_WildshapeRevertStruck>{0}'s wildshape form is struck down, and they revert to their own shape, badly hurt.</RH_WildshapeRevertStruck>
   <RH_AlreadyHero>{0} already walks a hero's path.</RH_AlreadyHero>
   <RH_TomeUsedLabel>{0}: a hero awakens</RH_TomeUsedLabel>
   <RH_TomeUsedText>{0} has pored over the tome and awakened as a {1}. That destiny is theirs now, and there is no unmaking it.</RH_TomeUsedText>

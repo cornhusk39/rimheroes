@@ -111,6 +111,59 @@
     </graphicData>
   </FleckDef>
 
+  <!-- Dark burst: a murky puff over a struck pawn for death magic (Power Word Kill, Toll the Dead).
+       Transparent (not additive) so a dark/black tint actually darkens rather than glows. -->
+  <FleckDef>
+    <defName>RH_Fleck_DarkBurst</defName>
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.06</fadeInTime>
+    <solidTime>0.12</solidTime>
+    <fadeOutTime>0.45</fadeOutTime>
+    <growthRate>1.1</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <texPath>Things/RimHeroes/Vestments/Effects/AuraGlow</texPath>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+  </FleckDef>
+
+  <!-- Power word: a stylized speech bubble that briefly rises over the caster when a word of power is
+       spoken (Power Word Kill). Tinted purple per instance. -->
+  <FleckDef>
+    <defName>RH_Fleck_PowerWord</defName>
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.12</fadeInTime>
+    <solidTime>0.55</solidTime>
+    <fadeOutTime>0.5</fadeOutTime>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <texPath>Things/RimHeroes/Effects/PowerWord</texPath>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+  </FleckDef>
+
+  <!-- Claw slash: a quick rake mark over a struck pawn for wildshape melee (Pounce, Rend). Tinted per
+       instance; Transparent so the white strokes take the colour. -->
+  <FleckDef>
+    <defName>RH_Fleck_Slash</defName>
+    <fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.03</fadeInTime>
+    <solidTime>0.08</solidTime>
+    <fadeOutTime>0.26</fadeOutTime>
+    <growthRate>0.4</growthRate>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <texPath>Things/RimHeroes/Effects/Slash</texPath>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+  </FleckDef>
+
   <!-- Range ring: a thin circular outline drawn at the caster for ~0.8s to show a radius spell's reach.
        Non-glowing (Transparent), scaled to 2*radius and tinted at ~60% alpha per instance. -->
   <FleckDef>

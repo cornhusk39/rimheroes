@@ -60,6 +60,7 @@
         <pawnKind>RH_SpiritWeaponKind</pawnKind>
         <durationTicks>10000</durationTicks>
         <summonMessage>conjures a spiritual weapon.</summonMessage>
+        <arrivalFleckColor>(1.0, 0.92, 0.55, 0.85)</arrivalFleckColor>
       </li>
     </comps>
   </AbilityDef>
