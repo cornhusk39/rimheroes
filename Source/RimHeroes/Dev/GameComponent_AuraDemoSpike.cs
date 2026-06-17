@@ -8,7 +8,7 @@ namespace RimHeroes
     /// Aura showcase: launch with -quicktest -rhaurademo [-rhvestclass=RH_Sorcerer].
     /// Spawns one L20 hero of the class, then takes a burst of screenshots WITHOUT pausing so the
     /// pulsing glow and drifting motes animate across frames, then exits. The frames are assembled
-    /// into a filmstrip offline (tools/make-aura-strip.mjs).
+    /// into a filmstrip offline.
     /// </summary>
     public class GameComponent_AuraDemoSpike : GameComponent
     {

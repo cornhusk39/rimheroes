@@ -6,8 +6,8 @@ namespace RimHeroes
 {
     /// <summary>
     /// Vanilla texture dump: launch with -quicktest -rhtexdump. Blits the humanlike body and
-    /// head textures into readable copies and writes PNGs next to the mod (tools/vanilla_dump/)
-    /// so vestment art can be drawn against exact silhouettes. Then exits.
+    /// head textures into readable copies and writes PNGs next to the mod so vestment art can be
+    /// drawn against exact silhouettes. Then exits.
     /// </summary>
     public class GameComponent_TexDumpSpike : GameComponent
     {
