@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Caster heroes hunt marked animals by casting their offensive cantrip from range. Martial heroes
+       keep using the vanilla melee hunt work-giver; this one only ever gives a job to a caster (it needs
+       an offensive cantrip), so the two never fight over the same hunter. -->
+  <WorkGiverDef>
+    <defName>RH_HeroCantripHunt</defName>
+    <label>hunt with spells</label>
+    <giverClass>RimHeroes.WorkGiver_HeroCantripHunt</giverClass>
+    <workType>Hunting</workType>
+    <priorityInType>60</priorityInType>
+    <verb>hunt</verb>
+    <gerund>hunting</gerund>
+    <prioritized>true</prioritized>
+  </WorkGiverDef>
+
+</Defs>

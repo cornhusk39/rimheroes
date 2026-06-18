@@ -617,10 +617,6 @@ namespace RimHeroes
             {
                 return; // already casting: one cast at a time, let it finish
             }
-            if (TryCantripHunt())
-            {
-                return; // a hunting caster flings its cantrip at the prey
-            }
             if (pawn.IsColonistPlayerControlled)
             {
                 TickAutocastPlayer();
@@ -630,30 +626,6 @@ namespace RimHeroes
                 // AI heroes (enemy raiders, allied fighters) use their whole kit while fighting.
                 TickAutocastAI();
             }
-        }
-
-        /// <summary>A caster hero on a hunt job opens up with its offensive cantrip on the prey, casting
-        /// from range instead of walking up to club it with a staff. Returns true once it queues a cast.</summary>
-        private bool TryCantripHunt()
-        {
-            var job = pawn.CurJob;
-            if (job == null || job.def != JobDefOf.Hunt || !(job.targetA.Thing is Pawn prey) || prey.Dead)
-            {
-                return false;
-            }
-            var cantrip = HeroHunt.OffensiveCantrip(pawn);
-            if (cantrip == null || !cantrip.CanCast)
-            {
-                return false;
-            }
-            float range = cantrip.verb?.verbProps?.range ?? 24f;
-            if (!pawn.Position.InHorDistOf(prey.Position, range)
-                || !GenSight.LineOfSight(pawn.Position, prey.Position, pawn.Map, skipFirstCell: true))
-            {
-                return false; // close the distance first; the hunt job keeps pathing toward the prey
-            }
-            cantrip.QueueCastingJob(prey, prey);
-            return true;
         }
 
         // Player heroes: opt-in per-ability toggles; offense fires while drafted or when defending an attack.
