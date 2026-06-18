@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using RimWorld.Planet;
@@ -151,6 +152,52 @@ namespace RimHeroes
                     }
                 }
                 return false;
+            }
+        }
+
+        // A self-only ability (wildshape, self-buffs): the one valid target is always the caster, so it
+        // should fire on click rather than make the player aim a targeter at their own pawn (which, with
+        // these verbs, often refuses every click).
+        private bool IsSelfCastOnly
+        {
+            get
+            {
+                var tp = def.verbProperties?.targetParams;
+                return tp != null && tp.canTargetSelf && !tp.canTargetPawns
+                       && !tp.canTargetLocations && !tp.canTargetBuildings && !tp.canTargetItems;
+            }
+        }
+
+        public override IEnumerable<Command> GetGizmos()
+        {
+            foreach (var cmd in base.GetGizmos())
+            {
+                // Replace the vanilla aim-a-target command with a one-click self-cast for self-only spells.
+                if (IsSelfCastOnly && cmd.GetType().Name == "Command_Ability")
+                {
+                    bool disabled = GizmoDisabled(out string reason);
+                    yield return new Command_Action
+                    {
+                        defaultLabel = cmd.defaultLabel,
+                        defaultDesc = cmd.defaultDesc,
+                        icon = cmd.icon,
+                        iconAngle = cmd.iconAngle,
+                        iconOffset = cmd.iconOffset,
+                        Disabled = disabled,
+                        disabledReason = reason,
+                        action = () =>
+                        {
+                            if (!GizmoDisabled(out _))
+                            {
+                                QueueCastingJob(pawn, pawn);
+                            }
+                        }
+                    };
+                }
+                else
+                {
+                    yield return cmd;
+                }
             }
         }
 

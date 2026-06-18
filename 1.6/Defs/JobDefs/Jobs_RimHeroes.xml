@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- A caster hero hunting marked prey with its cantrip (see JobDriver_CantripHunt). -->
+  <JobDef>
+    <defName>RH_CantripHunt</defName>
+    <driverClass>RimHeroes.JobDriver_CantripHunt</driverClass>
+    <reportString>hunting TargetA.</reportString>
+    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+  </JobDef>
+
+</Defs>
