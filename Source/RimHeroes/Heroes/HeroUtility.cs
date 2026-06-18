@@ -77,7 +77,26 @@ namespace RimHeroes
                 var vestment = (Hediff_ClassVestment)pawn.health.AddHediff(classDef.vestmentHediff);
                 vestment.SetTierForLevel(hediff.level);
             }
+            StripHeroApparel(pawn);
             return hediff;
+        }
+
+        /// <summary>The vestment is the hero's only garment, so drop everything they were wearing (the
+        /// player keeps the items on the ground) and let the apparel block keep it that way.</summary>
+        private static void StripHeroApparel(Pawn pawn)
+        {
+            if (pawn.apparel == null || pawn.apparel.WornApparelCount == 0)
+            {
+                return;
+            }
+            if (pawn.Spawned && pawn.MapHeld != null)
+            {
+                pawn.apparel.DropAll(pawn.PositionHeld, forbid: false);
+            }
+            else
+            {
+                pawn.apparel.DestroyAll(); // no map to drop onto (caravan/world pawn): the gear is consumed
+            }
         }
 
         /// <summary>
