@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -24,8 +26,24 @@ namespace RimHeroes
         }
     }
 
-    /// <summary>Stops a caster hero from taking the vanilla (melee) hunt job, so it hunts only through
-    /// WorkGiver_HeroCantripHunt and stays at range instead of walking up to club the prey.</summary>
+    /// <summary>Takes caster heroes out of vanilla (melee) hunting at the scan level: the vanilla
+    /// work-giver sees no prey for them, so it never offers (and then fails to deliver) a melee hunt job.
+    /// They hunt only through WorkGiver_HeroCantripHunt, staying at range. Emptying the scan list avoids
+    /// the "provided target but yielded no job" desync that nulling JobOnThing alone would cause.</summary>
+    [HarmonyPatch(typeof(WorkGiver_HunterHunt), "PotentialWorkThingsGlobal")]
+    public static class Patch_WorkGiver_HunterHunt_PotentialWorkThingsGlobal
+    {
+        public static void Postfix(Pawn pawn, ref IEnumerable<Thing> __result)
+        {
+            if (HeroUtility.IsHero(pawn) && HeroHunt.OffensiveCantrip(pawn) != null)
+            {
+                __result = Enumerable.Empty<Thing>();
+            }
+        }
+    }
+
+    /// <summary>Belt-and-suspenders for a force-ordered (right-click) hunt: a caster hero never melee-hunts,
+    /// so refuse the vanilla job there too.</summary>
     [HarmonyPatch(typeof(WorkGiver_HunterHunt), "JobOnThing")]
     public static class Patch_WorkGiver_HunterHunt_JobOnThing
     {
