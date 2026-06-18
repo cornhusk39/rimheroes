@@ -83,6 +83,41 @@ namespace RimHeroes
             Add("RH_Dazed",    glow: new Color(0.85f, 0.40f, 0.95f, 0.30f), glowSize: 1.6f,
                 mote: "RH_Mote_Spark", moteColor: new Color(0.90f, 0.50f, 1.00f), interval: 12, radius: 0.60f, rise: false); // Hypnotic Pattern
 
+            // ===== Self/ally buffs (warm glow, rising sparks) =====
+            Add("RH_Hasted",    glow: new Color(1.00f, 0.95f, 0.45f, 0.35f), glowSize: 1.7f,
+                mote: "RH_Mote_Spark", moteColor: new Color(1.00f, 0.95f, 0.55f), interval: 7, radius: 0.50f, rise: true);  // Haste
+            Add("RH_Blessed",   glow: new Color(1.00f, 0.93f, 0.70f, 0.40f), glowSize: 1.8f,
+                mote: "RH_Mote_Spark", moteColor: new Color(1.00f, 0.95f, 0.75f), interval: 18, radius: 0.50f, rise: true); // Bless
+            Add("RH_Aided",     glow: new Color(0.55f, 0.95f, 0.55f, 0.32f), glowSize: 1.7f);                                // Aid
+            Add("RH_MageArmor", glow: new Color(0.45f, 0.65f, 1.00f, 0.30f), glowSize: 1.6f);                                // Mage Armor
+            Add("RH_DeathWard", glow: new Color(0.95f, 0.95f, 0.80f, 0.35f), glowSize: 1.9f);                                // Death Ward
+            Add("RH_Guided",    glow: new Color(0.85f, 0.90f, 1.00f, 0.25f), glowSize: 1.5f);                                // Guidance
+            Add("RH_Couraged",  glow: new Color(1.00f, 0.82f, 0.40f, 0.30f), glowSize: 1.7f);                                // Aura of Courage (ally)
+            Add("RH_Heroism",   glow: new Color(1.00f, 0.75f, 0.35f, 0.35f), glowSize: 1.8f);                                // Heroism
+            Add("RH_Rage",      glow: new Color(0.95f, 0.25f, 0.18f, 0.38f), glowSize: 1.9f,
+                mote: "RH_Mote_Spark", moteColor: new Color(1.00f, 0.40f, 0.20f), interval: 12, radius: 0.60f, rise: true); // Barbarian Rage
+            Add("RH_Overcharge",glow: new Color(0.75f, 0.45f, 1.00f, 0.40f), glowSize: 1.8f,
+                mote: "RH_Mote_Spark", moteColor: new Color(0.85f, 0.55f, 1.00f), interval: 9, radius: 0.55f, rise: true);  // Font of Magic
+            Add("RH_Inspired",  glow: new Color(0.55f, 0.85f, 1.00f, 0.30f), glowSize: 1.6f,
+                mote: "RH_AuraMote", moteColor: new Color(0.70f, 0.90f, 1.00f), interval: 16, radius: 0.50f, rise: true);   // Bardic Inspiration
+            Add("RH_BardicInspiration", glow: new Color(0.55f, 0.85f, 1.00f, 0.30f), glowSize: 1.6f,
+                mote: "RH_AuraMote", moteColor: new Color(0.70f, 0.90f, 1.00f), interval: 16, radius: 0.50f, rise: true);
+
+            // ===== Debuffs (swirling motes; cold/dark glows) =====
+            Add("RH_Slowed",    glow: new Color(0.30f, 0.35f, 0.55f, 0.30f), glowSize: 1.6f,
+                mote: "RH_AuraMote", moteColor: new Color(0.40f, 0.45f, 0.65f), interval: 16, radius: 0.55f, rise: false);  // Slow
+            Add("RH_Chilled",   mote: "RH_AuraMote", moteColor: new Color(0.65f, 0.85f, 1.00f), interval: 14, radius: 0.55f, rise: false); // cold
+            Add("RH_Jolted",    glow: new Color(0.70f, 0.85f, 1.00f, 0.35f), glowSize: 1.6f,
+                mote: "RH_Mote_Spark", moteColor: new Color(0.80f, 0.92f, 1.00f), interval: 6, radius: 0.55f, rise: false); // lightning
+            Add("RH_Held",      glow: new Color(1.00f, 0.85f, 0.35f, 0.35f), glowSize: 1.6f,
+                mote: "RH_AuraMote", moteColor: new Color(1.00f, 0.88f, 0.45f), interval: 18, radius: 0.45f, rise: false);  // Hold Person/Monster
+            Add("RH_Confused",  mote: "RH_AuraMote", moteColor: new Color(0.75f, 0.45f, 0.95f), interval: 12, radius: 0.60f, rise: false); // Confusion
+            Add("RH_Frightened",mote: "RH_AuraMote", moteColor: new Color(0.45f, 0.20f, 0.55f), interval: 12, radius: 0.60f, rise: false); // Fear
+            Add("RH_Baned",     mote: "RH_AuraMote", moteColor: new Color(0.55f, 0.15f, 0.20f), interval: 14, radius: 0.55f, rise: false); // Bane
+            Add("RH_Marked",    mote: "RH_AuraMote", moteColor: new Color(0.85f, 0.30f, 0.25f), interval: 18, radius: 0.45f, rise: false); // Hunter's Mark
+            Add("RH_Snared",    mote: "RH_AuraMote", moteColor: new Color(0.35f, 0.65f, 0.25f), interval: 14, radius: 0.50f, rise: false); // Ensnaring Strike
+            Add("RH_Stunned",   mote: "RH_Mote_Spark", moteColor: new Color(1.00f, 0.95f, 0.55f), interval: 8, radius: 0.45f, rise: false); // Stun
+
             // Summons: the spiritual weapon carries a soft radiant-gold aura while it persists.
             Add("RH_SummonLifespan", glow: new Color(1.00f, 0.93f, 0.55f, 0.45f), glowSize: 1.8f);
         }
