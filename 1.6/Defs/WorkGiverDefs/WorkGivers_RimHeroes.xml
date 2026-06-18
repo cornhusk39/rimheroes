@@ -12,7 +12,6 @@
     <priorityInType>60</priorityInType>
     <verb>hunt</verb>
     <gerund>hunting</gerund>
-    <prioritized>true</prioritized>
   </WorkGiverDef>
 
 </Defs>
