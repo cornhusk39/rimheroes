@@ -189,12 +189,7 @@
       <targetParams><canTargetLocations>true</canTargetLocations><canTargetPawns>false</canTargetPawns><canTargetSelf>false</canTargetSelf></targetParams>
     </verbProperties>
     <comps>
-      <li Class="CompProperties_AbilityTeleport">
-        <compClass>CompAbilityEffect_Teleport</compClass>
-        <destination>Selected</destination>
-        <requiresLineOfSight>true</requiresLineOfSight>
-        <range>24.9</range>
-      </li>
+      <li Class="RimHeroes.CompProperties_AbilityBlink" />
     </comps>
   </AbilityDef>
 

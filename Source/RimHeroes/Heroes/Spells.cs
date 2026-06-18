@@ -162,9 +162,12 @@ namespace RimHeroes
         {
             get
             {
+                // Self-only = can target the caster but not other pawns or ground. canTargetBuildings/Items
+                // default to true and are irrelevant for a one-click self-buff, so they are not checked
+                // (requiring them false here is what made Mirror Image and friends fall through to the
+                // broken targeter).
                 var tp = def.verbProperties?.targetParams;
-                return tp != null && tp.canTargetSelf && !tp.canTargetPawns
-                       && !tp.canTargetLocations && !tp.canTargetBuildings && !tp.canTargetItems;
+                return tp != null && tp.canTargetSelf && !tp.canTargetPawns && !tp.canTargetLocations;
             }
         }
 
