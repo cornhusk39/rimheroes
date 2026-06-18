@@ -14,7 +14,17 @@ namespace RimHeroes
     /// </summary>
     public class Hediff_Wildshape : HediffWithComps
     {
-        public override bool ShouldRemove => base.ShouldRemove;
+        // A form ends only when its duration runs out (the Disappears comp) or via the explicit
+        // downed/kill reverts below. It must NOT auto-cure from low severity (base.ShouldRemove), which
+        // would snap the druid back to human the instant the form is applied.
+        public override bool ShouldRemove
+        {
+            get
+            {
+                var disappears = this.TryGetComp<HediffComp_Disappears>();
+                return disappears != null && disappears.CompShouldRemove;
+            }
+        }
 
         private Graphic beastGraphic;
         private Graphic overlayGraphic;
@@ -67,6 +77,14 @@ namespace RimHeroes
         public override void PostAdd(DamageInfo? dinfo)
         {
             base.PostAdd(dinfo);
+            // The ability's GiveHediff applies the form with a zero duration (it carries no ability-level
+            // lifespan), which would expire it on the very next tick. Restore the form's own duration.
+            var disappears = this.TryGetComp<HediffComp_Disappears>();
+            if (disappears != null && disappears.ticksToDisappear <= 0
+                && disappears.props is HediffCompProperties_Disappears dp)
+            {
+                disappears.ticksToDisappear = dp.disappearsAfterTicks.RandomInRange;
+            }
             // One form at a time: taking a new shape ends the previous one.
             var hediffs = pawn.health.hediffSet.hediffs;
             for (int i = hediffs.Count - 1; i >= 0; i--)
