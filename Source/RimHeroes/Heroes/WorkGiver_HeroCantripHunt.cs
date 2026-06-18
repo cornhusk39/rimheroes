@@ -42,18 +42,28 @@ namespace RimHeroes
             {
                 return false;
             }
-            var cantrip = HeroHunt.OffensiveCantrip(pawn);
-            if (cantrip == null || !cantrip.CanCast)
-            {
-                return false;
-            }
-            return pawn.CanReserve(t, 1, -1, null, forced);
+            // Note: no cooldown check here. While the cantrip recharges we still claim the job and hand
+            // back a short hold-position wait below, so the hunter stays put instead of flicking to idle.
+            return HeroHunt.OffensiveCantrip(pawn) != null && pawn.CanReserve(t, 1, -1, null, forced);
         }
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             var cantrip = HeroHunt.OffensiveCantrip(pawn);
-            return cantrip?.GetJob(t, t);
+            if (cantrip == null)
+            {
+                return null;
+            }
+            if (cantrip.CanCast)
+            {
+                return cantrip.GetJob(t, t); // the ability job paths only to spell range, then casts
+            }
+            // Cantrip still on cooldown: hold near the prey, facing it, and re-check shortly rather than
+            // dropping the hunt and wandering off (which read as a rapid idle/hunt flicker).
+            Job wait = JobMaker.MakeJob(JobDefOf.Wait_Combat, t);
+            wait.expiryInterval = 45;
+            wait.checkOverrideOnExpire = true;
+            return wait;
         }
     }
 }
