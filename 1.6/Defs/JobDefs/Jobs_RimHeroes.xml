@@ -6,7 +6,6 @@
     <defName>RH_CantripHunt</defName>
     <driverClass>RimHeroes.JobDriver_CantripHunt</driverClass>
     <reportString>hunting TargetA.</reportString>
-    <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
   </JobDef>
 
 </Defs>
