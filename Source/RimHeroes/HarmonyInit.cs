@@ -7,7 +7,7 @@ namespace RimHeroes
     [StaticConstructorOnStartup]
     public static class HarmonyInit
     {
-        public const string HarmonyId = "arcanicap.rimheroes";
+        public const string HarmonyId = "cornhusk39.rimheroes";
 
         static HarmonyInit()
         {
