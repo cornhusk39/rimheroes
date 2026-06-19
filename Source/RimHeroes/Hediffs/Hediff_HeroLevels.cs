@@ -619,6 +619,16 @@ namespace RimHeroes
             }
             if (pawn.IsColonistPlayerControlled)
             {
+                // Obey explicit orders: never autocast over a player move or attack command. Autocast only
+                // kicks in when a drafted caster is otherwise idle, so move/attack commands are respected.
+                var cur = pawn.CurJob;
+                if (cur != null && (cur.playerForced
+                    || cur.def == JobDefOf.Goto
+                    || cur.def == JobDefOf.AttackMelee
+                    || cur.def == JobDefOf.AttackStatic))
+                {
+                    return;
+                }
                 TickAutocastPlayer();
             }
             else if (HeroAutocast.InCombat(pawn))
