@@ -29,32 +29,56 @@ namespace RimHeroes
             {
                 return; // let the map settle and colonists spawn first
             }
-            var pawn = map.mapPawns.FreeColonistsSpawned
-                .FirstOrDefault(p => p.RaceProps.Humanlike && !HeroUtility.IsHero(p));
-            if (pawn == null)
-            {
-                pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist, Faction.OfPlayer);
-                GenSpawn.Spawn(pawn, map.Center, map);
-            }
-            string className = ArgValue("rhclass") ?? "RH_Fighter";
-            int level = int.TryParse(ArgValue("rhlevel"), out int lvl) ? lvl : 1;
-            var cls = DefDatabase<HeroClassDef>.GetNamedSilentFail(className);
-            if (cls == null)
-            {
-                done = true;
-                return;
-            }
-            var hero = HeroUtility.MakeHero(pawn, cls);
-            HeroUtility.GrantStarterWeapon(pawn, cls);
-            hero?.SetLevelDirect(level);
             done = true;
-            Messages.Message($"{pawn.LabelShortCap} is now a level {level} {cls.label}.", pawn, MessageTypeDefOf.PositiveEvent);
+            int level = int.TryParse(ArgValue("rhlevel"), out int lvl) ? lvl : 1;
+            string className = ArgValue("rhclass") ?? "RH_Fighter";
+            IntVec3 anchor = map.Center;
+
+            if (className.Equals("all", StringComparison.OrdinalIgnoreCase))
+            {
+                var classes = DefDatabase<HeroClassDef>.AllDefsListForReading;
+                foreach (var cls in classes)
+                {
+                    MakeHeroNear(map, anchor + new IntVec3(0, 0, 8), cls, level);
+                }
+                Messages.Message($"Spawned all {classes.Count} hero classes at level {level}.", MessageTypeDefOf.PositiveEvent);
+            }
+            else
+            {
+                var cls = DefDatabase<HeroClassDef>.GetNamedSilentFail(className);
+                if (cls != null)
+                {
+                    var pawn = map.mapPawns.FreeColonistsSpawned
+                                   .FirstOrDefault(p => p.RaceProps.Humanlike && !HeroUtility.IsHero(p))
+                               ?? MakeColonist(map, anchor);
+                    var hero = HeroUtility.MakeHero(pawn, cls);
+                    HeroUtility.GrantStarterWeapon(pawn, cls);
+                    hero?.SetLevelDirect(level);
+                    Messages.Message($"{pawn.LabelShortCap} is now a level {level} {cls.label}.", pawn, MessageTypeDefOf.PositiveEvent);
+                }
+            }
 
             int targets = int.TryParse(ArgValue("rhtargets"), out int n) ? n : 0;
             if (targets > 0)
             {
-                SpawnTargets(map, pawn.Position, targets);
+                SpawnTargets(map, anchor + new IntVec3(0, 0, -10), targets);
             }
+        }
+
+        private static Pawn MakeColonist(Map map, IntVec3 near)
+        {
+            var pawn = PawnGenerator.GeneratePawn(PawnKindDefOf.Colonist, Faction.OfPlayer);
+            IntVec3 cell = CellFinder.RandomClosewalkCellNear(near, map, 10);
+            GenSpawn.Spawn(pawn, cell.IsValid ? cell : near, map);
+            return pawn;
+        }
+
+        private static void MakeHeroNear(Map map, IntVec3 near, HeroClassDef cls, int level)
+        {
+            var pawn = MakeColonist(map, near);
+            var hero = HeroUtility.MakeHero(pawn, cls);
+            HeroUtility.GrantStarterWeapon(pawn, cls);
+            hero?.SetLevelDirect(level);
         }
 
         // Spawns stationary hostile dummies near the hero for spell testing: long-stunned so they stand
