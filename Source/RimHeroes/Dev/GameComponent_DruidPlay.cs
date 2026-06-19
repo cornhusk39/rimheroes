@@ -49,6 +49,32 @@ namespace RimHeroes
             hero?.SetLevelDirect(level);
             done = true;
             Messages.Message($"{pawn.LabelShortCap} is now a level {level} {cls.label}.", pawn, MessageTypeDefOf.PositiveEvent);
+
+            int targets = int.TryParse(ArgValue("rhtargets"), out int n) ? n : 0;
+            if (targets > 0)
+            {
+                SpawnTargets(map, pawn.Position, targets);
+            }
+        }
+
+        // Spawns stationary hostile dummies near the hero for spell testing: long-stunned so they stand
+        // still and don't fight back, but still valid targets that take damage and debuffs.
+        private static void SpawnTargets(Map map, IntVec3 near, int count)
+        {
+            var enemy = Find.FactionManager.AllFactions
+                .FirstOrDefault(f => !f.IsPlayer && !f.def.hidden && f.HostileTo(Faction.OfPlayer));
+            var kind = DefDatabase<PawnKindDef>.GetNamedSilentFail("Pirate") ?? PawnKindDefOf.Colonist;
+            for (int i = 0; i < count; i++)
+            {
+                IntVec3 cell = CellFinder.RandomClosewalkCellNear(near, map, 12);
+                if (!cell.IsValid)
+                {
+                    continue;
+                }
+                var dummy = PawnGenerator.GeneratePawn(kind, enemy);
+                GenSpawn.Spawn(dummy, cell, map);
+                dummy.stances?.stunner?.StunFor(2000000, null, addBattleLog: false, showMote: false);
+            }
         }
 
         // Reads a "-key=value" command-line argument (leading dash optional).
